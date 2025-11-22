@@ -1,0 +1,725 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { FaStar, FaCartPlus, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// Sample music products data
+const musicDeals = [
+  {
+    id: 1,
+    name: "Acoustic Guitar",
+    brand: "StrumMaster",
+    category: "Instruments",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://media.istockphoto.com/id/899308580/photo/musicians-on-a-stage.webp?a=1&b=1&s=612x612&w=0&k=20&c=YWU3c83LxTBayW_qYXc5jGObg0VbUnL-cE0aGwI9kvQ=",
+    features: ["6 Strings", "Spruce Top", "Natural Finish"],
+  },
+  {
+    id: 2,
+    name: "Wireless Headphones",
+    brand: "SoundWave",
+    category: "Accessories",
+    price: 149,
+    rating: 4,
+    stock: true,
+    image:
+      "https://media.istockphoto.com/id/1284319632/photo/black-female-singer-singing-into-microphone-in-recording-studio.webp?a=1&b=1&s=612x612&w=0&k=20&c=nzNOIsQVPOvcw8X03-Qi_dnT1msu7_uh20cSzYHJHac=",
+    features: ["Noise Cancelling", "Bluetooth 5.0", "20h Battery"],
+  },
+  {
+    id: 3,
+    name: "Digital Piano",
+    brand: "KeyMagic",
+    category: "Instruments",
+    price: 799,
+    rating: 4,
+    stock: false,
+    image:
+      "https://plus.unsplash.com/premium_photo-1683140707316-42df87760f3f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
+    features: ["88 Keys", "Weighted Action", "Built-in Speakers"],
+  },
+  {
+    id: 4,
+    name: "Drum Set",
+    brand: "BeatPro",
+    category: "Instruments",
+    price: 699,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVzaWN8ZW58MHx8MHx8fDA%3D",
+    features: ["5 Piece", "Cymbals Included", "Adjustable Throne"],
+  },
+  {
+    id: 5,
+    name: "Studio Microphone",
+    brand: "ClearVoice",
+    category: "Accessories",
+    price: 199,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bXVzaWN8ZW58MHx8MHx8fDA%3D",
+    features: ["Cardioid", "Pop Filter", "Shock Mount"],
+  },
+  {
+    id: 6,
+    name: "Electric Bass",
+    brand: "BassKing",
+    category: "Instruments",
+    price: 599,
+    rating: 4,
+    stock: false,
+    image:
+      "https://plus.unsplash.com/premium_photo-1677545820818-f1639f3e5b65?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
+    features: ["4 Strings", "Maple Neck", "Glossy Black"],
+  },
+  {
+    id: 7,
+    name: "Classical Guitar",
+    brand: "Harmony",
+    category: "Instruments",
+    price: 429,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzaWN8ZW58MHx8MHx8fDA%3D",
+    features: ["Nylon Strings", "Rosewood Fretboard", "Natural Finish"],
+  },
+  {
+    id: 8,
+    name: "In-Ear Monitors",
+    brand: "ClearSound",
+    category: "Accessories",
+    price: 129,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Noise Isolation", "Comfort Fit", "High Fidelity"],
+  },
+  {
+    id: 9,
+    name: "Keyboard Synthesizer",
+    brand: "WaveForm",
+    category: "Instruments",
+    price: 899,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681335986095-5a9585e77246?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["61 Keys", "Multiple Voices", "Built-in Effects"],
+  },
+  {
+    id: 10,
+    name: "Electric Violin",
+    brand: "StringTech",
+    category: "Instruments",
+    price: 549,
+    rating: 4,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1619983081563-430f63602796?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Solid Body", "Piezo Pickup", "Adjustable Chin Rest"],
+  },
+  {
+    id: 11,
+    name: "DJ Controller",
+    brand: "MixMaster",
+    category: "Accessories",
+    price: 699,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682125768864-c80b650614f3?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["2 Decks", "Touch Jog Wheels", "Built-in Audio Interface"],
+  },
+  {
+    id: 12,
+    name: "Condenser Microphone",
+    brand: "StudioPro",
+    category: "Accessories",
+    price: 249,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682125765650-8a7baa2d4bf4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Wide Frequency", "Low Noise", "Gold Plated"],
+  },
+  {
+    id: 13,
+    name: "Electric Keyboard",
+    brand: "KeySound",
+    category: "Instruments",
+    price: 399,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["76 Keys", "Multiple Sounds", "USB MIDI"],
+  },
+  {
+    id: 14,
+    name: "Portable Bluetooth Speaker",
+    brand: "BeatBox",
+    category: "Accessories",
+    price: 99,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1664699106229-1bc773380c35?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Water Resistant", "12h Playtime", "Built-in Mic"],
+  },
+  {
+    id: 15,
+    name: "Electric Mandolin",
+    brand: "FolkTone",
+    category: "Instruments",
+    price: 399,
+    rating: 3,
+    stock: false,
+    image:
+      "https://plus.unsplash.com/premium_photo-1664194584355-25196f114804?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["8 Strings", "Solid Body", "Maple Neck"],
+  },
+  {
+    id: 16,
+    name: "Guitar Amplifier",
+    brand: "AmpPro",
+    category: "Accessories",
+    price: 299,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1485579149621-3123dd979885?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["30W Power", "Clean & Distortion", "Reverb Effect"],
+  },
+  {
+    id: 17,
+    name: "Electric Drum Pads",
+    brand: "BeatZone",
+    category: "Instruments",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1538402074774-8e624f3f7e5d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["8 Pads", "Velocity Sensitive", "USB MIDI"],
+  },
+  {
+    id: 18,
+    name: "Wireless Earbuds",
+    brand: "SoundBuds",
+    category: "Accessories",
+    price: 129,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682125519317-43a8d20dde37?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTN8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Touch Controls", "Noise Reduction", "Charging Case"],
+  },
+  {
+    id: 19,
+    name: "Electric Accordion",
+    brand: "ClassicTone",
+    category: "Instruments",
+    price: 649,
+    rating: 4,
+    stock: false,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682125502633-bfe1762ce8df?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["120 Bass Buttons", "LED Display", "Built-in Amp"],
+  },
+  {
+    id: 20,
+    name: "Bass Guitar Strings",
+    brand: "StringPro",
+    category: "Accessories",
+    price: 29,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682125525374-fd0cfec8d845?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Nickel Plated", "Light Gauge", "Long Lasting"],
+  },
+  {
+    id: 21,
+    name: "Ukulele",
+    brand: "IslandSounds",
+    category: "Instruments",
+    price: 119,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1526394931762-90052e97b376?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTV8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["4 Strings", "Mahogany Body", "Glossy Finish"],
+  },
+  {
+    id: 22,
+    name: "Synthesizer Module",
+    brand: "ModuSynth",
+    category: "Instruments",
+    price: 699,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1514119412350-e174d90d280e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["Analog Synth", "Multiple Oscillators", "CV Inputs"],
+  },
+  {
+    id: 23,
+    name: "Mixing Console",
+    brand: "ProMix",
+    category: "Accessories",
+    price: 999,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1524567248408-cbfd37e65e2d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODd8fG11c2ljfGVufDB8fDB8fHww",
+    features: ["16 Channels", "Digital Effects", "USB Interface"],
+  },
+  {
+    id: 24,
+    name: "Electric Guitar Strings",
+    brand: "StringLine",
+    category: "Accessories",
+    price: 19,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Stainless Steel", "Medium Gauge", "Corrosion Resistant"],
+  },
+  {
+    id: 25,
+    name: "Bass Guitar Amplifier",
+    brand: "AmpKing",
+    category: "Accessories",
+    price: 399,
+    rating: 5,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1476136236990-838240be4859?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["100W Power", "Overdrive", "EQ Controls"],
+  },
+  {
+    id: 26,
+    name: "Stage Monitor Speakers",
+    brand: "SoundBlast",
+    category: "Accessories",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1669110299948-b469be9f8a1f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE4fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Active Speakers", "Bi-Amplified", "XLR Inputs"],
+  },
+  {
+    id: 27,
+    name: "Electric Cello",
+    brand: "CelloTech",
+    category: "Instruments",
+    price: 799,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681335986389-ea926859952f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Solid Body", "Piezo Pickup", "Adjustable Endpin"],
+  },
+  {
+    id: 28,
+    name: "Microphone Stand",
+    brand: "StandPro",
+    category: "Accessories",
+    price: 49,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681335986389-ea926859952f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Adjustable Height", "Heavy Base", "Foldable"],
+  },
+  {
+    id: 29,
+    name: "Guitar Tuner Pedal",
+    brand: "TuneMaster",
+    category: "Accessories",
+    price: 89,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681335986389-ea926859952f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Accurate", "LED Display", "True Bypass"],
+  },
+  {
+    id: 30,
+    name: "Orchestral Violin",
+    brand: "Virtuoso",
+    category: "Instruments",
+    price: 899,
+    rating: 5,
+    stock: false,
+    image:
+      "https://plus.unsplash.com/premium_photo-1732550920315-4768b7ae7aee?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQyfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Handcrafted", "Maple Wood", "Ebony Fingerboard"],
+  },
+  {
+    id: 31,
+    name: "Bass Drum Pedal",
+    brand: "DrumX",
+    category: "Accessories",
+    price: 129,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1732727902100-0a93acd99b2f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Chain Drive", "Adjustable Tension", "Non-slip Base"],
+  },
+  {
+    id: 32,
+    name: "Portable MIDI Controller",
+    brand: "BeatLab",
+    category: "Accessories",
+    price: 229,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599139894727-62676829679b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU0fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["25 Keys", "Velocity Sensitive", "USB Powered"],
+  },
+  {
+    id: 33,
+    name: "Electric Ukulele",
+    brand: "UkeStar",
+    category: "Instruments",
+    price: 159,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599139894727-62676829679b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU0fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["4 Strings", "Solid Body", "Built-in Pickup"],
+  },
+  {
+    id: 34,
+    name: "Bass Effects Pedal",
+    brand: "FuzzTone",
+    category: "Accessories",
+    price: 99,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1631541312976-aeec5dddbf06?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Overdrive", "Boost", "True Bypass"],
+  },
+  {
+    id: 35,
+    name: "Stage Lighting Kit",
+    brand: "LightWave",
+    category: "Accessories",
+    price: 349,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1732727903777-bf6ca352292a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY0fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["DMX Controlled", "RGB LEDs", "Remote Control"],
+  },
+  {
+    id: 36,
+    name: "Electric Mandolin Case",
+    brand: "CasePro",
+    category: "Accessories",
+    price: 59,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1548502632-6b93092aad0b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc1fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Durable", "Lightweight", "Water Resistant"],
+  },
+  {
+    id: 37,
+    name: "Classic Harmonica",
+    brand: "BluesMaster",
+    category: "Instruments",
+    price: 39,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1619961601639-36db55982cd2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc4fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Rich Tone", "12 Holes", "Stainless Steel"],
+  },
+  {
+    id: 38,
+    name: "Electric Guitar Strap",
+    brand: "StrapKing",
+    category: "Accessories",
+    price: 25,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1693895592595-9171d91a0f22?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgyfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Adjustable", "Leather", "Comfort Padding"],
+  },
+  {
+    id: 39,
+    name: "Electric Piano Bench",
+    brand: "ComfortSeat",
+    category: "Accessories",
+    price: 89,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1485278537138-4e8911a13c02?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTg2fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Adjustable Height", "Padded Seat", "Sturdy Frame"],
+  },
+  {
+    id: 40,
+    name: "Synthesizer Keyboard Stand",
+    brand: "StandMaster",
+    category: "Accessories",
+    price: 69,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1452724931113-5ab6340ce080?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk4fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Adjustable Height", "Foldable", "Heavy Duty"],
+  },
+  {
+    id: 41,
+    name: "Electric Guitar Pickup",
+    brand: "PickMaster",
+    category: "Accessories",
+    price: 129,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1625786682948-2168238883d2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjAxfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Humbucker", "Alnico Magnets", "Low Noise"],
+  },
+  {
+    id: 42,
+    name: "Acoustic Guitar Strings",
+    brand: "StringTone",
+    category: "Accessories",
+    price: 15,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1682931319164-e22dd83a6095?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjAwfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Phosphor Bronze", "Light Gauge", "Long Lasting"],
+  },
+  {
+    id: 43,
+    name: "Electric Violin Bow",
+    brand: "BowPro",
+    category: "Accessories",
+    price: 59,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681263751059-18111c2580a0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA0fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Carbon Fiber", "Lightweight", "Balanced"],
+  },
+  {
+    id: 44,
+    name: "Drumsticks Set",
+    brand: "StickMaster",
+    category: "Accessories",
+    price: 19,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1631541312571-e8c49a12962d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjA5fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Hickory Wood", "16\" Length", "Medium Weight"],
+  },
+  {
+    id: 45,
+    name: "Electric Bass Strap",
+    brand: "StrapKing",
+    category: "Accessories",
+    price: 29,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1594384115313-ff3436ba24bb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjExfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Adjustable", "Leather", "Wide Padding"],
+  },
+  {
+    id: 46,
+    name: "Studio Headphones",
+    brand: "SoundLab",
+    category: "Accessories",
+    price: 199,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1742829737874-ba18f815af4b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjEyfHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["Closed Back", "Over Ear", "High Fidelity"],
+  },
+  {
+    id: 47,
+    name: "Digital Audio Interface",
+    brand: "AudioLink",
+    category: "Accessories",
+    price: 349,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1666209932712-28f136a4e979?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE1fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["2 Inputs", "48V Phantom Power", "USB Powered"],
+  },
+  {
+    id: 48,
+    name: "Electric Guitar Cable",
+    brand: "CablePro",
+    category: "Accessories",
+    price: 19,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1677533606085-f01c472408e7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE3fHxtdXNpY3xlbnwwfHwwfHx8MA%3D%3D",
+    features: ["6ft Length", "Shielded", "Durable"],
+  },
+];
+
+const MusicFeaturedDeals = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [cardsPerSlide, setCardsPerSlide] = useState(3);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 640) setCardsPerSlide(1);
+      else setCardsPerSlide(3);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(musicDeals.length / cardsPerSlide);
+
+  const prevSlide = () => setCurrentSlide((s) => (s === 0 ? 0 : s - 1));
+  const nextSlide = () => setCurrentSlide((s) => (s === totalSlides - 1 ? s : s + 1));
+
+  // Split deals into slides
+  const slideItems = [];
+  for (let i = 0; i < totalSlides; i++) {
+    slideItems.push(musicDeals.slice(i * cardsPerSlide, i * cardsPerSlide + cardsPerSlide));
+  }
+
+  return (
+    <section className="bg-gray-900 text-white py-12 px-6 max-w-[1200px] mx-auto rounded-lg shadow-xl select-none">
+      <h2 className="text-3xl font-extrabold mb-8 text-center">Music Featured Deals</h2>
+
+      <div className="relative overflow-hidden">
+        {/* Left Arrow */}
+        <button
+          onClick={prevSlide}
+          disabled={currentSlide === 0}
+          aria-label="Previous Slide"
+          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          }`}
+        >
+          <FaChevronLeft size={20} />
+        </button>
+
+        {/* Slides Wrapper */}
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{
+            width: `${100 * totalSlides}%`,
+            transform: `translateX(-${(100 / totalSlides) * currentSlide}%)`,
+          }}
+        >
+          {slideItems.map((items, slideIndex) => (
+            <div
+              key={slideIndex}
+              className="flex justify-center gap-6 px-2"
+              style={{ width: `${100 / totalSlides}%` }}
+            >
+              {items.map((deal) => (
+                <div
+                  key={deal.id}
+                  className="bg-gray-800 rounded-xl shadow-lg flex flex-col max-w-sm w-full transition-shadow duration-300"
+                >
+                  <div className="relative h-48 overflow-hidden rounded-t-xl">
+                    <img
+                      src={deal.image}
+                      alt={deal.name}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      loading="lazy"
+                    />
+                    {/* Stock Badge */}
+                    {deal.stock ? (
+                      <span className="absolute top-2 left-2 bg-green-600 text-xs font-bold px-2 py-1 rounded-md">
+                        In Stock
+                      </span>
+                    ) : (
+                      <span className="absolute top-2 left-2 bg-red-600 text-xs font-bold px-2 py-1 rounded-md">
+                        Out of Stock
+                      </span>
+                    )}
+                    {/* Category Badge */}
+                    <span className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-md">
+                      {deal.category}
+                    </span>
+                  </div>
+
+                  <div className="p-4 flex flex-col justify-between flex-grow">
+                    <h3 className="text-lg font-semibold">{deal.name}</h3>
+                    <p className="text-sm text-gray-300 mb-1 font-medium">Brand: {deal.brand}</p>
+
+                    {/* Rating */}
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar
+                          key={i}
+                          className={`${i < deal.rating ? "text-yellow-400" : "text-gray-600"}`}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Price */}
+                    <div className="flex items-center justify-between mt-4">
+                      <span className="text-xl font-bold text-yellow-400">${deal.price}</span>
+                    </div>
+
+                    {/* Add to Cart Button */}
+                    <button
+                      disabled={!deal.stock}
+                      className={`mt-4 w-full py-2 rounded-full font-semibold flex justify-center items-center gap-2 transition
+                        ${
+                          deal.stock
+                            ? "bg-yellow-400 text-black hover:bg-yellow-300"
+                            : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                        }`}
+                    >
+                      <FaCartPlus />
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Right Arrow */}
+        <button
+          onClick={nextSlide}
+          disabled={currentSlide === totalSlides - 1}
+          aria-label="Next Slide"
+          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          }`}
+        >
+          <FaChevronRight size={20} />
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default MusicFeaturedDeals;

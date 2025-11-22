@@ -1,0 +1,631 @@
+"use client";
+import React, { useState } from "react";
+import { FaStar, FaRegStar, FaCartPlus } from "react-icons/fa";
+
+const accessories = [
+  {
+    id: 1,
+    name: "Elegant Gold Necklace",
+    brand: "Luxora",
+    category: "Necklaces",
+    price: 299,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 2,
+    name: "Diamond Stud Earrings",
+    brand: "GlitterGems",
+    category: "Earrings",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1709033404514-c3953af680b4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 3,
+    name: "Classic Silver Bracelet",
+    brand: "SilverLine",
+    category: "Bracelets",
+    price: 129,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1709033404514-c3953af680b4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 4,
+    name: "Pearl Pendant",
+    brand: "OceanPearls",
+    category: "Necklaces",
+    price: 159,
+    rating: 4,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 5,
+    name: "Rose Gold Ring",
+    brand: "Luxora",
+    category: "Rings",
+    price: 249,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 6,
+    name: "Sapphire Drop Earrings",
+    brand: "GlitterGems",
+    category: "Earrings",
+    price: 399,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amV3ZWxyeXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 7,
+    name: "Leather Strap Watch",
+    brand: "TimeLux",
+    category: "Watches",
+    price: 299,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1561828995-aa79a2db86dd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 8,
+    name: "Gold Hoop Earrings",
+    brand: "Luxora",
+    category: "Earrings",
+    price: 279,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1561828995-aa79a2db86dd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 9,
+    name: "Diamond Tennis Bracelet",
+    brand: "GlitterGems",
+    category: "Bracelets",
+    price: 599,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1561828995-aa79a2db86dd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 10,
+    name: "Sterling Silver Ring",
+    brand: "SilverLine",
+    category: "Rings",
+    price: 199,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 11,
+    name: "Vintage Pearl Necklace",
+    brand: "OceanPearls",
+    category: "Necklaces",
+    price: 189,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 12,
+    name: "Ruby Cocktail Ring",
+    brand: "Luxora",
+    category: "Rings",
+    price: 349,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 13,
+    name: "Silver Charm Bracelet",
+    brand: "SilverLine",
+    category: "Bracelets",
+    price: 109,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 14,
+    name: "Gold Plated Earrings",
+    brand: "GlitterGems",
+    category: "Earrings",
+    price: 189,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1631982690223-8aa4be0a2497?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 15,
+    name: "Rose Gold Pendant",
+    brand: "Luxora",
+    category: "Necklaces",
+    price: 259,
+    rating: 5,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1522001947148-8b4dfe064edc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 16,
+    name: "Diamond Studs",
+    brand: "GlitterGems",
+    category: "Earrings",
+    price: 599,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1599459183200-59c7687a0275?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 17,
+    name: "Silver Chain Bracelet",
+    brand: "SilverLine",
+    category: "Bracelets",
+    price: 139,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1608042314453-ae338d80c427?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 18,
+    name: "Gold Hoop Earrings",
+    brand: "Luxora",
+    category: "Earrings",
+    price: 279,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1585960622850-ed33c41d6418?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 19,
+    name: "Leather Strap Watch",
+    brand: "TimeLux",
+    category: "Watches",
+    price: 299,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1661645433820-24c8604e4db5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 20,
+    name: "Classic Silver Ring",
+    brand: "SilverLine",
+    category: "Rings",
+    price: 179,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1661645433820-24c8604e4db5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 21,
+    name: "Pearl Drop Earrings",
+    brand: "OceanPearls",
+    category: "Earrings",
+    price: 229,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681276170423-2c60b95094b4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 22,
+    name: "Rose Gold Bracelet",
+    brand: "Luxora",
+    category: "Bracelets",
+    price: 269,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1625908733875-efa9c75c084d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 23,
+    name: "Sapphire Necklace",
+    brand: "GlitterGems",
+    category: "Necklaces",
+    price: 399,
+    rating: 5,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1625908733875-efa9c75c084d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 24,
+    name: "Diamond Tennis Bracelet",
+    brand: "GlitterGems",
+    category: "Bracelets",
+    price: 599,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1566977744263-79e677f4e7cf?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 25,
+    name: "Gold Chain Necklace",
+    brand: "Luxora",
+    category: "Necklaces",
+    price: 279,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 26,
+    name: "Classic Leather Watch",
+    brand: "TimeLux",
+    category: "Watches",
+    price: 319,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 27,
+    name: "Silver Hoop Earrings",
+    brand: "SilverLine",
+    category: "Earrings",
+    price: 139,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 28,
+    name: "Pearl Bracelet",
+    brand: "OceanPearls",
+    category: "Bracelets",
+    price: 189,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1603974372039-adc49044b6bd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 29,
+    name: "Rose Gold Hoop Earrings",
+    brand: "Luxora",
+    category: "Earrings",
+    price: 299,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1671641737531-8959f76d4a43?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 30,
+    name: "Classic Gold Ring",
+    brand: "Luxora",
+    category: "Rings",
+    price: 219,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1626122509259-ea8e0a136ada?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 31,
+    name: "Diamond Pendant Necklace",
+    brand: "GlitterGems",
+    category: "Necklaces",
+    price: 549,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1626122509259-ea8e0a136ada?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 32,
+    name: "Silver Cuff Bracelet",
+    brand: "SilverLine",
+    category: "Bracelets",
+    price: 159,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1603561596112-0a132b757442?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 33,
+    name: "Gold Plated Necklace",
+    brand: "Luxora",
+    category: "Necklaces",
+    price: 279,
+    rating: 4,
+    stock: false,
+    image:
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 34,
+    name: "Pearl Stud Earrings",
+    brand: "OceanPearls",
+    category: "Earrings",
+    price: 229,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1597006354775-2955b15ec026?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 35,
+    name: "Leather Watch Strap",
+    brand: "TimeLux",
+    category: "Watches",
+    price: 279,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1709033511355-d2b8d7e86797?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 36,
+    name: "Diamond Hoop Earrings",
+    brand: "GlitterGems",
+    category: "Earrings",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1709033511355-d2b8d7e86797?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 37,
+    name: "Rose Gold Bracelet",
+    brand: "Luxora",
+    category: "Bracelets",
+    price: 259,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1632434553802-d916ede9c85e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 38,
+    name: "Classic Silver Necklace",
+    brand: "SilverLine",
+    category: "Necklaces",
+    price: 199,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1611087388916-b6c97e01735b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 39,
+    name: "Pearl Pendant Necklace",
+    brand: "OceanPearls",
+    category: "Necklaces",
+    price: 179,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1618713041735-adb0de8316ea?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 40,
+    name: "Gold Plated Ring",
+    brand: "Luxora",
+    category: "Rings",
+    price: 239,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1543295204-2ae345412549?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 41,
+    name: "Silver Drop Earrings",
+    brand: "SilverLine",
+    category: "Earrings",
+    price: 149,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 42,
+    name: "Diamond Ring",
+    brand: "GlitterGems",
+    category: "Rings",
+    price: 499,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 43,
+    name: "Pearl Choker Necklace",
+    brand: "OceanPearls",
+    category: "Necklaces",
+    price: 199,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 44,
+    name: "Gold Link Bracelet",
+    brand: "Luxora",
+    category: "Bracelets",
+    price: 279,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 45,
+    name: "Classic Leather Bracelet",
+    brand: "SilverLine",
+    category: "Bracelets",
+    price: 139,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1608508644127-ba99d7732fee?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 46,
+    name: "Sapphire Ring",
+    brand: "GlitterGems",
+    category: "Rings",
+    price: 399,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1627072108045-a6605828afb7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 47,
+    name: "Gold Plated Earrings",
+    brand: "Luxora",
+    category: "Earrings",
+    price: 279,
+    rating: 4,
+    stock: true,
+    image:
+      "https://plus.unsplash.com/premium_photo-1681276170321-d838ac131f81?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODl8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 48,
+    name: "Sterling Silver Necklace",
+    brand: "SilverLine",
+    category: "Necklaces",
+    price: 219,
+    rating: 4,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1605100804567-1ffe942b5cd6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTh8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 49,
+    name: "Rose Gold Stud Earrings",
+    brand: "Luxora",
+    category: "Earrings",
+    price: 299,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1542779632-539b861ee8f9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTl8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 50,
+    name: "Diamond Cuff Bracelet",
+    brand: "GlitterGems",
+    category: "Bracelets",
+    price: 599,
+    rating: 5,
+    stock: true,
+    image:
+      "https://images.unsplash.com/photo-1610694955371-d4a3e0ce4b52?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+  }
+];
+
+const JewelryAccessoriesSection = () => {
+  const [visibleCount, setVisibleCount] = useState(8);
+
+  const visibleAccessories = accessories.slice(0, visibleCount);
+
+  const loadMore = () => {
+    setVisibleCount(accessories.length);
+  };
+
+  return (
+    <section className="bg-gray-900 text-yellow-400 py-12 px-4 my-[-30px]">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-center">Clothing Accessories</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {visibleAccessories.map(({ id, name, price, rating, image }) => (
+            <div
+              key={id}
+              className="bg-gray-800 rounded-lg border border-yellow-500 flex flex-col transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_0_15px_3px_rgba(202,138,4,0.7)]"
+              style={{ willChange: "transform, box-shadow" }}
+            >
+              {/* Image */}
+              <img
+                src={image}
+                alt={name}
+                className="rounded-t-lg w-full h-48 object-cover"
+              />
+
+              {/* Content */}
+              <div className="p-4 flex flex-col flex-grow">
+                <h3 className="text-lg font-semibold mb-2">{name}</h3>
+
+                {/* Rating */}
+                <div className="flex items-center mb-4">
+                  {Array.from({ length: 5 }).map((_, i) =>
+                    i < rating ? (
+                      <FaStar key={i} className="text-yellow-400" />
+                    ) : (
+                      <FaRegStar key={i} className="text-yellow-600" />
+                    )
+                  )}
+                </div>
+
+                <div className="mt-auto flex justify-between items-center">
+                  <p className="text-xl font-bold">{price}</p>
+
+                  <button
+                    aria-label={`Add ${name} to cart`}
+                    className="bg-yellow-500 text-gray-900 p-2 rounded-md hover:bg-yellow-400 transition"
+                  >
+                    <FaCartPlus size={20} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {visibleCount < accessories.length && (
+          <div className="text-center mt-8">
+            <button
+              onClick={loadMore}
+              className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition"
+            >
+              Load More
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default JewelryAccessoriesSection;

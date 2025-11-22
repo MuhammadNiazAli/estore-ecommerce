@@ -1,0 +1,21 @@
+'use client';
+
+import React from 'react';
+
+const LogoutingConfirmation = () => {
+  return (
+    <section
+      aria-label="Logout confirmation message"
+      className="max-w-md mx-auto bg-gray-800 rounded-2xl p-8 shadow-lg text-yellow-400 text-center"
+    >
+      <h2 className="text-2xl font-bold mb-4">
+        Are you sure you want to log out?
+      </h2>
+      <p className="text-yellow-300 mb-6">
+        Logging out will end your current session. You can log back in anytime.
+      </p>
+    </section>
+  );
+};
+
+export default LogoutingConfirmation;

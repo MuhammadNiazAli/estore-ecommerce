@@ -1,0 +1,206 @@
+import React, { useState } from 'react';
+
+const initialFeedbacks = [
+  {
+    id: 1,
+    name: 'Alice',
+    rating: 5,
+    comment: 'Great FAQs! Very helpful.',
+  },
+  {
+    id: 2,
+    name: 'Bob',
+    rating: 4,
+    comment: 'Found what I needed quickly.',
+  },
+];
+
+const FaqsFeedback = () => {
+  const [feedbacks, setFeedbacks] = useState(initialFeedbacks);
+  const [rating, setRating] = useState(0);
+  const [hoverRating, setHoverRating] = useState(0);
+  const [comment, setComment] = useState('');
+  const [name, setName] = useState('');
+  const [error, setError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (rating === 0 || comment.trim() === '' || name.trim() === '') {
+      setError('All fields are required including rating.');
+      return;
+    }
+
+    const newFeedback = {
+      id: feedbacks.length + 1,
+      name: name.trim(),
+      rating,
+      comment: comment.trim(),
+    };
+    setFeedbacks([newFeedback, ...feedbacks]);
+    setRating(0);
+    setHoverRating(0);
+    setComment('');
+    setName('');
+    setError('');
+    setSubmitted(true);
+  };
+
+  return (
+    <section className="bg-gray-900 text-yellow-400 py-12 px-4 sm:px-6 lg:px-8 rounded-md shadow-md max-w-7xl mx-auto relative overflow-hidden my-10">
+      {/* Desktop Gradient Overlay */}
+      <div className="hidden md:block absolute inset-0 bg-[linear-gradient(135deg,#111214,#0D0E10,#08090B)] opacity-90"></div>
+
+      <h2 className="text-3xl font-bold mb-10 text-yellow-300 text-center relative z-10">
+        Share Your Feedback
+      </h2>
+
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Left: Feedback Form */}
+        <div className="bg-gray-800 md:bg-black/40 md:backdrop-blur-xl rounded-xl p-6 shadow-2xl">
+          {submitted && (
+            <div
+              role="alert"
+              className="bg-yellow-700 text-gray-900 p-4 rounded-md text-center mb-6"
+            >
+              Thank you for your feedback!
+              <button
+                onClick={() => setSubmitted(false)}
+                className="ml-4 mt-2 sm:mt-0 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 transition"
+              >
+                Submit Another
+              </button>
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} noValidate>
+            {/* Name */}
+            <div className="mb-4">
+              <label
+                htmlFor="feedback-name"
+                className="block mb-1 font-semibold text-yellow-300"
+              >
+                Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                id="feedback-name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name"
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-yellow-600 text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                required
+              />
+            </div>
+
+            {/* Rating */}
+            <div className="mb-4">
+              <span className="block mb-1 font-semibold text-yellow-300">
+                Rating <span className="text-red-500">*</span>
+              </span>
+              <div className="flex space-x-2" role="radiogroup" aria-label="Rating">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    type="button"
+                    onClick={() => setRating(star)}
+                    onMouseEnter={() => setHoverRating(star)}
+                    onMouseLeave={() => setHoverRating(0)}
+                    aria-checked={rating === star}
+                    role="radio"
+                    className={`text-3xl transition transform hover:scale-125 ${
+                      (hoverRating || rating) >= star
+                        ? 'text-yellow-400'
+                        : 'text-yellow-700'
+                    }`}
+                  >
+                    ★
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Comment */}
+            <div className="mb-4">
+              <label
+                htmlFor="feedback-comment"
+                className="block mb-1 font-semibold text-yellow-300"
+              >
+                Comment <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="feedback-comment"
+                rows="4"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+                placeholder="Write your feedback here..."
+                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-yellow-600 text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none"
+                required
+              />
+            </div>
+
+            {/* Error */}
+            {error && (
+              <p
+                className="text-red-500 mb-4 font-semibold"
+                role="alert"
+                aria-live="assertive"
+              >
+                {error}
+              </p>
+            )}
+
+            {/* Submit */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-8 py-3 mt-4 rounded-md font-semibold bg-yellow-500 hover:bg-yellow-600 text-gray-900 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+              >
+                Submit Feedback
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Right: Previous Feedback */}
+        <div className="hidden md:flex flex-col gap-6 bg-black/40 backdrop-blur-xl rounded-xl p-6 shadow-2xl">
+          <h3 className="text-2xl font-bold mb-4 text-yellow-300">
+            Recent Feedback
+          </h3>
+          {feedbacks.length === 0 ? (
+            <p className="italic text-yellow-300">No feedback yet.</p>
+          ) : (
+            <ul className="space-y-6 overflow-y-auto max-h-[500px] custom-scrollbar">
+              {feedbacks.map(({ id, name, rating, comment }) => (
+                <li
+                  key={id}
+                  className="bg-yellow-900 bg-opacity-10 p-4 rounded-md border border-yellow-700 hover:shadow-lg transition"
+                >
+                  <div className="flex items-center mb-2 justify-between">
+                    <p className="font-semibold text-yellow-400">{name}</p>
+                    <div className="flex">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <span
+                          key={star}
+                          className={`text-lg ${
+                            star <= rating ? 'text-yellow-400' : 'text-yellow-700'
+                          }`}
+                          aria-hidden="true"
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-yellow-300 whitespace-pre-wrap text-sm">{comment}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FaqsFeedback;

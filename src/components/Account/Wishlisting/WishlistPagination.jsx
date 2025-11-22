@@ -1,0 +1,72 @@
+'use client';
+
+import React, { useState } from 'react';
+
+const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageClick = (page) => {
+    setCurrentPage(page);
+    if (onPageChange) onPageChange(page);
+  };
+
+  const pages = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pages.push(i);
+  }
+
+  return (
+    <nav
+      aria-label="Wishlist pagination"
+      className="bg-gray-900 text-white flex justify-center items-center space-x-2 py-3 px-4 rounded-md w-full max-w-md mx-auto"
+    >
+      {/* Previous Button */}
+      <button
+        onClick={() => currentPage > 1 && handlePageClick(currentPage - 1)}
+        disabled={currentPage === 1}
+        aria-label="Previous page"
+        className={`px-3 py-1 rounded-md font-semibold transition ${
+          currentPage === 1
+            ? 'text-yellow-700 cursor-not-allowed'
+            : 'hover:bg-yellow-800'
+        }`}
+      >
+        Prev
+      </button>
+
+      {/* Page Numbers */}
+      {pages.map((page) => (
+        <button
+          key={page}
+          onClick={() => handlePageClick(page)}
+          aria-current={currentPage === page ? 'page' : undefined}
+          className={`px-3 py-1 rounded-md font-semibold transition ${
+            currentPage === page
+              ? 'bg-yellow-600 text-gray-900 shadow-lg'
+              : 'hover:bg-yellow-800 text-yellow-400'
+          }`}
+        >
+          {page}
+        </button>
+      ))}
+
+      {/* Next Button */}
+      <button
+        onClick={() =>
+          currentPage < totalPages && handlePageClick(currentPage + 1)
+        }
+        disabled={currentPage === totalPages}
+        aria-label="Next page"
+        className={`px-3 py-1 rounded-md font-semibold transition ${
+          currentPage === totalPages
+            ? 'text-yellow-700 cursor-not-allowed'
+            : 'hover:bg-yellow-800'
+        }`}
+      >
+        Next
+      </button>
+    </nav>
+  );
+};
+
+export default WishlistPagination;
