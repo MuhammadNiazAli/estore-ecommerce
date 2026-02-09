@@ -12,7 +12,7 @@ It’s a large project, and I completed it in about **2 months**.
 ![Header](public/view/header.png)
 
 ### Home View
-![Home View](public/view/2.png)
+![Home View](public/view/1.png)
 
 ### Footer
 ![Footer](public/view/footer.png)
