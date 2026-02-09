@@ -6,6 +6,17 @@ I built it while learning how modern front-end development works.
 This project was developed with **Next.js (JavaScript)**.  
 It’s a large project, and I completed it in about **2 months**.
 
+## Screenshots
+
+### Header
+![Header](public/view/header.png)
+
+### Home View
+![Home View](public/view/2.png)
+
+### Footer
+![Footer](public/view/footer.png)
+
 ## What I learned from this project
 
 - Building real eCommerce pages and layouts
@@ -24,7 +35,7 @@ It’s a large project, and I completed it in about **2 months**.
 
 ## Status
 
- Completed (2-month build)
+✅ Completed (2-month build)
 
 ## Note
 
