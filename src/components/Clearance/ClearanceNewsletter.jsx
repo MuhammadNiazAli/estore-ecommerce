@@ -26,13 +26,13 @@ const ClearanceNewsletter = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12">
+    <section className="bg-white text-amber-600 py-12">
       <div className="max-w-[1000px] mx-auto text-center px-4">
         {/* Heading */}
         <h2 className="text-3xl font-bold mb-3">
           Stay Updated on Clearance Deals
         </h2>
-        <p className="text-gray-300 mb-6">
+        <p className="text-gray-700 mb-6">
           Subscribe to our newsletter and never miss exclusive clearance discounts.
         </p>
 
@@ -46,11 +46,11 @@ const ClearanceNewsletter = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-             className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-gray-800 text-yellow-400 placeholder-yellow-600 text-lg outline-none border-2 border-transparent focus:border-yellow-400 transition"
+             className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-white text-amber-600 placeholder-amber-800 text-lg outline-none border-2 border-transparent focus:border-amber-600 transition"
           />
           <button
             type="submit"
-            className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition w-full sm:w-auto"
+            className="bg-amber-700 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-amber-600 transition w-full sm:w-auto"
           >
             Subscribe
           </button>

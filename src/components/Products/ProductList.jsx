@@ -173,7 +173,7 @@ const renderStars = (rating) => {
 
   for (let i = 0; i < fullStars; i++) {
     stars.push(
-      <AiFillStar key={"star-full-" + i} className="text-yellow-400 w-5 h-5" />
+      <AiFillStar key={"star-full-" + i} className="text-amber-600 w-5 h-5" />
     );
   }
 
@@ -181,7 +181,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="star-half"
-        className="text-yellow-400 w-5 h-5"
+        className="text-amber-600 w-5 h-5"
         style={{ clipPath: "inset(0 50% 0 0)" }}
       />
     );
@@ -190,7 +190,7 @@ const renderStars = (rating) => {
   const emptyStars = 5 - stars.length;
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
-      <AiOutlineStar key={"star-empty-" + i} className="text-yellow-400 w-5 h-5" />
+      <AiOutlineStar key={"star-empty-" + i} className="text-amber-600 w-5 h-5" />
     );
   }
 
@@ -205,16 +205,16 @@ const ProductList = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 sm:p-10 bg-gray-900 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6 text-white">
+    <section className="max-w-4xl mx-auto p-6 sm:p-10 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900">
         Product List
       </h2>
 
-      <ul className="divide-y divide-gray-700">
+      <ul className="divide-y divide-gray-200">
         {allProducts.slice(0, visibleCount).map(({ id, title, price, originalPrice, rating, image }) => (
           <li
             key={id}
-            className="flex items-center space-x-6 py-4 hover:bg-gray-800 rounded-md transition-colors cursor-pointer"
+            className="flex items-center space-x-6 py-4 hover:bg-gray-50 rounded-md transition-colors cursor-pointer"
           >
             <img
               src={image}
@@ -223,15 +223,15 @@ const ProductList = () => {
               loading="lazy"
             />
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-lg font-semibold text-gray-900">
                 {title}
               </h3>
               <div className="flex items-center space-x-2 mt-1">
                 <div className="flex">{renderStars(rating)}</div>
-                <span className="text-yellow-400 font-semibold">{rating.toFixed(1)}</span>
+                <span className="text-amber-600 font-semibold">{rating.toFixed(1)}</span>
               </div>
               <div className="mt-1 flex items-baseline space-x-2">
-                <span className="text-xl font-extrabold text-white">
+                <span className="text-xl font-extrabold text-gray-900">
                   ${price.toFixed(2)}
                 </span>
                 {originalPrice && originalPrice > price && (
@@ -249,7 +249,7 @@ const ProductList = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={handleLoadMore}
-            className="px-6 py-2 bg-yellow-400 text-gray-900 rounded-lg hover:bg-yellow-500 transition-colors"
+            className="px-6 py-2 bg-amber-600 text-gray-900 rounded-lg hover:bg-amber-700 transition-colors"
           >
             Load More
           </button>

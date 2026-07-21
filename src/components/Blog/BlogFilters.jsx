@@ -209,7 +209,7 @@ const BlogFilters = () => {
   }
 
   return (
-    <section className="w-full bg-gray-900 px-4 py-10 sm:px-6 lg:px-8 flex justify-center mb-[-40px]">
+    <section className="w-full bg-white px-4 py-10 sm:px-6 lg:px-8 flex justify-center mb-[-40px]">
       <div className="max-w-[1000px] w-full">
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 justify-center mb-10">
@@ -223,8 +223,8 @@ const BlogFilters = () => {
               className={`px-4 sm:px-5 py-2 rounded-full border transition-colors font-semibold text-sm sm:text-base
                 ${
                   active === cat
-                    ? 'bg-yellow-400 text-gray-900 border-yellow-400'
-                    : 'bg-transparent text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-gray-900'
+                    ? 'bg-amber-600 text-gray-900 border-amber-600'
+                    : 'bg-transparent text-amber-600 border-amber-600 hover:bg-amber-600 hover:text-gray-900'
                 }`}
               type="button"
             >
@@ -244,7 +244,7 @@ const BlogFilters = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
-                className="bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow flex flex-col"
               >
                 <img
                   src={blog.image}
@@ -253,15 +253,15 @@ const BlogFilters = () => {
                   loading="lazy"
                 />
                 <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                  <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-2 line-clamp-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-amber-600 mb-2 line-clamp-2">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-300 text-sm sm:text-base mb-4 line-clamp-3 flex-grow">
+                  <p className="text-gray-700 text-sm sm:text-base mb-4 line-clamp-3 flex-grow">
                     {blog.excerpt}
                   </p>
                   <a
                     href="#"
-                    className="text-yellow-400 font-semibold hover:underline text-sm sm:text-base mt-auto"
+                    className="text-amber-600 font-semibold hover:underline text-sm sm:text-base mt-auto"
                     tabIndex={0}
                     aria-label={`Read more about ${blog.title}`}
                   >
@@ -278,7 +278,7 @@ const BlogFilters = () => {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-full hover:bg-yellow-300 transition-colors"
+              className="px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-500 transition-colors"
               type="button"
             >
               Show More

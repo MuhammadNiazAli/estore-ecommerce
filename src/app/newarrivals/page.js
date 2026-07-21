@@ -12,7 +12,7 @@ import NewarrivalsNewsletter from '@/components/Newarrivals/NewarrivalsNewslette
 
 export default function Newarrivals() {
   return (
-    <main className="min-h-[screen] bg-[#101828] text-white flex flex-col items-center justify-center px-4 py-15 lg:py-35">
+    <main className="min-h-[screen] bg-white text-gray-900 flex flex-col items-center justify-center px-4 py-15 lg:py-35">
       <NewarrivalsHero />
       <NewarrivalsFilter />
       <NewarrivalsSort />

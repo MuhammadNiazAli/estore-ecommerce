@@ -15,11 +15,11 @@ const milestones = [
 const AboutHistory = () => {
   return (
     <section
-      className="bg-gray-900 text-gray-100 py-20 px-6 flex justify-center my-[-80px]"
+      className="bg-white text-gray-800 py-20 px-6 flex justify-center my-[-80px]"
       aria-label="My development journey"
     >
       <div className="max-w-4xl w-full">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 text-center mb-12">
           My Journey
         </h2>
 
@@ -35,13 +35,13 @@ const AboutHistory = () => {
             >
               {/* Age Badge */}
               <div className="absolute -left-[2.4rem] sm:-left-[2.8rem] top-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-500 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base shadow-md ring-2 ring-gray-800 hover:scale-105 transition transform duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-700 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base shadow-md ring-2 ring-gray-200 hover:scale-105 transition transform duration-300">
                   {age}
                 </div>
               </div>
 
               {/* Event Description */}
-              <div className="pl-2 sm:pl-4 text-gray-300 text-base sm:text-lg leading-relaxed">
+              <div className="pl-2 sm:pl-4 text-gray-700 text-base sm:text-lg leading-relaxed">
                 {event}
               </div>
             </motion.div>

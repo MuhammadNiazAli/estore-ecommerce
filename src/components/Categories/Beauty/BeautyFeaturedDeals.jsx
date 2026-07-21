@@ -610,7 +610,7 @@ const BeautyFeaturedDeals = () => {
   }
 
   return (
-    <section className="bg-gray-900 text-white py-12 px-6 max-w-[1200px] mx-auto rounded-lg shadow-xl select-none">
+    <section className="bg-white text-gray-900 py-12 px-6 max-w-[1200px] mx-auto rounded-lg shadow-xl select-none">
       <h2 className="text-3xl font-extrabold mb-8 text-center">Featured Deals</h2>
 
       <div className="relative overflow-hidden">
@@ -619,8 +619,8 @@ const BeautyFeaturedDeals = () => {
           onClick={prevSlide}
           disabled={currentSlide === 0}
           aria-label="Previous Slide"
-          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
           }`}
         >
           <FaChevronLeft size={20} />
@@ -643,7 +643,7 @@ const BeautyFeaturedDeals = () => {
               {items.map((deal) => (
                 <div
                   key={deal.id}
-                  className="bg-gray-800 rounded-xl shadow-lg flex flex-col max-w-sm w-full   transition-shadow duration-300"
+                  className="bg-white rounded-xl shadow-lg flex flex-col max-w-sm w-full   transition-shadow duration-300"
                 >
                   <div className="relative h-48 overflow-hidden rounded-t-xl">
                     <img
@@ -663,17 +663,17 @@ const BeautyFeaturedDeals = () => {
                       </span>
                     )}
                     {/* Category Badge */}
-                    <span className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-md">
+                    <span className="absolute top-2 right-2 bg-amber-700 text-black text-xs font-bold px-2 py-1 rounded-md">
                       {deal.category}
                     </span>
                   </div>
 
                   <div className="p-4 flex flex-col justify-between flex-grow">
                     <h3 className="text-lg font-semibold">{deal.name}</h3>
-                    <p className="text-sm text-gray-300 mb-1 font-medium">Brand: {deal.brand}</p>
+                    <p className="text-sm text-gray-700 mb-1 font-medium">Brand: {deal.brand}</p>
 
                     {/* Features */}
-                    <ul className="text-xs text-yellow-300 mb-3 list-disc list-inside">
+                    <ul className="text-xs text-amber-500 mb-3 list-disc list-inside">
                       {deal.features.map((feature, i) => (
                         <li key={i}>{feature}</li>
                       ))}
@@ -685,7 +685,7 @@ const BeautyFeaturedDeals = () => {
                         <FaStar
                           key={i}
                           className={`${
-                            i < deal.rating ? "text-yellow-400" : "text-gray-600"
+                            i < deal.rating ? "text-amber-600" : "text-gray-600"
                           }`}
                         />
                       ))}
@@ -693,7 +693,7 @@ const BeautyFeaturedDeals = () => {
 
                     {/* Price & Stock */}
                     <div className="flex items-center justify-between mt-4">
-                      <span className="text-xl font-bold text-yellow-400">${deal.price}</span>
+                      <span className="text-xl font-bold text-amber-600">${deal.price}</span>
                     </div>
 
                     {/* Add to Cart Button */}
@@ -702,8 +702,8 @@ const BeautyFeaturedDeals = () => {
                       className={`mt-4 w-full py-2 rounded-full font-semibold flex justify-center items-center gap-2 transition
                         ${
                           deal.stock
-                            ? "bg-yellow-400 text-black hover:bg-yellow-300"
-                            : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                            ? "bg-amber-600 text-black hover:bg-amber-500"
+                            : "bg-white text-gray-600 cursor-not-allowed"
                         }`}
                     >
                       <FaCartPlus />
@@ -721,8 +721,8 @@ const BeautyFeaturedDeals = () => {
           onClick={nextSlide}
           disabled={currentSlide === totalSlides - 1}
           aria-label="Next Slide"
-          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
           }`}
         >
           <FaChevronRight size={20} />

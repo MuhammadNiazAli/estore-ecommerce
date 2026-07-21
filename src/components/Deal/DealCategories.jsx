@@ -24,15 +24,15 @@ const categories = [
 
 const DealCategories = () => {
   return (
-    <section className="w-full px-4 py-14 bg-gray-900 my-[-50px] text-white flex justify-center">
+    <section className="w-full px-4 py-14 bg-white my-[-50px] text-gray-900 flex justify-center">
       <div className="w-full max-w-[1000px]">
         <h2 className="text-3xl font-bold mb-10 text-center">Shop by Category</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {categories.map(({ id, name, icon }) => (
             <div
               key={id}
-              className="flex flex-col items-center justify-center p-6 bg-gray-800 rounded-2xl cursor-pointer
-                         hover:bg-yellow-500 hover:text-black transition duration-300 ease-in-out
+              className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl cursor-pointer
+                         hover:bg-amber-700 hover:text-black transition duration-300 ease-in-out
                          shadow-md hover:shadow-lg"
             >
               <div className="mb-2">{icon}</div>

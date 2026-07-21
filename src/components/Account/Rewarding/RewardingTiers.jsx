@@ -6,7 +6,7 @@ import { FaGem, FaStar, FaCrown } from 'react-icons/fa';
 const membershipTiers = [
   {
     name: 'Silver',
-    icon: <FaGem className="text-gray-400 text-4xl" aria-hidden="true" />,
+    icon: <FaGem className="text-gray-600 text-4xl" aria-hidden="true" />,
     minPoints: 0,
     benefits: [
       '1x points on purchases',
@@ -14,14 +14,14 @@ const membershipTiers = [
       'Monthly newsletter',
     ],
     styles: {
-      color: 'text-gray-400',
+      color: 'text-gray-600',
       border: 'border-gray-500',
-      bg: 'bg-gray-800',
+      bg: 'bg-white',
     },
   },
   {
     name: 'Gold',
-    icon: <FaStar className="text-yellow-400 text-5xl" aria-hidden="true" />,
+    icon: <FaStar className="text-amber-600 text-5xl" aria-hidden="true" />,
     minPoints: 500,
     benefits: [
       '1.5x points multiplier',
@@ -29,14 +29,14 @@ const membershipTiers = [
       'Free express shipping',
     ],
     styles: {
-      color: 'text-yellow-400',
-      border: 'border-yellow-400',
-      bg: 'bg-gray-900',
+      color: 'text-amber-600',
+      border: 'border-amber-600',
+      bg: 'bg-white',
     },
   },
   {
     name: 'Platinum',
-    icon: <FaCrown className="text-yellow-500 text-5xl" aria-hidden="true" />,
+    icon: <FaCrown className="text-amber-700 text-5xl" aria-hidden="true" />,
     minPoints: 1000,
     benefits: [
       '2x points multiplier',
@@ -45,9 +45,9 @@ const membershipTiers = [
       'Priority customer support',
     ],
     styles: {
-      color: 'text-yellow-500',
-      border: 'border-yellow-500',
-      bg: 'bg-gray-900',
+      color: 'text-amber-700',
+      border: 'border-amber-700',
+      bg: 'bg-white',
     },
   },
 ];
@@ -55,12 +55,12 @@ const membershipTiers = [
 export default function RewardingTiers() {
   return (
     <section
-      className="w-full bg-gray-900 text-white p-6 sm:p-10 rounded-2xl shadow-xl"
+      className="w-full bg-white text-gray-900 p-6 sm:p-10 rounded-2xl shadow-xl"
       aria-labelledby="membership-tiers-title"
     >
       <h2
         id="membership-tiers-title"
-        className="text-xl sm:text-2xl font-bold mb-8 border-b border-gray-700 pb-2"
+        className="text-xl sm:text-2xl font-bold mb-8 border-b border-gray-200 pb-2"
       >
         Membership Tiers
       </h2>
@@ -76,8 +76,8 @@ export default function RewardingTiers() {
           >
             <div className="mb-4">{icon}</div>
             <h3 className={`text-2xl font-semibold mb-1 ${styles.color}`}>{name}</h3>
-            <p className="text-sm text-gray-400 mb-4">From {minPoints} points</p>
-            <ul className="list-disc list-inside text-gray-300 text-sm space-y-2">
+            <p className="text-sm text-gray-600 mb-4">From {minPoints} points</p>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-2">
               {benefits.map((benefit, i) => (
                 <li key={i}>{benefit}</li>
               ))}

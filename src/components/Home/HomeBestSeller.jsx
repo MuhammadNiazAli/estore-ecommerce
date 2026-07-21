@@ -70,11 +70,11 @@ const productList = [
 
 function StarRating({ rating }) {
   return (
-    <div className="flex gap-1 text-yellow-400" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex gap-1 text-amber-600" aria-label={`${rating} out of 5 stars`}>
       {[...Array(5)].map((_, index) => (
         <FiStar
           key={index}
-          className={`text-sm ${index < rating ? 'fill-yellow-400' : 'text-gray-600'}`}
+          className={`text-sm ${index < rating ? 'fill-amber-600' : 'text-gray-600'}`}
           aria-hidden="true"
         />
       ))}
@@ -87,11 +87,11 @@ function ProductCard({ product, isFavorite, onToggleFavorite }) {
 
   return (
     <article
-      className="relative flex flex-col h-96 rounded-xl bg-gray-900/70 backdrop-blur-md border border-gray-800 text-white shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl w-full max-w-[360px] mx-auto"
+      className="relative flex flex-col h-96 rounded-xl bg-white/70 backdrop-blur-md border border-gray-200 text-gray-900 shadow-lg overflow-hidden group transition-all duration-300 hover:shadow-2xl w-full max-w-[360px] mx-auto"
       tabIndex="0"
     >
       {product.badge && (
-        <span className={`absolute top-3 text-xs font-semibold px-2 py-1 rounded z-20 ${badgeColor} text-white`}>
+        <span className={`absolute top-3 text-xs font-semibold px-2 py-1 rounded z-20 ${badgeColor} text-gray-900`}>
           {product.badge.charAt(0).toUpperCase() + product.badge.slice(1)}
         </span>
       )}
@@ -112,7 +112,7 @@ function ProductCard({ product, isFavorite, onToggleFavorite }) {
         {/* Eye */}
         <Link
           href={`/product`}
-          className="p-2 rounded-full bg-yellow-400/10 text-yellow-400 hover:bg-yellow-500/50 hover:text-yellow-800 hover:scale-110 transition-all duration-300 shadow"
+          className="p-2 rounded-full bg-amber-600/10 text-amber-600 hover:bg-amber-700/50 hover:text-amber-900 hover:scale-110 transition-all duration-300 shadow"
         >
           <FiEye className="text-lg" />
         </Link>
@@ -140,13 +140,13 @@ function ProductCard({ product, isFavorite, onToggleFavorite }) {
         <h3 className="text-base font-semibold truncate" title={product.title}>
           {product.title}
         </h3>
-        <p className="text-sm text-gray-300 line-clamp-2">{product.description}</p>
+        <p className="text-sm text-gray-700 line-clamp-2">{product.description}</p>
         <StarRating rating={product.rating} />
         <div className="flex justify-between items-center mt-2">
-          <span className="text-lg font-bold text-yellow-400">{product.price}</span>
+          <span className="text-lg font-bold text-amber-600">{product.price}</span>
           <Link
             href="/cart"
-            className="py-1 px-3 bg-yellow-400 hover:bg-yellow-300 text-black rounded font-medium flex items-center gap-2 transition duration-300 text-sm"
+            className="py-1 px-3 bg-amber-600 hover:bg-amber-500 text-black rounded font-medium flex items-center gap-2 transition duration-300 text-sm"
             aria-label={`Add ${product.title} to cart`}
           >
             <FiShoppingCart />
@@ -173,9 +173,9 @@ export default function HomeBestSeller() {
   };
 
   return (
-    <section className="bg-gray-900 mb-[-50px] my-[-50px] text-white py-16 px-4 w-full">
+    <section className="bg-white mb-[-50px] my-[-50px] text-gray-900 py-16 px-4 w-full">
       <div className="max-w-[1300px] mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 text-center mb-12 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 text-center mb-12 tracking-tight">
           Best Sellers
         </h2>
 
@@ -194,7 +194,7 @@ export default function HomeBestSeller() {
           <div className="mt-10 text-center">
             <button
               onClick={handleLoadMore}
-              className="px-6 py-3 bg-yellow-400 hover:bg-yellow-300 text-black rounded-lg font-semibold shadow transition duration-300"
+              className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-black rounded-lg font-semibold shadow transition duration-300"
               aria-label="Load more products"
             >
               Load More

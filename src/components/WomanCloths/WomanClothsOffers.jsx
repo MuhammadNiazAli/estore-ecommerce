@@ -630,7 +630,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={"full" + i}
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -640,7 +640,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -660,7 +660,7 @@ const StarRating = ({ rating }) => {
       {[...Array(emptyStars)].map((_, i) => (
         <svg
           key={"empty" + i}
-          className="w-4 h-4 text-gray-300"
+          className="w-4 h-4 text-gray-700"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -707,7 +707,7 @@ const CountdownTimer = ({ expiryDate }) => {
   }
 
   return (
-    <div className="flex space-x-3 text-center font-mono text-sm text-white bg-red-600 rounded-md px-3 py-1 select-none w-max mx-auto sm:mx-0">
+    <div className="flex space-x-3 text-center font-mono text-sm text-gray-900 bg-red-600 rounded-md px-3 py-1 select-none w-max mx-auto sm:mx-0">
       <div>
         <span className="font-bold tabular-nums">{timeLeft.days}</span>d
       </div>
@@ -755,8 +755,8 @@ const WomanClothsOffers = () => {
           loading="lazy"
           draggable={false}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        <div className="absolute bottom-6 left-6 sm:left-12 text-white max-w-lg">
+        <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent"></div>
+        <div className="absolute bottom-6 left-6 sm:left-12 text-gray-900 max-w-lg">
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2 drop-shadow-lg">
             Exclusive Evening Gown Sale
           </h1>
@@ -767,7 +767,7 @@ const WomanClothsOffers = () => {
           {/* 15 days */}
           <button
             type="button"
-            className="mt-6 inline-block rounded-md bg-yellow-500 px-6 py-3 text-lg font-semibold text-black hover:bg-yellow-600 shadow-lg transition"
+            className="mt-6 inline-block rounded-md bg-amber-700 px-6 py-3 text-lg font-semibold text-black hover:bg-amber-800 shadow-lg transition"
           >
             Shop Now
           </button>
@@ -791,7 +791,7 @@ const WomanClothsOffers = () => {
                 loading="lazy"
                 draggable={false}
               />
-              <div className="absolute top-3 right-3 bg-yellow-400 text-black font-bold px-3 py-1 rounded-lg shadow-md select-none">
+              <div className="absolute top-3 right-3 bg-amber-600 text-black font-bold px-3 py-1 rounded-lg shadow-md select-none">
                 {offer.discountPercent}% OFF
               </div>
             </div>
@@ -805,16 +805,16 @@ const WomanClothsOffers = () => {
                 <span className="text-sm text-gray-500">({offer.reviews})</span>
               </div>
               <div className="flex items-center gap-4 mt-4">
-                <span className="text-2xl font-extrabold text-yellow-500">
+                <span className="text-2xl font-extrabold text-amber-700">
                   ${offer.price.toFixed(2)}
                 </span>
-                <span className="text-sm line-through text-gray-400">
+                <span className="text-sm line-through text-gray-600">
                   ${offer.oldPrice.toFixed(2)}
                 </span>
               </div>
               <button
                 type="button"
-                className="mt-5 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-md shadow-md transition"
+                className="mt-5 bg-amber-700 hover:bg-amber-800 text-black font-semibold py-2 rounded-md shadow-md transition"
               >
                 Add to Cart
               </button>
@@ -829,7 +829,7 @@ const WomanClothsOffers = () => {
           <button
             onClick={handleShowMore}
             disabled={loadingMore}
-            className="inline-flex items-center space-x-2 rounded-md bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center space-x-2 rounded-md bg-amber-700 hover:bg-amber-800 text-black font-semibold px-6 py-3 shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Show more offers"
           >
             {loadingMore ? (

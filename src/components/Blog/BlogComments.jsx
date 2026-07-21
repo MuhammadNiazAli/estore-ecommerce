@@ -97,9 +97,9 @@ const BlogComments = () => {
   };
 
   return (
-    <section className="w-full flex justify-center bg-gray-900 px-4 py-12 sm:px-6 lg:px-8">
+    <section className="w-full flex justify-center bg-white px-4 py-12 sm:px-6 lg:px-8">
       <div className="max-w-[1000px] w-full">
-        <h3 className="text-white text-xl sm:text-2xl font-bold mb-8 border-b border-gray-700 pb-2">
+        <h3 className="text-gray-900 text-xl sm:text-2xl font-bold mb-8 border-b border-gray-200 pb-2">
           Comments ({comments.length})
         </h3>
 
@@ -116,14 +116,14 @@ const BlogComments = () => {
                 />
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-0">
-                    <h4 className="text-yellow-400 font-semibold">{c.name}</h4>
+                    <h4 className="text-amber-600 font-semibold">{c.name}</h4>
                     <span className="text-gray-500 text-sm">{c.timestamp}</span>
                   </div>
-                  <p className="text-gray-300 mt-1 text-sm sm:text-base">{c.comment}</p>
-                  <div className="flex items-center gap-4 mt-2 text-sm text-gray-400">
+                  <p className="text-gray-700 mt-1 text-sm sm:text-base">{c.comment}</p>
+                  <div className="flex items-center gap-4 mt-2 text-sm text-gray-600">
                     <button
                       onClick={() => handleLike(c.id)}
-                      className="flex items-center gap-1 hover:text-yellow-400 transition-colors"
+                      className="flex items-center gap-1 hover:text-amber-600 transition-colors"
                     >
                       <ThumbsUp size={16} /> {c.likes}
                     </button>
@@ -131,7 +131,7 @@ const BlogComments = () => {
                       onClick={() =>
                         setReplyingTo(replyingTo === c.id ? null : c.id)
                       }
-                      className="hover:text-yellow-400"
+                      className="hover:text-amber-600"
                     >
                       Reply
                     </button>
@@ -145,11 +145,11 @@ const BlogComments = () => {
                     value={replyText}
                     onChange={(e) => setReplyText(e.target.value)}
                     placeholder="Write your reply..."
-                    className="w-full min-h-[80px] p-2 rounded-md bg-gray-800 text-gray-200 border border-gray-700 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="w-full min-h-[80px] p-2 rounded-md bg-white text-gray-700 border border-gray-200 resize-none focus:outline-none focus:ring-2 focus:ring-amber-600"
                   />
                   <button
                     onClick={() => handleReply(c.id)}
-                    className="mt-2 px-4 py-1.5 text-sm rounded-md bg-yellow-500 text-gray-900 hover:bg-yellow-400 transition"
+                    className="mt-2 px-4 py-1.5 text-sm rounded-md bg-amber-700 text-gray-900 hover:bg-amber-600 transition"
                   >
                     <Send size={14} className="inline mr-1" /> Send
                   </button>
@@ -157,7 +157,7 @@ const BlogComments = () => {
               )}
 
               {c.replies.length > 0 && (
-                <div className="ml-10 sm:ml-12 mt-2 space-y-6 border-l border-gray-700 pl-4 sm:pl-6">
+                <div className="ml-10 sm:ml-12 mt-2 space-y-6 border-l border-gray-200 pl-4 sm:pl-6">
                   {c.replies.map((r) => (
                     <div key={r.id} className="flex gap-3 sm:gap-4">
                       <Image
@@ -169,18 +169,18 @@ const BlogComments = () => {
                       />
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-0">
-                          <h5 className="text-yellow-300 font-semibold flex items-center gap-1">
+                          <h5 className="text-amber-500 font-semibold flex items-center gap-1">
                             <CornerDownRight size={14} /> {r.name}
                           </h5>
                           <span className="text-gray-500 text-sm">
                             {r.timestamp}
                           </span>
                         </div>
-                        <p className="text-gray-300 mt-1 text-sm sm:text-base">{r.comment}</p>
-                        <div className="flex items-center gap-4 mt-2 text-sm text-gray-400">
+                        <p className="text-gray-700 mt-1 text-sm sm:text-base">{r.comment}</p>
+                        <div className="flex items-center gap-4 mt-2 text-sm text-gray-600">
                           <button
                             onClick={() => handleLike(r.id, true, c.id)}
-                            className="flex items-center gap-1 hover:text-yellow-400 transition-colors"
+                            className="flex items-center gap-1 hover:text-amber-600 transition-colors"
                           >
                             <ThumbsUp size={16} /> {r.likes}
                           </button>

@@ -41,7 +41,7 @@ const PrivacyFAQ = () => {
 
   return (
     <section
-      className="bg-gray-900 text-yellow-400 w-full flex justify-center px-4 sm:px-6 lg:px-8"
+      className="bg-white text-amber-600 w-full flex justify-center px-4 sm:px-6 lg:px-8"
       style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
       aria-label="Privacy FAQ Section"
     >
@@ -54,11 +54,11 @@ const PrivacyFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-yellow-600 rounded-xl overflow-hidden transition-shadow hover:shadow-md"
+              className="border border-amber-800 rounded-xl overflow-hidden transition-shadow hover:shadow-md"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-5 py-4 text-left text-yellow-300 hover:bg-gray-800 transition-colors"
+                className="w-full flex justify-between items-center px-5 py-4 text-left text-amber-500 hover:bg-gray-50 transition-colors"
               >
                 <span className="font-medium text-base sm:text-lg leading-snug">
                   {faq.question}
@@ -78,7 +78,7 @@ const PrivacyFAQ = () => {
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.25, ease: 'easeOut' }}
-                    className="px-5 pb-5 text-yellow-300 text-sm sm:text-base leading-relaxed"
+                    className="px-5 pb-5 text-amber-500 text-sm sm:text-base leading-relaxed"
                   >
                     {faq.answer}
                   </motion.div>

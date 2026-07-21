@@ -23,7 +23,7 @@ const ThemeToggle = () => {
       aria-label="Theme toggle"
       className={clsx(
         'w-full max-w-[900px] p-6 rounded-2xl shadow-lg flex items-center justify-between transition-colors duration-300',
-        theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-black'
+        theme === 'dark' ? 'bg-white text-gray-900' : 'bg-white text-black'
       )}
     >
       <h2 className="text-xl font-bold">Theme</h2>
@@ -32,12 +32,12 @@ const ThemeToggle = () => {
         onClick={handleToggle}
         aria-pressed={theme === 'dark'}
         aria-label="Switch between dark and light theme"
-        className="relative w-14 h-8 bg-gray-700 rounded-full flex items-center px-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        className="relative w-14 h-8 bg-white rounded-full flex items-center px-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-600"
       >
         {/* Sun icon for light mode */}
         <FiSun
           size={20}
-          className={`absolute left-2 text-yellow-400 transition-opacity duration-300 ${
+          className={`absolute left-2 text-amber-600 transition-opacity duration-300 ${
             theme === 'light' ? 'opacity-100' : 'opacity-30'
           }`}
         />
@@ -45,7 +45,7 @@ const ThemeToggle = () => {
         {/* Moon icon for dark mode */}
         <FiMoon
           size={20}
-          className={`absolute right-2 text-yellow-400 transition-opacity duration-300 ${
+          className={`absolute right-2 text-amber-600 transition-opacity duration-300 ${
             theme === 'dark' ? 'opacity-100' : 'opacity-30'
           }`}
         />

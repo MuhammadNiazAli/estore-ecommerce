@@ -88,7 +88,7 @@ export default function IndustrialPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 max-w-[1200px] mx-auto pt-20 px-4 space-y-12">
+    <main className="min-h-screen bg-white text-gray-800 max-w-[1200px] mx-auto pt-20 px-4 space-y-12">
       <IndustrialHero />
 
       <IndustrialFilters filters={filters} onFilterChange={setFilters} />

@@ -35,7 +35,7 @@ const testimonials = [
 
 const AffiliatesTestimonials = () => {
   return (
-    <div className="bg-gray-900 text-yellow-400 py-16 px-4 flex justify-center">
+    <div className="bg-white text-amber-600 py-16 px-4 flex justify-center">
       <div className="w-full max-w-[1000px]">
         <h2 className="text-4xl font-extrabold text-center mb-12 tracking-wide">
           What Our Affiliates Say
@@ -44,26 +44,26 @@ const AffiliatesTestimonials = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-gray-800 hover:bg-gray-700 transition-all duration-300 ease-in-out rounded-2xl p-6 shadow-xl flex flex-col"
+              className="bg-white hover:bg-gray-50 transition-all duration-300 ease-in-out rounded-2xl p-6 shadow-xl flex flex-col"
             >
               <div className="flex items-center gap-4 mb-4">
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-14 h-14 rounded-full border-2 border-yellow-500 object-cover"
+                  className="w-14 h-14 rounded-full border-2 border-amber-700 object-cover"
                 />
                 <div>
                   <h3 className="text-lg font-bold">{t.name}</h3>
-                  <p className="text-sm text-yellow-300">{t.role}</p>
+                  <p className="text-sm text-amber-500">{t.role}</p>
                 </div>
               </div>
-              <div className="flex mb-3 text-yellow-400">
+              <div className="flex mb-3 text-amber-600">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400" />
+                  <Star key={i} className="w-4 h-4 fill-amber-600" />
                 ))}
               </div>
-              <div className="flex items-start gap-2 text-yellow-200 text-sm italic leading-relaxed">
-                <Quote className="w-5 h-5 shrink-0 mt-1 text-yellow-500" />
+              <div className="flex items-start gap-2 text-amber-400 text-sm italic leading-relaxed">
+                <Quote className="w-5 h-5 shrink-0 mt-1 text-amber-700" />
                 <p>{t.quote}</p>
               </div>
             </div>

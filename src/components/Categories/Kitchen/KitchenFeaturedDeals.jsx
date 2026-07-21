@@ -72,13 +72,13 @@ const KitchenFeaturedDeals = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12">
+    <section className="bg-white text-amber-600 py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">
           Featured Kitchen Deals
         </h2>
         {loading && (
-          <p className="text-center text-yellow-400 mb-4 animate-pulse">
+          <p className="text-center text-amber-600 mb-4 animate-pulse">
             Adding to cart...
           </p>
         )}
@@ -88,10 +88,10 @@ const KitchenFeaturedDeals = () => {
           {deals.map((deal) => (
             <motion.div
               key={deal.id}
-              className="bg-gray-800 rounded-lg shadow-md overflow-hidden border border-yellow-500 relative"
+              className="bg-white rounded-lg shadow-md overflow-hidden border border-amber-700 relative"
               whileHover={{ scale: 1.02 }}
             >
-              <span className="absolute top-3 left-3 bg-yellow-500 text-gray-900 text-[11px] font-semibold px-2 py-[2px] rounded-full">
+              <span className="absolute top-3 left-3 bg-amber-700 text-gray-900 text-[11px] font-semibold px-2 py-[2px] rounded-full">
                 {deal.discount}% OFF
               </span>
 
@@ -105,13 +105,13 @@ const KitchenFeaturedDeals = () => {
                 <h3 className="text-[15px] font-semibold mb-1">
                   {deal.name}
                 </h3>
-                <p className="text-yellow-300 text-[14px] font-bold">
+                <p className="text-amber-500 text-[14px] font-bold">
                   ${deal.price}{" "}
                   <span className="line-through text-gray-500 text-[12px]">
                     ${deal.oldPrice}
                   </span>
                 </p>
-                <p className="text-gray-400 text-[12px] mt-1">
+                <p className="text-gray-600 text-[12px] mt-1">
                   Ends in: {formatTime(deal.endsIn)}
                 </p>
 
@@ -119,13 +119,13 @@ const KitchenFeaturedDeals = () => {
                 <div className="flex justify-center gap-2 mt-3">
                   <button
                     onClick={() => handleAddToCart(deal.id)}
-                    className="flex items-center gap-1 px-3 py-1.5 bg-yellow-500 text-gray-900 text-sm font-semibold rounded hover:bg-yellow-400 transition"
+                    className="flex items-center gap-1 px-3 py-1.5 bg-amber-700 text-gray-900 text-sm font-semibold rounded hover:bg-amber-600 transition"
                   >
                     <FaCartPlus size={13} /> Cart
                   </button>
                   <button
                     onClick={() => setSelectedDeal(deal)}
-                    className="flex items-center gap-1 px-3 py-1.5 border border-yellow-500 text-yellow-400 text-sm rounded hover:bg-yellow-500 hover:text-gray-900 transition"
+                    className="flex items-center gap-1 px-3 py-1.5 border border-amber-700 text-amber-600 text-sm rounded hover:bg-amber-700 hover:text-gray-900 transition"
                   >
                     <FaSearch size={13} /> View
                   </button>
@@ -140,20 +140,20 @@ const KitchenFeaturedDeals = () => {
       <AnimatePresence>
         {selectedDeal && (
           <motion.div
-            className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 p-4"
+            className="fixed inset-0 bg-white/70 flex justify-center items-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gray-900 text-yellow-400 w-full max-w-md p-5 rounded-lg shadow-lg border border-yellow-500 relative"
+              className="bg-white text-amber-600 w-full max-w-md p-5 rounded-lg shadow-lg border border-amber-700 relative"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             >
               <button
                 onClick={() => setSelectedDeal(null)}
-                className="absolute top-3 right-3 text-yellow-400 text-xl"
+                className="absolute top-3 right-3 text-amber-600 text-xl"
               >
                 ✕
               </button>
@@ -163,13 +163,13 @@ const KitchenFeaturedDeals = () => {
                 className="w-full h-48 object-cover rounded mb-4"
               />
               <h3 className="text-lg font-bold">{selectedDeal.name}</h3>
-              <p className="mt-1 text-yellow-300 text-[15px] font-bold">
+              <p className="mt-1 text-amber-500 text-[15px] font-bold">
                 ${selectedDeal.price}{" "}
                 <span className="line-through text-gray-500 text-sm">
                   ${selectedDeal.oldPrice}
                 </span>
               </p>
-              <p className="mt-2 text-gray-400 text-sm">
+              <p className="mt-2 text-gray-600 text-sm">
                 Limited-time deal! Hurry before it ends.
               </p>
               <div className="flex justify-end mt-4">
@@ -178,7 +178,7 @@ const KitchenFeaturedDeals = () => {
                     handleAddToCart(selectedDeal.id);
                     setSelectedDeal(null);
                   }}
-                  className="px-4 py-2 bg-yellow-500 text-gray-900 text-sm font-semibold rounded hover:bg-yellow-400 transition flex items-center gap-2"
+                  className="px-4 py-2 bg-amber-700 text-gray-900 text-sm font-semibold rounded hover:bg-amber-600 transition flex items-center gap-2"
                 >
                   <FaCheckCircle size={14} /> Add to Cart
                 </button>

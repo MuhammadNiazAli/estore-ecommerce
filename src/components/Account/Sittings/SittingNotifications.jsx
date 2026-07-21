@@ -30,7 +30,7 @@ const NotificationSettings = () => {
   return (
     <section
       aria-label="Manage notification preferences"
-      className="w-full max-w-[900px] mx-auto bg-gray-800 text-white p-6 rounded-2xl shadow-lg"
+      className="w-full max-w-[900px] mx-auto bg-white text-gray-900 p-6 rounded-2xl shadow-lg"
     >
       <h2 className="text-xl font-bold mb-6">Notification Settings</h2>
 
@@ -38,10 +38,10 @@ const NotificationSettings = () => {
         {NOTIFICATION_OPTIONS.map(({ id, icon, label }) => (
           <li
             key={id}
-            className="flex items-center justify-between bg-gray-900 border border-gray-700 px-4 py-3 rounded-xl"
+            className="flex items-center justify-between bg-white border border-gray-200 px-4 py-3 rounded-xl"
           >
             <div className="flex items-center gap-3">
-              <span className="text-yellow-400 text-xl">{icon}</span>
+              <span className="text-amber-600 text-xl">{icon}</span>
               <span className="text-sm font-medium">{label}</span>
             </div>
 
@@ -52,7 +52,7 @@ const NotificationSettings = () => {
               aria-label={`Toggle ${label}`}
               onClick={() => togglePreference(id)}
               className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
-                preferences[id] ? 'bg-yellow-500' : 'bg-gray-600'
+                preferences[id] ? 'bg-amber-700' : 'bg-white'
               }`}
             >
               <span

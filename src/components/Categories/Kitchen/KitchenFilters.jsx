@@ -545,10 +545,10 @@ const KitchenFilters = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 py-12 text-white">
+    <section className="w-full bg-white py-12 text-gray-900">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-center text-yellow-400 mb-8">
+        <h2 className="text-4xl font-extrabold text-center text-amber-600 mb-8">
           Explore Our Kitchen Collection
         </h2>
 
@@ -563,8 +563,8 @@ const KitchenFilters = () => {
               }}
               className={`px-6 py-2 rounded-full font-semibold transition ${
                 activeCategory === cat
-                  ? "bg-yellow-500 text-black"
-                  : "bg-gray-700 hover:bg-yellow-400 hover:text-black"
+                  ? "bg-amber-700 text-black"
+                  : "bg-white hover:bg-amber-600 hover:text-black"
               }`}
             >
               {cat}
@@ -580,7 +580,7 @@ const KitchenFilters = () => {
           {visibleProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition relative group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition relative group"
             >
               {/* Image */}
               <div className="relative">
@@ -590,17 +590,17 @@ const KitchenFilters = () => {
                   className="w-full h-56 object-cover"
                 />
                 {/* Hover Icons */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
+                <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
                   <button
                     onClick={() => setQuickView(product)}
-                    className="bg-yellow-400 p-3 rounded-full hover:bg-yellow-500"
+                    className="bg-amber-600 p-3 rounded-full hover:bg-amber-700"
                   >
                     <EyeIcon className="h-5 w-5 text-black" />
                   </button>
-                  <button className="bg-yellow-400 p-3 rounded-full hover:bg-yellow-500">
+                  <button className="bg-amber-600 p-3 rounded-full hover:bg-amber-700">
                     <HeartIcon className="h-5 w-5 text-black" />
                   </button>
-                  <button className="bg-yellow-400 p-3 rounded-full hover:bg-yellow-500">
+                  <button className="bg-amber-600 p-3 rounded-full hover:bg-amber-700">
                     <ShoppingCartIcon className="h-5 w-5 text-black" />
                   </button>
                 </div>
@@ -609,9 +609,9 @@ const KitchenFilters = () => {
               {/* Details */}
               <div className="p-4 text-center">
                 <h3 className="text-lg font-bold">{product.name}</h3>
-                <p className="text-yellow-400 font-bold text-xl">
+                <p className="text-amber-600 font-bold text-xl">
                   ${product.price}{" "}
-                  <span className="text-gray-400 text-sm line-through">
+                  <span className="text-gray-600 text-sm line-through">
                     ${product.oldPrice}
                   </span>
                 </p>
@@ -625,7 +625,7 @@ const KitchenFilters = () => {
           <div className="text-center mt-8">
             <button
               onClick={handleShowMore}
-              className="bg-yellow-500 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
+              className="bg-amber-700 text-black px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
             >
               Show More
             </button>
@@ -635,11 +635,11 @@ const KitchenFilters = () => {
 
       {/* Quick View Modal */}
       {quickView && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-gray-800 rounded-xl max-w-lg w-full p-6 relative shadow-lg">
+        <div className="fixed inset-0 bg-white/70 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl max-w-lg w-full p-6 relative shadow-lg">
             <button
               onClick={() => setQuickView(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-yellow-400 text-2xl"
+              className="absolute top-4 right-4 text-gray-600 hover:text-amber-600 text-2xl"
             >
               ✕
             </button>
@@ -648,12 +648,12 @@ const KitchenFilters = () => {
               alt={quickView.name}
               className="w-full h-72 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-bold text-yellow-400 mb-2">{quickView.name}</h3>
-            <p className="text-gray-300 mb-4">{quickView.description}</p>
-            <p className="text-yellow-400 font-bold text-2xl mb-6">
+            <h3 className="text-2xl font-bold text-amber-600 mb-2">{quickView.name}</h3>
+            <p className="text-gray-700 mb-4">{quickView.description}</p>
+            <p className="text-amber-600 font-bold text-2xl mb-6">
               ${quickView.price}
             </p>
-            <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">
+            <button className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition">
               Add to Cart
             </button>
           </div>

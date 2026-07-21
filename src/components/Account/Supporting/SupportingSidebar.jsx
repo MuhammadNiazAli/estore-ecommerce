@@ -27,8 +27,8 @@ const SupportingSidebar = () => {
     <nav
       aria-label="Support page navigation"
       className="w-64 
-        bg-gradient-to-b from-yellow-900 via-yellow-800 to-yellow-700 
-        rounded-3xl p-6 text-yellow-100 shadow-2xl sticky top-20 self-start select-none"
+        bg-gradient-to-b from-amber-950 via-amber-900 to-amber-900 
+        rounded-3xl p-6 text-amber-300 shadow-2xl sticky top-20 self-start select-none"
     >
       <ul className="space-y-6">
         {navItems.map(({ id, label, icon, href }) => {
@@ -40,17 +40,17 @@ const SupportingSidebar = () => {
                 className={`
                   flex items-center gap-3 text-lg font-medium rounded-md px-4 py-2
                   transition-colors duration-200
-                  focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-1
+                  focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1
                   ${
                     isActive
-                      ? 'bg-yellow-700 text-yellow-400 shadow-inner'
-                      : 'hover:bg-yellow-800 hover:text-yellow-300 text-yellow-300'
+                      ? 'bg-amber-900 text-amber-600 shadow-inner'
+                      : 'hover:bg-amber-900 hover:text-amber-500 text-amber-500'
                   }
                 `}
                 aria-current={isActive ? 'page' : undefined}
                 onClick={() => setActiveId(id)}
               >
-                <span className="text-yellow-400">{icon}</span>
+                <span className="text-amber-600">{icon}</span>
                 {label}
               </a>
             </li>

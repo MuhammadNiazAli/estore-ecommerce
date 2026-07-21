@@ -67,7 +67,7 @@ const ProductGallery = () => {
   className="
     text-2xl sm:text-4xl
     font-extrabold
-    text-gray-900 dark:text-white
+    text-gray-900 dark:text-gray-900
     mb-12
     text-center
     tracking-tight
@@ -88,8 +88,8 @@ const ProductGallery = () => {
             <article
               key={slug}
               tabIndex={0}
-              className="relative rounded-xl shadow-lg cursor-pointer bg-white dark:bg-gray-900 overflow-hidden
-                group focus:outline-none focus:ring-4 focus:ring-yellow-400
+              className="relative rounded-xl shadow-lg cursor-pointer bg-white dark:bg-white overflow-hidden
+                group focus:outline-none focus:ring-4 focus:ring-amber-600
                 transform transition-transform duration-300 hover:scale-[1.03] focus:scale-[1.03]"
               aria-label={`View details for ${title}`}
             >
@@ -107,12 +107,12 @@ const ProductGallery = () => {
                     group-hover:scale-110 group-focus:scale-110"
                   style={{ willChange: "transform" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none rounded-t-xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent pointer-events-none rounded-t-xl" />
               </a>
 
               {/* Overlay content (desktop/tablet) */}
               <div
-                className="absolute bottom-0 left-0 right-0 p-6 bg-black bg-opacity-60 text-white
+                className="absolute bottom-0 left-0 right-0 p-6 bg-white bg-opacity-60 text-gray-900
                   opacity-0 group-hover:opacity-100 group-focus-within:opacity-100
                   transition-opacity duration-300 ease-in-out rounded-b-xl"
               >
@@ -120,27 +120,27 @@ const ProductGallery = () => {
                 <p className="text-sm line-clamp-2">{description}</p>
                 <a
                   href={slug}
-                  className="inline-block mt-4 px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md
-                    hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
+                  className="inline-block mt-4 px-4 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg shadow-md
+                    hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
                 >
                   View Details
                 </a>
               </div>
 
               {/* Mobile text below image */}
-              <div className="p-4 md:hidden bg-white dark:bg-gray-900 rounded-b-xl">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+              <div className="p-4 md:hidden bg-white dark:bg-white rounded-b-xl">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-900 mb-1">
                   <a href={slug} className="hover:underline focus:underline">
                     {title}
                   </a>
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-700 text-sm line-clamp-3">
                   {description}
                 </p>
                 <a
                   href={slug}
-                  className="mt-3 inline-block w-full text-center px-3 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow-md
-                    hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
+                  className="mt-3 inline-block w-full text-center px-3 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg shadow-md
+                    hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
                 >
                   View Details
                 </a>

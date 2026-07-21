@@ -43,14 +43,14 @@ const products = [
 
 const BestdealsProductsGrid = () => {
   return (
-    <section className="bg-gray-900 text-white w-full flex justify-center py-12 px-4 sm:px-6">
+    <section className="bg-white text-gray-900 w-full flex justify-center py-12 px-4 sm:px-6">
       <div className="w-full max-w-[1000px]">
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
               {/* IMAGE */}
               <div className="relative">
@@ -61,14 +61,14 @@ const BestdealsProductsGrid = () => {
                 />
 
                 {/* ACTION BUTTONS */}
-                <div className="absolute inset-0 bg-gray-900/80 bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
-                  <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:bg-yellow-300 transition">
+                <div className="absolute inset-0 bg-white/80 bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                  <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:bg-amber-500 transition">
                     <ShoppingCart className="w-5 h-5" />
                   </button>
-                  <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:bg-yellow-300 transition">
+                  <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:bg-amber-500 transition">
                     <Eye className="w-5 h-5" />
                   </button>
-                  <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:bg-yellow-300 transition">
+                  <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:bg-amber-500 transition">
                     <Heart className="w-5 h-5" />
                   </button>
                 </div>
@@ -78,7 +78,7 @@ const BestdealsProductsGrid = () => {
               <div className="p-4 text-center">
                 <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
                 <div className="flex justify-center items-center gap-2 mb-2">
-                  <span className="text-yellow-400 font-bold text-lg">
+                  <span className="text-amber-600 font-bold text-lg">
                     ${product.price.toFixed(2)}
                   </span>
                   <span className="text-gray-500 line-through text-sm">
@@ -86,7 +86,7 @@ const BestdealsProductsGrid = () => {
                   </span>
                 </div>
                 {/* Rating */}
-                <div className="flex justify-center text-yellow-400 text-sm">
+                <div className="flex justify-center text-amber-600 text-sm">
                   {'★'.repeat(Math.floor(product.rating))}
                   {'☆'.repeat(5 - Math.floor(product.rating))}
                 </div>

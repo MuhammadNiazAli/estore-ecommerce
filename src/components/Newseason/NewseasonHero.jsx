@@ -2,20 +2,20 @@ import React from 'react';
 
 const NewseasonHero = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 my-[-50px]">
+    <section className="bg-white text-amber-600 my-[-50px]">
       <div className="max-w-[1000px] mx-auto px-6 py-16 flex flex-col-reverse md:flex-row items-center gap-10">
         
         {/* Left Text Content */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-wide mb-4">
-            Discover the <span className="text-yellow-300">New Season</span> Collection
+            Discover the <span className="text-amber-500">New Season</span> Collection
           </h1>
-          <p className="text-yellow-200 mb-8 max-w-md mx-auto md:mx-0 text-lg md:text-xl leading-relaxed">
+          <p className="text-amber-400 mb-8 max-w-md mx-auto md:mx-0 text-lg md:text-xl leading-relaxed">
             Elevate your style with our exclusive limited edition pieces. Crafted for those who dare to stand out.
           </p>
           <button
             type="button"
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transition-colors duration-300"
+            className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-3 px-8 rounded-md shadow-lg transition-colors duration-300"
           >
             Shop Now
           </button>

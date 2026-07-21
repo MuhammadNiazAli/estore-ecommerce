@@ -27,12 +27,12 @@ const SustainabilityImpact = () => {
   return (
     <section
       aria-labelledby="sustainability-impact-title"
-      className="bg-gray-900 text-yellow-400 px-4 sm:px-6 lg:px-8 py-16"
+      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="max-w-5xl mx-auto text-center">
         <h2
           id="sustainability-impact-title"
-          className="text-3xl sm:text-4xl font-extrabold text-yellow-300 mb-16 select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-16 select-none"
         >
           Our Impact in Numbers
         </h2>
@@ -48,25 +48,25 @@ const SustainabilityImpact = () => {
               tabIndex={0}
               aria-label={`${value} - ${label}`}
               className="
-                bg-yellow-900/10 rounded-xl p-8 shadow-lg
+                bg-amber-950/10 rounded-xl p-8 shadow-lg
                 cursor-default
                 outline-none
                 transition
                 duration-300
-                hover:bg-yellow-900/25
-                focus-visible:ring-4 focus-visible:ring-yellow-500
+                hover:bg-amber-950/25
+                focus-visible:ring-4 focus-visible:ring-amber-700
                 focus-visible:ring-opacity-70
-                focus-visible:shadow-yellow-400
+                focus-visible:shadow-amber-600
                 select-text
               "
             >
-              <p className="text-yellow-300 font-extrabold text-5xl sm:text-6xl mb-4 leading-none tracking-tight">
+              <p className="text-amber-500 font-extrabold text-5xl sm:text-6xl mb-4 leading-none tracking-tight">
                 {value}
               </p>
-              <h3 className="text-yellow-200 font-semibold text-xl sm:text-2xl mb-3">
+              <h3 className="text-amber-400 font-semibold text-xl sm:text-2xl mb-3">
                 {label}
               </h3>
-              <p className="text-yellow-200 text-base sm:text-lg leading-relaxed tracking-wide">
+              <p className="text-amber-400 text-base sm:text-lg leading-relaxed tracking-wide">
                 {description}
               </p>
             </article>

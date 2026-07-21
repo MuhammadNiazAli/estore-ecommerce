@@ -634,20 +634,20 @@ const HomeDecorProductGrid = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-gray-50 py-12 px-4">
+    <section className="bg-white text-gray-800 py-12 px-4">
       <div className="max-w-[1100px] mx-auto">
         {/* Header with Sort */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h2 className="text-3xl font-semibold">Stylish Home Decor</h2>
           <div className="flex items-center gap-3">
-            <label htmlFor="sort" className="text-yellow-600 font-semibold">
+            <label htmlFor="sort" className="text-amber-800 font-semibold">
               Sort By:
             </label>
             <select
               id="sort"
               value={sortOption}
               onChange={(e) => handleSort(e.target.value)}
-              className="bg-gray-900 border border-gray-300 text-gray-50 px-4 py-2 rounded-md shadow-sm focus:outline-gray-900"
+              className="bg-white border border-gray-300 text-gray-800 px-4 py-2 rounded-md shadow-sm focus:outline-gray-900"
             >
               <option value="">Default</option>
               <option value="low-high">Price: Low to High</option>
@@ -664,7 +664,7 @@ const HomeDecorProductGrid = () => {
               key={item.id}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="relative bg-gray-800 rounded-xl shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.03]"
+              className="relative bg-white rounded-xl shadow-md overflow-hidden group transition-transform duration-300 hover:scale-[1.03]"
             >
               <div className="relative w-full h-64 overflow-hidden">
                 <img
@@ -674,13 +674,13 @@ const HomeDecorProductGrid = () => {
                 />
 
                 {hoveredId === item.id && (
-                  <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
-                    <button className="bg-yellow-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-yellow-500 transition flex items-center gap-2">
+                  <div className="absolute inset-0 bg-white/50 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
+                    <button className="bg-amber-800 text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-amber-700 transition flex items-center gap-2">
                       <FaCartPlus /> Add to Cart
                     </button>
-                    <div className="flex gap-5 text-xl text-white">
-                      <FaHeart className="cursor-pointer hover:text-yellow-400" />
-                      <FaEye className="cursor-pointer hover:text-yellow-400" />
+                    <div className="flex gap-5 text-xl text-gray-900">
+                      <FaHeart className="cursor-pointer hover:text-amber-600" />
+                      <FaEye className="cursor-pointer hover:text-amber-600" />
                     </div>
                   </div>
                 )}
@@ -688,10 +688,10 @@ const HomeDecorProductGrid = () => {
 
               <div className="p-5 space-y-1">
                 <h3 className="text-xl font-semibold">{item.name}</h3>
-                <p className="text-yellow-600 font-medium">{item.brand}</p>
+                <p className="text-amber-800 font-medium">{item.brand}</p>
                 <div className="flex justify-between items-center mt-2">
-                  <p className="text-lg font-bold text-yellow-700">${item.price}</p>
-                  <span className="text-sm text-yellow-500">{item.rating}★</span>
+                  <p className="text-lg font-bold text-amber-900">${item.price}</p>
+                  <span className="text-sm text-amber-700">{item.rating}★</span>
                 </div>
                 <div className="flex flex-wrap gap-2 text-xs text-gray-600 mt-3">
                   {item.features.slice(0, 3).map((feature, idx) => (
@@ -720,7 +720,7 @@ const HomeDecorProductGrid = () => {
           {visibleCount < homeDecorData.length && (
             <button
               onClick={handleLoadMore}
-              className="bg-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition"
+              className="bg-amber-800 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
             >
               Load More
             </button>

@@ -25,7 +25,7 @@ import GiftMobileOffers from '@/components/Gift/GiftMobileOffers';
 
 const GiftPage = () => {
   return (
-    <main className="min-h-screen bg-[#101828] text-white px-4 sm:px-6 py-10 lg:py-20 space-y-16">
+    <main className="min-h-screen bg-white text-gray-900 px-4 sm:px-6 py-10 lg:py-20 space-y-16">
       {/* Hero Section */}
       <GiftHero />
       <GiftVideoBanner />

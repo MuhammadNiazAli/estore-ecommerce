@@ -46,21 +46,21 @@ const BestdealsCountdown = () => {
   }, [countdownTarget]);
 
   const TimeBox = ({ label, value }) => (
-    <div className="flex flex-col items-center bg-gray-800 rounded-xl px-4 py-4 sm:px-6 sm:py-5 shadow-lg min-w-[70px] sm:min-w-[90px]">
-      <span className="text-yellow-400 text-3xl sm:text-4xl font-extrabold tabular-nums transition-all duration-300">
+    <div className="flex flex-col items-center bg-white rounded-xl px-4 py-4 sm:px-6 sm:py-5 shadow-lg min-w-[70px] sm:min-w-[90px]">
+      <span className="text-amber-600 text-3xl sm:text-4xl font-extrabold tabular-nums transition-all duration-300">
         {value}
       </span>
-      <span className="text-gray-400 text-xs sm:text-sm uppercase mt-1 tracking-wide">
+      <span className="text-gray-600 text-xs sm:text-sm uppercase mt-1 tracking-wide">
         {label}
       </span>
     </div>
   );
 
   return (
-    <section className="bg-gray-900 text-white flex justify-center py-10 px-4 sm:px-6">
+    <section className="bg-white text-gray-900 flex justify-center py-10 px-4 sm:px-6">
       <div className="max-w-[1200px] w-full text-center">
         {expired ? (
-          <h2 className="text-yellow-400 text-2xl sm:text-3xl font-bold">
+          <h2 className="text-amber-600 text-2xl sm:text-3xl font-bold">
             Deal Ended
           </h2>
         ) : (

@@ -87,12 +87,12 @@ const SustainabilityPartners = () => {
   return (
     <section
       aria-labelledby="sustainability-partners-title"
-      className="bg-gray-900 text-yellow-400 px-4 sm:px-6 lg:px-8 py-16 select-none"
+      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16 select-none"
     >
       <div className="max-w-5xl mx-auto">
         <h2
           id="sustainability-partners-title"
-          className="text-3xl sm:text-4xl font-extrabold text-yellow-300 mb-12 text-center"
+          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-12 text-center"
         >
           Our Trusted Partners
         </h2>
@@ -110,10 +110,10 @@ const SustainabilityPartners = () => {
                 rel="noopener noreferrer"
                 aria-label={`Visit ${name} website`}
                 className="
-                  block w-36 h-20 bg-yellow-900/10 rounded-xl p-4 shadow-lg
+                  block w-36 h-20 bg-amber-950/10 rounded-xl p-4 shadow-lg
                   transition-colors duration-300
-                  hover:bg-yellow-900/25
-                  focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                  hover:bg-amber-950/25
+                  focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-gray-900
                   flex items-center justify-center
                 "
               >
@@ -154,10 +154,10 @@ const SustainabilityPartners = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-                      block w-full h-24 bg-yellow-900/10 rounded-xl p-4 shadow-lg
+                      block w-full h-24 bg-amber-950/10 rounded-xl p-4 shadow-lg
                       transition-colors duration-300
-                      hover:bg-yellow-900/25
-                      focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                      hover:bg-amber-950/25
+                      focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-gray-900
                       flex items-center justify-center
                     "
                     aria-describedby={`partner-desc-${index}`}
@@ -173,7 +173,7 @@ const SustainabilityPartners = () => {
                   </a>
                   <p
                     id={`partner-desc-${index}`}
-                    className="mt-2 text-yellow-300 text-center font-semibold"
+                    className="mt-2 text-amber-500 text-center font-semibold"
                   >
                     {name}
                   </p>
@@ -186,7 +186,7 @@ const SustainabilityPartners = () => {
           <button
             onClick={prevSlide}
             aria-label="Previous partner"
-            className="absolute top-1/2 left-2 -translate-y-1/2 bg-yellow-700 bg-opacity-80 rounded-full p-2 shadow-lg text-yellow-100 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            className="absolute top-1/2 left-2 -translate-y-1/2 bg-amber-900 bg-opacity-80 rounded-full p-2 shadow-lg text-amber-300 hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-600"
           >
             <svg
               className="w-6 h-6"
@@ -202,7 +202,7 @@ const SustainabilityPartners = () => {
           <button
             onClick={nextSlide}
             aria-label="Next partner"
-            className="absolute top-1/2 right-2 -translate-y-1/2 bg-yellow-700 bg-opacity-80 rounded-full p-2 shadow-lg text-yellow-100 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-400"
+            className="absolute top-1/2 right-2 -translate-y-1/2 bg-amber-900 bg-opacity-80 rounded-full p-2 shadow-lg text-amber-300 hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-600"
           >
             <svg
               className="w-6 h-6"

@@ -905,28 +905,28 @@ const WomanClothsFilter = () => {
   };
 
   return (
-    <section className="w-full my-8 bg-gray-900 text-white py-8 px-3 md:px-6">
+    <section className="w-full my-8 bg-white text-gray-900 py-8 px-3 md:px-6">
       <style>{`
         .custom-scroll::-webkit-scrollbar {
           height: 8px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-          background: #111827;
+          background: #ffffff;
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background: linear-gradient(90deg, #facc15, #d97706);
+          background: linear-gradient(90deg, #b45309, #d97706);
           border-radius: 10px;
-          border: 2px solid #111827;
+          border: 2px solid #ffffff;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(90deg, #fde047, #f59e0b);
+          background: linear-gradient(90deg, #b45309, #b45309);
         }
       `}</style>
 
       <div className="max-w-[1400px] mx-auto">
         {/* Filters */}
-        <div className="flex flex-col md:flex-row md:items-center gap-4 bg-gray-800 p-4 rounded-xl mb-8">
+        <div className="flex flex-col md:flex-row md:items-center gap-4 bg-white p-4 rounded-xl mb-8">
           {/* Category Filter */}
           <div className="flex gap-2 overflow-x-auto custom-scroll">
             {categories.map((cat) => (
@@ -938,8 +938,8 @@ const WomanClothsFilter = () => {
                 }}
                 className={`px-3 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-sm font-medium transition whitespace-nowrap ${
                   selectedCategory === cat
-                    ? "bg-yellow-500 text-gray-900"
-                    : "bg-gray-700 hover:bg-gray-600"
+                    ? "bg-amber-700 text-gray-900"
+                    : "bg-white hover:bg-gray-50"
                 }`}
               >
                 {cat}
@@ -961,7 +961,7 @@ const WomanClothsFilter = () => {
                 setPriceRange(Number(e.target.value));
                 setVisibleCount(20);
               }}
-              className="w-28 md:w-40 accent-yellow-500"
+              className="w-28 md:w-40 accent-amber-700"
             />
           </div>
 
@@ -976,8 +976,8 @@ const WomanClothsFilter = () => {
                 }}
                 className={`px-2 md:px-3 py-1 rounded-md text-xs font-medium transition border whitespace-nowrap ${
                   selectedColor === clr
-                    ? "bg-yellow-500 text-gray-900 border-yellow-500"
-                    : "border-gray-600 text-gray-300 hover:bg-gray-700"
+                    ? "bg-amber-700 text-gray-900 border-amber-700"
+                    : "border-gray-200 text-gray-700 hover:bg-gray-50"
                 }`}
               >
                 {clr}
@@ -992,7 +992,7 @@ const WomanClothsFilter = () => {
             visibleProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg hover:scale-[1.03] transition transform"
+                className="bg-white rounded-lg overflow-hidden hover:shadow-lg hover:scale-[1.03] transition transform"
               >
                 <img
                   src={product.img}
@@ -1003,18 +1003,18 @@ const WomanClothsFilter = () => {
                   <h3 className="text-sm md:text-base font-semibold line-clamp-1">
                     {product.title}
                   </h3>
-                  <p className="text-xs text-gray-400">{product.category}</p>
-                  <p className="text-yellow-500 font-bold mt-1 md:mt-2">
+                  <p className="text-xs text-gray-600">{product.category}</p>
+                  <p className="text-amber-700 font-bold mt-1 md:mt-2">
                     ${product.price}
                   </p>
-                  <button className="mt-2 w-full bg-yellow-500 text-gray-900 py-1.5 md:py-2 rounded-md hover:bg-yellow-400 transition text-sm font-medium">
+                  <button className="mt-2 w-full bg-amber-700 text-gray-900 py-1.5 md:py-2 rounded-md hover:bg-amber-600 transition text-sm font-medium">
                     Add to Cart
                   </button>
                 </div>
               </div>
             ))
           ) : (
-            <p className="col-span-full text-center text-gray-400">
+            <p className="col-span-full text-center text-gray-600">
               No products match your filters.
             </p>
           )}
@@ -1026,7 +1026,7 @@ const WomanClothsFilter = () => {
             <button
               onClick={handleShowMore}
               disabled={loading}
-              className="bg-yellow-500 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
+              className="bg-amber-700 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-amber-600 transition"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">

@@ -36,10 +36,10 @@ const NotificationList = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       aria-label="Recent notifications"
-      className="w-full max-w-2xl mx-auto px-6 py-10 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white rounded-3xl shadow-2xl"
+      className="w-full max-w-2xl mx-auto px-6 py-10 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl"
     >
       <h2 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-2">
-        <FaBell className="text-yellow-400" aria-hidden="true" />
+        <FaBell className="text-amber-600" aria-hidden="true" />
         Recent Notifications
       </h2>
 
@@ -50,16 +50,16 @@ const NotificationList = () => {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="flex items-start gap-4 bg-gray-800 border border-gray-700 rounded-xl p-4 hover:bg-gray-700/50 active:scale-[0.98] transition-all duration-200"
+            className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl p-4 hover:bg-white/50 active:scale-[0.98] transition-all duration-200"
             role="listitem"
           >
             <div className="flex-shrink-0">{item.icon}</div>
 
             <div className="flex-1">
-              <h3 className="font-semibold text-sm sm:text-base text-gray-100">
+              <h3 className="font-semibold text-sm sm:text-base text-gray-800">
                 {item.title}
               </h3>
-              <p className="text-gray-400 text-xs sm:text-sm">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 {item.message}
               </p>
               <span className="text-gray-500 text-[11px] sm:text-xs mt-1 block">

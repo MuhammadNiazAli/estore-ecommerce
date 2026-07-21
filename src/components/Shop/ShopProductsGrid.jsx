@@ -85,7 +85,7 @@ const renderStars = (rating) => {
   const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <div className="flex text-yellow-400" aria-label={`Rating: ${rating} out of 5`}>
+    <div className="flex text-amber-600" aria-label={`Rating: ${rating} out of 5`}>
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={`full-${i}`}
@@ -148,14 +148,14 @@ const ShopProductsGrid = () => {
 
   return (
     <section
-      className="w-full py-8 px-4 sm:px-6 md:px-8 bg-gray-900 text-gray-300 min-h-screen"
+      className="w-full py-8 px-4 sm:px-6 md:px-8 bg-white text-gray-700 min-h-screen"
       aria-label="Product listing"
     >
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
         {products.map((product) => (
           <article
             key={product.id}
-            className="bg-gray-800 rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 focus-within:ring-2 focus-within:ring-amber-400"
+            className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 focus-within:ring-2 focus-within:ring-amber-400"
             tabIndex={0}
             aria-label={`${product.title}, price $${product.price}`}
           >
@@ -172,7 +172,7 @@ const ShopProductsGrid = () => {
 
             {/* Content */}
             <div className="p-4 flex flex-col flex-grow">
-              <h3 className="font-semibold text-white text-base sm:text-lg mb-1 truncate">
+              <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-1 truncate">
                 {product.title}
               </h3>
 
@@ -211,8 +211,8 @@ const ShopProductsGrid = () => {
                   }`}
                   className={`p-1.5 rounded-full transition-all focus:outline-none focus:ring-2 flex items-center justify-center text-xs sm:text-sm ${
                     favorites.includes(product.id)
-                      ? 'bg-red-600 text-white shadow-md hover:bg-red-700'
-                      : 'bg-gray-700 hover:bg-gray-600 text-amber-400'
+                      ? 'bg-red-600 text-gray-900 shadow-md hover:bg-red-700'
+                      : 'bg-white hover:bg-gray-50 text-amber-400'
                   }`}
                 >
                   <FiHeart className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -222,7 +222,7 @@ const ShopProductsGrid = () => {
                 <button
                   onClick={() => router.push(`/product`)}
                   aria-label={`View details for ${product.title}`}
-                  className="p-1.5 bg-gray-700 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-400 transition flex items-center justify-center text-xs sm:text-sm text-amber-400 hover:text-white"
+                  className="p-1.5 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-400 transition flex items-center justify-center text-xs sm:text-sm text-amber-400 hover:text-gray-900"
                 >
                   <FiEye className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>

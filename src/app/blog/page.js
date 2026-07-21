@@ -16,7 +16,7 @@ import BlogLoading from '@/components/Blog/BlogLoading';
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-[#0f172a] text-white flex flex-col items-center justify-start px-4 py-16 lg:py-32 space-y-12">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-start px-4 py-16 lg:py-32 space-y-12">
       <BlogHero />
       <BlogFilters />
       <BlogList />

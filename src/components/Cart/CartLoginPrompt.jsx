@@ -75,7 +75,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
 
   return (
     <section
-      className="w-full bg-gray-900 flex flex-col items-center justify-center px-4 sm:px-6 py-16 text-white min-h-[350px]"
+      className="w-full bg-white flex flex-col items-center justify-center px-4 sm:px-6 py-16 text-gray-900 min-h-[350px]"
       role="region"
       aria-label="Login and guest options"
     >
@@ -87,7 +87,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               type="button"
               aria-haspopup="dialog"
               aria-expanded={showModal}
-              className="flex-grow bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-60"
+              className="flex-grow bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60"
             >
               Log In
             </button>
@@ -97,7 +97,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               type="button"
               aria-label="Continue as guest without logging in"
               aria-busy={loadingGuest}
-              className="flex-grow border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 font-semibold px-6 py-3 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-40"
+              className="flex-grow border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-gray-900 font-semibold px-6 py-3 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-40"
             >
               {loadingGuest ? <Spinner /> : 'Continue as Guest'}
             </button>
@@ -106,7 +106,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
           <Link
             href="/profile"
             aria-label="Go to your profile page"
-            className="flex items-center justify-center gap-3 bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-60 w-full"
+            className="flex items-center justify-center gap-3 bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60 w-full"
           >
             <FaUserCircle className="w-6 h-6" />
             Your Profile
@@ -120,24 +120,24 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
           aria-modal="true"
           aria-labelledby="login-modal-title"
           tabIndex={-1}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-70 px-4"
         >
           <div
             ref={modalRef}
-            className="bg-gray-800 rounded-lg max-w-md w-full p-6 relative shadow-xl"
+            className="bg-white rounded-lg max-w-md w-full p-6 relative shadow-xl"
           >
             <h3
               id="login-modal-title"
               ref={headingRef}
               tabIndex={-1}
-              className="text-xl font-semibold text-yellow-400 mb-6"
+              className="text-xl font-semibold text-amber-600 mb-6"
             >
               Choose a login method
             </h3>
             <button
               onClick={() => !loadingProvider && setShowModal(false)}
               aria-label="Close login options"
-              className="absolute top-4 right-4 text-yellow-400 hover:text-yellow-300 focus:outline-none"
+              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
             >
               <FaTimes className="w-6 h-6" />
             </button>
@@ -162,7 +162,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
                     type="button"
                     disabled={loadingProvider !== null}
                     aria-busy={loadingProvider === id}
-                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-50"
+                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-white hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50"
                   >
                     {loadingProvider === id ? (
                       <Spinner />
@@ -185,7 +185,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
 
 const Spinner = () => (
   <FaSpinner
-    className="animate-spin text-yellow-400 w-5 h-5 mx-auto"
+    className="animate-spin text-amber-600 w-5 h-5 mx-auto"
     aria-hidden="true"
   />
 );

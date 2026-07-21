@@ -27,7 +27,7 @@ const topics = [
 
 const SupportTopics = () => {
   return (
-    <section className="w-full px-6 py-16 bg-gray-900 text-white">
+    <section className="w-full px-6 py-16 bg-white text-gray-900">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
           Explore Our Most Asked Topics
@@ -38,12 +38,12 @@ const SupportTopics = () => {
               key={idx}
               href={link}
               tabIndex={0}
-              className="block group border border-gray-800 bg-gray-800 hover:bg-gray-700 transition-colors duration-300 rounded-xl p-6 focus:ring-4 focus:ring-yellow-500 focus:outline-none shadow-lg hover:shadow-xl"
+              className="block group border border-gray-200 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-xl p-6 focus:ring-4 focus:ring-amber-700 focus:outline-none shadow-lg hover:shadow-xl"
             >
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-yellow-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-amber-600 transition-colors">
                 {title}
               </h3>
-              <p className="text-gray-300 leading-relaxed">{description}</p>
+              <p className="text-gray-700 leading-relaxed">{description}</p>
             </a>
           ))}
         </div>

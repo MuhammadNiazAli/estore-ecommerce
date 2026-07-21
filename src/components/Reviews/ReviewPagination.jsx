@@ -71,14 +71,14 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
   return (
     <nav
       aria-label="Reviews Pagination"
-      className="w-full bg-gray-900 py-6 px-4 flex justify-center my-[-10px] mb-[-20px]"
+      className="w-full bg-white py-6 px-4 flex justify-center my-[-10px] mb-[-20px]"
       tabIndex={-1}
       ref={paginationRef}
     >
       <ul
         className="
           flex items-center gap-3
-          bg-gray-900 px-5 py-3 rounded-3xl shadow-lg border border-gray-800
+          bg-white px-5 py-3 rounded-3xl shadow-lg border border-gray-200
           max-w-[700px] w-full
           overflow-x-auto scrollbar-thin scrollbar-thumb-amber-500 scrollbar-track-gray-700
           sm:justify-center
@@ -95,8 +95,8 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
               flex items-center justify-center w-12 h-10 rounded-full font-semibold
               transition-colors duration-200
               ${currentPage === 1
-                ? 'text-gray-600 bg-gray-800 cursor-not-allowed'
-                : 'text-amber-500 hover:bg-amber-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-amber-400'}
+                ? 'text-gray-600 bg-white cursor-not-allowed'
+                : 'text-amber-500 hover:bg-amber-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-amber-400'}
             `}
           >
             ←
@@ -125,7 +125,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
                     focus:outline-none focus:ring-4 focus:ring-amber-400
                     ${isActive
                       ? 'text-gray-900 bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg'
-                      : 'text-gray-300 hover:text-white hover:bg-gray-800'}
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'}
                   `}
                 >
                   <AnimatePresence>
@@ -155,8 +155,8 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
               flex items-center justify-center w-12 h-10 rounded-full font-semibold
               transition-colors duration-200
               ${currentPage === totalPages
-                ? 'text-gray-600 bg-gray-800 cursor-not-allowed'
-                : 'text-amber-500 hover:bg-amber-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-amber-400'}
+                ? 'text-gray-600 bg-white cursor-not-allowed'
+                : 'text-amber-500 hover:bg-amber-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-amber-400'}
             `}
           >
             →

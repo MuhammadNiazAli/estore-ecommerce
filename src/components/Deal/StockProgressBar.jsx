@@ -16,20 +16,20 @@ const StockProgressBar = ({
  
   const getBarGradient = () => {
     if (percentSold >= 90) return 'bg-gradient-to-r from-red-600 to-red-400';
-    if (percentSold >= 60) return 'bg-gradient-to-r from-yellow-500 to-yellow-300';
+    if (percentSold >= 60) return 'bg-gradient-to-r from-amber-700 to-amber-500';
     return 'bg-gradient-to-r from-green-500 to-green-300';
   };
 
   return (
-    <div className="w-full text-xs text-gray-200">
+    <div className="w-full text-xs text-gray-700">
     
       <div className="flex justify-between items-center mb-1">
-        <span className="text-[13px] font-medium text-white">{label}</span>
-        <span className="text-[13px] font-medium text-gray-400">{percentSold}% Sold</span>
+        <span className="text-[13px] font-medium text-gray-900">{label}</span>
+        <span className="text-[13px] font-medium text-gray-600">{percentSold}% Sold</span>
       </div>
 
      
-      <div className={`w-full bg-gray-700/60 ${height} ${rounded} overflow-hidden`}>
+      <div className={`w-full bg-white/60 ${height} ${rounded} overflow-hidden`}>
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${percentSold}%` }}
@@ -39,7 +39,7 @@ const StockProgressBar = ({
       </div>
 
     
-      <div className="flex justify-between items-center mt-1 text-[12px] text-gray-400">
+      <div className="flex justify-between items-center mt-1 text-[12px] text-gray-600">
         <span>{percentLeft} items left</span>
         <span>{sold} sold</span>
       </div>

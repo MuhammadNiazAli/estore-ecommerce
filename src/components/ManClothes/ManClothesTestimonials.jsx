@@ -85,7 +85,7 @@ const StarRating = ({ rating }) => {
       <svg
         key={i}
         className={`w-5 h-5 inline-block ${
-          i <= rating ? "text-yellow-400" : "text-gray-300"
+          i <= rating ? "text-amber-600" : "text-gray-700"
         }`}
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -115,8 +115,8 @@ const ManClothsTestimonials = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 bg-gray-900 rounded-lg ">
-      <h2 className="text-4xl font-extrabold text-white text-center mb-12">
+    <section className="max-w-7xl mx-auto px-6 py-16 bg-white rounded-lg ">
+      <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12">
         What Our Customers Say
       </h2>
 
@@ -141,20 +141,20 @@ const ManClothsTestimonials = () => {
                   .map(({ id, name, role, photo, rating, quote }) => (
                     <div
                       key={id}
-                      className="bg-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center text-center"
+                      className="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center"
                     >
                       <img
                         src={photo}
                         alt={name}
-                        className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-yellow-600"
+                        className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-amber-800"
                         loading="lazy"
                       />
-                      <h3 className="text-xl font-semibold text-white">
+                      <h3 className="text-xl font-semibold text-gray-900">
                         {name}
                       </h3>
-                      <p className="text-sm text-yellow-500 italic mb-2">{role}</p>
+                      <p className="text-sm text-amber-700 italic mb-2">{role}</p>
                       <StarRating rating={rating} />
-                      <p className="mt-4 text-gray-300 font-serif">
+                      <p className="mt-4 text-gray-700 font-serif">
                         “{quote}”
                       </p>
                     </div>
@@ -172,8 +172,8 @@ const ManClothsTestimonials = () => {
               onClick={() => goToPage(idx)}
               className={`w-4 h-4 rounded-full transition-colors duration-300 ${
                 currentPage === idx
-                  ? "bg-yellow-500 dark:bg-yellow-400"
-                  : "bg-gray-300 dark:bg-gray-600"
+                  ? "bg-amber-700 dark:bg-amber-600"
+                  : "bg-gray-300 dark:bg-white"
               }`}
               aria-label={`Go to testimonials page ${idx + 1}`}
             />
@@ -186,20 +186,20 @@ const ManClothsTestimonials = () => {
         {testimonials.slice(0, 3).map(({ id, name, role, photo, rating, quote }) => (
           <div
             key={id}
-            className="bg-gray-800 p-8 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 duration-300"
+            className="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center transition-transform transform hover:scale-105 duration-300"
           >
             <img
               src={photo}
               alt={name}
-              className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-yellow-500 dark:border-yellow-600"
+              className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-amber-700 dark:border-amber-800"
               loading="lazy"
             />
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-gray-900">
               {name}
             </h3>
-            <p className="text-sm text-yellow-500 italic mb-2">{role}</p>
+            <p className="text-sm text-amber-700 italic mb-2">{role}</p>
             <StarRating rating={rating} />
-            <p className="mt-4 text-gray-300 font-serif">
+            <p className="mt-4 text-gray-700 font-serif">
               “{quote}”
             </p>
           </div>

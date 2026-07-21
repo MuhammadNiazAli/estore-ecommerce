@@ -16,7 +16,7 @@ import InvestorsTestimonials from '@/components/Investors/InvestorsTestimonials'
 
 export default function InvestorsPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 py-15 lg:py-35">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 py-15 lg:py-35">
       <InvestorsHero />
       <InvestorsOverview />
       <InvestorsFinancials />

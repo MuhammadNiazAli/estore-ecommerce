@@ -71,11 +71,11 @@ export default function GiftPersonalizer() {
     <>
       <section
         aria-labelledby="personalize-title"
-        className="max-w-lg mx-auto bg-gray-900 rounded-lg shadow-2xl p-8 text-white"
+        className="max-w-lg mx-auto bg-white rounded-lg shadow-2xl p-8 text-gray-900"
       >
         <h2
           id="personalize-title"
-          className="text-yellow-400 text-3xl font-extrabold mb-6 text-center drop-shadow-lg"
+          className="text-amber-600 text-3xl font-extrabold mb-6 text-center drop-shadow-lg"
         >
           Personalize Your Gift
         </h2>
@@ -84,7 +84,7 @@ export default function GiftPersonalizer() {
           <div>
             <label
               htmlFor="personal-message"
-              className="block text-yellow-400 font-semibold mb-2 cursor-pointer"
+              className="block text-amber-600 font-semibold mb-2 cursor-pointer"
             >
               Personal Message <span aria-hidden="true" className="text-red-500">*</span>
             </label>
@@ -99,10 +99,10 @@ export default function GiftPersonalizer() {
               placeholder="Write your heartfelt message here..."
               aria-describedby="message-help message-error"
               aria-invalid={!!messageError}
-              className={`mt-1 w-full rounded-md bg-gray-800 border p-3 text-white placeholder-yellow-600 focus:outline-none focus:ring-2 transition resize-none ${
+              className={`mt-1 w-full rounded-md bg-white border p-3 text-gray-900 placeholder-amber-800 focus:outline-none focus:ring-2 transition resize-none ${
                 messageError
                   ? 'border-red-500 focus:ring-red-500'
-                  : 'border-yellow-400 focus:ring-yellow-400'
+                  : 'border-amber-600 focus:ring-amber-600'
               }`}
               required
             />
@@ -110,7 +110,7 @@ export default function GiftPersonalizer() {
               <p
                 id="message-help"
                 className={`${
-                  message.length > maxChars * 0.9 ? 'text-yellow-300' : 'text-gray-400'
+                  message.length > maxChars * 0.9 ? 'text-amber-500' : 'text-gray-600'
                 }`}
               >
                 {message.length} / {maxChars} characters
@@ -126,7 +126,7 @@ export default function GiftPersonalizer() {
           <div>
             <label
               htmlFor="wrapping-select"
-              className="block text-yellow-400 font-semibold mb-2 cursor-pointer"
+              className="block text-amber-600 font-semibold mb-2 cursor-pointer"
             >
               Wrapping Style (optional)
             </label>
@@ -135,7 +135,7 @@ export default function GiftPersonalizer() {
               name="wrapping-select"
               value={wrapping}
               onChange={(e) => setWrapping(e.target.value)}
-              className="mt-1 w-full rounded-md bg-gray-800 border border-yellow-400/50 p-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              className="mt-1 w-full rounded-md bg-white border border-amber-600/50 p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
               aria-describedby="wrapping-desc"
             >
               {wrappingOptions.map(({ value, label }) => (
@@ -151,7 +151,7 @@ export default function GiftPersonalizer() {
             </select>
             <p
               id="wrapping-desc"
-              className="mt-1 text-yellow-300 italic text-sm select-none"
+              className="mt-1 text-amber-500 italic text-sm select-none"
               aria-live="polite"
             >
               {wrapping
@@ -165,10 +165,10 @@ export default function GiftPersonalizer() {
                 <img
                   src={wrappingOptions.find((w) => w.value === wrapping)?.thumbnail}
                   alt={`${wrappingOptions.find((w) => w.value === wrapping)?.label} wrapping style`}
-                  className="w-20 h-20 rounded-md object-cover border border-yellow-400 shadow-md"
+                  className="w-20 h-20 rounded-md object-cover border border-amber-600 shadow-md"
                   loading="lazy"
                 />
-                <p className="text-yellow-300 font-semibold">
+                <p className="text-amber-500 font-semibold">
                   {wrappingOptions.find((w) => w.value === wrapping)?.label}
                 </p>
               </div>
@@ -178,14 +178,14 @@ export default function GiftPersonalizer() {
           {/* Live preview box */}
           {message.trim() && (
             <div
-              className="bg-yellow-900/30 border border-yellow-400 rounded-md p-4 text-yellow-300 whitespace-pre-wrap"
+              className="bg-amber-950/30 border border-amber-600 rounded-md p-4 text-amber-500 whitespace-pre-wrap"
               aria-live="polite"
               aria-atomic="true"
             >
               <strong className="block mb-1">Your message preview:</strong>
               <p>{message}</p>
               {wrapping && wrapping !== '' && (
-                <p className="mt-2 italic text-yellow-400">
+                <p className="mt-2 italic text-amber-600">
                   Wrapping: {wrappingOptions.find((w) => w.value === wrapping)?.label}
                 </p>
               )}
@@ -196,17 +196,17 @@ export default function GiftPersonalizer() {
             <button
               type="button"
               onClick={handleClear}
-              className="px-6 py-2 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="px-6 py-2 rounded-full border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-gray-900 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               Clear
             </button>
             <button
               type="submit"
               disabled={!isMessageValid}
-              className={`px-8 py-2 rounded-full font-extrabold transition focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
+              className={`px-8 py-2 rounded-full font-extrabold transition focus:outline-none focus:ring-2 focus:ring-amber-600 ${
                 isMessageValid
-                  ? 'bg-yellow-400 text-gray-900 hover:bg-yellow-300 cursor-pointer'
-                  : 'bg-yellow-400/50 text-gray-700 cursor-not-allowed'
+                  ? 'bg-amber-600 text-gray-900 hover:bg-amber-500 cursor-pointer'
+                  : 'bg-amber-600/50 text-gray-700 cursor-not-allowed'
               }`}
               aria-disabled={!isMessageValid}
             >
@@ -223,15 +223,15 @@ export default function GiftPersonalizer() {
           aria-modal="true"
           aria-labelledby="modal-title"
           tabIndex={-1}
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50 p-4"
         >
-          <div className="bg-gray-900 rounded-lg shadow-xl max-w-md w-full p-6 text-white">
-            <h3 id="modal-title" className="text-yellow-400 text-xl font-extrabold mb-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6 text-gray-900">
+            <h3 id="modal-title" className="text-amber-600 text-xl font-extrabold mb-4">
               Confirm Your Personalization
             </h3>
             <p className="mb-4 whitespace-pre-wrap">{message}</p>
             {wrapping && wrapping !== '' && (
-              <p className="italic text-yellow-300 mb-6">
+              <p className="italic text-amber-500 mb-6">
                 Wrapping style: {wrappingOptions.find((w) => w.value === wrapping)?.label}
               </p>
             )}
@@ -239,13 +239,13 @@ export default function GiftPersonalizer() {
             <div className="flex justify-end gap-4">
               <button
                 onClick={() => setShowModal(false)}
-                className="px-5 py-2 rounded-full border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="px-5 py-2 rounded-full border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-gray-900 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmSubmission}
-                className="px-6 py-2 rounded-full bg-yellow-400 text-gray-900 font-extrabold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                className="px-6 py-2 rounded-full bg-amber-600 text-gray-900 font-extrabold hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
               >
                 Confirm
               </button>

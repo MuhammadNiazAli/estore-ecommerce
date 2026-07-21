@@ -28,7 +28,7 @@ const initialNotifications = [
   {
     id: 4,
     type: 'info',
-    icon: <Info className="text-yellow-400 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
     message: 'Your payout has been processed.',
     time: '1 hour ago',
   },
@@ -60,7 +60,7 @@ const moreNotificationsBatch = [
   {
     id: 8,
     type: 'info',
-    icon: <Info className="text-yellow-400 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
     message: 'Your weekly report is ready.',
     time: '1 day ago',
   },
@@ -125,14 +125,14 @@ const DashboardNotifications = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-10 min-h-[400px]">
+    <section className="w-full bg-white flex justify-center px-4 py-10 min-h-[400px]">
       <div className="w-full max-w-[1000px] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
-          <h2 className="text-2xl font-bold text-yellow-400 select-none">Notifications</h2>
+          <h2 className="text-2xl font-bold text-amber-600 select-none">Notifications</h2>
           <button
             onClick={handleViewAll}
-            className="flex items-center gap-2 text-sm text-yellow-400 hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+            className="flex items-center gap-2 text-sm text-amber-600 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
             aria-label="View all notifications"
           >
             <Bell className="w-5 h-5" />
@@ -143,7 +143,7 @@ const DashboardNotifications = () => {
         {/* New notification banner */}
         {showNewNotificationBanner && (
           <div
-            className="mb-4 cursor-pointer bg-yellow-600 text-black px-4 py-2 rounded-md font-semibold select-none flex items-center justify-between shadow-lg hover:bg-yellow-500 transition"
+            className="mb-4 cursor-pointer bg-amber-800 text-black px-4 py-2 rounded-md font-semibold select-none flex items-center justify-between shadow-lg hover:bg-amber-700 transition"
             role="alert"
             aria-live="polite"
             onClick={addNewNotification}
@@ -163,24 +163,24 @@ const DashboardNotifications = () => {
         {/* Notifications list container */}
         <div
           ref={containerRef}
-          className="bg-gray-800 rounded-xl shadow p-4 max-h-[400px] sm:max-h-[350px] overflow-y-auto space-y-4 no-scrollbar"
+          className="bg-white rounded-xl shadow p-4 max-h-[400px] sm:max-h-[350px] overflow-y-auto space-y-4 no-scrollbar"
           role="list"
           aria-label="Notifications list"
         >
           {notifications.length === 0 && (
-            <p className="text-gray-400 text-center py-8 select-none">No notifications to show.</p>
+            <p className="text-gray-600 text-center py-8 select-none">No notifications to show.</p>
           )}
 
           {notifications.slice(0, displayCount).map((item) => (
             <div
               key={item.id}
               role="listitem"
-              className="flex items-start gap-3 bg-gray-900 p-3 rounded-lg hover:bg-gray-800 transition relative"
+              className="flex items-start gap-3 bg-white p-3 rounded-lg hover:bg-gray-50 transition relative"
             >
               <div>{item.icon}</div>
               <div className="flex-1">
-                <p className="text-sm text-white">{item.message}</p>
-                <div className="flex items-center gap-2 mt-1 text-xs text-gray-400">
+                <p className="text-sm text-gray-900">{item.message}</p>
+                <div className="flex items-center gap-2 mt-1 text-xs text-gray-600">
                   <Clock className="w-3 h-3" aria-hidden="true" />
                   <time dateTime={item.time}>{item.time}</time>
                 </div>
@@ -189,7 +189,7 @@ const DashboardNotifications = () => {
               <button
                 onClick={() => dismissNotification(item.id)}
                 aria-label={`Dismiss notification: ${item.message}`}
-                className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+                className="absolute top-2 right-2 text-gray-600 hover:text-red-500 transition focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -203,7 +203,7 @@ const DashboardNotifications = () => {
             <button
               onClick={loadMoreNotifications}
               disabled={loadingMore}
-              className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded px-4 py-2 border border-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="flex items-center gap-2 text-amber-600 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-4 py-2 border border-amber-600 disabled:opacity-50 disabled:cursor-not-allowed transition"
               aria-label="Load more notifications"
             >
               {loadingMore ? (

@@ -7,7 +7,7 @@ const NewarrivalsHero = () => {
     <section
       aria-label="New Arrivals Hero Section"
       className="
-        bg-gray-900 
+        bg-white 
         w-full 
         flex justify-center
         px-4 sm:px-8 md:px-12
@@ -25,12 +25,12 @@ const NewarrivalsHero = () => {
           "
       >
         {/* Title */}
-        <h1 className="text-yellow-500 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+        <h1 className="text-amber-700 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
           Discover Our Latest Arrivals
         </h1>
 
         {/* Subtitle */}
-        <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto">
+        <p className="text-gray-700 text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto">
           Explore the newest trends, exclusive collections, and must-have items updated regularly to keep your style fresh.
         </p>
 
@@ -39,8 +39,8 @@ const NewarrivalsHero = () => {
           href="#new-arrivals"
           className="
             inline-block
-            bg-yellow-400
-            hover:bg-yellow-500
+            bg-amber-600
+            hover:bg-amber-700
             text-gray-900
             font-semibold
             px-8 py-4
@@ -48,7 +48,7 @@ const NewarrivalsHero = () => {
             shadow-md
             transition
             duration-300
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-50
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50
           "
         >
           Shop Now

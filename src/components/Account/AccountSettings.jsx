@@ -53,7 +53,7 @@ const AccountSettings = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-6 sm:p-10 max-w-[1000px] mx-auto text-white shadow-xl"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-6 sm:p-10 max-w-[1000px] mx-auto text-gray-900 shadow-xl"
       aria-label="Account settings"
     >
       <h2 className="text-3xl font-extrabold mb-8 tracking-tight text-center sm:text-left">
@@ -87,8 +87,8 @@ const AccountSettings = () => {
             <div
               className={`w-12 h-7 rounded-full transition-colors duration-300 cursor-pointer ${
                 settings.newsletterSubscribed
-                  ? 'bg-yellow-400'
-                  : 'bg-gray-600'
+                  ? 'bg-amber-600'
+                  : 'bg-white'
               }`}
               onClick={toggleNewsletter}
               tabIndex={0}
@@ -119,7 +119,7 @@ const AccountSettings = () => {
             id="languageSelect"
             value={settings.language}
             onChange={changeLanguage}
-            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
             aria-label="Select preferred language"
           >
             {languages.map((lang) => (
@@ -150,7 +150,7 @@ const AccountSettings = () => {
             />
             <div
               className={`w-12 h-7 rounded-full transition-colors duration-300 cursor-pointer ${
-                settings.accountPublic ? 'bg-yellow-400' : 'bg-gray-600'
+                settings.accountPublic ? 'bg-amber-600' : 'bg-white'
               }`}
               onClick={toggleAccountPublic}
               tabIndex={0}
@@ -173,8 +173,8 @@ const AccountSettings = () => {
         <button
           type="submit"
           disabled={!isDirty}
-          className={`w-full bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold shadow-md transition 
-            hover:bg-yellow-300 active:scale-95 disabled:bg-yellow-300 disabled:text-gray-600 disabled:cursor-not-allowed`}
+          className={`w-full bg-amber-600 text-black px-6 py-3 rounded-full font-semibold shadow-md transition 
+            hover:bg-amber-500 active:scale-95 disabled:bg-amber-500 disabled:text-gray-600 disabled:cursor-not-allowed`}
           aria-disabled={!isDirty}
         >
           Save Settings
@@ -189,7 +189,7 @@ const AccountSettings = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black rounded-lg px-6 py-3 font-semibold shadow-lg select-none z-50"
+            className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-amber-600 text-black rounded-lg px-6 py-3 font-semibold shadow-lg select-none z-50"
             role="alert"
             aria-live="assertive"
           >

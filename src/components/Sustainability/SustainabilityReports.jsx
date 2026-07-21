@@ -27,12 +27,12 @@ const SustainabilityReports = () => {
   return (
     <section
       aria-labelledby="sustainability-reports-title"
-      className="bg-gray-900 text-yellow-400 px-4 sm:px-6 lg:px-8 py-16 mb-[-130px]"
+      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16 mb-[-130px]"
     >
       <div className="max-w-4xl mx-auto">
         <h2
           id="sustainability-reports-title"
-          className="text-3xl sm:text-4xl font-extrabold text-yellow-300 mb-12 text-center select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-12 text-center select-none"
         >
           Sustainability Reports
         </h2>
@@ -43,15 +43,15 @@ const SustainabilityReports = () => {
               key={i}
               className="
                 flex flex-col sm:flex-row sm:items-center sm:justify-between
-                bg-yellow-900/10 rounded-xl p-5 shadow-lg
-                hover:bg-yellow-900/25 transition-colors duration-300
-                focus-within:ring-4 focus-within:ring-yellow-500 focus-within:ring-opacity-70
+                bg-amber-950/10 rounded-xl p-5 shadow-lg
+                hover:bg-amber-950/25 transition-colors duration-300
+                focus-within:ring-4 focus-within:ring-amber-700 focus-within:ring-opacity-70
                 outline-none
               "
             >
               <div className="mb-3 sm:mb-0">
-                <h3 className="text-yellow-300 text-lg font-semibold">{title}</h3>
-                <p className="text-yellow-200 text-sm mt-1 tracking-wide">{date}</p>
+                <h3 className="text-amber-500 text-lg font-semibold">{title}</h3>
+                <p className="text-amber-400 text-sm mt-1 tracking-wide">{date}</p>
               </div>
               <a
                 href={url}
@@ -59,9 +59,9 @@ const SustainabilityReports = () => {
                 rel="noopener noreferrer"
                 download
                 className="
-                  inline-flex items-center text-yellow-400 hover:text-yellow-300
+                  inline-flex items-center text-amber-600 hover:text-amber-500
                   font-semibold transition-colors duration-200
-                  focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded
+                  focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-gray-900 rounded
                   select-none
                 "
                 aria-label={`Download ${title}`}

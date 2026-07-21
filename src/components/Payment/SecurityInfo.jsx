@@ -21,22 +21,22 @@ export default function SecurityInfo() {
   return (
     <section
       aria-labelledby="security-info-title"
-      className="bg-gray-900 px-4 sm:px-6 py-16 sm:py-24 flex justify-center my-15 lg:my-0 mb-[-20px]"
+      className="bg-white px-4 sm:px-6 py-16 sm:py-24 flex justify-center my-15 lg:my-0 mb-[-20px]"
     >
       <div
         className="
           w-full max-w-5xl
-          bg-gray-900
+          bg-white
           rounded-3xl
-          border border-yellow-600
-          shadow-lg shadow-yellow-900/30
+          border border-amber-800
+          shadow-lg shadow-amber-950/30
           backdrop-blur-md
           p-8 sm:p-14
-          text-white
+          text-gray-900
           select-none
           transition-all
           -mt-24 sm:-mt-20 mb-[-60px]
-          focus-within:shadow-yellow-600/60
+          focus-within:shadow-amber-800/60
         "
       >
         <h2
@@ -59,9 +59,9 @@ export default function SecurityInfo() {
                 className="
                   flex items-center justify-center
                   w-14 h-14
-                  bg-yellow-600/20
+                  bg-amber-800/20
                   rounded-full
-                  text-yellow-400 text-3xl
+                  text-amber-600 text-3xl
                   drop-shadow-lg
                   group transition-transform
                   hover:scale-110 focus-within:scale-110

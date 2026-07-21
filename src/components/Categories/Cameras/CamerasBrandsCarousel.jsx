@@ -46,7 +46,7 @@ const CamerasBrandsCarousel = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-10 text-yellow-400 my-[-30px]">
+    <section className="bg-white py-10 text-amber-600 my-[-30px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
           Popular Kitchen Brands
@@ -57,7 +57,7 @@ const CamerasBrandsCarousel = () => {
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className={`absolute left-0 z-10 p-2 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-400 transition disabled:opacity-50`}
+            className={`absolute left-0 z-10 p-2 bg-amber-700 text-gray-900 rounded-full hover:bg-amber-600 transition disabled:opacity-50`}
           >
             <FaChevronLeft size={18} />
           </button>
@@ -72,7 +72,7 @@ const CamerasBrandsCarousel = () => {
               {brandLogos.map((brand) => (
                 <div
                   key={brand.id}
-                  className="min-w-[50%] sm:min-w-[33%] md:min-w-[25%] bg-gray-800 rounded-lg p-4 flex flex-col items-center justify-center border border-yellow-500 shadow-lg"
+                  className="min-w-[50%] sm:min-w-[33%] md:min-w-[25%] bg-white rounded-lg p-4 flex flex-col items-center justify-center border border-amber-700 shadow-lg"
                 >
                   <img
                     src={brand.logo}
@@ -89,7 +89,7 @@ const CamerasBrandsCarousel = () => {
           <button
             onClick={nextSlide}
             disabled={currentIndex >= brandLogos.length - visibleItems}
-            className={`absolute right-0 z-10 p-2 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-400 transition disabled:opacity-50`}
+            className={`absolute right-0 z-10 p-2 bg-amber-700 text-gray-900 rounded-full hover:bg-amber-600 transition disabled:opacity-50`}
           >
             <FaChevronRight size={18} />
           </button>

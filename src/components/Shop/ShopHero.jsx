@@ -33,7 +33,7 @@ const ShopHero = () => {
     <section
       role="region"
       aria-label="Shop hero section"
-      className="relative bg-gray-900 px-6 sm:px-12 py-24 sm:py-40 flex flex-col items-center overflow-hidden select-none my-[-110px] mb-0"
+      className="relative bg-white px-6 sm:px-12 py-24 sm:py-40 flex flex-col items-center overflow-hidden select-none my-[-110px] mb-0"
     >
   
       {/* Content container */}
@@ -60,7 +60,7 @@ const ShopHero = () => {
           initial={{ opacity: 0, y: 45 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.6, ease: 'easeOut' }}
-          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-white drop-shadow-lg"
+          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-gray-900 drop-shadow-lg"
         >
           Discover Our{' '}
           <span className="text-amber-400 underline decoration-amber-500 decoration-6 underline-offset-4">
@@ -74,7 +74,7 @@ const ShopHero = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.3, ease: 'easeOut' }}
-          className="mt-7 max-w-3xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed drop-shadow-md"
+          className="mt-7 max-w-3xl mx-auto text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed drop-shadow-md"
         >
           Explore thousands of premium, handpicked products — from trending fashion and cutting-edge
           tech to exclusive deals that elevate your lifestyle.
@@ -89,7 +89,7 @@ const ShopHero = () => {
         >
           <button
             type="button"
-            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold shadow-lg hover:from-blue-700 hover:to-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-offset-2 transition-transform active:scale-95"
+            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-gray-900 font-semibold shadow-lg hover:from-blue-700 hover:to-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-offset-2 transition-transform active:scale-95"
             aria-label="Start shopping now"
           >
             <FiShoppingBag className="w-5 h-5" aria-hidden="true" />
@@ -105,7 +105,7 @@ const ShopHero = () => {
           </button>
           <button
             type="button"
-            className="px-14 py-4 rounded-full bg-gray-700 text-gray-300 font-semibold hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-4 focus:ring-gray-600 focus:ring-offset-2 transition"
+            className="px-14 py-4 rounded-full bg-white text-gray-700 font-semibold hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200 focus:ring-offset-2 transition"
             aria-label="Learn more about our collection"
           >
             Learn More

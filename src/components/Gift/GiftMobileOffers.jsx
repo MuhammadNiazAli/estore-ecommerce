@@ -32,12 +32,12 @@ const offers = [
 export default function GiftMobileOffers() {
   return (
     <section
-      className="bg-gray-900 py-8 px-6 rounded-lg max-w-full overflow-x-hidden"
+      className="bg-white py-8 px-6 rounded-lg max-w-full overflow-x-hidden"
       aria-labelledby="mobile-offers-title"
     >
       <h2
         id="mobile-offers-title"
-        className="text-yellow-400 text-2xl font-extrabold mb-6 text-center drop-shadow-lg"
+        className="text-amber-600 text-2xl font-extrabold mb-6 text-center drop-shadow-lg"
       >
         Mobile Exclusive Offers
       </h2>
@@ -45,7 +45,7 @@ export default function GiftMobileOffers() {
       <div
         role="list"
         aria-label="Mobile gift offers carousel"
-        className="flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800 snap-x snap-mandatory scroll-smooth focus:outline-none"
+        className="flex space-x-6 overflow-x-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800 snap-x snap-mandatory scroll-smooth focus:outline-none"
         tabIndex={0}
       >
         {offers.map(({ id, title, discount, img }) => (
@@ -61,8 +61,8 @@ export default function GiftMobileOffers() {
                 alert(`Clicked offer: ${title}`);
               }
             }}
-            className="relative flex-shrink-0 w-72 snap-center rounded-lg shadow-lg overflow-hidden cursor-pointer bg-gray-800 
-                       hover:scale-105 transform transition duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400"
+            className="relative flex-shrink-0 w-72 snap-center rounded-lg shadow-lg overflow-hidden cursor-pointer bg-white 
+                       hover:scale-105 transform transition duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600"
           >
             <img
               src={img}
@@ -74,9 +74,9 @@ export default function GiftMobileOffers() {
               height={176}
             />
             <div className="p-4">
-              <h3 className="text-yellow-400 font-bold text-lg mb-1 truncate">{title}</h3>
+              <h3 className="text-amber-600 font-bold text-lg mb-1 truncate">{title}</h3>
               <span
-                className="inline-block bg-yellow-400 text-gray-900 font-extrabold px-3 py-1 rounded-full text-xs select-none"
+                className="inline-block bg-amber-600 text-gray-900 font-extrabold px-3 py-1 rounded-full text-xs select-none"
                 aria-label={`Discount: ${discount}`}
               >
                 {discount}

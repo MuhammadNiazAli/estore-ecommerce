@@ -60,8 +60,8 @@ const LaptopCategoryInfo = () => {
   ];
 
   return (
-    <section className="max-w-[900px] mx-auto p-6 bg-gray-900 rounded-xl shadow-lg text-gray-300">
-      <h2 className="text-3xl font-bold mb-6 text-gray-100 text-center">
+    <section className="max-w-[900px] mx-auto p-6 bg-white rounded-xl shadow-lg text-gray-700">
+      <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
         Why Choose Our Laptops?
       </h2>
 
@@ -69,17 +69,17 @@ const LaptopCategoryInfo = () => {
         Discover powerful, reliable laptops designed for every need — from work and study to gaming and creativity.
       </p>
 
-      <h3 className="text-2xl font-semibold mb-4 text-gray-100">Key Buying Guide</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Key Buying Guide</h3>
       <div className="space-y-5 mb-8">
         {guides.map(({ title, content }) => (
           <div key={title}>
-            <h4 className="font-semibold text-lg text-yellow-400">{title}</h4>
+            <h4 className="font-semibold text-lg text-amber-600">{title}</h4>
             <p>{content}</p>
           </div>
         ))}
       </div>
 
-      <h3 className="text-2xl font-semibold mb-4 text-gray-100">Expert Tips</h3>
+      <h3 className="text-2xl font-semibold mb-4 text-gray-800">Expert Tips</h3>
       <ul className="list-disc list-inside space-y-2 mb-8">
         {tips.map((tip, i) => (
           <li key={i}>{tip}</li>

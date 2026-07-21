@@ -54,7 +54,7 @@ const reviews = [
 
 // 3D Star component using layered gradients and slight shadows for depth
 function Star({ filled }) {
-  const fillColor = filled ? '#facc15' : '#b45309'; // yellow-400 vs yellow-700
+  const fillColor = filled ? '#b45309' : '#b45309'; // amber-600 vs amber-900
   return (
     <svg
       className="w-6 h-6"
@@ -97,14 +97,14 @@ export default function GiftReviewWall() {
   return (
     <section
       aria-label="Customer reviews"
-      className="max-w-[1200px] mx-auto p-6 bg-gray-900 rounded-lg shadow-2xl text-white"
+      className="max-w-[1200px] mx-auto p-6 bg-white rounded-lg shadow-2xl text-gray-900"
     >
-      <h2 className="text-yellow-400 text-3xl font-extrabold mb-6 text-center drop-shadow-lg">
+      <h2 className="text-amber-600 text-3xl font-extrabold mb-6 text-center drop-shadow-lg">
         What Our Customers Say
       </h2>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800 p-2"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800 p-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -112,7 +112,7 @@ export default function GiftReviewWall() {
         {reviews.map(({ id, name, date, rating, comment }) => (
           <article
             key={id}
-            className="bg-gray-800 rounded-md p-5 shadow-md flex flex-col"
+            className="bg-white rounded-md p-5 shadow-md flex flex-col"
             tabIndex={0}
             aria-label={`Review by ${name}, rated ${rating} out of 5 stars`}
           >
@@ -121,8 +121,8 @@ export default function GiftReviewWall() {
                 <Star key={star} filled={star <= rating} />
               ))}
             </div>
-            <p className="text-yellow-300 flex-grow whitespace-pre-wrap">{comment}</p>
-            <footer className="mt-4 text-yellow-400 text-sm font-semibold">
+            <p className="text-amber-500 flex-grow whitespace-pre-wrap">{comment}</p>
+            <footer className="mt-4 text-amber-600 text-sm font-semibold">
               — {name},{' '}
               <time dateTime={date} className="not-italic">
                 {new Date(date).toLocaleDateString(undefined, {

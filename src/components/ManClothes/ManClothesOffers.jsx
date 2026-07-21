@@ -52,7 +52,7 @@ const ManClothesOffers = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 py-12 px-4 sm:px-6 md:px-10 lg:px-16">
+    <section className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 py-12 px-4 sm:px-6 md:px-10 lg:px-16">
       {/* Header */}
       <div className="text-center mb-10 max-w-3xl mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wide drop-shadow-lg">
@@ -82,7 +82,7 @@ const ManClothesOffers = () => {
                   loading="lazy"
                 />
                 {/* Discount Badge */}
-                <div className="absolute top-3 left-3 bg-yellow-500 text-white font-semibold px-3 py-1 rounded-full shadow-md uppercase tracking-wide text-xs sm:text-sm">
+                <div className="absolute top-3 left-3 bg-amber-700 text-gray-900 font-semibold px-3 py-1 rounded-full shadow-md uppercase tracking-wide text-xs sm:text-sm">
                   {offer.discount} OFF
                 </div>
               </div>
@@ -127,7 +127,7 @@ const ManClothesOffers = () => {
                 {/* Add to Cart Button */}
                 <button
                   type="button"
-                  className="mt-6 w-full flex justify-center items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 rounded-xl py-3.5 text-white font-extrabold text-base shadow-lg shadow-yellow-400/60 hover:shadow-yellow-500/80"
+                  className="mt-6 w-full flex justify-center items-center gap-2 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 transition-all duration-300 rounded-xl py-3.5 text-gray-900 font-extrabold text-base shadow-lg shadow-amber-600/60 hover:shadow-amber-700/80"
                 >
                   🛒 Shop Now
                 </button>

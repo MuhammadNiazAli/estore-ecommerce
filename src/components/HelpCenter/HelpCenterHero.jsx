@@ -34,19 +34,19 @@ const HelpCenterHero = () => {
 
   return (
     <section
-      className="bg-gray-900 w-full px-4 py-12 flex justify-center my-[-80px] mb-0"
+      className="bg-white w-full px-4 py-12 flex justify-center my-[-80px] mb-0"
       aria-label="Help Center Hero Section"
     >
-      <div className="w-full max-w-[1000px] text-center text-white space-y-8">
+      <div className="w-full max-w-[1000px] text-center text-gray-900 space-y-8">
         {/* Title */}
         <header>
           <h1
-            className="text-3xl sm:text-5xl font-extrabold text-yellow-400 drop-shadow-md"
+            className="text-3xl sm:text-5xl font-extrabold text-amber-600 drop-shadow-md"
             tabIndex={-1}
           >
             How can we help you?
           </h1>
-          <p className="mt-2 text-gray-300 text-sm sm:text-base max-w-xl mx-auto">
+          <p className="mt-2 text-gray-700 text-sm sm:text-base max-w-xl mx-auto">
             Get answers to your questions, solve problems, and explore help topics.
           </p>
         </header>
@@ -69,13 +69,13 @@ const HelpCenterHero = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full sm:w-[60%] px-4 py-3 text-yellow-500 rounded-md outline-none focus:ring-4 ring-yellow-500 shadow-sm transition duration-300"
+            className="w-full sm:w-[60%] px-4 py-3 text-amber-700 rounded-md outline-none focus:ring-4 ring-amber-700 shadow-sm transition duration-300"
             autoComplete="off"
             spellCheck={false}
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-yellow-400 hover:bg-yellow-300 text-black font-semibold rounded-md shadow-md transition duration-200 focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2 focus:outline-none"
+            className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-black font-semibold rounded-md shadow-md transition duration-200 focus:ring-4 focus:ring-amber-600 focus:ring-offset-2 focus:outline-none"
           >
             Search
           </button>
@@ -90,11 +90,11 @@ const HelpCenterHero = () => {
             <button
               key={topic}
               onClick={() => handleTopicClick(topic)}
-              className={`px-5 py-2 rounded-full font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400
+              className={`px-5 py-2 rounded-full font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600
                 ${
                   selectedTopic === topic
-                    ? 'bg-yellow-500 text-black shadow-lg'
-                    : 'bg-gray-800 hover:bg-yellow-600 text-yellow-100'
+                    ? 'bg-amber-700 text-black shadow-lg'
+                    : 'bg-white hover:bg-amber-800 text-amber-300'
                 }
               `}
               aria-pressed={selectedTopic === topic}

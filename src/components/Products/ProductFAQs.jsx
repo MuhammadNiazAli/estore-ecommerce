@@ -37,8 +37,8 @@ const ProductFAQs = () => {
   };
 
   return (
-    <section className="max-w-4xl mx-auto p-6 sm:p-10 bg-gray-900 rounded-xl shadow-lg">
-      <h2 className="text-3xl font-extrabold text-white mb-8 text-center">
+    <section className="max-w-4xl mx-auto p-6 sm:p-10 bg-white rounded-xl shadow-lg">
+      <h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
         Frequently Asked Questions
       </h2>
 
@@ -49,11 +49,11 @@ const ProductFAQs = () => {
           return (
             <div
               key={index}
-              className="border border-gray-700 rounded-md overflow-hidden"
+              className="border border-gray-200 rounded-md overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 bg-gray-800 text-left text-white font-semibold text-lg hover:bg-gray-700 transition"
+                className="w-full flex justify-between items-center px-6 py-4 bg-white text-left text-gray-900 font-semibold text-lg hover:bg-gray-50 transition"
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${index}`}
                 id={`faq-question-${index}`}
@@ -78,7 +78,7 @@ const ProductFAQs = () => {
                 role="region"
                 aria-labelledby={`faq-question-${index}`}
                 ref={(el) => (contentRefs.current[index] = el)}
-                className="px-6 overflow-hidden bg-gray-900 text-gray-300 transition-[max-height,padding] duration-300 ease-in-out"
+                className="px-6 overflow-hidden bg-white text-gray-700 transition-[max-height,padding] duration-300 ease-in-out"
                 style={{
                   maxHeight: isOpen
                     ? contentRefs.current[index]?.scrollHeight + 16 + 'px' // +16px for padding vertical

@@ -122,11 +122,11 @@ const ShopSortBar = ({ onSortChange }) => {
   const selectedLabel = options.find((opt) => opt.value === selected)?.label ?? 'Select';
 
   return (
-    <section className="w-full bg-gray-900 px-6 py-4 select-none relative">
+    <section className="w-full bg-white px-6 py-4 select-none relative">
       <div className="max-w-[1000px] mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-end gap-3 sm:gap-0 relative">
         <label
           htmlFor="sort"
-          className="hidden sm:block text-gray-400 font-semibold mr-4 select-none"
+          className="hidden sm:block text-gray-600 font-semibold mr-4 select-none"
         >
           Sort Products:
         </label>
@@ -134,8 +134,8 @@ const ShopSortBar = ({ onSortChange }) => {
         {isMobile ? (
           <select
             id="sort"
-            className="block w-full sm:w-72 bg-gray-800 text-gray-300 px-5 py-3 pr-10 rounded-md shadow-md
-              focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer transition duration-200 hover:bg-gray-700"
+            className="block w-full sm:w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
+              focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer transition duration-200 hover:bg-gray-50"
             value={selected}
             onChange={(e) => {
               const value = e.target.value;
@@ -157,13 +157,13 @@ const ShopSortBar = ({ onSortChange }) => {
               onClick={() => setOpen((o) => !o)}
               aria-haspopup="listbox"
               aria-expanded={open}
-              className="relative w-72 bg-gray-800 text-gray-300 px-5 py-3 pr-10 rounded-md shadow-md
+              className="relative w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
                 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer text-left
-                hover:bg-gray-700 flex justify-between items-center"
+                hover:bg-gray-50 flex justify-between items-center"
             >
               <span>{selectedLabel}</span>
               <svg
-                className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
+                className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${
                   open ? 'rotate-180' : ''
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const ShopSortBar = ({ onSortChange }) => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
-                  className="absolute z-50 bg-gray-800/60 backdrop-blur-md rounded-md shadow-lg p-4 max-w-[800px] w-full max-h-[300px] overflow-auto
+                  className="absolute z-50 bg-white/60 backdrop-blur-md rounded-md shadow-lg p-4 max-w-[800px] w-full max-h-[300px] overflow-auto
                     top-full left-1/2 -translate-x-1/2 mt-2 grid grid-cols-5 gap-x-4 gap-y-6
                     scrollbar-thin scrollbar-thumb-gray-950 scrollbar-track-transparent"
                 >
@@ -208,7 +208,7 @@ const ShopSortBar = ({ onSortChange }) => {
                           ${
                             isSelected
                               ? 'bg-amber-500 text-gray-900 font-bold'
-                              : 'text-gray-300 hover:bg-amber-400 hover:text-gray-900'
+                              : 'text-gray-700 hover:bg-amber-400 hover:text-gray-900'
                           }
                           focus:outline-none focus:ring-2 focus:ring-amber-400`}
                       >

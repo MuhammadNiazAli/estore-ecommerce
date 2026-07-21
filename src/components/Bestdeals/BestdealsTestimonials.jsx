@@ -31,11 +31,11 @@ const testimonials = [
 
 const BestdealsTestimonials = () => {
   return (
-    <section className="bg-gray-900 text-white w-full py-12 px-4 sm:px-6 flex justify-center">
+    <section className="bg-white text-gray-900 w-full py-12 px-4 sm:px-6 flex justify-center">
       <div className="max-w-[1000px] w-full">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
-          What Our <span className="text-yellow-400">Customers</span> Say
+          What Our <span className="text-amber-600">Customers</span> Say
         </h2>
 
         {/* Testimonials Grid */}
@@ -43,13 +43,13 @@ const BestdealsTestimonials = () => {
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-gray-800 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300 shadow-lg"
+              className="bg-white rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               {/* Customer Photo */}
               <img
                 src={item.photo}
                 alt={item.name}
-                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover border-2 border-yellow-400"
+                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover border-2 border-amber-600"
               />
               {/* Name */}
               <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
@@ -59,13 +59,13 @@ const BestdealsTestimonials = () => {
                   <Star
                     key={i}
                     className={`w-4 h-4 ${
-                      i < item.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'
+                      i < item.rating ? 'text-amber-600 fill-amber-600' : 'text-gray-600'
                     }`}
                   />
                 ))}
               </div>
               {/* Review */}
-              <p className="text-gray-400 text-sm leading-relaxed">{item.review}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.review}</p>
             </div>
           ))}
         </div>

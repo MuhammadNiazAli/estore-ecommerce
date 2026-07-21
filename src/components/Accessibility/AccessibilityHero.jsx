@@ -4,12 +4,12 @@ const AccessibilityHero = () => {
   return (
     <section
       aria-label="Accessibility statement introduction"
-      className="w-full bg-gray-900 flex justify-center"
+      className="w-full bg-white flex justify-center"
       style={{ padding: '2rem 1rem' }}
     >
       <div
         className="max-w-[1000px] w-full text-center"
-        style={{ color: '#FFD700' /* gold/yellow */, lineHeight: 1.4 }}
+        style={{ color: '#b45309' /* gold/yellow */, lineHeight: 1.4 }}
       >
         <h1
           className="text-4xl sm:text-5xl font-extrabold mb-3"

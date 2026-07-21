@@ -36,13 +36,13 @@ const products = [
 
 const ClearanceLimitedStock = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 py-10 my-[-10px]">
+    <section className="bg-white text-amber-600 py-10 my-[-10px]">
       <div className="max-w-[1000px] mx-auto px-4">
         {/* Header */}
         <h2 className="text-3xl font-bold mb-6 text-center">
           Limited Stock Deals 
         </h2>
-        <p className="text-gray-300 text-center mb-10">
+        <p className="text-gray-700 text-center mb-10">
           Hurry! These items are almost sold out. Grab yours before it’s too late!
         </p>
 
@@ -53,7 +53,7 @@ const ClearanceLimitedStock = () => {
             return (
               <div
                 key={product.id}
-                className="bg-gray-800 rounded-xl overflow-hidden  transition"
+                className="bg-white rounded-xl overflow-hidden  transition"
               >
                 {/* Image */}
                 <div className="relative">
@@ -62,18 +62,18 @@ const ClearanceLimitedStock = () => {
                     alt={product.name}
                     className="w-full h-48 object-cover"
                   />
-                  <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">
+                  <span className="absolute top-3 left-3 bg-red-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
                     Limited Stock
                   </span>
                 </div>
 
                 {/* Details */}
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-white truncate">
+                  <h3 className="text-lg font-semibold text-gray-900 truncate">
                     {product.name}
                   </h3>
                   <div className="mt-2">
-                    <span className="text-yellow-400 font-bold text-lg">
+                    <span className="text-amber-600 font-bold text-lg">
                       ${product.price}
                     </span>
                     <span className="text-gray-500 line-through ml-2">
@@ -83,20 +83,20 @@ const ClearanceLimitedStock = () => {
 
                   {/* Stock Progress */}
                   <div className="mt-4">
-                    <div className="flex justify-between text-gray-300 text-xs mb-1">
+                    <div className="flex justify-between text-gray-700 text-xs mb-1">
                       <span>{product.sold} Sold</span>
                       <span>{product.stock - product.sold} Left</span>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-white rounded-full h-2 overflow-hidden">
                       <div
-                        className="bg-yellow-500 h-2"
+                        className="bg-amber-700 h-2"
                         style={{ width: `${percentage}%` }}
                       ></div>
                     </div>
                   </div>
 
                   {/* Add to Cart */}
-                  <button className="w-full mt-5 bg-yellow-500 text-gray-900 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition flex items-center justify-center gap-2">
+                  <button className="w-full mt-5 bg-amber-700 text-gray-900 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center justify-center gap-2">
                     <ShoppingCart size={18} /> Add to Cart
                   </button>
                 </div>

@@ -25,12 +25,12 @@ const models = [
 
 const SizeGuideModelInfo = () => {
   return (
-    <section className="w-full bg-gray-900 text-gray-100 flex justify-center py-12 px-4 sm:px-6 md:py-16">
+    <section className="w-full bg-white text-gray-800 flex justify-center py-12 px-4 sm:px-6 md:py-16">
       <div className="max-w-[1000px] w-full grid gap-12 md:grid-cols-2">
         {models.map((model, i) => (
           <div
             key={i}
-            className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-yellow-400 transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-amber-600 transition-shadow duration-300"
           >
             <img
               src={model.image}
@@ -38,10 +38,10 @@ const SizeGuideModelInfo = () => {
               className="w-48 h-64 sm:w-56 sm:h-72 object-cover rounded-md mb-6"
               loading="lazy"
             />
-            <h3 className="text-yellow-400 text-2xl sm:text-3xl font-extrabold mb-4 select-none">
+            <h3 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-4 select-none">
               {model.name}
             </h3>
-            <ul className="text-gray-300 space-y-2 text-sm sm:text-base max-w-xs">
+            <ul className="text-gray-700 space-y-2 text-sm sm:text-base max-w-xs">
               <li>
                 <strong>Height:</strong> {model.height}
               </li>
@@ -57,7 +57,7 @@ const SizeGuideModelInfo = () => {
               </li>
               <li>
                 <strong>Size Worn:</strong>{' '}
-                <span className="text-yellow-400 font-semibold">{model.sizeWorn}</span>
+                <span className="text-amber-600 font-semibold">{model.sizeWorn}</span>
               </li>
             </ul>
           </div>

@@ -24,7 +24,7 @@ const KitchenNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12">
+    <section className="bg-white text-amber-600 py-12">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.h2
           className="text-2xl md:text-3xl font-bold mb-4"
@@ -34,7 +34,7 @@ const KitchenNewsletterSignup = () => {
         >
           Join Our Kitchen Newsletter
         </motion.h2>
-        <p className="text-yellow-200 mb-8 text-sm md:text-base">
+        <p className="text-amber-400 mb-8 text-sm md:text-base">
           Get exclusive deals, latest kitchen tips, and new product launches
           delivered straight to your inbox.
         </p>
@@ -50,13 +50,13 @@ const KitchenNewsletterSignup = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-gray-800 text-yellow-400 placeholder-yellow-200 border border-yellow-500 focus:outline-none focus:border-yellow-400"
+            className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-white text-amber-600 placeholder-amber-400 border border-amber-700 focus:outline-none focus:border-amber-600"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"
-            className="bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 transition w-full sm:w-auto"
+            className="bg-amber-700 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-600 transition w-full sm:w-auto"
           >
             Subscribe
           </button>

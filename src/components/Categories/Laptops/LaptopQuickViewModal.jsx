@@ -7,19 +7,19 @@ const LaptopQuickViewModal = ({ laptop, isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-white bg-opacity-70 flex items-center justify-center z-50"
       onClick={onClose}
       aria-modal="true"
       role="dialog"
       tabIndex={-1}
     >
       <div
-        className="bg-gray-900 rounded-lg max-w-[1000px] w-full max-h-[90vh] overflow-y-auto p-6 relative"
+        className="bg-white rounded-lg max-w-[1000px] w-full max-h-[90vh] overflow-y-auto p-6 relative"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 text-3xl font-bold focus:outline-none"
+          className="absolute top-4 right-4 text-gray-600 hover:text-gray-700 text-3xl font-bold focus:outline-none"
           aria-label="Close modal"
         >
           &times;
@@ -33,14 +33,14 @@ const LaptopQuickViewModal = ({ laptop, isOpen, onClose }) => {
               loading="lazy"
             />
           </div>
-          <div className="md:w-1/2 text-gray-200">
+          <div className="md:w-1/2 text-gray-700">
             <h2 className="text-3xl font-semibold mb-4">{laptop.name}</h2>
             <p className="mb-4">{laptop.description || 'No description available.'}</p>
             <p className="text-xl font-bold text-blue-500 mb-6">${laptop.price}</p>
             {laptop.specs && (
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Specifications</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-300">
+                <ul className="list-disc list-inside space-y-1 text-gray-700">
                   {Object.entries(laptop.specs).map(([key, value]) => (
                     <li key={key}>
                       <strong>{key.charAt(0).toUpperCase() + key.slice(1)}:</strong> {value}
@@ -50,7 +50,7 @@ const LaptopQuickViewModal = ({ laptop, isOpen, onClose }) => {
               </div>
             )}
             <button
-              className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition"
+              className="mt-6 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-3 rounded-md transition"
               onClick={() => alert('Add to cart clicked!')}
             >
               Add to Cart

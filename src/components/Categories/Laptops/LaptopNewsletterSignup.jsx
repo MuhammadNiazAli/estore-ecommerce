@@ -22,9 +22,9 @@ const LaptopNewsletterSignup = () => {
   };
 
   return (
-    <section className="max-w-[1000px] mx-auto px-4 py-10 bg-gray-900 rounded-md text-gray-200 text-center my-[-50px] mb-0">
-      <h2 className="text-3xl font-semibold mb-4 text-gray-100">Subscribe to Our Newsletter</h2>
-      <p className="mb-6 text-gray-300 max-w-xl mx-auto">
+    <section className="max-w-[1000px] mx-auto px-4 py-10 bg-white rounded-md text-gray-700 text-center my-[-50px] mb-0">
+      <h2 className="text-3xl font-semibold mb-4 text-gray-800">Subscribe to Our Newsletter</h2>
+      <p className="mb-6 text-gray-700 max-w-xl mx-auto">
         Get the latest updates on new laptops, exclusive deals, and tech tips delivered straight to your inbox.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row justify-center max-w-md mx-auto gap-4">
@@ -33,13 +33,13 @@ const LaptopNewsletterSignup = () => {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-grow px-4 py-3 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-grow px-4 py-3 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
           aria-label="Email address"
         />
         <button
           type="submit"
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition"
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold rounded-md transition"
         >
           Subscribe
         </button>

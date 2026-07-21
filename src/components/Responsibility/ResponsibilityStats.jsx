@@ -84,7 +84,7 @@ const ResponsibilityStats = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 flex justify-center px-4 py-16 sm:py-20"
+      className="w-full bg-white flex justify-center px-4 py-16 sm:py-20"
       aria-labelledby="stats-heading"
       role="region"
     >
@@ -94,7 +94,7 @@ const ResponsibilityStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inViewport ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-yellow-400 text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 select-none max-w-full"
+          className="text-amber-600 text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 select-none max-w-full"
         >
           Our Impact in Numbers
         </motion.h2>
@@ -112,19 +112,19 @@ const ResponsibilityStats = () => {
               <motion.article
                 key={id}
                 variants={cardVariants}
-                className="bg-gray-800/70 backdrop-blur-sm border border-gray-700 rounded-xl p-6 sm:p-8 text-center cursor-default
-                  focus:outline-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-2
-                  transition-shadow duration-300 hover:shadow-yellow-500/40 hover:scale-[1.04] focus:shadow-yellow-500/60"
+                className="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-xl p-6 sm:p-8 text-center cursor-default
+                  focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
+                  transition-shadow duration-300 hover:shadow-amber-700/40 hover:scale-[1.04] focus:shadow-amber-700/60"
                 tabIndex={0}
                 aria-label={`${label}: ${count.toLocaleString()}`}
               >
                 <p
-                  className="text-yellow-400 text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 tabular-nums select-text"
+                  className="text-amber-600 text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 tabular-nums select-text"
                   aria-live="polite"
                 >
                   {count.toLocaleString()}
                 </p>
-                <p className="text-gray-300 text-base sm:text-lg font-semibold select-none">{label}</p>
+                <p className="text-gray-700 text-base sm:text-lg font-semibold select-none">{label}</p>
               </motion.article>
             );
           })}

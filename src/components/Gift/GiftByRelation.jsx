@@ -10,12 +10,12 @@ import {
 } from '@heroicons/react/24/solid';
 
 const relationData = [
-  { title: 'For Mom', icon: <HeartIcon className="w-7 h-7 text-yellow-400" /> },
-  { title: 'For Dad', icon: <UserIcon className="w-7 h-7 text-yellow-400" /> },
-  { title: 'For Partner', icon: <GiftIcon className="w-7 h-7 text-yellow-400" /> },
-  { title: 'For Friends', icon: <UsersIcon className="w-7 h-7 text-yellow-400" /> },
-  { title: 'For Kids', icon: <GiftIcon className="w-7 h-7 text-yellow-400" /> },
-  { title: 'For Grandparents', icon: <HeartIcon className="w-7 h-7 text-yellow-400" /> },
+  { title: 'For Mom', icon: <HeartIcon className="w-7 h-7 text-amber-600" /> },
+  { title: 'For Dad', icon: <UserIcon className="w-7 h-7 text-amber-600" /> },
+  { title: 'For Partner', icon: <GiftIcon className="w-7 h-7 text-amber-600" /> },
+  { title: 'For Friends', icon: <UsersIcon className="w-7 h-7 text-amber-600" /> },
+  { title: 'For Kids', icon: <GiftIcon className="w-7 h-7 text-amber-600" /> },
+  { title: 'For Grandparents', icon: <HeartIcon className="w-7 h-7 text-amber-600" /> },
 ];
 
 const cardVariants = {
@@ -38,18 +38,18 @@ export default function GiftByRelation() {
 
   return (
     <section
-      className="w-full bg-gray-900 text-white px-6 sm:px-10 py-14 max-w-[800px] mx-auto rounded-lg shadow-2xl"
+      className="w-full bg-white text-gray-900 px-6 sm:px-10 py-14 max-w-[800px] mx-auto rounded-lg shadow-2xl"
       aria-label="Gift categories by relation"
     >
       {/* Section Header */}
       <div className="text-center mb-14">
         <div className="flex justify-center mb-5">
-          <UsersIcon className="w-10 h-10 text-yellow-400 animate-pulse" aria-hidden="true" />
+          <UsersIcon className="w-10 h-10 text-amber-600 animate-pulse" aria-hidden="true" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 drop-shadow-lg tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 drop-shadow-lg tracking-tight">
           Gifts by Relation
         </h2>
-        <p className="text-gray-400 mt-3 text-sm sm:text-base max-w-lg mx-auto leading-relaxed font-light tracking-wide">
+        <p className="text-gray-600 mt-3 text-sm sm:text-base max-w-lg mx-auto leading-relaxed font-light tracking-wide">
           Explore thoughtful gifts curated specifically for those who matter most.
         </p>
       </div>
@@ -70,12 +70,12 @@ export default function GiftByRelation() {
               whileHover="hover"
               role="listitem"
               tabIndex={0}
-              className="group bg-gray-800 border border-yellow-400/25 hover:border-yellow-400/70 hover:shadow-yellow-500/40 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-shadow cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400"
+              className="group bg-white border border-amber-600/25 hover:border-amber-600/70 hover:shadow-amber-700/40 rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-shadow cursor-pointer focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600"
               aria-label={title}
               style={{ aspectRatio: '1 / 1' }} // maintain perfect square cards
             >
               <div className="mb-3">{icon}</div>
-              <h3 className="text-xs sm:text-sm font-semibold text-white group-hover:text-yellow-300 transition-colors tracking-wide select-none">
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-amber-500 transition-colors tracking-wide select-none">
                 {title}
               </h3>
             </motion.div>
@@ -89,7 +89,7 @@ export default function GiftByRelation() {
           <button
             type="button"
             onClick={toggleShowMore}
-            className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-extrabold px-8 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-yellow-500"
+            className="inline-block bg-amber-600 hover:bg-amber-500 text-gray-900 font-extrabold px-8 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-700"
             aria-expanded={visibleCount > 2}
             aria-controls="relation-cards"
           >

@@ -211,15 +211,15 @@ function StarRating({ rating }) {
   for (let i = 1; i <= 5; i++) {
     if (rating >= i) {
       stars.push(
-        <FaStar key={i} className="text-yellow-400" aria-hidden="true" />
+        <FaStar key={i} className="text-amber-600" aria-hidden="true" />
       );
     } else if (rating >= i - 0.5) {
       stars.push(
-        <FaStarHalfAlt key={i} className="text-yellow-400" aria-hidden="true" />
+        <FaStarHalfAlt key={i} className="text-amber-600" aria-hidden="true" />
       );
     } else {
       stars.push(
-        <FaRegStar key={i} className="text-yellow-400" aria-hidden="true" />
+        <FaRegStar key={i} className="text-amber-600" aria-hidden="true" />
       );
     }
   }

@@ -47,8 +47,8 @@ const products = [
 
 const SaleProducts = () => {
   return (
-    <section className="bg-gray-900 py-12 px-4 sm:px-6 lg:px-12 my-[-30px]">
-      <h2 className="text-3xl font-semibold text-yellow-400 mb-8 text-center tracking-wide">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-12 my-[-30px]">
+      <h2 className="text-3xl font-semibold text-amber-600 mb-8 text-center tracking-wide">
         Hot Sale Products
       </h2>
 
@@ -56,7 +56,7 @@ const SaleProducts = () => {
         {products.map(({ id, title, price, oldPrice, img }) => (
           <div
             key={id}
-            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-yellow-500/50 transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-amber-700/50 transition-shadow duration-300"
           >
             <div className="relative aspect-w-4 aspect-h-3">
               <img
@@ -65,7 +65,7 @@ const SaleProducts = () => {
                 className="object-cover w-full h-full"
                 loading="lazy"
               />
-              <div className="absolute top-2 left-2 bg-yellow-500 text-gray-900 text-xs font-semibold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-amber-700 text-gray-900 text-xs font-semibold px-2 py-1 rounded">
                 SALE
               </div>
             </div>
@@ -73,23 +73,23 @@ const SaleProducts = () => {
             <div className="p-5 flex flex-col justify-between h-44">
               <h3
                 title={title}
-                className="text-yellow-300 font-semibold text-lg leading-tight truncate"
+                className="text-amber-500 font-semibold text-lg leading-tight truncate"
               >
                 {title}
               </h3>
 
               <div className="mt-3">
-                <span className="text-yellow-400 font-bold text-xl">
+                <span className="text-amber-600 font-bold text-xl">
                   ${price.toFixed(2)}
                 </span>
-                <span className="text-gray-400 line-through ml-3 text-sm">
+                <span className="text-gray-600 line-through ml-3 text-sm">
                   ${oldPrice.toFixed(2)}
                 </span>
               </div>
 
               <button
                 type="button"
-                className="mt-5 w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded px-4 py-2 transition-colors duration-300"
+                className="mt-5 w-full bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded px-4 py-2 transition-colors duration-300"
               >
                 Add to Cart
               </button>

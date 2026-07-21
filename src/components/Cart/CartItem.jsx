@@ -37,7 +37,7 @@ const CartItem = ({
   };
 
   return (
-    <article className="w-full max-w-[1000px] bg-gray-900 rounded-xl shadow-md p-4 flex flex-col sm:flex-row gap-4 sm:gap-6 text-white">
+    <article className="w-full max-w-[1000px] bg-white rounded-xl shadow-md p-4 flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-900">
       {/* Product Image */}
       <div className="flex-shrink-0 mx-auto sm:mx-0">
         <img
@@ -54,18 +54,18 @@ const CartItem = ({
       {/* Details */}
       <div className="flex flex-col flex-grow justify-between">
         <div>
-          <h3 className="text-yellow-400 text-lg sm:text-xl font-semibold">{product.title}</h3>
-          <p className="text-gray-300 mt-1 text-sm sm:text-base line-clamp-2">{product.description}</p>
+          <h3 className="text-amber-600 text-lg sm:text-xl font-semibold">{product.title}</h3>
+          <p className="text-gray-700 mt-1 text-sm sm:text-base line-clamp-2">{product.description}</p>
         </div>
 
         {/* Quantity & Price Section */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-4 gap-3 sm:gap-6">
           {/* Quantity Selector */}
-          <div className="flex items-center border border-gray-700 rounded-full px-2 py-1 sm:px-3 sm:py-1.5 w-fit">
+          <div className="flex items-center border border-gray-200 rounded-full px-2 py-1 sm:px-3 sm:py-1.5 w-fit">
             <button
               onClick={handleDecrease}
               aria-label="Decrease quantity"
-              className="text-yellow-400 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-yellow-300 transition select-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-amber-600 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-amber-500 transition select-none disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={quantity === 1}
               type="button"
             >
@@ -75,7 +75,7 @@ const CartItem = ({
             <button
               onClick={handleIncrease}
               aria-label="Increase quantity"
-              className="text-yellow-400 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-yellow-300 transition select-none"
+              className="text-amber-600 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-amber-500 transition select-none"
               type="button"
             >
               +
@@ -83,9 +83,9 @@ const CartItem = ({
           </div>
 
           {/* Price Display */}
-          <div className="text-base sm:text-lg font-semibold text-white whitespace-nowrap">
+          <div className="text-base sm:text-lg font-semibold text-gray-900 whitespace-nowrap">
             ${(product.price * quantity).toFixed(2)}{' '}
-            <span className="text-gray-400 text-xs sm:text-sm ml-1">
+            <span className="text-gray-600 text-xs sm:text-sm ml-1">
               (${product.price.toFixed(2)} each)
             </span>
           </div>

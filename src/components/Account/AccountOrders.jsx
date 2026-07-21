@@ -27,19 +27,19 @@ const orders = [
 
 const statusStyles = {
   Delivered: {
-    class: 'bg-green-600 text-white shadow-md',
+    class: 'bg-green-600 text-gray-900 shadow-md',
     icon: <FaCheckCircle className="mr-1" />,
   },
   Processing: {
-    class: 'bg-yellow-400 text-black shadow-md',
+    class: 'bg-amber-600 text-black shadow-md',
     icon: <FaSpinner className="mr-1 animate-spin-slow" />,
   },
   Cancelled: {
-    class: 'bg-red-600 text-white shadow-md',
+    class: 'bg-red-600 text-gray-900 shadow-md',
     icon: <FaTimesCircle className="mr-1" />,
   },
   Pending: {
-    class: 'bg-gray-500 text-white shadow-md',
+    class: 'bg-gray-500 text-gray-900 shadow-md',
     icon: <FaBoxOpen className="mr-1" />,
   },
 };
@@ -59,27 +59,27 @@ const AccountOrders = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 max-w-[1000px] mx-auto min-h-[420px] flex flex-col"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-8 max-w-[1000px] mx-auto min-h-[420px] flex flex-col"
       aria-label="Order History Section"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-white tracking-wide drop-shadow-md">
+      <h2 className="text-3xl font-extrabold mb-8 text-gray-900 tracking-wide drop-shadow-md">
         Your Orders
       </h2>
 
       {orders.length === 0 ? (
-        <div className="text-center mt-20 text-gray-400 flex flex-col items-center gap-3">
+        <div className="text-center mt-20 text-gray-600 flex flex-col items-center gap-3">
           <FaBoxOpen className="text-4xl opacity-40" />
           <p className="text-lg">You haven’t placed any orders yet.</p>
         </div>
       ) : (
         <div className="overflow-x-auto rounded-lg shadow-lg custom-scroll">
-          <table className="min-w-full table-auto border-collapse bg-gray-900 rounded-lg">
+          <table className="min-w-full table-auto border-collapse bg-white rounded-lg">
             <thead>
-              <tr className="text-left border-b border-gray-700">
+              <tr className="text-left border-b border-gray-200">
                 {['Order ID', 'Date', 'Total', 'Status', 'Action'].map((label) => (
                   <th
                     key={label}
-                    className="py-4 px-6 text-gray-300 text-sm font-semibold tracking-wide uppercase select-none"
+                    className="py-4 px-6 text-gray-700 text-sm font-semibold tracking-wide uppercase select-none"
                   >
                     {label}
                   </th>
@@ -93,25 +93,25 @@ const AccountOrders = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="border-b border-gray-700 hover:bg-gray-800 hover:shadow-[0_0_12px_#facc15] transition cursor-pointer"
+                  className="border-b border-gray-200 hover:bg-gray-50 hover:shadow-[0_0_12px_#b45309] transition cursor-pointer"
                 >
-                  <td className="py-4 px-6 font-mono text-yellow-400 text-sm underline hover:text-yellow-300 transition">
+                  <td className="py-4 px-6 font-mono text-amber-600 text-sm underline hover:text-amber-500 transition">
                     {id}
                   </td>
-                  <td className="py-4 px-6 text-gray-300 text-sm">
+                  <td className="py-4 px-6 text-gray-700 text-sm">
                     {new Date(date).toLocaleDateString(undefined, {
                       year: 'numeric',
                       month: 'short',
                       day: 'numeric',
                     })}
                   </td>
-                  <td className="py-4 px-6 font-semibold text-white text-sm">
+                  <td className="py-4 px-6 font-semibold text-gray-900 text-sm">
                     ${total.toFixed(2)}
                   </td>
                   <td className="py-4 px-6">
                     <span
                       className={`inline-flex items-center px-4 py-1 rounded-full text-xs font-semibold tracking-wide ${
-                        statusStyles[status]?.class || 'bg-gray-600 text-white'
+                        statusStyles[status]?.class || 'bg-white text-gray-900'
                       }`}
                     >
                       {statusStyles[status]?.icon}
@@ -123,7 +123,7 @@ const AccountOrders = () => {
                       type="button"
                       onClick={() => alert(`Opening order details for ${id}`)}
                       whileTap={tapSpring}
-                      className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold text-sm px-4 py-2 rounded-md shadow-md transition"
+                      className="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-black font-semibold text-sm px-4 py-2 rounded-md shadow-md transition"
                       aria-label={`View details for order ${id}`}
                     >
                       <FaEye />
@@ -143,10 +143,10 @@ const AccountOrders = () => {
           height: 10px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-          background: #1f2937;
+          background: #ffffff;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background-color: #facc15;
+          background-color: #b45309;
           border-radius: 6px;
         }
         .animate-spin-slow {

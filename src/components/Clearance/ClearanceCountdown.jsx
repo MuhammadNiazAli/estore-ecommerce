@@ -38,13 +38,13 @@ const ClearanceCountdown = () => {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-10 flex justify-center">
+    <section className="bg-white text-amber-600 py-10 flex justify-center">
       <div className="max-w-[1000px] w-full text-center px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Limited Time Clearance Deal!
         </h2>
-        <p className="text-gray-300 mb-8">
+        <p className="text-gray-700 mb-8">
           Hurry up! This deal ends soon. Don’t miss your chance to save big!
         </p>
 
@@ -58,12 +58,12 @@ const ClearanceCountdown = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg shadow-lg w-24 sm:w-28 md:w-32 py-4"
+              className="bg-white rounded-lg shadow-lg w-24 sm:w-28 md:w-32 py-4"
             >
               <div className="text-3xl md:text-4xl font-bold">
                 {String(item.value).padStart(2, "0")}
               </div>
-              <div className="text-gray-400 text-sm mt-1 uppercase">
+              <div className="text-gray-600 text-sm mt-1 uppercase">
                 {item.label}
               </div>
             </div>

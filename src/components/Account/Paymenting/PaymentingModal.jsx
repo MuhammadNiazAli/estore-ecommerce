@@ -39,7 +39,7 @@ const PaymentingModal = ({ isOpen, onClose, title, children }) => {
       {/* Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+        className="fixed inset-0 bg-white/60 backdrop-blur-sm z-40"
         aria-hidden="true"
       />
 
@@ -52,16 +52,16 @@ const PaymentingModal = ({ isOpen, onClose, title, children }) => {
         ref={modalRef}
         className="fixed inset-0 flex items-center justify-center p-4 z-50 outline-none"
       >
-        <div className="bg-gray-900 text-gray-300 rounded-lg shadow-lg w-full max-w-lg mx-auto p-6 relative animate-fadeIn">
+        <div className="bg-white text-gray-700 rounded-lg shadow-lg w-full max-w-lg mx-auto p-6 relative animate-fadeIn">
           {/* Header */}
           <header className="flex items-center justify-between mb-4">
-            <h2 id="modal-title" className="text-xl font-semibold text-gray-100">
+            <h2 id="modal-title" className="text-xl font-semibold text-gray-800">
               {title}
             </h2>
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="text-gray-400 hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 rounded"
+              className="text-gray-600 hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 rounded"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -599,7 +599,7 @@ const ToysProductGrid = () => {
   }, [searchTerm, sortOption]);
 
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 my-10">
+    <section className="bg-white text-gray-900 py-10 px-4 my-10">
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Controls */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
@@ -610,12 +610,12 @@ const ToysProductGrid = () => {
               placeholder="Search toys..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full md:w-64 px-4 py-2 rounded-md border border-gray-700 bg-gray-800 text-white focus:outline-none focus:border-yellow-500"
+              className="w-full md:w-64 px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-amber-700"
             />
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="px-4 py-2 rounded-md border border-gray-700 bg-gray-800 text-white focus:outline-none focus:border-yellow-500"
+              className="px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-amber-700"
             >
               <option value="">Sort By</option>
               <option value="low-high">Price: Low to High</option>
@@ -631,7 +631,7 @@ const ToysProductGrid = () => {
             {products.slice(0, visibleCount).map((toy) => (
               <div
                 key={toy.id}
-                className="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition relative"
+                className="bg-white p-4 rounded-xl shadow hover:shadow-xl transition relative"
               >
                 <img
                   src={toy.image}
@@ -640,8 +640,8 @@ const ToysProductGrid = () => {
                   loading="lazy"
                 />
                 <h3 className="font-semibold text-lg">{toy.name}</h3>
-                <p className="text-sm text-gray-400">{toy.brand}</p>
-                <p className="text-yellow-400 text-lg font-bold">
+                <p className="text-sm text-gray-600">{toy.brand}</p>
+                <p className="text-amber-600 text-lg font-bold">
                   ₹{toy.price}
                 </p>
                 <p className="text-sm mb-2">
@@ -650,13 +650,13 @@ const ToysProductGrid = () => {
 
                 {/* ✅ Buttons */}
                 <div className="flex items-center gap-3 mt-3">
-                  <button className="bg-yellow-500 text-black px-3 py-2 rounded-full flex-1 font-semibold hover:bg-yellow-400 transition text-sm">
+                  <button className="bg-amber-700 text-black px-3 py-2 rounded-full flex-1 font-semibold hover:bg-amber-600 transition text-sm">
                     <FaCartPlus className="inline mr-1" /> Add to Cart
                   </button>
-                  <button className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                  <button className="bg-white p-2 rounded-full hover:bg-gray-50 transition">
                     <FaEye />
                   </button>
-                  <button className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition">
+                  <button className="bg-white p-2 rounded-full hover:bg-gray-50 transition">
                     <FaHeart />
                   </button>
                 </div>
@@ -664,7 +664,7 @@ const ToysProductGrid = () => {
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-400 mt-10">No toys found.</p>
+          <p className="text-center text-gray-600 mt-10">No toys found.</p>
         )}
 
         {/* ✅ Load More */}
@@ -672,7 +672,7 @@ const ToysProductGrid = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setVisibleCount((prev) => prev + 6)}
-              className="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
+              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
             >
               Load More
             </button>

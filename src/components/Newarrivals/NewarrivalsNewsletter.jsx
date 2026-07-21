@@ -31,10 +31,10 @@ const NewarrivalsNewsletter = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 py-12 px-6 md:px-16 flex items-center justify-center mb-[-150px]">
+    <section className="w-full bg-white py-12 px-6 md:px-16 flex items-center justify-center mb-[-150px]">
       <motion.div
         className="
-          w-full max-w-3xl rounded-2xl bg-gray-800/90 backdrop-blur-md shadow-lg
+          w-full max-w-3xl rounded-2xl bg-white/90 backdrop-blur-md shadow-lg
           flex flex-col md:flex-row items-center gap-6 p-6 sm:p-8 md:p-10
         "
         initial={{ opacity: 0, y: 40 }}
@@ -43,10 +43,10 @@ const NewarrivalsNewsletter = () => {
       >
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-500 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-amber-700 mb-2">
             Subscribe to Our Newsletter
           </h2>
-          <p className="text-gray-300 text-sm md:text-base">
+          <p className="text-gray-700 text-sm md:text-base">
             Get exclusive offers, latest arrivals, and insider-only discounts delivered to your inbox.
           </p>
         </div>
@@ -69,7 +69,7 @@ const NewarrivalsNewsletter = () => {
               className="
                 w-full pl-10 pr-4 py-3 rounded-xl bg-gray-100 text-gray-900
                 placeholder-gray-500 text-sm sm:text-base
-                focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-1 focus:ring-offset-gray-900
+                focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1 focus:ring-offset-gray-900
                 transition
               "
             />
@@ -79,11 +79,11 @@ const NewarrivalsNewsletter = () => {
             type="submit"
             disabled={status === 'loading'}
             className="
-              bg-yellow-400 text-gray-900 font-semibold
+              bg-amber-600 text-gray-900 font-semibold
               px-6 py-3 rounded-xl w-full sm:w-auto text-sm sm:text-base
               transition
               shadow-[0_0_10px_rgba(251,191,36,0)]
-              hover:bg-yellow-500 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)]
+              hover:bg-amber-700 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)]
               disabled:opacity-70 disabled:cursor-not-allowed
             "
           >
@@ -100,7 +100,7 @@ const NewarrivalsNewsletter = () => {
       {/* Success Message */}
       {status === 'success' && (
         <motion.div
-          className="fixed bottom-5 right-5 bg-green-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-2"
+          className="fixed bottom-5 right-5 bg-green-600 text-gray-900 px-5 py-3 rounded-xl shadow-lg flex items-center gap-2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}

@@ -66,13 +66,13 @@ const PaymentingMethods = () => {
   return (
     <section
       aria-label="Select payment method"
-      className="max-w-lg mx-auto px-6 py-8 bg-gray-900 rounded-xl border border-gray-700 space-y-6 shadow-lg"
+      className="max-w-lg mx-auto px-6 py-8 bg-white rounded-xl border border-gray-200 space-y-6 shadow-lg"
     >
       <header>
-        <h2 className="text-2xl font-semibold text-white leading-tight">
+        <h2 className="text-2xl font-semibold text-gray-900 leading-tight">
           Choose Your Payment Method
         </h2>
-        <p className="text-sm text-gray-400 mt-2 max-w-md">
+        <p className="text-sm text-gray-600 mt-2 max-w-md">
           Select the payment method you prefer to complete your purchase securely.
         </p>
       </header>

@@ -18,12 +18,12 @@ const LogoutingRedirect = () => {
   return (
     <section
       aria-label="Redirecting after logout"
-      className="max-w-md mx-auto bg-gray-800 rounded-2xl p-8 shadow-lg text-yellow-400 text-center"
+      className="max-w-md mx-auto bg-white rounded-2xl p-8 shadow-lg text-amber-600 text-center"
     >
       <h2 className="text-2xl font-bold mb-4">
         You have been logged out successfully.
       </h2>
-      <p className="text-yellow-300">
+      <p className="text-amber-500">
         Redirecting you to the login page...
       </p>
     </section>

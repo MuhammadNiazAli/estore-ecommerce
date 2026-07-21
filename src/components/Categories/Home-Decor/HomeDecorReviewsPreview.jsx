@@ -192,7 +192,7 @@ const HomeDecorReviewsPreview = () => {
   const handleViewAll = () => setVisibleCount(homeDecorReviews.length);
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 my-5">
+    <section className="bg-white text-amber-600 py-12 my-5">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-center mb-8">
@@ -207,18 +207,18 @@ const HomeDecorReviewsPreview = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-800 rounded-lg p-6 shadow-lg border border-yellow-500 flex flex-col"
+              className="bg-white rounded-lg p-6 shadow-lg border border-amber-700 flex flex-col"
             >
               {/* User Info */}
               <div className="flex items-center mb-4">
                 <img
                   src={review.avatar}
                   alt={review.user}
-                  className="w-12 h-12 rounded-full border-2 border-yellow-500 object-cover"
+                  className="w-12 h-12 rounded-full border-2 border-amber-700 object-cover"
                 />
                 <div className="ml-3">
                   <p className="font-semibold">{review.user}</p>
-                  <p className="text-gray-400 text-sm">{review.time}</p>
+                  <p className="text-gray-600 text-sm">{review.time}</p>
                 </div>
               </div>
 
@@ -227,7 +227,7 @@ const HomeDecorReviewsPreview = () => {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span key={i}>
                     {i < review.rating ? (
-                      <FaStar className="text-yellow-500" />
+                      <FaStar className="text-amber-700" />
                     ) : (
                       <FaRegStar className="text-gray-500" />
                     )}
@@ -236,14 +236,14 @@ const HomeDecorReviewsPreview = () => {
               </div>
 
               {/* Comment */}
-              <p className="text-gray-300 mb-4">{review.comment}</p>
+              <p className="text-gray-700 mb-4">{review.comment}</p>
 
               {/* Actions */}
               <div className="flex items-center gap-4 mt-auto">
-                <button className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition">
+                <button className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition">
                   <FaThumbsUp /> Like
                 </button>
-                <button className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition">
+                <button className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition">
                   <FaComment /> Comment
                 </button>
               </div>
@@ -256,7 +256,7 @@ const HomeDecorReviewsPreview = () => {
           <div className="text-center mt-8">
             <button
               onClick={handleViewAll}
-              className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition"
+              className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-amber-600 transition"
             >
               View All Reviews
             </button>

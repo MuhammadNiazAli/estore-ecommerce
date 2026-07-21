@@ -6,17 +6,17 @@ const LaptopCompareBar = ({ selectedLaptops = [], onRemove, onCompare }) => {
   if (selectedLaptops.length === 0) return null;
 
   return (
-    <div className="fixed bottom-4 left-0 right-0 max-w-[1000px] mx-auto px-4 bg-gray-900 bg-opacity-90 rounded-md shadow-lg flex items-center space-x-4 py-3 z-50 ">
+    <div className="fixed bottom-4 left-0 right-0 max-w-[1000px] mx-auto px-4 bg-white bg-opacity-90 rounded-md shadow-lg flex items-center space-x-4 py-3 z-50 ">
       <div className="flex space-x-4 overflow-x-auto max-w-[80%] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
         {selectedLaptops.map(({ id, name, image }) => (
-          <div key={id} className="flex items-center bg-gray-800 rounded-md p-2 min-w-[150px]">
+          <div key={id} className="flex items-center bg-white rounded-md p-2 min-w-[150px]">
             <img
               src={image}
               alt={name}
               className="w-12 h-12 object-contain rounded"
               loading="lazy"
             />
-            <span className="ml-3 text-gray-100 truncate">{name}</span>
+            <span className="ml-3 text-gray-800 truncate">{name}</span>
             <button
               onClick={() => onRemove(id)}
               aria-label={`Remove ${name} from comparison`}
@@ -29,7 +29,7 @@ const LaptopCompareBar = ({ selectedLaptops = [], onRemove, onCompare }) => {
       </div>
       <button
         onClick={onCompare}
-        className="ml-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition"
+        className="ml-auto bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-2 rounded-md transition"
       >
         Compare ({selectedLaptops.length})
       </button>

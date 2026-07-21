@@ -64,12 +64,12 @@ export default function GiftCarousel() {
   };
 
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-14 bg-gray-900 rounded-3xl shadow-2xl text-white relative">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-14 bg-white rounded-3xl shadow-2xl text-gray-900 relative">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="text-yellow-400 text-3xl sm:text-4xl font-extrabold mb-10 drop-shadow-lg text-center"
+        className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-10 drop-shadow-lg text-center"
       >
         Popular Gift Picks
       </motion.h2>
@@ -82,10 +82,10 @@ export default function GiftCarousel() {
           disabled={isAtStart}
           className={`
             hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10
-            bg-yellow-400 text-gray-900 rounded-full p-3 shadow-xl
+            bg-amber-600 text-gray-900 rounded-full p-3 shadow-xl
             transition-all
-            ${isAtStart ? 'opacity-40 cursor-not-allowed' : 'hover:bg-yellow-300 scale-105'}
-            focus:outline-none focus:ring-4 focus:ring-yellow-400/50
+            ${isAtStart ? 'opacity-40 cursor-not-allowed' : 'hover:bg-amber-500 scale-105'}
+            focus:outline-none focus:ring-4 focus:ring-amber-600/50
           `}
         >
           <ChevronLeftIcon className="w-6 h-6" />
@@ -115,7 +115,7 @@ export default function GiftCarousel() {
                   alert(`Selected: ${title}`);
                 }
               }}
-              className="flex-shrink-0 w-64 bg-gray-900 border border-yellow-400/20 hover:border-yellow-400 transition-all rounded-xl shadow-lg hover:scale-[1.04] cursor-pointer focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="flex-shrink-0 w-64 bg-white border border-amber-600/20 hover:border-amber-600 transition-all rounded-xl shadow-lg hover:scale-[1.04] cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <img
                 src={img}
@@ -125,8 +125,8 @@ export default function GiftCarousel() {
                 className="w-full h-44 object-cover rounded-t-xl"
               />
               <div className="p-4">
-                <h3 className="text-white font-semibold text-lg truncate">{title}</h3>
-                <p className="text-yellow-400 font-bold mt-1">{price}</p>
+                <h3 className="text-gray-900 font-semibold text-lg truncate">{title}</h3>
+                <p className="text-amber-600 font-bold mt-1">{price}</p>
               </div>
             </div>
           ))}
@@ -139,10 +139,10 @@ export default function GiftCarousel() {
           disabled={isAtEnd}
           className={`
             hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10
-            bg-yellow-400 text-gray-900 rounded-full p-3 shadow-xl
+            bg-amber-600 text-gray-900 rounded-full p-3 shadow-xl
             transition-all
-            ${isAtEnd ? 'opacity-40 cursor-not-allowed' : 'hover:bg-yellow-300 scale-105'}
-            focus:outline-none focus:ring-4 focus:ring-yellow-400/50
+            ${isAtEnd ? 'opacity-40 cursor-not-allowed' : 'hover:bg-amber-500 scale-105'}
+            focus:outline-none focus:ring-4 focus:ring-amber-600/50
           `}
         >
           <ChevronRightIcon className="w-6 h-6" />

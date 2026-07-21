@@ -144,27 +144,27 @@ const ProfileAddresses = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12 rounded-lg max-w-[1200px] mx-auto"
+      className="w-full bg-white text-gray-900 px-4 sm:px-6 py-8 sm:py-12 rounded-lg max-w-[1200px] mx-auto"
       aria-label="Manage your addresses"
     >
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-1">
+          <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
             Your Addresses
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 max-w-md">
+          <p className="text-sm sm:text-base text-gray-700 max-w-md">
             Manage your shipping and billing addresses for faster checkout.
           </p>
         </div>
-        <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm sm:text-base select-none">
+        <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base select-none">
           <MapPinIcon className="w-6 h-6 sm:w-7 sm:h-7 animate-ping-slow" />
           <span>{addresses.length} saved address{addresses.length !== 1 ? 'es' : ''}</span>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="w-full h-px bg-gray-700 mb-8" />
+      <div className="w-full h-px bg-white mb-8" />
 
       {/* Addresses Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -175,12 +175,12 @@ const ProfileAddresses = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="bg-gray-800 p-5 rounded-lg shadow-inner relative group"
+            className="bg-white p-5 rounded-lg shadow-inner relative group"
           >
-            <p className="text-yellow-400 font-semibold text-lg">{addr.title}</p>
-            <p className="text-white mt-1 font-medium">{addr.name}</p>
-            <p className="text-gray-300 mt-1">{addr.address}</p>
-            <p className="text-gray-400 mt-1">{addr.phone}</p>
+            <p className="text-amber-600 font-semibold text-lg">{addr.title}</p>
+            <p className="text-gray-900 mt-1 font-medium">{addr.name}</p>
+            <p className="text-gray-700 mt-1">{addr.address}</p>
+            <p className="text-gray-600 mt-1">{addr.phone}</p>
 
             {/* Edit/Delete Buttons, visible on hover */}
             <div
@@ -190,7 +190,7 @@ const ProfileAddresses = () => {
               <button
                 onClick={() => openModal(addr)}
                 aria-label={`Edit address titled ${addr.title}`}
-                className="p-1 rounded-full hover:bg-yellow-400 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                 type="button"
               >
                 <PencilIcon className="w-5 h-5" />
@@ -200,7 +200,7 @@ const ProfileAddresses = () => {
                   <button
                     onClick={() => deleteAddress(addr.id)}
                     aria-label={`Confirm delete address titled ${addr.title}`}
-                    className="p-1 rounded-full bg-red-600 text-white hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="p-1 rounded-full bg-red-600 text-gray-900 hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-600"
                     type="button"
                   >
                     Yes
@@ -208,7 +208,7 @@ const ProfileAddresses = () => {
                   <button
                     onClick={cancelDelete}
                     aria-label="Cancel delete address"
-                    className="p-1 rounded-full bg-gray-700 text-yellow-400 hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="p-1 rounded-full bg-white text-amber-600 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                     type="button"
                   >
                     No
@@ -218,7 +218,7 @@ const ProfileAddresses = () => {
                 <button
                   onClick={() => confirmDeleteAddress(addr.id)}
                   aria-label={`Delete address titled ${addr.title}`}
-                  className="p-1 rounded-full hover:bg-red-600 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="p-1 rounded-full hover:bg-red-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-red-600"
                   type="button"
                 >
                   <TrashIcon className="w-5 h-5" />
@@ -233,7 +233,7 @@ const ProfileAddresses = () => {
       <div className="mt-8 flex justify-center sm:justify-end">
         <button
           onClick={() => openModal()}
-          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-yellow-500"
+          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-700"
           aria-label="Add new address"
           type="button"
         >
@@ -246,7 +246,7 @@ const ProfileAddresses = () => {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4"
+            className="fixed inset-0 bg-white bg-opacity-70 flex items-center justify-center z-50 px-4"
             variants={modalBackdropVariants}
             initial="hidden"
             animate="visible"
@@ -260,7 +260,7 @@ const ProfileAddresses = () => {
             }}
           >
             <motion.div
-              className="bg-gray-900 rounded-lg max-w-lg w-full p-6 relative"
+              className="bg-white rounded-lg max-w-lg w-full p-6 relative"
               variants={modalVariants}
               initial="hidden"
               animate="visible"
@@ -269,22 +269,22 @@ const ProfileAddresses = () => {
             >
               <h3
                 id="modal-title"
-                className="text-2xl font-bold text-yellow-400 mb-4 select-none"
+                className="text-2xl font-bold text-amber-600 mb-4 select-none"
               >
                 {editingAddress ? 'Edit Address' : 'Add New Address'}
               </h3>
               <form onSubmit={handleSubmit} noValidate>
                 {/* Title */}
                 <label className="block mb-3">
-                  <span className="text-yellow-300 font-semibold">Title</span>
+                  <span className="text-amber-500 font-semibold">Title</span>
                   <input
                     type="text"
                     name="title"
                     value={form.title}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.title ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.title ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="e.g. Home, Office"
                     aria-invalid={!!formErrors.title}
                     aria-describedby="error-title"
@@ -302,15 +302,15 @@ const ProfileAddresses = () => {
 
                 {/* Name */}
                 <label className="block mb-3">
-                  <span className="text-yellow-300 font-semibold">Name</span>
+                  <span className="text-amber-500 font-semibold">Name</span>
                   <input
                     type="text"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.name ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.name ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="Full name"
                     aria-invalid={!!formErrors.name}
                     aria-describedby="error-name"
@@ -328,15 +328,15 @@ const ProfileAddresses = () => {
 
                 {/* Address */}
                 <label className="block mb-3">
-                  <span className="text-yellow-300 font-semibold">Address</span>
+                  <span className="text-amber-500 font-semibold">Address</span>
                   <textarea
                     name="address"
                     value={form.address}
                     onChange={handleChange}
                     rows={3}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.address ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.address ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-none`}
                     placeholder="Street, city, country"
                     aria-invalid={!!formErrors.address}
                     aria-describedby="error-address"
@@ -354,15 +354,15 @@ const ProfileAddresses = () => {
 
                 {/* Phone */}
                 <label className="block mb-6">
-                  <span className="text-yellow-300 font-semibold">Phone</span>
+                  <span className="text-amber-500 font-semibold">Phone</span>
                   <input
                     type="tel"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.phone ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.phone ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="+31 6 12345678"
                     aria-invalid={!!formErrors.phone}
                     aria-describedby="error-phone"
@@ -383,13 +383,13 @@ const ProfileAddresses = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2 rounded-full bg-gray-700 text-yellow-400 font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-full bg-yellow-400 text-gray-900 font-semibold hover:bg-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="px-5 py-2 rounded-full bg-amber-600 text-gray-900 font-semibold hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
                   >
                     {editingAddress ? 'Save Changes' : 'Add Address'}
                   </button>
@@ -400,7 +400,7 @@ const ProfileAddresses = () => {
               <button
                 onClick={closeModal}
                 aria-label="Close address form"
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-yellow-400 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                 type="button"
               >
                 <XMarkIcon className="w-6 h-6" />

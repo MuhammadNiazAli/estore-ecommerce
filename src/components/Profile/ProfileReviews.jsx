@@ -60,7 +60,7 @@ const Toast = ({ message, onClose }) => {
     return () => clearTimeout(timer);
   }, [onClose]);
   return (
-    <div className="fixed bottom-6 right-6 bg-yellow-400 text-black px-4 py-2 rounded shadow select-none z-50 pointer-events-none text-sm sm:text-base">
+    <div className="fixed bottom-6 right-6 bg-amber-600 text-black px-4 py-2 rounded shadow select-none z-50 pointer-events-none text-sm sm:text-base">
       {message}
     </div>
   );
@@ -214,15 +214,15 @@ const ProfileReviews = () => {
 
   return (
     <>
-      <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-10">
+      <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-10">
         <div className="max-w-[1200px] mx-auto space-y-8">
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 select-none leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 select-none leading-tight">
                 Your Reviews
               </h2>
-              <p className="text-gray-300 max-w-lg mt-1 select-none text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-700 max-w-lg mt-1 select-none text-sm sm:text-base leading-relaxed">
                 Share your thoughts, help others, and see what you’ve written.
               </p>
             </div>
@@ -234,7 +234,7 @@ const ProfileReviews = () => {
               aria-label="Sort reviews"
               value={sortType}
               onChange={(e) => setSortType(e.target.value)}
-              className="bg-gray-800 border border-gray-600 text-white rounded px-3 py-1 text-sm sm:text-base outline-none cursor-pointer select-none"
+              className="bg-white border border-gray-200 text-gray-900 rounded px-3 py-1 text-sm sm:text-base outline-none cursor-pointer select-none"
             >
               <option>Most Recent</option>
               <option>Highest Rated</option>
@@ -249,7 +249,7 @@ const ProfileReviews = () => {
                 key={review.id}
                 tabIndex={0}
                 aria-label={`Review by ${review.user} on ${review.product}`}
-                className="bg-gray-800 p-5 rounded-xl shadow-lg cursor-default relative focus-visible:outline-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-2 select-none flex flex-col"
+                className="bg-white p-5 rounded-xl shadow-lg cursor-default relative focus-visible:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2 select-none flex flex-col"
                 style={{ minHeight: '280px' }} // Keep cards uniform height on smaller screens
               >
                 {/* Product Image */}
@@ -266,7 +266,7 @@ const ProfileReviews = () => {
                   <img
                     src={review.avatar}
                     alt={`${review.user} avatar`}
-                    className="w-10 h-10 rounded-full border-2 border-yellow-400 object-cover select-none"
+                    className="w-10 h-10 rounded-full border-2 border-amber-600 object-cover select-none"
                     draggable={false}
                     loading="lazy"
                   />
@@ -282,7 +282,7 @@ const ProfileReviews = () => {
                       )}
                     </p>
                     <time
-                      className="text-gray-400 text-xs"
+                      className="text-gray-600 text-xs"
                       dateTime={review.date}
                       title={new Date(review.date).toLocaleString()}
                     >
@@ -302,19 +302,19 @@ const ProfileReviews = () => {
                     <StarIcon
                       key={i}
                       className={`w-4 h-4 ${
-                        i < review.rating ? 'text-yellow-400' : 'text-gray-600'
+                        i < review.rating ? 'text-amber-600' : 'text-gray-600'
                       }`}
                     />
                   ))}
                 </div>
 
                 {/* Comment */}
-                <p className="text-gray-300 mb-5 whitespace-pre-line text-sm sm:text-base flex-grow overflow-hidden">
+                <p className="text-gray-700 mb-5 whitespace-pre-line text-sm sm:text-base flex-grow overflow-hidden">
                   {review.comment}
                 </p>
 
                 {/* Actions */}
-                <div className="flex items-center gap-6 text-gray-300 select-none flex-wrap">
+                <div className="flex items-center gap-6 text-gray-700 select-none flex-wrap">
                   {/* Like */}
                   <button
                     aria-pressed={liked.includes(review.id)}
@@ -331,8 +331,8 @@ const ProfileReviews = () => {
                     <span
                       className={`text-xs font-semibold ${
                         liked.includes(review.id)
-                          ? 'text-yellow-400'
-                          : 'hover:text-yellow-400 transition'
+                          ? 'text-amber-600'
+                          : 'hover:text-amber-600 transition'
                       }`}
                     >
                       {liked.includes(review.id) ? 'Liked' : 'Like'}
@@ -348,7 +348,7 @@ const ProfileReviews = () => {
                     aria-label={`Reply to review by ${review.user}`}
                   >
                     <ArrowUturnLeftIcon className="w-5 h-5" aria-hidden="true" />
-                    <span className="text-xs font-semibold hover:text-yellow-400 transition select-none">
+                    <span className="text-xs font-semibold hover:text-amber-600 transition select-none">
                       Reply
                     </span>
                   </button>
@@ -365,7 +365,7 @@ const ProfileReviews = () => {
                       aria-label={`Share review by ${review.user}`}
                     >
                       <ShareIcon className="w-5 h-5" aria-hidden="true" />
-                      <span className="text-xs font-semibold hover:text-yellow-400 transition select-none">
+                      <span className="text-xs font-semibold hover:text-amber-600 transition select-none">
                         Share
                       </span>
                     </button>
@@ -373,7 +373,7 @@ const ProfileReviews = () => {
                       <ul
                         role="menu"
                         aria-label="Share platforms"
-                        className="absolute right-0 mt-1 w-36 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-20"
+                        className="absolute right-0 mt-1 w-36 bg-white border border-gray-200 rounded-md shadow-lg z-20"
                       >
                         {sharePlatforms.map((platform) => (
                           <li key={platform.name}>
@@ -382,7 +382,7 @@ const ProfileReviews = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               role="menuitem"
-                              className="flex items-center gap-2 px-3 py-2 hover:bg-yellow-400 hover:text-black transition cursor-pointer select-none whitespace-nowrap"
+                              className="flex items-center gap-2 px-3 py-2 hover:bg-amber-600 hover:text-black transition cursor-pointer select-none whitespace-nowrap"
                               onClick={() => setShareOpen(null)}
                             >
                               {platformIcons[platform.name]}
@@ -396,7 +396,7 @@ const ProfileReviews = () => {
                               copyToClipboard(window.location.href);
                               setShareOpen(null);
                             }}
-                            className="flex items-center gap-2 px-3 py-2 w-full hover:bg-yellow-400 hover:text-black transition cursor-pointer select-none text-left"
+                            className="flex items-center gap-2 px-3 py-2 w-full hover:bg-amber-600 hover:text-black transition cursor-pointer select-none text-left"
                             role="menuitem"
                           >
                             📋 Copy Link
@@ -418,13 +418,13 @@ const ProfileReviews = () => {
           role="dialog"
           aria-modal="true"
           aria-labelledby="reply-overlay-title"
-          className="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm z-[100] flex flex-col max-w-4xl mx-auto left-0 right-0 my-6 rounded-lg shadow-xl overflow-hidden
+          className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm z-[100] flex flex-col max-w-4xl mx-auto left-0 right-0 my-6 rounded-lg shadow-xl overflow-hidden
           sm:my-12 sm:rounded-xl"
         >
-          <header className="flex justify-between items-center bg-gray-950 px-6 py-4 border-b border-yellow-400">
+          <header className="flex justify-between items-center bg-white px-6 py-4 border-b border-amber-600">
             <h2
               id="reply-overlay-title"
-              className="text-xl font-bold text-yellow-400 truncate max-w-[80vw]"
+              className="text-xl font-bold text-amber-600 truncate max-w-[80vw]"
               tabIndex={0}
             >
               Reply to {currentReview.user}'s Review
@@ -432,21 +432,21 @@ const ProfileReviews = () => {
             <button
               onClick={closeReplyOverlay}
               aria-label="Close reply overlay"
-              className="text-yellow-400 hover:text-yellow-500 focus:outline-yellow-400"
+              className="text-amber-600 hover:text-amber-700 focus:outline-amber-600"
               type="button"
             >
               <XMarkIcon className="w-6 h-6" />
             </button>
           </header>
 
-          <main className="flex-grow overflow-y-auto p-6 bg-gray-950 text-white flex flex-col">
+          <main className="flex-grow overflow-y-auto p-6 bg-white text-gray-900 flex flex-col">
             {/* Review Details */}
             <article className="mb-6">
               <div className="flex items-center gap-4 mb-4 flex-wrap sm:flex-nowrap">
                 <img
                   src={currentReview.avatar}
                   alt={`${currentReview.user} avatar`}
-                  className="w-14 h-14 rounded-full border-2 border-yellow-400 object-cover select-none flex-shrink-0"
+                  className="w-14 h-14 rounded-full border-2 border-amber-600 object-cover select-none flex-shrink-0"
                   draggable={false}
                 />
                 <div className="min-w-0">
@@ -461,7 +461,7 @@ const ProfileReviews = () => {
                     )}
                   </p>
                   <time
-                    className="text-gray-400 text-sm truncate block"
+                    className="text-gray-600 text-sm truncate block"
                     dateTime={currentReview.date}
                     title={new Date(currentReview.date).toLocaleString()}
                   >
@@ -479,24 +479,24 @@ const ProfileReviews = () => {
                   <StarIcon
                     key={i}
                     className={`w-5 h-5 ${
-                      i < currentReview.rating ? 'text-yellow-400' : 'text-gray-600'
+                      i < currentReview.rating ? 'text-amber-600' : 'text-gray-600'
                     }`}
                   />
                 ))}
               </div>
-              <p className="text-gray-300 whitespace-pre-line text-base">{currentReview.comment}</p>
+              <p className="text-gray-700 whitespace-pre-line text-base">{currentReview.comment}</p>
             </article>
 
             {/* Replies List */}
             <section
               aria-label="Replies"
-              className="space-y-3 max-h-[40vh] overflow-y-auto border-t border-yellow-400 pt-4 mb-6"
+              className="space-y-3 max-h-[40vh] overflow-y-auto border-t border-amber-600 pt-4 mb-6"
             >
               {(replies[currentReview.id] && replies[currentReview.id].length > 0) ? (
                 replies[currentReview.id].map((rep) => (
                   <div
                     key={rep.id}
-                    className="bg-gray-700 rounded-md p-3 text-sm text-gray-200 select-text break-words"
+                    className="bg-white rounded-md p-3 text-sm text-gray-700 select-text break-words"
                     tabIndex={-1}
                     aria-label={`Reply: ${rep.text}`}
                   >
@@ -504,7 +504,7 @@ const ProfileReviews = () => {
                   </div>
                 ))
               ) : (
-                <p className="text-gray-400 italic">No replies yet. Be the first to reply!</p>
+                <p className="text-gray-600 italic">No replies yet. Be the first to reply!</p>
               )}
             </section>
 
@@ -520,14 +520,14 @@ const ProfileReviews = () => {
                 type="text"
                 aria-label={`Reply input for review by ${currentReview.user}`}
                 placeholder="Write your reply..."
-                className="flex-grow rounded-md border border-gray-600 bg-gray-900 text-white px-3 py-2 text-sm focus:ring-yellow-400 focus:border-yellow-400 outline-none"
+                className="flex-grow rounded-md border border-gray-200 bg-white text-gray-900 px-3 py-2 text-sm focus:ring-amber-600 focus:border-amber-600 outline-none"
                 value={replyInputs[currentReview.id] || ''}
                 onChange={(e) => handleReplyInputChange(currentReview.id, e.target.value)}
                 autoFocus
               />
               <button
                 type="submit"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-5 rounded text-sm select-none transition focus:outline-none"
+                className="bg-amber-600 hover:bg-amber-700 text-black font-semibold px-5 rounded text-sm select-none transition focus:outline-none"
               >
                 Send
               </button>

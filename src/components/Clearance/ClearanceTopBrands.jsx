@@ -36,11 +36,11 @@ const brands = [
 
 const ClearanceTopBrands = () => {
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 sm:px-6 flex justify-center overflow-x-hidden my-5">
+    <section className="bg-white text-gray-900 py-10 px-4 sm:px-6 flex justify-center overflow-x-hidden my-5">
       <div className="max-w-[1000px] w-full">
         {/* Header */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center sm:text-left mb-8">
-          Top <span className="text-yellow-400">Brands</span>
+          Top <span className="text-amber-600">Brands</span>
         </h2>
 
         {/* Mobile grid: 2 columns, sm+: horizontal scroll */}
@@ -57,10 +57,10 @@ const ClearanceTopBrands = () => {
               key={brand.id}
               className="
                 flex-shrink-0
-                bg-gray-800 rounded-xl p-3
+                bg-white rounded-xl p-3
                 w-full sm:w-28 sm:h-28 h-24
                 flex items-center justify-center
-                hover:scale-100 hover:bg-gray-700 transition-transform duration-300 shadow-md
+                hover:scale-100 hover:bg-gray-50 transition-transform duration-300 shadow-md
               "
               style={{ boxSizing: 'border-box' }}
             >

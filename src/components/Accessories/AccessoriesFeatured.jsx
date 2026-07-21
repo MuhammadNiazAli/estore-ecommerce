@@ -919,7 +919,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={"full" + i}
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -929,7 +929,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -949,7 +949,7 @@ const StarRating = ({ rating }) => {
       {[...Array(emptyStars)].map((_, i) => (
         <svg
           key={"empty" + i}
-          className="w-4 h-4 text-gray-300"
+          className="w-4 h-4 text-gray-700"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -1011,7 +1011,7 @@ const AccessoriesFeatured = () => {
 
   return (
     <section className="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 py-10 my-[-10px]">
-      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-50 mb-6 text-center tracking-tight ml-[-600px] lg:ml-0">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-6 text-center tracking-tight ml-[-600px] lg:ml-0">
         Featured Accessories
       </h2>
 
@@ -1129,11 +1129,11 @@ const AccessoriesFeatured = () => {
                   </div>
 
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <span className="text-lg sm:text-xl font-extrabold text-yellow-600">
+                    <span className="text-lg sm:text-xl font-extrabold text-amber-800">
                       ${Number(product.price).toFixed(2)}
                     </span>
                     {product.oldPrice !== undefined && (
-                      <span className="text-xs sm:text-sm line-through text-gray-400">
+                      <span className="text-xs sm:text-sm line-through text-gray-600">
                         ${Number(product.oldPrice).toFixed(2)}
                       </span>
                     )}
@@ -1141,7 +1141,7 @@ const AccessoriesFeatured = () => {
 
                   <button
                     aria-label={`Add ${product.title} to cart`}
-                    className="mt-3 w-full py-2 sm:py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg shadow-md transition"
+                    className="mt-3 w-full py-2 sm:py-3 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg shadow-md transition"
                   >
                     Add to Cart
                   </button>

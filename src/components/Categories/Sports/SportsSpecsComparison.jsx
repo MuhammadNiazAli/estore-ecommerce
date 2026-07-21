@@ -58,11 +58,11 @@ const specs = [
 
 const SportsSpecsComparison = () => {
   return (
-    <section className="bg-gray-900 py-14">
+    <section className="bg-white py-14">
       <div className="max-w-7xl mx-auto px-4">
         {/* ✅ Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-50">
+          <h2 className="text-4xl font-bold text-gray-800">
             Compare Sports Gear Specifications
           </h2>
           <p className="text-gray-600 mt-3 text-lg">
@@ -79,14 +79,14 @@ const SportsSpecsComparison = () => {
             className="min-w-[700px] w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
           >
             {/* Table Header */}
-            <thead className="bg-gray-800 text-yellow-400 text-lg">
+            <thead className="bg-white text-amber-600 text-lg">
               <tr>
                 <th className="p-4 text-left">Specifications</th>
                 {products.map((product) => (
                   <th
                     key={product.id}
                     className={`p-4 text-center ${
-                      product.highlight ? "bg-yellow-100 text-gray-900" : ""
+                      product.highlight ? "bg-amber-300 text-gray-900" : ""
                     }`}
                   >
                     <div className="flex flex-col items-center">
@@ -98,7 +98,7 @@ const SportsSpecsComparison = () => {
                       <p className="font-bold">{product.name}</p>
                       <p className="text-sm text-gray-600">${product.price}</p>
                       {product.highlight && (
-                        <span className="text-xs bg-yellow-400 text-black px-2 py-1 rounded-full mt-1 font-semibold">
+                        <span className="text-xs bg-amber-600 text-black px-2 py-1 rounded-full mt-1 font-semibold">
                           Best Choice
                         </span>
                       )}
@@ -116,7 +116,7 @@ const SportsSpecsComparison = () => {
                 {products.map((p) => (
                   <td
                     key={p.id}
-                    className="text-center font-bold text-yellow-600 p-4"
+                    className="text-center font-bold text-amber-800 p-4"
                   >
                     ${p.price}
                   </td>

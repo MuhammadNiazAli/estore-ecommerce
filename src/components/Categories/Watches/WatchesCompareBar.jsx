@@ -575,11 +575,11 @@ const WatchesCompareBar = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 shadow-md rounded-lg mt-6 my-5">
+    <section className="w-full bg-white shadow-md rounded-lg mt-6 my-5">
       <div className="max-w-7xl mx-auto p-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-50 flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             Compare Watches
             <span className="text-sm text-gray-500">
               ({compareItems.length} Selected)
@@ -604,7 +604,7 @@ const WatchesCompareBar = () => {
                   {/* Remove */}
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="absolute top-2 right-2 bg-gray-800 text-white rounded-full p-1 hover:bg-red-500 transition"
+                    className="absolute top-2 right-2 bg-white text-gray-900 rounded-full p-1 hover:bg-red-500 transition"
                   >
                     <XMarkIcon className="h-4 w-4" />
                   </button>
@@ -627,7 +627,7 @@ const WatchesCompareBar = () => {
                     ))}
                   </ul>
 
-                  <button className="w-full bg-gray-900 text-white py-2 rounded hover:bg-gray-800 text-xs">
+                  <button className="w-full bg-white text-gray-900 py-2 rounded hover:bg-gray-50 text-xs">
                     View Details
                   </button>
                 </div>

@@ -37,17 +37,17 @@ const LaptopFaq = () => {
   };
 
   return (
-    <section className="max-w-[1000px] mx-auto px-4 py-8 bg-gray-900 rounded-md text-gray-200">
-      <h2 className="text-3xl font-semibold mb-6 text-gray-100 text-center">Frequently Asked Questions</h2>
+    <section className="max-w-[1000px] mx-auto px-4 py-8 bg-white rounded-md text-gray-700">
+      <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {faqs.map(({ id, question, answer }) => (
           <div
             key={id}
-            className="border border-gray-700 rounded-md overflow-hidden"
+            className="border border-gray-200 rounded-md overflow-hidden"
           >
             <button
               onClick={() => toggle(id)}
-              className="w-full text-left px-6 py-4 flex justify-between items-center bg-gray-700 hover:bg-gray-600 transition focus:outline-none"
+              className="w-full text-left px-6 py-4 flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none"
               aria-expanded={openId === id}
               aria-controls={`faq-${id}`}
             >
@@ -67,7 +67,7 @@ const LaptopFaq = () => {
             {openId === id && (
               <div
                 id={`faq-${id}`}
-                className="px-6 py-4 bg-gray-800 text-gray-300"
+                className="px-6 py-4 bg-white text-gray-700"
               >
                 {answer}
               </div>

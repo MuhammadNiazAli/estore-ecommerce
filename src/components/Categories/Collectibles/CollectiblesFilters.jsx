@@ -644,11 +644,11 @@ const CollectiblesFilters = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white py-8 min-h-screen">
+    <div className="bg-white text-gray-900 py-8 min-h-screen">
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col lg:flex-row gap-8 relative">
         <div className="lg:hidden sticky top-20 z-40">
           <button
-            className="bg-yellow-500 text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+            className="bg-amber-700 text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
             onClick={() => setIsFilterOpen(true)}
             aria-label="Open filters"
           >
@@ -658,13 +658,13 @@ const CollectiblesFilters = () => {
 
         {/* Filters Sidebar */}
         <aside
-          className={`fixed top-0 left-0 h-full w-72 bg-gray-800 z-50 p-6 transform transition-transform duration-300 ease-in-out overflow-y-auto
+          className={`fixed top-0 left-0 h-full w-72 bg-white z-50 p-6 transform transition-transform duration-300 ease-in-out overflow-y-auto
             ${isFilterOpen ? "translate-x-0" : "-translate-x-full"}
             lg:translate-x-0 lg:relative lg:block lg:w-1/4 rounded-lg lg:sticky lg:top-4`}
           aria-label="Product filters"
         >
           <button
-            className="absolute top-4 right-4 text-yellow-400 text-2xl lg:hidden"
+            className="absolute top-4 right-4 text-amber-600 text-2xl lg:hidden"
             onClick={() => setIsFilterOpen(false)}
             aria-label="Close filters"
           >
@@ -673,7 +673,7 @@ const CollectiblesFilters = () => {
 
           <h2 className="text-xl font-bold mb-4">Filters</h2>
           <button
-            className="text-sm text-yellow-400 hover:underline mb-4"
+            className="text-sm text-amber-600 hover:underline mb-4"
             onClick={resetFilters}
           >
             Reset Filters
@@ -684,7 +684,7 @@ const CollectiblesFilters = () => {
             placeholder="Search collectibles..."
             value={filters.search}
             onChange={(e) => setFilters({ ...filters, search: e.target.value })}
-            className="w-full border border-gray-700 bg-gray-900 rounded-md px-3 py-2 mb-4 text-white"
+            className="w-full border border-gray-200 bg-white rounded-md px-3 py-2 mb-4 text-gray-900"
             aria-label="Search collectibles"
           />
 
@@ -692,7 +692,7 @@ const CollectiblesFilters = () => {
           {[["Brand", brands, "brand"], ["Category", categories, "category"], ["Features", features, "features"]].map(
             ([title, list, key]) => (
               <div className="mb-4" key={key}>
-                <h3 className="font-semibold mb-2 text-yellow-400">{title}</h3>
+                <h3 className="font-semibold mb-2 text-amber-600">{title}</h3>
                 {list.map((item) => (
                   <label key={item} className="block mb-1 text-sm cursor-pointer">
                     <input
@@ -709,7 +709,7 @@ const CollectiblesFilters = () => {
           )}
 
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-yellow-400">Price</h3>
+            <h3 className="font-semibold mb-2 text-amber-600">Price</h3>
             <input
               type="range"
               min="0"
@@ -724,12 +724,12 @@ const CollectiblesFilters = () => {
           </div>
 
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-yellow-400">Rating</h3>
+            <h3 className="font-semibold mb-2 text-amber-600">Rating</h3>
             {[5, 4, 3].map((r) => (
               <button
                 key={r}
                 className={`mr-2 mb-2 px-2 py-1 border rounded ${
-                  filters.rating === r ? "bg-yellow-400 text-black" : ""
+                  filters.rating === r ? "bg-amber-600 text-black" : ""
                 }`}
                 onClick={() => setFilters({ ...filters, rating: r })}
               >
@@ -739,7 +739,7 @@ const CollectiblesFilters = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2 text-yellow-400">Availability</h3>
+            <h3 className="font-semibold mb-2 text-amber-600">Availability</h3>
             {[["In Stock", true], ["Out of Stock", false], ["All", null]].map(([label, value]) => (
               <label key={label} className="block cursor-pointer">
                 <input
@@ -762,7 +762,7 @@ const CollectiblesFilters = () => {
             <select
               value={filters.sort}
               onChange={(e) => setFilters({ ...filters, sort: e.target.value })}
-              className="bg-gray-800 text-white border border-gray-700 px-3 py-2 rounded"
+              className="bg-white text-gray-900 border border-gray-200 px-3 py-2 rounded"
             >
               <option value="">Sort By</option>
               <option value="low-high">Price: Low to High</option>
@@ -774,7 +774,7 @@ const CollectiblesFilters = () => {
             {filteredProducts.slice(0, visibleCount).map((product) => (
               <div
                 key={product.id}
-                className="bg-gray-800 p-4 rounded-xl shadow hover:shadow-xl transition"
+                className="bg-white p-4 rounded-xl shadow hover:shadow-xl transition"
               >
                 <img
                   src={product.image}
@@ -783,10 +783,10 @@ const CollectiblesFilters = () => {
                   loading="lazy"
                 />
                 <h3 className="font-semibold">{product.name}</h3>
-                <p className="text-sm text-gray-400">{product.brand}</p>
-                <p className="text-lg font-bold text-yellow-400">${product.price}</p>
+                <p className="text-sm text-gray-600">{product.brand}</p>
+                <p className="text-lg font-bold text-amber-600">${product.price}</p>
                 <p className="text-sm">{product.stock ? "In Stock" : "Out of Stock"}</p>
-                <button className="mt-3 bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">
+                <button className="mt-3 bg-amber-700 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition">
                   Add to Cart
                 </button>
               </div>
@@ -797,7 +797,7 @@ const CollectiblesFilters = () => {
             <div className="text-center mt-6">
               <button
                 onClick={() => setVisibleCount((prev) => prev + 8)}
-                className="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
+                className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
               >
                 Load More
               </button>

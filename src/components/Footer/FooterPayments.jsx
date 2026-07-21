@@ -55,7 +55,7 @@ export default function FooterPayments() {
     >
       <h4
         id="footer-payments-heading"
-        className="text-white text-3xl font-extrabold mb-6 text-center md:text-left tracking-wide"
+        className="text-gray-900 text-3xl font-extrabold mb-6 text-center md:text-left tracking-wide"
       >
         We Accept
       </h4>
@@ -76,8 +76,8 @@ export default function FooterPayments() {
                 flex items-center justify-center
                 w-24 h-16 sm:w-28 sm:h-20
                 rounded-xl
-                bg-[#1e1e1e]/60
-                text-white
+                bg-white/60
+                text-gray-900
                 transition-all duration-300 ease-in-out
                 transform hover:scale-110
                 shadow-md

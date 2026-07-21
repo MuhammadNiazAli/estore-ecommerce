@@ -68,7 +68,7 @@ export default function AddressingPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col lg:flex-row max-w-[1200px] mx-auto pt-20 px-4 space-y-12 lg:space-y-0 lg:space-x-8">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col lg:flex-row max-w-[1200px] mx-auto pt-20 px-4 space-y-12 lg:space-y-0 lg:space-x-8">
       <AccountSidebar />
 
       <AddressingSidebar />
@@ -78,7 +78,7 @@ export default function AddressingPage() {
 
         <button
           onClick={openAddForm}
-          className="px-4 py-2 bg-yellow-400 text-gray-900 font-semibold rounded hover:bg-yellow-500 transition"
+          className="px-4 py-2 bg-amber-600 text-gray-900 font-semibold rounded hover:bg-amber-700 transition"
         >
           Add New Address
         </button>

@@ -40,25 +40,25 @@ function ReorderContent({ closePanel }) {
   return (
     <div className="px-4 py-6 max-w-xl mx-auto text-[14px] sm:text-[15px]">
       {/* Title */}
-      <h2 className="text-yellow-400 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
+      <h2 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
         Reorder Your Items
       </h2>
 
       {/* Intro */}
-      <p className="text-gray-300 leading-relaxed mb-6 text-sm sm:text-base text-center sm:text-left">
+      <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base text-center sm:text-left">
         Reorder your previous items in just one click — ideal for essentials or repeat purchases.
       </p>
 
       {/* Reorder List */}
       <section
         aria-label="Items available for reorder"
-        className="bg-gray-900 p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
+        className="bg-white p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
       >
-        <h3 className="text-yellow-400 font-semibold text-lg sm:text-xl mb-4">
+        <h3 className="text-amber-600 font-semibold text-lg sm:text-xl mb-4">
           Items in this reorder
         </h3>
 
-        <ul className="divide-y divide-gray-700">
+        <ul className="divide-y divide-gray-200">
           {reorderedItems.map(({ id, name, quantity, unitPrice, imageUrl }) => (
             <li key={id} className="flex items-center gap-3 sm:gap-4 py-3">
               <img
@@ -68,12 +68,12 @@ function ReorderContent({ closePanel }) {
                 loading="lazy"
               />
               <div className="flex flex-col">
-                <span className="text-gray-300 font-semibold text-sm sm:text-base">{name}</span>
-                <span className="text-gray-400 text-xs sm:text-sm">
+                <span className="text-gray-700 font-semibold text-sm sm:text-base">{name}</span>
+                <span className="text-gray-600 text-xs sm:text-sm">
                   Quantity: {quantity}
                 </span>
               </div>
-              <span className="ml-auto text-yellow-400 font-semibold text-sm sm:text-base">
+              <span className="ml-auto text-amber-600 font-semibold text-sm sm:text-base">
                 ${(unitPrice * quantity).toFixed(2)}
               </span>
             </li>
@@ -82,18 +82,18 @@ function ReorderContent({ closePanel }) {
       </section>
 
       {/* Delivery Estimate */}
-      <section className="bg-gray-800 p-4 sm:p-5 rounded-lg mb-8 shadow-md">
-        <h4 className="text-yellow-400 font-semibold text-base sm:text-lg mb-2">
+      <section className="bg-white p-4 sm:p-5 rounded-lg mb-8 shadow-md">
+        <h4 className="text-amber-600 font-semibold text-base sm:text-lg mb-2">
           Estimated Delivery
         </h4>
-        <p className="text-gray-300 text-sm sm:text-base">
+        <p className="text-gray-700 text-sm sm:text-base">
           Items will ship within 24 hours and are expected to arrive by{' '}
           <strong>July 20, 2025</strong>.
         </p>
       </section>
 
       {/* Support Info */}
-      <section className="text-gray-400 text-xs sm:text-sm mb-6 space-y-2">
+      <section className="text-gray-600 text-xs sm:text-sm mb-6 space-y-2">
         <p>
           A confirmation email with tracking info will be sent once your reorder is processed.
         </p>
@@ -101,14 +101,14 @@ function ReorderContent({ closePanel }) {
           Want to edit your order? Visit{' '}
           <a
             href="/account/orders"
-            className="text-yellow-400 underline hover:text-yellow-300"
+            className="text-amber-600 underline hover:text-amber-500"
           >
             Order History
           </a>{' '}
           or reach out to{' '}
           <a
             href="/contact"
-            className="text-yellow-400 underline hover:text-yellow-300"
+            className="text-amber-600 underline hover:text-amber-500"
           >
             Customer Support
           </a>
@@ -120,7 +120,7 @@ function ReorderContent({ closePanel }) {
       <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
         <button
           onClick={handleReorder}
-          className="bg-yellow-400 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md w-full sm:w-auto"
+          className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Place reorder now"
         >
@@ -129,7 +129,7 @@ function ReorderContent({ closePanel }) {
 
         <button
           onClick={closePanel}
-          className="border border-yellow-400 text-yellow-400 text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition shadow-md w-full sm:w-auto"
+          className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Cancel reorder"
         >

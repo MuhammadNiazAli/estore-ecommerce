@@ -14,10 +14,10 @@ const AccountLogout = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-xl p-10 max-w-[400px] mx-auto flex flex-col items-center shadow-xl mb-[-30px]"
+      className="bg-gradient-to-br from-white via-white to-white rounded-xl p-10 max-w-[400px] mx-auto flex flex-col items-center shadow-xl mb-[-30px]"
       aria-label="Logout Section"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-white tracking-wide select-none">
+      <h2 className="text-3xl font-extrabold mb-8 text-gray-900 tracking-wide select-none">
         Sign Out
       </h2>
 
@@ -29,7 +29,7 @@ const AccountLogout = () => {
           bg-red-600 
           hover:bg-red-700 
           active:bg-red-800
-          text-white 
+          text-gray-900 
           px-10 py-4 
           rounded-full 
           font-semibold 

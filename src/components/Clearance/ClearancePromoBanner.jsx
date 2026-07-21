@@ -2,7 +2,7 @@ import React from "react";
 
 const ClearancePromoBanner = () => {
   return (
-    <section className="relative bg-gray-900 text-white">
+    <section className="relative bg-white text-gray-900">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -10,21 +10,21 @@ const ClearancePromoBanner = () => {
           alt="Clearance Promo"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-white/70"></div>
       </div>
 
       {/* Content */}
       <div className="relative max-w-[1000px] mx-auto text-center px-4 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-600 mb-4">
           Mega Clearance Event!
         </h2>
-        <p className="text-gray-300 text-lg sm:text-xl max-w-[700px] mx-auto mb-8">
+        <p className="text-gray-700 text-lg sm:text-xl max-w-[700px] mx-auto mb-8">
           Shop your favorite products at unbeatable prices. Limited time offer,
           don’t miss out!
         </p>
         <a
           href="#"
-          className="inline-block bg-yellow-500 text-gray-900 font-semibold text-lg px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition"
+          className="inline-block bg-amber-700 text-gray-900 font-semibold text-lg px-6 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition"
         >
           Shop Now
         </a>

@@ -56,9 +56,9 @@ export default function BillingDetails({ formData, setFormData, onSubmit }) {
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 py-12 sm:py-16 bg-gray-900 mb-20">
-      <div className="max-w-[1200px] mx-auto bg-gray-900 border border-yellow-500/40 rounded-3xl shadow-2xl backdrop-blur-md ring-1 ring-yellow-300/40 px-4 sm:px-10 md:px-16 py-8 sm:py-14">
-        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center text-yellow-300 mb-8 sm:mb-10 drop-shadow tracking-wide">
+    <section className="w-full px-4 sm:px-6 py-12 sm:py-16 bg-white mb-20">
+      <div className="max-w-[1200px] mx-auto bg-white border border-amber-700/40 rounded-3xl shadow-2xl backdrop-blur-md ring-1 ring-amber-500/40 px-4 sm:px-10 md:px-16 py-8 sm:py-14">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-center text-amber-500 mb-8 sm:mb-10 drop-shadow tracking-wide">
           Billing Details
         </h2>
 
@@ -121,14 +121,14 @@ export default function BillingDetails({ formData, setFormData, onSubmit }) {
               type="submit"
               className="
                 w-full sm:w-auto
-                bg-gradient-to-r from-yellow-400 to-yellow-600
-                hover:from-yellow-500 hover:to-yellow-700
+                bg-gradient-to-r from-amber-600 to-amber-800
+                hover:from-amber-700 hover:to-amber-900
                 text-gray-900 font-semibold
                 px-6 sm:px-8 md:px-10
                 py-3 sm:py-3.5 md:py-4
                 rounded-full
                 shadow-md hover:shadow-lg
-                focus:outline-none focus:ring-4 focus:ring-yellow-300/70
+                focus:outline-none focus:ring-4 focus:ring-amber-500/70
                 transition-all duration-200
                 text-base tracking-wide
               "
@@ -157,7 +157,7 @@ function InputField({
 }) {
   return (
     <div className={`flex flex-col ${className}`}>
-      <label htmlFor={name} className="text-yellow-200 font-medium text-sm sm:text-base mb-2">
+      <label htmlFor={name} className="text-amber-400 font-medium text-sm sm:text-base mb-2">
         {label} {required && <span className="text-red-400">*</span>}
       </label>
 
@@ -171,10 +171,10 @@ function InputField({
           required={required}
           placeholder={placeholder}
           aria-invalid={!!error}
-          className={`resize-none w-full rounded-xl bg-yellow-800/40 text-white placeholder-yellow-200 px-4 py-3 border transition-all focus:outline-none focus:ring-4 text-sm sm:text-base ${
+          className={`resize-none w-full rounded-xl bg-amber-900/40 text-gray-900 placeholder-amber-400 px-4 py-3 border transition-all focus:outline-none focus:ring-4 text-sm sm:text-base ${
             error
               ? 'border-red-500 ring-red-300'
-              : 'border-yellow-500 focus:ring-yellow-300 hover:border-yellow-400'
+              : 'border-amber-700 focus:ring-amber-500 hover:border-amber-600'
           }`}
         />
       ) : (
@@ -187,10 +187,10 @@ function InputField({
           required={required}
           placeholder={placeholder}
           aria-invalid={!!error}
-          className={`w-full rounded-xl bg-yellow-800/40 text-white placeholder-yellow-200 px-4 py-3 border transition-all focus:outline-none focus:ring-4 text-sm sm:text-base ${
+          className={`w-full rounded-xl bg-amber-900/40 text-gray-900 placeholder-amber-400 px-4 py-3 border transition-all focus:outline-none focus:ring-4 text-sm sm:text-base ${
             error
               ? 'border-red-500 ring-red-300'
-              : 'border-yellow-500 focus:ring-yellow-300 hover:border-yellow-400'
+              : 'border-amber-700 focus:ring-amber-500 hover:border-amber-600'
           }`}
         />
       )}
@@ -200,7 +200,7 @@ function InputField({
           {error}
         </span>
       ) : (
-        <small className="text-xs sm:text-sm text-yellow-200 mt-1">{desc}</small>
+        <small className="text-xs sm:text-sm text-amber-400 mt-1">{desc}</small>
       )}
     </div>
   );

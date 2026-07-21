@@ -125,16 +125,16 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-6 sm:p-10 max-w-[1000px] mx-auto shadow-xl"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-6 sm:p-10 max-w-[1000px] mx-auto shadow-xl"
       aria-label="Payment methods"
     >
-      <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-white tracking-tight text-center sm:text-left">
+      <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-gray-900 tracking-tight text-center sm:text-left">
         Manage Payment Methods
       </h2>
 
       {/* Existing Methods */}
       {paymentMethods.length === 0 ? (
-        <p className="text-yellow-300 text-center italic text-lg mb-8 sm:mb-10">
+        <p className="text-amber-500 text-center italic text-lg mb-8 sm:mb-10">
           You have no saved payment methods.
         </p>
       ) : (
@@ -142,16 +142,16 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
           {paymentMethods.map((method) => (
             <li
               key={method.id}
-              className="bg-gray-700 rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between shadow-md"
+              className="bg-white rounded-lg p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between shadow-md"
             >
               <div className="mb-4 sm:mb-0">
-                <h3 className="text-yellow-400 font-semibold text-lg sm:text-xl flex items-center gap-3 mb-1 sm:mb-2">
+                <h3 className="text-amber-600 font-semibold text-lg sm:text-xl flex items-center gap-3 mb-1 sm:mb-2">
                   {method.type === 'Credit Card' ? (
                     <>
                       <CreditCard className="w-5 h-5 sm:w-6 sm:h-6" />
                       {method.type}
                       {method.cardType && (
-                        <span className="ml-2 bg-yellow-300 text-yellow-800 px-2 py-0.5 rounded text-xs sm:text-sm font-semibold select-none">
+                        <span className="ml-2 bg-amber-500 text-amber-900 px-2 py-0.5 rounded text-xs sm:text-sm font-semibold select-none">
                           {method.cardType}
                         </span>
                       )}
@@ -166,24 +166,24 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
 
                 {method.type === 'Credit Card' ? (
                   <>
-                    <p className="text-white font-mono tracking-wide text-base sm:text-lg">
+                    <p className="text-gray-900 font-mono tracking-wide text-base sm:text-lg">
                       {method.cardNumber}
                     </p>
-                    <p className="text-yellow-300 mt-0.5 sm:mt-1 text-sm sm:text-base">
+                    <p className="text-amber-500 mt-0.5 sm:mt-1 text-sm sm:text-base">
                       Card Holder: <span className="font-semibold">{method.cardHolder}</span>
                     </p>
-                    <p className="text-yellow-300 text-sm sm:text-base">
+                    <p className="text-amber-500 text-sm sm:text-base">
                       Expires: <span className="font-semibold">{method.expiry}</span>
                     </p>
                   </>
                 ) : (
-                  <p className="text-yellow-300 font-semibold text-base sm:text-lg">{method.email}</p>
+                  <p className="text-amber-500 font-semibold text-base sm:text-lg">{method.email}</p>
                 )}
               </div>
 
               <button
                 onClick={() => removeMethod(method.id)}
-                className="self-start sm:self-auto mt-3 sm:mt-0 bg-red-600 hover:bg-red-700 text-white px-5 py-3 rounded-full font-semibold shadow-lg transition w-full sm:w-auto"
+                className="self-start sm:self-auto mt-3 sm:mt-0 bg-red-600 hover:bg-red-700 text-gray-900 px-5 py-3 rounded-full font-semibold shadow-lg transition w-full sm:w-auto"
                 type="button"
                 aria-label={`Delete ${method.type} payment method`}
               >
@@ -195,8 +195,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
       )}
 
       {/* Add New Payment Method Form */}
-      <div className="bg-gray-700 rounded-lg p-6 sm:p-8 shadow-md">
-        <h3 className="text-yellow-400 font-extrabold text-xl sm:text-2xl mb-5 sm:mb-6 tracking-tight text-center sm:text-left">
+      <div className="bg-white rounded-lg p-6 sm:p-8 shadow-md">
+        <h3 className="text-amber-600 font-extrabold text-xl sm:text-2xl mb-5 sm:mb-6 tracking-tight text-center sm:text-left">
           Add Payment Method
         </h3>
 
@@ -209,8 +209,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
             type="button"
             className={`flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-lg transition w-full sm:w-auto ${
               form.type === 'Credit Card'
-                ? 'bg-yellow-400 text-black shadow-lg'
-                : 'bg-gray-600 text-yellow-400 hover:bg-yellow-500/40'
+                ? 'bg-amber-600 text-black shadow-lg'
+                : 'bg-white text-amber-600 hover:bg-amber-700/40'
             }`}
           >
             <CreditCard className="w-6 h-6" /> Credit Card
@@ -223,8 +223,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
             type="button"
             className={`flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold text-lg transition w-full sm:w-auto ${
               form.type === 'PayPal'
-                ? 'bg-yellow-400 text-black shadow-lg'
-                : 'bg-gray-600 text-yellow-400 hover:bg-yellow-500/40'
+                ? 'bg-amber-600 text-black shadow-lg'
+                : 'bg-white text-amber-600 hover:bg-amber-700/40'
             }`}
           >
             <PayPalIcon className="w-6 h-6" /> PayPal
@@ -240,8 +240,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
                 placeholder="Card Number"
                 value={form.cardNumber}
                 onChange={(e) => setForm((f) => ({ ...f, cardNumber: e.target.value }))}
-                className={`w-full px-5 py-4 rounded-lg bg-gray-700 border text-white placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md ${
-                  errors.cardNumber ? 'border-red-500' : 'border-gray-600'
+                className={`w-full px-5 py-4 rounded-lg bg-white border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md ${
+                  errors.cardNumber ? 'border-red-500' : 'border-gray-200'
                 }`}
                 maxLength={19}
                 autoComplete="cc-number"
@@ -268,8 +268,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
                 placeholder="Card Holder Name"
                 value={form.cardHolder}
                 onChange={(e) => setForm((f) => ({ ...f, cardHolder: e.target.value }))}
-                className={`w-full px-5 py-4 rounded-lg bg-gray-700 border text-white placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md ${
-                  errors.cardHolder ? 'border-red-500' : 'border-gray-600'
+                className={`w-full px-5 py-4 rounded-lg bg-white border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md ${
+                  errors.cardHolder ? 'border-red-500' : 'border-gray-200'
                 }`}
                 autoComplete="cc-name"
                 spellCheck="false"
@@ -294,8 +294,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
                 placeholder="Expiry Date (MM/YY)"
                 value={form.expiry}
                 onChange={(e) => setForm((f) => ({ ...f, expiry: e.target.value }))}
-                className={`w-full px-5 py-4 rounded-lg bg-gray-700 border text-white placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md ${
-                  errors.expiry ? 'border-red-500' : 'border-gray-600'
+                className={`w-full px-5 py-4 rounded-lg bg-white border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md ${
+                  errors.expiry ? 'border-red-500' : 'border-gray-200'
                 }`}
                 maxLength={5}
                 autoComplete="cc-exp"
@@ -322,8 +322,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
                 placeholder="Card Type (Visa, MasterCard, etc.)"
                 value={form.cardType}
                 onChange={(e) => setForm((f) => ({ ...f, cardType: e.target.value }))}
-                className={`w-full px-5 py-4 rounded-lg bg-gray-700 border text-white placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md ${
-                  errors.cardType ? 'border-red-500' : 'border-gray-600'
+                className={`w-full px-5 py-4 rounded-lg bg-white border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md ${
+                  errors.cardType ? 'border-red-500' : 'border-gray-200'
                 }`}
                 autoComplete="off"
                 spellCheck="false"
@@ -348,8 +348,8 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
               placeholder="PayPal Email"
               value={form.email}
               onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-              className={`w-full px-5 py-4 rounded-lg bg-gray-700 border text-white placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md ${
-                errors.email ? 'border-red-500' : 'border-gray-600'
+              className={`w-full px-5 py-4 rounded-lg bg-white border text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md ${
+                errors.email ? 'border-red-500' : 'border-gray-200'
               }`}
               autoComplete="email"
               spellCheck="false"
@@ -371,7 +371,7 @@ const AccountPaymentMethods = ({ methods = initialPaymentMethods, setUserData })
         <button
           onClick={handleAdd}
           disabled={saving}
-          className="w-full max-w-xs mx-auto block bg-yellow-400 text-black px-6 py-4 rounded-full font-semibold shadow-lg hover:bg-yellow-300 active:scale-95 transition-transform duration-150"
+          className="w-full max-w-xs mx-auto block bg-amber-600 text-black px-6 py-4 rounded-full font-semibold shadow-lg hover:bg-amber-500 active:scale-95 transition-transform duration-150"
           type="button"
           aria-label="Save payment method"
         >

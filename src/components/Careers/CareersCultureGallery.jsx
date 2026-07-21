@@ -229,14 +229,14 @@ const CareersCultureGallery = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4 min-h-screen">
+    <section className="bg-white w-full flex justify-center px-4 min-h-screen">
       <div className="w-full max-w-[1100px] py-16">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-3xl md:text-4xl font-extrabold text-white text-center mb-10"
+          className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-10"
         >
           Life at Our Company
         </motion.h2>
@@ -245,7 +245,7 @@ const CareersCultureGallery = () => {
           {galleryImages.map((img, index) => (
             <motion.div
               key={index}
-              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer focus:outline-yellow-400"
+              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer focus:outline-amber-600"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
               tabIndex={0}
@@ -277,20 +277,20 @@ const CareersCultureGallery = () => {
                     exit="hidden"
                     variants={overlayVariants}
                     transition={{ duration: 0.3 }}
-                    className="absolute inset-0 bg-gray-900/60 flex flex-col justify-center items-center p-6 text-center rounded-2xl"
+                    className="absolute inset-0 bg-white/60 flex flex-col justify-center items-center p-6 text-center rounded-2xl"
                   >
-                    <h3 className="text-yellow-400 font-bold text-xl sm:text-2xl mb-2">
+                    <h3 className="text-amber-600 font-bold text-xl sm:text-2xl mb-2">
                       {img.label}
                     </h3>
                     <p
                       id={`desc-${index}`}
-                      className="text-yellow-200 text-sm sm:text-base mb-4 max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800"
+                      className="text-amber-400 text-sm sm:text-base mb-4 max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800"
                     >
                       {img.details}
                     </p>
                     <button
                       onClick={() => setModalIndex(index)}
-                      className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2 rounded-md shadow-md transition"
+                      className="inline-block bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-6 py-2 rounded-md shadow-md transition"
                       type="button"
                       aria-label={`Learn more about ${img.label}`}
                     >
@@ -313,7 +313,7 @@ const CareersCultureGallery = () => {
             animate="visible"
             exit="hidden"
             variants={modalBackdropVariants}
-            className="fixed inset-0 bg-black bg-opacity-90 backdrop-blur-sm z-[1000] flex justify-center items-center p-6 overflow-auto"
+            className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm z-[1000] flex justify-center items-center p-6 overflow-auto"
             aria-modal="true"
             role="dialog"
             aria-labelledby="modal-title"
@@ -330,14 +330,14 @@ const CareersCultureGallery = () => {
               exit="hidden"
               variants={modalContentVariants}
               transition={{ duration: 0.25 }}
-              className="bg-gray-900 rounded-3xl max-w-3xl w-full max-h-[90vh] p-8 overflow-y-auto text-yellow-50 shadow-2xl relative focus:outline-yellow-400"
+              className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] p-8 overflow-y-auto text-amber-200 shadow-2xl relative focus:outline-amber-600"
               tabIndex={-1}
             >
               {/* Close Button */}
               <button
                 onClick={() => setModalIndex(null)}
                 aria-label="Close details overlay"
-                className="absolute top-5 right-5 text-yellow-400 hover:text-yellow-300 focus:outline-none"
+                className="absolute top-5 right-5 text-amber-600 hover:text-amber-500 focus:outline-none"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -357,7 +357,7 @@ const CareersCultureGallery = () => {
 
               <h2
                 id="modal-title"
-                className="text-4xl font-extrabold mb-4 text-yellow-400"
+                className="text-4xl font-extrabold mb-4 text-amber-600"
               >
                 {galleryImages[modalIndex].label}
               </h2>
@@ -371,7 +371,7 @@ const CareersCultureGallery = () => {
 
               <p
                 id="modal-desc"
-                className="whitespace-pre-line text-yellow-200 text-lg mb-6 leading-relaxed max-h-[40vh] overflow-y-auto scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800"
+                className="whitespace-pre-line text-amber-400 text-lg mb-6 leading-relaxed max-h-[40vh] overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800"
               >
                 {galleryImages[modalIndex].fullDetails || galleryImages[modalIndex].details}
               </p>
@@ -382,7 +382,7 @@ const CareersCultureGallery = () => {
                     href={galleryImages[modalIndex].moreOptions.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition text-center"
+                    className="inline-block bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition text-center"
                     aria-label={`Visit website for ${galleryImages[modalIndex].label}`}
                   >
                     Visit Website
@@ -391,7 +391,7 @@ const CareersCultureGallery = () => {
                 {galleryImages[modalIndex].moreOptions?.contactEmail && (
                   <a
                     href={`mailto:${galleryImages[modalIndex].moreOptions.contactEmail}`}
-                    className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition text-center"
+                    className="inline-block bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition text-center"
                     aria-label={`Contact team for ${galleryImages[modalIndex].label}`}
                   >
                     Contact Us
@@ -400,7 +400,7 @@ const CareersCultureGallery = () => {
                 {galleryImages[modalIndex].moreOptions?.shareText && (
                   <button
                     onClick={() => handleShare(galleryImages[modalIndex].moreOptions.shareText)}
-                    className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition"
+                    className="inline-block bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-3 rounded-md shadow-md transition"
                     aria-label={`Share about ${galleryImages[modalIndex].label}`}
                     type="button"
                   >
@@ -420,21 +420,21 @@ const CareersCultureGallery = () => {
           width: 6px;
         }
         .scrollbar-thin::-webkit-scrollbar-track {
-          background: #1f2937; /* gray-800 */
+          background: #ffffff; /* gray-800 */
           border-radius: 9999px;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb {
-          background-color: #fbbf24; /* yellow-400 */
+          background-color: #b45309; /* amber-600 */
           border-radius: 9999px;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-          background-color: #f59e0b; /* yellow-500 */
+          background-color: #b45309; /* amber-700 */
         }
 
         /* Firefox */
         .scrollbar-thin {
           scrollbar-width: thin;
-          scrollbar-color: #fbbf24 #1f2937;
+          scrollbar-color: #b45309 #ffffff;
         }
       `}</style>
     </section>

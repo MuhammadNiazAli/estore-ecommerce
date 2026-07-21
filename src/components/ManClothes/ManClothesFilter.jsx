@@ -771,12 +771,12 @@ const ManClothesFilter = () => {
 
   const renderSidebar = () => (
     <div
-      className={`w-64 bg-gray-800 p-6 shadow-lg h-full overflow-y-auto custom-scrollbar`}
+      className={`w-64 bg-white p-6 shadow-lg h-full overflow-y-auto custom-scrollbar`}
     >
-      <h2 className="text-xl font-bold mb-4 text-yellow-400 flex justify-between items-center">
+      <h2 className="text-xl font-bold mb-4 text-amber-600 flex justify-between items-center">
         Filters
         <button
-          className="block md:hidden text-white text-2xl"
+          className="block md:hidden text-gray-900 text-2xl"
           onClick={() => setSidebarOpen(false)}
           aria-label="Close Filters Sidebar"
         >
@@ -788,7 +788,7 @@ const ManClothesFilter = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="w-full p-2 border rounded mb-4 bg-gray-700 text-white"
+        className="w-full p-2 border rounded mb-4 bg-white text-gray-900"
         onChange={(e) => setFilters({ ...filters, search: e.target.value })}
         aria-label="Search products"
       />
@@ -802,12 +802,12 @@ const ManClothesFilter = () => {
         { title: "Type", list: ["Man", "Boy"], type: "type" },
       ].map((section) => (
         <div key={section.title} className="mb-4">
-          <h3 className="font-semibold mb-2 text-yellow-300">{section.title}</h3>
+          <h3 className="font-semibold mb-2 text-amber-500">{section.title}</h3>
           {section.list.map((item) => (
             <label key={item} className="block text-sm capitalize cursor-pointer">
               <input
                 type="checkbox"
-                className="mr-2 accent-yellow-400"
+                className="mr-2 accent-amber-600"
                 onChange={() => handleCheckbox(section.type, item)}
                 checked={filters[section.type].includes(item)}
                 aria-checked={filters[section.type].includes(item)}
@@ -820,29 +820,29 @@ const ManClothesFilter = () => {
 
       {/* Price */}
       <div className="mb-4">
-        <h3 className="font-semibold mb-2 text-yellow-300">Price (Max)</h3>
+        <h3 className="font-semibold mb-2 text-amber-500">Price (Max)</h3>
         <input
           type="range"
           min="0"
           max="600"
           value={filters.priceRange[1]}
           onChange={handlePriceChange}
-          className="w-full accent-yellow-400"
+          className="w-full accent-amber-600"
           aria-valuemin={0}
           aria-valuemax={600}
           aria-valuenow={filters.priceRange[1]}
           aria-label="Maximum price filter"
         />
-        <p className="text-sm text-yellow-400">Up to ${filters.priceRange[1]}</p>
+        <p className="text-sm text-amber-600">Up to ${filters.priceRange[1]}</p>
       </div>
     </div>
   );
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 bg-gray-900 min-h-screen text-white relative my-10">
+    <div className="flex flex-col md:flex-row gap-8 p-6 bg-white min-h-screen text-gray-900 relative my-10">
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-900/90 z-50 transition-transform duration-500 ${
+        className={`fixed top-0 left-0 h-full bg-white/90 z-50 transition-transform duration-500 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
         style={{ width: "70%" }}
@@ -859,7 +859,7 @@ const ManClothesFilter = () => {
   {!sidebarOpen && (
   <button
     onClick={() => setSidebarOpen(true)}
-    className="fixed left-2 z-50 bg-gray-950/60 text-white lg:bg-gray-900/0 lg:text-white/0 p-3 shadow-lg md:hidden ml-[-45px]"
+    className="fixed left-2 z-50 bg-white/60 text-gray-900 lg:bg-white/0 lg:text-gray-900/0 p-3 shadow-lg md:hidden ml-[-45px]"
     style={{
       position: "sticky",
       top: "6rem", // approx 96px from top (adjust as needed)
@@ -886,26 +886,26 @@ const ManClothesFilter = () => {
             productsToShow.map((p) => (
               <div
                 key={p.id}
-                className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition flex flex-col h-full"
               >
                 <img src={p.img} alt={p.name} className="w-full h-60 object-cover" />
                 <div className="p-4 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-lg font-semibold">{p.name}</h3>
-                    <p className="text-gray-400">{p.category}</p>
+                    <p className="text-gray-600">{p.category}</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <span className="text-yellow-400 text-lg font-bold">${p.price}</span>
+                      <span className="text-amber-600 text-lg font-bold">${p.price}</span>
                       <span className="text-gray-500 line-through text-sm">${p.oldPrice}</span>
                     </div>
                   </div>
-                  <button className="mt-3 w-full bg-yellow-500 text-black py-2 rounded hover:bg-yellow-400">
+                  <button className="mt-3 w-full bg-amber-700 text-black py-2 rounded hover:bg-amber-600">
                     Add to Cart
                   </button>
                 </div>
               </div>
             ))
           ) : (
-            <p className="col-span-full text-center text-gray-400">No products match your filters.</p>
+            <p className="col-span-full text-center text-gray-600">No products match your filters.</p>
           )}
         </div>
 
@@ -914,7 +914,7 @@ const ManClothesFilter = () => {
           <div className="text-center mt-6">
             <button
               onClick={() => setVisibleCount(visibleCount + 9)}
-              className="bg-yellow-500 text-black px-6 py-3 rounded hover:bg-yellow-400 font-semibold"
+              className="bg-amber-700 text-black px-6 py-3 rounded hover:bg-amber-600 font-semibold"
             >
               Show More
             </button>
@@ -928,10 +928,10 @@ const ManClothesFilter = () => {
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #0f0f0f;
+          background: #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #facc15; /* yellow-400 */
+          background-color: #b45309; /* amber-600 */
           border-radius: 10px;
         }
         @media (min-width: 768px) {

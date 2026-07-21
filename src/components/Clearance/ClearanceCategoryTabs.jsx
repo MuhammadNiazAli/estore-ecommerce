@@ -316,13 +316,13 @@ const tabs = ["All", "Clothing", "Accessories", "Electronics"];
 
 function StarRating({ rating }) {
   return (
-    <div className="flex items-center text-yellow-400">
+    <div className="flex items-center text-amber-600">
       {[...Array(5)].map((_, i) => (
         <Star
           key={i}
           size={12}
           className={`${
-            i < Math.floor(rating) ? "fill-yellow-400" : "stroke-yellow-400"
+            i < Math.floor(rating) ? "fill-amber-600" : "stroke-amber-600"
           }`}
         />
       ))}
@@ -344,7 +344,7 @@ export default function ClearanceCategoryTabs() {
   return (
     <section className="max-w-[1000px] mx-auto px-3 sm:px-4 py-6 my-10">
       {/* Tabs */}
-      <nav className="flex justify-center gap-4 sm:gap-6 border-b border-gray-700 relative mb-6">
+      <nav className="flex justify-center gap-4 sm:gap-6 border-b border-gray-200 relative mb-6">
         {tabs.map((tab) => {
           const isActive = tab === activeTab;
           return (
@@ -355,14 +355,14 @@ export default function ClearanceCategoryTabs() {
                 setVisibleCount(12);
               }}
               className={`relative text-xs sm:text-base font-semibold pb-2 transition-colors ${
-                isActive ? "text-yellow-400" : "text-gray-300 hover:text-yellow-300"
+                isActive ? "text-amber-600" : "text-gray-700 hover:text-amber-500"
               }`}
             >
               {tab}
               {isActive && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute bottom-0 left-0 w-full h-[2px] sm:h-[3px] bg-yellow-400 rounded"
+                  className="absolute bottom-0 left-0 w-full h-[2px] sm:h-[3px] bg-amber-600 rounded"
                 />
               )}
             </button>
@@ -383,7 +383,7 @@ export default function ClearanceCategoryTabs() {
           {filteredProducts.slice(0, visibleCount).map((item) => (
             <div
               key={item.id}
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md group relative"
+              className="bg-white rounded-lg overflow-hidden shadow-md group relative"
             >
               {/* Product Image */}
               <div className="relative">
@@ -394,10 +394,10 @@ export default function ClearanceCategoryTabs() {
                 />
                 {/* Hover Actions */}
                 <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition">
-                  <button className="bg-white p-2 rounded-full hover:bg-yellow-400">
+                  <button className="bg-white p-2 rounded-full hover:bg-amber-600">
                     <Heart className="w-4 h-4 text-gray-800" />
                   </button>
-                  <button className="bg-white p-2 rounded-full hover:bg-yellow-400">
+                  <button className="bg-white p-2 rounded-full hover:bg-amber-600">
                     <Eye className="w-4 h-4 text-gray-800" />
                   </button>
                 </div>
@@ -405,15 +405,15 @@ export default function ClearanceCategoryTabs() {
 
               {/* Product Info */}
               <div className="p-3">
-                <h3 className="text-yellow-300 text-sm sm:text-base font-semibold truncate">
+                <h3 className="text-amber-500 text-sm sm:text-base font-semibold truncate">
                   {item.title}
                 </h3>
                 <div className="flex items-center gap-1 text-xs sm:text-sm my-1">
                   <StarRating rating={item.rating} />
-                  <span className="text-gray-400 ml-1">{item.rating}</span>
+                  <span className="text-gray-600 ml-1">{item.rating}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-yellow-400 font-bold text-sm sm:text-base">
+                  <span className="text-amber-600 font-bold text-sm sm:text-base">
                     ${item.price.toFixed(2)}
                   </span>
                   {item.oldPrice && (
@@ -422,7 +422,7 @@ export default function ClearanceCategoryTabs() {
                     </span>
                   )}
                 </div>
-                <button className="w-full mt-3 bg-yellow-400 text-gray-900 text-xs sm:text-sm font-semibold rounded py-2 hover:bg-yellow-500 transition">
+                <button className="w-full mt-3 bg-amber-600 text-gray-900 text-xs sm:text-sm font-semibold rounded py-2 hover:bg-amber-700 transition">
                   Add to Cart
                 </button>
               </div>
@@ -436,7 +436,7 @@ export default function ClearanceCategoryTabs() {
         <div className="flex justify-center mt-6">
           <button
             onClick={handleShowMore}
-            className="px-6 py-2 text-sm font-semibold bg-yellow-400 text-gray-900 rounded hover:bg-yellow-500 transition"
+            className="px-6 py-2 text-sm font-semibold bg-amber-600 text-gray-900 rounded hover:bg-amber-700 transition"
           >
             Show More
           </button>

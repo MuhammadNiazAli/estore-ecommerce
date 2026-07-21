@@ -46,12 +46,12 @@ const PressGallery = () => {
   }, [selectedImage]);
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 sm:px-6 py-16">
+    <section className="w-full bg-white flex justify-center px-4 sm:px-6 py-16">
       <div className="max-w-[1280px] w-full text-center">
-        <h2 className="text-yellow-400 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
+        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
           Press Gallery
         </h2>
-        <p className="mt-4 text-yellow-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed drop-shadow-md">
+        <p className="mt-4 text-amber-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed drop-shadow-md">
           Explore photos from our latest press events and media appearances.
         </p>
 
@@ -60,7 +60,7 @@ const PressGallery = () => {
             <button
               key={id}
               onClick={() => setSelectedImage({ src, alt })}
-              className="relative group overflow-hidden rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-yellow-400"
+              className="relative group overflow-hidden rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-amber-600"
               aria-label={`View larger image of ${alt}`}
             >
               <div className="w-full aspect-[4/3]">
@@ -71,9 +71,9 @@ const PressGallery = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
-                <p className="text-white text-sm sm:text-base font-semibold">{alt}</p>
-                <span className="mt-1 text-yellow-300 text-xs sm:text-sm">View Details</span>
+              <div className="absolute inset-0 bg-white/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                <p className="text-gray-900 text-sm sm:text-base font-semibold">{alt}</p>
+                <span className="mt-1 text-amber-500 text-xs sm:text-sm">View Details</span>
               </div>
             </button>
           ))}
@@ -82,7 +82,7 @@ const PressGallery = () => {
         {/* Lightbox Modal */}
         {selectedImage && (
           <div
-            className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-white/90 backdrop-blur-sm flex items-center justify-center z-50 p-4"
             role="dialog"
             aria-modal="true"
             tabIndex={-1}
@@ -95,13 +95,13 @@ const PressGallery = () => {
                 alt={selectedImage.alt}
                 className="max-h-[85vh] max-w-[95vw] sm:max-h-[90vh] object-contain rounded-xl shadow-2xl"
               />
-              <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded-md text-sm shadow-md">
+              <div className="absolute bottom-4 left-4 bg-white/60 text-gray-900 px-4 py-2 rounded-md text-sm shadow-md">
                 {selectedImage.alt}
               </div>
               <button
                 onClick={() => setSelectedImage(null)}
                 aria-label="Close image preview"
-                className="absolute top-4 right-4 text-yellow-400 text-3xl font-bold hover:text-yellow-600 focus:outline-none"
+                className="absolute top-4 right-4 text-amber-600 text-3xl font-bold hover:text-amber-800 focus:outline-none"
               >
                 &times;
               </button>

@@ -5,8 +5,8 @@ const AutomotiveCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900 
-        text-yellow-400 
+        bg-white 
+        text-amber-600 
         max-w-[1000px] 
         w-full 
         mx-auto 
@@ -21,7 +21,7 @@ const AutomotiveCategoryInfo = () => {
         Welcome to our premium automotive collection! Find top-quality car accessories, performance upgrades,
         and maintenance essentials designed to keep your vehicle in peak condition.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         Drive with confidence and style—explore our automotive products today.
       </p>
     </section>

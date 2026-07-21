@@ -34,9 +34,9 @@ const ProductCallFAQ = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-12 sm:px-6 my-[-70px] mb-0">
+    <section className="w-full bg-white flex justify-center px-4 py-12 sm:px-6 my-[-70px] mb-0">
       <div className="max-w-[1000px] w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 text-center mb-8">
           Frequently Asked Questions
         </h2>
 
@@ -44,22 +44,22 @@ const ProductCallFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl overflow-hidden transition-all duration-200"
+              className="bg-white rounded-xl overflow-hidden transition-all duration-200"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-yellow-300 hover:bg-gray-700 transition-colors"
+                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-amber-500 hover:bg-gray-50 transition-colors"
               >
                 <span className="text-base sm:text-lg font-medium">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-yellow-400" />
+                  <ChevronUp className="w-5 h-5 text-amber-600" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-yellow-400" />
+                  <ChevronDown className="w-5 h-5 text-amber-600" />
                 )}
               </button>
 
               {openIndex === index && (
-                <div className="px-4 pb-4 sm:px-5 text-gray-300 text-sm sm:text-base border-t border-gray-700">
+                <div className="px-4 pb-4 sm:px-5 text-gray-700 text-sm sm:text-base border-t border-gray-200">
                   {faq.answer}
                 </div>
               )}

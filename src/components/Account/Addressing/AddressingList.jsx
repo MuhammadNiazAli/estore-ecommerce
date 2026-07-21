@@ -56,13 +56,13 @@ const AddressList = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+    <div className="min-h-screen flex flex-col bg-white text-gray-900">
       <div className="max-w-3xl mx-auto w-full p-4 flex-grow">
         <h1 className="text-3xl font-bold mb-6 text-center">Your Addresses</h1>
 
         <div className="space-y-4">
           {addresses.length === 0 && (
-            <p className="text-gray-400 text-center">No addresses added yet.</p>
+            <p className="text-gray-600 text-center">No addresses added yet.</p>
           )}
 
           {addresses.map((address) => (

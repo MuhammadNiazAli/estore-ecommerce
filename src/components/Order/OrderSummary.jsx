@@ -171,13 +171,13 @@ const OrderSummary = () => {
   };
 
   return (
-    <section className="w-full max-w-[1100px] mx-auto bg-gray-900 text-white p-6 sm:p-10 rounded-2xl mb-15">
+    <section className="w-full max-w-[1100px] mx-auto bg-white text-gray-900 p-6 sm:p-10 rounded-2xl mb-15">
    
-      <header className="mb-8 border-b border-gray-700 pb-6">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-yellow-400 mb-2 select-none my-10">
+      <header className="mb-8 border-b border-gray-200 pb-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-amber-600 mb-2 select-none my-10">
           Order Summary
         </h1>
-        <p className="text-gray-400 text-sm sm:text-base">
+        <p className="text-gray-600 text-sm sm:text-base">
           Order <strong>#{order.id}</strong> • Status:{' '}
           <strong className="capitalize">{order.status}</strong> • Placed on {order.placedOn}
         </p>
@@ -186,7 +186,7 @@ const OrderSummary = () => {
    
       <nav
         aria-label="Order progress"
-        className="mb-8 flex flex-wrap justify-between gap-3 border-b border-gray-700 pb-6"
+        className="mb-8 flex flex-wrap justify-between gap-3 border-b border-gray-200 pb-6"
       >
         {timelineSteps.map(({ key, label, icon }) => {
           const active = key === selectedStatus;
@@ -200,12 +200,12 @@ const OrderSummary = () => {
   className={`flex flex-col items-center gap-1 py-2 px-3 min-w-[88px] rounded-xl font-semibold text-sm transition
     ${
       isCancelled && key !== 'cancelled'
-        ? 'cursor-not-allowed text-gray-600 border border-gray-800 bg-gray-800'
+        ? 'cursor-not-allowed text-gray-600 border border-gray-200 bg-white'
         : active
-        ? 'bg-yellow-500 text-gray-900 shadow-lg shadow-yellow-600/50 border border-yellow-400'
+        ? 'bg-amber-700 text-gray-900 shadow-lg shadow-amber-800/50 border border-amber-600'
         : done
-        ? 'text-yellow-400 border border-yellow-600 bg-gray-800 hover:bg-gray-700'
-        : 'text-gray-500 border border-gray-800 hover:text-yellow-300 hover:bg-gray-800 cursor-pointer'
+        ? 'text-amber-600 border border-amber-800 bg-white hover:bg-gray-50'
+        : 'text-gray-500 border border-gray-200 hover:text-amber-500 hover:bg-gray-50 cursor-pointer'
     }
   `}
   disabled={isCancelled && key !== 'cancelled'}
@@ -214,10 +214,10 @@ const OrderSummary = () => {
   <div
     className={`p-2 rounded-full mb-1 ${
       active
-        ? 'bg-gray-900 text-yellow-400'
+        ? 'bg-white text-amber-600'
         : done
-        ? 'bg-yellow-500 text-black'
-        : 'bg-gray-700 text-gray-400'
+        ? 'bg-amber-700 text-black'
+        : 'bg-white text-gray-600'
     }`}
   >
     {icon}
@@ -230,13 +230,13 @@ const OrderSummary = () => {
       </nav>
 
     
-      <section className="bg-gray-800 p-6 rounded-xl mb-10">
-  <h2 className="flex items-center gap-3 text-2xl font-bold text-yellow-400 mb-3 select-none">
+      <section className="bg-white p-6 rounded-xl mb-10">
+  <h2 className="flex items-center gap-3 text-2xl font-bold text-amber-600 mb-3 select-none">
     {statusDetails[selectedStatus].icon}
     {statusDetails[selectedStatus].title}
   </h2>
-  <p className="text-yellow-200 text-base mb-4">{statusDetails[selectedStatus].description}</p>
-  <ul className="list-disc list-inside text-yellow-300 text-sm mb-6 space-y-1">
+  <p className="text-amber-400 text-base mb-4">{statusDetails[selectedStatus].description}</p>
+  <ul className="list-disc list-inside text-amber-500 text-sm mb-6 space-y-1">
     {statusDetails[selectedStatus].extended.map((line, i) => (
       <li key={i}>{line}</li>
     ))}
@@ -245,7 +245,7 @@ const OrderSummary = () => {
     {statusDetails[selectedStatus].actions.map((action, i) => (
       <button
         key={i}
-        className="px-5 py-2 rounded-full bg-yellow-500 hover:bg-yellow-600 transition text-black font-semibold text-sm shadow-md flex items-center gap-2"
+        className="px-5 py-2 rounded-full bg-amber-700 hover:bg-amber-800 transition text-black font-semibold text-sm shadow-md flex items-center gap-2"
         onClick={() => alert(action)}
         type="button"
       >
@@ -327,36 +327,36 @@ const OrderSummary = () => {
 
      
       <section className="mb-10">
-  <h3 className="flex items-center gap-3 text-2xl font-bold text-yellow-400 mb-6 select-none">
+  <h3 className="flex items-center gap-3 text-2xl font-bold text-amber-600 mb-6 select-none">
     <FiShoppingBag />
     Items in Your Order
   </h3>
-  <ul className="divide-y divide-gray-700">
+  <ul className="divide-y divide-gray-200">
     {order.items.map((item) => (
       <li key={item.id} className="flex flex-col sm:flex-row gap-6 py-6">
         <img
           src={item.image}
           alt={item.name}
-          className="w-28 h-28 rounded-lg border border-gray-700 object-cover flex-shrink-0"
+          className="w-28 h-28 rounded-lg border border-gray-200 object-cover flex-shrink-0"
           loading="lazy"
           decoding="async"
         />
-        <div className="flex-grow space-y-2 text-yellow-200 text-sm sm:text-base">
-          <h4 className="text-lg font-semibold text-yellow-100">{item.name}</h4>
-          <p className="italic text-yellow-400">{item.brand}</p>
+        <div className="flex-grow space-y-2 text-amber-400 text-sm sm:text-base">
+          <h4 className="text-lg font-semibold text-amber-300">{item.name}</h4>
+          <p className="italic text-amber-600">{item.brand}</p>
           <p>{item.description}</p>
-          <p className="text-xs sm:text-sm text-yellow-300">
-            <span className="font-semibold text-yellow-100">SKU:</span> {item.sku} &nbsp;|&nbsp;{' '}
-            <span className="font-semibold text-yellow-100">Category:</span> {item.category} &nbsp;|&nbsp;{' '}
-            <span className="font-semibold text-yellow-100">Variants:</span> {item.variants.join(', ')}
+          <p className="text-xs sm:text-sm text-amber-500">
+            <span className="font-semibold text-amber-300">SKU:</span> {item.sku} &nbsp;|&nbsp;{' '}
+            <span className="font-semibold text-amber-300">Category:</span> {item.category} &nbsp;|&nbsp;{' '}
+            <span className="font-semibold text-amber-300">Variants:</span> {item.variants.join(', ')}
           </p>
           <p>
-            Quantity: <strong className="text-yellow-100">{item.qty}</strong>
+            Quantity: <strong className="text-amber-300">{item.qty}</strong>
           </p>
           <p>
-            Price each: <strong className="text-yellow-100">${item.price.toFixed(2)}</strong>
+            Price each: <strong className="text-amber-300">${item.price.toFixed(2)}</strong>
           </p>
-          <p className="text-lg font-bold text-yellow-200">
+          <p className="text-lg font-bold text-amber-400">
             Total: ${(item.price * item.qty).toFixed(2)}
           </p>
         </div>
@@ -367,50 +367,50 @@ const OrderSummary = () => {
 
 
    
-      <section className="max-w-md mx-auto border-t border-gray-700 pt-6 text-gray-300 space-y-3 mb-10 text-sm sm:text-base">
+      <section className="max-w-md mx-auto border-t border-gray-200 pt-6 text-gray-700 space-y-3 mb-10 text-sm sm:text-base">
         <SummaryLine label="Subtotal" value={order.subtotal} />
         <SummaryLine label="Shipping" value={order.shipping} />
         <SummaryLine label="Tax" value={order.tax} />
         {order.discount > 0 && (
           <SummaryLine label={`Discount (${order.discountReason})`} value={-order.discount} highlight />
         )}
-        <div className="flex justify-between text-xl font-extrabold text-white border-t border-gray-600 pt-4">
+        <div className="flex justify-between text-xl font-extrabold text-gray-900 border-t border-gray-200 pt-4">
           <span>Total</span>
           <span>${order.total.toFixed(2)}</span>
         </div>
       </section>
 
    
-      <section className="bg-gray-900 border border-yellow-700 rounded-lg p-6 text-yellow-300 mb-10 max-w-xl mx-auto ">
+      <section className="bg-white border border-amber-900 rounded-lg p-6 text-amber-500 mb-10 max-w-xl mx-auto ">
         <h4 className="font-semibold text-lg mb-3 select-none flex items-center gap-2">
           <FiMessageCircle /> Order Notes
         </h4>
         <textarea
-          className="w-full bg-gray-900 border border-yellow-700 rounded-md p-3 text-yellow-200 resize-y focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
+          className="w-full bg-white border border-amber-900 rounded-md p-3 text-amber-400 resize-y focus:outline-none focus:ring-2 focus:ring-amber-700 transition"
           rows={4}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           aria-label="Edit order notes"
         />
-        <p className="mt-2 text-yellow-400 text-xs italic select-none">
+        <p className="mt-2 text-amber-600 text-xs italic select-none">
           You can add special instructions or update notes for your order.
         </p>
       </section>
 
      
       <section className="max-w-xl mx-auto mb-10">
-  <h3 className="text-2xl font-bold text-yellow-400 mb-6 select-none">
+  <h3 className="text-2xl font-bold text-amber-600 mb-6 select-none">
     Customer Support & FAQ
   </h3>
-  <ul className="space-y-6 text-yellow-200 text-sm sm:text-base">
+  <ul className="space-y-6 text-amber-400 text-sm sm:text-base">
     {faqData.map(({ question, answer }, i) => (
       <li key={i}>
-        <details className="group bg-gray-800 rounded-lg p-4 cursor-pointer shadow-md hover:bg-gray-700 transition">
-          <summary className="flex items-center justify-between font-semibold text-yellow-100">
+        <details className="group bg-white rounded-lg p-4 cursor-pointer shadow-md hover:bg-gray-50 transition">
+          <summary className="flex items-center justify-between font-semibold text-amber-300">
             {question}
-            <FiChevronRight className="transition-transform group-open:rotate-90 text-yellow-400" />
+            <FiChevronRight className="transition-transform group-open:rotate-90 text-amber-600" />
           </summary>
-          <p className="mt-3 text-yellow-300">{answer}</p>
+          <p className="mt-3 text-amber-500">{answer}</p>
         </details>
       </li>
     ))}
@@ -430,13 +430,13 @@ const OrderSummary = () => {
 
 
 const InfoCard = ({ icon, title, lines }) => (
-  <div className="bg-gray-800 rounded-xl p-6 text-sm sm:text-base space-y-2 shadow-md">
+  <div className="bg-white rounded-xl p-6 text-sm sm:text-base space-y-2 shadow-md">
     <h4 className="flex items-center gap-3 font-semibold text-blue-400 text-lg mb-2 select-none">
       {icon} {title}
     </h4>
     {lines.map((line, i) =>
       typeof line === 'string' ? (
-        <p key={i} className="text-gray-300">
+        <p key={i} className="text-gray-700">
           {line}
         </p>
       ) : (
@@ -462,10 +462,10 @@ const ActionButton = ({ icon, label, primary, danger, onClick }) => (
   className={`flex items-center justify-center gap-2 px-6 py-2 rounded-full text-sm font-semibold transition
     ${
       primary
-        ? 'bg-yellow-500 text-gray-900 hover:bg-yellow-600 shadow-lg shadow-yellow-400/40'
+        ? 'bg-amber-700 text-gray-900 hover:bg-amber-800 shadow-lg shadow-amber-600/40'
         : danger
         ? 'border border-red-600 text-red-500 hover:bg-red-900 shadow-inner'
-        : 'border border-gray-600 text-gray-300 hover:bg-gray-700'
+        : 'border border-gray-200 text-gray-700 hover:bg-gray-50'
     }
     w-full sm:w-auto whitespace-nowrap
   `}

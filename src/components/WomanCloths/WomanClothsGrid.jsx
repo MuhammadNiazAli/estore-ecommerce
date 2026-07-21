@@ -78,10 +78,10 @@ const WomanClothsGrid = () => {
     <section className="max-w-[1200px] mx-auto px-4 py-10">
       {/* ✅ Header */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Women’s Fashion Collection
         </h2>
-        <p className="text-gray-400 mt-2">Premium picks for your wardrobe</p>
+        <p className="text-gray-600 mt-2">Premium picks for your wardrobe</p>
       </div>
 
       {/* ✅ Product Grid */}
@@ -89,7 +89,7 @@ const WomanClothsGrid = () => {
         {products.map((product) => (
           <div
             key={product.id}
-            className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-lg group"
+            className="relative bg-white rounded-2xl overflow-hidden shadow-lg group"
           >
             {/* ✅ Image */}
             <img
@@ -99,11 +99,11 @@ const WomanClothsGrid = () => {
             />
 
             {/* ✅ Hover Details */}
-            <div className="absolute bottom-0 left-0 w-full bg-black/70 text-white px-4 py-4 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
-              <p className="text-sm text-gray-300">{product.category}</p>
+            <div className="absolute bottom-0 left-0 w-full bg-white/70 text-gray-900 px-4 py-4 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+              <p className="text-sm text-gray-700">{product.category}</p>
               <h3 className="text-lg font-semibold">{product.title}</h3>
               <div className="flex items-center justify-between mt-2">
-                <span className="text-yellow-400 text-lg font-bold">
+                <span className="text-amber-600 text-lg font-bold">
                   ${product.price}
                 </span>
                 <div className="flex gap-2">
@@ -113,12 +113,12 @@ const WomanClothsGrid = () => {
                       wishlist.includes(product.id)
                         ? "bg-red-500"
                         : "bg-white text-gray-900"
-                    } hover:bg-yellow-400`}
+                    } hover:bg-amber-600`}
                   >
                     <FiHeart />
                   </button>
                   <button
-                    className="p-2 rounded-full bg-white text-gray-900 hover:bg-yellow-400"
+                    className="p-2 rounded-full bg-white text-gray-900 hover:bg-amber-600"
                   >
                     <FiEye />
                   </button>
@@ -126,7 +126,7 @@ const WomanClothsGrid = () => {
               </div>
               <button
                 onClick={() => addToCart(product.id)}
-                className="w-full mt-3 py-2 bg-yellow-400 text-gray-900 rounded-lg flex items-center justify-center gap-2 font-semibold hover:bg-yellow-500 transition-all"
+                className="w-full mt-3 py-2 bg-amber-600 text-gray-900 rounded-lg flex items-center justify-center gap-2 font-semibold hover:bg-amber-700 transition-all"
               >
                 <FiShoppingCart /> Add to Cart
               </button>

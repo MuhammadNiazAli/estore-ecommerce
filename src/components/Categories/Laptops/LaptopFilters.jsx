@@ -59,13 +59,13 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
   }, []);
 
   return (
-    <section className="bg-gray-900/80 backdrop-blur-md rounded-xl shadow-lg p-4 max-w-4xl mx-auto my-4 transition-all">
+    <section className="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-4 max-w-4xl mx-auto my-4 transition-all">
       {/* Header */}
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-xl font-semibold text-gray-100">Filter Laptops</h2>
+        <h2 className="text-xl font-semibold text-gray-800">Filter Laptops</h2>
         <button
           onClick={() => setShowFilters((prev) => !prev)}
-          className="text-gray-400 hover:text-white transition"
+          className="text-gray-600 hover:text-gray-900 transition"
         >
           {showFilters ? "Hide" : "Show"}
         </button>
@@ -75,7 +75,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
       {showFilters && (
         <div className="space-y-4">
           {/* Summary */}
-          <div className="text-sm text-gray-300">
+          <div className="text-sm text-gray-700">
             <b>Selected:</b>{" "}
             {selectedBrands.length > 0 && `Brands(${selectedBrands.join(", ")}) `}
             {selectedRam.length > 0 && `RAM(${selectedRam.join(", ")}) `}
@@ -84,7 +84,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
 
           {/* Brand Filter */}
           <div>
-            <span className="block mb-2 text-gray-300 font-medium">Brands</span>
+            <span className="block mb-2 text-gray-700 font-medium">Brands</span>
             <div className="flex flex-wrap gap-2">
               {brands.map((brand) => (
                 <button
@@ -92,8 +92,8 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   onClick={() => toggleBrand(brand)}
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedBrands.includes(brand)
-                      ? "bg-blue-600 border-blue-600 text-white"
-                      : "border-gray-600 text-gray-300 hover:bg-gray-700"
+                      ? "bg-blue-600 border-blue-600 text-gray-900"
+                      : "border-gray-200 text-gray-700 hover:bg-gray-50"
                   }`}
                 >
                   {brand}
@@ -104,7 +104,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
 
           {/* Price Filter */}
           <div>
-            <span className="block mb-2 text-gray-300 font-medium">Price Range</span>
+            <span className="block mb-2 text-gray-700 font-medium">Price Range</span>
             <div className="flex items-center gap-3">
               <input
                 type="number"
@@ -112,16 +112,16 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                 min="0"
                 max="3000"
                 onChange={(e) => handlePriceChange(0, e.target.value)}
-                className="w-20 bg-gray-800 text-gray-100 rounded p-1"
+                className="w-20 bg-white text-gray-800 rounded p-1"
               />
-              <span className="text-gray-400">-</span>
+              <span className="text-gray-600">-</span>
               <input
                 type="number"
                 value={priceRange[1]}
                 min="0"
                 max="3000"
                 onChange={(e) => handlePriceChange(1, e.target.value)}
-                className="w-20 bg-gray-800 text-gray-100 rounded p-1"
+                className="w-20 bg-white text-gray-800 rounded p-1"
               />
             </div>
             <input
@@ -137,7 +137,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
 
           {/* RAM Filter */}
           <div>
-            <span className="block mb-2 text-gray-300 font-medium">RAM</span>
+            <span className="block mb-2 text-gray-700 font-medium">RAM</span>
             <div className="flex flex-wrap gap-2">
               {ramOptions.map((ram) => (
                 <button
@@ -145,8 +145,8 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   onClick={() => toggleRam(ram)}
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedRam.includes(ram)
-                      ? "bg-green-600 border-green-600 text-white"
-                      : "border-gray-600 text-gray-300 hover:bg-gray-700"
+                      ? "bg-green-600 border-green-600 text-gray-900"
+                      : "border-gray-200 text-gray-700 hover:bg-gray-50"
                   }`}
                 >
                   {ram}

@@ -28,10 +28,10 @@ const AddressingSidebar = () => {
       aria-label="Addressing Sidebar"
       className={`
         fixed top-0 right-0 h-[400px] my-30 z-10 rounded-l-3xl shadow-lg
-        flex flex-col text-white transition-all duration-300 ease-in-out
+        flex flex-col text-gray-900 transition-all duration-300 ease-in-out
         ${isOpen
           ? 'w-64 p-6 bg-white/10 backdrop-blur-md'
-          : 'w-16 p-2 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-950'}
+          : 'w-16 p-2 bg-gradient-to-b from-white via-white to-white'}
       `}
     >
       {/* Toggle Button */}
@@ -39,7 +39,7 @@ const AddressingSidebar = () => {
         onClick={toggleSidebar}
         aria-label={isOpen ? 'Collapse sidebar' : 'Expand sidebar'}
         type="button"
-        className="mb-6 ml-[2px] p-2 bg-gray-800 hover:bg-yellow-400 text-yellow-400 hover:text-black rounded-full transition self-start"
+        className="mb-6 ml-[2px] p-2 bg-white hover:bg-amber-600 text-amber-600 hover:text-black rounded-full transition self-start"
       >
         {isOpen ? <FiChevronRight size={24} /> : <FiChevronLeft size={24} />}
       </button>
@@ -55,8 +55,8 @@ const AddressingSidebar = () => {
               ${isOpen ? 'justify-start' : 'justify-center'}
               ${
                 active
-                  ? 'bg-yellow-400 text-black'
-                  : 'hover:bg-yellow-400/20 hover:text-gray-50'
+                  ? 'bg-amber-600 text-black'
+                  : 'hover:bg-amber-600/20 hover:text-gray-800'
               }
             `}
             aria-current={active ? 'page' : undefined}
@@ -70,7 +70,7 @@ const AddressingSidebar = () => {
 
       {/* Footer */}
       {isOpen && (
-        <div className="mt-auto px-4 text-xs italic text-gray-400 select-none">
+        <div className="mt-auto px-4 text-xs italic text-gray-600 select-none">
           © {new Date().getFullYear()} i am Niaz Ali
         </div>
       )}

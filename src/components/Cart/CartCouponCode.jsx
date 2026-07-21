@@ -53,9 +53,9 @@ const CartCouponCode = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-6">
+    <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-6">
       <div className="max-w-[1200px] mx-auto">
-        <h3 className="text-xl sm:text-2xl font-semibold text-yellow-400 mb-5 select-none">
+        <h3 className="text-xl sm:text-2xl font-semibold text-amber-600 mb-5 select-none">
           Have a Coupon Code?
         </h3>
 
@@ -81,19 +81,19 @@ const CartCouponCode = () => {
             }}
             onKeyDown={handleKeyDown}
             disabled={isApplying}
-            className={`flex-grow px-4 py-2.5 sm:py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400
+            className={`flex-grow px-4 py-2.5 sm:py-3 rounded-lg bg-white text-gray-900 placeholder-gray-400
               focus:outline-none focus:ring-2 transition duration-300
               ${
                 status === 'error'
                   ? 'focus:ring-red-500 ring-red-500'
-                  : 'focus:ring-yellow-400'
+                  : 'focus:ring-amber-600'
               } disabled:opacity-60 disabled:cursor-not-allowed`}
           />
 
           <button
             type="submit"
             disabled={isApplying}
-            className="bg-yellow-400 hover:bg-yellow-300 disabled:bg-yellow-300 disabled:cursor-not-allowed
+            className="bg-amber-600 hover:bg-amber-500 disabled:bg-amber-500 disabled:cursor-not-allowed
               text-gray-900 font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg transition shadow-md text-sm sm:text-base
               flex justify-center items-center gap-2 select-none"
             aria-live="polite"

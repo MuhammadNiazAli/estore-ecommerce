@@ -145,14 +145,14 @@ const CareersCTA = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4 relative z-10 mb-[-150px]">
+    <section className="bg-white w-full flex justify-center px-4 relative z-10 mb-[-150px]">
       <div className="w-full max-w-[1000px] py-16 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-3xl md:text-4xl font-extrabold text-white leading-tight"
+          className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight"
           aria-label="Ready to build the future with us heading"
         >
           Ready to Build the Future With Us?
@@ -163,7 +163,7 @@ const CareersCTA = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="mt-4 text-yellow-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+          className="mt-4 text-amber-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
         >
           Whether you're a visionary, builder, or creator—there’s a place here for
           you. We believe in ideas, growth, and people like you.
@@ -178,7 +178,7 @@ const CareersCTA = () => {
         >
           <button
             onClick={() => setShowForm(true)}
-            className="inline-flex items-center gap-2 md:gap-3 bg-yellow-500 text-gray-900 font-semibold px-6 md:px-7 py-3 md:py-4 rounded-xl shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-500 transition-all duration-200 select-none text-sm md:text-base"
+            className="inline-flex items-center gap-2 md:gap-3 bg-amber-700 text-gray-900 font-semibold px-6 md:px-7 py-3 md:py-4 rounded-xl shadow-lg hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-all duration-200 select-none text-sm md:text-base"
             aria-haspopup="dialog"
             aria-expanded={showForm}
           >
@@ -195,7 +195,7 @@ const CareersCTA = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-gray-950 bg-opacity-95 backdrop-blur-md z-[9999] flex justify-center items-center p-4 sm:p-8 overflow-auto"
+            className="fixed inset-0 bg-white bg-opacity-95 backdrop-blur-md z-[9999] flex justify-center items-center p-4 sm:p-8 overflow-auto"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modalTitle"
@@ -209,14 +209,14 @@ const CareersCTA = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-gray-900 rounded-3xl shadow-xl max-w-lg w-full max-h-[85vh] overflow-y-auto
+              className="bg-white rounded-3xl shadow-xl max-w-lg w-full max-h-[85vh] overflow-y-auto
                 p-6 sm:p-8 relative
                 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900"
-              style={{ scrollbarColor: '#374151 #111827' }}
+              style={{ scrollbarColor: '#374151 #ffffff' }}
             >
               <button
                 onClick={resetModal}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
                 aria-label="Close application form"
               >
                 <XMarkIcon className="h-6 w-6" />
@@ -226,7 +226,7 @@ const CareersCTA = () => {
                 <>
                   <h2
                     id="modalTitle"
-                    className="text-xl sm:text-2xl font-extrabold text-white mb-5 text-center"
+                    className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-5 text-center"
                   >
                     Apply for a Role
                   </h2>
@@ -241,7 +241,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Full Name <span className="text-red-600">*</span>
                       </label>
@@ -251,10 +251,10 @@ const CareersCTA = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-gray-800 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.name
                             ? 'border-red-600 focus:ring-red-600'
-                            : 'border-gray-700'
+                            : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.name}
                         aria-describedby={formErrors.name ? 'error-name' : undefined}
@@ -276,7 +276,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Email Address <span className="text-red-600">*</span>
                       </label>
@@ -286,10 +286,10 @@ const CareersCTA = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-gray-800 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.email
                             ? 'border-red-600 focus:ring-red-600'
-                            : 'border-gray-700'
+                            : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.email}
                         aria-describedby={formErrors.email ? 'error-email' : undefined}
@@ -311,7 +311,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Phone Number <span className="text-red-600">*</span>
                       </label>
@@ -321,10 +321,10 @@ const CareersCTA = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-gray-800 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.phone
                             ? 'border-red-600 focus:ring-red-600'
-                            : 'border-gray-700'
+                            : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.phone}
                         aria-describedby={formErrors.phone ? 'error-phone' : undefined}
@@ -346,7 +346,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="role"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Select Role <span className="text-red-600">*</span>
                       </label>
@@ -355,10 +355,10 @@ const CareersCTA = () => {
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-gray-800 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors text-sm sm:text-base ${
                           formErrors.role
                             ? 'border-red-600 focus:ring-red-600'
-                            : 'border-gray-700'
+                            : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.role}
                         aria-describedby={formErrors.role ? 'error-role' : undefined}
@@ -368,7 +368,7 @@ const CareersCTA = () => {
                           -- Choose a role --
                         </option>
                         {roles.map((r) => (
-                          <option key={r} value={r} className="bg-gray-900 text-white">
+                          <option key={r} value={r} className="bg-white text-gray-900">
                             {r}
                           </option>
                         ))}
@@ -388,7 +388,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="coverLetter"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Cover Letter (Optional)
                       </label>
@@ -398,7 +398,7 @@ const CareersCTA = () => {
                         value={formData.coverLetter}
                         onChange={handleChange}
                         rows={3}
-                        className="w-full rounded-lg px-3 py-2 resize-none bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors placeholder-gray-400 text-sm sm:text-base"
+                        className="w-full rounded-lg px-3 py-2 resize-none bg-white text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base"
                         placeholder="Write a brief introduction or message"
                       />
                     </div>
@@ -407,7 +407,7 @@ const CareersCTA = () => {
                     <div>
                       <label
                         htmlFor="resume"
-                        className="block text-xs sm:text-sm font-semibold text-gray-200 mb-1"
+                        className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
                         Upload Resume (PDF, DOC, DOCX) <span className="text-red-600">*</span>
                       </label>
@@ -417,10 +417,10 @@ const CareersCTA = () => {
                         name="resume"
                         onChange={handleChange}
                         accept=".pdf,.doc,.docx"
-                        className={`w-full rounded-lg px-3 py-2 bg-gray-800 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.resume
                             ? 'border-red-600 focus:ring-red-600'
-                            : 'border-gray-700'
+                            : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.resume}
                         aria-describedby={formErrors.resume ? 'error-resume' : undefined}
@@ -437,7 +437,7 @@ const CareersCTA = () => {
                       )}
                       {formData.resume && (
                         <p
-                          className="mt-1 text-gray-400 text-xs sm:text-sm truncate select-text"
+                          className="mt-1 text-gray-600 text-xs sm:text-sm truncate select-text"
                           title={formData.resume.name}
                         >
                           Selected: {formData.resume.name}
@@ -449,7 +449,7 @@ const CareersCTA = () => {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className={`w-full flex justify-center items-center gap-2 md:gap-3 bg-yellow-500 text-gray-900 font-semibold py-2.5 md:py-3 rounded-xl hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-500 transition-colors text-sm md:text-base ${
+                      className={`w-full flex justify-center items-center gap-2 md:gap-3 bg-amber-700 text-gray-900 font-semibold py-2.5 md:py-3 rounded-xl hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-colors text-sm md:text-base ${
                         submitting ? 'cursor-not-allowed opacity-70' : ''
                       }`}
                     >
@@ -500,17 +500,17 @@ const CareersCTA = () => {
                   className="text-center"
                 >
                   <CheckCircleIcon className="h-14 w-14 md:h-16 md:w-16 text-green-500 mx-auto mb-4 md:mb-5" />
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-2">
                     Application Submitted!
                   </h3>
-                  <p className="text-gray-300 max-w-md mx-auto leading-relaxed text-sm sm:text-base mb-6">
+                  <p className="text-gray-700 max-w-md mx-auto leading-relaxed text-sm sm:text-base mb-6">
                     Thank you for applying. You’ll receive an update within 24 hours
                     via SMS or email. We appreciate your interest in building the
                     future with us.
                   </p>
                   <button
                     onClick={resetModal}
-                    className="mt-3 md:mt-4 bg-yellow-500 text-gray-900 font-semibold py-2.5 px-7 rounded-xl hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-500 transition-colors text-sm md:text-base"
+                    className="mt-3 md:mt-4 bg-amber-700 text-gray-900 font-semibold py-2.5 px-7 rounded-xl hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-colors text-sm md:text-base"
                     aria-label="Close confirmation dialog"
                   >
                     Close

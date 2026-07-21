@@ -68,10 +68,10 @@ const CamerasSpecsComparison = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-16 my-[-40px]">
+    <section className="bg-white text-gray-900 py-16 my-[-40px]">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-6 text-center">
           Compare Camera Specifications
         </h2>
 
@@ -83,8 +83,8 @@ const CamerasSpecsComparison = () => {
               onClick={() => toggleCamera(camera)}
               className={`border px-4 py-2 rounded-lg transition ${
                 selectedCameras.find((c) => c.id === camera.id)
-                  ? "bg-yellow-400 text-black border-yellow-400"
-                  : "border-gray-700 text-white hover:bg-gray-800"
+                  ? "bg-amber-600 text-black border-amber-600"
+                  : "border-gray-200 text-gray-900 hover:bg-gray-50"
               }`}
             >
               {camera.name}
@@ -94,12 +94,12 @@ const CamerasSpecsComparison = () => {
 
         {/* Comparison Table */}
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse bg-gray-800 rounded-xl overflow-hidden">
+          <table className="w-full border-collapse bg-white rounded-xl overflow-hidden">
             <thead>
               <tr>
-                <th className="bg-gray-700 text-left p-4">Specs</th>
+                <th className="bg-white text-left p-4">Specs</th>
                 {selectedCameras.map((camera) => (
-                  <th key={camera.id} className="bg-gray-700 p-4 min-w-[200px]">
+                  <th key={camera.id} className="bg-white p-4 min-w-[200px]">
                     <div className="flex flex-col items-center">
                       <img
                         src={camera.image}
@@ -107,13 +107,13 @@ const CamerasSpecsComparison = () => {
                         className="w-32 h-32 object-cover rounded-lg mb-2"
                       />
                       <p className="font-semibold">{camera.name}</p>
-                      <p className="text-yellow-400 font-bold">${camera.price}</p>
+                      <p className="text-amber-600 font-bold">${camera.price}</p>
                       <div className="flex justify-center mt-1">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <FaStar
                             key={i}
                             className={`text-sm ${
-                              i < camera.rating ? "text-yellow-400" : "text-gray-500"
+                              i < camera.rating ? "text-amber-600" : "text-gray-500"
                             }`}
                           />
                         ))}
@@ -125,7 +125,7 @@ const CamerasSpecsComparison = () => {
             </thead>
             <tbody>
               {specLabels.map((spec) => (
-                <tr key={spec.key} className="border-t border-gray-700">
+                <tr key={spec.key} className="border-t border-gray-200">
                   <td className="p-4 font-semibold">{spec.label}</td>
                   {selectedCameras.map((camera) => (
                     <td key={camera.id} className="p-4 text-center">
@@ -135,7 +135,7 @@ const CamerasSpecsComparison = () => {
                 </tr>
               ))}
               {/* Features */}
-              <tr className="border-t border-gray-700">
+              <tr className="border-t border-gray-200">
                 <td className="p-4 font-semibold">Features</td>
                 {selectedCameras.map((camera) => (
                   <td key={camera.id} className="p-4 text-center">
@@ -156,7 +156,7 @@ const CamerasSpecsComparison = () => {
         </div>
 
         {/* Note */}
-        <p className="text-gray-400 text-center mt-6 text-sm">
+        <p className="text-gray-600 text-center mt-6 text-sm">
           Select up to 3 cameras to compare their specifications side by side.
         </p>
       </div>

@@ -39,14 +39,14 @@ function FAQItem({ question, answer, isOpen, onToggle, id }) {
   }, [isOpen]);
 
   return (
-    <div className="border border-yellow-400/30 rounded-lg overflow-hidden">
+    <div className="border border-amber-600/30 rounded-lg overflow-hidden">
       <button
         type="button"
         aria-expanded={isOpen}
         aria-controls={`faq-content-${id}`}
         id={`faq-header-${id}`}
         onClick={onToggle}
-        className="w-full flex justify-between items-center bg-gray-900 px-5 py-4 text-left text-yellow-400 font-semibold text-lg hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 rounded-lg"
+        className="w-full flex justify-between items-center bg-white px-5 py-4 text-left text-amber-600 font-semibold text-lg hover:bg-amber-600 hover:text-gray-900 transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 rounded-lg"
       >
         {question}
         {isOpen ? (
@@ -60,7 +60,7 @@ function FAQItem({ question, answer, isOpen, onToggle, id }) {
         id={`faq-content-${id}`}
         role="region"
         aria-labelledby={`faq-header-${id}`}
-        className="overflow-hidden bg-gray-800 text-gray-300 text-sm sm:text-base px-5"
+        className="overflow-hidden bg-white text-gray-700 text-sm sm:text-base px-5"
         style={{
           maxHeight,
           transition: 'max-height 0.3s ease, opacity 0.3s ease',
@@ -83,8 +83,8 @@ export default function GiftFAQ() {
   };
 
   return (
-    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 bg-gray-900 rounded-lg shadow-2xl text-white">
-      <h2 className="text-yellow-400 text-3xl font-extrabold mb-8 text-center drop-shadow-lg">
+    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 bg-white rounded-lg shadow-2xl text-gray-900">
+      <h2 className="text-amber-600 text-3xl font-extrabold mb-8 text-center drop-shadow-lg">
         Frequently Asked Questions
       </h2>
 

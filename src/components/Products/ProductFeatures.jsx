@@ -69,7 +69,7 @@ const itemVariants = {
 const FeatureCard = ({ feature, onOpen }) => {
   return (
     <motion.div
-      className="flex flex-col bg-gray-800 rounded-xl p-5 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-400 transition-shadow"
+      className="flex flex-col bg-white rounded-xl p-5 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-400 transition-shadow"
       variants={itemVariants}
       initial="hidden"
       animate="visible"
@@ -84,16 +84,16 @@ const FeatureCard = ({ feature, onOpen }) => {
     >
       <div className="flex items-center space-x-3 mb-2">
         <AiOutlineCheckCircle className="text-green-500 w-7 h-7 flex-shrink-0" />
-        <h3 className="text-lg font-semibold text-gray-100 flex items-center">
+        <h3 className="text-lg font-semibold text-gray-800 flex items-center">
           {feature.title}
           {feature.premium && (
-            <span className="ml-2 px-2 py-0.5 text-xs font-bold text-white bg-green-600 rounded-full select-none">
+            <span className="ml-2 px-2 py-0.5 text-xs font-bold text-gray-900 bg-green-600 rounded-full select-none">
               Premium
             </span>
           )}
         </h3>
       </div>
-      <p className="text-gray-300 line-clamp-3">{feature.description}</p>
+      <p className="text-gray-700 line-clamp-3">{feature.description}</p>
       <motion.button
         aria-label={`More info about ${feature.title}`}
         className="mt-3 inline-flex items-center text-green-400 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 rounded"
@@ -115,11 +115,11 @@ const ProductFeatures = () => {
   const closeModal = () => setSelectedFeature(null);
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16 bg-gray-900  rounded-2xl shadow-xl">
-      <h2 className="text-4xl font-extrabold text-white sm:text-gray-900 mb-8 text-center">
+    <section className="max-w-6xl mx-auto px-6 py-12 sm:py-16 bg-white  rounded-2xl shadow-xl">
+      <h2 className="text-4xl font-extrabold text-gray-900 sm:text-gray-900 mb-8 text-center">
         Premium Features
       </h2>
-      <p className="max-w-3xl mx-auto mb-12 text-center text-gray-300 sm:text-gray-600 text-lg">
+      <p className="max-w-3xl mx-auto mb-12 text-center text-gray-700 sm:text-gray-600 text-lg">
         Discover the cutting-edge features designed to enhance your experience with this product.
         Click or tap on any feature to learn more.
       </p>
@@ -139,7 +139,7 @@ const ProductFeatures = () => {
       <AnimatePresence>
         {selectedFeature && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-white bg-opacity-60 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -150,14 +150,14 @@ const ProductFeatures = () => {
             aria-describedby="feature-desc"
           >
             <motion.div
-              className="bg-gray-800 rounded-lg max-w-lg w-full p-6 relative shadow-2xl"
+              className="bg-white rounded-lg max-w-lg w-full p-6 relative shadow-2xl"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 focus:outline-none"
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-700 focus:outline-none"
                 onClick={closeModal}
                 aria-label="Close feature details"
               >
@@ -165,15 +165,15 @@ const ProductFeatures = () => {
               </button>
               <h3
                 id="feature-title"
-                className="text-2xl font-bold text-white mb-4"
+                className="text-2xl font-bold text-gray-900 mb-4"
               >
                 {selectedFeature.title}
               </h3>
-              <p id="feature-desc" className="text-gray-300 leading-relaxed">
+              <p id="feature-desc" className="text-gray-700 leading-relaxed">
                 {selectedFeature.description}
               </p>
               {selectedFeature.premium && (
-                <span className="inline-block mt-6 px-3 py-1 text-sm font-semibold text-white bg-green-600 rounded-full select-none">
+                <span className="inline-block mt-6 px-3 py-1 text-sm font-semibold text-gray-900 bg-green-600 rounded-full select-none">
                   Premium Feature
                 </span>
               )}

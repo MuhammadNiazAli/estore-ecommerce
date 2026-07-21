@@ -44,13 +44,13 @@ const ReviewForm = () => {
 
   return (
     <section
-      className="w-full px-4 mb-[-55px] sm:px-6 md:px-8 lg:px-0 py-16 bg-gray-900 flex justify-center items-center"
+      className="w-full px-4 mb-[-55px] sm:px-6 md:px-8 lg:px-0 py-16 bg-white flex justify-center items-center"
       aria-labelledby="review-form-title"
     >
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="w-full max-w-[700px] bg-gray-900 border border-gray-800 shadow-xl rounded-xl p-6 sm:p-8 text-white"
+        className="w-full max-w-[700px] bg-white border border-gray-200 shadow-xl rounded-xl p-6 sm:p-8 text-gray-900"
       >
         <h2 id="review-form-title" className="text-3xl font-bold text-amber-400 mb-8 text-center">
           Leave a Review
@@ -91,7 +91,7 @@ const ReviewForm = () => {
           <input
             id="name"
             type="text"
-            className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
             placeholder="e.g. John Doe"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -107,14 +107,14 @@ const ReviewForm = () => {
           <input
             id="email"
             type="email"
-            className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
             placeholder="e.g. john@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             aria-describedby="email-help"
           />
-          <p id="email-help" className="mt-1 text-xs text-gray-400">
+          <p id="email-help" className="mt-1 text-xs text-gray-600">
             We'll never share your email.
           </p>
         </div>
@@ -130,7 +130,7 @@ const ReviewForm = () => {
             required
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 resize-none"
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 resize-none"
             placeholder="Write your honest feedback..."
           />
         </div>
@@ -145,7 +145,7 @@ const ReviewForm = () => {
             type="file"
             accept="image/*"
             onChange={handleFileChange}
-            className="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-amber-500 file:text-gray-900 hover:file:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-amber-500 file:text-gray-900 hover:file:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400"
           />
           {photo && (
             <p className="mt-2 text-sm text-amber-400">Selected: {photo.name}</p>

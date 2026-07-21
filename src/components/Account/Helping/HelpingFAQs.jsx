@@ -35,23 +35,23 @@ export default function HelpingFAQs() {
   return (
     <section
       aria-label="Frequently Asked Questions"
-      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white rounded-3xl shadow-2xl"
+      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl"
     >
       <div className="max-w-xl mx-auto space-y-6">
-        <h2 className="text-3xl font-extrabold text-yellow-400 text-center">
+        <h2 className="text-3xl font-extrabold text-amber-600 text-center">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-300 text-center max-w-md mx-auto">
+        <p className="text-gray-700 text-center max-w-md mx-auto">
           Find answers to the most common questions about your account, orders, and support.
         </p>
 
-        <div className="divide-y divide-gray-700">
+        <div className="divide-y divide-gray-200">
           {faqData.map(({ question, answer }, idx) => (
             <div key={idx} className="py-4">
               <button
                 type="button"
                 onClick={() => toggleFAQ(idx)}
-                className="flex justify-between w-full text-left text-lg font-semibold text-yellow-400 hover:text-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 rounded"
+                className="flex justify-between w-full text-left text-lg font-semibold text-amber-600 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
                 aria-expanded={activeIndex === idx}
                 aria-controls={`faq-answer-${idx}`}
                 id={`faq-question-${idx}`}
@@ -70,7 +70,7 @@ export default function HelpingFAQs() {
                 id={`faq-answer-${idx}`}
                 role="region"
                 aria-labelledby={`faq-question-${idx}`}
-                className={`mt-2 text-gray-300 text-sm overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`mt-2 text-gray-700 text-sm overflow-hidden transition-all duration-300 ease-in-out ${
                   activeIndex === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >

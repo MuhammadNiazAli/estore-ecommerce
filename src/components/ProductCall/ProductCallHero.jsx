@@ -205,19 +205,19 @@ const ProductCallHero = () => {
 
   return (
     <>
-      <section className="w-full bg-gray-900 flex justify-center items-start pt-12 px-4 sm:px-6">
+      <section className="w-full bg-white flex justify-center items-start pt-12 px-4 sm:px-6">
         <div className="max-w-[1000px] w-full text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-yellow-400 mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold text-amber-600 mb-4 leading-tight">
             Discover Our Best-Selling Products
           </h1>
-          <p className="text-gray-300 text-sm sm:text-lg max-w-xl mx-auto mb-6 px-2 sm:px-0">
+          <p className="text-gray-700 text-sm sm:text-lg max-w-xl mx-auto mb-6 px-2 sm:px-0">
             Handpicked deals, premium quality, and unbeatable prices. Experience shopping like never before — all
             in one place.
           </p>
           <div className="flex justify-center gap-4 flex-wrap px-2 sm:px-0">
             <button
               onClick={handleExplore}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-700 text-black font-semibold rounded-xl hover:bg-amber-600 transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto"
             >
               {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <Sparkles className="w-5 h-5" />}
               {loading ? 'Loading...' : 'Start Exploring'}
@@ -227,7 +227,7 @@ const ProductCallHero = () => {
       </section>
 
       {visibleProducts.length > 0 && (
-        <section className="w-full flex flex-col items-center justify-center px-4 py-12 bg-gray-900 sm:px-6">
+        <section className="w-full flex flex-col items-center justify-center px-4 py-12 bg-white sm:px-6">
           <div className="max-w-[1200px] w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {visibleProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -236,7 +236,7 @@ const ProductCallHero = () => {
           {visibleProducts.length < allProducts.length && (
             <button
               onClick={loadMoreProducts}
-              className="mt-8 px-6 py-3 bg-gray-800 text-white font-semibold rounded-xl hover:bg-gray-700 transition-all duration-200 w-full max-w-xs sm:w-auto"
+              className="mt-8 px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-200 w-full max-w-xs sm:w-auto"
             >
               Show More
             </button>

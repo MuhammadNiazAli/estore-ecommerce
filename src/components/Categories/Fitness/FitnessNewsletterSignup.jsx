@@ -28,10 +28,10 @@ const FitnessNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4">
+    <section className="bg-white text-amber-600 py-12 px-4">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Join Our Fitness Newsletter</h2>
-        <p className="mb-8 text-gray-300">
+        <p className="mb-8 text-gray-700">
           Get the latest fitness tips, workout routines, and exclusive deals
           delivered right to your inbox.
         </p>
@@ -45,7 +45,7 @@ const FitnessNewsletterSignup = () => {
             type="email"
             aria-label="Email address"
             placeholder="Enter your email"
-            className={`w-full sm:flex-1 px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition ${
+            className={`w-full sm:flex-1 px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700 transition ${
               error ? "ring-2 ring-red-500" : ""
             }`}
             value={email}
@@ -55,7 +55,7 @@ const FitnessNewsletterSignup = () => {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-md shadow-lg hover:bg-yellow-400 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-md shadow-lg hover:bg-amber-600 transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === "loading" ? "Submitting..." : "Subscribe"}
           </button>

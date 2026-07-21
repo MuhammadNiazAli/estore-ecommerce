@@ -5,8 +5,8 @@ const ClothingCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900 
-        text-yellow-400 
+        bg-white 
+        text-amber-600 
         max-w-[1000px] 
         w-full 
         mx-auto 
@@ -21,7 +21,7 @@ const ClothingCategoryInfo = () => {
         Welcome to our exclusive clothing collection! Discover a range of high-quality apparel crafted to
         keep you stylish and comfortable all year round.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         Explore the latest trends and timeless classics with confidence.
       </p>
     </section>

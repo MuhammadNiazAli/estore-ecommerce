@@ -64,8 +64,8 @@ function OrderingActions() {
               aria-label={ariaLabel}
               className={`px-6 py-3 rounded-full font-semibold shadow-md transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 isPrimary
-                  ? 'bg-yellow-400 text-black hover:bg-yellow-300 focus:ring-yellow-400'
-                  : 'border border-white text-white hover:bg-white hover:text-black focus:ring-white'
+                  ? 'bg-amber-600 text-black hover:bg-amber-500 focus:ring-amber-600'
+                  : 'border border-gray-200 text-gray-900 hover:bg-gray-100 hover:text-black focus:ring-gray-200'
               }`}
             >
               {label}
@@ -80,7 +80,7 @@ function OrderingActions() {
           id={`${currentAction.id}-details`}
           role="region"
           aria-live="polite"
-          className="bg-gray-900 rounded-lg p-8 max-w-3xl mx-auto text-white shadow-lg transition-opacity duration-300"
+          className="bg-white rounded-lg p-8 max-w-3xl mx-auto text-gray-900 shadow-lg transition-opacity duration-300"
         >
           {currentAction.content(closePanel)}
         </article>

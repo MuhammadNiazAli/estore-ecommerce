@@ -13,48 +13,48 @@ function CancelOrderContent({ closePanel }) {
   return (
     <div className="px-4 py-6 max-w-xl mx-auto text-[14px] sm:text-[15px]">
       {/* Header */}
-      <h2 className="text-yellow-400 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
+      <h2 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
         Cancel Your Order
       </h2>
 
       {/* Intro */}
-      <p className="text-gray-300 leading-relaxed mb-6 text-sm sm:text-base text-center sm:text-left">
+      <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base text-center sm:text-left">
         Orders can be cancelled before they are shipped. Please review the details below carefully before proceeding with the cancellation.
       </p>
 
       {/* Order Summary */}
       <section
         aria-label="Your order information before cancellation"
-        className="bg-gray-900 p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
+        className="bg-white p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
       >
-        <h3 className="text-yellow-400 font-semibold text-lg sm:text-xl mb-4">
+        <h3 className="text-amber-600 font-semibold text-lg sm:text-xl mb-4">
           Order Summary
         </h3>
 
-        <ul className="text-gray-300 space-y-2 mb-4 text-xs sm:text-sm">
+        <ul className="text-gray-700 space-y-2 mb-4 text-xs sm:text-sm">
           <li>
             <span className="font-semibold">Order ID:</span>{' '}
-            <span className="text-gray-100">#ORD123456789</span>
+            <span className="text-gray-800">#ORD123456789</span>
           </li>
           <li>
             <span className="font-semibold">Placed on:</span>{' '}
-            <span className="text-gray-100">July 4, 2025</span>
+            <span className="text-gray-800">July 4, 2025</span>
           </li>
           <li>
             <span className="font-semibold">Total Items:</span>{' '}
-            <span className="text-gray-100">3</span>
+            <span className="text-gray-800">3</span>
           </li>
           <li>
             <span className="font-semibold">Amount:</span>{' '}
-            <span className="text-gray-100">$189.99</span>
+            <span className="text-gray-800">$189.99</span>
           </li>
           <li>
             <span className="font-semibold">Order Status:</span>{' '}
-            <span className="text-yellow-400 font-medium">Processing</span>
+            <span className="text-amber-600 font-medium">Processing</span>
           </li>
         </ul>
 
-        <p className="text-gray-400 text-[11px] sm:text-xs italic">
+        <p className="text-gray-600 text-[11px] sm:text-xs italic">
           * Orders that have already been shipped or marked as “out for delivery” are no longer eligible for cancellation.
         </p>
       </section>
@@ -62,13 +62,13 @@ function CancelOrderContent({ closePanel }) {
       {/* Cancellation Policy */}
       <section
         aria-label="Policy regarding cancellations and refunds"
-        className="bg-gray-800 p-4 sm:p-5 rounded-lg mb-8"
+        className="bg-white p-4 sm:p-5 rounded-lg mb-8"
       >
-        <h3 className="text-yellow-400 font-semibold text-base sm:text-lg mb-3">
+        <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-3">
           Cancellation Policy
         </h3>
 
-        <ul className="list-disc list-inside text-gray-300 space-y-2 text-xs sm:text-sm leading-relaxed">
+        <ul className="list-disc list-inside text-gray-700 space-y-2 text-xs sm:text-sm leading-relaxed">
           <li>
             Requests are processed within <strong>24 hours</strong> on business days.
           </li>
@@ -80,7 +80,7 @@ function CancelOrderContent({ closePanel }) {
             If your order has already been dispatched, refer to our{' '}
             <a
               href="/returns"
-              className="text-yellow-400 underline hover:text-yellow-300 transition-colors"
+              className="text-amber-600 underline hover:text-amber-500 transition-colors"
             >
               Return & Refund Policy
             </a>
@@ -90,7 +90,7 @@ function CancelOrderContent({ closePanel }) {
             For urgent cases or bulk order issues, please contact our{' '}
             <a
               href="/contact"
-              className="text-yellow-400 underline hover:text-yellow-300 transition-colors"
+              className="text-amber-600 underline hover:text-amber-500 transition-colors"
             >
               Customer Support
             </a>{' '}
@@ -104,7 +104,7 @@ function CancelOrderContent({ closePanel }) {
         <button
           type="button"
           onClick={handleCancelConfirmation}
-          className="bg-red-600 hover:bg-red-500 text-white text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 w-full sm:w-auto"
+          className="bg-red-600 hover:bg-red-500 text-gray-900 text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 w-full sm:w-auto"
           aria-label="Confirm cancellation of order"
         >
           Confirm Cancellation
@@ -113,7 +113,7 @@ function CancelOrderContent({ closePanel }) {
         <button
           type="button"
           onClick={closePanel}
-          className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 w-full sm:w-auto"
+          className="border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-black text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 w-full sm:w-auto"
           aria-label="Cancel and return back to orders"
         >
           Go Back

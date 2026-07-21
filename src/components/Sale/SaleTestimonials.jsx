@@ -53,8 +53,8 @@ const testimonials = [
 
 const SaleTestimonials = () => {
   return (
-    <section className="bg-gray-900 py-12 px-4 sm:px-6 lg:px-12">
-      <h2 className="text-3xl font-semibold text-yellow-400 text-center mb-10 tracking-wide">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-12">
+      <h2 className="text-3xl font-semibold text-amber-600 text-center mb-10 tracking-wide">
         What Our Customers Say
       </h2>
 
@@ -62,24 +62,24 @@ const SaleTestimonials = () => {
         {testimonials.map(({ id, name, role, photo, text }) => (
           <div
             key={id}
-            className="bg-gray-800 rounded-lg shadow-lg p-6 flex flex-col"
+            className="bg-white rounded-lg shadow-lg p-6 flex flex-col"
           >
             <div className="flex items-center mb-4">
               <img
                 src={photo}
                 alt={name}
-                className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-yellow-400"
+                className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-amber-600"
               />
               <div>
-                <h3 className="text-yellow-300 font-semibold text-lg">{name}</h3>
-                <p className="text-yellow-200 text-sm">{role}</p>
+                <h3 className="text-amber-500 font-semibold text-lg">{name}</h3>
+                <p className="text-amber-400 text-sm">{role}</p>
               </div>
             </div>
 
-            <p className="text-gray-300 flex-grow leading-relaxed text-sm">
-              <span className="text-yellow-400 text-2xl mr-2 select-none">“</span>
+            <p className="text-gray-700 flex-grow leading-relaxed text-sm">
+              <span className="text-amber-600 text-2xl mr-2 select-none">“</span>
               {text}
-              <span className="text-yellow-400 text-2xl ml-2 select-none">”</span>
+              <span className="text-amber-600 text-2xl ml-2 select-none">”</span>
             </p>
           </div>
         ))}

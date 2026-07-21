@@ -85,10 +85,10 @@ export default function SalePage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center px-4 py-10 space-y-10 max-w-7xl mx-auto mb-[-20px]">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center px-4 py-10 space-y-10 max-w-7xl mx-auto mb-[-20px]">
       {/* ✅ Heading */}
       <h1 className="text-2xl md:text-4xl font-extrabold text-center leading-snug">
-        Hot Deals <span className="text-yellow-500">This Season</span>
+        Hot Deals <span className="text-amber-700">This Season</span>
       </h1>
 
       {/* ✅ Filter */}
@@ -124,8 +124,8 @@ const SaleFilter = ({ categories = [], onFilterChange }) => {
             className={`rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 shadow-md
               ${
                 activeCategory === category
-                  ? 'bg-yellow-400 text-gray-900'
-                  : 'bg-gray-800 text-gray-200 hover:bg-gray-700'
+                  ? 'bg-amber-600 text-gray-900'
+                  : 'bg-white text-gray-700 hover:bg-gray-50'
               }
               px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2`}
           >
@@ -165,16 +165,16 @@ const SaleProducts = ({ products }) => {
               </h3>
 
               {/* Price */}
-              <p className="text-yellow-500 font-bold mt-1 text-sm sm:text-base">
+              <p className="text-amber-700 font-bold mt-1 text-sm sm:text-base">
                 ${product.price}
               </p>
 
               {/* Button */}
            <button
   className="mt-2 sm:mt-3 px-3 sm:px-4 md:px-5 py-1.5 sm:py-1.5 md:py-2
-             bg-gray-900 text-yellow-400 rounded-full whitespace-nowrap
+             bg-white text-amber-600 rounded-full whitespace-nowrap
              text-xs sm:text-sm md:text-base font-semibold
-             hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300"
+             hover:bg-amber-600 hover:text-gray-900 transition-all duration-300"
 >
   Add to Cart
 </button>
@@ -182,7 +182,7 @@ const SaleProducts = ({ products }) => {
             </div>
           ))
         ) : (
-          <p className="col-span-full text-center text-gray-400 text-sm sm:text-base">
+          <p className="col-span-full text-center text-gray-600 text-sm sm:text-base">
             No products found in this category.
           </p>
         )}

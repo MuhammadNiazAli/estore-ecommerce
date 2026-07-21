@@ -37,18 +37,18 @@ const reviews = [
 
 const ToysReviewsPreview = () => {
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 mt-10 rounded-xl">
+    <section className="bg-white text-gray-900 py-10 px-4 mt-10 rounded-xl">
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400">
+          <h2 className="text-2xl md:text-3xl font-bold text-amber-600">
             Customer Reviews
           </h2>
           <div className="mt-4 md:mt-0 flex gap-3">
-            <button className="bg-yellow-500 text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition text-sm">
+            <button className="bg-amber-700 text-black px-4 py-2 rounded-full font-semibold hover:bg-amber-600 transition text-sm">
               Write a Review
             </button>
-            <button className="bg-gray-800 px-4 py-2 rounded-full hover:bg-gray-700 transition text-sm">
+            <button className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition text-sm">
               See All Reviews
             </button>
           </div>
@@ -58,23 +58,23 @@ const ToysReviewsPreview = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Average Rating */}
           <motion.div
-            className="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center"
+            className="bg-white p-6 rounded-lg flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-6xl font-bold text-yellow-400">4.7</p>
-            <div className="flex text-yellow-400 mt-2 text-xl">
+            <p className="text-6xl font-bold text-amber-600">4.7</p>
+            <div className="flex text-amber-600 mt-2 text-xl">
               {[...Array(5)].map((_, i) => (
                 <FaStar key={i} />
               ))}
             </div>
-            <p className="text-gray-400 mt-2">Based on 256 Reviews</p>
+            <p className="text-gray-600 mt-2">Based on 256 Reviews</p>
           </motion.div>
 
           {/* Rating Breakdown */}
           <motion.div
-            className="bg-gray-800 p-6 rounded-lg"
+            className="bg-white p-6 rounded-lg"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -82,12 +82,12 @@ const ToysReviewsPreview = () => {
             {[5, 4, 3, 2, 1].map((star) => (
               <div
                 key={star}
-                className="flex items-center gap-3 mb-2 text-sm text-gray-300"
+                className="flex items-center gap-3 mb-2 text-sm text-gray-700"
               >
                 <span className="w-6">{star}★</span>
-                <div className="flex-1 bg-gray-700 h-3 rounded">
+                <div className="flex-1 bg-white h-3 rounded">
                   <div
-                    className="bg-yellow-400 h-3 rounded"
+                    className="bg-amber-600 h-3 rounded"
                     style={{ width: `${star * 15}%` }}
                   ></div>
                 </div>
@@ -102,7 +102,7 @@ const ToysReviewsPreview = () => {
           {reviews.map((review, index) => (
             <motion.div
               key={review.id}
-              className="bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg transition"
+              className="bg-white p-5 rounded-lg shadow hover:shadow-lg transition"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
@@ -119,15 +119,15 @@ const ToysReviewsPreview = () => {
                 )}
                 <div>
                   <p className="font-semibold">{review.user}</p>
-                  <p className="text-gray-400 text-sm">{review.date}</p>
+                  <p className="text-gray-600 text-sm">{review.date}</p>
                 </div>
               </div>
-              <div className="flex text-yellow-400 mb-2">
+              <div className="flex text-amber-600 mb-2">
                 {[...Array(5)].map((_, i) =>
                   i < review.rating ? <FaStar key={i} /> : <FaRegStar key={i} />
                 )}
               </div>
-              <p className="text-gray-300">{review.comment}</p>
+              <p className="text-gray-700">{review.comment}</p>
             </motion.div>
           ))}
         </div>

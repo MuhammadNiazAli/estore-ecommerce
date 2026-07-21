@@ -3,7 +3,7 @@ import React from "react";
 const SizeGuideBanner = () => {
   return (
     <section
-      className="w-full bg-gray-900 flex justify-center py-10 px-6 sm:px-8 md:py-14"
+      className="w-full bg-white flex justify-center py-10 px-6 sm:px-8 md:py-14"
       aria-label="Size guide banner"
     >
       <div
@@ -12,12 +12,12 @@ const SizeGuideBanner = () => {
         {/* Text */}
         <div className="text-center md:text-left max-w-lg">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-400 mb-3 select-none leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-600 mb-3 select-none leading-tight"
           >
             Not sure about your size?
           </h2>
           <p
-            className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed"
+            className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed"
           >
             Use our detailed size guide to find your perfect fit and avoid returns. If you need help, our support team is just a click away!
           </p>
@@ -27,8 +27,8 @@ const SizeGuideBanner = () => {
         <div>
           <a
             href="/size-guide"
-            className="inline-block bg-yellow-400 text-gray-900 font-semibold rounded-md px-7 py-3.5 shadow-lg
-              hover:bg-yellow-500 transition-colors duration-300 select-none text-base sm:text-lg"
+            className="inline-block bg-amber-600 text-gray-900 font-semibold rounded-md px-7 py-3.5 shadow-lg
+              hover:bg-amber-700 transition-colors duration-300 select-none text-base sm:text-lg"
             aria-label="Go to Size Guide"
           >
             View Size Guide

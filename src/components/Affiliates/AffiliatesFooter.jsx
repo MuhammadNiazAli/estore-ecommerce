@@ -55,7 +55,7 @@ const quickLinks = [
 
 const AffiliatesFooter = () => {
   return (
-    <footer className="bg-gray-900 mb-[-150px] text-yellow-400 py-12 px-4">
+    <footer className="bg-white mb-[-150px] text-amber-600 py-12 px-4">
       <div className="max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
         {/* Quick Links */}
         <div>
@@ -65,7 +65,7 @@ const AffiliatesFooter = () => {
               <li key={name}>
                 <a
                   href={href}
-                  className="hover:text-yellow-500 transition duration-200"
+                  className="hover:text-amber-700 transition duration-200"
                 >
                   {name}
                 </a>
@@ -77,14 +77,14 @@ const AffiliatesFooter = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-          <address className="not-italic space-y-2 text-sm text-yellow-300 leading-relaxed">
+          <address className="not-italic space-y-2 text-sm text-amber-500 leading-relaxed">
             <p>📍 123 Affiliate St., Suite 100</p>
             <p>Commerce City, CA 90000</p>
             <p>
               📧{" "}
               <a
                 href="mailto:affiliate@yourcompany.com"
-                className="hover:text-yellow-500"
+                className="hover:text-amber-700"
               >
                 affiliate@yourcompany.com
               </a>
@@ -104,7 +104,7 @@ const AffiliatesFooter = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Follow us on ${name}`}
-                className="text-yellow-400 hover:text-yellow-500 transition-colors duration-200"
+                className="text-amber-600 hover:text-amber-700 transition-colors duration-200"
               >
                 {icon}
               </a>
@@ -114,7 +114,7 @@ const AffiliatesFooter = () => {
       </div>
 
       {/* Divider and Copyright */}
-      <div className="max-w-[1000px] mx-auto mt-10 border-t border-yellow-700 pt-6 text-center text-sm text-yellow-300 tracking-wide">
+      <div className="max-w-[1000px] mx-auto mt-10 border-t border-amber-900 pt-6 text-center text-sm text-amber-500 tracking-wide">
         &copy; {new Date().getFullYear()} YourCompany. All rights reserved.
       </div>
     </footer>

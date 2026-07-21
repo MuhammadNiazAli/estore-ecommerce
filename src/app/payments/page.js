@@ -51,7 +51,7 @@ export default function PaymentPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 pt-20 max-w-[1200px] mx-auto space-y-12">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 pt-20 max-w-[1200px] mx-auto space-y-12">
       <PaymentHero />
       <BillingDetails formData={formData} setFormData={setFormData} />
       <ShippingDetails formData={formData} setFormData={setFormData} />

@@ -11,7 +11,7 @@ const initialTasks = [
 
 const priorityColors = {
   High: 'bg-red-500',
-  Medium: 'bg-yellow-400',
+  Medium: 'bg-amber-600',
   Low: 'bg-green-400',
 };
 
@@ -102,12 +102,12 @@ const DashboardTasks = () => {
 
   if (loading) {
     return (
-      <section className="w-full bg-gray-900 flex justify-center px-4 py-10" aria-busy="true">
+      <section className="w-full bg-white flex justify-center px-4 py-10" aria-busy="true">
         <div className="w-full max-w-[1000px]">
-          <h2 className="text-2xl font-bold text-yellow-400 mb-6 animate-pulse">Tasks</h2>
+          <h2 className="text-2xl font-bold text-amber-600 mb-6 animate-pulse">Tasks</h2>
           <div className="space-y-3">
             {[...Array(4)].map((_, i) => (
-              <div key={i} className="h-12 bg-gray-800 rounded animate-pulse" />
+              <div key={i} className="h-12 bg-white rounded animate-pulse" />
             ))}
           </div>
         </div>
@@ -116,19 +116,19 @@ const DashboardTasks = () => {
   }
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-10">
+    <section className="w-full bg-white flex justify-center px-4 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl font-bold text-yellow-400 mb-6">Tasks</h2>
+        <h2 className="text-2xl font-bold text-amber-600 mb-6">Tasks</h2>
 
         {/* Filters */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-300">
+        <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-700">
           <div>
             <label htmlFor="priorityFilter" className="mr-2 font-medium">Priority:</label>
             <select
               id="priorityFilter"
               value={filterPriority}
               onChange={(e) => setFilterPriority(e.target.value)}
-              className="bg-gray-800 text-white px-2 py-1 rounded cursor-pointer"
+              className="bg-white text-gray-900 px-2 py-1 rounded cursor-pointer"
             >
               <option>All</option>
               <option>High</option>
@@ -143,7 +143,7 @@ const DashboardTasks = () => {
               id="completedFilter"
               value={filterCompleted}
               onChange={(e) => setFilterCompleted(e.target.value)}
-              className="bg-gray-800 text-white px-2 py-1 rounded cursor-pointer"
+              className="bg-white text-gray-900 px-2 py-1 rounded cursor-pointer"
             >
               <option>All</option>
               <option>Completed</option>
@@ -154,7 +154,7 @@ const DashboardTasks = () => {
           <button
             onClick={clearCompleted}
             disabled={!tasks.some((t) => t.completed)}
-            className="ml-auto bg-yellow-400 text-black px-3 py-1.5 rounded font-semibold hover:bg-yellow-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="ml-auto bg-amber-600 text-black px-3 py-1.5 rounded font-semibold hover:bg-amber-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
             aria-disabled={!tasks.some((t) => t.completed)}
           >
             Clear Completed
@@ -173,7 +173,7 @@ const DashboardTasks = () => {
             placeholder="New task title"
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
-            className="flex-1 bg-gray-800 rounded px-3 py-2 text-white placeholder-gray-500 focus:outline-yellow-400"
+            className="flex-1 bg-white rounded px-3 py-2 text-gray-900 placeholder-gray-500 focus:outline-amber-600"
             disabled={adding}
             required
           />
@@ -181,7 +181,7 @@ const DashboardTasks = () => {
             aria-label="Priority"
             value={newPriority}
             onChange={(e) => setNewPriority(e.target.value)}
-            className="bg-gray-800 rounded px-3 py-2 text-white cursor-pointer"
+            className="bg-white rounded px-3 py-2 text-gray-900 cursor-pointer"
             disabled={adding}
           >
             <option>High</option>
@@ -192,7 +192,7 @@ const DashboardTasks = () => {
             aria-label="Due date"
             value={newDue}
             onChange={(e) => setNewDue(e.target.value)}
-            className="bg-gray-800 rounded px-3 py-2 text-white cursor-pointer"
+            className="bg-white rounded px-3 py-2 text-gray-900 cursor-pointer"
             disabled={adding}
           >
             {dueOptions.map((d) => (
@@ -202,7 +202,7 @@ const DashboardTasks = () => {
           <button
             type="submit"
             disabled={adding || !newTitle.trim()}
-            className="bg-yellow-400 text-black px-5 py-2 rounded font-semibold hover:bg-yellow-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-amber-600 text-black px-5 py-2 rounded font-semibold hover:bg-amber-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {adding ? 'Adding...' : 'Add Task'}
           </button>
@@ -210,18 +210,18 @@ const DashboardTasks = () => {
 
         {/* Tasks List */}
         <ul
-          className="bg-gray-800 rounded-xl p-5 shadow space-y-4 max-h-[350px] overflow-y-auto"
+          className="bg-white rounded-xl p-5 shadow space-y-4 max-h-[350px] overflow-y-auto"
           aria-live="polite"
           aria-relevant="additions removals"
         >
           {filteredTasks.length === 0 && (
-            <li className="text-gray-400 text-center italic select-none">No tasks match the filters.</li>
+            <li className="text-gray-600 text-center italic select-none">No tasks match the filters.</li>
           )}
 
           {filteredTasks.map(({ id, title, completed, priority, due }) => (
             <li
               key={id}
-              className={`flex items-center justify-between p-3 rounded-md cursor-pointer hover:bg-gray-700 transition select-text ${
+              className={`flex items-center justify-between p-3 rounded-md cursor-pointer hover:bg-gray-50 transition select-text ${
                 completed ? 'opacity-60 line-through' : ''
               }`}
               onClick={() => toggleTask(id)}
@@ -241,7 +241,7 @@ const DashboardTasks = () => {
                   type="checkbox"
                   checked={completed}
                   onChange={() => toggleTask(id)}
-                  className="w-5 h-5 cursor-pointer accent-yellow-400"
+                  className="w-5 h-5 cursor-pointer accent-amber-600"
                   onClick={(e) => e.stopPropagation()}
                   aria-label={`Mark task "${title}" as ${completed ? 'incomplete' : 'complete'}`}
                 />
@@ -256,7 +256,7 @@ const DashboardTasks = () => {
                 >
                   {priority}
                 </span>
-                <span className="text-xs text-gray-400">{due}</span>
+                <span className="text-xs text-gray-600">{due}</span>
                 <button
                   aria-label={`Delete task "${title}"`}
                   onClick={(e) => {

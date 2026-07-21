@@ -5,14 +5,14 @@ import { FaBookOpen, FaStar, FaTruck, FaUndo } from "react-icons/fa";
 
 const BooksCategoryInfo = () => {
   return (
-    <section className="bg-gray-900 text-white py-12 px-4 my-[-50px] mb-[-30px]">
+    <section className="bg-white text-gray-900 py-12 px-4 my-[-50px] mb-[-30px]">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* ✅ Left Section - Info */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-600">
             Discover the World of Knowledge
           </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-700 text-lg leading-relaxed">
             Explore our curated collection of books across multiple domains like
             Computer Science,  Programming, and Design. Whether you’re a
             beginner or a pro, we have something to spark your curiosity and
@@ -21,38 +21,38 @@ const BooksCategoryInfo = () => {
 
           {/* ✅ Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <div className="flex items-start gap-4 bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition">
-              <FaBookOpen className="text-yellow-400 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
+              <FaBookOpen className="text-amber-600 text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Wide Selection</h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600">
                   60+ categories from Programming to UX Design.
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition">
-              <FaStar className="text-yellow-400 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
+              <FaStar className="text-amber-600 text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Top Rated</h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600">
                   Highly recommended books by industry experts.
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition">
-              <FaTruck className="text-yellow-400 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
+              <FaTruck className="text-amber-600 text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Fast Delivery</h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600">
                   Get your books delivered within 2–3 days.
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-gray-800 p-4 rounded-xl shadow-lg hover:shadow-yellow-500/30 transition">
-              <FaUndo className="text-yellow-400 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
+              <FaUndo className="text-amber-600 text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Easy Returns</h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600">
                   7-day hassle-free return policy for peace of mind.
                 </p>
               </div>
@@ -63,7 +63,7 @@ const BooksCategoryInfo = () => {
           <div className="mt-8">
             <a
               href="#books-grid"
-              className="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition text-lg"
+              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition text-lg"
             >
               Browse Books
             </a>

@@ -20,12 +20,12 @@ const NewarrivalsPagination = () => {
           aria-current={currentPage === i ? 'page' : undefined}
           className={`
             px-4 py-2 rounded-md font-semibold
-            focus:outline-none focus:ring-4 focus:ring-yellow-400
+            focus:outline-none focus:ring-4 focus:ring-amber-600
             transition duration-300
             ${
               currentPage === i
-                ? 'bg-yellow-500 text-gray-900 shadow-lg'
-                : 'bg-gray-800 text-yellow-400 hover:bg-yellow-600 hover:text-yellow-200'
+                ? 'bg-amber-700 text-gray-900 shadow-lg'
+                : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
             }
           `}
         >
@@ -49,12 +49,12 @@ const NewarrivalsPagination = () => {
         aria-label="Previous Page"
         className={`
           px-4 py-2 rounded-md font-semibold
-          focus:outline-none focus:ring-4 focus:ring-yellow-400
+          focus:outline-none focus:ring-4 focus:ring-amber-600
           transition duration-300
           ${
             currentPage === 1
-              ? 'bg-gray-700 text-yellow-600 cursor-not-allowed'
-              : 'bg-gray-800 text-yellow-400 hover:bg-yellow-600 hover:text-yellow-200'
+              ? 'bg-white text-amber-800 cursor-not-allowed'
+              : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
           }
           sm:hidden
         `}
@@ -72,12 +72,12 @@ const NewarrivalsPagination = () => {
         aria-label="Next Page"
         className={`
           px-4 py-2 rounded-md font-semibold
-          focus:outline-none focus:ring-4 focus:ring-yellow-400
+          focus:outline-none focus:ring-4 focus:ring-amber-600
           transition duration-300
           ${
             currentPage === totalPages
-              ? 'bg-gray-700 text-yellow-600 cursor-not-allowed'
-              : 'bg-gray-800 text-yellow-400 hover:bg-yellow-600 hover:text-yellow-200'
+              ? 'bg-white text-amber-800 cursor-not-allowed'
+              : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
           }
           sm:hidden
         `}

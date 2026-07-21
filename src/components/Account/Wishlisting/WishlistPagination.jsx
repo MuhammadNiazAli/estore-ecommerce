@@ -18,7 +18,7 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
   return (
     <nav
       aria-label="Wishlist pagination"
-      className="bg-gray-900 text-white flex justify-center items-center space-x-2 py-3 px-4 rounded-md w-full max-w-md mx-auto"
+      className="bg-white text-gray-900 flex justify-center items-center space-x-2 py-3 px-4 rounded-md w-full max-w-md mx-auto"
     >
       {/* Previous Button */}
       <button
@@ -27,8 +27,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
         aria-label="Previous page"
         className={`px-3 py-1 rounded-md font-semibold transition ${
           currentPage === 1
-            ? 'text-yellow-700 cursor-not-allowed'
-            : 'hover:bg-yellow-800'
+            ? 'text-amber-900 cursor-not-allowed'
+            : 'hover:bg-amber-900'
         }`}
       >
         Prev
@@ -42,8 +42,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
           aria-current={currentPage === page ? 'page' : undefined}
           className={`px-3 py-1 rounded-md font-semibold transition ${
             currentPage === page
-              ? 'bg-yellow-600 text-gray-900 shadow-lg'
-              : 'hover:bg-yellow-800 text-yellow-400'
+              ? 'bg-amber-800 text-gray-900 shadow-lg'
+              : 'hover:bg-amber-900 text-amber-600'
           }`}
         >
           {page}
@@ -59,8 +59,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
         aria-label="Next page"
         className={`px-3 py-1 rounded-md font-semibold transition ${
           currentPage === totalPages
-            ? 'text-yellow-700 cursor-not-allowed'
-            : 'hover:bg-yellow-800'
+            ? 'text-amber-900 cursor-not-allowed'
+            : 'hover:bg-amber-900'
         }`}
       >
         Next

@@ -46,7 +46,7 @@ const ResponsibilityImpactStories = () => {
   return (
     <section
       aria-label="Responsibility Impact Stories"
-      className="w-full bg-gray-900 flex justify-center px-4 py-12 sm:py-16 md:py-24"
+      className="w-full bg-white flex justify-center px-4 py-12 sm:py-16 md:py-24"
     >
       <div className="w-full max-w-[1000px]">
         {/* Heading */}
@@ -55,7 +55,7 @@ const ResponsibilityImpactStories = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-10 sm:mb-12 select-none px-2 sm:px-0"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10 sm:mb-12 select-none px-2 sm:px-0"
         >
           Real Impact. Real Stories.
         </motion.h2>
@@ -72,7 +72,7 @@ const ResponsibilityImpactStories = () => {
               variants={cardVariants}
               tabIndex={0}
               aria-label={`Impact story by ${story.name} from ${story.location}`}
-              className="bg-gray-800/70 border border-gray-700 rounded-xl overflow-hidden shadow-md hover:shadow-xl focus:shadow-xl transition-shadow duration-300 outline-none focus:outline-yellow-400 focus:outline-2 focus:outline-offset-2 cursor-pointer"
+              className="bg-white/70 border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl focus:shadow-xl transition-shadow duration-300 outline-none focus:outline-amber-600 focus:outline-2 focus:outline-offset-2 cursor-pointer"
               role="group"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') e.currentTarget.click();
@@ -88,11 +88,11 @@ const ResponsibilityImpactStories = () => {
                 />
               </div>
               <div className="p-5 sm:p-6">
-                <h3 className="text-yellow-400 font-semibold text-base sm:text-lg mb-1">
+                <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-1">
                   {story.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-400 italic mb-3">{story.location}</p>
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{story.story}</p>
+                <p className="text-xs sm:text-sm text-gray-600 italic mb-3">{story.location}</p>
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{story.story}</p>
               </div>
             </motion.article>
           ))}

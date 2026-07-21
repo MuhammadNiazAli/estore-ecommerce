@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function ExperienceLoading() {
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-gray-900">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
       <div className="spinner">
         <span>L</span>
         <span>O</span>
@@ -23,8 +23,8 @@ export default function ExperienceLoading() {
           font-weight: 600;
           font-family: monospace;
           letter-spacing: 1em;
-          color: #FFD700; /* Yellowish-Golden */
-          filter: drop-shadow(0 0 10px #FFD700);
+          color: #b45309; /* Yellowish-Golden */
+          filter: drop-shadow(0 0 10px #b45309);
           display: flex;
           justify-content: center;
           align-items: center;

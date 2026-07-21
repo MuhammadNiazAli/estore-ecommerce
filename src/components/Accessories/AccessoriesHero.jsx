@@ -80,7 +80,7 @@ const AccessoriesHero = () => {
   return (
     <section
       aria-label="Accessories hero with dynamic features"
-      className="w-full bg-gray-900 flex justify-center px-4 sm:px-6 md:px-10 py-10 sm:py-14 md:py-20 my-[-50px] mb-[-30px]"
+      className="w-full bg-white flex justify-center px-4 sm:px-6 md:px-10 py-10 sm:py-14 md:py-20 my-[-50px] mb-[-30px]"
     >
       <div className="max-w-[1400px] w-full text-center flex flex-col items-center">
         {/* Hero Heading */}
@@ -88,7 +88,7 @@ const AccessoriesHero = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-transparent bg-clip-text select-none leading-snug sm:leading-tight"
+          className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-transparent bg-clip-text select-none leading-snug sm:leading-tight"
         >
           Elevate Your Accessories Game
         </motion.h1>
@@ -98,7 +98,7 @@ const AccessoriesHero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-3 sm:mt-4 max-w-[90%] sm:max-w-xl md:max-w-2xl text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed select-none"
+          className="mt-3 sm:mt-4 max-w-[90%] sm:max-w-xl md:max-w-2xl text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed select-none"
         >
           Discover premium accessories that combine style, durability, and next-generation innovation — crafted to perfection.
         </motion.p>
@@ -115,8 +115,8 @@ const AccessoriesHero = () => {
               className={`flex flex-col items-center rounded-lg p-2 sm:p-4 md:p-5 transition-colors duration-300 text-center text-xs sm:text-sm md:text-base font-semibold
                 ${
                   activeFeature.id === feature.id
-                    ? 'bg-yellow-500 text-gray-900 shadow-lg shadow-yellow-400/40'
-                    : 'bg-gray-800 text-yellow-400 hover:bg-yellow-600 hover:text-gray-900'
+                    ? 'bg-amber-700 text-gray-900 shadow-lg shadow-amber-600/40'
+                    : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-gray-900'
                 }`}
               aria-pressed={activeFeature.id === feature.id}
             >
@@ -135,7 +135,7 @@ const AccessoriesHero = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
               transition={{ duration: 0.6 }}
-              className="bg-gray-800 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-xl overflow-hidden flex flex-col sm:flex-row"
+              className="bg-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-xl overflow-hidden flex flex-col sm:flex-row"
             >
               {/* Image */}
               <div className="w-full sm:w-1/2 h-56 sm:h-72 md:h-[550px] lg:h-[600px] overflow-hidden">
@@ -149,19 +149,19 @@ const AccessoriesHero = () => {
               </div>
               {/* Content */}
               <div className="p-5 sm:p-8 md:p-12 lg:p-14 text-left sm:w-1/2 flex flex-col justify-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400 mb-3 md:mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-3 md:mb-4">
                   {activeFeature.title}
                 </h2>
                 {activeFeature.description.map((para, idx) => (
                   <p
                     key={idx}
-                    className="text-gray-300 mb-3 md:mb-4 leading-relaxed text-sm sm:text-base lg:text-lg"
+                    className="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm sm:text-base lg:text-lg"
                   >
                     {para}
                   </p>
                 ))}
 
-                <ul className="list-disc list-inside text-yellow-200 space-y-1 sm:space-y-2 mb-4 md:mb-6 lg:mb-8 text-xs sm:text-sm md:text-base lg:text-lg">
+                <ul className="list-disc list-inside text-amber-400 space-y-1 sm:space-y-2 mb-4 md:mb-6 lg:mb-8 text-xs sm:text-sm md:text-base lg:text-lg">
                   {activeFeature.details.map((detail, idx) => (
                     <li key={idx}>{detail}</li>
                   ))}
@@ -169,7 +169,7 @@ const AccessoriesHero = () => {
 
                 <button
                   type="button"
-                  className="inline-block px-5 py-2 sm:px-6 sm:py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg shadow-yellow-500/40 transition duration-300 text-xs sm:text-sm md:text-base"
+                  className="inline-block px-5 py-2 sm:px-6 sm:py-3 bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold rounded-full shadow-lg shadow-amber-700/40 transition duration-300 text-xs sm:text-sm md:text-base"
                   onClick={() =>
                     alert(`Learn more about ${activeFeature.title}!`)
                   }

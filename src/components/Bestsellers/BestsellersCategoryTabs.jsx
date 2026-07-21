@@ -49,7 +49,7 @@ const BestsellersCategoryTabs = () => {
         ref={tabsRef}
         className="
           grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-4 gap-x-6
-          lg:overflow-visible overflow-x-auto scrollbar-thin scrollbar-thumb-yellow-600 scrollbar-track-transparent snap-x snap-mandatory
+          lg:overflow-visible overflow-x-auto scrollbar-thin scrollbar-thumb-amber-800 scrollbar-track-transparent snap-x snap-mandatory
           relative
         "
         role="tablist"
@@ -70,8 +70,8 @@ const BestsellersCategoryTabs = () => {
                 relative snap-start text-base sm:text-lg font-medium whitespace-nowrap px-2 py-2 w-full text-center rounded-md
                 transition-all duration-300 ease-in-out
                 ${isActive
-                  ? 'text-yellow-600 dark:text-yellow-400'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-yellow-500 dark:hover:text-yellow-300'}
+                  ? 'text-amber-800 dark:text-amber-600'
+                  : 'text-gray-600 dark:text-gray-600 hover:text-amber-700 dark:hover:text-amber-500'}
                 focus:outline-none
               `}
             >
@@ -82,7 +82,7 @@ const BestsellersCategoryTabs = () => {
 
         {/* Underline */}
         <span
-          className="absolute bg-yellow-500 rounded-full transition-all duration-500 ease-[cubic-bezier(.68,-0.55,.27,1.55)]"
+          className="absolute bg-amber-700 rounded-full transition-all duration-500 ease-[cubic-bezier(.68,-0.55,.27,1.55)]"
           style={{
             width: underlineStyle.width,
             height: 3,

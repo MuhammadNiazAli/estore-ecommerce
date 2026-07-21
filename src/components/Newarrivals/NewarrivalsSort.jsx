@@ -19,7 +19,7 @@ const NewarrivalsSort = () => {
     <section className="w-full max-w-sm mx-auto my-6 px-4">
       <label
         htmlFor="sort"
-        className="block mb-2 text-yellow-400 font-semibold text-lg tracking-wide"
+        className="block mb-2 text-amber-600 font-semibold text-lg tracking-wide"
       >
         Sort By:
       </label>
@@ -29,19 +29,19 @@ const NewarrivalsSort = () => {
         onChange={handleChange}
         className="
           w-full
-          bg-gray-800
-          text-yellow-300
-          border border-yellow-500
+          bg-white
+          text-amber-500
+          border border-amber-700
           rounded-lg
           px-5 py-3
           shadow-md
           appearance-none
           focus:outline-none
-          focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-60
+          focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60
           transition
           duration-300
           cursor-pointer
-          hover:bg-gray-700
+          hover:bg-gray-50
           sm:text-base text-sm
         "
         aria-label="Sort products"

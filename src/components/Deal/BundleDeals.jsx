@@ -37,11 +37,11 @@ const bundles = [
 
 const BundleDeals = () => {
   return (
-    <section className="w-full px-4 py-16 bg-gray-900 text-white flex justify-center my-[-20px]">
+    <section className="w-full px-4 py-16 bg-white text-gray-900 flex justify-center my-[-20px]">
       <div className="w-full max-w-[1000px]">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-2">Bundle & Save</h2>
-          <p className="text-gray-400 text-sm sm:text-base">
+          <p className="text-gray-600 text-sm sm:text-base">
             Grab curated product bundles at special prices.
           </p>
         </div>
@@ -55,7 +55,7 @@ const BundleDeals = () => {
             return (
               <motion.article
                 key={bundle.id}
-                className="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:shadow-xl transition-shadow duration-300 focus-within:shadow-xl outline-none"
+                className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300 focus-within:shadow-xl outline-none"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -74,20 +74,20 @@ const BundleDeals = () => {
 
                 <div className="p-5 space-y-3">
                   <h3 className="text-xl font-semibold">{bundle.title}</h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600">
                     {bundle.products.join(', ')}
                   </p>
 
                   <div className="flex justify-between items-center">
                     <div>
-                      <span className="text-lg font-bold text-yellow-400">
+                      <span className="text-lg font-bold text-amber-600">
                         ${bundle.price}
                       </span>
-                      <span className="text-sm line-through text-gray-400 ml-2">
+                      <span className="text-sm line-through text-gray-600 ml-2">
                         ${bundle.oldPrice}
                       </span>
                     </div>
-                    <span className="bg-yellow-400 text-black text-xs font-semibold px-2 py-1 rounded-full select-none">
+                    <span className="bg-amber-600 text-black text-xs font-semibold px-2 py-1 rounded-full select-none">
                       Save {discount}%
                     </span>
                   </div>
@@ -95,7 +95,7 @@ const BundleDeals = () => {
                   <Link
                     href={`/bundles/${bundle.id}`}
                     aria-label={`Buy ${bundle.title} bundle`}
-                    className="inline-flex mt-3 items-center gap-2 text-sm font-semibold text-yellow-400 hover:text-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+                    className="inline-flex mt-3 items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
                   >
                     Buy Bundle <FiArrowRight size={16} />
                   </Link>

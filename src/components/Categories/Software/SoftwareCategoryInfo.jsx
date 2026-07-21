@@ -5,8 +5,8 @@ const SoftwareCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900
-        text-yellow-400
+        bg-white
+        text-amber-600
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const SoftwareCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Explore our premium software solutions designed to boost productivity, security, and creativity for individuals and businesses.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         From powerful editing tools to advanced security suites, discover trusted software to empower your digital life.
       </p>
     </section>

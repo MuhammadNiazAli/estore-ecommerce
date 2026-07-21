@@ -40,7 +40,7 @@ const ShopTagCloud = ({
   return (
     <section
       aria-label="Shop Tag Cloud"
-      className={`w-full py-8 px-4 bg-gray-900 text-gray-300 ${className}`}
+      className={`w-full py-8 px-4 bg-white text-gray-700 ${className}`}
     >
       <div
         role="list"
@@ -68,7 +68,7 @@ const ShopTagCloud = ({
                 ${
                   isActive
                     ? 'bg-amber-400 text-gray-900 shadow-lg scale-110'
-                    : 'bg-gray-800 hover:bg-amber-400 hover:text-gray-900'
+                    : 'bg-white hover:bg-amber-400 hover:text-gray-900'
                 }
                 ${
                   hoveredTag === tag.name && !isActive

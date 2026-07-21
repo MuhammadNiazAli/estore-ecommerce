@@ -4,7 +4,7 @@ const initiatives = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400 flex-shrink-0"
+        className="w-8 h-8 text-amber-600 flex-shrink-0"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -25,7 +25,7 @@ const initiatives = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400 flex-shrink-0"
+        className="w-8 h-8 text-amber-600 flex-shrink-0"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -51,7 +51,7 @@ const initiatives = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400 flex-shrink-0"
+        className="w-8 h-8 text-amber-600 flex-shrink-0"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -73,7 +73,7 @@ const initiatives = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400 flex-shrink-0"
+        className="w-8 h-8 text-amber-600 flex-shrink-0"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -93,12 +93,12 @@ const SustainabilityInitiatives = () => {
   return (
     <section
       aria-labelledby="sustainability-initiatives-title"
-      className="bg-gray-900 text-yellow-400 px-4 sm:px-6 lg:px-8 py-16"
+      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="max-w-4xl mx-auto">
         <h2
           id="sustainability-initiatives-title"
-          className="text-3xl sm:text-4xl font-extrabold text-yellow-300 mb-12 text-center select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-12 text-center select-none"
         >
           Our Sustainability Initiatives
         </h2>
@@ -112,20 +112,20 @@ const SustainabilityInitiatives = () => {
               aria-label={title}
               className="
                 flex items-start gap-5 rounded-xl p-6
-                bg-yellow-900/10 hover:bg-yellow-900/25
+                bg-amber-950/10 hover:bg-amber-950/25
                 transition-colors duration-300 shadow-lg
                 cursor-default
                 outline-none
-                focus-visible:ring-4 focus-visible:ring-yellow-500
+                focus-visible:ring-4 focus-visible:ring-amber-700
                 focus-visible:ring-opacity-70
-                focus-visible:shadow-yellow-400
+                focus-visible:shadow-amber-600
                 select-text
               "
             >
               {icon}
               <div>
-                <h3 className="text-xl font-semibold text-yellow-300 mb-2">{title}</h3>
-                <p className="text-yellow-200 leading-relaxed text-sm sm:text-base tracking-wide">
+                <h3 className="text-xl font-semibold text-amber-500 mb-2">{title}</h3>
+                <p className="text-amber-400 leading-relaxed text-sm sm:text-base tracking-wide">
                   {description}
                 </p>
               </div>

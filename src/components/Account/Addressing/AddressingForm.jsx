@@ -26,11 +26,11 @@ const AddressingForm = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-lg mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950 p-8 rounded-3xl shadow-lg text-white"
+      className="max-w-lg mx-auto bg-gradient-to-br from-white via-white to-white p-8 rounded-3xl shadow-lg text-gray-900"
       aria-label="Address form"
       noValidate
     >
-      <h2 className="text-2xl font-bold mb-6 text-yellow-400 text-center">
+      <h2 className="text-2xl font-bold mb-6 text-amber-600 text-center">
         Add / Edit Address
       </h2>
 
@@ -48,7 +48,7 @@ const AddressingForm = ({ onSubmit }) => {
             onChange={handleChange}
             placeholder="John Doe"
             required
-            className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
           />
         </div>
 
@@ -65,7 +65,7 @@ const AddressingForm = ({ onSubmit }) => {
             onChange={handleChange}
             placeholder="123 Main St"
             required
-            className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
           />
         </div>
 
@@ -83,7 +83,7 @@ const AddressingForm = ({ onSubmit }) => {
               onChange={handleChange}
               placeholder="City"
               required
-              className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
             />
           </div>
 
@@ -99,7 +99,7 @@ const AddressingForm = ({ onSubmit }) => {
               onChange={handleChange}
               placeholder="State"
               required
-              className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
             />
           </div>
 
@@ -115,7 +115,7 @@ const AddressingForm = ({ onSubmit }) => {
               onChange={handleChange}
               placeholder="ZIP / Postal"
               required
-              className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
             />
           </div>
         </div>
@@ -131,7 +131,7 @@ const AddressingForm = ({ onSubmit }) => {
             value={formData.country}
             onChange={handleChange}
             required
-            className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
           >
             <option value="" disabled>
               Select Country
@@ -160,14 +160,14 @@ const AddressingForm = ({ onSubmit }) => {
             onChange={handleChange}
             placeholder="+1 (555) 555-5555"
             required
-            className="w-full rounded-lg bg-gray-800 border border-gray-700 px-4 py-3 placeholder-gray-500 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full rounded-lg bg-white border border-gray-200 px-4 py-3 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
           />
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-yellow-400 text-black font-semibold py-3 rounded-full shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
+          className="w-full bg-amber-600 text-black font-semibold py-3 rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
         >
           Save Address
         </button>

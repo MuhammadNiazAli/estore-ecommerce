@@ -136,7 +136,7 @@ const HomeShows = () => {
   return (
     <section
       aria-label="Trending categories scrolling list"
-      className="bg-yellow-400 text-black py-8 px-6 mb-[-70px]"
+      className="bg-amber-600 text-black py-8 px-6 mb-[-70px]"
     >
       <div
         className="mx-auto overflow-hidden relative"
@@ -169,7 +169,7 @@ const HomeShows = () => {
                   >
                     <a
                       href={categoryUrl}
-                      className="text-black hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-600 rounded"
+                      className="text-black hover:underline focus:outline-none focus:ring-2 focus:ring-amber-800 rounded"
                       tabIndex={0}
                       aria-label={`Go to ${category} category`}
                       onClick={(e) => {

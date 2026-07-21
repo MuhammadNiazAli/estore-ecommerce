@@ -27,21 +27,21 @@ const GiftCardBalance = ({
   return (
     <section
       aria-label="Your gift card balance and recent activity"
-      className="max-w-[900px] mx-auto bg-gray-900 text-white rounded-3xl shadow-2xl p-8"
+      className="max-w-[900px] mx-auto bg-white text-gray-900 rounded-3xl shadow-2xl p-8"
       role="region"
     >
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <FaWallet className="text-yellow-400 text-4xl" aria-hidden="true" />
+        <FaWallet className="text-amber-600 text-4xl" aria-hidden="true" />
         <div>
-          <h2 className="text-2xl font-extrabold text-yellow-300">Your Gift Card Balance</h2>
-          <p className="text-yellow-200 text-sm">Available to spend anytime</p>
+          <h2 className="text-2xl font-extrabold text-amber-500">Your Gift Card Balance</h2>
+          <p className="text-amber-400 text-sm">Available to spend anytime</p>
         </div>
       </div>
 
       {/* Balance */}
       <div className="text-center mb-10 select-text">
-        <span className="text-6xl font-extrabold text-white">
+        <span className="text-6xl font-extrabold text-gray-900">
           {balance.toLocaleString('en-US', {
             style: 'currency',
             currency: 'USD',
@@ -51,14 +51,14 @@ const GiftCardBalance = ({
 
       {/* Recent Activity */}
       <div>
-        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-yellow-300">
-          <FaHistory className="text-yellow-400" aria-hidden="true" />
+        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-amber-500">
+          <FaHistory className="text-amber-600" aria-hidden="true" />
           Recent Activity
         </h3>
 
         <ul
-          className="divide-y divide-yellow-600 max-h-48 overflow-y-auto rounded-md
-            bg-yellow-800/20 p-4 scrollbar-thin scrollbar-thumb-yellow-600 scrollbar-track-yellow-900"
+          className="divide-y divide-amber-800 max-h-48 overflow-y-auto rounded-md
+            bg-amber-900/20 p-4 scrollbar-thin scrollbar-thumb-amber-800 scrollbar-track-amber-950"
           role="list"
           aria-label="Recent gift card transactions"
         >
@@ -67,21 +67,21 @@ const GiftCardBalance = ({
             return (
               <li
                 key={id}
-                className="flex justify-between py-2 text-sm sm:text-base text-white"
+                className="flex justify-between py-2 text-sm sm:text-base text-gray-900"
                 title={`${type} of ${amount >= 0 ? '+' : '-'}$${Math.abs(amount).toFixed(
                   2
                 )} on ${formatDate(date)}`}
               >
-                <span className="truncate text-yellow-200">{type}</span>
+                <span className="truncate text-amber-400">{type}</span>
                 <span
                   className={`font-mono ${
-                    isPositive ? 'text-yellow-400' : 'text-red-500'
+                    isPositive ? 'text-amber-600' : 'text-red-500'
                   }`}
                 >
                   {isPositive ? '+' : '-'}
                   {Math.abs(amount).toFixed(2)}
                 </span>
-                <time className="text-yellow-300" dateTime={date}>
+                <time className="text-amber-500" dateTime={date}>
                   {formatDate(date)}
                 </time>
               </li>
@@ -96,8 +96,8 @@ const GiftCardBalance = ({
           type="button"
           onClick={onReload}
           className="inline-flex items-center gap-2 px-8 py-3 rounded-full
-            bg-yellow-400 text-black font-semibold shadow-md hover:bg-yellow-300 hover:shadow-lg
-            transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300
+            bg-amber-600 text-black font-semibold shadow-md hover:bg-amber-500 hover:shadow-lg
+            transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500
             focus:ring-offset-2 active:scale-[0.97] select-none"
           aria-label="Reload gift card balance"
         >

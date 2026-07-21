@@ -19,7 +19,7 @@ const LaptopSortBar = ({ sortOption = 'popularity', onSortChange }) => {
       <div className="flex justify-end items-center mb-6">
         <label
           htmlFor="sort"
-          className="mr-2 text-gray-300 font-medium select-none"
+          className="mr-2 text-gray-700 font-medium select-none"
         >
           Sort By:
         </label>
@@ -27,7 +27,7 @@ const LaptopSortBar = ({ sortOption = 'popularity', onSortChange }) => {
           id="sort"
           value={sortOption}
           onChange={handleChange}
-          className="bg-gray-800 text-gray-100 p-2 rounded-md cursor-pointer"
+          className="bg-white text-gray-800 p-2 rounded-md cursor-pointer"
         >
           {sortOptions.map(({ value, label }) => (
             <option key={value} value={value}>

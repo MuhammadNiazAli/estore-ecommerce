@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const OrderHero = () => {
   return (
     <section
-      className="relative bg-gradient-to-br from-gray-900 px-6 py-24 sm:py-28 md:py-36 overflow-hidden mb-[-100px] my-[-80px]"
+      className="relative bg-gradient-to-br from-white px-6 py-24 sm:py-28 md:py-36 overflow-hidden mb-[-100px] my-[-80px]"
       style={{ minHeight: '520px' }}
     >
       {/* Glass Overlay */}
@@ -31,7 +31,7 @@ const OrderHero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.9 }}
           viewport={{ once: true }}
-          className="mt-6 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
+          className="mt-6 text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
         >
           Track your orders, manage deliveries, and explore your personalized shopping experience — built for speed, security, and satisfaction.
         </motion.p>
@@ -46,7 +46,7 @@ const OrderHero = () => {
         >
           <button
             type="button"
-            className="flex items-center gap-2 px-7 py-3 rounded-full bg-indigo-600 text-white font-semibold text-base sm:text-lg shadow-lg hover:bg-indigo-700 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400"
+            className="flex items-center gap-2 px-7 py-3 rounded-full bg-indigo-600 text-gray-900 font-semibold text-base sm:text-lg shadow-lg hover:bg-indigo-700 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-400"
           >
             <FiTruck className="text-xl animate-bounce-slow" />
             Track Order
@@ -54,7 +54,7 @@ const OrderHero = () => {
 
           <button
             type="button"
-            className="flex items-center gap-2 px-7 py-3 rounded-full border-2 border-indigo-500 text-indigo-500 font-semibold text-base sm:text-lg hover:bg-indigo-600 hover:text-white hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+            className="flex items-center gap-2 px-7 py-3 rounded-full border-2 border-indigo-500 text-indigo-500 font-semibold text-base sm:text-lg hover:bg-indigo-600 hover:text-gray-900 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
           >
             <FiPackage className="text-xl animate-pulse" />
             Continue Shopping
@@ -67,7 +67,7 @@ const OrderHero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.9 }}
           viewport={{ once: true }}
-          className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm sm:text-base text-gray-300"
+          className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm sm:text-base text-gray-700"
         >
           {[
             { icon: <FiArrowRightCircle className="text-amber-400 text-xl" />, label: 'Real-Time Tracking' },
@@ -80,7 +80,7 @@ const OrderHero = () => {
               className="flex items-center justify-center gap-3 bg-white/5 px-5 py-4 rounded-xl backdrop-blur-lg hover:scale-105 transition-transform duration-300"
             >
               {item.icon}
-              <span className="text-gray-100">{item.label}</span>
+              <span className="text-gray-800">{item.label}</span>
             </div>
           ))}
         </motion.div>

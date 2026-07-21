@@ -66,7 +66,7 @@ const BooksFaq = () => {
   }, [activeIndex]);
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4">
+    <section className="bg-white text-amber-600 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">
           Frequently Asked Questions
@@ -75,10 +75,10 @@ const BooksFaq = () => {
           {faqData.map((item, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg border border-yellow-500 shadow-lg overflow-hidden"
+              className="bg-white rounded-lg border border-amber-700 shadow-lg overflow-hidden"
             >
               <button
-                className="w-full flex justify-between items-center px-5 py-4 text-left text-lg font-medium hover:bg-gray-700 transition"
+                className="w-full flex justify-between items-center px-5 py-4 text-left text-lg font-medium hover:bg-gray-50 transition"
                 onClick={() => toggleFAQ(index)}
               >
                 {item.question}
@@ -90,7 +90,7 @@ const BooksFaq = () => {
               </button>
               <div
                 ref={(el) => (answerRefs.current[index] = el)}
-                className="px-5 text-gray-300 overflow-hidden h-0"
+                className="px-5 text-gray-700 overflow-hidden h-0"
               >
                 <p className="py-3">{item.answer}</p>
               </div>

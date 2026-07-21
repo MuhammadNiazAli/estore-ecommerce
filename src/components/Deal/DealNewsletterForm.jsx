@@ -23,14 +23,14 @@ const DealNewsletterForm = () => {
   };
 
   return (
-    <section className="w-full px-4 py-10 bg-gray-900 text-white">
+    <section className="w-full px-4 py-10 bg-white text-gray-900">
       <div className="max-w-xl mx-auto backdrop-blur-md rounded-2xl shadow-xl p-8">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col space-y-5">
-            <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center">
               Join Our Deal Newsletter
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 text-center">
+            <p className="text-sm sm:text-base text-gray-700 text-center">
               Subscribe now and be the first to know about the latest tech deals, product drops, and exclusive offers!
             </p>
 
@@ -39,8 +39,8 @@ const DealNewsletterForm = () => {
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-4 py-3 text-sm rounded-lg bg-gray-900 placeholder-gray-500 text-white border focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
-                error ? 'border-red-500' : 'border-gray-700'
+              className={`w-full px-4 py-3 text-sm rounded-lg bg-white placeholder-gray-500 text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
+                error ? 'border-red-500' : 'border-gray-200'
               }`}
               required
             />
@@ -51,7 +51,7 @@ const DealNewsletterForm = () => {
 
             <button
               type="submit"
-              className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-3 rounded-lg transition-colors duration-300"
+              className="bg-amber-600 hover:bg-amber-500 text-black font-semibold py-3 rounded-lg transition-colors duration-300"
             >
               Subscribe Now
             </button>
@@ -61,7 +61,7 @@ const DealNewsletterForm = () => {
             <h3 className="text-xl font-semibold text-green-400 mb-2">
               Thank you for subscribing!
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               You'll start receiving updates and deals directly in your inbox.
             </p>
           </div>

@@ -49,14 +49,14 @@ const ProductCallForm = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-12 sm:px-6 my-[-50px]">
+    <section className="w-full bg-white flex justify-center px-4 py-12 sm:px-6 my-[-50px]">
       <form
         onSubmit={handleSubmit}
-        className="max-w-[1000px] w-full bg-gray-800 rounded-xl p-6 sm:p-8 shadow-lg"
+        className="max-w-[1000px] w-full bg-white rounded-xl p-6 sm:p-8 shadow-lg"
         noValidate
         aria-label="Contact form"
       >
-        <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-6 text-center">
           Get in Touch
         </h2>
 
@@ -64,7 +64,7 @@ const ProductCallForm = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-yellow-400 font-semibold mb-1 text-sm sm:text-base"
+              className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
             >
               Name
             </label>
@@ -74,7 +74,7 @@ const ProductCallForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
+              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
                 errors.name ? 'ring-2 ring-red-500' : ''
               }`}
               placeholder="Your full name"
@@ -95,7 +95,7 @@ const ProductCallForm = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-yellow-400 font-semibold mb-1 text-sm sm:text-base"
+              className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
             >
               Email
             </label>
@@ -105,7 +105,7 @@ const ProductCallForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
+              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
                 errors.email ? 'ring-2 ring-red-500' : ''
               }`}
               placeholder="you@example.com"
@@ -127,7 +127,7 @@ const ProductCallForm = () => {
         <div className="mb-6">
           <label
             htmlFor="phone"
-            className="block text-yellow-400 font-semibold mb-1 text-sm sm:text-base"
+            className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
           >
             Phone
           </label>
@@ -137,7 +137,7 @@ const ProductCallForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-2 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
+            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
               errors.phone ? 'ring-2 ring-red-500' : ''
             }`}
             placeholder="+1 234 567 8900"
@@ -158,7 +158,7 @@ const ProductCallForm = () => {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className="block text-yellow-400 font-semibold mb-1 text-sm sm:text-base"
+            className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
           >
             Message
           </label>
@@ -168,7 +168,7 @@ const ProductCallForm = () => {
             rows="5"
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-2 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none ${
+            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition resize-none ${
               errors.message ? 'ring-2 ring-red-500' : ''
             }`}
             placeholder="Write your message here..."
@@ -188,7 +188,7 @@ const ProductCallForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-yellow-500 text-black font-semibold py-3 rounded-xl hover:bg-yellow-400 transition-colors duration-200 shadow-md"
+          className="w-full bg-amber-700 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 transition-colors duration-200 shadow-md"
         >
           Send Message
         </button>

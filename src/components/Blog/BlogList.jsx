@@ -53,12 +53,12 @@ const blogs = [
 
 const BlogList = () => {
   return (
-    <section className="w-full flex justify-center px-4 py-12 sm:px-6 lg:px-8 bg-gray-900 mb-[-30px]">
+    <section className="w-full flex justify-center px-4 py-12 sm:px-6 lg:px-8 bg-white mb-[-30px]">
       <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 gap-8">
         {blogs.map((blog) => (
           <article
             key={blog.id}
-            className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-[1.03] hover:shadow-lg"
+            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-[1.03] hover:shadow-lg"
           >
             <div className="relative w-full h-48 sm:h-40 md:h-52 lg:h-56">
               <Image
@@ -73,20 +73,20 @@ const BlogList = () => {
             <div className="p-5 flex flex-col flex-grow">
               <h2
                 title={blog.title}
-                className="text-yellow-400 font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2"
+                className="text-amber-600 font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2"
               >
                 {blog.title}
               </h2>
-              <p className="text-gray-300 flex-grow mb-4 line-clamp-3 text-sm sm:text-base md:text-base">
+              <p className="text-gray-700 flex-grow mb-4 line-clamp-3 text-sm sm:text-base md:text-base">
                 {blog.excerpt}
               </p>
-              <div className="flex justify-between items-center text-gray-400 text-xs sm:text-sm mb-4 select-none">
+              <div className="flex justify-between items-center text-gray-600 text-xs sm:text-sm mb-4 select-none">
                 <time dateTime={new Date(blog.date).toISOString()}>{blog.date}</time>
                 <span>{blog.readTime}</span>
               </div>
               <a
                 href={blog.url}
-                className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded text-sm sm:text-base"
+                className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-500 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-amber-600 rounded text-sm sm:text-base"
                 aria-label={`Read more about ${blog.title}`}
               >
                 Read More <ArrowRight size={16} />

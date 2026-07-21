@@ -46,14 +46,14 @@ const products = [
 
 const ClearanceProductsGrid = () => {
   return (
-    <section className="bg-gray-900 py-10 flex justify-center">
+    <section className="bg-white py-10 flex justify-center">
       <div className="max-w-[1000px] w-full px-4">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-yellow-400">
+          <h2 className="text-3xl font-bold text-amber-600">
             Clearance Sale
           </h2>
-          <p className="text-gray-300 mt-2">
+          <p className="text-gray-700 mt-2">
             Grab your favorites at the best prices before they’re gone!
           </p>
         </div>
@@ -63,10 +63,10 @@ const ClearanceProductsGrid = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-gray-800 rounded-xl overflow-hidden  transition-shadow duration-300 relative"
+              className="bg-white rounded-xl overflow-hidden  transition-shadow duration-300 relative"
             >
               {/* Discount Badge */}
-              <span className="absolute top-3 left-3 bg-yellow-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
+              <span className="absolute top-3 left-3 bg-amber-700 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
                 {product.discount}
               </span>
 
@@ -78,14 +78,14 @@ const ClearanceProductsGrid = () => {
                   className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Hover Actions */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
-                  <button className="bg-yellow-500 text-gray-900 p-2 rounded-full hover:bg-yellow-400 transition">
+                <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
+                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
                     <ShoppingCart size={18} />
                   </button>
-                  <button className="bg-yellow-500 text-gray-900 p-2 rounded-full hover:bg-yellow-400 transition">
+                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
                     <Heart size={18} />
                   </button>
-                  <button className="bg-yellow-500 text-gray-900 p-2 rounded-full hover:bg-yellow-400 transition">
+                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
                     <Eye size={18} />
                   </button>
                 </div>
@@ -93,11 +93,11 @@ const ClearanceProductsGrid = () => {
 
               {/* Product Details */}
               <div className="p-4">
-                <h3 className="text-white font-semibold text-lg truncate">
+                <h3 className="text-gray-900 font-semibold text-lg truncate">
                   {product.title}
                 </h3>
                 {/* Rating */}
-                <div className="flex items-center text-yellow-400 text-sm mt-2">
+                <div className="flex items-center text-amber-600 text-sm mt-2">
                   {Array(5)
                     .fill()
                     .map((_, i) => (
@@ -107,13 +107,13 @@ const ClearanceProductsGrid = () => {
                         fill={i < Math.floor(product.rating) ? "currentColor" : "none"}
                       />
                     ))}
-                  <span className="text-gray-400 ml-2">
+                  <span className="text-gray-600 ml-2">
                     {product.rating.toFixed(1)}
                   </span>
                 </div>
                 {/* Price */}
                 <div className="mt-2">
-                  <span className="text-yellow-400 font-bold text-lg">
+                  <span className="text-amber-600 font-bold text-lg">
                     ${product.price}
                   </span>
                   <span className="text-gray-500 line-through ml-2">

@@ -40,7 +40,7 @@ const BlogPagination = ({ totalPages = 10, onPageChange }) => {
           inline-flex items-center gap-2 max-w-[1000px]
           flex-wrap sm:flex-nowrap
           sm:overflow-visible overflow-x-auto
-          scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800
+          scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800
         "
       >
         {/* Previous Button */}
@@ -51,12 +51,12 @@ const BlogPagination = ({ totalPages = 10, onPageChange }) => {
             className="
               flex items-center justify-center
               p-2 sm:p-2
-              rounded-md border border-yellow-400
-              text-yellow-400
-              hover:bg-yellow-400 hover:text-gray-900
+              rounded-md border border-amber-600
+              text-amber-600
+              hover:bg-amber-600 hover:text-gray-900
               transition-colors
               disabled:opacity-40 disabled:cursor-not-allowed
-              focus:outline-none focus:ring-2 focus:ring-yellow-400
+              focus:outline-none focus:ring-2 focus:ring-amber-600
               sm:text-base text-sm
             "
             aria-label="Previous page"
@@ -70,7 +70,7 @@ const BlogPagination = ({ totalPages = 10, onPageChange }) => {
           page === '...' ? (
             <li
               key={`ellipsis-${idx}`}
-              className="px-2 text-yellow-400 font-semibold select-none sm:text-sm text-xs"
+              className="px-2 text-amber-600 font-semibold select-none sm:text-sm text-xs"
             >
               ...
             </li>
@@ -81,13 +81,13 @@ const BlogPagination = ({ totalPages = 10, onPageChange }) => {
                 aria-current={page === currentPage ? 'page' : undefined}
                 className={`
                   px-3 py-1.5 min-w-[36px]
-                  rounded-md border border-yellow-400 font-semibold
+                  rounded-md border border-amber-600 font-semibold
                   transition-colors
-                  focus:outline-none focus:ring-2 focus:ring-yellow-400
+                  focus:outline-none focus:ring-2 focus:ring-amber-600
                   ${
                     page === currentPage
-                      ? 'bg-yellow-400 text-gray-900 cursor-default'
-                      : 'text-yellow-400 hover:bg-yellow-400 hover:text-gray-900'
+                      ? 'bg-amber-600 text-gray-900 cursor-default'
+                      : 'text-amber-600 hover:bg-amber-600 hover:text-gray-900'
                   }
                   sm:text-sm text-xs
                   sm:min-w-[36px] min-w-[28px]
@@ -109,12 +109,12 @@ const BlogPagination = ({ totalPages = 10, onPageChange }) => {
             className="
               flex items-center justify-center
               p-2 sm:p-2
-              rounded-md border border-yellow-400
-              text-yellow-400
-              hover:bg-yellow-400 hover:text-gray-900
+              rounded-md border border-amber-600
+              text-amber-600
+              hover:bg-amber-600 hover:text-gray-900
               transition-colors
               disabled:opacity-40 disabled:cursor-not-allowed
-              focus:outline-none focus:ring-2 focus:ring-yellow-400
+              focus:outline-none focus:ring-2 focus:ring-amber-600
               sm:text-base text-sm
             "
             aria-label="Next page"

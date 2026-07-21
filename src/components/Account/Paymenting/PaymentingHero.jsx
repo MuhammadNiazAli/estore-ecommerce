@@ -7,7 +7,7 @@ const PaymentingHero = () => {
     <section
       role="region"
       aria-labelledby="payment-hero-title"
-      className="w-full max-w-[900px] mx-auto px-6 py-12 lg:py-16 my-[-30px] mb-5 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white rounded-3xl shadow-2xl overflow-hidden relative"
+      className="w-full max-w-[900px] mx-auto px-6 py-12 lg:py-16 my-[-30px] mb-5 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
@@ -16,7 +16,7 @@ const PaymentingHero = () => {
           <div className="flex justify-center lg:justify-start">
             <svg
               aria-hidden="true"
-              className="h-12 w-12 text-yellow-500 animate-pulse"
+              className="h-12 w-12 text-amber-700 animate-pulse"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -36,14 +36,14 @@ const PaymentingHero = () => {
             className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight"
           >
             Secure{' '}
-            <span className="text-yellow-400 underline decoration-yellow-300 decoration-4 underline-offset-4">
+            <span className="text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
               & Easy Payment
             </span>
             <br />
             Trusted. Simple. Protected.
           </h1>
 
-          <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
             Complete your payment quickly and securely with multiple trusted options. Your privacy and security are our top priority.
           </p>
 
@@ -51,7 +51,7 @@ const PaymentingHero = () => {
             <button
               type="button"
               onClick={() => alert('Proceeding to payment...')}
-              className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg shadow-yellow-600/40"
+              className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 focus-visible:ring-offset-2 text-gray-900 font-semibold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg shadow-amber-800/40"
             >
               Proceed to Pay
               <svg
@@ -72,11 +72,11 @@ const PaymentingHero = () => {
         {/* Right Visual */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-gray-800 border-4 border-yellow-500 shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center mb-30"
+            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-white border-4 border-amber-700 shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center mb-30"
             aria-hidden="true"
           >
             <svg
-              className="w-20 h-20 text-yellow-400"
+              className="w-20 h-20 text-amber-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

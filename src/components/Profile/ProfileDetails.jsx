@@ -83,45 +83,45 @@ const ProfileDetails = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12 max-w-[1200px] mx-auto rounded-lg"
+      className="w-full bg-white text-gray-900 px-4 sm:px-6 py-8 sm:py-12 max-w-[1200px] mx-auto rounded-lg"
       aria-label="User profile details"
     >
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-1">
+          <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
             Profile Details
           </h2>
-          <p className="text-sm sm:text-base text-gray-300 max-w-md">
+          <p className="text-sm sm:text-base text-gray-700 max-w-md">
             View and manage your personal information and contact details.
           </p>
         </div>
-        <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm sm:text-base select-none">
+        <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base select-none">
           <UserCircleIcon className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" />
           <span>Basic Info</span>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="w-full h-px bg-gray-700 mb-8" />
+      <div className="w-full h-px bg-white mb-8" />
 
       {/* User Info Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm sm:text-base">
         <div className="space-y-1">
-          <p className="text-gray-400">Full Name</p>
-          <p className="text-white font-medium">{profile.fullName}</p>
+          <p className="text-gray-600">Full Name</p>
+          <p className="text-gray-900 font-medium">{profile.fullName}</p>
         </div>
         <div className="space-y-1">
-          <p className="text-gray-400">Email Address</p>
-          <p className="text-white font-medium">{profile.email}</p>
+          <p className="text-gray-600">Email Address</p>
+          <p className="text-gray-900 font-medium">{profile.email}</p>
         </div>
         <div className="space-y-1">
-          <p className="text-gray-400">Phone Number</p>
-          <p className="text-white font-medium">{profile.phone}</p>
+          <p className="text-gray-600">Phone Number</p>
+          <p className="text-gray-900 font-medium">{profile.phone}</p>
         </div>
         <div className="space-y-1">
-          <p className="text-gray-400">Date of Birth</p>
-          <p className="text-white font-medium">
+          <p className="text-gray-600">Date of Birth</p>
+          <p className="text-gray-900 font-medium">
             {new Date(profile.dob).toLocaleDateString(undefined, {
               year: 'numeric',
               month: 'short',
@@ -135,7 +135,7 @@ const ProfileDetails = () => {
       <div className="mt-8 flex justify-center sm:justify-end">
         <button
           onClick={openModal}
-          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-yellow-500"
+          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-700"
           aria-label="Edit personal details"
           type="button"
         >
@@ -148,7 +148,7 @@ const ProfileDetails = () => {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4"
+            className="fixed inset-0 bg-white bg-opacity-70 flex items-center justify-center z-50 px-4"
             variants={modalBackdropVariants}
             initial="hidden"
             animate="visible"
@@ -162,7 +162,7 @@ const ProfileDetails = () => {
             }}
           >
             <motion.div
-              className="bg-gray-900 rounded-lg max-w-lg w-full p-6 relative"
+              className="bg-white rounded-lg max-w-lg w-full p-6 relative"
               variants={modalVariants}
               initial="hidden"
               animate="visible"
@@ -171,22 +171,22 @@ const ProfileDetails = () => {
             >
               <h3
                 id="edit-profile-title"
-                className="text-2xl font-bold text-yellow-400 mb-4 select-none"
+                className="text-2xl font-bold text-amber-600 mb-4 select-none"
               >
                 Edit Profile Details
               </h3>
               <form onSubmit={handleSubmit} noValidate>
                 {/* Full Name */}
                 <label className="block mb-4">
-                  <span className="text-yellow-300 font-semibold">Full Name</span>
+                  <span className="text-amber-500 font-semibold">Full Name</span>
                   <input
                     type="text"
                     name="fullName"
                     value={form.fullName}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.fullName ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.fullName ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="Enter your full name"
                     aria-invalid={!!formErrors.fullName}
                     aria-describedby="error-fullName"
@@ -204,15 +204,15 @@ const ProfileDetails = () => {
 
                 {/* Email */}
                 <label className="block mb-4">
-                  <span className="text-yellow-300 font-semibold">Email Address</span>
+                  <span className="text-amber-500 font-semibold">Email Address</span>
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.email ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.email ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="Enter your email"
                     aria-invalid={!!formErrors.email}
                     aria-describedby="error-email"
@@ -230,15 +230,15 @@ const ProfileDetails = () => {
 
                 {/* Phone */}
                 <label className="block mb-4">
-                  <span className="text-yellow-300 font-semibold">Phone Number</span>
+                  <span className="text-amber-500 font-semibold">Phone Number</span>
                   <input
                     type="tel"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.phone ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.phone ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     placeholder="+31 6 12345678"
                     aria-invalid={!!formErrors.phone}
                     aria-describedby="error-phone"
@@ -256,15 +256,15 @@ const ProfileDetails = () => {
 
                 {/* Date of Birth */}
                 <label className="block mb-6">
-                  <span className="text-yellow-300 font-semibold">Date of Birth</span>
+                  <span className="text-amber-500 font-semibold">Date of Birth</span>
                   <input
                     type="date"
                     name="dob"
                     value={form.dob}
                     onChange={handleChange}
-                    className={`mt-1 block w-full rounded-md bg-gray-800 border ${
-                      formErrors.dob ? 'border-red-600' : 'border-yellow-400/50'
-                    } px-3 py-2 text-yellow-300 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                    className={`mt-1 block w-full rounded-md bg-white border ${
+                      formErrors.dob ? 'border-red-600' : 'border-amber-600/50'
+                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
                     aria-invalid={!!formErrors.dob}
                     aria-describedby="error-dob"
                     max={new Date().toISOString().split('T')[0]}
@@ -285,13 +285,13 @@ const ProfileDetails = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2 rounded-full bg-gray-700 text-yellow-400 font-semibold hover:bg-gray-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-full bg-yellow-400 text-gray-900 font-semibold hover:bg-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="px-5 py-2 rounded-full bg-amber-600 text-gray-900 font-semibold hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
                   >
                     Save Changes
                   </button>
@@ -302,7 +302,7 @@ const ProfileDetails = () => {
               <button
                 onClick={closeModal}
                 aria-label="Close edit profile modal"
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-yellow-400 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                 type="button"
               >
                 <XMarkIcon className="w-6 h-6" />

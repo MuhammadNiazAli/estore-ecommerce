@@ -62,20 +62,20 @@ const PressTestimonials = () => {
   const { name, role, company, quote, photo } = testimonials[currentIndex];
 
   return (
-    <section className="w-full bg-gray-900 px-4 sm:px-6 py-16 flex justify-center mb-[-50px]">
+    <section className="w-full bg-white px-4 sm:px-6 py-16 flex justify-center mb-[-50px]">
       <div className="w-full max-w-5xl text-center">
-        <h2 className="text-yellow-400 text-2xl sm:text-3xl md:text-4xl font-extrabold drop-shadow-lg">
+        <h2 className="text-amber-600 text-2xl sm:text-3xl md:text-4xl font-extrabold drop-shadow-lg">
           Testimonials
         </h2>
-        <p className="mt-3 sm:mt-4 text-yellow-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md mb-10">
+        <p className="mt-3 sm:mt-4 text-amber-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md mb-10">
           Hear what respected media professionals say about working with us.
         </p>
 
-        <div className="relative bg-gray-800 rounded-xl px-6 py-10 sm:px-10 sm:py-12 shadow-xl overflow-hidden mx-auto max-w-2xl">
+        <div className="relative bg-white rounded-xl px-6 py-10 sm:px-10 sm:py-12 shadow-xl overflow-hidden mx-auto max-w-2xl">
           {/* Animated Quote */}
           <blockquote
             ref={quoteRef}
-            className="text-yellow-300 italic text-base sm:text-lg md:text-xl leading-relaxed min-h-[100px] transition-opacity duration-300"
+            className="text-amber-500 italic text-base sm:text-lg md:text-xl leading-relaxed min-h-[100px] transition-opacity duration-300"
           >
             “{quote}”
           </blockquote>
@@ -85,13 +85,13 @@ const PressTestimonials = () => {
             <img
               src={photo}
               alt={name}
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-yellow-400 shadow-md"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-amber-600 shadow-md"
             />
             <div className="text-center sm:text-left">
-              <p className="text-yellow-400 font-semibold text-base sm:text-lg">
+              <p className="text-amber-600 font-semibold text-base sm:text-lg">
                 {name}
               </p>
-              <p className="text-yellow-300 text-sm sm:text-base">
+              <p className="text-amber-500 text-sm sm:text-base">
                 {role} – {company}
               </p>
             </div>
@@ -102,7 +102,7 @@ const PressTestimonials = () => {
             <button
               onClick={prevTestimonial}
               aria-label="Previous testimonial"
-              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-full w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shadow-md"
+              className="bg-amber-600 hover:bg-amber-500 text-gray-900 rounded-full w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shadow-md"
             >
               &#8592;
             </button>
@@ -111,7 +111,7 @@ const PressTestimonials = () => {
             <button
               onClick={nextTestimonial}
               aria-label="Next testimonial"
-              className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-full w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shadow-md"
+              className="bg-amber-600 hover:bg-amber-500 text-gray-900 rounded-full w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center shadow-md"
             >
               &#8594;
             </button>
@@ -124,7 +124,7 @@ const PressTestimonials = () => {
                 key={i}
                 onClick={() => setCurrentIndex(i)}
                 className={`w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? "bg-yellow-400 scale-110" : "bg-yellow-600"
+                  i === currentIndex ? "bg-amber-600 scale-110" : "bg-amber-800"
                 }`}
               />
             ))}

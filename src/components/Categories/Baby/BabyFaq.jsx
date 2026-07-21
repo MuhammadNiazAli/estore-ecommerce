@@ -93,17 +93,17 @@ const BabyFaq = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4 my-5">
+    <section className="bg-white text-amber-600 py-12 px-4 my-5">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center">Baby FAQs</h2>
         <div className="space-y-4">
           {faqs.map(({ id, question, answer }) => (
             <div
               key={id}
-              className="border border-yellow-500 rounded-lg overflow-hidden"
+              className="border border-amber-700 rounded-lg overflow-hidden"
             >
               <button
-                className="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg hover:bg-yellow-900 transition"
+                className="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg hover:bg-amber-950 transition"
                 onClick={() => toggleFaq(id)}
                 aria-expanded={activeIdRef.current === id}
                 aria-controls={`faq-answer-${id}`}
@@ -133,7 +133,7 @@ const BabyFaq = () => {
                 id={`faq-answer-${id}`}
                 role="region"
                 aria-labelledby={`faq-question-${id}`}
-                className="px-6 overflow-hidden text-yellow-300"
+                className="px-6 overflow-hidden text-amber-500"
                 style={{ display: "none", height: 0, opacity: 0 }}
               >
                 <p className="py-4">{answer}</p>

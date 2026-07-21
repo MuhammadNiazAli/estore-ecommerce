@@ -26,19 +26,19 @@ const ResponsibilitySubscribe = () => {
   return (
     <section
       aria-labelledby="subscribe-heading"
-      className="w-full bg-gray-900 flex justify-center px-4 py-16 sm:py-20 mb-[-150px] my-[-50px]"
+      className="w-full bg-white flex justify-center px-4 py-16 sm:py-20 mb-[-150px] my-[-50px]"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="w-full max-w-[1000px] bg-gray-800/40 backdrop-blur-md rounded-2xl p-8 sm:p-10 text-center"
+        className="w-full max-w-[1000px] bg-white/40 backdrop-blur-md rounded-2xl p-8 sm:p-10 text-center"
       >
         <h2
           id="subscribe-heading"
           className="
-            text-yellow-400 
+            text-amber-600 
             text-2xl sm:text-3xl md:text-4xl 
             font-bold 
             mb-4 
@@ -50,7 +50,7 @@ const ResponsibilitySubscribe = () => {
         >
           Stay Updated on Our Responsibility Efforts
         </h2>
-        <p className="text-gray-300 mb-8 max-w-xl mx-auto leading-relaxed">
+        <p className="text-gray-700 mb-8 max-w-xl mx-auto leading-relaxed">
           Subscribe to receive the latest news, updates, and impact stories straight to your inbox.
         </p>
 
@@ -68,7 +68,7 @@ const ResponsibilitySubscribe = () => {
             placeholder="Your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className={`flex-grow px-4 py-3 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-50 transition
+            className={`flex-grow px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-600 text-gray-800 transition
               ${error ? 'border-red-500 placeholder:text-red-400' : ''}`}
             aria-invalid={error ? 'true' : 'false'}
             aria-describedby={error ? 'email-error' : undefined}
@@ -78,7 +78,7 @@ const ResponsibilitySubscribe = () => {
           />
           <button
             type="submit"
-            className="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-shadow shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-60 select-none"
+            className="bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-shadow shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60 select-none"
             aria-live="polite"
           >
             Subscribe

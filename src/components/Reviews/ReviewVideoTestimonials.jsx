@@ -128,7 +128,7 @@ const VideoCard = ({ video, isHovered, onHover, onLeave }) => {
 
   return (
     <div
-      className="relative rounded-lg overflow-hidden shadow-lg bg-black cursor-pointer
+      className="relative rounded-lg overflow-hidden shadow-lg bg-white cursor-pointer
                  transition-transform duration-400 ease-in-out
                  focus:outline-none focus:ring-2 focus:ring-amber-400"
       aria-label={`Video testimonial: ${video.title}`}
@@ -164,7 +164,7 @@ const VideoCard = ({ video, isHovered, onHover, onLeave }) => {
 
       {/* Stars container with stagger animation */}
       <motion.div
-        className="absolute top-2 right-2 flex items-center bg-black/80 bg-opacity-60 rounded-full px-2 py-1
+        className="absolute top-2 right-2 flex items-center bg-white/80 bg-opacity-60 rounded-full px-2 py-1
                    shadow-md select-none pointer-events-none"
         variants={starsContainerVariants}
         initial="initial"
@@ -205,8 +205,8 @@ const ReviewVideoTestimonials = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <section className="w-full bg-gray-900 my-[-45px] py-16 px-4">
-      <div className="max-w-[1100px] mx-auto text-white">
+    <section className="w-full bg-white my-[-45px] py-16 px-4">
+      <div className="max-w-[1100px] mx-auto text-gray-900">
         <h3 className="text-3xl font-bold mb-12 text-center select-none">Video Testimonials</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

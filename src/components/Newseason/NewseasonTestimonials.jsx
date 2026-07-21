@@ -36,12 +36,12 @@ const testimonials = [
 
 const NewseasonTestimonials = () => {
   return (
-    <section className="bg-gray-900 py-16 px-6">
+    <section className="bg-white py-16 px-6">
       <div className="max-w-[1000px] mx-auto text-center">
-        <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-amber-600 text-3xl md:text-4xl font-bold mb-4">
           What Our Customers Say
         </h2>
-        <p className="text-yellow-200 text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-amber-400 text-lg mb-12 max-w-2xl mx-auto">
           Hear from our happy customers who love the new season collection.
         </p>
 
@@ -49,18 +49,18 @@ const NewseasonTestimonials = () => {
           {testimonials.map(({ id, name, role, review, image, rating }) => (
             <div
               key={id}
-              className="bg-gray-800 rounded-lg p-6 transition-all duration-300"
+              className="bg-white rounded-lg p-6 transition-all duration-300"
             >
               <div className="flex flex-col items-center mb-4">
                 <img
                   src={image}
                   alt={name}
-                  className="w-16 h-16 rounded-full border-2 border-yellow-400 mb-3"
+                  className="w-16 h-16 rounded-full border-2 border-amber-600 mb-3"
                 />
-                <h3 className="text-yellow-300 text-lg font-semibold">{name}</h3>
-                <p className="text-yellow-200 text-sm">{role}</p>
+                <h3 className="text-amber-500 text-lg font-semibold">{name}</h3>
+                <p className="text-amber-400 text-sm">{role}</p>
               </div>
-              <p className="text-yellow-100 text-sm mb-4">{review}</p>
+              <p className="text-amber-300 text-sm mb-4">{review}</p>
               <div className="flex justify-center space-x-1">
                 {[...Array(5)].map((_, index) => (
                   <Star
@@ -68,7 +68,7 @@ const NewseasonTestimonials = () => {
                     size={18}
                     className={`${
                       index < rating
-                        ? 'text-yellow-400 fill-yellow-400'
+                        ? 'text-amber-600 fill-amber-600'
                         : 'text-gray-500'
                     }`}
                   />

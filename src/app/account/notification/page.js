@@ -43,7 +43,7 @@ export default function NotificationPage() {
       : dummyNotifications.filter((n) => n.type === activeTab);
 
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col lg:flex-row max-w-[1200px] mx-auto pt-20 px-4 space-y-12 lg:space-y-0 lg:space-x-8">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col lg:flex-row max-w-[1200px] mx-auto pt-20 px-4 space-y-12 lg:space-y-0 lg:space-x-8">
       <AccountSidebar />
 
       <div className="flex-1 space-y-10">

@@ -5,42 +5,42 @@ import { FaHandsHelping, FaUserShield, FaEnvelopeOpenText, FaTimes } from 'react
 
 const accountHelpFeatures = [
   {
-    icon: <FaUserShield className="text-yellow-400 text-base" />,
+    icon: <FaUserShield className="text-amber-600 text-base" />,
     label: 'Secure Account Management',
   },
   {
-    icon: <FaEnvelopeOpenText className="text-yellow-400 text-base" />,
+    icon: <FaEnvelopeOpenText className="text-amber-600 text-base" />,
     label: 'Update Contact Information',
   },
   {
-    icon: <FaHandsHelping className="text-yellow-400 text-base" />,
+    icon: <FaHandsHelping className="text-amber-600 text-base" />,
     label: 'Support for Account Issues',
   },
 ];
 
 const accountSettingsContent = (
-  <div className="text-center text-xs text-gray-300 space-y-3">
-    <h3 className="text-lg font-semibold text-yellow-400">Account Settings Guide</h3>
+  <div className="text-center text-xs text-gray-700 space-y-3">
+    <h3 className="text-lg font-semibold text-amber-600">Account Settings Guide</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Change your password securely.</li>
       <li>Update your email, phone number, or username.</li>
       <li>Enable 2-factor authentication for extra protection.</li>
       <li>Manage login activity across devices.</li>
     </ul>
-    <p className="pt-2 text-xs text-gray-400">Need further assistance? Use the support button below.</p>
+    <p className="pt-2 text-xs text-gray-600">Need further assistance? Use the support button below.</p>
   </div>
 );
 
 const contactSupportContent = (
-  <div className="text-center text-xs text-gray-300 space-y-3">
-    <h3 className="text-lg font-semibold text-yellow-400">Contact Support</h3>
+  <div className="text-center text-xs text-gray-700 space-y-3">
+    <h3 className="text-lg font-semibold text-amber-600">Contact Support</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Describe your issue clearly for faster assistance.</li>
       <li>Include screenshots or error codes if applicable.</li>
       <li>Response time is typically within 24 hours.</li>
       <li>Support is available 24/7 via email or live chat.</li>
     </ul>
-    <p className="pt-2 text-xs text-gray-400">We’re here to help you resolve account-related issues quickly.</p>
+    <p className="pt-2 text-xs text-gray-600">We’re here to help you resolve account-related issues quickly.</p>
   </div>
 );
 
@@ -54,17 +54,17 @@ export default function HelpingAccount() {
   return (
     <section
       aria-label="Account help and support"
-      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white rounded-3xl shadow-2xl overflow-hidden relative"
+      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center">
-        <h2 className="text-3xl font-extrabold text-yellow-400 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
           Account Support Center
         </h2>
-        <p className="text-gray-300 max-w-md mx-auto text-sm">
+        <p className="text-gray-700 max-w-md mx-auto text-sm">
           Manage your account with confidence. Update your details, secure your profile, and get help anytime you need it.
         </p>
 
-        <ul className="flex flex-col sm:flex-row justify-center gap-6 text-gray-400 font-medium text-xs max-w-md mx-auto">
+        <ul className="flex flex-col sm:flex-row justify-center gap-6 text-gray-600 font-medium text-xs max-w-md mx-auto">
           {accountHelpFeatures.map(({ icon, label }, idx) => (
             <li
               key={idx}
@@ -83,8 +83,8 @@ export default function HelpingAccount() {
             onClick={() => handleSectionToggle('settings')}
             className={`px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'settings'
-                ? 'bg-yellow-300 text-black ring-yellow-300'
-                : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                ? 'bg-amber-500 text-black ring-amber-500'
+                : 'bg-amber-600 text-black hover:bg-amber-500'
             } text-sm`}
             aria-label="Toggle account settings section"
           >
@@ -95,8 +95,8 @@ export default function HelpingAccount() {
             onClick={() => handleSectionToggle('support')}
             className={`px-6 py-3 rounded-full border font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'support'
-                ? 'bg-white text-black ring-white'
-                : 'border-white text-white hover:bg-white hover:text-black'
+                ? 'bg-white text-black ring-gray-200'
+                : 'border-gray-200 text-gray-900 hover:bg-gray-100 hover:text-black'
             } text-sm`}
             aria-label="Toggle contact support section"
           >
@@ -105,10 +105,10 @@ export default function HelpingAccount() {
         </div>
 
         {activeSection && (
-          <div className="relative mt-8 p-6 bg-gray-900 border border-gray-700 rounded-xl transition-all duration-300 shadow-lg">
+          <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-400 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
               aria-label="Close section"
             >
               <FaTimes />

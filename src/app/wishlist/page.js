@@ -50,7 +50,7 @@ export default function WishlistPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-start px-4 sm:px-6 lg:px-20 py-12">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-start px-4 sm:px-6 lg:px-20 py-12">
 
       <div className="w-full max-w-7xl">
         <WishlistHero itemCount={sampleItems.length} />

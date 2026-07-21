@@ -31,7 +31,7 @@ const ManClothesNewsletter = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 py-12 px-6 md:px-16 rounded-3xl max-w-4xl mx-auto shadow-lg">
+    <section className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 py-12 px-6 md:px-16 rounded-3xl max-w-4xl mx-auto shadow-lg">
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-4xl font-extrabold text-gray-900 mb-3 drop-shadow-md">
           Join Our Newsletter
@@ -49,7 +49,7 @@ const ManClothesNewsletter = () => {
             type="email"
             aria-label="Email address"
             placeholder="Enter your email"
-            className={`w-full sm:w-auto flex-grow px-5 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-yellow-600 transition-shadow text-gray-900 font-semibold shadow-md ${
+            className={`w-full sm:w-auto flex-grow px-5 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-amber-800 transition-shadow text-gray-900 font-semibold shadow-md ${
               error ? "ring-2 ring-red-500" : ""
             }`}
             value={email}
@@ -57,7 +57,7 @@ const ManClothesNewsletter = () => {
           />
           <button
             type="submit"
-            className="bg-yellow-600 hover:bg-yellow-700 transition-colors text-white font-extrabold rounded-xl px-10 py-4 shadow-lg whitespace-nowrap"
+            className="bg-amber-800 hover:bg-amber-900 transition-colors text-gray-900 font-extrabold rounded-xl px-10 py-4 shadow-lg whitespace-nowrap"
           >
             Subscribe
           </button>

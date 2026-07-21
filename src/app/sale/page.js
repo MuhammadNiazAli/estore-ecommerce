@@ -15,7 +15,7 @@ import SaleFooter from '@/components/Sale/SaleFooter';
 
 export default function SalePage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 py-10 space-y-16 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 py-10 space-y-16 max-w-7xl mx-auto">
       <SaleHero />
       <SaleCountdown />     
       <SaleBanner />          

@@ -3194,7 +3194,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key={"full-" + i}
-        className="text-yellow-400 w-5 h-5"
+        className="text-amber-600 w-5 h-5"
         aria-hidden="true"
       />
     );
@@ -3203,7 +3203,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="half"
-        className="text-yellow-400 w-5 h-5"
+        className="text-amber-600 w-5 h-5"
         style={{ clipPath: "inset(0 50% 0 0)" }}
         aria-hidden="true"
       />
@@ -3214,7 +3214,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiOutlineStar
         key={"empty-" + i}
-        className="text-yellow-400 w-5 h-5"
+        className="text-amber-600 w-5 h-5"
         aria-hidden="true"
       />
     );
@@ -3299,8 +3299,8 @@ const ProductReviewsAdvanced = () => {
   };
 
   return (
-    <section className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-gray-900 rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-gray-100">Customer Reviews</h2>
+    <section className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-white rounded-xl shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">Customer Reviews</h2>
       <div className="space-y-8">
         {reviews.slice(0, visibleCount).map((review) => (
           <motion.div
@@ -3309,7 +3309,7 @@ const ProductReviewsAdvanced = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="bg-gray-800 rounded-lg p-6 shadow-md"
+            className="bg-white rounded-lg p-6 shadow-md"
           >
             <div className="flex flex-col sm:flex-row gap-4">
               <img
@@ -3320,12 +3320,12 @@ const ProductReviewsAdvanced = () => {
               />
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="font-semibold text-gray-100 text-lg">
+                  <h3 className="font-semibold text-gray-800 text-lg">
                     {review.user}
                   </h3>
                   <time
                     dateTime={review.date}
-                    className="text-sm text-gray-400 mt-1 sm:mt-0"
+                    className="text-sm text-gray-600 mt-1 sm:mt-0"
                   >
                     {review.date}
                   </time>
@@ -3333,21 +3333,21 @@ const ProductReviewsAdvanced = () => {
                 <div className="flex items-center mt-1">
                   {renderStars(review.rating)}
                 </div>
-                <p className="mt-3 text-gray-300 leading-relaxed whitespace-pre-wrap">
+                <p className="mt-3 text-gray-700 leading-relaxed whitespace-pre-wrap">
                   {review.text}
                 </p>
 
                 {/* Actions */}
-                <div className="mt-4 flex flex-wrap items-center space-x-4 text-gray-400">
+                <div className="mt-4 flex flex-wrap items-center space-x-4 text-gray-600">
                   <button
                     onClick={() => toggleLike(review.id)}
                     aria-label={
                       review.likedByUser ? "Unlike review" : "Like review"
                     }
-                    className="flex items-center gap-1 hover:text-yellow-400 transition"
+                    className="flex items-center gap-1 hover:text-amber-600 transition"
                   >
                     {review.likedByUser ? (
-                      <AiFillLike className="w-5 h-5 text-yellow-400" />
+                      <AiFillLike className="w-5 h-5 text-amber-600" />
                     ) : (
                       <AiOutlineLike className="w-5 h-5" />
                     )}
@@ -3395,7 +3395,7 @@ const ProductReviewsAdvanced = () => {
                         onChange={(e) => setReplyText(e.target.value)}
                         placeholder="Write your reply..."
                         rows={3}
-                        className="w-full rounded-md border border-gray-600 p-2 text-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full rounded-md border border-gray-200 p-2 text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                       />
                       <div className="mt-2 flex justify-end gap-2">
@@ -3405,13 +3405,13 @@ const ProductReviewsAdvanced = () => {
                             setReplyingTo(null);
                             setReplyText("");
                           }}
-                          className="px-4 py-2 rounded-md border border-gray-500 text-gray-300 hover:bg-gray-700 transition"
+                          className="px-4 py-2 rounded-md border border-gray-500 text-gray-700 hover:bg-gray-50 transition"
                         >
                           Cancel
                         </button>
                         <button
                           type="submit"
-                          className="px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition"
+                          className="px-4 py-2 rounded-md bg-blue-600 text-gray-900 hover:bg-blue-700 transition"
                         >
                           Submit
                         </button>
@@ -3422,7 +3422,7 @@ const ProductReviewsAdvanced = () => {
 
                 {/* Replies */}
                 {review.replies.length > 0 && (
-                  <div className="mt-6 space-y-4 pl-6 border-l-2 border-gray-600">
+                  <div className="mt-6 space-y-4 pl-6 border-l-2 border-gray-200">
                     {review.replies.map((reply) => (
                       <motion.div
                         key={reply.id}
@@ -3440,31 +3440,31 @@ const ProductReviewsAdvanced = () => {
                         />
                         <div className="flex-1">
                           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <h4 className="font-semibold text-gray-100 text-md">
+                            <h4 className="font-semibold text-gray-800 text-md">
                               {reply.user}
                             </h4>
                             <time
                               dateTime={reply.date}
-                              className="text-xs text-gray-400 mt-1 sm:mt-0"
+                              className="text-xs text-gray-600 mt-1 sm:mt-0"
                             >
                               {reply.date}
                             </time>
                           </div>
-                          <p className="mt-1 text-gray-300 leading-relaxed whitespace-pre-wrap">
+                          <p className="mt-1 text-gray-700 leading-relaxed whitespace-pre-wrap">
                             {reply.text}
                           </p>
 
                           {/* Reply Like & Share */}
-                          <div className="mt-2 flex items-center space-x-6 text-gray-400">
+                          <div className="mt-2 flex items-center space-x-6 text-gray-600">
                             <button
                               onClick={() => toggleLike(review.id, reply.id)}
                               aria-label={
                                 reply.likedByUser ? "Unlike reply" : "Like reply"
                               }
-                              className="flex items-center gap-1 hover:text-yellow-400 transition"
+                              className="flex items-center gap-1 hover:text-amber-600 transition"
                             >
                               {reply.likedByUser ? (
-                                <AiFillLike className="w-4 h-4 text-yellow-400" />
+                                <AiFillLike className="w-4 h-4 text-amber-600" />
                               ) : (
                                 <AiOutlineLike className="w-4 h-4" />
                               )}
@@ -3493,7 +3493,7 @@ const ProductReviewsAdvanced = () => {
         <div className="mt-8 flex justify-center">
           <button
             onClick={showMore}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition"
+            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 rounded-md transition"
           >
             Show More Reviews
           </button>

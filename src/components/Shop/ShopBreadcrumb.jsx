@@ -14,11 +14,11 @@ const breadcrumbItems = [
 const ShopBreadcrumb = () => {
   return (
     <nav
-      className="w-full bg-gray-950 py-4 px-4 sm:px-6 border-b border-gray-800 shadow-sm"
+      className="w-full bg-white py-4 px-4 sm:px-6 border-b border-gray-200 shadow-sm"
       aria-label="Breadcrumb"
     >
       <div
-        className="max-w-[1000px] mx-auto flex items-center gap-2 text-gray-400 overflow-x-auto whitespace-nowrap no-scrollbar"
+        className="max-w-[1000px] mx-auto flex items-center gap-2 text-gray-600 overflow-x-auto whitespace-nowrap no-scrollbar"
         role="list"
       >
         <style>{`
@@ -46,7 +46,7 @@ const ShopBreadcrumb = () => {
                 className={`font-medium transition-colors duration-200 ${
                   isLast
                     ? 'text-amber-400 cursor-default pointer-events-none'
-                    : 'text-gray-300 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded'
+                    : 'text-gray-700 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded'
                 } text-xs sm:text-sm`}
                 tabIndex={isLast ? -1 : 0}
                 aria-current={isLast ? 'page' : undefined}

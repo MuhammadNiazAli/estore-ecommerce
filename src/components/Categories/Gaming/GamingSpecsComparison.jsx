@@ -43,9 +43,9 @@ const specsData = [
 const GamingSpecsComparison = () => {
   return (
     <section className="w-full flex justify-center px-4 py-10 my-[-50px]">
-      <div className="max-w-[1000px] w-full bg-gray-900 rounded-2xl shadow-xl p-6 md:p-10 text-gray-100">
+      <div className="max-w-[1000px] w-full bg-white rounded-2xl shadow-xl p-6 md:p-10 text-gray-800">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 text-center mb-8">
           Gaming Specs Comparison
         </h2>
 
@@ -53,12 +53,12 @@ const GamingSpecsComparison = () => {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-sm md:text-base">
             <thead>
-              <tr className="bg-gray-800 text-yellow-300">
+              <tr className="bg-white text-amber-500">
                 <th className="p-3 text-left">Specs</th>
                 {specsData.map((product, index) => (
                   <th key={index} className="p-3 text-center">
                     {product.name}
-                    <div className="text-yellow-400 font-semibold">
+                    <div className="text-amber-600 font-semibold">
                       {product.price}
                     </div>
                   </th>
@@ -70,12 +70,12 @@ const GamingSpecsComparison = () => {
                 <tr
                   key={rowIndex}
                   className={`${
-                    rowIndex % 2 === 0 ? "bg-gray-800" : "bg-gray-700"
-                  } hover:bg-gray-600 transition`}
+                    rowIndex % 2 === 0 ? "bg-white" : "bg-white"
+                  } hover:bg-gray-50 transition`}
                 >
-                  <td className="p-3 font-medium text-yellow-400">{specKey}</td>
+                  <td className="p-3 font-medium text-amber-600">{specKey}</td>
                   {specsData.map((product, colIndex) => (
-                    <td key={colIndex} className="p-3 text-center text-gray-300">
+                    <td key={colIndex} className="p-3 text-center text-gray-700">
                       {product.specs[specKey]}
                     </td>
                   ))}
@@ -87,7 +87,7 @@ const GamingSpecsComparison = () => {
 
         {/* CTA */}
         <div className="mt-8 text-center">
-          <button className="bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-yellow-300 transition-all">
+          <button className="bg-amber-600 text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-amber-500 transition-all">
             Shop Gaming Laptops
           </button>
         </div>

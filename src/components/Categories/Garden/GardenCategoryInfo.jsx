@@ -5,8 +5,8 @@ const GardenCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900 
-        text-yellow-400 
+        bg-white 
+        text-amber-600 
         max-w-[1000px] 
         w-full 
         mx-auto 
@@ -20,7 +20,7 @@ const GardenCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Welcome to our premium garden collection! Discover everything you need to cultivate a beautiful, thriving outdoor space — from tools and pots to plants and furniture.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         Grow your garden with quality products designed for every gardener’s needs.
       </p>
     </section>

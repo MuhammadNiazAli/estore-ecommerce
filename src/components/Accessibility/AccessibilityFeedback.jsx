@@ -23,9 +23,9 @@ const AccessibilityFeedback = () => {
   return (
     <section
       aria-labelledby="feedback-heading"
-      className="w-full bg-gray-900 flex justify-center px-4 py-12 sm:py-16"
+      className="w-full bg-white flex justify-center px-4 py-12 sm:py-16"
     >
-      <div className="max-w-[1000px] w-full text-yellow-400">
+      <div className="max-w-[1000px] w-full text-amber-600">
         <h2
           id="feedback-heading"
           className="text-3xl sm:text-4xl font-bold mb-8 text-center"
@@ -56,7 +56,7 @@ const AccessibilityFeedback = () => {
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={`w-10 h-10 cursor-pointer transition-colors duration-200 ${
-                      (hoverRating || rating) >= star ? 'text-yellow-400' : 'text-yellow-900'
+                      (hoverRating || rating) >= star ? 'text-amber-600' : 'text-amber-950'
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -78,14 +78,14 @@ const AccessibilityFeedback = () => {
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               placeholder="Share your thoughts or suggestions"
-              className="mt-1 w-full rounded-md bg-gray-800 border border-yellow-400 px-3 py-2 text-yellow-300 placeholder-yellow-600 resize-y focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"
+              className="mt-1 w-full rounded-md bg-white border border-amber-600 px-3 py-2 text-amber-500 placeholder-amber-800 resize-y focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-700 transition"
             />
           </label>
 
           <button
             type="submit"
             disabled={submitted}
-            className="self-center bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="self-center bg-amber-700 hover:bg-amber-800 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
             aria-live="polite"
           >
             {submitted ? 'Thanks for your feedback!' : 'Submit Feedback'}

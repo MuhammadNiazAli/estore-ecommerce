@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const WishlistEmpty = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
+    <section className="min-h-screen flex flex-col justify-center items-center bg-white px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,7 @@ const WishlistEmpty = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-snug"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-snug"
         >
           Your Wishlist is Empty
         </motion.h2>
@@ -39,7 +39,7 @@ const WishlistEmpty = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-4 text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-md mx-auto"
+          className="mt-4 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-md mx-auto"
         >
           Looks like you haven't added any favorites yet. Browse our collections and save what you love.
         </motion.p>

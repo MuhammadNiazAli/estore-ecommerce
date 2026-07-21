@@ -12,7 +12,7 @@ import ProductCallFooterCTA from '@/components/ProductCall/ProductCallFooterCTA'
 
 export default function ProductCallPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-center px-4 py-10 space-y-16">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-center px-4 py-10 space-y-16">
       <ProductCallHero />
       <ProductCallOverview />
       <ProductCallSteps />

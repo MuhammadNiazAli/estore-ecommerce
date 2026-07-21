@@ -200,7 +200,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
   return (
     <aside
       ref={sidebarRef}
-      className="relative w-full max-w-[350px] md:max-w-[1000px] my-10 bg-gray-900 p-6 text-gray-300 rounded-md border border-gray-700 flex flex-col"
+      className="relative w-full max-w-[350px] md:max-w-[1000px] my-10 bg-white p-6 text-gray-700 rounded-md border border-gray-200 flex flex-col"
       aria-label="Shop Sidebar Filters"
       style={{ minHeight: '500px' }}
     >
@@ -263,7 +263,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('categories')}
             aria-expanded={!collapsed.categories}
             aria-controls="categories-list"
-            className="w-full flex justify-between items-center text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
           >
             Categories
             {collapsed.categories ? <FiChevronDown /> : <FiChevronUp />}
@@ -278,7 +278,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   placeholder="Search categories..."
                   value={categorySearch}
                   onChange={(e) => setCategorySearch(e.target.value)}
-                  className="w-full pl-10 pr-3 py-2 rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
                 />
               </div>
               <ul
@@ -301,12 +301,12 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                         <input
                           id={`cat-${name}`}
                           type="checkbox"
-                          className="form-checkbox h-6 w-6 text-amber-400 bg-gray-800 rounded focus:ring-amber-400 transition duration-150"
+                          className="form-checkbox h-6 w-6 text-amber-400 bg-white rounded focus:ring-amber-400 transition duration-150"
                           checked={isChecked}
                           onChange={() => toggleCategory(name)}
                           aria-checked={isChecked}
                         />
-                        <span className="ml-4 text-lg text-gray-300 group-hover:text-amber-400 transition flex items-center">
+                        <span className="ml-4 text-lg text-gray-700 group-hover:text-amber-400 transition flex items-center">
                           {name}
                           <span className="ml-2 inline-block rounded-full bg-amber-500 text-black text-xs font-semibold px-2 py-0.5 select-none transition-transform transform group-hover:scale-110">
                             {count}
@@ -328,7 +328,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('price')}
             aria-expanded={!collapsed.price}
             aria-controls="price-range"
-            className="w-full flex justify-between items-center text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
           >
             Price Range ($)
             {collapsed.price ? <FiChevronDown /> : <FiChevronUp />}
@@ -349,13 +349,13 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   value={priceRange[0]}
                   onChange={(e) => handlePriceChange(e, 0)}
                   placeholder="Min"
-                  className={`w-1/2 rounded bg-gray-800 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
-                    inputErrors.min ? 'border-2 border-red-600' : 'border border-gray-700'
+                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
+                    inputErrors.min ? 'border-2 border-red-600' : 'border border-gray-200'
                   }`}
                   aria-invalid={inputErrors.min}
                   aria-describedby="price-min-error"
                 />
-                <span className="text-gray-400 font-semibold select-none">—</span>
+                <span className="text-gray-600 font-semibold select-none">—</span>
                 <input
                   type="number"
                   id="price-max"
@@ -364,8 +364,8 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   value={priceRange[1]}
                   onChange={(e) => handlePriceChange(e, 1)}
                   placeholder="Max"
-                  className={`w-1/2 rounded bg-gray-800 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
-                    inputErrors.max ? 'border-2 border-red-600' : 'border border-gray-700'
+                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
+                    inputErrors.max ? 'border-2 border-red-600' : 'border border-gray-200'
                   }`}
                   aria-invalid={inputErrors.max}
                   aria-describedby="price-max-error"
@@ -401,7 +401,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('brands')}
             aria-expanded={!collapsed.brands}
             aria-controls="brands-list"
-            className="w-full flex justify-between items-center text-xl font-semibold text-white mb-4 border-b border-gray-700 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
           >
             Brands
             {collapsed.brands ? <FiChevronDown /> : <FiChevronUp />}
@@ -416,7 +416,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   placeholder="Search brands..."
                   value={brandSearch}
                   onChange={(e) => setBrandSearch(e.target.value)}
-                  className="w-full pl-10 pr-3 py-2 rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
                 />
               </div>
               <ul
@@ -439,12 +439,12 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                         <input
                           id={`brand-${name}`}
                           type="checkbox"
-                          className="form-checkbox h-6 w-6 text-amber-400 bg-gray-800 rounded focus:ring-amber-400 transition duration-150"
+                          className="form-checkbox h-6 w-6 text-amber-400 bg-white rounded focus:ring-amber-400 transition duration-150"
                           checked={isChecked}
                           onChange={() => toggleBrand(name)}
                           aria-checked={isChecked}
                         />
-                        <span className="ml-4 text-lg text-gray-300 group-hover:text-amber-400 transition flex items-center">
+                        <span className="ml-4 text-lg text-gray-700 group-hover:text-amber-400 transition flex items-center">
                           {name}
                           <FilterBadge count={count} />
                         </span>
@@ -459,7 +459,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
       </div>
 
     
-      <div className="sticky bottom-0 bg-gray-900 pt-4 -mx-6 px-6 border-t border-gray-700">
+      <div className="sticky bottom-0 bg-white pt-4 -mx-6 px-6 border-t border-gray-200">
         <button
           type="button"
           onClick={handleApplyFilters}

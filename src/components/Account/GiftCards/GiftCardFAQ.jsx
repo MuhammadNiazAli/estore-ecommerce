@@ -58,7 +58,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle, idx }) => {
   };
 
   return (
-    <div className="py-4 border-b border-yellow-700 last:border-none">
+    <div className="py-4 border-b border-amber-900 last:border-none">
       <button
         ref={btnRef}
         type="button"
@@ -67,12 +67,12 @@ const FAQItem = ({ question, answer, isOpen, onToggle, idx }) => {
         id={`faq-header-${idx}`}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
-        className="flex w-full justify-between items-center text-left text-yellow-200 font-semibold text-lg hover:text-yellow-300 outline-none transition-colors duration-200"
+        className="flex w-full justify-between items-center text-left text-amber-400 font-semibold text-lg hover:text-amber-500 outline-none transition-colors duration-200"
       >
         <span>{question}</span>
         <span
           aria-hidden="true"
-          className={`text-yellow-300 transition-transform duration-300 ${
+          className={`text-amber-500 transition-transform duration-300 ${
             isOpen ? 'rotate-180' : 'rotate-0'
           }`}
         >
@@ -88,7 +88,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle, idx }) => {
         style={{ maxHeight }}
         ref={contentRef}
       >
-        <p className="mt-2 text-yellow-100 text-sm sm:text-base select-text">{answer}</p>
+        <p className="mt-2 text-amber-300 text-sm sm:text-base select-text">{answer}</p>
       </div>
     </div>
   );
@@ -104,10 +104,10 @@ const GiftCardFAQ = () => {
   return (
     <section
       aria-label="Frequently asked questions about gift cards"
-      className="max-w-[900px] mx-auto bg-gray-900 text-white rounded-3xl shadow-2xl p-8"
+      className="max-w-[900px] mx-auto bg-white text-gray-900 rounded-3xl shadow-2xl p-8"
     >
       <h2 className="text-3xl font-extrabold mb-6 flex items-center gap-3 select-none">
-        <FaQuestionCircle className="text-yellow-400" aria-hidden="true" />
+        <FaQuestionCircle className="text-amber-600" aria-hidden="true" />
         Gift Card FAQs
       </h2>
 

@@ -12,12 +12,12 @@ const ShoesNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4">
+    <section className="bg-white text-amber-600 py-12 px-4">
       <div className="max-w-md mx-auto text-center">
         <h2 className="text-3xl font-extrabold mb-4 tracking-wide">
           Stay Updated with Shoes Deals
         </h2>
-        <p className="mb-6 text-yellow-300">
+        <p className="mb-6 text-amber-500">
           Subscribe to get exclusive offers, new arrivals, and style tips.
         </p>
         <form
@@ -31,12 +31,12 @@ const ShoesNewsletterSignup = () => {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full sm:flex-1 px-4 py-3 rounded-md text-gray-50 bg-gray-800 font-medium focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400 transition"
+            className="w-full sm:flex-1 px-4 py-3 rounded-md text-gray-800 bg-white font-medium focus:outline-amber-700 focus:ring-2 focus:ring-amber-600 transition"
             aria-label="Email address"
           />
           <button
             type="submit"
-            className="w-full sm:w-auto px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold rounded-md transition"
+            className="w-full sm:w-auto px-6 py-3 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold rounded-md transition"
             aria-label="Subscribe to newsletter"
           >
             Subscribe

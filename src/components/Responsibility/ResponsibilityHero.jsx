@@ -108,14 +108,14 @@ const ResponsibilityHero = () => {
   };
 
   return (
-    <div className="bg-gray-900 w-full flex justify-center px-4 pt-12 pb-6 my-[-50px] mb-0">
+    <div className="bg-white w-full flex justify-center px-4 pt-12 pb-6 my-[-50px] mb-0">
       <div className="w-full max-w-[1000px] text-center">
         {/* Glass-Blur Layer */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="backdrop-blur-sm bg-gray-800/30 rounded-2xl p-6 sm:p-10 border border-gray-700"
+          className="backdrop-blur-sm bg-white/30 rounded-2xl p-6 sm:p-10 border border-gray-200"
           aria-label="Responsibility section"
         >
           {/* Subtitle */}
@@ -123,7 +123,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-yellow-400 uppercase text-xs sm:text-sm tracking-widest font-semibold mb-3"
+            className="text-amber-600 uppercase text-xs sm:text-sm tracking-widest font-semibold mb-3"
           >
             Responsibility
           </motion.p>
@@ -133,7 +133,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-4 px-2 sm:px-0"
+            className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 px-2 sm:px-0"
           >
             Building a Responsible Future Together
           </motion.h1>
@@ -143,7 +143,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base md:text-lg mb-6 px-2 sm:px-0 leading-relaxed"
+            className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base md:text-lg mb-6 px-2 sm:px-0 leading-relaxed"
           >
             We are committed to sustainable practices, ethical innovation, and social impact.
             Discover how we're making a difference and how you can be part of the journey.
@@ -154,7 +154,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold text-sm sm:text-base px-5 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
+            className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-5 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
             onClick={openModal}
             aria-haspopup="dialog"
             aria-expanded={isModalOpen}
@@ -168,7 +168,7 @@ const ResponsibilityHero = () => {
         <AnimatePresence>
           {isModalOpen && (
             <motion.div
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4 sm:p-6"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-70 p-4 sm:p-6"
               variants={modalBackdropVariants}
               initial="hidden"
               animate="visible"
@@ -179,7 +179,7 @@ const ResponsibilityHero = () => {
               aria-describedby="modal-desc"
             >
               <motion.div
-                className="bg-gray-900 rounded-3xl max-w-full sm:max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl border border-gray-700"
+                className="bg-white rounded-3xl max-w-full sm:max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl border border-gray-200"
                 variants={modalContentVariants}
                 initial="hidden"
                 animate="visible"
@@ -190,7 +190,7 @@ const ResponsibilityHero = () => {
                 <button
                   onClick={closeModal}
                   aria-label="Close modal"
-                  className="absolute top-4 right-4 sm:top-5 sm:right-5 text-gray-400 hover:text-yellow-500 transition-colors focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute top-4 right-4 sm:top-5 sm:right-5 text-gray-600 hover:text-amber-700 transition-colors focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -200,19 +200,19 @@ const ResponsibilityHero = () => {
                   <>
                     <h2
                       id="modal-title"
-                      className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4 select-none px-2 sm:px-0"
+                      className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4 select-none px-2 sm:px-0"
                     >
                       Our Responsibility Commitment
                     </h2>
 
                     <p
                       id="modal-desc"
-                      className="text-gray-300 mb-6 leading-relaxed px-2 sm:px-0 text-sm sm:text-base md:text-lg"
+                      className="text-gray-700 mb-6 leading-relaxed px-2 sm:px-0 text-sm sm:text-base md:text-lg"
                     >
                       At our core, we believe in building a sustainable future that benefits all. Our efforts focus on three key pillars:
                     </p>
 
-                    <ul className="list-disc list-inside text-gray-400 mb-8 space-y-3 px-4 sm:px-6 md:px-0 text-sm sm:text-base md:text-lg">
+                    <ul className="list-disc list-inside text-gray-600 mb-8 space-y-3 px-4 sm:px-6 md:px-0 text-sm sm:text-base md:text-lg">
                       <li>
                         <strong>Sustainable Practices:</strong> We minimize environmental impact through energy-efficient processes and responsible sourcing.
                       </li>
@@ -227,7 +227,7 @@ const ResponsibilityHero = () => {
                     <div className="text-center">
                       <button
                         onClick={() => setShowStayUpdatedForm(true)}
-                        className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
+                        className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
                       >
                         Stay Updated
                         <ArrowRight className="w-5 h-5" />
@@ -245,9 +245,9 @@ const ResponsibilityHero = () => {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -50 }}
                       transition={{ duration: 0.4 }}
-                      className="text-gray-300 px-2 sm:px-0"
+                      className="text-gray-700 px-2 sm:px-0"
                     >
-                      <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4 select-none">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4 select-none">
                         Stay Updated
                       </h2>
 
@@ -269,7 +269,7 @@ const ResponsibilityHero = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@example.com"
-                            className={`w-full p-3 rounded-md text-gray-900 focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400 transition-colors text-sm sm:text-base ${
+                            className={`w-full p-3 rounded-md text-gray-900 focus:outline-amber-700 focus:ring-2 focus:ring-amber-600 transition-colors text-sm sm:text-base ${
                               emailError
                                 ? 'border-2 border-red-500'
                                 : 'border border-gray-300'
@@ -292,7 +292,7 @@ const ResponsibilityHero = () => {
                           <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isSubmitting ? (
                               <svg
@@ -335,7 +335,7 @@ const ResponsibilityHero = () => {
                           </p>
                           <button
                             onClick={closeModal}
-                            className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2"
+                            className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
                           >
                             Close
                             <X className="w-5 h-5" />

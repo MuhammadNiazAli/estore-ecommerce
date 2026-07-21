@@ -74,7 +74,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={`full-${i}`}
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -84,7 +84,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-yellow-400"
+          className="w-4 h-4 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -119,7 +119,7 @@ const StarRating = ({ rating }) => {
 const NewarrivalsGrid = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h2 className="text-4xl font-extrabold text-gray-100 mb-12 text-center tracking-tight">
+      <h2 className="text-4xl font-extrabold text-gray-800 mb-12 text-center tracking-tight">
         New Arrivals
       </h2>
 
@@ -128,7 +128,7 @@ const NewarrivalsGrid = () => {
           ({ id, title, price, oldPrice, rating, description, image }) => (
             <article
               key={id}
-              className="group relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl flex flex-col"
+              className="group relative bg-white rounded-xl overflow-hidden shadow-2xl flex flex-col"
             >
               {/* Image */}
               <div className="aspect-w-4 aspect-h-3 overflow-hidden rounded-t-xl flex-shrink-0">
@@ -144,7 +144,7 @@ const NewarrivalsGrid = () => {
               <div className="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 <button
                   aria-label="Add to Favorites"
-                  className="bg-yellow-500 text-gray-900 p-2 rounded-full shadow-md hover:bg-yellow-400 transition"
+                  className="bg-amber-700 text-gray-900 p-2 rounded-full shadow-md hover:bg-amber-600 transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ const NewarrivalsGrid = () => {
                 </button>
                 <button
                   aria-label="View Details"
-                  className="bg-yellow-500 text-gray-900 p-2 rounded-full shadow-md hover:bg-yellow-400 transition"
+                  className="bg-amber-700 text-gray-900 p-2 rounded-full shadow-md hover:bg-amber-600 transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -179,16 +179,16 @@ const NewarrivalsGrid = () => {
 
               {/* Info */}
               <div className="p-5 flex flex-col flex-grow space-y-3">
-                <h3 className="text-xl font-semibold text-yellow-400 group-hover:text-yellow-300 transition-colors">
+                <h3 className="text-xl font-semibold text-amber-600 group-hover:text-amber-500 transition-colors">
                   {title}
                 </h3>
 
-                <p className="text-gray-300 text-sm line-clamp-3 flex-grow">{description}</p>
+                <p className="text-gray-700 text-sm line-clamp-3 flex-grow">{description}</p>
 
                 <StarRating rating={rating} />
 
                 <div className="flex items-center space-x-3">
-                  <p className="text-yellow-500 font-bold text-lg">${price.toFixed(2)}</p>
+                  <p className="text-amber-700 font-bold text-lg">${price.toFixed(2)}</p>
                   {oldPrice && (
                     <p className="text-gray-500 line-through text-sm">${oldPrice.toFixed(2)}</p>
                   )}
@@ -201,7 +201,7 @@ const NewarrivalsGrid = () => {
 
                 <button
                   type="button"
-                  className="mt-3 w-full bg-yellow-500 text-gray-900 font-semibold py-2 rounded-lg shadow-md hover:bg-yellow-400 transition"
+                  className="mt-3 w-full bg-amber-700 text-gray-900 font-semibold py-2 rounded-lg shadow-md hover:bg-amber-600 transition"
                 >
                   Add to Cart
                 </button>

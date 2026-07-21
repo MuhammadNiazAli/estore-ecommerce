@@ -76,12 +76,12 @@ const WatchesFaq = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-gray-50 py-14 px-4 my-[-50px]">
+    <section className="bg-white text-gray-800 py-14 px-4 my-[-50px]">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-600 mt-2">
             Everything you need to know about luxury watches
           </p>
         </div>
@@ -91,7 +91,7 @@ const WatchesFaq = () => {
           {faqs.map((faq) => (
             <div
               key={faq.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-lg transition"
+              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition"
             >
               <button
                 onClick={() => toggleFAQ(faq.id)}
@@ -100,7 +100,7 @@ const WatchesFaq = () => {
                 <span className="text-lg font-medium">{faq.question}</span>
                 <ChevronDownIcon
                   className={`h-6 w-6 transform transition-transform duration-300 ${
-                    activeId === faq.id ? "rotate-180 text-yellow-400" : "text-gray-400"
+                    activeId === faq.id ? "rotate-180 text-amber-600" : "text-gray-600"
                   }`}
                 />
               </button>
@@ -109,7 +109,7 @@ const WatchesFaq = () => {
               <div
                 ref={(el) => (refs.current[faq.id] = el)}
                 style={{ height: 0, overflow: "hidden", opacity: 0 }}
-                className="px-5 text-gray-300 text-sm leading-relaxed"
+                className="px-5 text-gray-700 text-sm leading-relaxed"
               >
                 {faq.answer}
               </div>
@@ -119,10 +119,10 @@ const WatchesFaq = () => {
 
         {/* CTA */}
         <div className="text-center mt-10">
-          <p className="text-gray-400 mb-3">Still have questions?</p>
+          <p className="text-gray-600 mb-3">Still have questions?</p>
           <a
             href="/contact"
-            className="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 transition"
+            className="inline-block bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-500 transition"
           >
             Contact Support
           </a>

@@ -15,7 +15,7 @@ import FaqsContact from '@/components/Faqs/FaqsContact';
 
 export default function FaqsPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-start px-6 py-12 lg:py-20 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-start px-6 py-12 lg:py-20 max-w-7xl mx-auto">
       <FaqsHero />
       <FaqsSearchBar />
       <FaqsCategoryFilter />

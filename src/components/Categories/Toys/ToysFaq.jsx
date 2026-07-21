@@ -72,8 +72,8 @@ const ToysFaq = () => {
   };
 
   return (
-    <section className="max-w-[800px] mx-auto p-6 bg-gray-900 text-white rounded-lg shadow-lg my-12 my-[-30px]">
-      <h2 className="text-3xl font-bold mb-8 text-yellow-400 text-center">
+    <section className="max-w-[800px] mx-auto p-6 bg-white text-gray-900 rounded-lg shadow-lg my-12 my-[-30px]">
+      <h2 className="text-3xl font-bold mb-8 text-amber-600 text-center">
         Frequently Asked Questions
       </h2>
 
@@ -81,12 +81,12 @@ const ToysFaq = () => {
         {faqData.map(({ id, question, answer }, i) => (
           <div
             key={id}
-            className="border border-gray-700 rounded-md overflow-hidden"
+            className="border border-gray-200 rounded-md overflow-hidden"
           >
             <button
               onClick={() => toggleFaq(id)}
-              className={`w-full text-left px-5 py-4 bg-gray-800 hover:bg-gray-700 focus:outline-none flex justify-between items-center ${
-                activeId === id ? "font-semibold text-yellow-400" : "font-medium"
+              className={`w-full text-left px-5 py-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center ${
+                activeId === id ? "font-semibold text-amber-600" : "font-medium"
               }`}
               aria-expanded={activeId === id}
               aria-controls={`faq-content-${id}`}
@@ -112,7 +112,7 @@ const ToysFaq = () => {
               aria-labelledby={`faq-header-${id}`}
               ref={(el) => (contentRefs.current[i] = el)}
               style={{ height: 0, opacity: 0, overflow: "hidden", padding: 0 }}
-              className="px-5 text-gray-300"
+              className="px-5 text-gray-700"
             >
               <p>{answer}</p>
             </div>

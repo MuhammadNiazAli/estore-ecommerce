@@ -67,17 +67,17 @@ const ToysSpecsComparison = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 rounded-xl mt-10">
+    <section className="bg-white text-gray-900 py-10 px-4 rounded-xl mt-10">
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Header */}
-        <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-amber-600 mb-6">
           Compare Toy Specifications
         </h2>
 
         {/* ✅ Add Toy Dropdown */}
         <div className="flex gap-3 mb-6 flex-wrap">
           <select
-            className="bg-gray-800 text-white px-4 py-2 rounded-md border border-gray-700"
+            className="bg-white text-gray-900 px-4 py-2 rounded-md border border-gray-200"
             onChange={(e) => addToy(parseInt(e.target.value))}
           >
             <option value="">Add a toy to compare</option>
@@ -92,12 +92,12 @@ const ToysSpecsComparison = () => {
         {/* ✅ Responsive Comparison Table */}
         <div className="overflow-x-auto">
           <motion.table
-            className="min-w-[700px] w-full border border-gray-700 rounded-lg overflow-hidden"
+            className="min-w-[700px] w-full border border-gray-200 rounded-lg overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <thead className="bg-gray-800 text-yellow-400">
+            <thead className="bg-white text-amber-600">
               <tr>
                 <th className="p-3 text-left">Specs</th>
                 {selectedToys.map((toy) => (
@@ -110,7 +110,7 @@ const ToysSpecsComparison = () => {
                       />
                       <p className="font-semibold">{toy.name}</p>
                       <button
-                        className="absolute top-2 right-2 bg-red-500 hover:bg-red-400 text-white p-1 rounded-full text-xs"
+                        className="absolute top-2 right-2 bg-red-500 hover:bg-red-400 text-gray-900 p-1 rounded-full text-xs"
                         onClick={() => removeToy(toy.id)}
                       >
                         <FaTrash />
@@ -121,7 +121,7 @@ const ToysSpecsComparison = () => {
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-gray-700">
+              <tr className="border-b border-gray-200">
                 <td className="p-3 font-semibold">Brand</td>
                 {selectedToys.map((toy) => (
                   <td key={toy.id} className="p-3 text-center">
@@ -129,7 +129,7 @@ const ToysSpecsComparison = () => {
                   </td>
                 ))}
               </tr>
-              <tr className="border-b border-gray-700">
+              <tr className="border-b border-gray-200">
                 <td className="p-3 font-semibold">Price</td>
                 {selectedToys.map((toy) => (
                   <td key={toy.id} className="p-3 text-center">
@@ -137,7 +137,7 @@ const ToysSpecsComparison = () => {
                   </td>
                 ))}
               </tr>
-              <tr className="border-b border-gray-700">
+              <tr className="border-b border-gray-200">
                 <td className="p-3 font-semibold">Material</td>
                 {selectedToys.map((toy) => (
                   <td key={toy.id} className="p-3 text-center">
@@ -145,7 +145,7 @@ const ToysSpecsComparison = () => {
                   </td>
                 ))}
               </tr>
-              <tr className="border-b border-gray-700">
+              <tr className="border-b border-gray-200">
                 <td className="p-3 font-semibold">Features</td>
                 {selectedToys.map((toy) => (
                   <td key={toy.id} className="p-3 text-center">

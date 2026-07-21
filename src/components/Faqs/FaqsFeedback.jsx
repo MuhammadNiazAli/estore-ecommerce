@@ -47,26 +47,26 @@ const FaqsFeedback = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4 sm:px-6 lg:px-8 rounded-md shadow-md max-w-7xl mx-auto relative overflow-hidden my-10">
+    <section className="bg-white text-amber-600 py-12 px-4 sm:px-6 lg:px-8 rounded-md shadow-md max-w-7xl mx-auto relative overflow-hidden my-10">
       {/* Desktop Gradient Overlay */}
-      <div className="hidden md:block absolute inset-0 bg-[linear-gradient(135deg,#111214,#0D0E10,#08090B)] opacity-90"></div>
+      <div className="hidden md:block absolute inset-0 bg-white opacity-90"></div>
 
-      <h2 className="text-3xl font-bold mb-10 text-yellow-300 text-center relative z-10">
+      <h2 className="text-3xl font-bold mb-10 text-amber-500 text-center relative z-10">
         Share Your Feedback
       </h2>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left: Feedback Form */}
-        <div className="bg-gray-800 md:bg-black/40 md:backdrop-blur-xl rounded-xl p-6 shadow-2xl">
+        <div className="bg-white md:bg-white/40 md:backdrop-blur-xl rounded-xl p-6 shadow-2xl">
           {submitted && (
             <div
               role="alert"
-              className="bg-yellow-700 text-gray-900 p-4 rounded-md text-center mb-6"
+              className="bg-amber-900 text-gray-900 p-4 rounded-md text-center mb-6"
             >
               Thank you for your feedback!
               <button
                 onClick={() => setSubmitted(false)}
-                className="ml-4 mt-2 sm:mt-0 px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 transition"
+                className="ml-4 mt-2 sm:mt-0 px-4 py-2 bg-amber-700 hover:bg-amber-800 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition"
               >
                 Submit Another
               </button>
@@ -78,7 +78,7 @@ const FaqsFeedback = () => {
             <div className="mb-4">
               <label
                 htmlFor="feedback-name"
-                className="block mb-1 font-semibold text-yellow-300"
+                className="block mb-1 font-semibold text-amber-500"
               >
                 Name <span className="text-red-500">*</span>
               </label>
@@ -88,14 +88,14 @@ const FaqsFeedback = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-yellow-600 text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                className="w-full px-4 py-3 rounded-md bg-white border border-amber-800 text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
                 required
               />
             </div>
 
             {/* Rating */}
             <div className="mb-4">
-              <span className="block mb-1 font-semibold text-yellow-300">
+              <span className="block mb-1 font-semibold text-amber-500">
                 Rating <span className="text-red-500">*</span>
               </span>
               <div className="flex space-x-2" role="radiogroup" aria-label="Rating">
@@ -110,8 +110,8 @@ const FaqsFeedback = () => {
                     role="radio"
                     className={`text-3xl transition transform hover:scale-125 ${
                       (hoverRating || rating) >= star
-                        ? 'text-yellow-400'
-                        : 'text-yellow-700'
+                        ? 'text-amber-600'
+                        : 'text-amber-900'
                     }`}
                   >
                     ★
@@ -124,7 +124,7 @@ const FaqsFeedback = () => {
             <div className="mb-4">
               <label
                 htmlFor="feedback-comment"
-                className="block mb-1 font-semibold text-yellow-300"
+                className="block mb-1 font-semibold text-amber-500"
               >
                 Comment <span className="text-red-500">*</span>
               </label>
@@ -134,7 +134,7 @@ const FaqsFeedback = () => {
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 placeholder="Write your feedback here..."
-                className="w-full px-4 py-3 rounded-md bg-gray-900 border border-yellow-600 text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none"
+                className="w-full px-4 py-3 rounded-md bg-white border border-amber-800 text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition resize-none"
                 required
               />
             </div>
@@ -154,7 +154,7 @@ const FaqsFeedback = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 mt-4 rounded-md font-semibold bg-yellow-500 hover:bg-yellow-600 text-gray-900 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                className="w-full sm:w-auto px-8 py-3 mt-4 rounded-md font-semibold bg-amber-700 hover:bg-amber-800 text-gray-900 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
               >
                 Submit Feedback
               </button>
@@ -163,27 +163,27 @@ const FaqsFeedback = () => {
         </div>
 
         {/* Right: Previous Feedback */}
-        <div className="hidden md:flex flex-col gap-6 bg-black/40 backdrop-blur-xl rounded-xl p-6 shadow-2xl">
-          <h3 className="text-2xl font-bold mb-4 text-yellow-300">
+        <div className="hidden md:flex flex-col gap-6 bg-white/40 backdrop-blur-xl rounded-xl p-6 shadow-2xl">
+          <h3 className="text-2xl font-bold mb-4 text-amber-500">
             Recent Feedback
           </h3>
           {feedbacks.length === 0 ? (
-            <p className="italic text-yellow-300">No feedback yet.</p>
+            <p className="italic text-amber-500">No feedback yet.</p>
           ) : (
             <ul className="space-y-6 overflow-y-auto max-h-[500px] custom-scrollbar">
               {feedbacks.map(({ id, name, rating, comment }) => (
                 <li
                   key={id}
-                  className="bg-yellow-900 bg-opacity-10 p-4 rounded-md border border-yellow-700 hover:shadow-lg transition"
+                  className="bg-amber-950 bg-opacity-10 p-4 rounded-md border border-amber-900 hover:shadow-lg transition"
                 >
                   <div className="flex items-center mb-2 justify-between">
-                    <p className="font-semibold text-yellow-400">{name}</p>
+                    <p className="font-semibold text-amber-600">{name}</p>
                     <div className="flex">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <span
                           key={star}
                           className={`text-lg ${
-                            star <= rating ? 'text-yellow-400' : 'text-yellow-700'
+                            star <= rating ? 'text-amber-600' : 'text-amber-900'
                           }`}
                           aria-hidden="true"
                         >
@@ -192,7 +192,7 @@ const FaqsFeedback = () => {
                       ))}
                     </div>
                   </div>
-                  <p className="text-yellow-300 whitespace-pre-wrap text-sm">{comment}</p>
+                  <p className="text-amber-500 whitespace-pre-wrap text-sm">{comment}</p>
                 </li>
               ))}
             </ul>

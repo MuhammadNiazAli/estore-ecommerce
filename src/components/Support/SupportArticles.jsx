@@ -27,7 +27,7 @@ const articles = [
 
 const SupportArticles = () => {
   return (
-    <section className="w-full px-6 py-16 bg-gray-900 text-white my-[-14px]">
+    <section className="w-full px-6 py-16 bg-white text-gray-900 my-[-14px]">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
           Helpful Articles
@@ -37,12 +37,12 @@ const SupportArticles = () => {
             <a
               key={idx}
               href={url}
-              className="block bg-gray-800 border border-gray-700 rounded-xl p-6 hover:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-md hover:shadow-xl"
+              className="block bg-white border border-gray-200 rounded-xl p-6 hover:bg-gray-50 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-md hover:shadow-xl"
             >
               <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
                 {title}
               </h3>
-              <p className="text-gray-300">{excerpt}</p>
+              <p className="text-gray-700">{excerpt}</p>
             </a>
           ))}
         </div>

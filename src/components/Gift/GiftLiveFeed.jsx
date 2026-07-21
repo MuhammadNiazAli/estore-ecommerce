@@ -72,8 +72,8 @@ export default function GiftLiveFeed() {
   console.log('feedItems:', feedItems);
 
   return (
-    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 bg-gray-900 rounded-3xl shadow-2xl text-white relative overflow-hidden">
-      <h2 className="text-yellow-400 text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight drop-shadow-md">
+    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 bg-white rounded-3xl shadow-2xl text-gray-900 relative overflow-hidden">
+      <h2 className="text-amber-600 text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight drop-shadow-md">
         Live Gift Activity Feed
       </h2>
 
@@ -88,28 +88,28 @@ export default function GiftLiveFeed() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
-                className="flex items-start sm:items-center gap-4 border-b border-yellow-500/20 py-4 px-1 sm:px-2 last:border-none group hover:bg-gray-800/30 rounded-md transition-colors duration-300"
+                className="flex items-start sm:items-center gap-4 border-b border-amber-700/20 py-4 px-1 sm:px-2 last:border-none group hover:bg-white/30 rounded-md transition-colors duration-300"
               >
-                <div className="bg-yellow-500/10 p-2 rounded-full shrink-0">
-                  <UserIcon className="w-7 h-7 sm:w-8 sm:h-8 text-yellow-400 group-hover:scale-105 transition-transform duration-200" />
+                <div className="bg-amber-700/10 p-2 rounded-full shrink-0">
+                  <UserIcon className="w-7 h-7 sm:w-8 sm:h-8 text-amber-600 group-hover:scale-105 transition-transform duration-200" />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-sm sm:text-base leading-snug">
-                    <span className="font-semibold text-yellow-400">{user}</span>{' '}
-                    <span className="text-white">{action}</span>{' '}
-                    <span className="font-semibold underline decoration-yellow-400 underline-offset-4 hover:text-yellow-300 transition cursor-pointer">
+                    <span className="font-semibold text-amber-600">{user}</span>{' '}
+                    <span className="text-gray-900">{action}</span>{' '}
+                    <span className="font-semibold underline decoration-amber-600 underline-offset-4 hover:text-amber-500 transition cursor-pointer">
                       {product}
                     </span>
                   </p>
-                  <span className="text-gray-400 text-xs mt-1">{time}</span>
+                  <span className="text-gray-600 text-xs mt-1">{time}</span>
                 </div>
               </motion.div>
             ))}
         </AnimatePresence>
 
         {/* Fades for top/bottom edge */}
-        <div className="pointer-events-none absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-gray-900 to-transparent z-10" />
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900 to-transparent z-10" />
+        <div className="pointer-events-none absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent z-10" />
       </div>
     </section>
   );

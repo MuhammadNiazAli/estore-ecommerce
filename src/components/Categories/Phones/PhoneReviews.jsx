@@ -9,7 +9,7 @@ import 'swiper/css/autoplay';
 const Star = ({ filled }) => (
   <svg
     aria-hidden="true"
-    className={`w-5 h-5 transition-colors ${filled ? 'text-yellow-400' : 'text-gray-300'}`}
+    className={`w-5 h-5 transition-colors ${filled ? 'text-amber-600' : 'text-gray-700'}`}
     fill={filled ? 'currentColor' : 'none'}
     stroke="currentColor"
     strokeWidth="2"
@@ -392,10 +392,10 @@ const PhoneReviews = () => {
 
   return (
     <section
-      className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-20 text-gray-900 bg-gray-900 rounded-3xl shadow-lg"
+      className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-20 text-gray-900 bg-white rounded-3xl shadow-lg"
       aria-label="Customer Reviews"
     >
-      <h2 className="text-center text-[20px] sm:text-5xl font-extrabold tracking-tight text-yellow-400 mb-12 select-none">
+      <h2 className="text-center text-[20px] sm:text-5xl font-extrabold tracking-tight text-amber-600 mb-12 select-none">
         Trusted by Real Customers
       </h2>
 
@@ -426,7 +426,7 @@ const PhoneReviews = () => {
           <SwiperSlide key={id} aria-roledescription="slide" aria-label={`Review by ${name}`}>
             <article
               className="bg-white border border-gray-200 shadow-xl rounded-3xl p-6 sm:p-8 h-full flex flex-col justify-between
-                transition-transform hover:scale-[1.015] hover:shadow-2xl duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400"
+                transition-transform hover:scale-[1.015] hover:shadow-2xl duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600"
               tabIndex={0}
               role="group"
               aria-labelledby={`review-title-${id}`}
@@ -436,7 +436,7 @@ const PhoneReviews = () => {
                 <img
                   src={image}
                   alt={`Photo of ${name}`}
-                  className="w-12 h-12 rounded-full object-cover ring-2 ring-yellow-400 flex-shrink-0"
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-amber-600 flex-shrink-0"
                   loading="lazy"
                   draggable={false}
                 />
@@ -472,7 +472,7 @@ const PhoneReviews = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <p className="mt-6 text-center text-sm text-gray-400 select-none">
+      <p className="mt-6 text-center text-sm text-gray-600 select-none">
         Click a review to advance; shift+click to go back.
       </p>
     </section>

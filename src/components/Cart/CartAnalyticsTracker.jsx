@@ -69,9 +69,9 @@ const CartAnalyticsTracker = () => {
       case 'currency':
         return <AnimatedNumber value={stat.value} prefix="$" decimals={2} />;
       case 'risk': {
-        const riskColors = { Low: 'text-green-400', Medium: 'text-yellow-400', High: 'text-red-500' };
+        const riskColors = { Low: 'text-green-400', Medium: 'text-amber-600', High: 'text-red-500' };
         return (
-          <span className={`${riskColors[stat.value] || 'text-gray-400'} font-semibold`}>
+          <span className={`${riskColors[stat.value] || 'text-gray-600'} font-semibold`}>
             {stat.value}
           </span>
         );
@@ -83,7 +83,7 @@ const CartAnalyticsTracker = () => {
             <span className="font-semibold select-text">{stat.value}</span>
             <div className="flex">
               {[...Array(tierIndex)].map((_, i) => (
-                <StarIcon key={i} className="w-5 h-5 text-yellow-400" aria-hidden="true" />
+                <StarIcon key={i} className="w-5 h-5 text-amber-600" aria-hidden="true" />
               ))}
             </div>
           </div>
@@ -95,9 +95,9 @@ const CartAnalyticsTracker = () => {
   };
 
   return (
-    <div className="w-full bg-gray-900 text-white flex justify-center px-4 sm:px-6 py-10">
+    <div className="w-full bg-white text-gray-900 flex justify-center px-4 sm:px-6 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-6 select-none">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-6 select-none">
           Cart Activity & Insights
         </h2>
 
@@ -107,18 +107,18 @@ const CartAnalyticsTracker = () => {
             return (
               <motion.div
                 key={stat.id}
-                className="flex items-start gap-4 p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition"
+                className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.03 }}
                 role="group"
                 aria-label={`${stat.label}: ${stat.value}`}
               >
-                <Icon className="w-8 h-8 text-yellow-400 flex-shrink-0" aria-hidden="true" />
+                <Icon className="w-8 h-8 text-amber-600 flex-shrink-0" aria-hidden="true" />
                 <div>
-                  <p className="text-sm text-gray-400 select-text">{stat.label}</p>
+                  <p className="text-sm text-gray-600 select-text">{stat.label}</p>
                   {/* Changed from <p> to <div> here to avoid div inside p */}
-                  <div className="text-lg font-semibold text-white select-text">{renderValue(stat)}</div>
+                  <div className="text-lg font-semibold text-gray-900 select-text">{renderValue(stat)}</div>
                 </div>
               </motion.div>
             );

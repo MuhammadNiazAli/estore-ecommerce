@@ -350,14 +350,14 @@ const WatchesAccessoriesSection = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 py-10 my-15">
+    <section className="w-full bg-white py-10 my-15">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-50">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             Watch Accessories
           </h2>
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-600 mt-2">
             Complete your timepiece with premium straps, boxes & more
           </p>
         </div>
@@ -378,7 +378,7 @@ const WatchesAccessoriesSection = () => {
                   className={`h-6 w-6 ${
                     wishlist.find((i) => i.id === item.id)
                       ? "text-red-500"
-                      : "text-gray-400"
+                      : "text-gray-600"
                   }`}
                 />
               </button>
@@ -400,7 +400,7 @@ const WatchesAccessoriesSection = () => {
                 {/* Add to Cart */}
                 <button
                   onClick={() => addToCart(item)}
-                  className="mt-3 w-full flex items-center justify-center gap-2 bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 transition"
+                  className="mt-3 w-full flex items-center justify-center gap-2 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-50 transition"
                 >
                   <ShoppingBagIcon className="h-5 w-5" />
                   Add to Cart
@@ -423,7 +423,7 @@ const WatchesAccessoriesSection = () => {
         )}
 
         {/* Cart & Wishlist Summary */}
-        <div className="mt-8 text-center text-gray-300">
+        <div className="mt-8 text-center text-gray-700">
           Cart: <span className="font-bold">{cart.length}</span> items | Wishlist:{" "}
           <span className="font-bold">{wishlist.length}</span>
         </div>
@@ -431,11 +431,11 @@ const WatchesAccessoriesSection = () => {
 
       {/* Popup */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-white bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl shadow-lg p-6 relative w-80 text-center">
             <button
               onClick={closePopup}
-              className="absolute top-3 right-3 text-gray-400 hover:text-gray-600"
+              className="absolute top-3 right-3 text-gray-600 hover:text-gray-600"
             >
               <XMarkIcon className="h-6 w-6" />
             </button>

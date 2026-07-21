@@ -339,7 +339,7 @@ const WatchesReviewsPreview = () => {
   const loadMore = () => setShowCount((prev) => prev + 2);
 
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 md:px-8 my-10">
+    <section className="bg-white text-gray-900 py-10 px-4 md:px-8 my-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">Customer Reviews</h2>
 
@@ -350,18 +350,18 @@ const WatchesReviewsPreview = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-800 rounded-xl p-5 shadow-lg flex flex-col gap-4"
+              className="bg-white rounded-xl p-5 shadow-lg flex flex-col gap-4"
             >
               {/* User Info */}
               <div className="flex items-center gap-4">
                 <img
                   src={review.avatar}
                   alt={review.username}
-                  className="w-12 h-12 rounded-full border-2 border-yellow-400"
+                  className="w-12 h-12 rounded-full border-2 border-amber-600"
                 />
                 <div>
                   <p className="font-semibold">{review.username}</p>
-                  <p className="text-gray-400 text-sm">{review.date}</p>
+                  <p className="text-gray-600 text-sm">{review.date}</p>
                 </div>
               </div>
 
@@ -371,14 +371,14 @@ const WatchesReviewsPreview = () => {
                   <StarIcon
                     key={i}
                     className={`w-5 h-5 ${
-                      i < review.rating ? "text-yellow-400" : "text-gray-600"
+                      i < review.rating ? "text-amber-600" : "text-gray-600"
                     }`}
                   />
                 ))}
               </div>
 
               {/* Comment */}
-              <p className="text-gray-300">{review.comment}</p>
+              <p className="text-gray-700">{review.comment}</p>
 
               {/* Images */}
               {review.images.length > 0 && (
@@ -388,7 +388,7 @@ const WatchesReviewsPreview = () => {
                       key={i}
                       src={img}
                       alt="Review"
-                      className="w-20 h-20 object-cover rounded-lg border border-gray-700 hover:scale-105 transition"
+                      className="w-20 h-20 object-cover rounded-lg border border-gray-200 hover:scale-105 transition"
                     />
                   ))}
                 </div>
@@ -399,7 +399,7 @@ const WatchesReviewsPreview = () => {
                 <button
                   onClick={() => toggleLike(review.id)}
                   className={`flex items-center gap-2 transition ${
-                    review.liked ? "text-yellow-400" : "text-gray-400"
+                    review.liked ? "text-amber-600" : "text-gray-600"
                   }`}
                 >
                   <HandThumbUpIcon className="w-5 h-5" />
@@ -407,7 +407,7 @@ const WatchesReviewsPreview = () => {
                 </button>
                 <button
                   onClick={() => toggleReplyBox(review.id)}
-                  className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition"
+                  className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition"
                 >
                   <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
                   Reply
@@ -424,11 +424,11 @@ const WatchesReviewsPreview = () => {
                     onChange={(e) =>
                       setReplyText({ ...replyText, [review.id]: e.target.value })
                     }
-                    className="w-full p-2 rounded-md bg-gray-700 border border-gray-600 text-white outline-none"
+                    className="w-full p-2 rounded-md bg-white border border-gray-200 text-gray-900 outline-none"
                   />
                   <button
                     onClick={() => handleAddReply(review.id)}
-                    className="mt-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300"
+                    className="mt-2 bg-amber-600 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-amber-500"
                   >
                     Post Reply
                   </button>
@@ -441,11 +441,11 @@ const WatchesReviewsPreview = () => {
                   {review.replies.map((reply) => (
                     <div
                       key={reply.id}
-                      className="bg-gray-700 p-3 rounded-lg text-sm"
+                      className="bg-white p-3 rounded-lg text-sm"
                     >
                       <p className="font-semibold">{reply.user}</p>
                       <p>{reply.text}</p>
-                      <p className="text-gray-400 text-xs mt-1">
+                      <p className="text-gray-600 text-xs mt-1">
                         {reply.date}
                       </p>
                     </div>
@@ -461,7 +461,7 @@ const WatchesReviewsPreview = () => {
           <div className="text-center mt-6">
             <button
               onClick={loadMore}
-              className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
+              className="bg-amber-600 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-amber-500 transition"
             >
               Load More Reviews
             </button>

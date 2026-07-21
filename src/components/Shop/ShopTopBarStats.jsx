@@ -65,7 +65,7 @@ const ShopTopBarStats = () => {
   return (
     <section
       aria-label="Shop statistics"
-      className="w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 px-6 select-none shadow-lg"
+      className="w-full bg-gradient-to-r from-white via-white to-white text-gray-900 py-12 px-6 select-none shadow-lg"
     >
       <div className="max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
         {stats.map(({ label, value, icon: Icon }, i) => {
@@ -91,7 +91,7 @@ const ShopTopBarStats = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.25, duration: 0.7, ease: 'easeOut' }}
-              whileHover={{ scale: 1.1, color: '#fbbf24', cursor: 'default' }}
+              whileHover={{ scale: 1.1, color: '#b45309', cursor: 'default' }}
               className="flex flex-col items-center justify-center gap-4"
               role="region"
               aria-label={`${value.toLocaleString()} ${label}`}
@@ -107,7 +107,7 @@ const ShopTopBarStats = () => {
               <div className="text-5xl font-extrabold tracking-tight leading-none">
                 <AnimatedNumber value={value} />
               </div>
-              <div className="text-lg font-semibold uppercase tracking-widest text-gray-300">
+              <div className="text-lg font-semibold uppercase tracking-widest text-gray-700">
                 {label}
               </div>
               <motion.div

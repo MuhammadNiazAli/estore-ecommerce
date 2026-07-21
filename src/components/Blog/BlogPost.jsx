@@ -78,13 +78,13 @@ export default function BlogPost() {
   }, [openTag]);
 
   return (
-    <div className="w-full flex justify-center bg-gray-900 px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
+    <div className="w-full flex justify-center bg-white px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
       <div className="max-w-[900px] w-full prose prose-invert sm:prose-lg md:prose-xl lg:prose-xl xl:prose-2xl">
         {/* Title */}
         <header className="mb-6 sm:mb-8">
-          <h1 className="font-extrabold text-yellow-400 break-words">{blogPost.title}</h1>
+          <h1 className="font-extrabold text-amber-600 break-words">{blogPost.title}</h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mt-3">
-            <figure className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-yellow-400 flex-shrink-0">
+            <figure className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-amber-600 flex-shrink-0">
               <Image
                 src={blogPost.author.avatar}
                 alt={blogPost.author.name}
@@ -93,8 +93,8 @@ export default function BlogPost() {
                 priority
               />
             </figure>
-            <div className="text-gray-400 text-sm sm:text-base">
-              <p className="text-yellow-400 font-semibold">{blogPost.author.name}</p>
+            <div className="text-gray-600 text-sm sm:text-base">
+              <p className="text-amber-600 font-semibold">{blogPost.author.name}</p>
               <time dateTime={blogPost.publishedDate}>{blogPost.publishedDateFormatted}</time>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function BlogPost() {
         </figure>
 
         {/* Content */}
-        <section className="space-y-5 sm:space-y-6 text-gray-300 text-base sm:text-lg leading-relaxed sm:leading-relaxed">
+        <section className="space-y-5 sm:space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed sm:leading-relaxed">
           {blogPost.content.map((para, idx) => (
             <p key={idx}>{para}</p>
           ))}
@@ -123,7 +123,7 @@ export default function BlogPost() {
           {blogPost.tags.map((tag) => (
             <button
               key={tag}
-              className="flex items-center gap-1 text-yellow-400 bg-yellow-900 bg-opacity-20 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold hover:bg-yellow-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+              className="flex items-center gap-1 text-amber-600 bg-amber-950 bg-opacity-20 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold hover:bg-amber-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
               onClick={() => setOpenTag(tag)}
             >
               <Tag size={14} />
@@ -136,14 +136,14 @@ export default function BlogPost() {
         {openTag && (
           <div
             ref={modalRef}
-            className="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-gray-900 w-[90%] max-w-[400px] rounded-lg shadow-lg p-6 border border-yellow-700 animate-scaleUp sm:w-[400px]"
+            className="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-white w-[90%] max-w-[400px] rounded-lg shadow-lg p-6 border border-amber-900 animate-scaleUp sm:w-[400px]"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
             <button
               onClick={() => setOpenTag(null)}
-              className="absolute top-4 right-4 text-yellow-400 hover:text-yellow-300 focus:outline-none"
+              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
               aria-label="Close modal"
             >
               <X size={20} />
@@ -151,15 +151,15 @@ export default function BlogPost() {
 
             <h2
               id="modal-title"
-              className="text-yellow-400 text-lg sm:text-xl font-bold mb-3 break-words"
+              className="text-amber-600 text-lg sm:text-xl font-bold mb-3 break-words"
             >
               {tagDetails[openTag]?.title || openTag}
             </h2>
-            <p className="text-gray-300 mb-4 text-sm sm:text-base">
+            <p className="text-gray-700 mb-4 text-sm sm:text-base">
               {tagDetails[openTag]?.description || 'No description available.'}
             </p>
             {tagDetails[openTag]?.more && (
-              <ul className="list-disc list-inside space-y-2 text-gray-300 text-xs sm:text-sm">
+              <ul className="list-disc list-inside space-y-2 text-gray-700 text-xs sm:text-sm">
                 {tagDetails[openTag].more.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}

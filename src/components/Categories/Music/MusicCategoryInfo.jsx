@@ -5,8 +5,8 @@ const MusicCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900
-        text-yellow-400
+        bg-white
+        text-amber-600
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const MusicCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Discover our exclusive music collection! Find the latest albums, singles, and gear to fuel your passion for sound.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         From timeless classics to fresh hits, explore quality music products and experiences you’ll love.
       </p>
     </section>

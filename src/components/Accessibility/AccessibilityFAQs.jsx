@@ -86,10 +86,10 @@ const AccessibilityFAQs = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 mb-[-150px]">
+    <section className="w-full bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8 mb-[-150px]">
       <div className="max-w-[900px] mx-auto space-y-12">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-yellow-400 tracking-tight select-none">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-600 tracking-tight select-none">
           Accessibility FAQs
         </h2>
 
@@ -100,19 +100,19 @@ const AccessibilityFAQs = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-950 border border-gray-800 rounded-xl overflow-hidden shadow-sm"
+                className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm"
                 aria-expanded={isOpen}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left text-yellow-300 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 hover:bg-gray-800 transition select-none"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left text-amber-500 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 hover:bg-gray-50 transition select-none"
                   aria-controls={`faq-panel-${index}`}
                   aria-expanded={isOpen}
                   type="button"
                 >
                   <span className="text-base md:text-lg">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-yellow-400 transform transition-transform duration-300 ease-in-out ${
+                    className={`w-5 h-5 text-amber-600 transform transition-transform duration-300 ease-in-out ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden="true"
@@ -121,7 +121,7 @@ const AccessibilityFAQs = () => {
                 <div
                   id={`faq-panel-${index}`}
                   ref={(el) => (contentRefs.current[index] = el)}
-                  className="px-6 pb-5 text-gray-300 text-sm md:text-base leading-relaxed select-text overflow-hidden"
+                  className="px-6 pb-5 text-gray-700 text-sm md:text-base leading-relaxed select-text overflow-hidden"
                   style={{ display: 'none', height: 0, opacity: 0 }}
                   role="region"
                   aria-live="polite"

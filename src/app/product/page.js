@@ -21,7 +21,7 @@ import ProductHome from '@/components/Products/ProductHome';
 
 export default function ProductPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4 py-20 space-y-12">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-center px-4 py-20 space-y-12">
       <ProductHome/>
       <ProductGallery />
       <ProductDetail />

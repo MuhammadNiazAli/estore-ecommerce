@@ -33,7 +33,7 @@ const ResponsibilityVideos = () => {
   return (
     <section
       aria-label="Responsibility Videos"
-      className="w-full bg-gray-900 flex justify-center px-4 py-16 sm:py-24 my-[-50px]"
+      className="w-full bg-white flex justify-center px-4 py-16 sm:py-24 my-[-50px]"
     >
       <div className="max-w-[1000px] w-full">
         <motion.h2
@@ -41,7 +41,7 @@ const ResponsibilityVideos = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-yellow-400 text-4xl font-bold mb-12 text-center select-none"
+          className="text-amber-600 text-4xl font-bold mb-12 text-center select-none"
         >
           Responsibility in Motion
         </motion.h2>
@@ -54,7 +54,7 @@ const ResponsibilityVideos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: id * 0.2, duration: 0.5 }}
-              className="relative group rounded-xl overflow-hidden cursor-pointer shadow-lg bg-gray-800 focus:outline-none focus:ring-4 focus:ring-yellow-500"
+              className="relative group rounded-xl overflow-hidden cursor-pointer shadow-lg bg-white focus:outline-none focus:ring-4 focus:ring-amber-700"
               tabIndex={0}
               aria-label={`Play video titled ${title}`}
               onFocus={() => setActiveVideoId(id)}
@@ -80,7 +80,7 @@ const ResponsibilityVideos = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-16 h-16 text-yellow-400"
+                  className="w-16 h-16 text-amber-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -107,8 +107,8 @@ const ResponsibilityVideos = () => {
               />
 
               {/* Title bar */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                <h3 className="text-yellow-400 font-semibold text-sm sm:text-base truncate">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/80 to-transparent p-3">
+                <h3 className="text-amber-600 font-semibold text-sm sm:text-base truncate">
                   {title}
                 </h3>
               </div>

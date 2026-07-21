@@ -94,12 +94,12 @@ const DashboardWidgets = () => {
 
   if (loading) {
     return (
-      <section className="w-full bg-gray-900 flex justify-center px-4 py-10" aria-busy="true" aria-label="Loading widgets">
+      <section className="w-full bg-white flex justify-center px-4 py-10" aria-busy="true" aria-label="Loading widgets">
         <div className="w-full max-w-[1000px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[...Array(4)].map((_, i) => (
             <div
               key={i}
-              className="bg-gray-800 rounded-xl p-5 shadow animate-pulse h-28"
+              className="bg-white rounded-xl p-5 shadow animate-pulse h-28"
             />
           ))}
         </div>
@@ -108,33 +108,33 @@ const DashboardWidgets = () => {
   }
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-10" aria-label="Dashboard widgets overview">
+    <section className="w-full bg-white flex justify-center px-4 py-10" aria-label="Dashboard widgets overview">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl font-bold text-yellow-400 mb-6">Widgets</h2>
+        <h2 className="text-2xl font-bold text-amber-600 mb-6">Widgets</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {widgets.map(({ id, title, value, unit, icon: Icon, description }) => (
             <div
               key={id}
-              className="bg-gray-800 p-5 rounded-xl shadow hover:shadow-lg transition flex flex-col gap-3 cursor-default select-none"
+              className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition flex flex-col gap-3 cursor-default select-none"
               title={description}
               role="region"
               aria-label={`${title}: ${value}${unit}`}
             >
               <div className="flex justify-between items-center">
-                <span className="text-yellow-400" aria-hidden="true">
+                <span className="text-amber-600" aria-hidden="true">
                   <Icon className="w-6 h-6" />
                 </span>
                 <span
-                  className="text-white font-semibold text-lg tabular-nums"
+                  className="text-gray-900 font-semibold text-lg tabular-nums"
                   aria-live="polite"
                   aria-atomic="true"
                 >
                   {formatNumber(value)}{unit}
                 </span>
               </div>
-              <h3 className="text-white font-semibold text-md">{title}</h3>
-              <p className="text-gray-400 text-sm">{description}</p>
+              <h3 className="text-gray-900 font-semibold text-md">{title}</h3>
+              <p className="text-gray-600 text-sm">{description}</p>
             </div>
           ))}
         </div>

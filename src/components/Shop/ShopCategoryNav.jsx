@@ -186,7 +186,7 @@ const ShopCategoryNav = () => {
   }, []);
 
   return (
-    <nav className="w-full bg-gray-950 px-4 py-6 border-b border-gray-800 relative">
+    <nav className="w-full bg-white px-4 py-6 border-b border-gray-200 relative">
       <div className="max-w-[1200px] mx-auto relative">
 
         {/* Left Arrow */}
@@ -195,7 +195,7 @@ const ShopCategoryNav = () => {
           disabled={!canScrollLeft}
           aria-label="Scroll left"
           className={`hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-20
-            w-9 h-9 rounded-full backdrop-blur-md bg-gray-800/80 text-amber-400 shadow-md
+            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-amber-400 shadow-md
             hover:bg-amber-400 hover:text-gray-950 transition
             disabled:opacity-30 disabled:pointer-events-none`}
         >
@@ -208,7 +208,7 @@ const ShopCategoryNav = () => {
           disabled={!canScrollRight}
           aria-label="Scroll right"
           className={`hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-20
-            w-9 h-9 rounded-full backdrop-blur-md bg-gray-800/80 text-amber-400 shadow-md
+            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-amber-400 shadow-md
             hover:bg-amber-400 hover:text-gray-950 transition
             disabled:opacity-30 disabled:pointer-events-none`}
         >
@@ -218,7 +218,7 @@ const ShopCategoryNav = () => {
         <div
           ref={containerRef}
           className="flex flex-row-reverse gap-3 overflow-x-auto px-2 sm:px-0 scroll-smooth"
-          style={{ scrollbarWidth: 'thin', scrollbarColor: '#111827 #1f2937' }}
+          style={{ scrollbarWidth: 'thin', scrollbarColor: '#ffffff #ffffff' }}
         >
           <style jsx>{`
             div::-webkit-scrollbar {
@@ -230,13 +230,13 @@ const ShopCategoryNav = () => {
               }
             }
             div::-webkit-scrollbar-track {
-              background: #1f2937;
+              background: #ffffff;
               border-radius: 9999px;
             }
             div::-webkit-scrollbar-thumb {
-              background-color: #111827;
+              background-color: #ffffff;
               border-radius: 9999px;
-              border: 3px solid #1f2937;
+              border: 3px solid #ffffff;
             }
           `}</style>
 
@@ -251,11 +251,11 @@ const ShopCategoryNav = () => {
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-200 whitespace-nowrap text-sm font-medium
                     ${
                       isActive
-                        ? 'border-amber-400 text-amber-400 bg-gray-800 shadow-[0_0_8px_rgba(251,191,36,0.7)]'
-                        : 'border-gray-700 text-gray-300 hover:border-amber-400 hover:text-amber-400 hover:bg-gray-800'
+                        ? 'border-amber-400 text-amber-400 bg-white shadow-[0_0_8px_rgba(251,191,36,0.7)]'
+                        : 'border-gray-200 text-gray-700 hover:border-amber-400 hover:text-amber-400 hover:bg-gray-50'
                     }`}
                 >
-                  <span className={`w-5 h-5 ${isActive ? 'text-amber-400' : 'text-gray-400'}`}>
+                  <span className={`w-5 h-5 ${isActive ? 'text-amber-400' : 'text-gray-600'}`}>
                     {cat.icon}
                   </span>
                   {cat.name}

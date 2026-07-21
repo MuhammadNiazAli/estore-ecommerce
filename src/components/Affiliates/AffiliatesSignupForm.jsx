@@ -130,7 +130,7 @@ const AffiliatesSignupForm = () => {
   return (
     <section
       aria-label="Affiliate Signup Form"
-      className="bg-gray-900 text-yellow-400 py-12 px-4"
+      className="bg-white text-amber-600 py-12 px-4"
       style={{ minHeight: "fit-content" }}
     >
       <div className="max-w-[1000px] mx-auto">
@@ -147,7 +147,7 @@ const AffiliatesSignupForm = () => {
         >
           {/* Full Name */}
           <div className="flex flex-col">
-            <label htmlFor="fullName" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="fullName" className="mb-1 font-semibold text-amber-500">
               Full Name<span aria-hidden="true" className="text-red-500">*</span>
             </label>
             <input
@@ -160,11 +160,11 @@ const AffiliatesSignupForm = () => {
               aria-describedby={errors.fullName ? "fullName-error" : undefined}
               placeholder="John Doe"
               disabled={isSubmitting}
-              className={`rounded-md bg-gray-800 border
-                px-4 py-3 text-yellow-100 placeholder-yellow-500
-                focus:outline-none focus:ring-2 focus:ring-yellow-500
+              className={`rounded-md bg-white border
+                px-4 py-3 text-amber-300 placeholder-amber-700
+                focus:outline-none focus:ring-2 focus:ring-amber-700
                 transition-colors duration-200
-                ${errors.fullName ? "border-red-500 focus:ring-red-500" : "border-yellow-600"}`}
+                ${errors.fullName ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
             />
             {errors.fullName && (
               <span
@@ -179,7 +179,7 @@ const AffiliatesSignupForm = () => {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="email" className="mb-1 font-semibold text-amber-500">
               Email<span aria-hidden="true" className="text-red-500">*</span>
             </label>
             <input
@@ -192,11 +192,11 @@ const AffiliatesSignupForm = () => {
               aria-describedby={errors.email ? "email-error" : undefined}
               placeholder="you@example.com"
               disabled={isSubmitting}
-              className={`rounded-md bg-gray-800 border
-                px-4 py-3 text-yellow-100 placeholder-yellow-500
-                focus:outline-none focus:ring-2 focus:ring-yellow-500
+              className={`rounded-md bg-white border
+                px-4 py-3 text-amber-300 placeholder-amber-700
+                focus:outline-none focus:ring-2 focus:ring-amber-700
                 transition-colors duration-200
-                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-yellow-600"}`}
+                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
             />
             {errors.email && (
               <span
@@ -211,7 +211,7 @@ const AffiliatesSignupForm = () => {
 
           {/* Website URL */}
           <div className="flex flex-col">
-            <label htmlFor="website" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="website" className="mb-1 font-semibold text-amber-500">
               Website URL<span aria-hidden="true" className="text-red-500">*</span>
             </label>
             <input
@@ -224,11 +224,11 @@ const AffiliatesSignupForm = () => {
               aria-describedby={errors.website ? "website-error" : undefined}
               placeholder="https://yourwebsite.com"
               disabled={isSubmitting}
-              className={`rounded-md bg-gray-800 border
-                px-4 py-3 text-yellow-100 placeholder-yellow-500
-                focus:outline-none focus:ring-2 focus:ring-yellow-500
+              className={`rounded-md bg-white border
+                px-4 py-3 text-amber-300 placeholder-amber-700
+                focus:outline-none focus:ring-2 focus:ring-amber-700
                 transition-colors duration-200
-                ${errors.website ? "border-red-500 focus:ring-red-500" : "border-yellow-600"}`}
+                ${errors.website ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
             />
             {errors.website && (
               <span
@@ -243,7 +243,7 @@ const AffiliatesSignupForm = () => {
 
           {/* Country */}
           <div className="flex flex-col">
-            <label htmlFor="country" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="country" className="mb-1 font-semibold text-amber-500">
               Country<span aria-hidden="true" className="text-red-500">*</span>
             </label>
             <select
@@ -254,11 +254,11 @@ const AffiliatesSignupForm = () => {
               aria-invalid={errors.country ? "true" : "false"}
               aria-describedby={errors.country ? "country-error" : undefined}
               disabled={isSubmitting}
-              className={`rounded-md bg-gray-800 border
-                px-4 py-3 text-yellow-100
-                focus:outline-none focus:ring-2 focus:ring-yellow-500
+              className={`rounded-md bg-white border
+                px-4 py-3 text-amber-300
+                focus:outline-none focus:ring-2 focus:ring-amber-700
                 transition-colors duration-200
-                ${errors.country ? "border-red-500 focus:ring-red-500" : "border-yellow-600"}`}
+                ${errors.country ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
             >
               <option value="" disabled>
                 Select your country
@@ -282,7 +282,7 @@ const AffiliatesSignupForm = () => {
 
           {/* Referral (optional) full width */}
           <div className="sm:col-span-2 flex flex-col">
-            <label htmlFor="referral" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="referral" className="mb-1 font-semibold text-amber-500">
               How did you hear about us? (Optional)
             </label>
             <textarea
@@ -293,9 +293,9 @@ const AffiliatesSignupForm = () => {
               onChange={handleChange}
               placeholder="Your answer here..."
               disabled={isSubmitting}
-              className="rounded-md bg-gray-800 border border-yellow-600
-                px-4 py-3 text-yellow-100 placeholder-yellow-500
-                focus:outline-none focus:ring-2 focus:ring-yellow-500
+              className="rounded-md bg-white border border-amber-800
+                px-4 py-3 text-amber-300 placeholder-amber-700
+                focus:outline-none focus:ring-2 focus:ring-amber-700
                 transition-colors duration-200 resize-none"
             />
           </div>
@@ -305,9 +305,9 @@ const AffiliatesSignupForm = () => {
             <button
               type="submit"
               disabled={isSubmitting || isValidating}
-              className={`bg-yellow-500 hover:bg-yellow-600 focus:bg-yellow-700
+              className={`bg-amber-700 hover:bg-amber-800 focus:bg-amber-900
                 text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
-                transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400
+                transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-amber-600
                 disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-live="polite"
             >

@@ -30,9 +30,9 @@ const faqList = [
 // Single FAQ item component for clarity and reuse
 function FAQItem({ faq, isOpen, onToggle, id }) {
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-xl transition-all duration-300">
+    <div className="bg-white border border-gray-200 rounded-xl transition-all duration-300">
       <button
-        className="w-full flex items-center justify-between px-5 py-4 text-left text-yellow-300 font-semibold text-sm sm:text-base focus:outline-none"
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-amber-500 font-semibold text-sm sm:text-base focus:outline-none"
         aria-expanded={isOpen}
         aria-controls={`faq-content-${id}`}
         onClick={onToggle}
@@ -40,7 +40,7 @@ function FAQItem({ faq, isOpen, onToggle, id }) {
         {faq.question}
         <FaChevronDown
           className={`transition-transform duration-300 ${
-            isOpen ? 'rotate-180 text-yellow-300' : 'rotate-0 text-gray-400'
+            isOpen ? 'rotate-180 text-amber-500' : 'rotate-0 text-gray-600'
           }`}
           aria-hidden="true"
         />
@@ -49,7 +49,7 @@ function FAQItem({ faq, isOpen, onToggle, id }) {
       <div
         id={`faq-content-${id}`}
         className={`overflow-hidden px-5 transition-all duration-300 ${
-          isOpen ? 'max-h-[200px] pb-4 text-gray-300' : 'max-h-0'
+          isOpen ? 'max-h-[200px] pb-4 text-gray-700' : 'max-h-0'
         }`}
       >
         {isOpen && <p className="text-sm sm:text-base">{faq.answer}</p>}
@@ -66,9 +66,9 @@ export default function RewardingFAQs() {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white p-6 sm:p-10 rounded-2xl shadow-xl">
+    <section className="w-full bg-white text-gray-900 p-6 sm:p-10 rounded-2xl shadow-xl">
       <header className="flex items-center gap-3 mb-6">
-        <FaQuestionCircle className="text-yellow-400 text-xl" aria-hidden="true" />
+        <FaQuestionCircle className="text-amber-600 text-xl" aria-hidden="true" />
         <h2 className="text-xl sm:text-2xl font-bold">Frequently Asked Questions</h2>
       </header>
 

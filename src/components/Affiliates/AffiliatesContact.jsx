@@ -71,7 +71,7 @@ const AffiliatesContact = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4" aria-label="Affiliate Contact">
+    <section className="bg-white text-amber-600 py-12 px-4" aria-label="Affiliate Contact">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-10 tracking-wide">
           Contact Our Affiliate Team
@@ -85,7 +85,7 @@ const AffiliatesContact = () => {
         >
           {/* Name */}
           <div className="flex flex-col">
-            <label htmlFor="name" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="name" className="mb-1 font-semibold text-amber-500">
               Name<span className="text-red-500">*</span>
             </label>
             <input
@@ -96,9 +96,9 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="Your full name"
-              className={`rounded-md bg-gray-800 border px-4 py-3 text-yellow-100 placeholder-yellow-500
+              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
                 focus:outline-none focus:ring-2 transition-all duration-200
-                ${errors.name ? "border-red-500 focus:ring-red-500" : "border-yellow-600 focus:ring-yellow-500"}`}
+                ${errors.name ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
             />
@@ -111,7 +111,7 @@ const AffiliatesContact = () => {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="email" className="mb-1 font-semibold text-amber-500">
               Email<span className="text-red-500">*</span>
             </label>
             <input
@@ -122,9 +122,9 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="you@example.com"
-              className={`rounded-md bg-gray-800 border px-4 py-3 text-yellow-100 placeholder-yellow-500
+              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
                 focus:outline-none focus:ring-2 transition-all duration-200
-                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-yellow-600 focus:ring-yellow-500"}`}
+                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
@@ -137,7 +137,7 @@ const AffiliatesContact = () => {
 
           {/* Message */}
           <div className="sm:col-span-2 flex flex-col">
-            <label htmlFor="message" className="mb-1 font-semibold text-yellow-300">
+            <label htmlFor="message" className="mb-1 font-semibold text-amber-500">
               Message<span className="text-red-500">*</span>
             </label>
             <textarea
@@ -148,9 +148,9 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="Write your message here..."
-              className={`rounded-md bg-gray-800 border px-4 py-3 text-yellow-100 placeholder-yellow-500
+              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
                 focus:outline-none focus:ring-2 transition-all duration-200 resize-none
-                ${errors.message ? "border-red-500 focus:ring-red-500" : "border-yellow-600 focus:ring-yellow-500"}`}
+                ${errors.message ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
             />
@@ -166,8 +166,8 @@ const AffiliatesContact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-yellow-500 hover:bg-yellow-600 focus:bg-yellow-700 text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
-              transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400
+              className={`bg-amber-700 hover:bg-amber-800 focus:bg-amber-900 text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
+              transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-amber-600
               disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-busy={isSubmitting}
               aria-live="polite"

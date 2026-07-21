@@ -565,7 +565,7 @@ const PetsAccessoriesSection = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4 my-[-30px]">
+    <section className="bg-white text-amber-600 py-12 px-4 my-[-30px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Clothing Accessories</h2>
 
@@ -573,7 +573,7 @@ const PetsAccessoriesSection = () => {
           {visibleAccessories.map(({ id, name, price, rating, image }) => (
             <div
               key={id}
-              className="bg-gray-800 rounded-lg border border-yellow-500 flex flex-col transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_0_15px_3px_rgba(202,138,4,0.7)]"
+              className="bg-white rounded-lg border border-amber-700 flex flex-col transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_0_15px_3px_rgba(202,138,4,0.7)]"
               style={{ willChange: "transform, box-shadow" }}
             >
               {/* Image */}
@@ -591,9 +591,9 @@ const PetsAccessoriesSection = () => {
                 <div className="flex items-center mb-4">
                   {Array.from({ length: 5 }).map((_, i) =>
                     i < rating ? (
-                      <FaStar key={i} className="text-yellow-400" />
+                      <FaStar key={i} className="text-amber-600" />
                     ) : (
-                      <FaRegStar key={i} className="text-yellow-600" />
+                      <FaRegStar key={i} className="text-amber-800" />
                     )
                   )}
                 </div>
@@ -603,7 +603,7 @@ const PetsAccessoriesSection = () => {
 
                   <button
                     aria-label={`Add ${name} to cart`}
-                    className="bg-yellow-500 text-gray-900 p-2 rounded-md hover:bg-yellow-400 transition"
+                    className="bg-amber-700 text-gray-900 p-2 rounded-md hover:bg-amber-600 transition"
                   >
                     <FaCartPlus size={20} />
                   </button>
@@ -617,7 +617,7 @@ const PetsAccessoriesSection = () => {
           <div className="text-center mt-8">
             <button
               onClick={loadMore}
-              className="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-yellow-400 transition"
+              className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-amber-600 transition"
             >
               Load More
             </button>

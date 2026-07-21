@@ -342,11 +342,11 @@ const PhoneAccessoriesQuickViewModalPage = () => {
   };
 
   return (
-    <div className=" bg-yellow-500 flex flex-col items-center justify-center p-6">
+    <div className=" bg-amber-700 flex flex-col items-center justify-center p-6">
       {/* Trigger */}
       <button
         onClick={() => openQuickView(products[0])}
-        className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition text-lg"
+        className="bg-white text-gray-900 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 transition text-lg"
       >
         Quick View Beauty
       </button>
@@ -358,7 +358,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-2 sm:p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/70 backdrop-blur-md p-2 sm:p-4"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -371,7 +371,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
               {/* Close Button - Always visible */}
               <button
                 onClick={() => setIsQuickViewOpen(false)}
-                className="absolute top-3 right-3 bg-gray-900 text-white rounded-full p-2 hover:bg-red-500 transition z-50"
+                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-red-500 transition z-50"
               >
                 <XMarkIcon className="h-6 w-6" />
               </button>
@@ -405,7 +405,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
                   Brand: <span className="font-medium">{selectedProduct.brand}</span>
                 </p>
                 <div className="flex items-center mb-3">
-                  <span className="text-yellow-500 text-lg">★★★★★</span>
+                  <span className="text-amber-700 text-lg">★★★★★</span>
                   <span className="text-gray-500 text-sm ml-2">(120 reviews)</span>
                 </div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -422,7 +422,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex items-center justify-center gap-2 bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition w-full sm:w-auto">
+                  <button className="flex items-center justify-center gap-2 bg-white text-gray-900 py-3 px-6 rounded-lg hover:bg-gray-50 transition w-full sm:w-auto">
                     <ShoppingCartIcon className="h-5 w-5" />
                     Add to Cart
                   </button>
@@ -433,7 +433,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
                     </button>
                     <button
                       onClick={() => setIsRelatedOpen(true)}
-                      className="bg-gray-900 text-white rounded-lg p-3 hover:bg-gray-800 transition"
+                      className="bg-white text-gray-900 rounded-lg p-3 hover:bg-gray-50 transition"
                       title="View related products"
                     >
                       <ArrowRightIcon className="h-5 w-5" />
@@ -453,7 +453,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-2 sm:p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/70 backdrop-blur-md p-2 sm:p-4"
           >
             <motion.div
               initial={{ y: 50, opacity: 0 }}
@@ -464,7 +464,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
             >
               <button
                 onClick={() => setIsRelatedOpen(false)}
-                className="absolute top-3 right-3 bg-gray-900 text-white rounded-full p-2 hover:bg-red-500 transition"
+                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-red-500 transition"
               >
                 <XMarkIcon className="h-6 w-6" />
               </button>
@@ -499,7 +499,7 @@ const PhoneAccessoriesQuickViewModalPage = () => {
                           openQuickView(item);
                           setIsRelatedOpen(false);
                         }}
-                        className="w-full mt-3 bg-gray-900 text-white py-2 rounded-lg hover:bg-gray-800 transition"
+                        className="w-full mt-3 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-50 transition"
                       >
                         View
                       </button>

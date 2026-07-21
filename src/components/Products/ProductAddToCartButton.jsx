@@ -28,9 +28,9 @@ const ProductAddToCartButton = ({
     <div className="w-full max-w-sm mx-auto px-4">
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
         {/* Total Price Display */}
-        <div className="flex-1 text-center sm:text-left text-white text-2xl font-bold tracking-wide">
+        <div className="flex-1 text-center sm:text-left text-gray-900 text-2xl font-bold tracking-wide">
           ${ (price * quantity).toFixed(2) }
-          <span className="text-sm text-gray-400 ml-1">USD</span>
+          <span className="text-sm text-gray-600 ml-1">USD</span>
         </div>
 
         {/* Add to Cart Button */}
@@ -40,12 +40,12 @@ const ProductAddToCartButton = ({
           whileTap={{ scale: 0.95 }}
           className={`
             flex-1
-            bg-yellow-400 
-            hover:bg-yellow-500 
-            active:bg-yellow-600 
+            bg-amber-600 
+            hover:bg-amber-700 
+            active:bg-amber-800 
             focus:outline-none 
             focus:ring-4 
-            focus:ring-yellow-300 
+            focus:ring-amber-500 
             text-black 
             font-semibold 
             py-3 

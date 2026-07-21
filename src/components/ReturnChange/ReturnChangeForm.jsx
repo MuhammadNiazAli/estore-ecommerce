@@ -87,16 +87,16 @@ const ReturnChangeForm = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 px-4 py-14 flex justify-center min-h-[calc(100vh-120px)] my-[-50px]">
-      <div className="w-full max-w-[1000px] text-white">
-        <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
+    <section className="w-full bg-white px-4 py-14 flex justify-center min-h-[calc(100vh-120px)] my-[-50px]">
+      <div className="w-full max-w-[1000px] text-gray-900">
+        <h2 className="text-3xl font-bold text-amber-600 mb-8 text-center">
           Return / Exchange Request Form
         </h2>
 
         {submitted && (
           <div
             role="alert"
-            className="mb-6 bg-green-700 rounded-md p-4 text-center font-semibold text-white select-none"
+            className="mb-6 bg-green-700 rounded-md p-4 text-center font-semibold text-gray-900 select-none"
           >
             ✅ Your request was submitted successfully!
           </div>
@@ -104,14 +104,14 @@ const ReturnChangeForm = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-gray-800 rounded-xl p-8 shadow-lg max-w-xl mx-auto"
+          className="bg-white rounded-xl p-8 shadow-lg max-w-xl mx-auto"
           noValidate
           aria-describedby="form-errors"
         >
           <div className="mb-6">
             <label
               htmlFor="orderId"
-              className="block mb-2 font-semibold text-yellow-300"
+              className="block mb-2 font-semibold text-amber-500"
             >
               Order ID <span className="text-red-500">*</span>
             </label>
@@ -124,9 +124,9 @@ const ReturnChangeForm = () => {
               placeholder="e.g., #123456789"
               aria-invalid={!!errors.orderId}
               aria-describedby={errors.orderId ? 'orderId-error' : undefined}
-              className={`w-full p-3 rounded-md bg-gray-900 border ${
-                errors.orderId ? 'border-red-500' : 'border-gray-700'
-              } text-white placeholder-gray-500 focus:outline-yellow-400 focus:ring-1 focus:ring-yellow-400 transition`}
+              className={`w-full p-3 rounded-md bg-white border ${
+                errors.orderId ? 'border-red-500' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
               disabled={submitted}
             />
             {errors.orderId && (
@@ -143,7 +143,7 @@ const ReturnChangeForm = () => {
           <div className="mb-6">
             <label
               htmlFor="reason"
-              className="block mb-2 font-semibold text-yellow-300"
+              className="block mb-2 font-semibold text-amber-500"
             >
               Reason for Return/Exchange <span className="text-red-500">*</span>
             </label>
@@ -156,9 +156,9 @@ const ReturnChangeForm = () => {
               placeholder="Please describe why you want to return or exchange the item"
               aria-invalid={!!errors.reason}
               aria-describedby={errors.reason ? 'reason-error' : undefined}
-              className={`w-full p-3 rounded-md bg-gray-900 border ${
-                errors.reason ? 'border-red-500' : 'border-gray-700'
-              } text-white placeholder-gray-500 resize-none focus:outline-yellow-400 focus:ring-1 focus:ring-yellow-400 transition`}
+              className={`w-full p-3 rounded-md bg-white border ${
+                errors.reason ? 'border-red-500' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 resize-none focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
               disabled={submitted}
             />
             {errors.reason && (
@@ -175,7 +175,7 @@ const ReturnChangeForm = () => {
           <div className="mb-6">
             <label
               htmlFor="condition"
-              className="block mb-2 font-semibold text-yellow-300"
+              className="block mb-2 font-semibold text-amber-500"
             >
               Condition of the Product <span className="text-red-500">*</span>
             </label>
@@ -186,9 +186,9 @@ const ReturnChangeForm = () => {
               onChange={handleChange}
               aria-invalid={!!errors.condition}
               aria-describedby={errors.condition ? 'condition-error' : undefined}
-              className={`w-full p-3 rounded-md bg-gray-900 border ${
-                errors.condition ? 'border-red-500' : 'border-gray-700'
-              } text-white placeholder-gray-500 focus:outline-yellow-400 focus:ring-1 focus:ring-yellow-400 transition`}
+              className={`w-full p-3 rounded-md bg-white border ${
+                errors.condition ? 'border-red-500' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
               disabled={submitted}
             >
               <option value="" disabled>
@@ -212,7 +212,7 @@ const ReturnChangeForm = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block mb-2 font-semibold text-yellow-300">
+            <label className="block mb-2 font-semibold text-amber-500">
               Upload Photos (optional)
             </label>
             <input
@@ -220,7 +220,7 @@ const ReturnChangeForm = () => {
               multiple
               accept="image/*"
               onChange={handleFileChange}
-              className="w-full text-gray-300 cursor-pointer"
+              className="w-full text-gray-700 cursor-pointer"
               disabled={submitted}
               aria-describedby={
                 formData.files.length > 0 ? 'upload-preview' : undefined
@@ -235,7 +235,7 @@ const ReturnChangeForm = () => {
                 {filePreviews.map((url, idx) => (
                   <div
                     key={idx}
-                    className="w-20 h-20 rounded-md overflow-hidden border border-yellow-400"
+                    className="w-20 h-20 rounded-md overflow-hidden border border-amber-600"
                     title={formData.files[idx]?.name || 'Uploaded image preview'}
                   >
                     <img
@@ -255,8 +255,8 @@ const ReturnChangeForm = () => {
             className={`w-full py-3 rounded-md font-semibold transition 
             ${
               submitted
-                ? 'bg-yellow-300 text-black cursor-not-allowed'
-                : 'bg-yellow-400 text-black hover:bg-yellow-500 focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400'
+                ? 'bg-amber-500 text-black cursor-not-allowed'
+                : 'bg-amber-600 text-black hover:bg-amber-700 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600'
             }`}
             aria-busy={submitted}
           >

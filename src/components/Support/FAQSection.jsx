@@ -33,7 +33,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="w-full px-6 py-16 bg-gray-900 text-white my-[-50px]">
+    <section className="w-full px-6 py-16 bg-white text-gray-900 my-[-50px]">
       <div className="mx-auto max-w-[1000px]">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12">
           Frequently Asked Questions
@@ -48,12 +48,12 @@ const FAQSection = () => {
               onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleFAQ(idx)}
               aria-expanded={activeIndex === idx}
               aria-controls={`faq-answer-${idx}`}
-              className="border border-gray-700 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
             >
               <div className="flex justify-between items-center p-5 cursor-pointer select-none">
-                <h3 className="text-lg font-medium text-white">{question}</h3>
+                <h3 className="text-lg font-medium text-gray-900">{question}</h3>
                 <svg
-                  className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
+                  className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${
                     activeIndex === idx ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -68,7 +68,7 @@ const FAQSection = () => {
               {activeIndex === idx && (
                 <div
                   id={`faq-answer-${idx}`}
-                  className="px-5 pb-5 text-gray-300 leading-relaxed"
+                  className="px-5 pb-5 text-gray-700 leading-relaxed"
                 >
                   {answer}
                 </div>

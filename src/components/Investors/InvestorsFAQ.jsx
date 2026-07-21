@@ -36,7 +36,7 @@ const InvestorsFAQ = () => {
   return (
     <section
       aria-label="Investors Frequently Asked Questions"
-      className="bg-gray-900 text-yellow-400 flex justify-center py-12 px-4"
+      className="bg-white text-amber-600 flex justify-center py-12 px-4"
     >
       <div className="max-w-[1000px] w-full">
         <h2 className="text-4xl font-extrabold mb-10 text-center">Frequently Asked Questions</h2>
@@ -60,16 +60,16 @@ const InvestorsFAQ = () => {
                 aria-expanded={isOpen}
                 aria-controls={`faq-desc-${index}`}
                 aria-labelledby={`faq-label-${index}`}
-                className="bg-gray-800 rounded-xl px-5 py-4 sm:py-5 cursor-pointer select-none transition-all duration-200 hover:bg-gray-700 focus:outline-none"
+                className="bg-white rounded-xl px-5 py-4 sm:py-5 cursor-pointer select-none transition-all duration-200 hover:bg-gray-50 focus:outline-none"
               >
                 <dt
                   id={`faq-label-${index}`}
-                  className="flex justify-between items-center text-lg sm:text-xl font-semibold text-yellow-300"
+                  className="flex justify-between items-center text-lg sm:text-xl font-semibold text-amber-500"
                 >
                   {question}
                   <motion.span
                     aria-hidden="true"
-                    className="text-yellow-400 text-2xl font-bold ml-4"
+                    className="text-amber-600 text-2xl font-bold ml-4"
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -88,7 +88,7 @@ const InvestorsFAQ = () => {
                         duration: 0.25,
                         ease: 'easeInOut',
                       }}
-                      className="overflow-hidden mt-3 text-yellow-300 leading-relaxed text-base sm:text-lg"
+                      className="overflow-hidden mt-3 text-amber-500 leading-relaxed text-base sm:text-lg"
                     >
                       {answer}
                     </motion.dd>

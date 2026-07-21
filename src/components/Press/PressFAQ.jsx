@@ -57,12 +57,12 @@ const PressFAQ = () => {
   }, [openIndex]);
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 sm:px-6 py-16 sm:py-20">
+    <section className="w-full bg-white flex justify-center px-4 sm:px-6 py-16 sm:py-20">
       <div className="max-w-[900px] w-full">
-        <h2 className="text-yellow-400 text-3xl sm:text-4xl md:text-5xl font-extrabold text-center drop-shadow-lg">
+        <h2 className="text-amber-600 text-3xl sm:text-4xl md:text-5xl font-extrabold text-center drop-shadow-lg">
           Frequently Asked Questions
         </h2>
-        <p className="mt-3 sm:mt-4 text-yellow-300 text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+        <p className="mt-3 sm:mt-4 text-amber-500 text-base sm:text-lg md:text-xl text-center leading-relaxed max-w-2xl mx-auto drop-shadow-md">
           Find answers to common questions about press inquiries, media assets, and more.
         </p>
 
@@ -70,7 +70,7 @@ const PressFAQ = () => {
           {faqs.map(({ question, answer }, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-xl border border-yellow-700 shadow-xl overflow-hidden"
+              className="bg-white rounded-xl border border-amber-900 shadow-xl overflow-hidden"
             >
               <button
                 className="w-full flex justify-between items-center px-5 sm:px-6 py-4 sm:py-5 focus:outline-none"
@@ -78,11 +78,11 @@ const PressFAQ = () => {
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-content-${index}`}
               >
-                <h3 className="text-left text-yellow-300 font-semibold text-base sm:text-lg md:text-xl leading-snug">
+                <h3 className="text-left text-amber-500 font-semibold text-base sm:text-lg md:text-xl leading-snug">
                   {question}
                 </h3>
                 <span
-                  className="text-yellow-400 text-2xl sm:text-3xl font-bold ml-4 select-none"
+                  className="text-amber-600 text-2xl sm:text-3xl font-bold ml-4 select-none"
                   aria-hidden="true"
                 >
                   {openIndex === index ? "−" : "+"}
@@ -91,7 +91,7 @@ const PressFAQ = () => {
 
               <div
                 id={`faq-content-${index}`}
-                className="px-5 sm:px-6 text-yellow-200 text-sm sm:text-base md:text-lg leading-relaxed border-t border-yellow-800 overflow-hidden"
+                className="px-5 sm:px-6 text-amber-400 text-sm sm:text-base md:text-lg leading-relaxed border-t border-amber-900 overflow-hidden"
                 ref={(el) => (answerRefs.current[index] = el)}
                 style={{ height: 0, opacity: 0, display: "none" }}
               >

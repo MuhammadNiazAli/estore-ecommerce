@@ -43,11 +43,11 @@ const GiftCardDetails = ({
     <section
       ref={sectionRef}
       aria-label={`Detailed information about ${giftCard.title}`}
-      className="max-w-[900px] mx-auto bg-gray-900 text-white rounded-3xl shadow-2xl overflow-hidden p-8 flex flex-col lg:flex-row gap-8
+      className="max-w-[900px] mx-auto bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden p-8 flex flex-col lg:flex-row gap-8
         transition-shadow duration-300 hover:shadow-[0_10px_30px_rgba(202,138,4,0.5)]"
     >
       {/* Image */}
-      <div className="flex-shrink-0 w-full lg:w-1/3 rounded-xl overflow-hidden shadow-lg ring-1 ring-yellow-700">
+      <div className="flex-shrink-0 w-full lg:w-1/3 rounded-xl overflow-hidden shadow-lg ring-1 ring-amber-900">
         <img
           src={giftCard.image}
           alt={`${giftCard.title} image`}
@@ -61,12 +61,12 @@ const GiftCardDetails = ({
       {/* Details */}
       <div className="flex-1 flex flex-col justify-between">
         <div>
-          <h2 className="text-3xl font-extrabold mb-4 flex items-center gap-3 text-yellow-300 select-text">
-            <FaGift className="text-yellow-400" aria-hidden="true" />
+          <h2 className="text-3xl font-extrabold mb-4 flex items-center gap-3 text-amber-500 select-text">
+            <FaGift className="text-amber-600" aria-hidden="true" />
             {giftCard.title}
             {giftCard.popular && (
               <span
-                className="ml-2 inline-flex items-center gap-1 bg-yellow-400 text-black text-xs font-bold uppercase
+                className="ml-2 inline-flex items-center gap-1 bg-amber-600 text-black text-xs font-bold uppercase
                   rounded-full px-2 py-0.5 select-none"
                 aria-label="Popular gift card badge"
               >
@@ -75,23 +75,23 @@ const GiftCardDetails = ({
             )}
           </h2>
 
-          <p className="text-yellow-200 mb-6 leading-relaxed">{giftCard.description}</p>
+          <p className="text-amber-400 mb-6 leading-relaxed">{giftCard.description}</p>
 
-          <ul className="text-yellow-300 space-y-3 text-sm sm:text-base select-text">
+          <ul className="text-amber-500 space-y-3 text-sm sm:text-base select-text">
             <li className="flex items-center gap-3">
-              <FaDollarSign className="text-yellow-400" />
+              <FaDollarSign className="text-amber-600" />
               <span>
                 Value:{' '}
-                <strong className="text-white">
+                <strong className="text-gray-900">
                   {formatCurrency(giftCard.value, giftCard.currency)}
                 </strong>
               </span>
             </li>
             <li className="flex items-center gap-3">
-              <FaCalendarAlt className="text-yellow-400" />
+              <FaCalendarAlt className="text-amber-600" />
               <span>
                 Expiry Date:{' '}
-                <strong className="text-white">{formatDate(giftCard.expiry)}</strong>
+                <strong className="text-gray-900">{formatDate(giftCard.expiry)}</strong>
               </span>
             </li>
           </ul>
@@ -102,7 +102,7 @@ const GiftCardDetails = ({
             <button
               type="button"
               onClick={onBack}
-              className="text-yellow-300 underline hover:text-yellow-400 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 rounded"
+              className="text-amber-500 underline hover:text-amber-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 rounded"
               aria-label="Back to gift card list"
             >
               &larr; Back to List
@@ -111,9 +111,9 @@ const GiftCardDetails = ({
 
           <button
             type="button"
-            className="w-full sm:w-auto px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-md
-              hover:bg-yellow-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2
-              active:scale-[0.97] active:bg-yellow-500 select-none"
+            className="w-full sm:w-auto px-8 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md
+              hover:bg-amber-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
+              active:scale-[0.97] active:bg-amber-700 select-none"
             aria-label={`Buy ${giftCard.title} gift card`}
             onClick={() => alert(`Buying gift card: ${giftCard.title}`)}
           >

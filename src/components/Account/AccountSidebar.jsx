@@ -112,7 +112,7 @@ const AccountSidebar = () => {
       {/* Open button */}
       <button
         onClick={handleOpenSidebar}
-        className="lg:hidden fixed top-24 left-0 z-[1] bg-yellow-400 text-black p-2 rounded-tr-xl rounded-br-xl shadow"
+        className="lg:hidden fixed top-24 left-0 z-[1] bg-amber-600 text-black p-2 rounded-tr-xl rounded-br-xl shadow"
         style={{ width: '36px', height: '56px' }}
         hidden={mobileOpen || showSidebar}
         aria-label="Open sidebar"
@@ -126,7 +126,7 @@ const AccountSidebar = () => {
           {/* Overlay */}
           <div
             onClick={handleCloseSidebar}
-            className={`lg:hidden fixed inset-0 z-[1000] h-screen bg-black/40 backdrop-blur-md transition-opacity duration-300 ${
+            className={`lg:hidden fixed inset-0 z-[1000] h-screen bg-white/40 backdrop-blur-md transition-opacity duration-300 ${
               mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
             }`}
             aria-hidden="true"
@@ -134,7 +134,7 @@ const AccountSidebar = () => {
 
           {/* Sidebar sliding */}
           <div
-            className={`lg:hidden fixed top-0 left-0 z-[1001] h-full bg-gray-800 text-white rounded-r-xl p-6 shadow-lg w-full max-w-sm
+            className={`lg:hidden fixed top-0 left-0 z-[1001] h-full bg-white text-gray-900 rounded-r-xl p-6 shadow-lg w-full max-w-sm
               transform transition-transform duration-300
               ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
             style={{ top: '0', maxHeight: '100vh', overflowY: 'auto' }}
@@ -145,7 +145,7 @@ const AccountSidebar = () => {
             <div className="flex justify-end">
               <button
                 onClick={handleCloseSidebar}
-                className="text-yellow-400 hover:text-yellow-300"
+                className="text-amber-600 hover:text-amber-500"
                 aria-label="Close sidebar"
               >
                 <FaTimes size={22} />
@@ -160,8 +160,8 @@ const AccountSidebar = () => {
                     className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                       ${
                         active === item.id
-                          ? 'bg-yellow-400 text-black shadow'
-                          : 'hover:bg-gray-700 text-gray-200'
+                          ? 'bg-amber-600 text-black shadow'
+                          : 'hover:bg-gray-50 text-gray-700'
                       }`}
                   >
                     <span className="text-lg">{item.icon}</span>
@@ -174,8 +174,8 @@ const AccountSidebar = () => {
                     className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                       ${
                         active === item.id
-                          ? 'bg-yellow-400 text-black shadow'
-                          : 'hover:bg-gray-700 text-gray-200'
+                          ? 'bg-amber-600 text-black shadow'
+                          : 'hover:bg-gray-50 text-gray-700'
                       }`}
                     onClick={() => handleNavClick(item.id)}
                   >
@@ -191,7 +191,7 @@ const AccountSidebar = () => {
 
       {/* Desktop sidebar */}
       <aside
-        className="hidden lg:block w-full lg:w-64 bg-gray-800 text-white rounded-xl p-6 shadow-lg sticky top-24"
+        className="hidden lg:block w-full lg:w-64 bg-white text-gray-900 rounded-xl p-6 shadow-lg sticky top-24"
         style={{ maxHeight: '600px' }}
       >
         <nav
@@ -206,8 +206,8 @@ const AccountSidebar = () => {
                 className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                   ${
                     active === item.id
-                      ? 'bg-yellow-400 text-black shadow'
-                      : 'hover:bg-gray-700 text-gray-200'
+                      ? 'bg-amber-600 text-black shadow'
+                      : 'hover:bg-gray-50 text-gray-700'
                   }`}
               >
                 <span className="text-lg">{item.icon}</span>
@@ -220,8 +220,8 @@ const AccountSidebar = () => {
                 className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                   ${
                     active === item.id
-                      ? 'bg-yellow-400 text-black shadow'
-                      : 'hover:bg-gray-700 text-gray-200'
+                      ? 'bg-amber-600 text-black shadow'
+                      : 'hover:bg-gray-50 text-gray-700'
                   }`}
                 onClick={() => handleNavClick(item.id)}
               >
@@ -238,15 +238,15 @@ const AccountSidebar = () => {
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #111827; /* gray-900 */
+          background: #ffffff; /* gray-900 */
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #0f172a; /* gray-950 */
+          background-color: #ffffff; /* gray-950 */
           border-radius: 4px;
         }
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #0f172a #111827;
+          scrollbar-color: #ffffff #ffffff;
         }
       `}</style>
     </>

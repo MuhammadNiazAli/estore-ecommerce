@@ -240,10 +240,10 @@ const AffiliatesPartners = () => {
   return (
     <section
       aria-label="Affiliate Program Partners"
-      className="bg-gray-900 text-yellow-400 py-12 px-4"
+      className="bg-white text-amber-600 py-12 px-4"
     >
       <div className="max-w-[800px] mx-auto relative">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-10 tracking-wide text-yellow-400">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-10 tracking-wide text-amber-600">
           Our Trusted Partners
         </h2>
 
@@ -252,7 +252,7 @@ const AffiliatesPartners = () => {
           onClick={() => scroll("left")}
           disabled={!canScrollLeft}
           aria-label="Scroll partners left"
-          className={`hidden my-16 sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-yellow-500 text-gray-900 rounded-full p-2 shadow-lg hover:bg-yellow-600 transition-colors duration-300 z-30 focus:outline-none focus:ring-4 focus:ring-yellow-400
+          className={`hidden my-16 sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-amber-700 text-gray-900 rounded-full p-2 shadow-lg hover:bg-amber-800 transition-colors duration-300 z-30 focus:outline-none focus:ring-4 focus:ring-amber-600
             ${!canScrollLeft ? "opacity-40 cursor-not-allowed" : ""}
           `}
           style={{ transform: "translate(-70%, -50%)" }}
@@ -274,7 +274,7 @@ const AffiliatesPartners = () => {
           onClick={() => scroll("right")}
           disabled={!canScrollRight}
           aria-label="Scroll partners right"
-          className={`hidden my-16 sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-yellow-500 text-gray-900 rounded-full p-2 shadow-lg hover:bg-yellow-600 transition-colors duration-300 z-30 focus:outline-none focus:ring-4 focus:ring-yellow-400
+          className={`hidden my-16 sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-amber-700 text-gray-900 rounded-full p-2 shadow-lg hover:bg-amber-800 transition-colors duration-300 z-30 focus:outline-none focus:ring-4 focus:ring-amber-600
             ${!canScrollRight ? "opacity-40 cursor-not-allowed" : ""}
           `}
           style={{ transform: "translate(70%, -50%)" }}
@@ -320,7 +320,7 @@ const AffiliatesPartners = () => {
               rel="noopener noreferrer"
               className={`
                 flex-shrink-0 
-                rounded-md bg-yellow-50 bg-opacity-10 flex items-center justify-center p-2 shadow-md hover:shadow-lg transition-shadow duration-300 snap-center focus:outline-none focus:ring-2 focus:ring-yellow-400
+                rounded-md bg-amber-200 bg-opacity-10 flex items-center justify-center p-2 shadow-md hover:shadow-lg transition-shadow duration-300 snap-center focus:outline-none focus:ring-2 focus:ring-amber-600
 
                 ${/* Desktop/tablet: show 4 cards width (as before) */ ""}
                 w-[calc((1000px-18rem)/4)] 

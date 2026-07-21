@@ -16,7 +16,7 @@ import WomanClothsOffers from '@/components/WomanCloths/WomanClothsOffers';
 
 export default function WomanCloths() {
   return (
-    <main className="min-h-screen bg-[#101828] text-white flex flex-col items-center justify-start px-4 py-10 lg:py-20">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-start px-4 py-10 lg:py-20">
       
       {/* Hero Banner */}
       <WomanClothsHero />

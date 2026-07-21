@@ -82,10 +82,10 @@ const FeatureCard = ({ item, index }) => {
       role="region"
       aria-labelledby={`${id}-title`}
       aria-describedby={`${id}-desc`}
-      className="flex flex-col sm:flex-row items-start gap-6 bg-gray-900 border border-yellow-500/50 rounded-3xl p-7 sm:p-9 shadow-xl cursor-pointer transition-transform focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400/80"
+      className="flex flex-col sm:flex-row items-start gap-6 bg-white border border-amber-700/50 rounded-3xl p-7 sm:p-9 shadow-xl cursor-pointer transition-transform focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600/80"
     >
       <div
-        className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-yellow-600/25 text-yellow-500 shadow-md animate-pulse"
+        className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-800/25 text-amber-700 shadow-md animate-pulse"
         aria-hidden="true"
         aria-label={aria}
       >
@@ -95,13 +95,13 @@ const FeatureCard = ({ item, index }) => {
       <div className="mt-4 sm:mt-0">
         <h3
           id={`${id}-title`}
-          className="text-yellow-400 font-bold text-xl sm:text-2xl mb-2 tracking-wide"
+          className="text-amber-600 font-bold text-xl sm:text-2xl mb-2 tracking-wide"
         >
           {title}
         </h3>
         <p
           id={`${id}-desc`}
-          className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-prose"
+          className="text-gray-700 text-sm sm:text-base leading-relaxed max-w-prose"
         >
           {description}
         </p>
@@ -114,7 +114,7 @@ const HomeKnowicon = () => {
   return (
     <section
       aria-labelledby="why-us-heading"
-      className="bg-gradient-to-b from-gray-900 text-white py-10 sm:py-14 px-6 sm:px-16"
+      className="bg-gradient-to-b from-white text-gray-900 py-10 sm:py-14 px-6 sm:px-16"
     >
       <div className="max-w-[1200px] mx-auto">
       <h2

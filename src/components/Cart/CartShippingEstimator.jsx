@@ -32,7 +32,7 @@ const CartShippingEstimator = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-gray-100 p-6 rounded-lg max-w-md mx-auto shadow-lg">
+    <section className="bg-white text-gray-800 p-6 rounded-lg max-w-md mx-auto shadow-lg">
       <h2 className="text-xl font-semibold mb-4 text-center">Estimate Shipping</h2>
 
       <div className="flex flex-col space-y-4">
@@ -45,7 +45,7 @@ const CartShippingEstimator = () => {
           name="country"
           value={country}
           onChange={(e) => setCountry(e.target.value)}
-          className="bg-gray-800 border border-gray-700 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          className="bg-white border border-gray-200 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-700"
         >
           <option value="" disabled>
             Select your country
@@ -68,14 +68,14 @@ const CartShippingEstimator = () => {
           value={postalCode}
           onChange={(e) => setPostalCode(e.target.value)}
           placeholder="Enter postal code"
-          className="bg-gray-800 border border-gray-700 rounded-md py-2 px-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          className="bg-white border border-gray-200 rounded-md py-2 px-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
         />
 
         {/* Estimate button */}
         <button
           type="button"
           onClick={handleEstimate}
-          className="w-full bg-yellow-600 hover:bg-yellow-700 transition-colors rounded-md py-2 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          className="w-full bg-amber-800 hover:bg-amber-900 transition-colors rounded-md py-2 text-gray-900 font-semibold focus:outline-none focus:ring-2 focus:ring-amber-700"
         >
           Estimate Shipping
         </button>
@@ -87,7 +87,7 @@ const CartShippingEstimator = () => {
 
         {/* Result */}
         {shippingCost && (
-          <p className="text-yellow-400 text-center font-semibold">
+          <p className="text-amber-600 text-center font-semibold">
             Estimated Shipping Cost: ${shippingCost}
           </p>
         )}

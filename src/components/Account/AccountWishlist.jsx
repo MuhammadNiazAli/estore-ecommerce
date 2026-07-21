@@ -53,9 +53,9 @@ const AccountWishlist = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 max-w-[1000px] mx-auto text-center text-gray-400"
+        className="bg-gradient-to-b from-white to-white rounded-xl p-8 max-w-[1000px] mx-auto text-center text-gray-600"
       >
-        <h2 className="text-2xl font-extrabold mb-4 text-white">Your Wishlist</h2>
+        <h2 className="text-2xl font-extrabold mb-4 text-gray-900">Your Wishlist</h2>
         <p>You have no items in your wishlist.</p>
       </motion.section>
     );
@@ -66,15 +66,15 @@ const AccountWishlist = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 max-w-[1000px] mx-auto"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-8 max-w-[1000px] mx-auto"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-white tracking-wide">Your Wishlist</h2>
+      <h2 className="text-3xl font-extrabold mb-8 text-gray-900 tracking-wide">Your Wishlist</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {wishlist.map(({ id, name, price, image }) => (
           <div
             key={id}
-            className="relative bg-gray-800 rounded-xl shadow-xl overflow-hidden group cursor-pointer"
+            className="relative bg-white rounded-xl shadow-xl overflow-hidden group cursor-pointer"
           >
             {/* Image container */}
             <div className="relative w-full h-64 overflow-hidden">
@@ -89,7 +89,7 @@ const AccountWishlist = () => {
               {/* Glass blur overlay with icons */}
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6"
+                className="absolute inset-0 bg-white bg-opacity-30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6"
               >
                 {/* Heart toggle */}
                 <button
@@ -99,7 +99,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={likedIds.has(id) ? `Remove ${name} from wishlist` : `Add ${name} to wishlist`}
                   title={likedIds.has(id) ? `Remove ${name}` : `Add ${name}`}
-                  className="text-yellow-400 hover:text-yellow-300 text-2xl transition"
+                  className="text-amber-600 hover:text-amber-500 text-2xl transition"
                 >
                   {likedIds.has(id) ? <FaHeart /> : <FaRegHeart />}
                 </button>
@@ -112,7 +112,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={`View details for ${name}`}
                   title={`View details`}
-                  className="text-white hover:text-yellow-400 text-2xl transition"
+                  className="text-gray-900 hover:text-amber-600 text-2xl transition"
                 >
                   <FaEye />
                 </button>
@@ -125,7 +125,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={`Add ${name} to cart`}
                   title={`Add to cart`}
-                  className="text-white hover:text-yellow-400 text-2xl transition"
+                  className="text-gray-900 hover:text-amber-600 text-2xl transition"
                 >
                   <FaShoppingCart />
                 </button>
@@ -134,10 +134,10 @@ const AccountWishlist = () => {
 
             {/* Product info */}
             <div className="p-5">
-              <h3 className="text-white font-semibold text-lg truncate" title={name}>
+              <h3 className="text-gray-900 font-semibold text-lg truncate" title={name}>
                 {name}
               </h3>
-              <p className="text-yellow-400 font-bold mt-1 text-lg">${price.toFixed(2)}</p>
+              <p className="text-amber-600 font-bold mt-1 text-lg">${price.toFixed(2)}</p>
             </div>
 
             {/* Remove button */}
@@ -148,7 +148,7 @@ const AccountWishlist = () => {
               }}
               aria-label={`Remove ${name} from wishlist`}
               title={`Remove ${name}`}
-              className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-white rounded-full p-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-gray-900 rounded-full p-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-red-400"
             >
               &times;
             </button>

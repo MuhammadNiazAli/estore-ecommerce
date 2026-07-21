@@ -51,22 +51,22 @@ const KitchenSpecsComparison = () => {
   const [products] = useState(productsData);
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 my-[-50px]">
+    <section className="bg-white text-amber-600 py-12 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">
           Compare Kitchen Products
         </h2>
 
         {/* Desktop View: Table */}
-        <div className="hidden lg:block border border-yellow-500 rounded-lg shadow-lg overflow-hidden">
+        <div className="hidden lg:block border border-amber-700 rounded-lg shadow-lg overflow-hidden">
           <div className="min-w-full">
             {/* Header Row */}
-            <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-gray-800">
-              <div className="p-3 font-semibold text-gray-300">Specs</div>
+            <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-white">
+              <div className="p-3 font-semibold text-gray-700">Specs</div>
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="p-3 text-center border-l border-yellow-500"
+                  className="p-3 text-center border-l border-amber-700"
                 >
                   <img
                     src={product.image}
@@ -83,19 +83,19 @@ const KitchenSpecsComparison = () => {
               <div
                 key={idx}
                 className={`grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] ${
-                  idx % 2 === 0 ? "bg-gray-900" : "bg-gray-800"
+                  idx % 2 === 0 ? "bg-white" : "bg-white"
                 }`}
               >
-                <div className="p-3 font-semibold text-gray-400">
+                <div className="p-3 font-semibold text-gray-600">
                   {spec.label}
                 </div>
                 {products.map((product) => (
                   <div
                     key={product.id + spec.key}
-                    className="p-3 text-center border-l border-yellow-500 text-sm"
+                    className="p-3 text-center border-l border-amber-700 text-sm"
                   >
                     {product[spec.key] === "Yes" ? (
-                      <FaCheckCircle className="text-yellow-500 mx-auto" />
+                      <FaCheckCircle className="text-amber-700 mx-auto" />
                     ) : (
                       product[spec.key]
                     )}
@@ -114,7 +114,7 @@ const KitchenSpecsComparison = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-gray-800 rounded-lg shadow-lg border border-yellow-500 overflow-hidden"
+              className="bg-white rounded-lg shadow-lg border border-amber-700 overflow-hidden"
             >
               <img
                 src={product.image}
@@ -123,16 +123,16 @@ const KitchenSpecsComparison = () => {
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-700">
                   {specs.map((spec, i) => (
                     <li
                       key={i}
-                      className="flex justify-between items-center border-b border-gray-700 pb-1"
+                      className="flex justify-between items-center border-b border-gray-200 pb-1"
                     >
-                      <span className="text-gray-400">{spec.label}</span>
+                      <span className="text-gray-600">{spec.label}</span>
                       <span>
                         {product[spec.key] === "Yes" ? (
-                          <FaCheckCircle className="text-yellow-500" />
+                          <FaCheckCircle className="text-amber-700" />
                         ) : (
                           product[spec.key]
                         )}

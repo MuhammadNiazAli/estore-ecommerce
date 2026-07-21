@@ -52,28 +52,28 @@ const CartSummary = () => {
       aria-label="Order summary"
       className={`
         max-w-md mx-auto w-full rounded-xl shadow-xl p-6 my-[-70px] mb-0 lg:my-0
-        text-white transition-colors duration-500 z-50
-        bg-gray-900
+        text-gray-900 transition-colors duration-500 z-50
+        bg-white
         ${isDesktop ? 'sticky top-28' : ''}
-        ${isStickyActive && isDesktop ? 'bg-gray-900/10 backdrop-blur-md' : ''}
+        ${isStickyActive && isDesktop ? 'bg-white/10 backdrop-blur-md' : ''}
       `}
     >
-      <h2 className="text-xl font-semibold mb-6 border-b border-gray-700 pb-3">
+      <h2 className="text-xl font-semibold mb-6 border-b border-gray-200 pb-3">
         Order Summary
       </h2>
 
       <dl className="space-y-4 text-sm">
-        <div className="flex justify-between text-gray-300">
+        <div className="flex justify-between text-gray-700">
           <dt>Subtotal</dt>
           <dd>$149.99</dd>
         </div>
 
-        <div className="flex justify-between text-gray-300">
+        <div className="flex justify-between text-gray-700">
           <dt>Shipping</dt>
           <dd>$4.99</dd>
         </div>
 
-        <div className="flex justify-between text-gray-300">
+        <div className="flex justify-between text-gray-700">
           <dt>Tax</dt>
           <dd>$12.00</dd>
         </div>
@@ -84,18 +84,18 @@ const CartSummary = () => {
         </div>
       </dl>
 
-      <hr className="border-gray-700 my-6" />
+      <hr className="border-gray-200 my-6" />
 
       <div className="flex justify-between text-lg font-semibold">
         <span>Total</span>
-        <span className="text-yellow-400">$146.98</span>
+        <span className="text-amber-600">$146.98</span>
       </div>
 
       <Link
         href="/checkout"
         aria-label="Proceed to checkout"
-        className="block mt-8 w-full bg-yellow-400 text-gray-900 py-3 rounded-lg font-bold text-center
-                   hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-400 transition-shadow"
+        className="block mt-8 w-full bg-amber-600 text-gray-900 py-3 rounded-lg font-bold text-center
+                   hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-600 transition-shadow"
       >
         Proceed to Checkout
       </Link>

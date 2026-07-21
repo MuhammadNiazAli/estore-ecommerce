@@ -25,13 +25,13 @@ const SportsNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-14">
-      <div className="max-w-4xl mx-auto px-4 text-center text-white">
+    <section className="bg-white py-14">
+      <div className="max-w-4xl mx-auto px-4 text-center text-gray-900">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-3">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-3">
           Stay in the Game
         </h2>
-        <p className="text-gray-300 mb-6 text-lg">
+        <p className="text-gray-700 mb-6 text-lg">
           Join our newsletter and get the latest deals, news, and sports tips!
         </p>
 
@@ -41,18 +41,18 @@ const SportsNewsletterSignup = () => {
           className="flex flex-col sm:flex-row justify-center items-center gap-4"
         >
           <div className="relative w-full sm:w-[400px]">
-            <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-600" />
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-gray-800 text-white rounded-full pl-12 pr-4 py-3 outline-none border border-gray-700 focus:border-yellow-400 transition"
+              className="w-full bg-white text-gray-900 rounded-full pl-12 pr-4 py-3 outline-none border border-gray-200 focus:border-amber-600 transition"
             />
           </div>
           <button
             type="submit"
-            className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full hover:bg-yellow-300 transition w-full sm:w-auto"
+            className="bg-amber-600 text-black font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition w-full sm:w-auto"
           >
             Subscribe
           </button>
@@ -83,7 +83,7 @@ const SportsNewsletterSignup = () => {
         </AnimatePresence>
 
         {/* Privacy Note */}
-        <p className="mt-6 text-gray-400 text-sm">
+        <p className="mt-6 text-gray-600 text-sm">
           We respect your privacy. Unsubscribe anytime.
         </p>
       </div>

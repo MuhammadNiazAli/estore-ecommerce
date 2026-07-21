@@ -42,7 +42,7 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
       aria-label="Filter your purchase history"
       className="
         max-w-[900px] mx-auto
-        bg-gradient-to-br from-yellow-900 via-yellow-800 to-yellow-700
+        bg-gradient-to-br from-amber-950 via-amber-900 to-amber-900
         rounded-3xl shadow-2xl
         p-6 flex flex-col sm:flex-row sm:items-center gap-6
       "
@@ -51,7 +51,7 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 flex-1">
         <label
           htmlFor="start-date"
-          className="text-yellow-400 font-semibold whitespace-nowrap"
+          className="text-amber-600 font-semibold whitespace-nowrap"
         >
           From:
         </label>
@@ -62,9 +62,9 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
           onChange={handleStartDateChange}
           className="
             px-3 py-2 rounded-md
-            bg-yellow-800 text-yellow-100
-            border border-yellow-400
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+            bg-amber-900 text-amber-300
+            border border-amber-600
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
             transition
           "
         />
@@ -74,7 +74,7 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 flex-1">
         <label
           htmlFor="end-date"
-          className="text-yellow-400 font-semibold whitespace-nowrap"
+          className="text-amber-600 font-semibold whitespace-nowrap"
         >
           To:
         </label>
@@ -85,9 +85,9 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
           onChange={handleEndDateChange}
           className="
             px-3 py-2 rounded-md
-            bg-yellow-800 text-yellow-100
-            border border-yellow-400
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+            bg-amber-900 text-amber-300
+            border border-amber-600
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
             transition
           "
         />
@@ -97,7 +97,7 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
       <div className="flex flex-col sm:flex-row sm:items-center gap-3">
         <label
           htmlFor="status-filter"
-          className="text-yellow-400 font-semibold whitespace-nowrap"
+          className="text-amber-600 font-semibold whitespace-nowrap"
         >
           Status:
         </label>
@@ -107,9 +107,9 @@ const PerchasigHistoryFilters = ({ onFilterChange }) => {
           onChange={handleStatusChange}
           className="
             px-3 py-2 rounded-md
-            bg-yellow-800 text-yellow-100
-            border border-yellow-400
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+            bg-amber-900 text-amber-300
+            border border-amber-600
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
             transition
           "
         >

@@ -280,7 +280,7 @@ export default function WishlistFilters() {
   };
 
   return (
-    <section className="bg-gray-900 py-8 px-4 min-h-[500px]">
+    <section className="bg-white py-8 px-4 min-h-[500px]">
       {/* Filters */}
      <motion.div
   initial={{ opacity: 0, y: 20 }}
@@ -302,8 +302,8 @@ export default function WishlistFilters() {
         text-sm sm:text-base
         ${
           activeFilter === filter
-            ? 'bg-blue-600 text-white border-blue-600 shadow-lg'
-            : 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-100 dark:hover:bg-gray-800'
+            ? 'bg-blue-600 text-gray-900 border-blue-600 shadow-lg'
+            : 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-100 dark:hover:bg-gray-50'
         }
         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1
         w-full
@@ -346,7 +346,7 @@ export default function WishlistFilters() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden cursor-pointer
+              className="bg-white dark:bg-white rounded-lg shadow-md overflow-hidden cursor-pointer
                          hover:shadow-xl focus:shadow-xl focus:outline-none
                          ring-1 ring-transparent focus:ring-blue-400 transition-shadow duration-300"
               tabIndex={0}
@@ -365,7 +365,7 @@ export default function WishlistFilters() {
 
               <div className="p-4">
                 <h3
-                  className="font-semibold text-lg text-gray-900 dark:text-gray-100 truncate"
+                  className="font-semibold text-lg text-gray-900 dark:text-gray-800 truncate"
                   title={product.title}
                 >
                   {product.title}
@@ -374,11 +374,11 @@ export default function WishlistFilters() {
                   ${product.price.toFixed(2)}
                 </p>
                 {product.oldPrice && product.oldPrice > product.price && (
-                  <p className="text-sm line-through text-gray-400">
+                  <p className="text-sm line-through text-gray-600">
                     ${product.oldPrice.toFixed(2)}
                   </p>
                 )}
-                <div className="mt-3 flex gap-5 text-gray-600 dark:text-gray-300 justify-start">
+                <div className="mt-3 flex gap-5 text-gray-600 dark:text-gray-700 justify-start">
                   {/* Cart icon navigates to product page */}
                   <FiShoppingCart
                     tabIndex={0}
@@ -400,7 +400,7 @@ export default function WishlistFilters() {
                         : 'Add to favorites'
                     }
                     className={`w-6 h-6 cursor-pointer transition-colors duration-200 ${
-                      favorites.has(product.id) ? 'text-red-600' : 'hover:text-red-600 text-gray-600 dark:text-gray-300'
+                      favorites.has(product.id) ? 'text-red-600' : 'hover:text-red-600 text-gray-600 dark:text-gray-700'
                     }`}
                     onClick={() => toggleFavorite(product.id)}
                     onKeyDown={(e) => {

@@ -25,7 +25,7 @@ const OrderActions = ({ status = 'Processing' }) => {
         type="button"
         aria-label="Download Invoice"
         onClick={() => alert('Download Invoice clicked')}
-        className={`${baseBtn} bg-gradient-to-r from-indigo-600 to-indigo-500 text-white hover:scale-105 hover:shadow-indigo-500/30 focus:outline-none focus:ring-4 focus:ring-indigo-400`}
+        className={`${baseBtn} bg-gradient-to-r from-indigo-600 to-indigo-500 text-gray-900 hover:scale-105 hover:shadow-indigo-500/30 focus:outline-none focus:ring-4 focus:ring-indigo-400`}
       >
         <FiDownload size={20} className={`${iconClass} group-hover:scale-110`} />
         Download Invoice
@@ -37,7 +37,7 @@ const OrderActions = ({ status = 'Processing' }) => {
           type="button"
           aria-label="Leave Feedback"
           onClick={() => alert('Leave Feedback clicked')}
-          className={`${baseBtn} bg-gradient-to-r from-emerald-600 to-green-500 text-white hover:scale-105 hover:shadow-green-500/30 focus:outline-none focus:ring-4 focus:ring-green-400`}
+          className={`${baseBtn} bg-gradient-to-r from-emerald-600 to-green-500 text-gray-900 hover:scale-105 hover:shadow-green-500/30 focus:outline-none focus:ring-4 focus:ring-green-400`}
         >
           <FiCheckCircle size={20} className={`${iconClass} group-hover:scale-110`} />
           Leave Feedback
@@ -50,7 +50,7 @@ const OrderActions = ({ status = 'Processing' }) => {
           type="button"
           aria-label="Request Return"
           onClick={() => alert('Request Return clicked')}
-          className={`${baseBtn} bg-gradient-to-r from-red-600 to-pink-500 text-white hover:scale-105 hover:shadow-red-500/30 focus:outline-none focus:ring-4 focus:ring-red-400`}
+          className={`${baseBtn} bg-gradient-to-r from-red-600 to-pink-500 text-gray-900 hover:scale-105 hover:shadow-red-500/30 focus:outline-none focus:ring-4 focus:ring-red-400`}
         >
           <FiRefreshCw size={20} className={`${iconClass} group-hover:rotate-180`} />
           Request Return
@@ -62,7 +62,7 @@ const OrderActions = ({ status = 'Processing' }) => {
         type="button"
         aria-label="View Order Details"
         onClick={() => alert('View Order Details clicked')}
-        className={`${baseBtn} border-2 border-gray-300 text-gray-100 bg-gray-800/30 hover:bg-gray-700/50 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-500`}
+        className={`${baseBtn} border-2 border-gray-300 text-gray-800 bg-white/30 hover:bg-white/50 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-500`}
       >
         <FiFileText size={20} className={`${iconClass} group-hover:scale-110`} />
         View Details

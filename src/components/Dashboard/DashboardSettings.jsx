@@ -78,13 +78,13 @@ const DashboardSettings = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-10 min-h-[400px]">
-      <div className="w-full max-w-[1000px] text-white">
-        <h2 className="text-2xl font-bold text-yellow-400 mb-6">Settings</h2>
+    <section className="w-full bg-white flex justify-center px-4 py-10 min-h-[400px]">
+      <div className="w-full max-w-[1000px] text-gray-900">
+        <h2 className="text-2xl font-bold text-amber-600 mb-6">Settings</h2>
 
         <form
           onSubmit={handleSave}
-          className="bg-gray-800 rounded-xl p-6 shadow-lg max-w-md mx-auto space-y-6"
+          className="bg-white rounded-xl p-6 shadow-lg max-w-md mx-auto space-y-6"
           aria-live="polite"
           aria-busy={saveStatus === 'saving'}
         >
@@ -92,7 +92,7 @@ const DashboardSettings = () => {
           <div className="flex items-center justify-between">
             <label
               htmlFor="emailNotifications"
-              className="text-gray-300 font-medium cursor-pointer"
+              className="text-gray-700 font-medium cursor-pointer"
             >
               Email Notifications
             </label>
@@ -101,7 +101,7 @@ const DashboardSettings = () => {
               id="emailNotifications"
               checked={formSettings.emailNotifications}
               onChange={() => handleToggle('emailNotifications')}
-              className="w-5 h-5 rounded border-gray-600 bg-gray-700 cursor-pointer accent-yellow-400"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
               aria-checked={formSettings.emailNotifications}
               role="switch"
             />
@@ -111,7 +111,7 @@ const DashboardSettings = () => {
           <div className="flex items-center justify-between">
             <label
               htmlFor="twoFactorAuth"
-              className="text-gray-300 font-medium cursor-pointer"
+              className="text-gray-700 font-medium cursor-pointer"
             >
               Two-Factor Authentication
             </label>
@@ -120,7 +120,7 @@ const DashboardSettings = () => {
               id="twoFactorAuth"
               checked={formSettings.twoFactorAuth}
               onChange={() => handleToggle('twoFactorAuth')}
-              className="w-5 h-5 rounded border-gray-600 bg-gray-700 cursor-pointer accent-yellow-400"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
               aria-checked={formSettings.twoFactorAuth}
               role="switch"
             />
@@ -130,7 +130,7 @@ const DashboardSettings = () => {
           <div className="flex items-center justify-between">
             <label
               htmlFor="darkMode"
-              className="text-gray-300 font-medium cursor-pointer"
+              className="text-gray-700 font-medium cursor-pointer"
             >
               Dark Mode
             </label>
@@ -139,7 +139,7 @@ const DashboardSettings = () => {
               id="darkMode"
               checked={formSettings.darkMode}
               onChange={() => handleToggle('darkMode')}
-              className="w-5 h-5 rounded border-gray-600 bg-gray-700 cursor-pointer accent-yellow-400"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
               aria-checked={formSettings.darkMode}
               role="switch"
             />
@@ -150,7 +150,7 @@ const DashboardSettings = () => {
             <button
               type="submit"
               disabled={!hasChanges || saveStatus === 'saving'}
-              className={`flex-1 bg-yellow-400 text-black font-semibold py-2 rounded-md hover:bg-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed`}
+              className={`flex-1 bg-amber-600 text-black font-semibold py-2 rounded-md hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-disabled={!hasChanges || saveStatus === 'saving'}
             >
               {saveStatus === 'saving' ? 'Saving...' : 'Save Settings'}
@@ -159,7 +159,7 @@ const DashboardSettings = () => {
               type="button"
               onClick={handleReset}
               disabled={!hasChanges || saveStatus === 'saving'}
-              className="text-yellow-400 font-semibold py-2 px-4 rounded-md hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-amber-600 font-semibold py-2 px-4 rounded-md hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Reset
             </button>

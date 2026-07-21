@@ -67,10 +67,10 @@ const AccountProfile = ({ userData, setUserData }) => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-10 max-w-[1000px] mx-auto shadow-xl"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-10 max-w-[1000px] mx-auto shadow-xl"
       aria-label="User profile form"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-white tracking-tight">
+      <h2 className="text-3xl font-extrabold mb-8 text-gray-900 tracking-tight">
         Update Profile Details
       </h2>
 
@@ -86,9 +86,9 @@ const AccountProfile = ({ userData, setUserData }) => {
         <div>
           <label
             htmlFor="fullName"
-            className="block mb-2 text-yellow-400 font-semibold text-lg"
+            className="block mb-2 text-amber-600 font-semibold text-lg"
           >
-            Full Name <span className="text-yellow-300">*</span>
+            Full Name <span className="text-amber-500">*</span>
           </label>
           <input
             type="text"
@@ -97,9 +97,9 @@ const AccountProfile = ({ userData, setUserData }) => {
             value={form.fullName}
             onChange={handleChange}
             placeholder="Jonathan Reed"
-            className={`w-full px-5 py-4 rounded-lg bg-gray-700 border ${
-              errors.fullName ? 'border-red-500' : 'border-gray-600'
-            } text-white placeholder-yellow-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md`}
+            className={`w-full px-5 py-4 rounded-lg bg-white border ${
+              errors.fullName ? 'border-red-500' : 'border-gray-200'
+            } text-gray-900 placeholder-amber-600 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md`}
             aria-invalid={errors.fullName ? 'true' : 'false'}
             aria-describedby={errors.fullName ? 'fullName-error' : undefined}
           />
@@ -118,9 +118,9 @@ const AccountProfile = ({ userData, setUserData }) => {
         <div>
           <label
             htmlFor="email"
-            className="block mb-2 text-yellow-400 font-semibold text-lg"
+            className="block mb-2 text-amber-600 font-semibold text-lg"
           >
-            Email Address <span className="text-yellow-300">*</span>
+            Email Address <span className="text-amber-500">*</span>
           </label>
           <input
             type="email"
@@ -129,9 +129,9 @@ const AccountProfile = ({ userData, setUserData }) => {
             value={form.email}
             onChange={handleChange}
             placeholder="jonathan.reed@mailprovider.com"
-            className={`w-full px-5 py-4 rounded-lg bg-gray-700 border ${
-              errors.email ? 'border-red-500' : 'border-gray-600'
-            } text-white placeholder-yellow-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md`}
+            className={`w-full px-5 py-4 rounded-lg bg-white border ${
+              errors.email ? 'border-red-500' : 'border-gray-200'
+            } text-gray-900 placeholder-amber-600 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md`}
             aria-invalid={errors.email ? 'true' : 'false'}
             aria-describedby={errors.email ? 'email-error' : undefined}
           />
@@ -150,7 +150,7 @@ const AccountProfile = ({ userData, setUserData }) => {
         <div>
           <label
             htmlFor="phone"
-            className="block mb-2 text-yellow-400 font-semibold text-lg"
+            className="block mb-2 text-amber-600 font-semibold text-lg"
           >
             Phone Number
           </label>
@@ -161,9 +161,9 @@ const AccountProfile = ({ userData, setUserData }) => {
             value={form.phone}
             onChange={handleChange}
             placeholder="+31 6 2589 1023"
-            className="w-full px-5 py-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-yellow-400 focus:outline-none focus:ring-3 focus:ring-yellow-400 transition shadow-md"
+            className="w-full px-5 py-4 rounded-lg bg-white border border-gray-200 text-gray-900 placeholder-amber-600 focus:outline-none focus:ring-3 focus:ring-amber-600 transition shadow-md"
           />
-          <p className="mt-1 text-yellow-300 text-sm italic">
+          <p className="mt-1 text-amber-500 text-sm italic">
             Optional — Include your country and area code.
           </p>
         </div>
@@ -171,7 +171,7 @@ const AccountProfile = ({ userData, setUserData }) => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full max-w-xs mx-auto block bg-yellow-400 text-black px-6 py-4 rounded-full font-semibold shadow-lg hover:bg-yellow-300 active:scale-95 transition-transform duration-150"
+          className="w-full max-w-xs mx-auto block bg-amber-600 text-black px-6 py-4 rounded-full font-semibold shadow-lg hover:bg-amber-500 active:scale-95 transition-transform duration-150"
           aria-label="Save profile"
         >
           Save Changes

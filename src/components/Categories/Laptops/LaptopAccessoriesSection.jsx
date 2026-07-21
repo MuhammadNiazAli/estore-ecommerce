@@ -44,7 +44,7 @@ const LaptopAccessoriesSection = () => {
 
   return (
     <section className="max-w-[1000px] mx-auto px-4 py-12 my-[-30px] mb-0">
-      <h2 className="text-3xl font-bold text-center text-white mb-10">
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">
         Must-Have Laptop Accessories
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -55,7 +55,7 @@ const LaptopAccessoriesSection = () => {
             <motion.div
               key={id}
               whileHover={{ scale: 1.02 }}
-              className="relative bg-gray-800 rounded-xl overflow-hidden shadow-lg group transition"
+              className="relative bg-white rounded-xl overflow-hidden shadow-lg group transition"
             >
               {/* Image */}
               <div className="relative w-full h-56 overflow-hidden">
@@ -68,30 +68,30 @@ const LaptopAccessoriesSection = () => {
                 <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                   <button
                     onClick={() => toggleFavorite(id)}
-                    className="p-2 rounded-full bg-gray-700 hover:bg-pink-600"
+                    className="p-2 rounded-full bg-white hover:bg-pink-600"
                   >
                     {isFavorited ? (
                       <HeartSolid className="h-5 w-5 text-pink-400" />
                     ) : (
-                      <HeartOutline className="h-5 w-5 text-white" />
+                      <HeartOutline className="h-5 w-5 text-gray-900" />
                     )}
                   </button>
                   <Link href={`/product/${id}`}>
-                    <button className="p-2 rounded-full bg-gray-700 hover:bg-blue-600">
-                      <EyeIcon className="h-5 w-5 text-white" />
+                    <button className="p-2 rounded-full bg-white hover:bg-blue-600">
+                      <EyeIcon className="h-5 w-5 text-gray-900" />
                     </button>
                   </Link>
                 </div>
                 {/* Optional Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
               </div>
 
               {/* Info */}
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-white">{name}</h3>
-                <p className="text-gray-400 text-sm mt-1">{description}</p>
+                <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
+                <p className="text-gray-600 text-sm mt-1">{description}</p>
                 <Link href="/cart">
-                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-gray-900 rounded-lg hover:bg-blue-700 transition">
                     <ShoppingCartIcon className="h-5 w-5" />
                     Add to Cart
                   </button>

@@ -232,7 +232,7 @@ const CartRecentlyViewed = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white py-12 px-4 relative mb-[-150px]">
+    <section className="w-full bg-white text-gray-900 py-12 px-4 relative mb-[-150px]">
       <div className="max-w-[1000px] mx-auto relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 tracking-tight">
           Recently Viewed Products
@@ -247,7 +247,7 @@ const CartRecentlyViewed = () => {
           {sampleProducts.map(({ id, title, description, category, price, image }) => (
             <article
               key={id}
-              className="group bg-gray-800 rounded-xl shadow-lg flex-shrink-0 transition duration-300 "
+              className="group bg-white rounded-xl shadow-lg flex-shrink-0 transition duration-300 "
               style={{ width: cardWidth ? `${cardWidth}px` : '260px' }}
             >
               <div className="relative h-48 overflow-hidden rounded-t-xl">
@@ -261,19 +261,19 @@ const CartRecentlyViewed = () => {
               <div className="p-4 flex flex-col justify-between h-[210px]">
                 <div>
                   <h3
-                    className="text-white text-base font-semibold truncate"
+                    className="text-gray-900 text-base font-semibold truncate"
                     title={title}
                   >
                     {title}
                   </h3>
-                  <p className="text-gray-400 text-sm mt-1 line-clamp-2">
+                  <p className="text-gray-600 text-sm mt-1 line-clamp-2">
                     {description}
                   </p>
                   <span className="mt-2 inline-block text-xs text-gray-500 font-medium">
                     Category: {category}
                   </span>
                 </div>
-                <p className="text-yellow-400 font-bold text-lg mt-4">${price.toFixed(2)}</p>
+                <p className="text-amber-600 font-bold text-lg mt-4">${price.toFixed(2)}</p>
               </div>
             </article>
           ))}
@@ -286,8 +286,8 @@ const CartRecentlyViewed = () => {
             aria-label="Scroll Left"
             className={`absolute top-1/2 -translate-y-1/2 -left-5 sm:-left-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-gray-900/60 hover:bg-yellow-400 hover:text-black
-              border border-gray-700 text-white backdrop-blur-md shadow-md
+              bg-white/60 hover:bg-amber-600 hover:text-black
+              border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
             type="button"
           >
@@ -302,8 +302,8 @@ const CartRecentlyViewed = () => {
             aria-label="Scroll Right"
             className={`absolute top-1/2 -translate-y-1/2 -right-5 sm:-right-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-gray-900/60 hover:bg-yellow-400 hover:text-black
-              border border-gray-700 text-white backdrop-blur-md shadow-md
+              bg-white/60 hover:bg-amber-600 hover:text-black
+              border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
             type="button"
           >

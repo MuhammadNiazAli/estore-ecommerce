@@ -19,28 +19,28 @@ const CartConfirmationDialog = ({ isOpen, onConfirm, onCancel }) => {
   return (
     <>
       {/* Overlay */}
-      <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-[1000]" />
+      <div className="fixed inset-0 bg-white bg-opacity-70 backdrop-blur-sm z-[1000]" />
 
       {/* Modal */}
       <div className="fixed inset-0 flex justify-center items-center px-4 z-[1001]">
-        <div className="bg-gray-900 rounded-xl max-w-[1000px] w-full p-8 mx-auto shadow-xl text-white">
-          <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">
+        <div className="bg-white rounded-xl max-w-[1000px] w-full p-8 mx-auto shadow-xl text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4">
             Confirm Your Purchase
           </h2>
-          <p className="mb-6 text-gray-300 text-base sm:text-lg">
+          <p className="mb-6 text-gray-700 text-base sm:text-lg">
             Are you sure you want to complete this purchase? Once confirmed, your order will be processed and cannot be canceled.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-end gap-4">
             <button
               onClick={onCancel}
-              className="px-5 py-3 rounded-full border border-gray-600 hover:border-yellow-400 text-gray-400 hover:text-yellow-400 transition text-sm sm:text-base"
+              className="px-5 py-3 rounded-full border border-gray-200 hover:border-amber-600 text-gray-600 hover:text-amber-600 transition text-sm sm:text-base"
             >
               Cancel
             </button>
             <button
               onClick={onConfirm}
-              className="px-5 py-3 rounded-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold transition text-sm sm:text-base"
+              className="px-5 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold transition text-sm sm:text-base"
             >
               Confirm Purchase
             </button>

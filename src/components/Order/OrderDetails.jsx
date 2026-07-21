@@ -72,15 +72,15 @@ const OrderDetails = () => {
   return (
     <section
       aria-label="Order Information"
-      className="max-w-[1100px] mx-auto px-4 sm:px-8 py-10 bg-gray-900 text-white space-y-10 relative z-10 border border-gray-800 my-[-70px] mb-0"
+      className="max-w-[1100px] mx-auto px-4 sm:px-8 py-10 bg-white text-gray-900 space-y-10 relative z-10 border border-gray-200 my-[-70px] mb-0"
     >
       {/* Order Header */}
       <header className="border-b border-blue-600 pb-6">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">
            Order Summary
         </h2>
-        <p className="text-gray-300 mt-2 text-base">
-          Order <span className="text-white font-semibold">#{details.orderId}</span> •{' '}
+        <p className="text-gray-700 mt-2 text-base">
+          Order <span className="text-gray-900 font-semibold">#{details.orderId}</span> •{' '}
           <span className="text-blue-400 font-semibold">{details.status}</span>
         </p>
         <p className="text-gray-500 mt-1 text-sm">Placed on: {details.placedOn}</p>
@@ -90,9 +90,9 @@ const OrderDetails = () => {
       <Section title="Items Ordered" icon={<FiPackage />} border>
         <ul className="space-y-2 text-sm sm:text-base">
           {details.items.map((item) => (
-            <li key={item.id} className="flex justify-between text-gray-300">
+            <li key={item.id} className="flex justify-between text-gray-700">
               <span>{item.qty} × {item.name}</span>
-              <span className="font-medium text-white">€{(item.qty * item.price).toFixed(2)}</span>
+              <span className="font-medium text-gray-900">€{(item.qty * item.price).toFixed(2)}</span>
             </li>
           ))}
         </ul>
@@ -110,16 +110,16 @@ const OrderDetails = () => {
 
       {/* Shipping Method */}
       <Section title="Shipping Method & Tracking" icon={<FiTruck />} border>
-        <p className="text-gray-300">{details.shippingMethod}</p>
-        <p className="text-gray-300">
+        <p className="text-gray-700">{details.shippingMethod}</p>
+        <p className="text-gray-700">
           Tracking Number: <span className="text-blue-400 font-semibold">{details.trackingNumber}</span>
         </p>
-        <p className="text-gray-500 text-sm">Estimated Delivery: <span className="text-white">{details.estimatedDelivery}</span></p>
+        <p className="text-gray-500 text-sm">Estimated Delivery: <span className="text-gray-900">{details.estimatedDelivery}</span></p>
       </Section>
 
       {/* Payment Details */}
       <Section title="Payment Information" icon={<FiCreditCard />} border>
-        <p className="text-gray-300">{details.paymentMethod}</p>
+        <p className="text-gray-700">{details.paymentMethod}</p>
         <p className={`font-semibold text-sm ${details.paymentStatus === 'Paid' ? 'text-green-400' : 'text-red-500'}`}>
           Status: {details.paymentStatus}
         </p>
@@ -127,7 +127,7 @@ const OrderDetails = () => {
 
       {/* Pricing */}
       <Section title="Pricing Summary" icon={<FiTag />} border>
-        <ul className="text-gray-300 space-y-1 text-sm sm:text-base">
+        <ul className="text-gray-700 space-y-1 text-sm sm:text-base">
           <li className="flex justify-between">
             <span>Subtotal</span>
             <span>€{details.subtotal.toFixed(2)}</span>
@@ -142,7 +142,7 @@ const OrderDetails = () => {
             <span>Tax</span>
             <span>€{details.tax.toFixed(2)}</span>
           </li>
-          <li className="flex justify-between font-semibold text-white border-t border-gray-800 pt-2">
+          <li className="flex justify-between font-semibold text-gray-900 border-t border-gray-200 pt-2">
             <span>Total</span>
             <span>€{details.total.toFixed(2)}</span>
           </li>
@@ -152,13 +152,13 @@ const OrderDetails = () => {
       {/* Notes */}
       {details.notes && (
         <Section title="Order Notes" icon={<FiClipboard />} border>
-          <p className="italic text-gray-400 text-sm sm:text-base">{details.notes}</p>
+          <p className="italic text-gray-600 text-sm sm:text-base">{details.notes}</p>
         </Section>
       )}
 
       {/* Support */}
       <Section title="Customer Support" icon={<FiHelpCircle />}>
-        <p className="text-gray-300 text-sm sm:text-base mb-2">
+        <p className="text-gray-700 text-sm sm:text-base mb-2">
           For help with your order, contact us:
         </p>
         <p>
@@ -183,7 +183,7 @@ export default OrderDetails;
 
 // 🔧 Reusable Section Block
 const Section = ({ title, icon, children, border = false }) => (
-  <section className={`${border ? 'border-b border-gray-800 pb-6' : ''}`}>
+  <section className={`${border ? 'border-b border-gray-200 pb-6' : ''}`}>
     <h3 className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-blue-400 mb-2">
       {icon} {title}
     </h3>
@@ -193,8 +193,8 @@ const Section = ({ title, icon, children, border = false }) => (
 
 // 📦 Reusable Address Block
 const AddressBlock = ({ data }) => (
-  <address className="not-italic text-gray-300 space-y-1 text-sm sm:text-base">
-    <p className="font-medium text-white">{data.name}</p>
+  <address className="not-italic text-gray-700 space-y-1 text-sm sm:text-base">
+    <p className="font-medium text-gray-900">{data.name}</p>
     <p>{data.street}</p>
     <p>{data.city}, {data.state} {data.zip}</p>
     <p>{data.country}</p>

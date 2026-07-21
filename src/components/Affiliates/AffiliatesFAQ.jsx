@@ -83,7 +83,7 @@ const AffiliatesFAQ = () => {
   return (
     <section
       aria-label="Affiliate Program Frequently Asked Questions"
-      className="bg-gray-900 text-yellow-400 py-12 px-4"
+      className="bg-white text-amber-600 py-12 px-4"
       style={{ minHeight: "fit-content" }}
     >
       <div className="max-w-[1000px] mx-auto">
@@ -95,7 +95,7 @@ const AffiliatesFAQ = () => {
           {faqItems.map(({ question, answer }, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={index} className="border border-yellow-700 rounded-md">
+              <div key={index} className="border border-amber-900 rounded-md">
                 <dt>
                   <button
                     type="button"
@@ -104,12 +104,12 @@ const AffiliatesFAQ = () => {
                     id={`faq-btn-${index}`}
                     onClick={() => toggleIndex(index)}
                     className="w-full flex justify-between items-center p-4 text-left
-                      focus:outline-none focus:ring-2 focus:ring-yellow-500
-                      hover:bg-yellow-900 transition-colors duration-200"
+                      focus:outline-none focus:ring-2 focus:ring-amber-700
+                      hover:bg-amber-950 transition-colors duration-200"
                   >
                     <span className="text-lg font-semibold">{question}</span>
                     <svg
-                      className={`h-6 w-6 text-yellow-400 transform transition-transform duration-300 ${
+                      className={`h-6 w-6 text-amber-600 transform transition-transform duration-300 ${
                         isOpen ? "rotate-180" : "rotate-0"
                       }`}
                       xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const AffiliatesFAQ = () => {
                   role="region"
                   aria-labelledby={`faq-btn-${index}`}
                   ref={(el) => (contentRefs.current[index] = el)}
-                  className="px-4 text-yellow-300 text-sm leading-relaxed overflow-hidden"
+                  className="px-4 text-amber-500 text-sm leading-relaxed overflow-hidden"
                   style={{
                     height: 0,
                     opacity: 0,

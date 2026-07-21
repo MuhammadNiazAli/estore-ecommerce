@@ -11,9 +11,9 @@ export default function PaymentHero() {
         relative z-10
         w-full max-w-[1200px]
         mx-auto
-        bg-gray-900
+        bg-white
         rounded-2xl
-        border border-yellow-500
+        border border-amber-700
         my-[-30px]
         px-4 sm:px-6 md:px-10
         py-12 sm:py-16 md:py-20
@@ -28,10 +28,10 @@ export default function PaymentHero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-yellow-400 tracking-tight mb-5">
+        <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-amber-600 tracking-tight mb-5">
           Complete Your Purchase Securely
         </h1>
-        <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
           You're one step closer to getting your items. Review your order and make secure payment with our trusted encrypted gateway.
         </p>
       </motion.div>
@@ -79,7 +79,7 @@ function Step({ step, label, active }) {
           border-2 transition-all
           ${
             active
-              ? 'bg-gradient-to-br from-yellow-400 to-yellow-500 border-yellow-400 text-gray-900 shadow-lg shadow-yellow-400/30'
+              ? 'bg-gradient-to-br from-amber-600 to-amber-700 border-amber-600 text-gray-900 shadow-lg shadow-amber-600/30'
               : 'bg-white border-gray-300 text-gray-500'
           }
         `}
@@ -89,7 +89,7 @@ function Step({ step, label, active }) {
       <span
         className={`
           mt-2 text-[10px] sm:text-sm font-medium transition-all
-          ${active ? 'text-yellow-400' : 'text-gray-400'}
+          ${active ? 'text-amber-600' : 'text-gray-600'}
         `}
       >
         {label}
@@ -103,7 +103,7 @@ function Line({ active, className = '' }) {
     <div
       className={`
         flex-1 h-0.5 sm:h-[6px] mx-1 sm:mx-2 rounded-full transition-all
-        ${active ? 'bg-yellow-400' : 'bg-gray-700'}
+        ${active ? 'bg-amber-600' : 'bg-white'}
         ${className}
       `}
     />
@@ -114,17 +114,17 @@ function TrustBadge({ icon, label }) {
   return (
     <div className="
       flex items-center gap-2
-      bg-gray-800
-      border border-yellow-500/20
+      bg-white
+      border border-amber-700/20
       rounded-full px-4 py-2
       text-sm sm:text-base font-medium
-      text-yellow-300
-      shadow-inner shadow-yellow-900/10
+      text-amber-500
+      shadow-inner shadow-amber-950/10
       min-w-[160px]
       justify-center
       text-center
     ">
-      <span className="text-yellow-400 text-base sm:text-lg">{icon}</span>
+      <span className="text-amber-600 text-base sm:text-lg">{icon}</span>
       <span>{label}</span>
     </div>
   );

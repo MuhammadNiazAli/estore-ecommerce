@@ -11,7 +11,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={`full-${i}`}
-          className="w-5 h-5 text-yellow-400"
+          className="w-5 h-5 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -21,7 +21,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-5 h-5 text-yellow-400"
+          className="w-5 h-5 text-amber-600"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -41,7 +41,7 @@ const StarRating = ({ rating }) => {
       {[...Array(emptyStars)].map((_, i) => (
         <svg
           key={`empty-${i}`}
-          className="w-5 h-5 text-yellow-200"
+          className="w-5 h-5 text-amber-400"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -89,7 +89,7 @@ const BestsellerParallaxHero = () => {
   const mobileContent = (
     <section
       aria-label="Mobile Bestseller highlight"
-      className="w-full min-h-[320px] bg-yellow-400 flex flex-col items-center justify-center p-6 text-black select-none my-[-50px] mb-0"
+      className="w-full min-h-[320px] bg-amber-600 flex flex-col items-center justify-center p-6 text-black select-none my-[-50px] mb-0"
     >
       <h2 className="text-2xl font-bold mb-3 text-center">Mobile Special Deal</h2>
       <p className="text-base mb-5 max-w-sm text-center">
@@ -97,7 +97,7 @@ const BestsellerParallaxHero = () => {
       </p>
       <a
         href={product.shopLink}
-        className="bg-black text-yellow-400 font-semibold py-2 px-5 rounded-md shadow-lg hover:bg-gray-900 transition"
+        className="bg-white text-amber-600 font-semibold py-2 px-5 rounded-md shadow-lg hover:bg-gray-50 transition"
         aria-label="Shop mobile bestseller"
       >
         Shop Mobile Deals
@@ -114,7 +114,7 @@ const BestsellerParallaxHero = () => {
       <section
         ref={heroRef}
         aria-label="Bestseller product highlight"
-        className="relative w-full min-h-[520px] md:min-h-[720px] flex flex-col md:flex-row items-center bg-black text-yellow-400 overflow-hidden select-none hidden md:flex my-[-50px] mb-0"
+        className="relative w-full min-h-[520px] md:min-h-[720px] flex flex-col md:flex-row items-center bg-white text-amber-600 overflow-hidden select-none hidden md:flex my-[-50px] mb-0"
       >
         {/* Parallax background */}
         <div
@@ -129,7 +129,7 @@ const BestsellerParallaxHero = () => {
         />
 
         {/* Overlay gradient */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/90 to-transparent z-10 pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-6 py-10 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between w-full gap-10 md:gap-16">
@@ -143,7 +143,7 @@ const BestsellerParallaxHero = () => {
               {product.title}
             </h1>
 
-            <p className="text-yellow-300 text-base sm:text-lg drop-shadow-md leading-relaxed">
+            <p className="text-amber-500 text-base sm:text-lg drop-shadow-md leading-relaxed">
               {product.description}
             </p>
 
@@ -157,14 +157,14 @@ const BestsellerParallaxHero = () => {
             <div className="flex gap-4 sm:gap-6 mt-6 flex-wrap">
               <a
                 href={product.shopLink}
-                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400 text-center"
+                className="bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 text-center"
                 aria-label={`Shop ${product.title}`}
               >
                 Shop Now
               </a>
               <a
                 href={product.learnLink}
-                className="border border-yellow-400 hover:border-yellow-300 text-yellow-400 hover:text-yellow-300 font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-inner transition-transform transform hover:scale-105 focus:outline-yellow-400 focus:ring-2 focus:ring-yellow-400 text-center"
+                className="border border-amber-600 hover:border-amber-500 text-amber-600 hover:text-amber-500 font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-inner transition-transform transform hover:scale-105 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 text-center"
                 aria-label={`Learn more about ${product.title}`}
               >
                 Learn More
@@ -173,7 +173,7 @@ const BestsellerParallaxHero = () => {
           </article>
 
           {/* Large product image for md+ */}
-          <div className="hidden md:block relative w-[420px] h-[480px] rounded-xl overflow-hidden shadow-2xl flex-shrink-0 ring-1 ring-yellow-600 ring-opacity-80">
+          <div className="hidden md:block relative w-[420px] h-[480px] rounded-xl overflow-hidden shadow-2xl flex-shrink-0 ring-1 ring-amber-800 ring-opacity-80">
             <img
               src={product.image}
               alt={product.title}
@@ -183,7 +183,7 @@ const BestsellerParallaxHero = () => {
               aria-hidden="true"
             />
             {/* subtle glow ring */}
-            <div className="absolute inset-0 rounded-xl ring-4 ring-yellow-400 opacity-20 animate-pulse pointer-events-none" />
+            <div className="absolute inset-0 rounded-xl ring-4 ring-amber-600 opacity-20 animate-pulse pointer-events-none" />
           </div>
         </div>
       </section>

@@ -27,31 +27,31 @@ const CartProgressBar = ({ currentAmount = 120, goalAmount = 200 }) => {
   }, [currentAmount, goalAmount]);
 
   return (
-    <section className="w-full bg-gray-900 px-4 py-4 sm:px-6 md:py-6 flex justify-center">
+    <section className="w-full bg-white px-4 py-4 sm:px-6 md:py-6 flex justify-center">
       <div className="w-full max-w-4xl">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-1">
-          <p className="text-xs sm:text-sm text-center sm:text-left text-white font-medium tracking-tight select-text">
+          <p className="text-xs sm:text-sm text-center sm:text-left text-gray-900 font-medium tracking-tight select-text">
             {amountLeft > 0 ? (
               <>
                 Spend{' '}
-                <span className="font-semibold text-yellow-400">
+                <span className="font-semibold text-amber-600">
                   ${amountLeft.toFixed(2)}
                 </span>{' '}
                 more to get free shipping!
               </>
             ) : (
-              <span className="flex items-center justify-center sm:justify-start gap-1 text-yellow-400 font-semibold select-text">
+              <span className="flex items-center justify-center sm:justify-start gap-1 text-amber-600 font-semibold select-text">
                 🎉 You’ve qualified for free shipping!
               </span>
             )}
           </p>
-          <span className="text-[10px] sm:text-xs text-gray-400 text-center sm:text-right select-text tabular-nums">
+          <span className="text-[10px] sm:text-xs text-gray-600 text-center sm:text-right select-text tabular-nums">
             ${currentAmount.toFixed(2)} / ${goalAmount.toFixed(2)}
           </span>
         </div>
 
         <div
-          className="relative w-full h-2 sm:h-3 bg-gray-700/90 rounded-full overflow-hidden shadow-inner"
+          className="relative w-full h-2 sm:h-3 bg-white/90 rounded-full overflow-hidden shadow-inner"
           role="progressbar"
           aria-valuenow={Math.round(progressPercent)}
           aria-valuemin={0}
@@ -59,7 +59,7 @@ const CartProgressBar = ({ currentAmount = 120, goalAmount = 200 }) => {
           aria-label="Progress towards free shipping"
         >
           <div
-            className="absolute top-0 left-0 h-full bg-yellow-400 rounded-full transition-width duration-500 ease-in-out"
+            className="absolute top-0 left-0 h-full bg-amber-600 rounded-full transition-width duration-500 ease-in-out"
             style={{ width: `${progressPercent}%` }}
           />
         </div>

@@ -37,7 +37,7 @@ function StarRating({ count }) {
       {[...Array(5)].map((_, i) => (
         <FiStar
           key={i}
-          className={`text-xs ${i < count ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}
+          className={`text-xs ${i < count ? 'text-amber-600 fill-amber-600' : 'text-gray-600'}`}
           aria-hidden="true"
         />
       ))}
@@ -52,7 +52,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
     <article
       tabIndex={0}
       aria-label={`${name} product card`}
-      className="relative flex flex-col h-[360px] rounded-xl bg-gray-50/10 backdrop-blur-md border border-gray-800/50 text-white shadow-lg overflow-hidden group"
+      className="relative flex flex-col h-[360px] rounded-xl bg-gray-50/10 backdrop-blur-md border border-gray-200/50 text-gray-900 shadow-lg overflow-hidden group"
       style={{ transition: 'transform 0.4s ease' }}
     >
       <img
@@ -62,7 +62,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
         className="w-full h-[60%] object-contain rounded-t-xl transition-transform duration-300 group-hover:scale-105"
       />
 
-      <section className="absolute bottom-0 left-0 w-full bg-gray-900 bg-opacity-90 p-4 rounded-b-xl text-white z-10 transition">
+      <section className="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-4 rounded-b-xl text-gray-900 z-10 transition">
         <div className="flex justify-between items-center">
           <h3 title={name} className="max-w-[75%] truncate font-semibold text-base">{name}</h3>
           <button
@@ -71,7 +71,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
             aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}
             aria-pressed={favorited}
             className={`p-1 rounded focus:outline-none focus:ring-0 transition-colors ${
-              favorited ? 'text-red-600 hover:text-red-700' : 'text-gray-400 hover:text-red-500'
+              favorited ? 'text-red-600 hover:text-red-700' : 'text-gray-600 hover:text-red-500'
             }`}
           >
             <FiHeart className="w-5 h-5" />
@@ -83,12 +83,12 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
         </div>
 
         <div className="flex justify-between items-center mt-3">
-          <span className="font-semibold text-yellow-400 text-lg">{price}</span>
+          <span className="font-semibold text-amber-600 text-lg">{price}</span>
           <Link href="/Cart" passHref>
             <button
               type="button"
               aria-label={`Add ${name} to cart`}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm font-semibold bg-yellow-400 text-black rounded hover:bg-yellow-300 focus:outline-none focus:ring-0 transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm font-semibold bg-amber-600 text-black rounded hover:bg-amber-500 focus:outline-none focus:ring-0 transition-colors"
             >
               <FiShoppingCart className="w-5 h-5" />
               Add
@@ -104,7 +104,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
   aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}
   className={`w-9 h-9 flex items-center justify-center rounded-full focus:outline-none focus:ring-0 transition-colors ${
     favorited
-      ? 'bg-red-600 hover:bg-red-700 text-white'
+      ? 'bg-red-600 hover:bg-red-700 text-gray-900'
       : 'bg-white/30 hover:bg-red-500/60 text-red-600 hover:text-red-400'
   }`}
 >
@@ -114,7 +114,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
 
     <Link
     href="/product"
-    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-yellow-500/60 text-yellow-400 transition-colors"
+    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-amber-700/60 text-amber-600 transition-colors"
     aria-label={`View details of ${name}`}
      >
       <FiEye className="w-5 h-5" />
@@ -159,7 +159,7 @@ export default function ProductSlider() {
   return (
     <section
       aria-label="Product showcase slider"
-      className="relative w-full bg-gradient-to-b from-gray-900 px-4 py-12 text-white overflow-visible"
+      className="relative w-full bg-gradient-to-b from-white px-4 py-12 text-gray-900 overflow-visible"
       style={{ maxWidth: '1100px', margin: '0 auto' }}
     >
       {/* Navigation buttons with adjusted spacing */}
@@ -167,7 +167,7 @@ export default function ProductSlider() {
         ref={prevRef}
         type="button"
         aria-label="Previous slide"
-        className="absolute left-[-15px] top-1/2 z-40 -translate-y-1/2 bg-gray-700/30 hover:bg-gray-900/10 hover:border border border-gray-800 hover:border-gray-700
+        className="absolute left-[-15px] top-1/2 z-40 -translate-y-1/2 bg-white/30 hover:bg-white/10 hover:border border border-gray-200 hover:border-gray-300
  rounded-full p-3 shadow-lg transition-colors duration-300 my-[-15px]"
       >
         <FiChevronLeft size={28} />
@@ -176,7 +176,7 @@ export default function ProductSlider() {
         ref={nextRef}
         type="button"
         aria-label="Next slide"
-        className="absolute right-[-15px] top-1/2 z-40 -translate-y-1/2 bg-gray-700/30 hover:bg-gray-900/10 hover:border border border-gray-800 hover:border-gray-700 rounded-full p-3 shadow-lg transition-colors duration-300 my-[-15px]"
+        className="absolute right-[-15px] top-1/2 z-40 -translate-y-1/2 bg-white/30 hover:bg-white/10 hover:border border border-gray-200 hover:border-gray-300 rounded-full p-3 shadow-lg transition-colors duration-300 my-[-15px]"
       >
         <FiChevronRight size={28} />
       </button>
@@ -191,7 +191,7 @@ export default function ProductSlider() {
         pagination={{
           clickable: true,
           bulletClass:
-            'swiper-pagination-bullet transition-all duration-300 ease-in-out bg-yellow-400 opacity-60 hover:opacity-90 transform hover:scale-125',
+            'swiper-pagination-bullet transition-all duration-300 ease-in-out bg-amber-600 opacity-60 hover:opacity-90 transform hover:scale-125',
           bulletActiveClass: 'opacity-100 scale-150',
         }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}

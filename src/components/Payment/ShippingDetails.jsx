@@ -35,24 +35,24 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
       className="
         w-full px-4 sm:px-6 py-14
         max-w-[700px] mx-auto
-        bg-gray-900
-        border border-yellow-600/40 rounded-3xl
+        bg-white
+        border border-amber-800/40 rounded-3xl
         shadow-2xl
-        backdrop-blur-md ring-1 ring-yellow-400/40
+        backdrop-blur-md ring-1 ring-amber-600/40
         transition-all
         -mt-16 sm:-mt-20
         mb-10
       "
       aria-label="Shipping details form"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-yellow-200 text-center tracking-wide drop-shadow-md select-none">
+      <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-amber-400 text-center tracking-wide drop-shadow-md select-none">
         Shipping Details
       </h2>
 
       <form onSubmit={handleSubmit} noValidate>
         <label
           htmlFor="shippingAddress"
-          className="flex flex-col font-medium text-sm sm:text-base text-yellow-100 mb-1"
+          className="flex flex-col font-medium text-sm sm:text-base text-amber-300 mb-1"
         >
           Shipping Address <span className="text-red-400">*</span>
         </label>
@@ -73,14 +73,14 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
             resize-none
             rounded-xl
             border px-4 py-3 sm:px-5 sm:py-4
-            text-white
-            placeholder-yellow-200
-            bg-yellow-900/40
+            text-gray-900
+            placeholder-amber-400
+            bg-amber-950/40
             text-sm sm:text-base
             transition-all focus:outline-none focus:ring-4
             ${error
               ? "border-red-500 bg-red-900/40 ring-red-400"
-              : "border-yellow-600 hover:border-yellow-500 focus:ring-yellow-300"}
+              : "border-amber-800 hover:border-amber-700 focus:ring-amber-500"}
           `}
         />
 
@@ -96,7 +96,7 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
         ) : (
           <p
             id="shippingAddressHelp"
-            className="text-xs sm:text-sm text-yellow-300 mt-2 select-text"
+            className="text-xs sm:text-sm text-amber-500 mt-2 select-text"
           >
             Please enter your complete delivery address including postal code.
           </p>
@@ -106,14 +106,14 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
           <button
             type="submit"
             className="
-              bg-gradient-to-r from-yellow-400 to-yellow-600
-              hover:from-yellow-500 hover:to-yellow-700
+              bg-gradient-to-r from-amber-600 to-amber-800
+              hover:from-amber-700 hover:to-amber-900
               text-gray-900 font-bold
               px-8 sm:px-10 md:px-12
               py-3 sm:py-3.5
               rounded-full
               shadow-md hover:shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-yellow-300/60
+              focus:outline-none focus:ring-4 focus:ring-amber-500/60
               transition-all duration-200
               text-sm sm:text-base md:text-lg tracking-wide
               disabled:opacity-60 disabled:cursor-not-allowed

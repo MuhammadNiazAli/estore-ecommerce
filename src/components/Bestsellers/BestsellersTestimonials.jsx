@@ -71,7 +71,7 @@ const StarRating = ({ rating }) => {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
+          className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600"
           aria-hidden="true"
         >
           <path
@@ -109,8 +109,8 @@ const BestsellersTestimonials = () => {
   }, [currentIndex])
 
   return (
-    <section className="max-w-[95%] sm:max-w-[750px] md:max-w-[900px] mx-auto p-4 sm:p-6 bg-gray-900 rounded-xl shadow-lg select-none mt-4 my-[-30px] mb-8">
-      <h2 className="text-yellow-400 text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-10 text-center tracking-wide">
+    <section className="max-w-[95%] sm:max-w-[750px] md:max-w-[900px] mx-auto p-4 sm:p-6 bg-white rounded-xl shadow-lg select-none mt-4 my-[-30px] mb-8">
+      <h2 className="text-amber-600 text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-10 text-center tracking-wide">
         What Our Customers Say
       </h2>
 
@@ -118,7 +118,7 @@ const BestsellersTestimonials = () => {
         {testimonials.map((t, i) => (
           <article
             key={t.id}
-            className={`absolute top-0 left-0 w-full h-full bg-gray-800 rounded-xl p-4 sm:p-6 flex flex-col transition-opacity duration-1000 ease-in-out
+            className={`absolute top-0 left-0 w-full h-full bg-white rounded-xl p-4 sm:p-6 flex flex-col transition-opacity duration-1000 ease-in-out
               ${i === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}
             `}
             aria-hidden={i !== currentIndex}
@@ -128,21 +128,21 @@ const BestsellersTestimonials = () => {
               <img
                 src={t.avatar}
                 alt={`${t.name} avatar`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-yellow-400 object-cover shadow-md mb-3 sm:mb-0"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-amber-600 object-cover shadow-md mb-3 sm:mb-0"
                 loading="lazy"
               />
               <div>
-                <h3 className="text-yellow-300 font-semibold text-lg sm:text-xl leading-tight">
+                <h3 className="text-amber-500 font-semibold text-lg sm:text-xl leading-tight">
                   {t.name}
                 </h3>
-                <p className="text-yellow-500 text-xs sm:text-sm mb-1">{t.title}</p>
+                <p className="text-amber-700 text-xs sm:text-sm mb-1">{t.title}</p>
                 <StarRating rating={t.rating} />
               </div>
             </div>
 
             {/* Content */}
             <p
-              className="text-yellow-50 text-xs sm:text-sm leading-relaxed tracking-wide whitespace-pre-line overflow-y-auto flex-grow pr-2"
+              className="text-amber-200 text-xs sm:text-sm leading-relaxed tracking-wide whitespace-pre-line overflow-y-auto flex-grow pr-2"
               style={{ scrollbarWidth: 'thin' }}
             >
               {t.content}
@@ -158,7 +158,7 @@ const BestsellersTestimonials = () => {
             key={idx}
             aria-label={`Go to testimonial ${idx + 1}`}
             className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors duration-300 ${
-              idx === currentIndex ? 'bg-yellow-400 shadow-lg' : 'bg-yellow-700 hover:bg-yellow-500'
+              idx === currentIndex ? 'bg-amber-600 shadow-lg' : 'bg-amber-900 hover:bg-amber-700'
             }`}
             onClick={() => setCurrentIndex(idx)}
             type="button"

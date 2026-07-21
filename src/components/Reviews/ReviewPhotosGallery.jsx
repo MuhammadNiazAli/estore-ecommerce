@@ -79,11 +79,11 @@ const ReviewPhotosGallery = () => {
   }, [activeIndex, closeModal, showPrevPhoto, showNextPhoto]);
 
   return (
-    <section className="w-full bg-gray-900 py-16 px-6 my-[-20px]">
-      <h3 className="text-3xl sm:text-4xl font-semibold text-white mb-10 text-center tracking-wide">
+    <section className="w-full bg-white py-16 px-6 my-[-20px]">
+      <h3 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-10 text-center tracking-wide">
         See What Our Happy Customers Are Sharing
       </h3>
-      <p className="max-w-xl mx-auto text-center text-gray-300 mb-14 text-sm sm:text-base">
+      <p className="max-w-xl mx-auto text-center text-gray-700 mb-14 text-sm sm:text-base">
         Browse through authentic photos shared by our customers. Click on any image to view it in fullscreen and explore more.
       </p>
 
@@ -137,7 +137,7 @@ const ReviewPhotosGallery = () => {
         {activeIndex !== null && (
           <motion.div
             key="photo-modal"
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

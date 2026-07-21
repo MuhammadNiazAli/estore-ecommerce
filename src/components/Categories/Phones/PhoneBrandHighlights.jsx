@@ -44,10 +44,10 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
     <section className="max-w-[1200px] mx-auto my-16 px-4 sm:px-6">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-3xl font-extrabold text-white drop-shadow-lg">
+        <h2 className="text-4xl sm:text-3xl font-extrabold text-gray-900 drop-shadow-lg">
           Shop by Brand
         </h2>
-        <p className="text-gray-400 mt-2 text-sm sm:text-base">
+        <p className="text-gray-600 mt-2 text-sm sm:text-base">
           Choose your favorite brand and explore premium smartphones.
         </p>
       </div>
@@ -60,10 +60,10 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
             onClick={() => handleBrandClick(brand.name)}
             aria-label={`Shop ${brand.name} phones`}
             title={`Shop ${brand.name} phones`}
-            className={`relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden cursor-pointer group 
+            className={`relative bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group 
               transform transition duration-500 hover:scale-105 focus:outline-none 
-              focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-opacity-75 
-              ${activeBrand === brand.name ? 'ring-2 ring-yellow-400' : ''}`}
+              focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-opacity-75 
+              ${activeBrand === brand.name ? 'ring-2 ring-amber-600' : ''}`}
           >
             {/* Brand Image */}
             <div className="w-full h-48 sm:h-56 md:h-64">
@@ -78,18 +78,18 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
             </div>
 
             {/* Brand Info Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm py-2 px-3 text-center">
-              <span className="text-white font-semibold text-lg select-none">
+            <div className="absolute bottom-0 left-0 right-0 bg-white/60 backdrop-blur-sm py-2 px-3 text-center">
+              <span className="text-gray-900 font-semibold text-lg select-none">
                 {brand.name}
               </span>
-              <p className="text-gray-300 text-xs mt-1">
+              <p className="text-gray-700 text-xs mt-1">
                 {brand.productCount} Products
               </p>
             </div>
 
             {/* Selected Badge */}
             {activeBrand === brand.name && (
-              <span className="absolute top-2 right-2 bg-yellow-400 text-black px-2 py-1 rounded-full flex items-center gap-1 text-xs font-semibold shadow">
+              <span className="absolute top-2 right-2 bg-amber-600 text-black px-2 py-1 rounded-full flex items-center gap-1 text-xs font-semibold shadow">
                 <CheckCircle className="w-4 h-4" />
                 Selected
               </span>
@@ -100,8 +100,8 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
 
       {/* Active Brand Info */}
       {activeBrand && (
-        <div className="mt-8 text-center text-gray-300 text-sm">
-          Showing products for <span className="text-yellow-400 font-semibold">{activeBrand}</span>
+        <div className="mt-8 text-center text-gray-700 text-sm">
+          Showing products for <span className="text-amber-600 font-semibold">{activeBrand}</span>
         </div>
       )}
     </section>

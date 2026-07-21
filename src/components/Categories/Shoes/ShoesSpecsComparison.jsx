@@ -36,15 +36,15 @@ const shoeSpecs = [
 
 const ShoesSpecsComparison = () => {
   return (
-    <div className="max-w-full overflow-x-auto p-4 bg-gray-900 rounded-lg shadow-lg">
-      <table className="min-w-[600px] w-full border-collapse text-left text-yellow-400">
+    <div className="max-w-full overflow-x-auto p-4 bg-white rounded-lg shadow-lg">
+      <table className="min-w-[600px] w-full border-collapse text-left text-amber-600">
         <thead>
-          <tr className="bg-yellow-700/20">
-            <th className="p-3 border border-yellow-500 font-semibold">Specification</th>
+          <tr className="bg-amber-900/20">
+            <th className="p-3 border border-amber-700 font-semibold">Specification</th>
             {shoeSpecs.map((shoe) => (
               <th
                 key={shoe.id}
-                className="p-3 border border-yellow-500 text-center whitespace-nowrap font-semibold"
+                className="p-3 border border-amber-700 text-center whitespace-nowrap font-semibold"
               >
                 {shoe.name}
               </th>
@@ -52,67 +52,67 @@ const ShoesSpecsComparison = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Brand</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Brand</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.brand}
               </td>
             ))}
           </tr>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Weight</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Weight</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.weight}
               </td>
             ))}
           </tr>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Sole</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Sole</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.sole}
               </td>
             ))}
           </tr>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Waterproof</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Waterproof</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.waterproof}
               </td>
             ))}
           </tr>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Price</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Price</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.price}
               </td>
             ))}
           </tr>
-          <tr className="even:bg-yellow-900/10">
-            <td className="p-3 border border-yellow-600 font-semibold">Rating</td>
+          <tr className="even:bg-amber-950/10">
+            <td className="p-3 border border-amber-800 font-semibold">Rating</td>
             {shoeSpecs.map((shoe) => (
               <td
                 key={shoe.id}
-                className="p-3 border border-yellow-600 text-center whitespace-nowrap"
+                className="p-3 border border-amber-800 text-center whitespace-nowrap"
               >
                 {shoe.rating} / 5
               </td>

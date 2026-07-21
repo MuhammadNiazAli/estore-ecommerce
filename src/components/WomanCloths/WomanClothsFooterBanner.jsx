@@ -2,15 +2,15 @@ import React from "react";
 
 const WomanClothsFooterBanner = () => {
   return (
-    <section className="relative bg-gray-900 text-white py-12 px-6 sm:px-10">
+    <section className="relative bg-white text-gray-900 py-12 px-6 sm:px-10">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-8 ">
         
         {/* Content Section */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 mb-3 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-3 leading-tight">
             Elevate Your Style Today!
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg max-w-lg font-light">
+          <p className="text-gray-700 text-base sm:text-lg max-w-lg font-light">
             Discover premium fashion collections crafted for elegance and comfort. Shop now and get exclusive offers.
           </p>
         </div>
@@ -26,7 +26,7 @@ const WomanClothsFooterBanner = () => {
           {/* Button Over Image */}
          <a
   href="#shop"
-  className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-yellow-400/70 text-gray-900 font-semibold text-sm px-8 py-1.5 rounded-full shadow-lg hover:bg-yellow-500/80 hover:text-white transition-all duration-300"
+  className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-amber-600/70 text-gray-900 font-semibold text-sm px-8 py-1.5 rounded-full shadow-lg hover:bg-amber-700/80 hover:text-gray-900 transition-all duration-300"
 >
   Shop Now
 </a>
@@ -37,7 +37,7 @@ const WomanClothsFooterBanner = () => {
         <div className="sm:hidden">
           <a
             href="#shop"
-            className="inline-block bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-500 transition-all duration-300"
+            className="inline-block bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-amber-700 transition-all duration-300"
           >
             Shop Now
           </a>
@@ -45,7 +45,7 @@ const WomanClothsFooterBanner = () => {
       </div>
 
       {/* Decorative Bottom Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600"></div>
     </section>
   );
 };

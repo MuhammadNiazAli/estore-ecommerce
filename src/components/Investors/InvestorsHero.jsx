@@ -49,7 +49,7 @@ const InvestorsHero = () => {
   return (
     <section
       aria-label="Investor introduction section"
-      className="relative isolate flex items-center justify-center bg-gray-900 text-yellow-400 overflow-hidden py-16 sm:py-24 md:py-32 my-[-100px] mb-[-100px]"
+      className="relative isolate flex items-center justify-center bg-white text-amber-600 overflow-hidden py-16 sm:py-24 md:py-32 my-[-100px] mb-[-100px]"
     >
       {/* Hero Content */}
       <div className="relative z-10 max-w-4xl w-full px-6 text-center">
@@ -57,7 +57,7 @@ const InvestorsHero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-yellow-400 mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-amber-600 mb-6"
         >
           Invest in Our Future
         </motion.h1>
@@ -66,7 +66,7 @@ const InvestorsHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-yellow-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light"
+          className="text-amber-500 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light"
         >
           Join our journey to create lasting impact. Innovation, transparency,
           and sustainable growth are at the heart of everything we do.
@@ -78,7 +78,7 @@ const InvestorsHero = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           onClick={() => setShowModal(true)}
           aria-label="Start your investment journey"
-          className="mt-10 inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg px-8 py-3 shadow-lg shadow-yellow-500/20 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-opacity-60"
+          className="mt-10 inline-block bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg px-8 py-3 shadow-lg shadow-amber-700/20 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-opacity-60"
         >
           Get Started
         </motion.button>
@@ -88,7 +88,7 @@ const InvestorsHero = () => {
       <AnimatePresence>
         {showModal && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 sm:px-6"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/50 backdrop-blur-sm px-4 sm:px-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -114,7 +114,7 @@ const InvestorsHero = () => {
                       type="text"
                       name="name"
                       placeholder="Your Full Name"
-                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-amber-600 focus:outline-none"
                       value={form.name}
                       onChange={handleChange}
                       required
@@ -123,7 +123,7 @@ const InvestorsHero = () => {
                       type="email"
                       name="email"
                       placeholder="Your Email Address"
-                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-amber-600 focus:outline-none"
                       value={form.email}
                       onChange={handleChange}
                       required
@@ -132,7 +132,7 @@ const InvestorsHero = () => {
                       type="number"
                       name="amount"
                       placeholder="Investment Amount (USD)"
-                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+                      className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-amber-600 focus:outline-none"
                       value={form.amount}
                       onChange={handleChange}
                       required
@@ -141,7 +141,7 @@ const InvestorsHero = () => {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg py-2 transition-all duration-300 disabled:opacity-50"
+                      className="w-full bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg py-2 transition-all duration-300 disabled:opacity-50"
                     >
                       {loading ? 'Submitting...' : 'Submit Interest'}
                     </button>

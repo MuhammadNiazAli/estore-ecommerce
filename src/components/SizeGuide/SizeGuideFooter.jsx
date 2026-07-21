@@ -47,16 +47,16 @@ const socialLinks = [
 
 const SizeGuideFooter = () => {
   return (
-    <footer className="w-full bg-gray-900 text-gray-300 py-10 px-4 mb-[-100px]">
+    <footer className="w-full bg-white text-gray-700 py-10 px-4 mb-[-100px]">
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
         {/* Left text */}
         <div className="text-center md:text-left text-sm md:text-base leading-relaxed">
           <p>&copy; {new Date().getFullYear()} YourStoreName. All rights reserved.</p>
-          <p className="mt-1 text-yellow-400 font-semibold select-none">
+          <p className="mt-1 text-amber-600 font-semibold select-none">
             Need help?{' '}
             <a
               href="/contact"
-              className="text-yellow-300 hover:text-yellow-500 underline"
+              className="text-amber-500 hover:text-amber-700 underline"
             >
               Contact Support
             </a>
@@ -70,21 +70,21 @@ const SizeGuideFooter = () => {
         >
           <a
             href="/returns"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-amber-600 transition-colors"
             aria-label="Return Policy"
           >
             Return Policy
           </a>
           <a
             href="/shipping"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-amber-600 transition-colors"
             aria-label="Shipping Information"
           >
             Shipping Info
           </a>
           <a
             href="/faq"
-            className="hover:text-yellow-400 transition-colors"
+            className="hover:text-amber-600 transition-colors"
             aria-label="FAQ"
           >
             FAQ
@@ -100,7 +100,7 @@ const SizeGuideFooter = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={name}
-              className="text-yellow-400 hover:text-yellow-500 transition-colors"
+              className="text-amber-600 hover:text-amber-700 transition-colors"
             >
               {svg}
             </a>

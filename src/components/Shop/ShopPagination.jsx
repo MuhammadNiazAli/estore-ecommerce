@@ -55,7 +55,7 @@ const ShopPagination = ({
   return (
     <nav
       aria-label="Pagination Navigation"
-      className="w-full bg-gray-900 py-6 px-4"
+      className="w-full bg-white py-6 px-4"
     >
       <div className="max-w-[1000px] mx-auto flex justify-center flex-wrap items-center gap-3">
  
@@ -68,7 +68,7 @@ const ShopPagination = ({
           className={`min-w-[44px] px-4 py-2 rounded-lg font-semibold transition
             ${
               currentPage === 1
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                ? 'bg-white text-gray-500 cursor-not-allowed'
                 : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
             }`}
         >
@@ -85,7 +85,7 @@ const ShopPagination = ({
           className={`min-w-[44px] px-4 py-2 rounded-lg font-semibold transition
             ${
               currentPage === 1
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                ? 'bg-white text-gray-500 cursor-not-allowed'
                 : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
             }`}
         >
@@ -115,7 +115,7 @@ const ShopPagination = ({
                 ${
                   page === currentPage
                     ? 'bg-amber-500 text-gray-900 cursor-default pointer-events-none'
-                    : 'bg-gray-800 text-gray-300 hover:bg-amber-400 hover:text-gray-900'
+                    : 'bg-white text-gray-700 hover:bg-amber-400 hover:text-gray-900'
                 }`}
             >
               {page}
@@ -133,7 +133,7 @@ const ShopPagination = ({
           className={`min-w-[44px] px-4 py-2 rounded-lg font-semibold transition
             ${
               currentPage === totalPages
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                ? 'bg-white text-gray-500 cursor-not-allowed'
                 : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
             }`}
         >
@@ -150,7 +150,7 @@ const ShopPagination = ({
           className={`min-w-[44px] px-4 py-2 rounded-lg font-semibold transition
             ${
               currentPage === totalPages
-                ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
+                ? 'bg-white text-gray-500 cursor-not-allowed'
                 : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
             }`}
         >

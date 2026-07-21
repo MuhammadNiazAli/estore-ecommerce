@@ -52,8 +52,8 @@ const DealFAQ = () => {
   };
 
   return (
-    <section className="mx-auto bg-gray-900 text-white rounded-lg p-6 shadow-lg max-w-[1100px] w-full my-5">
-      <h2 className="text-3xl font-semibold mb-8 text-center border-b border-gray-700 pb-4">
+    <section className="mx-auto bg-white text-gray-900 rounded-lg p-6 shadow-lg max-w-[1100px] w-full my-5">
+      <h2 className="text-3xl font-semibold mb-8 text-center border-b border-gray-200 pb-4">
         Frequently Asked Questions
       </h2>
       <div className="space-y-3">
@@ -62,12 +62,12 @@ const DealFAQ = () => {
           return (
             <div
               key={index}
-              className="border border-gray-700 rounded-md overflow-hidden"
+              className="border border-gray-200 rounded-md overflow-hidden"
             >
               <button
                 onClick={() => toggleIndex(index)}
                 className={`w-full text-left px-5 py-4 flex justify-between items-center focus:outline-none text-lg font-medium transition-colors duration-300 ${
-                  isActive ? 'bg-gray-800 text-yellow-400' : 'hover:bg-gray-800'
+                  isActive ? 'bg-white text-amber-600' : 'hover:bg-gray-50'
                 }`}
                 aria-expanded={isActive}
                 aria-controls={`faq-content-${index}`}
@@ -76,7 +76,7 @@ const DealFAQ = () => {
                 <span>{item.question}</span>
                 <span
                   className={`text-2xl font-bold transform transition-transform duration-300 ${
-                    isActive ? 'rotate-45 text-yellow-400' : ''
+                    isActive ? 'rotate-45 text-amber-600' : ''
                   }`}
                 >
                   +
@@ -93,7 +93,7 @@ const DealFAQ = () => {
                     animate="open"
                     exit="collapsed"
                     variants={contentVariants}
-                    className="px-5 pb-5 text-gray-300 text-base leading-relaxed origin-top"
+                    className="px-5 pb-5 text-gray-700 text-base leading-relaxed origin-top"
                     style={{ overflow: 'hidden', transformOrigin: 'top' }}
                   >
                     {item.answer}

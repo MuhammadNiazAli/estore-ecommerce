@@ -44,25 +44,25 @@ const FaqsContact = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 rounded-md shadow-lg mt-6 mb-[-100px] relative overflow-hidden">
+    <section className="bg-white text-amber-600 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 rounded-md shadow-lg mt-6 mb-[-100px] relative overflow-hidden">
       {/* Background for Desktop */}
-      <div className="hidden md:block absolute inset-0 bg-[linear-gradient(135deg,#111214,#0D0E10,#08090B)] opacity-90"></div>
+      <div className="hidden md:block absolute inset-0 bg-white opacity-90"></div>
 
-      <h2 className="text-3xl font-bold text-yellow-300 text-center mb-10 relative z-10">
+      <h2 className="text-3xl font-bold text-amber-500 text-center mb-10 relative z-10">
         Contact Support
       </h2>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left - Form */}
-        <div className="bg-gray-800 md:bg-black/40 md:backdrop-blur-lg rounded-xl p-6 shadow-2xl">
+        <div className="bg-white md:bg-white/40 md:backdrop-blur-lg rounded-xl p-6 shadow-2xl">
           {submitted ? (
             <div
               role="alert"
-              className="bg-yellow-700 text-gray-900 p-4 rounded-md text-center mb-6"
+              className="bg-amber-900 text-gray-900 p-4 rounded-md text-center mb-6"
             >
               Thank you for contacting us! We will get back to you shortly.
               <button
-                className="mt-3 px-5 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+                className="mt-3 px-5 py-2 bg-amber-700 hover:bg-amber-800 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
                 onClick={() => setSubmitted(false)}
               >
                 Send Another Message
@@ -73,7 +73,7 @@ const FaqsContact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block mb-1 font-semibold text-yellow-300">
+                  <label htmlFor="name" className="block mb-1 font-semibold text-amber-500">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -82,9 +82,9 @@ const FaqsContact = () => {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-md bg-gray-900 border ${
-                      errors.name ? 'border-red-500' : 'border-yellow-600 focus:border-yellow-400'
-                    } text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition`}
+                    className={`w-full px-4 py-3 rounded-md bg-white border ${
+                      errors.name ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
+                    } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
                     placeholder="Your full name"
                     aria-invalid={errors.name ? 'true' : 'false'}
                   />
@@ -97,7 +97,7 @@ const FaqsContact = () => {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block mb-1 font-semibold text-yellow-300">
+                  <label htmlFor="email" className="block mb-1 font-semibold text-amber-500">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -106,9 +106,9 @@ const FaqsContact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-4 py-3 rounded-md bg-gray-900 border ${
-                      errors.email ? 'border-red-500' : 'border-yellow-600 focus:border-yellow-400'
-                    } text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition`}
+                    className={`w-full px-4 py-3 rounded-md bg-white border ${
+                      errors.email ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
+                    } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
                     placeholder="you@example.com"
                     aria-invalid={errors.email ? 'true' : 'false'}
                   />
@@ -122,7 +122,7 @@ const FaqsContact = () => {
 
               {/* Subject */}
               <div className="mt-6">
-                <label htmlFor="subject" className="block mb-1 font-semibold text-yellow-300">
+                <label htmlFor="subject" className="block mb-1 font-semibold text-amber-500">
                   Subject <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -131,9 +131,9 @@ const FaqsContact = () => {
                   type="text"
                   value={formData.subject}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-md bg-gray-900 border ${
-                    errors.subject ? 'border-red-500' : 'border-yellow-600 focus:border-yellow-400'
-                  } text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition`}
+                  className={`w-full px-4 py-3 rounded-md bg-white border ${
+                    errors.subject ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
+                  } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
                   placeholder="Subject of your message"
                   aria-invalid={errors.subject ? 'true' : 'false'}
                 />
@@ -146,7 +146,7 @@ const FaqsContact = () => {
 
               {/* Message */}
               <div className="mt-6">
-                <label htmlFor="message" className="block mb-1 font-semibold text-yellow-300">
+                <label htmlFor="message" className="block mb-1 font-semibold text-amber-500">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -155,9 +155,9 @@ const FaqsContact = () => {
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-md bg-gray-900 border ${
-                    errors.message ? 'border-red-500' : 'border-yellow-600 focus:border-yellow-400'
-                  } text-yellow-100 placeholder-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none`}
+                  className={`w-full px-4 py-3 rounded-md bg-white border ${
+                    errors.message ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
+                  } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition resize-none`}
                   placeholder="Write your message here..."
                   aria-invalid={errors.message ? 'true' : 'false'}
                 />
@@ -178,13 +178,13 @@ const FaqsContact = () => {
                     !formData.subject.trim() ||
                     !formData.message.trim()
                   }
-                  className={`px-8 py-3 rounded-md font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 ${
+                  className={`px-8 py-3 rounded-md font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 ${
                     !formData.name.trim() ||
                     !formData.email.trim() ||
                     !formData.subject.trim() ||
                     !formData.message.trim()
-                      ? 'bg-yellow-700 cursor-not-allowed text-yellow-400'
-                      : 'bg-yellow-500 hover:bg-yellow-600 text-gray-900'
+                      ? 'bg-amber-900 cursor-not-allowed text-amber-600'
+                      : 'bg-amber-700 hover:bg-amber-800 text-gray-900'
                   }`}
                 >
                   Send Message
@@ -195,21 +195,21 @@ const FaqsContact = () => {
         </div>
 
         {/* Right - Info & Image (Desktop Only) */}
-        <div className="hidden md:flex flex-col justify-center gap-8 bg-black/40 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
+        <div className="hidden md:flex flex-col justify-center gap-8 bg-white/40 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
           <img
             src="https://plus.unsplash.com/premium_photo-1679826780180-4047efbd3fbd?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Support illustration"
             className="rounded-xl shadow-lg object-cover w-full h-64"
           />
-          <div className="text-yellow-200 text-lg space-y-4">
+          <div className="text-amber-400 text-lg space-y-4">
             <p className="flex items-center gap-3">
-              <FiMail className="text-yellow-400 text-2xl" /> support@example.com
+              <FiMail className="text-amber-600 text-2xl" /> support@example.com
             </p>
             <p className="flex items-center gap-3">
-              <FiPhone className="text-yellow-400 text-2xl" /> +1 (555) 123-4567
+              <FiPhone className="text-amber-600 text-2xl" /> +1 (555) 123-4567
             </p>
             <p className="flex items-center gap-3">
-              <FiMapPin className="text-yellow-400 text-2xl" /> 123 Support Ave, Help City
+              <FiMapPin className="text-amber-600 text-2xl" /> 123 Support Ave, Help City
             </p>
           </div>
         </div>

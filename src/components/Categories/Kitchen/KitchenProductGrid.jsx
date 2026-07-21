@@ -574,12 +574,12 @@ const KitchenProductGrid = () => {
   }, [displayedProducts]);
 
   return (
-    <section className="bg-gray-900 text-white py-8 px-3 md:px-8">
+    <section className="bg-white text-gray-900 py-8 px-3 md:px-8">
       {/* Top Bar */}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
         {/* Search */}
-        <div className="flex items-center bg-gray-800 rounded-full px-3 py-2 w-full md:w-1/3">
-          <FaSearch className="text-gray-400 mr-2" />
+        <div className="flex items-center bg-white rounded-full px-3 py-2 w-full md:w-1/3">
+          <FaSearch className="text-gray-600 mr-2" />
           <input
             type="text"
             placeholder="Search..."
@@ -598,8 +598,8 @@ const KitchenProductGrid = () => {
               onClick={() => setCategory(cat)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
                 category === cat
-                  ? "bg-yellow-500 text-black"
-                  : "bg-gray-800 hover:bg-yellow-400 hover:text-black"
+                  ? "bg-amber-700 text-black"
+                  : "bg-white hover:bg-amber-600 hover:text-black"
               }`}
             >
               {cat}
@@ -610,7 +610,7 @@ const KitchenProductGrid = () => {
           <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-            className="bg-gray-800 px-2 py-1.5 rounded-lg text-xs outline-none border border-gray-700 hover:border-yellow-400"
+            className="bg-white px-2 py-1.5 rounded-lg text-xs outline-none border border-gray-200 hover:border-amber-600"
           >
             <option value="">Sort</option>
             <option value="low-to-high">Price: Low</option>
@@ -626,7 +626,7 @@ const KitchenProductGrid = () => {
                 key={v}
                 onClick={() => setView(v)}
                 className={`px-2 py-1 rounded-lg text-xs font-medium transition ${
-                  view === v ? "bg-yellow-500 text-black" : "bg-gray-800"
+                  view === v ? "bg-amber-700 text-black" : "bg-white"
                 }`}
               >
                 {v.replace("-", " ")}
@@ -641,7 +641,7 @@ const KitchenProductGrid = () => {
         {displayedProducts.map((product) => (
           <motion.div
             key={product.id}
-            className="product-card bg-gray-800 rounded-xl shadow-md overflow-hidden relative group"
+            className="product-card bg-white rounded-xl shadow-md overflow-hidden relative group"
           >
             <div className="w-full h-44 md:h-52 relative overflow-hidden">
               <Image
@@ -655,12 +655,12 @@ const KitchenProductGrid = () => {
               <h3 className="text-base md:text-lg font-semibold line-clamp-1">
                 {product.name}
               </h3>
-              <p className="text-gray-400 text-xs line-clamp-2">
+              <p className="text-gray-600 text-xs line-clamp-2">
                 {product.description}
               </p>
               <div className="flex items-center justify-between mt-3">
                 <div>
-                  <p className="text-yellow-400 text-lg font-bold">
+                  <p className="text-amber-600 text-lg font-bold">
                     ${product.price}
                   </p>
                   <p className="text-gray-500 text-xs line-through">
@@ -668,12 +668,12 @@ const KitchenProductGrid = () => {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <button className="text-yellow-400 hover:text-yellow-300">
+                  <button className="text-amber-600 hover:text-amber-500">
                     <FaHeart size={16} />
                   </button>
                   <button
                     onClick={() => setSelectedProduct(product)}
-                    className="text-yellow-400 hover:text-yellow-300"
+                    className="text-amber-600 hover:text-amber-500"
                   >
                     <FaCartPlus size={16} />
                   </button>
@@ -689,7 +689,7 @@ const KitchenProductGrid = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={handleShowMore}
-            className="bg-yellow-500 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-yellow-400 transition"
+            className="bg-amber-700 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-amber-600 transition"
           >
             Show More
           </button>
@@ -698,11 +698,11 @@ const KitchenProductGrid = () => {
 
       {/* Quick View Modal */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-3">
-          <div className="bg-gray-900 rounded-xl p-5 max-w-md w-full relative">
+        <div className="fixed inset-0 bg-white/70 flex items-center justify-center z-50 px-3">
+          <div className="bg-white rounded-xl p-5 max-w-md w-full relative">
             <button
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-2 right-3 text-white text-xl"
+              className="absolute top-2 right-3 text-gray-900 text-xl"
             >
               ✕
             </button>
@@ -715,16 +715,16 @@ const KitchenProductGrid = () => {
               />
             </div>
             <h2 className="text-xl font-bold mb-2">{selectedProduct.name}</h2>
-            <p className="text-gray-300 text-sm mb-3">
+            <p className="text-gray-700 text-sm mb-3">
               {selectedProduct.description}
             </p>
-            <p className="text-yellow-400 text-lg font-bold mb-1">
+            <p className="text-amber-600 text-lg font-bold mb-1">
               ${selectedProduct.price}
             </p>
             <p className="text-gray-500 line-through text-sm mb-3">
               ${selectedProduct.oldPrice}
             </p>
-            <button className="bg-yellow-500 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 transition w-full">
+            <button className="bg-amber-700 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition w-full">
               Add to Cart
             </button>
           </div>

@@ -3,30 +3,30 @@ import React from 'react';
 
 const BestdealsHero = () => {
   return (
-    <section className="bg-gray-900 text-white w-full flex justify-center my-[-50px]">
+    <section className="bg-white text-gray-900 w-full flex justify-center my-[-50px]">
       <div className="w-full max-w-[1200px] flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-12 py-12 md:py-16">
         
         {/* LEFT TEXT CONTENT */}
         <div className="text-center md:text-left md:w-1/2 flex flex-col items-center md:items-start">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 tracking-tight">
-            Best <span className="text-yellow-400">Deals</span> of the Season
+            Best <span className="text-amber-600">Deals</span> of the Season
           </h1>
-          <p className="text-gray-300 text-base sm:text-lg lg:text-xl mb-6 max-w-md leading-relaxed">
+          <p className="text-gray-700 text-base sm:text-lg lg:text-xl mb-6 max-w-md leading-relaxed">
             Upgrade your style & gadgets with exclusive discounts up to 
-            <span className="text-yellow-400 font-semibold"> 70% OFF</span>. Limited-time offers you can’t miss.
+            <span className="text-amber-600 font-semibold"> 70% OFF</span>. Limited-time offers you can’t miss.
           </p>
 
           {/* CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 w-full sm:w-auto">
             <a
               href="#shop-now"
-              className="bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-300 transition duration-300 text-sm sm:text-base w-full sm:w-auto text-center"
+              className="bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-500 transition duration-300 text-sm sm:text-base w-full sm:w-auto text-center"
             >
               Shop Now
             </a>
             <a
               href="#explore"
-              className="border border-yellow-400 text-yellow-400 font-semibold px-6 py-3 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition duration-300 text-sm sm:text-base w-full sm:w-auto text-center"
+              className="border border-amber-600 text-amber-600 font-semibold px-6 py-3 rounded-lg hover:bg-amber-600 hover:text-gray-900 transition duration-300 text-sm sm:text-base w-full sm:w-auto text-center"
             >
               Explore Deals
             </a>

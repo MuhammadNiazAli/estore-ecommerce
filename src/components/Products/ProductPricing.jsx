@@ -102,9 +102,9 @@ const ProductPricing = ({
   };
 
   return (
-    <section className="max-w-xl w-full mx-auto bg-gray-900 p-6 sm:p-8 rounded-xl shadow-xl">
+    <section className="max-w-xl w-full mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl">
       {specialDeal && (
-        <div className="bg-yellow-400 text-gray-900 font-semibold text-center py-2 rounded-md mb-8 select-none animate-pulse">
+        <div className="bg-amber-600 text-gray-900 font-semibold text-center py-2 rounded-md mb-8 select-none animate-pulse">
           {dealText}
         </div>
       )}
@@ -112,9 +112,9 @@ const ProductPricing = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
         {/* Price */}
         <div className="flex-1 min-w-0">
-          <p className="text-gray-400 text-sm mb-1">Price</p>
+          <p className="text-gray-600 text-sm mb-1">Price</p>
           <div className="flex items-baseline space-x-4 flex-wrap">
-            <span className="text-4xl font-extrabold text-gray-100">
+            <span className="text-4xl font-extrabold text-gray-800">
               {formatCurrency(price - promoDiscountAmount)}
             </span>
             {originalPrice && originalPrice > price && !promoApplied && (
@@ -122,13 +122,13 @@ const ProductPricing = ({
                 <span className="line-through text-gray-500 text-lg">
                   {formatCurrency(originalPrice)}
                 </span>
-                <span className="bg-red-600 text-white text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
+                <span className="bg-red-600 text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
                   -{discountPercent}%
                 </span>
               </>
             )}
             {promoApplied && (
-              <span className="bg-green-600 text-white text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
+              <span className="bg-green-600 text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
                 Promo: -{promoDiscountPercent}%
               </span>
             )}
@@ -140,8 +140,8 @@ const ProductPricing = ({
           <button
             onClick={decrement}
             aria-label="Decrease quantity"
-            className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-700 transition
-            hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400
+            className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
+            hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600
             ${quantity === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 1}
           >
@@ -156,15 +156,15 @@ const ProductPricing = ({
             value={inputValue}
             onChange={handleInputChange}
             aria-label="Quantity"
-            className={`w-20 text-center rounded-md border border-gray-700 bg-gray-800 text-gray-100
-            focus:outline-none focus:ring-2 focus:ring-yellow-400
+            className={`w-20 text-center rounded-md border border-gray-200 bg-white text-gray-800
+            focus:outline-none focus:ring-2 focus:ring-amber-600
             ${inputError ? "border-red-500 focus:ring-red-500" : ""}`}
           />
           <button
             onClick={increment}
             aria-label="Increase quantity"
-            className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-700 transition
-            hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400
+            className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
+            hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600
             ${quantity === 99 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 99}
           >
@@ -189,18 +189,18 @@ const ProductPricing = ({
             onChange={(e) => setPromoCode(e.target.value)}
             disabled={promoApplied}
             aria-label="Promo code input"
-            className="w-full rounded-md border border-gray-700 bg-gray-800 text-gray-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full rounded-md border border-gray-200 bg-white text-gray-800 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-600"
           />
           <AiOutlineInfoCircle
             title="Try promo codes: save10 or save20"
-            className="absolute right-3 top-3 w-5 h-5 text-yellow-400 cursor-help"
+            className="absolute right-3 top-3 w-5 h-5 text-amber-600 cursor-help"
           />
         </div>
         <button
           onClick={applyPromoCode}
           disabled={promoApplied || promoCode.trim() === "" || isApplyingPromo}
-          className={`rounded-md bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 shadow-md transition
-          disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-yellow-300`}
+          className={`rounded-md bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-3 px-6 shadow-md transition
+          disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-amber-500`}
           aria-label="Apply promo code"
         >
           {isApplyingPromo ? "Applying..." : promoApplied ? "Applied" : "Apply"}
@@ -208,7 +208,7 @@ const ProductPricing = ({
       </div>
 
       {/* Price breakdown */}
-      <div className="mt-8 space-y-3 text-gray-400 text-sm">
+      <div className="mt-8 space-y-3 text-gray-600 text-sm">
         <p>
           <span className="font-semibold">Estimated Tax:</span> {taxPercent}% (
           {formatCurrency(taxAmount)})
@@ -221,7 +221,7 @@ const ProductPricing = ({
             className="ml-1 w-4 h-4 text-gray-500 cursor-help"
           />
         </p>
-        <p className="border-t border-gray-700 pt-3 font-semibold text-lg text-gray-100">
+        <p className="border-t border-gray-200 pt-3 font-semibold text-lg text-gray-800">
           Total: {formatCurrency(total)}
         </p>
       </div>
@@ -230,8 +230,8 @@ const ProductPricing = ({
         type="button"
         onClick={() => onAddToCart(quantity, total)}
         disabled={!!inputError}
-        className={`mt-8 w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 rounded-xl shadow-lg transition-colors duration-300
-        focus:outline-none focus:ring-4 focus:ring-yellow-300 disabled:opacity-50 disabled:cursor-not-allowed`}
+        className={`mt-8 w-full bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-4 rounded-xl shadow-lg transition-colors duration-300
+        focus:outline-none focus:ring-4 focus:ring-amber-500 disabled:opacity-50 disabled:cursor-not-allowed`}
         aria-disabled={!!inputError}
       >
         Add to Cart

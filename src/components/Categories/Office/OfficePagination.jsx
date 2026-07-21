@@ -601,11 +601,11 @@ const OfficePagination = () => {
   );
 
   return (
-    <section className="w-full bg-gray-900 py-10 my-[-60px]">
+    <section className="w-full bg-white py-10 my-[-60px]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-50">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             Explore Our Plants Beauty
           </h2>
           <p className="text-gray-500 mt-2">Browse through our curated collection</p>
@@ -638,14 +638,14 @@ const OfficePagination = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center items-center gap-2 overflow-x-auto scrollbar-hide px-2 py-4 bg-gray-900 rounded-lg">
+        <div className="flex justify-center items-center gap-2 overflow-x-auto scrollbar-hide px-2 py-4 bg-white rounded-lg">
           {/* Previous */}
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
             className={`flex items-center gap-1 px-4 py-2 rounded-lg border min-w-[80px] whitespace-nowrap ${
               currentPage === 1
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                ? "bg-gray-200 text-gray-600 cursor-not-allowed"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >
@@ -661,7 +661,7 @@ const OfficePagination = () => {
                 onClick={() => handlePageChange(page)}
                 className={`px-4 py-2 rounded-lg font-medium min-w-[50px] whitespace-nowrap transition ${
                   currentPage === page
-                    ? "bg-gray-950 text-white border border-amber-50"
+                    ? "bg-white text-gray-900 border border-amber-50"
                     : "bg-white text-gray-700 hover:bg-gray-100"
                 }`}
               >
@@ -676,7 +676,7 @@ const OfficePagination = () => {
             disabled={currentPage === totalPages}
             className={`flex items-center gap-1 px-4 py-2 rounded-lg border min-w-[80px] whitespace-nowrap ${
               currentPage === totalPages
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                ? "bg-gray-200 text-gray-600 cursor-not-allowed"
                 : "bg-white text-gray-700 hover:bg-gray-100"
             }`}
           >

@@ -27,11 +27,11 @@ const testimonials = [
 const AboutTestimonials = () => {
   return (
     <section
-      className="bg-gray-900 text-gray-100 py-20 px-6 flex justify-center"
+      className="bg-white text-gray-800 py-20 px-6 flex justify-center"
       aria-label="Client testimonials about Niaz Ali"
     >
       <div className="max-w-[1000px] w-full text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-yellow-400 mb-14">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-14">
           What Clients Say About Niaz Ali
         </h2>
 
@@ -39,7 +39,7 @@ const AboutTestimonials = () => {
           {testimonials.map(({ name, role, photo, quote }, idx) => (
             <article
               key={idx}
-              className="bg-gray-800 rounded-3xl border border-gray-700 shadow-xl transition-shadow duration-300 flex flex-col items-center text-center p-5"
+              className="bg-white rounded-3xl border border-gray-200 shadow-xl transition-shadow duration-300 flex flex-col items-center text-center p-5"
               style={{
                 aspectRatio: '1 / 1',
                 display: 'flex',
@@ -50,18 +50,18 @@ const AboutTestimonials = () => {
               <img
                 src={photo}
                 alt={`${name} photo`}
-                className="w-20 h-20 rounded-full object-cover ring-4 ring-yellow-400 mx-auto"
+                className="w-20 h-20 rounded-full object-cover ring-4 ring-amber-600 mx-auto"
                 loading="lazy"
                 decoding="async"
               />
 
-              <blockquote className="text-gray-300 italic text-sm sm:text-base leading-snug mt-5 mb-6 flex-grow overflow-hidden">
+              <blockquote className="text-gray-700 italic text-sm sm:text-base leading-snug mt-5 mb-6 flex-grow overflow-hidden">
                 &ldquo;{quote}&rdquo;
               </blockquote>
 
               <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-white">{name}</h3>
-                <p className="text-yellow-300 text-xs sm:text-sm mt-1">{role}</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{name}</h3>
+                <p className="text-amber-500 text-xs sm:text-sm mt-1">{role}</p>
               </div>
             </article>
           ))}

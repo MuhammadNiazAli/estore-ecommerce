@@ -15,21 +15,21 @@ const offersData = [
     id: 1,
     title: 'Summer Bonus',
     description: 'Get extra 15% value on all gift cards purchased this summer.',
-    icon: <FaPercent className="text-yellow-400 text-xl" aria-hidden="true" />,
+    icon: <FaPercent className="text-amber-600 text-xl" aria-hidden="true" />,
     validTill: addDaysToNow(30), // expires in 30 days
   },
   {
     id: 2,
     title: 'Limited Time Flash Sale',
     description: 'Buy a $100 gift card and get $20 extra credit.',
-    icon: <FaTags className="text-yellow-400 text-xl" aria-hidden="true" />,
+    icon: <FaTags className="text-amber-600 text-xl" aria-hidden="true" />,
     validTill: addDaysToNow(15), // expires in 15 days
   },
   {
     id: 3,
     title: 'Holiday Early Bird',
     description: 'Pre-order holiday gift cards and enjoy exclusive discounts.',
-    icon: <FaClock className="text-yellow-400 text-xl" aria-hidden="true" />,
+    icon: <FaClock className="text-amber-600 text-xl" aria-hidden="true" />,
     validTill: addDaysToNow(45), // expires in 45 days
   },
 ];
@@ -67,9 +67,9 @@ const GiftCardOffers = () => {
   return (
     <section
       aria-label="Current gift card offers and promotions"
-      className="max-w-[900px] mx-auto p-6 bg-gray-900 text-black rounded-3xl shadow-2xl"
+      className="max-w-[900px] mx-auto p-6 bg-white text-black rounded-3xl shadow-2xl"
     >
-      <h2 className="text-3xl font-extrabold mb-8 text-yellow-300 select-none">Special Offers</h2>
+      <h2 className="text-3xl font-extrabold mb-8 text-amber-500 select-none">Special Offers</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {offersData.map(({ id, title, description, icon, validTill }) => {
@@ -89,23 +89,23 @@ const GiftCardOffers = () => {
               className={`rounded-xl p-5 flex flex-col gap-4 shadow-md transition-colors duration-300
                 ${
                   isExpired
-                    ? 'bg-yellow-900 text-yellow-600 cursor-not-allowed opacity-60'
-                    : 'bg-yellow-800 hover:bg-yellow-700 focus-within:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400'
+                    ? 'bg-amber-950 text-amber-800 cursor-not-allowed opacity-60'
+                    : 'bg-amber-900 hover:bg-amber-900 focus-within:bg-amber-900 focus:outline-none focus:ring-2 focus:ring-amber-600'
                 }`}
             >
-              <div className="flex items-center gap-3 text-yellow-400 select-none">
+              <div className="flex items-center gap-3 text-amber-600 select-none">
                 {icon}
                 <h3 className="text-xl font-semibold">{title}</h3>
               </div>
 
-              <p id={`offer-desc-${id}`} className="text-yellow-200 text-sm flex-grow">
+              <p id={`offer-desc-${id}`} className="text-amber-400 text-sm flex-grow">
                 {description}
               </p>
 
               <p
                 id={`offer-countdown-${id}`}
                 className={`text-xs italic flex items-center gap-1 select-none ${
-                  isExpired ? 'text-red-500' : 'text-yellow-300'
+                  isExpired ? 'text-red-500' : 'text-amber-500'
                 }`}
                 aria-live="polite"
               >
@@ -118,11 +118,11 @@ const GiftCardOffers = () => {
                 disabled={isExpired}
                 aria-label={isExpired ? `${title} offer expired` : `Activate offer: ${title}`}
                 onClick={() => !isExpired && handleActivate({ id, title })}
-                className={`mt-auto px-5 py-2 rounded-full font-semibold shadow-md text-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2
+                className={`mt-auto px-5 py-2 rounded-full font-semibold shadow-md text-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
                   ${
                     isExpired
-                      ? 'bg-yellow-700 cursor-not-allowed opacity-50 pointer-events-none'
-                      : 'bg-yellow-400 hover:bg-yellow-300'
+                      ? 'bg-amber-900 cursor-not-allowed opacity-50 pointer-events-none'
+                      : 'bg-amber-600 hover:bg-amber-500'
                   }`}
               >
                 {isExpired ? 'Expired' : 'Activate Offer'}

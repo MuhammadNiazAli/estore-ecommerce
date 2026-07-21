@@ -13,10 +13,10 @@ const HelpCenterBreadcrumb = () => {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="bg-gray-900 w-full px-4 pt-6 pb-2 flex justify-center"
+      className="bg-white w-full px-4 pt-6 pb-2 flex justify-center"
     >
       <ol
-        className="w-full max-w-[1000px] flex items-center text-sm text-yellow-200 space-x-2 overflow-x-auto no-scrollbar"
+        className="w-full max-w-[1000px] flex items-center text-sm text-amber-400 space-x-2 overflow-x-auto no-scrollbar"
         role="list"
       >
         {breadcrumbs.map((crumb, index) => {
@@ -31,7 +31,7 @@ const HelpCenterBreadcrumb = () => {
               {index !== 0 && (
                 <ChevronRight
                   size={16}
-                  className="text-yellow-400 flex-shrink-0"
+                  className="text-amber-600 flex-shrink-0"
                   aria-hidden="true"
                 />
               )}
@@ -39,13 +39,13 @@ const HelpCenterBreadcrumb = () => {
               {!isLast ? (
                 <a
                   href={crumb.href}
-                  className="hover:underline hover:text-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded transition"
+                  className="hover:underline hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded transition"
                 >
                   {crumb.label}
                 </a>
               ) : (
                 <span
-                  className="text-yellow-400 font-semibold"
+                  className="text-amber-600 font-semibold"
                   aria-current="page"
                 >
                   {crumb.label}

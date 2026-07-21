@@ -45,13 +45,13 @@ const WishlistRecommendations = () => {
   };
 
   return (
-    <section className="bg-gray-900 px-4 py-16 mb-[-130px]">
+    <section className="bg-white px-4 py-16 mb-[-130px]">
       <div className="max-w-[1000px] mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl font-bold text-white mb-8"
+          className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8"
         >
           You Might Also Like
         </motion.h2>
@@ -66,7 +66,7 @@ const WishlistRecommendations = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition overflow-hidden flex flex-col relative group"
+                className="bg-white dark:bg-white rounded-lg shadow-lg hover:shadow-2xl transition overflow-hidden flex flex-col relative group"
               >
                 <div className="relative h-56 sm:h-64 w-full overflow-hidden">
                   <Image
@@ -79,27 +79,27 @@ const WishlistRecommendations = () => {
                   />
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between p-4">
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-between p-4">
                     {/* Top Left Icons */}
                     <div className="flex gap-3 translate-x-[-20px] group-hover:translate-x-0 transition-all duration-500 delay-150">
                       <Link
                         href={`/compare`}
                         title="Compare"
-                        className="p-2 rounded-full bg-white dark:bg-gray-700 text-gray-800 dark:text-white shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-50 transition"
                       >
                         <MdCompareArrows size={18} />
                       </Link>
                       <Link
                         href={`/product`}
                         title="View"
-                        className="p-2 rounded-full bg-white dark:bg-gray-700 text-gray-800 dark:text-white shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-600 transition"
+                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-50 transition"
                       >
                         <FiEye size={18} />
                       </Link>
                     </div>
 
                     {/* Bottom Center Info */}
-                    <div className="text-white text-center transition-all duration-500">
+                    <div className="text-gray-900 text-center transition-all duration-500">
                       <p className="text-lg font-semibold">{item.title}</p>
                       <p className="text-sm mt-1 opacity-80">{item.description}</p>
                     </div>
@@ -108,7 +108,7 @@ const WishlistRecommendations = () => {
 
                 {/* Text and Action Buttons */}
                 <div className="p-5 flex flex-col flex-grow">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white line-clamp-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-900 line-clamp-2">
                     {item.title}
                   </h3>
                   <p className="text-indigo-600 dark:text-indigo-400 font-semibold text-lg mt-2">
@@ -118,7 +118,7 @@ const WishlistRecommendations = () => {
                   <div className="mt-auto flex justify-between gap-3 pt-6">
                     <Link
                       href="/cart"
-                      className="flex-1 px-5 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition text-sm font-semibold flex items-center justify-center gap-2"
+                      className="flex-1 px-5 py-2 rounded-full bg-indigo-600 text-gray-900 hover:bg-indigo-700 transition text-sm font-semibold flex items-center justify-center gap-2"
                     >
                       <FiShoppingCart size={18} />
                       Add to Cart
@@ -130,8 +130,8 @@ const WishlistRecommendations = () => {
                       className={clsx(
                         'p-2 rounded-full border transition',
                         isFavorite
-                          ? 'bg-red-600 text-white border-red-600 hover:bg-red-700'
-                          : 'border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                          ? 'bg-red-600 text-gray-900 border-red-600 hover:bg-red-700'
+                          : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-50'
                       )}
                     >
                       <FiHeart size={20} />

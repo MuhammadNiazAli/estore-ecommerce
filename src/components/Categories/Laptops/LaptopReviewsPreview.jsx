@@ -37,7 +37,7 @@ const renderStars = (rating) => {
     stars.push(
       <svg
         key={`full-${i}`}
-        className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
+        className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600"
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -50,7 +50,7 @@ const renderStars = (rating) => {
     stars.push(
       <svg
         key="half"
-        className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400"
+        className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600"
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -87,8 +87,8 @@ const renderStars = (rating) => {
 
 const LaptopReviewsPreview = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-gray-200 my-[-50px] mb-10">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gray-100 text-center">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-gray-700 my-[-50px] mb-10">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-gray-800 text-center">
         Customer Reviews
       </h2>
 
@@ -100,26 +100,26 @@ const LaptopReviewsPreview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: id * 0.1 }}
-            className="bg-gray-800/70 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-lg"
+            className="bg-white/70 backdrop-blur-md rounded-xl p-4 sm:p-6 shadow-lg"
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-3">
-                <UserCircleIcon className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400" />
+                <UserCircleIcon className="w-8 h-8 sm:w-10 sm:h-10 text-gray-600" />
                 <div>
-                  <div className="flex items-center space-x-1 sm:space-x-2 text-sm sm:text-base font-medium text-gray-100">
+                  <div className="flex items-center space-x-1 sm:space-x-2 text-sm sm:text-base font-medium text-gray-800">
                     <span>{username}</span>
                     <CheckBadgeIcon
                       className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500"
                       title="Verified Buyer"
                     />
                   </div>
-                  <span className="text-xs sm:text-sm text-gray-400">{date}</span>
+                  <span className="text-xs sm:text-sm text-gray-600">{date}</span>
                 </div>
               </div>
               <div className="flex">{renderStars(rating)}</div>
             </div>
 
-            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{comment}</p>
+            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{comment}</p>
           </motion.div>
         ))}
       </div>

@@ -133,50 +133,50 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 max-w-[1000px] mx-auto min-h-[400px]"
+        className="bg-gradient-to-b from-white to-white rounded-xl p-8 max-w-[1000px] mx-auto min-h-[400px]"
       >
-        <h2 className="text-3xl font-extrabold mb-8 text-white tracking-wide">Saved Addresses</h2>
+        <h2 className="text-3xl font-extrabold mb-8 text-gray-900 tracking-wide">Saved Addresses</h2>
 
         {addressList.length === 0 ? (
-          <p className="text-gray-400 text-center italic">You haven’t added any addresses yet.</p>
+          <p className="text-gray-600 text-center italic">You haven’t added any addresses yet.</p>
         ) : (
           <div className="space-y-8">
             {addressList.map((a) => (
               <div
                 key={a.id}
-                className="bg-gray-800 rounded-lg p-6 shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+                className="bg-white rounded-lg p-6 shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
               >
                 <div className="md:max-w-[70%]">
-                  <h3 className="text-yellow-400 font-semibold text-xl mb-1 tracking-wide flex items-center gap-2">
+                  <h3 className="text-amber-600 font-semibold text-xl mb-1 tracking-wide flex items-center gap-2">
                     {a.label}
                     {a.isDefault && (
-                      <span className="bg-yellow-400 text-black px-2 py-0.5 text-xs rounded-full font-bold">
+                      <span className="bg-amber-600 text-black px-2 py-0.5 text-xs rounded-full font-bold">
                         Default
                       </span>
                     )}
                   </h3>
-                  <p className="text-white font-semibold text-lg">{a.recipientName}</p>
-                  {a.company && <p className="text-gray-300">{a.company}</p>}
-                  <address className="text-gray-300 not-italic text-sm space-y-0.5 mb-1">
+                  <p className="text-gray-900 font-semibold text-lg">{a.recipientName}</p>
+                  {a.company && <p className="text-gray-700">{a.company}</p>}
+                  <address className="text-gray-700 not-italic text-sm space-y-0.5 mb-1">
                     <p>{a.street}</p>
                     <p>{a.city}, {a.state}</p>
                     <p>{a.postalCode}</p>
                     <p>{a.country}</p>
                   </address>
-                  <p className="text-gray-400 font-mono text-sm">Phone: {a.phone}</p>
+                  <p className="text-gray-600 font-mono text-sm">Phone: {a.phone}</p>
                 </div>
                 <div className="flex flex-col gap-2 w-full md:w-auto">
                   <motion.button
                     onClick={() => handleEdit(a.id)}
                     whileTap={tapSpring}
-                    className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold hover:bg-yellow-300"
+                    className="bg-amber-600 text-black px-4 py-2 rounded-md font-semibold hover:bg-amber-500"
                   >
                     Edit
                   </motion.button>
                   <motion.button
                     onClick={() => deleteAddress(a.id)}
                     whileTap={tapSpring}
-                    className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700"
+                    className="bg-red-600 text-gray-900 px-4 py-2 rounded-md font-semibold hover:bg-red-700"
                   >
                     Delete
                   </motion.button>
@@ -190,7 +190,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
           <motion.button
             onClick={() => setShowForm(true)}
             whileTap={tapSpring}
-            className="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold shadow-lg hover:bg-yellow-300 transition"
+            className="bg-amber-600 text-black px-8 py-3 rounded-full font-bold shadow-lg hover:bg-amber-500 transition"
           >
             + Add New Address
           </motion.button>
@@ -212,15 +212,15 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative bg-gray-900 pointer-events-auto rounded-xl w-full max-w-xl mx-4 sm:mx-auto p-6 sm:p-8 overflow-hidden shadow-2xl border border-yellow-500"
+              className="relative bg-white pointer-events-auto rounded-xl w-full max-w-xl mx-4 sm:mx-auto p-6 sm:p-8 overflow-hidden shadow-2xl border border-amber-700"
             >
               <button
                 onClick={() => setShowForm(false)}
-                className="absolute top-4 right-5 text-white text-3xl hover:text-red-400 transition"
+                className="absolute top-4 right-5 text-gray-900 text-3xl hover:text-red-400 transition"
               >
                 &times;
               </button>
-              <h3 className="text-yellow-400 text-2xl font-bold mb-6">
+              <h3 className="text-amber-600 text-2xl font-bold mb-6">
                 {formData.id ? 'Edit Address' : 'Add New Address'}
               </h3>
               <div className="grid grid-cols-1 gap-4 max-h-[70vh] overflow-y-auto pr-1 scroll-smooth custom-scroll">
@@ -242,9 +242,9 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                       value={formData[name]}
                       onChange={handleChange}
                       placeholder={placeholder}
-                      className={`px-5 py-3 rounded-lg bg-gray-800 border ${
-                        errors[name] ? 'border-red-500' : 'border-gray-700'
-                      } text-white placeholder-gray-400 focus:outline-none`}
+                      className={`px-5 py-3 rounded-lg bg-white border ${
+                        errors[name] ? 'border-red-500' : 'border-gray-200'
+                      } text-gray-900 placeholder-gray-400 focus:outline-none`}
                     />
                     {errors[name] && (
                       <span className="text-red-500 text-xs mt-1">{errors[name]}</span>
@@ -259,9 +259,9 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                     onChange={() =>
                       setFormData((prev) => ({ ...prev, isDefault: !prev.isDefault }))
                     }
-                    className="form-checkbox rounded border-gray-600 text-yellow-400"
+                    className="form-checkbox rounded border-gray-200 text-amber-600"
                   />
-                  <span className="text-gray-300 text-sm">Set as default address</span>
+                  <span className="text-gray-700 text-sm">Set as default address</span>
                 </label>
 
                 <motion.button
@@ -269,7 +269,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                   disabled={isSaving}
                   whileTap={tapSpring}
                   className={`mt-6 w-full ${
-                    isSaving ? 'bg-yellow-300 cursor-not-allowed' : 'bg-yellow-400 hover:bg-yellow-300'
+                    isSaving ? 'bg-amber-500 cursor-not-allowed' : 'bg-amber-600 hover:bg-amber-500'
                   } text-black font-semibold py-3 rounded-full shadow-md transition`}
                 >
                   {isSaving ? 'Saving...' : 'Save Address'}
@@ -286,10 +286,10 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
           width: 10px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-          background: #111827; /* dark track */
+          background: #ffffff; /* dark track */
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background-color: #facc15; /* yellow thumb */
+          background-color: #b45309; /* yellow thumb */
           border-radius: 6px;
         }
       `}</style>

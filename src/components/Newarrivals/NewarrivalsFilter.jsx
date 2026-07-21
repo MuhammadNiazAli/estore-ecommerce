@@ -105,7 +105,7 @@ const NewarrivalsFilter = () => {
   return (
     <section
       aria-label="Filter New Arrivals by Category"
-      className="w-full bg-gray-900 py-8 px-6 sm:px-12"
+      className="w-full bg-white py-8 px-6 sm:px-12"
     >
       <div
         role="list"
@@ -145,15 +145,15 @@ const NewarrivalsFilter = () => {
                 select-none
                 ${
                   isActive
-                    ? 'bg-yellow-400 bg-opacity-30 text-gray-900 backdrop-blur-md shadow-lg border border-yellow-400/60'
-                    : 'bg-gray-800 text-yellow-500 hover:bg-yellow-600 hover:text-yellow-200'
+                    ? 'bg-amber-600 bg-opacity-30 text-gray-900 backdrop-blur-md shadow-lg border border-amber-600/60'
+                    : 'bg-white text-amber-700 hover:bg-amber-800 hover:text-amber-400'
                 }
                 ${
                   isActive
                     ? 'scale-100 shadow-[0_0_15px_2px_rgba(252,211,77,0.6)]'
                     : 'scale-100'
                 }
-                focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-400 focus-visible:ring-opacity-70
+                focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-opacity-70
               `}
               aria-pressed={isActive}
               aria-current={isActive ? 'true' : undefined}
@@ -182,8 +182,8 @@ const NewarrivalsFilter = () => {
                 transition-all duration-300
                 ${
                   isActive
-                    ? 'bg-yellow-400 shadow-[0_0_8px_2px_rgba(252,211,77,0.7)] scale-125'
-                    : 'bg-yellow-700 hover:bg-yellow-500 scale-100'
+                    ? 'bg-amber-600 shadow-[0_0_8px_2px_rgba(252,211,77,0.7)] scale-125'
+                    : 'bg-amber-900 hover:bg-amber-700 scale-100'
                 }
               `}
               type="button"

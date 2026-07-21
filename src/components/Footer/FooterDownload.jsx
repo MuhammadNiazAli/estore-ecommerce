@@ -301,7 +301,7 @@ const APPS = [
     playStore: 'https://vercel.com/',
     website: 'https://vercel.com/',
     Icon: SiVercel,
-    color: '#000000',
+    color: '#ffffff',
   },
   {
     name: 'Firebase',
@@ -345,7 +345,7 @@ const APPS = [
     playStore: 'https://www.notion.so/mobile',
     website: 'https://www.notion.so/',
     Icon: SiNotion,
-    color: '#000000',
+    color: '#ffffff',
   },
   {
     name: 'Postman',
@@ -535,7 +535,7 @@ const APPS = [
     playStore: 'https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically',
     website: 'https://www.tiktok.com/',
     Icon: SiTiktok,
-    color: '#000000',
+    color: '#ffffff',
   },
   {
     name: 'Reddit',
@@ -907,7 +907,7 @@ function StarRating({ count }) {
         return (
           <FiStar
             key={idx}
-            className={`text-xs ${active ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'}`}
+            className={`text-xs ${active ? 'text-amber-600 fill-amber-600' : 'text-gray-600'}`}
             aria-hidden="true"
           />
         );
@@ -924,7 +924,7 @@ function AppCard({ app }) {
     <article
       tabIndex={0}
       aria-label={`${name} app card`}
-      className="relative flex flex-col h-72 sm:h-80 md:h-96 rounded-xl bg-gray-900 text-white shadow-md overflow-hidden group"
+      className="relative flex flex-col h-72 sm:h-80 md:h-96 rounded-xl bg-white text-gray-900 shadow-md overflow-hidden group"
     >
       {/* Icon big center */}
       <div
@@ -938,7 +938,7 @@ function AppCard({ app }) {
       {/* Bottom details */}
       <section
         aria-live="polite"
-        className="absolute bottom-0 left-0 w-full bg-gray-900/90 backdrop-blur-md p-4 rounded-b-xl text-white z-10 transition"
+        className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md p-4 rounded-b-xl text-gray-900 z-10 transition"
       >
         <div className="flex justify-between items-center">
           <h3
@@ -956,7 +956,7 @@ function AppCard({ app }) {
             href={playStore}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-yellow-400 text-black rounded hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors"
+            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-amber-600 text-black rounded hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors"
             aria-label={`Download ${name} from Google Play Store`}
           >
             <FiShoppingCart className="w-4 h-4" />
@@ -967,7 +967,7 @@ function AppCard({ app }) {
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-gray-700 text-white rounded hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
+            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-gray-900 rounded hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
             aria-label={`Visit ${name} official website`}
           >
             <FiExternalLink className="w-4 h-4" />
@@ -983,14 +983,14 @@ export default function FooterDownload() {
   return (
     <section
       aria-label="Download our shopping and tech apps"
-      className="relative w-full bg-gradient-to-b from-gray-900 to-gray-900 px-4 py-12 text-white my-[-30px] mb-[-100px]"
+      className="relative w-full bg-gradient-to-b from-white to-white px-4 py-12 text-gray-900 my-[-30px] mb-[-100px]"
     >
       <div className="relative mx-auto max-w-[1100px]">
         {/* Navigation buttons */}
         <button
           type="button"
           aria-label="Previous slide"
-          className="swiper-button-prev absolute -left-10 top-1/2 z-30 -translate-y-1/2 text-white opacity-90 hover:opacity-100 focus:outline-none"
+          className="swiper-button-prev absolute -left-10 top-1/2 z-30 -translate-y-1/2 text-gray-900 opacity-90 hover:opacity-100 focus:outline-none"
           style={{
             width: 32,
             height: 32,
@@ -1012,7 +1012,7 @@ export default function FooterDownload() {
         <button
           type="button"
           aria-label="Next slide"
-          className="swiper-button-next absolute -right-10 top-1/2 z-30 -translate-y-1/2 text-white opacity-90 hover:opacity-100 focus:outline-none"
+          className="swiper-button-next absolute -right-10 top-1/2 z-30 -translate-y-1/2 text-gray-900 opacity-90 hover:opacity-100 focus:outline-none"
           style={{
             width: 32,
             height: 32,

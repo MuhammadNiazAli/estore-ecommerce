@@ -24,19 +24,19 @@ const HelpCenterSearch = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full px-4 py-12 flex justify-center mb-[-40px]">
+    <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-40px]">
       <form
         onSubmit={handleSubmit}
         role="search"
         aria-label="Help Center search"
-        className="w-full max-w-[1000px] flex items-center bg-gray-800 rounded-lg shadow-md overflow-hidden"
+        className="w-full max-w-[1000px] flex items-center bg-white rounded-lg shadow-md overflow-hidden"
         noValidate
       >
         {/* Search button */}
         <button
           type="submit"
           aria-label="Search"
-          className="flex items-center justify-center px-4 text-yellow-400 hover:text-yellow-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 transition-colors duration-200"
+          className="flex items-center justify-center px-4 text-amber-600 hover:text-amber-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition-colors duration-200"
         >
           <SearchIcon size={20} />
         </button>
@@ -49,7 +49,7 @@ const HelpCenterSearch = () => {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search Help Center..."
           aria-label="Search Help Center"
-          className="flex-grow bg-gray-800 text-white placeholder-yellow-400 py-3 px-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="flex-grow bg-white text-gray-900 placeholder-amber-600 py-3 px-3 focus:outline-none focus:ring-2 focus:ring-amber-600"
           spellCheck={false}
           autoComplete="off"
           autoCorrect="off"
@@ -63,7 +63,7 @@ const HelpCenterSearch = () => {
             type="button"
             onClick={handleClear}
             aria-label="Clear search"
-            className="flex items-center justify-center px-4 text-yellow-400 hover:text-yellow-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 transition-colors duration-200"
+            className="flex items-center justify-center px-4 text-amber-600 hover:text-amber-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition-colors duration-200"
           >
             <X size={20} />
           </button>

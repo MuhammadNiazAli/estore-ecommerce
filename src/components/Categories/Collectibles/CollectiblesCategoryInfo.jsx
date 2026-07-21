@@ -5,8 +5,8 @@ const CollectiblesCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900
-        text-yellow-400
+        bg-white
+        text-amber-600
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const CollectiblesCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Discover our exclusive range of rare collectibles, vintage treasures, and limited-edition items that capture history and uniqueness.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         Whether you're a passionate collector or just getting started, find timeless pieces that tell a story.
       </p>
     </section>

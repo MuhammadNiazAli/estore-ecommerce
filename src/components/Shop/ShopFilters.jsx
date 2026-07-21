@@ -14,7 +14,7 @@ const ShopFilters = ({ onFilterChange }) => {
   };
 
   return (
-    <div className="w-full bg-gray-900 py-5 px-4 border-b border-gray-800">
+    <div className="w-full bg-white py-5 px-4 border-b border-gray-200">
       <div className="max-w-[1000px] mx-auto flex justify-center flex-wrap gap-3 sm:gap-4">
         {categories.map((category) => {
           const isActive = active === category;
@@ -28,7 +28,7 @@ const ShopFilters = ({ onFilterChange }) => {
                 ${
                   isActive
                     ? 'bg-amber-400 text-gray-900 shadow-lg'
-                    : 'bg-gray-800 text-gray-400 hover:bg-amber-400 hover:text-gray-900'
+                    : 'bg-white text-gray-600 hover:bg-amber-400 hover:text-gray-900'
                 }
                 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1`}
             >

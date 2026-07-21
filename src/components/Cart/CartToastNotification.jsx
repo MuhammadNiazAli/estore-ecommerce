@@ -8,7 +8,7 @@ const icons = {
   success: <CheckCircle className="text-green-500 w-5 h-5" />,
   error: <XCircle className="text-red-500 w-5 h-5" />,
   info: <Info className="text-blue-500 w-5 h-5" />,
-  warning: <AlertTriangle className="text-yellow-500 w-5 h-5" />,
+  warning: <AlertTriangle className="text-amber-700 w-5 h-5" />,
 };
 
 const CartToastNotification = ({ type = 'success', message, visible, onClose }) => {
@@ -27,13 +27,13 @@ const CartToastNotification = ({ type = 'success', message, visible, onClose }) 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-[9999] max-w-xs w-full bg-gray-900 text-white px-4 py-3 rounded-lg shadow-lg flex items-start gap-3"
+          className="fixed bottom-6 right-6 z-[9999] max-w-xs w-full bg-white text-gray-900 px-4 py-3 rounded-lg shadow-lg flex items-start gap-3"
         >
           <div>{icons[type]}</div>
           <div className="text-sm font-medium">{message}</div>
           <button
             onClick={onClose}
-            className="ml-auto text-gray-400 hover:text-white transition"
+            className="ml-auto text-gray-600 hover:text-gray-900 transition"
             aria-label="Close toast"
           >
             ×

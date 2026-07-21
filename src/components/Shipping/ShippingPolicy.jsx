@@ -140,7 +140,7 @@ const ShippingPolicy = () => {
   return (
     <section
       aria-label="Shipping policy"
-      className="max-w-[1000px] mx-auto px-4 sm:px-6 py-20 sm:py-28 text-gray-300 relative select-none"
+      className="max-w-[1000px] mx-auto px-4 sm:px-6 py-20 sm:py-28 text-gray-700 relative select-none"
     >
       <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-15 text-center drop-shadow-md">
         Shipping Policy
@@ -153,7 +153,7 @@ const ShippingPolicy = () => {
             ref={(el) => (containerRefs.current[boxIndex] = el)}
             onMouseMove={(e) => handleMouseMoveBox(e, boxIndex)}
             onMouseLeave={handleMouseLeaveBox}
-            className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 bg-opacity-90 rounded-2xl px-6 py-10 sm:p-12 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+            className="relative bg-gradient-to-br from-white via-white to-white bg-opacity-90 rounded-2xl px-6 py-10 sm:p-12 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
           >
             {hoveredBoxIndex === boxIndex && <div style={lightStyle} />}
 
@@ -161,7 +161,7 @@ const ShippingPolicy = () => {
               {title}
             </h3>
 
-            <div className="space-y-6 leading-relaxed text-base sm:text-lg text-gray-300">
+            <div className="space-y-6 leading-relaxed text-base sm:text-lg text-gray-700">
               {content.map((paragraph, paraIndex) => {
                 const words = splitTextIntoWords(paragraph);
                 return (

@@ -30,7 +30,7 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
   };
 
   return (
-    <div className="w-full bg-gray-900 text-yellow-400 py-3 px-4 md:px-8 top-0 z-50 shadow-lg my-15">
+    <div className="w-full bg-white text-amber-600 py-3 px-4 md:px-8 top-0 z-50 shadow-lg my-15">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
         {/* Left Section */}
         <div className="flex flex-col md:flex-row md:items-center gap-3 w-full md:w-auto">
@@ -39,7 +39,7 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
             <input
               type="text"
               placeholder="Search watches..."
-              className="w-full rounded-lg bg-gray-800 text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 placeholder-gray-400"
+              className="w-full rounded-lg bg-white text-gray-900 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600 placeholder-gray-400"
               onChange={handleSearch}
             />
           </div>
@@ -49,7 +49,7 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
             <select
               value={sort}
               onChange={handleSortChange}
-              className="rounded-lg bg-gray-800 text-yellow-400 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="rounded-lg bg-white text-amber-600 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <option value="default">Sort By: Default</option>
               <option value="priceLowHigh">Price: Low to High</option>
@@ -64,7 +64,7 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
             <select
               value={items}
               onChange={handleItemsPerPage}
-              className="rounded-lg bg-gray-800 text-yellow-400 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="rounded-lg bg-white text-amber-600 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <option value={6}>6 per page</option>
               <option value={12}>12 per page</option>
@@ -80,8 +80,8 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
             onClick={() => handleViewChange("grid")}
             className={`p-2 rounded-lg border ${
               viewMode === "grid"
-                ? "bg-yellow-400 text-gray-900"
-                : "bg-gray-800 text-yellow-400"
+                ? "bg-amber-600 text-gray-900"
+                : "bg-white text-amber-600"
             }`}
             title="Grid View"
           >
@@ -91,8 +91,8 @@ const WatchesSortBar = ({ onSortChange, onSearchChange, onViewChange, onItemsPer
             onClick={() => handleViewChange("list")}
             className={`p-2 rounded-lg border ${
               viewMode === "list"
-                ? "bg-yellow-400 text-gray-900"
-                : "bg-gray-800 text-yellow-400"
+                ? "bg-amber-600 text-gray-900"
+                : "bg-white text-amber-600"
             }`}
             title="List View"
           >

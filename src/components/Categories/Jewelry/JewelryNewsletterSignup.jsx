@@ -11,12 +11,12 @@ const JewelryNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-12 px-4">
+    <section className="bg-white py-12 px-4">
       <div className="max-w-md mx-auto text-center">
-        <h2 className="text-3xl font-bold text-yellow-400 mb-2">
+        <h2 className="text-3xl font-bold text-amber-600 mb-2">
           Get Exclusive Jewelry Offers & Updates
         </h2>
-        <p className="text-yellow-300 mb-6">
+        <p className="text-amber-500 mb-6">
           Subscribe to our newsletter and be the first to know about new collections and special discounts!
         </p>
         <form
@@ -29,13 +29,13 @@ const JewelryNewsletterSignup = () => {
             aria-label="Email address"
             required
             placeholder="Enter your email"
-            className="flex-grow px-4 py-3 rounded-md border border-yellow-400 bg-gray-800 text-yellow-100 placeholder-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+            className="flex-grow px-4 py-3 rounded-md border border-amber-600 bg-white text-amber-300 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-700"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"
-            className="px-6 py-3 rounded-md bg-yellow-500 text-gray-900 font-semibold hover:bg-yellow-400 transition"
+            className="px-6 py-3 rounded-md bg-amber-700 text-gray-900 font-semibold hover:bg-amber-600 transition"
           >
             Subscribe
           </button>

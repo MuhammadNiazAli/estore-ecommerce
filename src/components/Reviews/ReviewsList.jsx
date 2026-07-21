@@ -42,13 +42,13 @@ const StarRating = ({ rating }) => (
 );
 
 const Comment = ({ comment, onToggleLike }) => (
-  <div className="pl-6 mt-3 border-l border-gray-700">
-    <div className="flex items-center gap-2 text-gray-300 text-sm">
+  <div className="pl-6 mt-3 border-l border-gray-200">
+    <div className="flex items-center gap-2 text-gray-700 text-sm">
       <span className="font-semibold">{comment.user}</span>
       <time className="text-xs text-gray-500">{timeAgo(comment.date)}</time>
     </div>
-    <p className="mt-1 text-gray-300">{comment.text}</p>
-    <div className="flex items-center gap-4 mt-1 text-gray-400 text-xs">
+    <p className="mt-1 text-gray-700">{comment.text}</p>
+    <div className="flex items-center gap-4 mt-1 text-gray-600 text-xs">
       <button
         onClick={() => onToggleLike(comment.id)}
         className="flex items-center gap-1 hover:text-amber-400 transition"
@@ -74,7 +74,7 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
   };
 
   return (
-    <article className="bg-gray-900 border border-gray-800 shadow-lg hover:shadow-2xl p-8 rounded-xl transition-transform hover:scale-[1.02] relative group">
+    <article className="bg-white border border-gray-200 shadow-lg hover:shadow-2xl p-8 rounded-xl transition-transform hover:scale-[1.02] relative group">
       <header className="flex items-center gap-6 mb-6">
         {review.avatar ? (
           <img src={review.avatar} className="w-16 h-16 rounded-full object-cover" alt={review.name} />
@@ -84,20 +84,20 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
           </div>
         )}
         <div>
-          <h3 className="text-white font-semibold text-xl">{review.name}</h3>
+          <h3 className="text-gray-900 font-semibold text-xl">{review.name}</h3>
           {review.verified && (
             <span className="text-sm text-amber-400 flex items-center mt-1">
               <BadgeCheck className="w-4 h-4 mr-1" /> Verified Buyer
             </span>
           )}
-          <time className="block text-sm text-gray-400 mt-0.5">{timeAgo(review.date)}</time>
+          <time className="block text-sm text-gray-600 mt-0.5">{timeAgo(review.date)}</time>
         </div>
       </header>
 
       <StarRating rating={review.rating} />
-      <p className="mt-4 text-gray-300 text-lg leading-relaxed">{review.text}</p>
+      <p className="mt-4 text-gray-700 text-lg leading-relaxed">{review.text}</p>
 
-      <div className="flex items-center gap-8 mt-6 text-gray-400 text-sm">
+      <div className="flex items-center gap-8 mt-6 text-gray-600 text-sm">
         <button
           onClick={() => onLikeReview(review.id)}
           className="flex items-center gap-2 hover:text-amber-400 transition"
@@ -123,11 +123,11 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
             Share
           </button>
           {showShare && (
-            <ul className="absolute top-full right-0 mt-2 w-40 bg-gray-800 rounded shadow-lg z-20 text-sm border border-gray-700">
+            <ul className="absolute top-full right-0 mt-2 w-40 bg-white rounded shadow-lg z-20 text-sm border border-gray-200">
               {['Facebook', 'Twitter', 'Copy Link'].map((platform) => (
                 <li key={platform}>
                   <button
-                    className="block px-4 py-2 hover:bg-gray-700 w-full text-left text-white"
+                    className="block px-4 py-2 hover:bg-gray-50 w-full text-left text-gray-900"
                     onClick={() => alert(`Shared on ${platform}`)}
                   >
                     {platform}
@@ -145,7 +145,7 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
             rows={3}
             value={commentText}
             onChange={(e) => setCommentText(e.target.value)}
-            className="w-full bg-gray-800 rounded-lg p-4 text-gray-100 placeholder-gray-500 focus:ring-2 focus:ring-amber-400 resize-none"
+            className="w-full bg-white rounded-lg p-4 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-amber-400 resize-none"
             placeholder="Write a comment..."
           />
           <button
@@ -158,7 +158,7 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
       )}
 
       {review.comments.length > 0 && (
-        <section className="mt-6 border-t border-gray-700 pt-4 max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-950 pr-2">
+        <section className="mt-6 border-t border-gray-200 pt-4 max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-950 pr-2">
           {review.comments.map((comment) => (
             <Comment
               key={comment.id}
@@ -265,9 +265,9 @@ export default function ReviewsSystem() {
     );
 
   return (
-    <section className="bg-gray-900 py-20 px-4 my-[-50px]">
+    <section className="bg-white py-20 px-4 my-[-50px]">
       <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-4xl text-white font-bold text-center mb-12">Customer Reviews & Feedback</h2>
+        <h2 className="text-4xl text-gray-900 font-bold text-center mb-12">Customer Reviews & Feedback</h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           {['All', '5', '4', '3', '2', '1'].map((f) => {
@@ -279,7 +279,7 @@ export default function ReviewsSystem() {
                 className={`px-5 py-2 rounded-full font-semibold text-sm transition-all ${
                   filter === f
                     ? 'bg-amber-500 text-gray-900 shadow'
-                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-amber-400'
+                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-amber-400'
                 }`}
               >
                 {f === 'All' ? 'All Ratings' : `${f} Stars`} ({count})
@@ -289,7 +289,7 @@ export default function ReviewsSystem() {
         </div>
 
         {filtered.length === 0 ? (
-          <p className="text-gray-400 text-center">No reviews found.</p>
+          <p className="text-gray-600 text-center">No reviews found.</p>
         ) : (
           <div className="space-y-10">
             {filtered.map((review) => (

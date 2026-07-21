@@ -90,7 +90,7 @@ const KitchenAccessoriesSection = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-10">
+    <section className="bg-white text-amber-600 py-10">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center tracking-wide">
@@ -102,7 +102,7 @@ const KitchenAccessoriesSection = () => {
           {accessories.map((item) => (
             <motion.div
               key={item.id}
-              className="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-yellow-500 hover:border-yellow-400 transition-all"
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-amber-700 hover:border-amber-600 transition-all"
               whileHover={{ scale: 1.03 }}
             >
               {/* Image */}
@@ -119,17 +119,17 @@ const KitchenAccessoriesSection = () => {
                 <h3 className="text-lg font-semibold line-clamp-1">
                   {item.name}
                 </h3>
-                <p className="text-yellow-300 font-bold mt-1 text-sm">
+                <p className="text-amber-500 font-bold mt-1 text-sm">
                   ${item.price}
                 </p>
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full">
-                  <button className="flex-1 bg-yellow-500 text-gray-900 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-yellow-400 transition">
+                  <button className="flex-1 bg-amber-700 text-gray-900 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-amber-600 transition">
                     <FaCartPlus size={14} /> Add
                   </button>
                   <button
-                    className="flex-1 bg-gray-700 text-yellow-400 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-600 transition"
+                    className="flex-1 bg-white text-amber-600 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-50 transition"
                     onClick={() => handleViewDetails(item)}
                   >
                     <FaEye size={14} /> View
@@ -145,20 +145,20 @@ const KitchenAccessoriesSection = () => {
       <AnimatePresence>
         {selectedAccessory && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4"
+            className="fixed inset-0 bg-white bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gray-800 text-yellow-400 rounded-xl p-5 md:p-6 max-w-sm sm:max-w-md w-full shadow-xl relative border border-yellow-500"
+              className="bg-white text-amber-600 rounded-xl p-5 md:p-6 max-w-sm sm:max-w-md w-full shadow-xl relative border border-amber-700"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             >
               {/* Close Button */}
               <button
-                className="absolute top-3 right-3 text-yellow-400 text-xl hover:text-yellow-300"
+                className="absolute top-3 right-3 text-amber-600 text-xl hover:text-amber-500"
                 onClick={handleCloseOverlay}
               >
                 ✖
@@ -183,7 +183,7 @@ const KitchenAccessoriesSection = () => {
               </p>
 
               {/* Add to Cart */}
-              <button className="bg-yellow-500 text-gray-900 px-4 py-3 rounded-lg w-full text-sm font-semibold hover:bg-yellow-400 transition">
+              <button className="bg-amber-700 text-gray-900 px-4 py-3 rounded-lg w-full text-sm font-semibold hover:bg-amber-600 transition">
                 Add to Cart
               </button>
             </motion.div>

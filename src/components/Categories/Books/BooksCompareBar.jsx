@@ -48,13 +48,13 @@ const BooksCompareBar = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-yellow-400 p-4 my-10">
+    <div className="bg-white text-amber-600 p-4 my-10">
       {/* Example Books Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         {sampleBooks.map((book) => (
           <div
             key={book.id}
-            className="bg-gray-800 p-4 rounded-lg text-center shadow-md"
+            className="bg-white p-4 rounded-lg text-center shadow-md"
           >
             <img
               src={book.image}
@@ -62,10 +62,10 @@ const BooksCompareBar = () => {
               className="w-full h-48 object-cover rounded-md mb-3"
             />
             <p className="text-lg font-semibold mb-1">{book.name}</p>
-            <p className="text-gray-400 text-sm mb-2">by {book.author}</p>
-            <p className="text-yellow-300 mb-3">{book.price}</p>
+            <p className="text-gray-600 text-sm mb-2">by {book.author}</p>
+            <p className="text-amber-500 mb-3">{book.price}</p>
             <button
-              className="mt-2 w-full px-3 py-2 bg-yellow-500 text-gray-900 rounded hover:bg-yellow-400 font-semibold"
+              className="mt-2 w-full px-3 py-2 bg-amber-700 text-gray-900 rounded hover:bg-amber-600 font-semibold"
               onClick={() => addToCompare(book)}
               disabled={compareItems.find((item) => item.id === book.id)}
               title={
@@ -86,7 +86,7 @@ const BooksCompareBar = () => {
       <AnimatePresence>
         {compareItems.length > 0 && (
           <motion.div
-            className="fixed bottom-0 left-0 right-0 bg-gray-900 text-yellow-400 p-4 shadow-lg border-t border-yellow-500 flex flex-col sm:flex-row justify-between items-center gap-4 z-50"
+            className="fixed bottom-0 left-0 right-0 bg-white text-amber-600 p-4 shadow-lg border-t border-amber-700 flex flex-col sm:flex-row justify-between items-center gap-4 z-50"
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             exit={{ y: 100 }}
@@ -95,7 +95,7 @@ const BooksCompareBar = () => {
               {compareItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-2 bg-gray-800 px-3 py-2 rounded-lg border border-yellow-500"
+                  className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-amber-700"
                 >
                   <img
                     src={item.image}
@@ -105,7 +105,7 @@ const BooksCompareBar = () => {
                   <span className="text-sm">{item.name}</span>
                   <button
                     onClick={() => removeFromCompare(item.id)}
-                    className="text-yellow-400 hover:text-red-400"
+                    className="text-amber-600 hover:text-red-400"
                     aria-label={`Remove ${item.name} from compare`}
                   >
                     <FaTimes />
@@ -115,7 +115,7 @@ const BooksCompareBar = () => {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-yellow-500 text-gray-900 px-5 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition flex items-center gap-2 w-full sm:w-auto"
+              className="bg-amber-700 text-gray-900 px-5 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center gap-2 w-full sm:w-auto"
             >
               <FaBalanceScale /> Compare ({compareItems.length})
             </button>
@@ -127,13 +127,13 @@ const BooksCompareBar = () => {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4"
+            className="fixed inset-0 bg-white bg-opacity-60 flex justify-center items-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gray-800 text-yellow-400 rounded-xl p-4 md:p-6 w-full max-w-6xl overflow-x-auto"
+              className="bg-white text-amber-600 rounded-xl p-4 md:p-6 w-full max-w-6xl overflow-x-auto"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -142,7 +142,7 @@ const BooksCompareBar = () => {
                 <h2 className="text-xl font-bold">Compare Books</h2>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="text-yellow-400 hover:text-yellow-300 text-xl"
+                  className="text-amber-600 hover:text-amber-500 text-xl"
                   aria-label="Close compare modal"
                 >
                   <FaTimes />
@@ -154,11 +154,11 @@ const BooksCompareBar = () => {
                 <table className="w-full min-w-[600px] text-left border-collapse">
                   <thead>
                     <tr>
-                      <th className="p-2 border-b border-yellow-500">Feature</th>
+                      <th className="p-2 border-b border-amber-700">Feature</th>
                       {compareItems.map((item) => (
                         <th
                           key={item.id}
-                          className="p-2 border-b border-yellow-500 text-center"
+                          className="p-2 border-b border-amber-700 text-center"
                         >
                           {item.name}
                         </th>
@@ -167,11 +167,11 @@ const BooksCompareBar = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="p-2 border-b border-gray-700">Image</td>
+                      <td className="p-2 border-b border-gray-200">Image</td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="p-2 border-b border-gray-700 text-center"
+                          className="p-2 border-b border-gray-200 text-center"
                         >
                           <img
                             src={item.image}
@@ -182,33 +182,33 @@ const BooksCompareBar = () => {
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-2 border-b border-gray-700">Author</td>
+                      <td className="p-2 border-b border-gray-200">Author</td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="p-2 border-b border-gray-700 text-center"
+                          className="p-2 border-b border-gray-200 text-center"
                         >
                           {item.author}
                         </td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-2 border-b border-gray-700">Price</td>
+                      <td className="p-2 border-b border-gray-200">Price</td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="p-2 border-b border-gray-700 text-center"
+                          className="p-2 border-b border-gray-200 text-center"
                         >
                           {item.price}
                         </td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="p-2 border-b border-gray-700">Specs</td>
+                      <td className="p-2 border-b border-gray-200">Specs</td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="p-2 border-b border-gray-700 text-center text-sm"
+                          className="p-2 border-b border-gray-200 text-center text-sm"
                         >
                           {item.specs.join(", ")}
                         </td>

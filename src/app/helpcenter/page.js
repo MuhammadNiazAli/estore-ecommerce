@@ -19,7 +19,7 @@ import HelpCenterChatbotEntry from '@/components/HelpCenter/HelpCenterChatbotEnt
 
 export default function HelpCenterPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 py-16 lg:py-32 space-y-20">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 py-16 lg:py-32 space-y-20">
       <HelpCenterHero />
       <HelpCenterSearch />
       <HelpCenterCategories />

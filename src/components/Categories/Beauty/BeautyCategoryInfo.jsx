@@ -9,7 +9,7 @@ const benefits = [
     desc: "All products are grown with sustainable methods.",
   },
   {
-    icon: <FaSun className="text-yellow-400 w-6 h-6" />,
+    icon: <FaSun className="text-amber-600 w-6 h-6" />,
     title: "Natural Light Care",
     desc: "Guidelines on ideal light conditions for each plant.",
   },
@@ -38,7 +38,7 @@ const BeautyCategoryInfo = () => {
     <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 my-[-50px]">
       {/* Title & Intro */}
       <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-amber-700 mb-4 leading-tight">
           Explore Our Beauty & Indoor Plants Collection
         </h1>
         <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
@@ -56,7 +56,7 @@ const BeautyCategoryInfo = () => {
           {brands.map((brand, i) => (
             <li
               key={i}
-              className="text-yellow-500 font-medium text-lg md:text-xl border border-yellow-300 rounded-md px-5 py-2 hover:bg-gray-950 transition"
+              className="text-amber-700 font-medium text-lg md:text-xl border border-amber-500 rounded-md px-5 py-2 hover:bg-gray-50 transition"
             >
               {brand}
             </li>
@@ -69,10 +69,10 @@ const BeautyCategoryInfo = () => {
         {benefits.map(({ icon, title, desc }, i) => (
           <article
             key={i}
-            className="flex flex-col items-center text-center px-4 py-6 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition"
+            className="flex flex-col items-center text-center px-4 py-6 bg-white rounded-lg shadow-md hover:shadow-lg transition"
           >
             <div className="mb-4">{icon}</div>
-            <h3 className="text-xl font-semibold text-yellow-500 mb-2">{title}</h3>
+            <h3 className="text-xl font-semibold text-amber-700 mb-2">{title}</h3>
             <p className="text-gray-500">{desc}</p>
           </article>
         ))}
@@ -86,7 +86,7 @@ const BeautyCategoryInfo = () => {
         </p>
         <button
           type="button"
-          className="mt-8 inline-block bg-yellow-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-yellow-800 transition"
+          className="mt-8 inline-block bg-amber-900 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-amber-900 transition"
           aria-label="Shop the Beauty & Indoor Plants collection"
         >
           Shop Now

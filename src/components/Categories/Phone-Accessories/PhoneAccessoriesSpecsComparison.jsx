@@ -53,29 +53,29 @@ const PhoneAccessoriesSpecsComparison = () => {
   const [products] = useState(phoneAccessories);
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12">
+    <section className="bg-white text-amber-600 py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-yellow-400">
+        <h2 className="text-3xl font-bold text-center mb-8 text-amber-600">
           Compare Phone Accessories Specs
         </h2>
 
         {/* Desktop View: Table */}
-        <div className="hidden lg:block border border-yellow-600 rounded-lg shadow-lg overflow-hidden">
+        <div className="hidden lg:block border border-amber-800 rounded-lg shadow-lg overflow-hidden">
           <div className="min-w-full">
             {/* Header Row */}
-            <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-gray-900">
-              <div className="p-3 font-semibold text-yellow-500">Specs</div>
+            <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-white">
+              <div className="p-3 font-semibold text-amber-700">Specs</div>
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="p-3 text-center border-l border-yellow-600"
+                  className="p-3 text-center border-l border-amber-800"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-20 h-20 mx-auto object-cover rounded mb-2 border-2 border-yellow-500"
+                    className="w-20 h-20 mx-auto object-cover rounded mb-2 border-2 border-amber-700"
                   />
-                  <p className="text-sm font-semibold text-yellow-400">{product.name}</p>
+                  <p className="text-sm font-semibold text-amber-600">{product.name}</p>
                 </div>
               ))}
             </div>
@@ -85,17 +85,17 @@ const PhoneAccessoriesSpecsComparison = () => {
               <div
                 key={idx}
                 className={`grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] ${
-                  idx % 2 === 0 ? "bg-gray-900" : "bg-gray-900"
+                  idx % 2 === 0 ? "bg-white" : "bg-white"
                 }`}
               >
-                <div className="p-3 font-semibold text-yellow-500">{spec.label}</div>
+                <div className="p-3 font-semibold text-amber-700">{spec.label}</div>
                 {products.map((product) => (
                   <div
                     key={product.id + spec.key}
-                    className="p-3 text-center border-l border-yellow-600 text-sm text-yellow-300"
+                    className="p-3 text-center border-l border-amber-800 text-sm text-amber-500"
                   >
                     {spec.key === "fastCharge" && product[spec.key] === "Yes" ? (
-                      <FaCheckCircle className="text-yellow-400 mx-auto" />
+                      <FaCheckCircle className="text-amber-600 mx-auto" />
                     ) : (
                       product[spec.key]
                     )}
@@ -114,27 +114,27 @@ const PhoneAccessoriesSpecsComparison = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-yellow-950 rounded-lg shadow-lg border border-yellow-600 overflow-hidden"
+              className="bg-amber-950 rounded-lg shadow-lg border border-amber-800 overflow-hidden"
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-40 object-cover border-b border-yellow-600"
+                className="w-full h-40 object-cover border-b border-amber-800"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-yellow-400">
+                <h3 className="text-lg font-semibold mb-2 text-amber-600">
                   {product.name}
                 </h3>
-                <ul className="space-y-2 text-sm text-yellow-300">
+                <ul className="space-y-2 text-sm text-amber-500">
                   {specs.map((spec, i) => (
                     <li
                       key={i}
-                      className="flex justify-between items-center border-b border-yellow-700 pb-1"
+                      className="flex justify-between items-center border-b border-amber-900 pb-1"
                     >
-                      <span className="text-yellow-500">{spec.label}</span>
+                      <span className="text-amber-700">{spec.label}</span>
                       <span>
                         {spec.key === "fastCharge" && product[spec.key] === "Yes" ? (
-                          <FaCheckCircle className="text-yellow-400" />
+                          <FaCheckCircle className="text-amber-600" />
                         ) : (
                           product[spec.key]
                         )}

@@ -26,7 +26,7 @@ const CountdownTimer = ({ targetDate }) => {
   }, [targetDate]);
 
   if (!timeLeft) {
-    return <span className="text-gray-400 text-xs sm:text-sm font-medium">Delivery time has passed</span>;
+    return <span className="text-gray-600 text-xs sm:text-sm font-medium">Delivery time has passed</span>;
   }
 
   return (
@@ -76,31 +76,31 @@ const TrackShipmentContent = ({ closePanel }) => {
     <div className="px-4 sm:px-6 lg:px-8 py-6 max-w-4xl mx-auto text-[14px] sm:text-[15px]">
       {/* Header */}
       <header className="mb-6 text-center sm:text-left">
-        <h2 className="text-yellow-400 text-2xl sm:text-3xl font-bold tracking-wide">
+        <h2 className="text-amber-600 text-2xl sm:text-3xl font-bold tracking-wide">
           Shipment Tracking Details
         </h2>
       </header>
 
       {/* Intro */}
-      <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 max-w-xl mx-auto sm:mx-0 text-center sm:text-left">
+      <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6 max-w-xl mx-auto sm:mx-0 text-center sm:text-left">
         Your order is important to us. Below is the real-time status of your shipment along with detailed tracking information.
       </p>
 
       {/* Timeline */}
       <section className="mb-10 max-w-xl mx-auto sm:mx-0" aria-label="Shipment progress">
-        <ul className="pl-6 border-l-4 border-yellow-400 space-y-6">
+        <ul className="pl-6 border-l-4 border-amber-600 space-y-6">
           {shipmentSteps.map(({ id, label, date, description, isFinal }) => (
             <li key={id} className="relative">
               <div
                 className={`absolute -left-8 top-0 w-7 h-7 flex items-center justify-center rounded-full ring-4 text-xs font-bold
-                ${isFinal ? 'bg-gray-700 text-gray-500 ring-gray-900' : 'bg-yellow-400 text-black ring-gray-900'}`}
+                ${isFinal ? 'bg-white text-gray-500 ring-gray-200' : 'bg-amber-600 text-black ring-gray-200'}`}
               >
                 {id}
               </div>
-              <p className={`${isFinal ? 'text-gray-500' : 'text-yellow-400'} font-semibold ml-1 text-[15px]`}>
+              <p className={`${isFinal ? 'text-gray-500' : 'text-amber-600'} font-semibold ml-1 text-[15px]`}>
                 {label}
               </p>
-              <p className={`${isFinal ? 'text-gray-500' : 'text-gray-400'} ml-1 text-[13px]`}>
+              <p className={`${isFinal ? 'text-gray-500' : 'text-gray-600'} ml-1 text-[13px]`}>
                 {date} — {description}
               </p>
             </li>
@@ -109,34 +109,34 @@ const TrackShipmentContent = ({ closePanel }) => {
       </section>
 
       {/* Current Status */}
-      <section className="bg-gray-800 p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0">
-        <p className="text-yellow-400 font-semibold text-base sm:text-lg mb-1">Current Status</p>
-        <p className="text-gray-300 mb-1">
+      <section className="bg-white p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0">
+        <p className="text-amber-600 font-semibold text-base sm:text-lg mb-1">Current Status</p>
+        <p className="text-gray-700 mb-1">
           <strong>In Transit</strong> — Your package is moving through the delivery network.
         </p>
-        <p className="text-gray-400 mb-2">
+        <p className="text-gray-600 mb-2">
           Estimated delivery date: <strong>July 15, 2025</strong>
         </p>
-        <p className="text-yellow-400 font-semibold">
+        <p className="text-amber-600 font-semibold">
           Estimated time remaining: <CountdownTimer targetDate="2025-07-15T18:00:00Z" />
         </p>
       </section>
 
       {/* Courier Info */}
-      <section className="bg-gray-900 p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0" aria-label="Courier details">
-        <h3 className="text-yellow-400 font-semibold text-base sm:text-lg mb-3">Courier Information</h3>
-        <p className="text-gray-300 text-sm mb-1">
+      <section className="bg-white p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0" aria-label="Courier details">
+        <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-3">Courier Information</h3>
+        <p className="text-gray-700 text-sm mb-1">
           Courier: <strong>FastShip Logistics</strong>
         </p>
-        <p className="text-gray-300 text-sm mb-1">
+        <p className="text-gray-700 text-sm mb-1">
           Tracking #: <strong>FS1234567890</strong>
         </p>
-        <p className="text-gray-300 text-sm mb-4">Contact courier for urgent queries.</p>
+        <p className="text-gray-700 text-sm mb-4">Contact courier for urgent queries.</p>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="tel:+18001234567"
-            className="bg-yellow-400 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition text-center w-full sm:w-auto"
+            className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition text-center w-full sm:w-auto"
             aria-label="Call FastShip"
           >
             Call FastShip
@@ -145,7 +145,7 @@ const TrackShipmentContent = ({ closePanel }) => {
             href="https://fastshiplogistics.com/track/FS1234567890"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-yellow-400 text-yellow-400 text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition text-center w-full sm:w-auto"
+            className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition text-center w-full sm:w-auto"
             aria-label="Track Package"
           >
             Track Package
@@ -154,14 +154,14 @@ const TrackShipmentContent = ({ closePanel }) => {
       </section>
 
       {/* Support Links */}
-      <section className="text-gray-400 text-xs sm:text-sm max-w-xl mx-auto sm:mx-0 text-center sm:text-left space-y-3 mb-10" aria-label="Help and support">
+      <section className="text-gray-600 text-xs sm:text-sm max-w-xl mx-auto sm:mx-0 text-center sm:text-left space-y-3 mb-10" aria-label="Help and support">
         <p>
           Having issues with your shipment? Visit our{' '}
-          <a href="/help/shipping" className="text-yellow-400 underline hover:text-yellow-300">
+          <a href="/help/shipping" className="text-amber-600 underline hover:text-amber-500">
             Shipping Help Center
           </a>{' '}
           or{' '}
-          <a href="/contact" className="text-yellow-400 underline hover:text-yellow-300">
+          <a href="/contact" className="text-amber-600 underline hover:text-amber-500">
             Contact Support
           </a>.
         </p>
@@ -172,7 +172,7 @@ const TrackShipmentContent = ({ closePanel }) => {
         <button
           type="button"
           onClick={() => window.open('https://your-ecommerce-site.com/order/tracking', '_blank')}
-          className="bg-yellow-400 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition shadow-md w-full sm:w-auto"
+          className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition shadow-md w-full sm:w-auto"
           aria-label="Open tracking page"
         >
           Tracking Details
@@ -180,7 +180,7 @@ const TrackShipmentContent = ({ closePanel }) => {
         <button
           type="button"
           onClick={closePanel}
-          className="border border-yellow-400 text-yellow-400 text-sm px-5 py-2 rounded-full font-semibold hover:bg-yellow-400 hover:text-black transition shadow-md w-full sm:w-auto"
+          className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition shadow-md w-full sm:w-auto"
           aria-label="Close tracking panel"
         >
           Close

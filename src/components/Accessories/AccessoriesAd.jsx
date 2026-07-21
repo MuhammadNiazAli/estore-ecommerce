@@ -4,18 +4,18 @@ const AccessoriesAd = () => {
   return (
     <section
       aria-label="Exclusive accessories promotional banner"
-      className="max-w-[1000px] mx-auto bg-gray-900 rounded-xl overflow-hidden shadow-xl p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-center gap-8 px-4 sm:px-6"
+      className="max-w-[1000px] mx-auto bg-white rounded-xl overflow-hidden shadow-xl p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-center gap-8 px-4 sm:px-6"
     >
       {/* Left Content */}
       <div className="flex-1 text-center md:text-left max-w-xl mx-auto md:mx-0">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 mb-4 leading-tight tracking-wide">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600 mb-4 leading-tight tracking-wide">
           Discover the Elegance of Our Exclusive Accessories
         </h2>
-        <p className="text-gray-300 mb-6 max-w-lg mx-auto md:mx-0 leading-relaxed text-base sm:text-lg">
+        <p className="text-gray-700 mb-6 max-w-lg mx-auto md:mx-0 leading-relaxed text-base sm:text-lg">
           From timeless pearl necklaces to vintage-inspired watches, elevate your style with our premium collection. Crafted with precision and designed to impress.
         </p>
 
-        <ul className="text-yellow-400 mb-8 space-y-3 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
+        <ul className="text-amber-600 mb-8 space-y-3 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
           {[ 
             "Handcrafted with finest materials",
             "Limited edition collections",
@@ -40,14 +40,14 @@ const AccessoriesAd = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 max-w-lg mx-auto md:mx-0">
           <div>
-            <span className="text-2xl sm:text-3xl font-extrabold text-yellow-400 mr-2">
+            <span className="text-2xl sm:text-3xl font-extrabold text-amber-600 mr-2">
               $129.99
             </span>
             <span className="line-through text-gray-600 text-sm sm:text-base">$179.99</span>
           </div>
           <button
             type="button"
-            className="bg-yellow-500 hover:bg-yellow-600 transition text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
+            className="bg-amber-700 hover:bg-amber-800 transition text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
             aria-label="Shop now"
           >
             Shop Now

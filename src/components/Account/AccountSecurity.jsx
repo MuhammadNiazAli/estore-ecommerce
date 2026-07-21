@@ -43,7 +43,7 @@ const AccountSecurity = () => {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl p-8 max-w-[700px] mx-auto text-white shadow-lg"
+      className="bg-gradient-to-b from-white to-white rounded-xl p-8 max-w-[700px] mx-auto text-gray-900 shadow-lg"
       aria-label="Security Settings Section"
     >
       <h2 className="text-3xl font-extrabold mb-8 tracking-wide select-none">Security Settings</h2>
@@ -62,11 +62,11 @@ const AccountSecurity = () => {
             id="twoFA-toggle"
             checked={twoFAEnabled}
             onChange={toggleTwoFA}
-            className="form-checkbox h-6 w-6 text-yellow-400 rounded transition duration-200 ease-in-out"
+            className="form-checkbox h-6 w-6 text-amber-600 rounded transition duration-200 ease-in-out"
           />
-          <span className="ml-3 font-medium text-white">{twoFAEnabled ? 'Enabled' : 'Disabled'}</span>
+          <span className="ml-3 font-medium text-gray-900">{twoFAEnabled ? 'Enabled' : 'Disabled'}</span>
         </label>
-        <p className="mt-3 text-gray-300 max-w-lg leading-relaxed text-sm">
+        <p className="mt-3 text-gray-700 max-w-lg leading-relaxed text-sm">
           Enable Two-Factor Authentication to enhance your account security. With 2FA, a second verification step will be required when you log in, helping protect your account from unauthorized access.
         </p>
       </section>
@@ -78,7 +78,7 @@ const AccountSecurity = () => {
           <div>
             <label
               htmlFor="currentPassword"
-              className="block mb-2 text-gray-300 font-medium"
+              className="block mb-2 text-gray-700 font-medium"
             >
               Current Password
             </label>
@@ -89,7 +89,7 @@ const AccountSecurity = () => {
               autoComplete="current-password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
               placeholder="Enter your current password"
               required
               aria-required="true"
@@ -99,7 +99,7 @@ const AccountSecurity = () => {
           <div>
             <label
               htmlFor="newPassword"
-              className="block mb-2 text-gray-300 font-medium"
+              className="block mb-2 text-gray-700 font-medium"
             >
               New Password
             </label>
@@ -110,13 +110,13 @@ const AccountSecurity = () => {
               autoComplete="new-password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
               placeholder="Create a new password"
               required
               aria-required="true"
               minLength={8}
             />
-            <p className="mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-gray-600">
               Password must be at least 8 characters long.
             </p>
           </div>
@@ -124,7 +124,7 @@ const AccountSecurity = () => {
           <div>
             <label
               htmlFor="confirmPassword"
-              className="block mb-2 text-gray-300 font-medium"
+              className="block mb-2 text-gray-700 font-medium"
             >
               Confirm New Password
             </label>
@@ -135,7 +135,7 @@ const AccountSecurity = () => {
               autoComplete="new-password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
               placeholder="Confirm your new password"
               required
               aria-required="true"
@@ -146,7 +146,7 @@ const AccountSecurity = () => {
           <button
             type="submit"
             disabled={passwordChanging}
-            className={`w-full bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 ${
+            className={`w-full bg-amber-600 text-black px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700 ${
               passwordChanging ? 'opacity-60 cursor-not-allowed' : ''
             }`}
             aria-live="polite"
@@ -164,17 +164,17 @@ const AccountSecurity = () => {
         <h3 id="login-activity-heading" className="text-2xl font-semibold mb-5">Recent Login Activity</h3>
         <table className="min-w-full table-auto border-collapse text-left">
           <thead>
-            <tr className="border-b border-gray-700">
-              <th className="py-3 px-6 text-gray-300 uppercase tracking-wide font-medium">Device</th>
-              <th className="py-3 px-6 text-gray-300 uppercase tracking-wide font-medium">Location</th>
-              <th className="py-3 px-6 text-gray-300 uppercase tracking-wide font-medium">Date &amp; Time</th>
+            <tr className="border-b border-gray-200">
+              <th className="py-3 px-6 text-gray-700 uppercase tracking-wide font-medium">Device</th>
+              <th className="py-3 px-6 text-gray-700 uppercase tracking-wide font-medium">Location</th>
+              <th className="py-3 px-6 text-gray-700 uppercase tracking-wide font-medium">Date &amp; Time</th>
             </tr>
           </thead>
           <tbody>
             {dummyLoginActivity.map(({ id, device, location, date }) => (
               <tr
                 key={id}
-                className="border-b border-gray-700 hover:bg-gray-800 transition-colors cursor-default"
+                className="border-b border-gray-200 hover:bg-gray-50 transition-colors cursor-default"
               >
                 <td className="py-3 px-6 whitespace-nowrap font-semibold">{device}</td>
                 <td className="py-3 px-6 whitespace-nowrap">{location}</td>
@@ -183,7 +183,7 @@ const AccountSecurity = () => {
             ))}
           </tbody>
         </table>
-        <p className="mt-4 text-sm text-gray-400 italic max-w-md">
+        <p className="mt-4 text-sm text-gray-600 italic max-w-md">
           This log shows your recent login activity. If you notice any suspicious activity, please change your password immediately and enable 2FA.
         </p>
       </section>
@@ -198,7 +198,7 @@ const AccountSecurity = () => {
           background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(252, 211, 77, 0.6); /* yellow-400 with 60% opacity */
+          background: rgba(252, 211, 77, 0.6); /* amber-600 with 60% opacity */
           border-radius: 9999px; /* full round */
           transition: background-color 0.3s ease;
         }

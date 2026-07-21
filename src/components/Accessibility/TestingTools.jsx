@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 
 const tools = [
   {
-    icon: <Monitor className="w-7 h-7 text-yellow-400" />,
+    icon: <Monitor className="w-7 h-7 text-amber-600" />,
     name: 'axe DevTools',
     description: 'Automated accessibility testing with detailed reports for developers.',
     url: 'https://www.deque.com/axe/',
   },
   {
-    icon: <Bug className="w-7 h-7 text-yellow-400" />,
+    icon: <Bug className="w-7 h-7 text-amber-600" />,
     name: 'WAVE Evaluation Tool',
     description: 'Web Accessibility Evaluation Tool by WebAIM for visual feedback.',
     url: 'https://wave.webaim.org/',
   },
   {
-    icon: <Laptop className="w-7 h-7 text-yellow-400" />,
+    icon: <Laptop className="w-7 h-7 text-amber-600" />,
     name: 'Lighthouse',
     description: 'Google’s automated tool for auditing web page accessibility and performance.',
     url: 'https://developers.google.com/web/tools/lighthouse',
   },
   {
-    icon: <CheckCircle className="w-7 h-7 text-yellow-400" />,
+    icon: <CheckCircle className="w-7 h-7 text-amber-600" />,
     name: 'NVDA',
     description: 'Free screen reader for Windows used for manual accessibility testing.',
     url: 'https://www.nvaccess.org/',
@@ -33,14 +33,14 @@ const tools = [
 
 const TestingTools = () => {
   return (
-    <section className="w-full bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 mb-[-50px]">
+    <section className="w-full bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8 mb-[-50px]">
       <div className="max-w-[1000px] mx-auto space-y-10 text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-3xl md:text-4xl font-bold text-yellow-300"
+          className="text-3xl md:text-4xl font-bold text-amber-500"
         >
           Accessibility Testing Tools
         </motion.h2>
@@ -50,7 +50,7 @@ const TestingTools = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
-          className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg"
+          className="max-w-2xl mx-auto text-gray-600 text-base md:text-lg"
         >
           We use a combination of automated and manual testing tools to ensure our website meets the highest accessibility standards.
         </motion.p>
@@ -67,12 +67,12 @@ const TestingTools = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1, ease: 'easeOut' }}
               viewport={{ once: true }}
-              className="bg-gray-950 border border-gray-800 rounded-xl p-6 shadow-md hover:shadow-gray-950/80 hover:border-gray-950 transition-all duration-300 flex items-start space-x-4"
+              className="bg-white border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-gray-950/80 hover:border-gray-300 transition-all duration-300 flex items-start space-x-4"
             >
               <div>{tool.icon}</div>
               <div>
-                <h3 className="text-yellow-200 font-semibold text-lg">{tool.name}</h3>
-                <p className="text-gray-400 text-sm mt-1">{tool.description}</p>
+                <h3 className="text-amber-400 font-semibold text-lg">{tool.name}</h3>
+                <p className="text-gray-600 text-sm mt-1">{tool.description}</p>
               </div>
             </motion.a>
           ))}

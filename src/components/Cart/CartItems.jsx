@@ -37,10 +37,10 @@ const CartItems = () => {
 
   if (items.length === 0) {
     return (
-      <section className="w-full bg-gray-900 text-white flex justify-center items-center px-4 sm:px-6 py-20">
+      <section className="w-full bg-white text-gray-900 flex justify-center items-center px-4 sm:px-6 py-20">
         <div className="text-center">
-          <p className="text-yellow-400 text-2xl font-semibold mb-3">Your cart is empty</p>
-          <p className="text-gray-400 text-sm">
+          <p className="text-amber-600 text-2xl font-semibold mb-3">Your cart is empty</p>
+          <p className="text-gray-600 text-sm">
             Looks like you haven’t added anything yet. Start shopping now!
           </p>
         </div>
@@ -49,7 +49,7 @@ const CartItems = () => {
   }
 
   return (
-    <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-10 flex justify-center">
+    <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-10 flex justify-center">
       <div className="w-full max-w-5xl flex flex-col gap-8">
         {items.map(product => (
           <CartItem

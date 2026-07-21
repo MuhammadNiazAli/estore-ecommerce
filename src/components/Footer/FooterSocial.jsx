@@ -51,7 +51,7 @@ export default function FooterSocial() {
     >
       <h4
         id="footer-social-heading"
-        className="text-white text-3xl font-extrabold mb-6 text-center md:text-left tracking-wide"
+        className="text-gray-900 text-3xl font-extrabold mb-6 text-center md:text-left tracking-wide"
       >
         Follow & Connect With Us
       </h4>
@@ -74,11 +74,11 @@ export default function FooterSocial() {
               className="
                 flex items-center justify-center
                 w-16 h-16 rounded-xl
-                bg-gray-800
-                text-gray-400
+                bg-white
+                text-gray-600
                 transition
                 transform
-                hover:text-white
+                hover:text-gray-900
                 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900
                 group-hover:scale-110
                 group-focus:scale-110
@@ -96,7 +96,7 @@ export default function FooterSocial() {
               className="
                 pointer-events-none
                 absolute bottom-full mb-3 left-1/2 transform -translate-x-1/2
-                rounded-md bg-indigo-700 text-white text-xs font-semibold
+                rounded-md bg-indigo-700 text-gray-900 text-xs font-semibold
                 px-3 py-1.5
                 opacity-0
                 group-hover:opacity-100 group-focus:opacity-100

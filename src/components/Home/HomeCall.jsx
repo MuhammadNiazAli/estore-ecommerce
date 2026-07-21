@@ -7,7 +7,7 @@ import { FiShoppingBag, FiArrowRight } from 'react-icons/fi';
 const HomeCall = () => {
   return (
     <section
-      className="relative bg-yellow-400 text-black py-16 px-6 sm:px-8 md:px-10 lg:px-14 xl:px-20 my-10"
+      className="relative bg-amber-600 text-black py-16 px-6 sm:px-8 md:px-10 lg:px-14 xl:px-20 my-10"
       aria-labelledby="limited-offer-heading"
     >
    
@@ -15,7 +15,7 @@ const HomeCall = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, type: 'spring', bounce: 0.4 }}
-        className="absolute -top-4 -left-4 bg-white text-yellow-600 font-bold px-4 py-2 rounded-full text-[11px] sm:text-xs shadow-lg z-20"
+        className="absolute -top-4 -left-4 bg-white text-amber-800 font-bold px-4 py-2 rounded-full text-[11px] sm:text-xs shadow-lg z-20"
         role="note"
         aria-label="Limited Time Deal"
       >
@@ -34,7 +34,7 @@ const HomeCall = () => {
               <div className="pl-[0.1em]">Next Favorite</div>
               <div className="flex items-center">
                 <span className="pl-[0.1em]">Product</span>
-                <span className="ml-3 inline-block bg-white text-yellow-600 text-[10px] sm:text-xs px-2 py-[5px] rounded-full font-semibold shadow-sm">
+                <span className="ml-3 inline-block bg-white text-amber-800 text-[10px] sm:text-xs px-2 py-[5px] rounded-full font-semibold shadow-sm">
                   UP TO 50% OFF
                 </span>
               </div>
@@ -51,7 +51,7 @@ const HomeCall = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           onClick={() => alert('Redirecting to shop...')}
-          className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:bg-gray-900 transition duration-200"
+          className="flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:bg-gray-50 transition duration-200"
           aria-label="Shop Now"
         >
           <FiShoppingBag className="text-lg" aria-hidden="true" />

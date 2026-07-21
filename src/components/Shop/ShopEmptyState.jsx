@@ -9,7 +9,7 @@ const ShopEmptyState = ({ onBrowseAll }) => {
       initial={{ opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className="w-full min-h-[300px] flex flex-col justify-center items-center bg-gray-90s0 px-6 py-20 text-center text-gray-400 max-w-[1000px] mx-auto rounded-md shadow-inner border border-gray-950 mb-[-103px] my-5"
+      className="w-full min-h-[300px] flex flex-col justify-center items-center bg-gray-90s0 px-6 py-20 text-center text-gray-600 max-w-[1000px] mx-auto rounded-md shadow-inner border border-gray-200 mb-[-103px] my-5"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -26,11 +26,11 @@ const ShopEmptyState = ({ onBrowseAll }) => {
         <path d="M28 30h8" strokeLinecap="round" />
       </svg>
 
-      <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
         No Products Found
       </h2>
 
-      <p className="mb-6 max-w-md text-sm sm:text-base text-gray-400">
+      <p className="mb-6 max-w-md text-sm sm:text-base text-gray-600">
         We couldn't find any items matching your search or filters. Try clearing them or explore our full collection.
       </p>
 

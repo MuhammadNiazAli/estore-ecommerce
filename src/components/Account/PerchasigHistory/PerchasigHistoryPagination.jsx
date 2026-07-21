@@ -41,10 +41,10 @@ const PerchasigHistoryPagination = () => {
             transition-all duration-300
             ${
               isFirst
-                ? 'bg-yellow-950 text-yellow-600 cursor-not-allowed shadow-none'
-                : 'bg-yellow-400 text-yellow-900 hover:bg-yellow-300 hover:shadow-lg active:scale-95'
+                ? 'bg-amber-950 text-amber-800 cursor-not-allowed shadow-none'
+                : 'bg-amber-600 text-amber-950 hover:bg-amber-500 hover:shadow-lg active:scale-95'
             }
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
           `}
         >
           Prev
@@ -66,10 +66,10 @@ const PerchasigHistoryPagination = () => {
                 transition-all duration-300
                 ${
                   isActive
-                    ? 'bg-yellow-500 text-yellow-900 shadow-xl scale-105'
-                    : 'bg-yellow-700 text-yellow-300 hover:bg-yellow-400 hover:text-yellow-900 active:scale-95'
+                    ? 'bg-amber-700 text-amber-950 shadow-xl scale-105'
+                    : 'bg-amber-900 text-amber-500 hover:bg-amber-600 hover:text-amber-950 active:scale-95'
                 }
-                focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+                focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
               `}
             >
               {page}
@@ -89,10 +89,10 @@ const PerchasigHistoryPagination = () => {
             transition-all duration-300
             ${
               isLast
-                ? 'bg-yellow-950 text-yellow-600 cursor-not-allowed shadow-none'
-                : 'bg-yellow-400 text-yellow-900 hover:bg-yellow-300 hover:shadow-lg active:scale-95'
+                ? 'bg-amber-950 text-amber-800 cursor-not-allowed shadow-none'
+                : 'bg-amber-600 text-amber-950 hover:bg-amber-500 hover:shadow-lg active:scale-95'
             }
-            focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
           `}
         >
           Next

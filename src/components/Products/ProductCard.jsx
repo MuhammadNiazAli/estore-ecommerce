@@ -30,26 +30,26 @@ const ProductCard = ({
     const halfStar = rating - fullStars >= 0.5;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<AiFillStar key={"star-full-" + i} className="text-yellow-400" />);
+      stars.push(<AiFillStar key={"star-full-" + i} className="text-amber-600" />);
     }
     if (halfStar) {
       stars.push(
         <AiFillStar
           key="star-half"
-          className="text-yellow-400"
+          className="text-amber-600"
           style={{ clipPath: "inset(0 50% 0 0)" }}
         />
       );
     }
     const emptyStars = 5 - stars.length;
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(<AiOutlineStar key={"star-empty-" + i} className="text-yellow-400" />);
+      stars.push(<AiOutlineStar key={"star-empty-" + i} className="text-amber-600" />);
     }
     return stars;
   };
 
   return (
-    <div className="max-w-[1100px] mx-auto bg-gray-900 rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row transition-shadow duration-400 mb-[-90px]">
+    <div className="max-w-[1100px] mx-auto bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row transition-shadow duration-400 mb-[-90px]">
       {/* Product Image */}
       <a
         href={product.productLink}
@@ -69,7 +69,7 @@ const ProductCard = ({
         <div>
           {/* Title */}
           <a href={product.productLink} className="block mb-3">
-            <h2 className="text-3xl font-extrabold text-white hover:text-yellow-500 transition-colors duration-300">
+            <h2 className="text-3xl font-extrabold text-gray-900 hover:text-amber-700 transition-colors duration-300">
               {product.title}
             </h2>
           </a>
@@ -77,22 +77,22 @@ const ProductCard = ({
           {/* Rating & Reviews */}
           <div className="flex items-center mb-4 space-x-2">
             <div className="flex space-x-0.5">{renderStars(product.rating)}</div>
-            <span className="text-gray-300 text-base">
+            <span className="text-gray-700 text-base">
               {product.rating.toFixed(1)} / 5.0
             </span>
             <span className="text-gray-500 text-base">•</span>
-            <span className="text-gray-300 text-base">
+            <span className="text-gray-700 text-base">
               {product.reviewsCount} reviews
             </span>
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 text-lg leading-relaxed mb-5">
+          <p className="text-gray-700 text-lg leading-relaxed mb-5">
             {product.description}
           </p>
 
           {/* Features list */}
-          <ul className="list-disc list-inside space-y-2 text-gray-400 text-base mb-6">
+          <ul className="list-disc list-inside space-y-2 text-gray-600 text-base mb-6">
             {product.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
@@ -104,7 +104,7 @@ const ProductCard = ({
           <div>
             {product.discountPrice ? (
               <div className="flex items-baseline space-x-3">
-                <span className="text-yellow-500 font-extrabold text-4xl">
+                <span className="text-amber-700 font-extrabold text-4xl">
                   ${product.discountPrice.toFixed(2)}
                 </span>
                 <span className="text-gray-500 line-through text-xl">
@@ -112,7 +112,7 @@ const ProductCard = ({
                 </span>
               </div>
             ) : (
-              <span className="text-white font-extrabold text-4xl">
+              <span className="text-gray-900 font-extrabold text-4xl">
                 ${product.price.toFixed(2)}
               </span>
             )}
@@ -122,7 +122,7 @@ const ProductCard = ({
             {/* Add to Cart Button */}
             <a
               href="/cart"
-              className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-8 py-3 rounded-lg cursor-pointer transition-colors duration-300 shadow-md hover:shadow-lg"
+              className="inline-block bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold px-8 py-3 rounded-lg cursor-pointer transition-colors duration-300 shadow-md hover:shadow-lg"
               aria-label={`Add ${product.title} to cart`}
             >
               Add to Cart
@@ -132,10 +132,10 @@ const ProductCard = ({
             <button
               type="button"
               aria-label="Add to wishlist"
-              className="p-3 rounded-lg hover:bg-gray-800 transition-colors duration-300 cursor-pointer shadow-md hover:shadow-lg"
+              className="p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300 cursor-pointer shadow-md hover:shadow-lg"
               onClick={() => alert("Added to wishlist!")}
             >
-              <AiOutlineHeart className="text-gray-400 hover:text-red-500 w-7 h-7" />
+              <AiOutlineHeart className="text-gray-600 hover:text-red-500 w-7 h-7" />
             </button>
           </div>
         </div>

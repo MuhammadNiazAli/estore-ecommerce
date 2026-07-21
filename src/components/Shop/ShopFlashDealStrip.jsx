@@ -10,9 +10,9 @@ const ShopFlashDealStrip = () => {
   if (!visible) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-red-800 via-yellow-500 to-red-800 text-white py-4 px-6 shadow-lg relative overflow-hidden z-10">
+    <div className="w-full bg-gradient-to-r from-red-800 via-amber-700 to-red-800 text-gray-900 py-4 px-6 shadow-lg relative overflow-hidden z-10">
       <div className="max-w-[1300px] mx-auto flex items-center gap-4">
-        <FiZap className="text-yellow-300 animate-pulse shrink-0 drop-shadow" size={24} />
+        <FiZap className="text-amber-500 animate-pulse shrink-0 drop-shadow" size={24} />
 
         <div className="relative w-full overflow-hidden">
           <motion.div
@@ -25,18 +25,18 @@ const ShopFlashDealStrip = () => {
               ease: 'linear',
             }}
           >
-            <FiZap className="text-yellow-300 shrink-0" />
+            <FiZap className="text-amber-500 shrink-0" />
             <span className="drop-shadow-sm">
-               FLASH SALE: Save up to <span className="underline underline-offset-4 text-white">70% Off</span> across all categories – Electronics, Fashion, Home & More!
+               FLASH SALE: Save up to <span className="underline underline-offset-4 text-gray-900">70% Off</span> across all categories – Electronics, Fashion, Home & More!
               Hurry, deals end soon 
             </span>
-            <FiZap className="text-yellow-300 shrink-0" />
+            <FiZap className="text-amber-500 shrink-0" />
           </motion.div>
         </div>
 
         <button
           onClick={() => setVisible(false)}
-          className="text-white hover:text-yellow-200 transition hidden sm:block"
+          className="text-gray-900 hover:text-amber-400 transition hidden sm:block"
           aria-label="Close"
         >
           <FiX size={20} />

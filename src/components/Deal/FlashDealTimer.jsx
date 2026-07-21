@@ -50,7 +50,7 @@ const FlashDealTimer = ({
 
   return (
     <section
-      className="w-full bg-gray-900 text-white py-12 px-6 flex justify-center mb-[-30px]"
+      className="w-full bg-white text-gray-900 py-12 px-6 flex justify-center mb-[-30px]"
       aria-live="polite"
       aria-atomic="true"
     >
@@ -59,7 +59,7 @@ const FlashDealTimer = ({
         ${
           expired
             ? 'bg-red-100 border-red-300 text-red-800 animate-pulse'
-            : 'bg-yellow-50 border-yellow-300 text-yellow-900'
+            : 'bg-amber-200 border-amber-500 text-amber-950'
         }`}
         role="region"
       >
@@ -68,14 +68,14 @@ const FlashDealTimer = ({
           <div className="text-center sm:text-left max-w-md space-y-3">
             <h2
               className={`font-extrabold tracking-tight text-3xl sm:text-4xl ${
-                expired ? 'text-red-700' : 'text-yellow-900'
+                expired ? 'text-red-700' : 'text-amber-950'
               }`}
             >
               {expired ? 'Deal Expired' : 'Limited Time Flash Deal!'}
             </h2>
             <p
               className={`text-base font-medium max-w-sm ${
-                expired ? 'text-red-600' : 'text-yellow-800'
+                expired ? 'text-red-600' : 'text-amber-900'
               }`}
             >
               {expired
@@ -97,7 +97,7 @@ const FlashDealTimer = ({
               />
               <FiClock
                 size={24}
-                className="text-yellow-700 ml-2 flex-shrink-0"
+                className="text-amber-900 ml-2 flex-shrink-0"
                 aria-hidden="true"
               />
             </div>
@@ -125,7 +125,7 @@ const TimeBox = ({ label, value, pulse = false }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className={`min-w-[60px] sm:min-w-[70px] rounded-xl px-4 py-2 flex flex-col items-center
-        bg-yellow-100 text-yellow-900 font-semibold
+        bg-amber-300 text-amber-950 font-semibold
         ${pulse ? 'border border-red-500 animate-pulse' : ''}`}
       aria-label={`${value} ${label}`}
       role="timer"

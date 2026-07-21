@@ -83,7 +83,7 @@ const PaymentingSidebar = () => {
     <div className="space-y-10">
       {sidebarSections.map((section, sectionIdx) => (
         <div key={sectionIdx}>
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-yellow-400 mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-4">
             {section.title}
           </h3>
           <ul className="space-y-4">
@@ -91,9 +91,9 @@ const PaymentingSidebar = () => {
               <li key={itemIdx}>
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-yellow-300 transition-all group"
+                  className="flex items-center space-x-3 text-gray-700 hover:text-amber-500 transition-all group"
                 >
-                  <span className="text-yellow-400">{item.icon}</span>
+                  <span className="text-amber-600">{item.icon}</span>
                   <span className="group-hover:underline">{item.label}</span>
                 </Link>
               </li>
@@ -109,7 +109,7 @@ const PaymentingSidebar = () => {
       {/* Mobile Toggle Button on Right Side */}
       <button
         onClick={() => setMobileOpen(true)}
-        className={`md:hidden fixed top-24 right-0 z-[1000] bg-gray-900 text-white p-3 rounded-tl-xl rounded-bl-xl shadow-lg
+        className={`md:hidden fixed top-24 right-0 z-[1000] bg-white text-gray-900 p-3 rounded-tl-xl rounded-bl-xl shadow-lg
           flex items-center justify-center
           ${mobileOpen ? 'hidden' : 'flex'}`}
         style={{ width: '48px', height: '56px' }}
@@ -121,12 +121,12 @@ const PaymentingSidebar = () => {
 
       {/* Mobile Drawer sliding in from right */}
       <div
-        className={`md:hidden fixed inset-0 z-[1100] h-screen bg-black/50 backdrop-blur-md px-4 py-6 overflow-auto
+        className={`md:hidden fixed inset-0 z-[1100] h-screen bg-white/50 backdrop-blur-md px-4 py-6 overflow-auto
           transition-opacity duration-300 ease-in-out
           ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
         <div
-          className={`bg-gray-900 text-white rounded-xl p-6 shadow-lg w-full max-w-sm mx-auto
+          className={`bg-white text-gray-900 rounded-xl p-6 shadow-lg w-full max-w-sm mx-auto
             transform transition-transform duration-300 ease-in-out
             ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
           style={{ marginLeft: 'auto' }}
@@ -134,14 +134,14 @@ const PaymentingSidebar = () => {
           <div className="flex justify-end">
             <button
               onClick={() => setMobileOpen(false)}
-              className="text-yellow-400 hover:text-yellow-300"
+              className="text-amber-600 hover:text-amber-500"
               aria-label="Close payments sidebar"
               title="Close payments sidebar"
             >
               <FaTimes size={22} />
             </button>
           </div>
-          <h2 className="text-2xl font-bold mb-6 text-white">Payments Center</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">Payments Center</h2>
           <div className="custom-scrollbar max-h-[calc(100vh-160px)] overflow-y-auto pr-1">
             {renderSections()}
           </div>
@@ -154,15 +154,15 @@ const PaymentingSidebar = () => {
           width: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #1f2937;
+          background: #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #4b4600; /* Dark golden shade */
+          background-color: #ffffff; /* Dark golden shade */
           border-radius: 4px;
         }
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #4b4600 #1f2937;
+          scrollbar-color: #ffffff #ffffff;
         }
       `}</style>
     </>

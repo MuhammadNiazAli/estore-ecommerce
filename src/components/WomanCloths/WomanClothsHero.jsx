@@ -65,18 +65,18 @@ const WomanClothsHero = () => {
   }, [activeImage]);
 
   return (
-    <section className="w-full bg-gray-900 my-[-50px] text-white py-10 flex justify-center">
+    <section className="w-full bg-white my-[-50px] text-gray-900 py-10 flex justify-center">
       <div className="max-w-[1200px] w-full grid md:grid-cols-2 gap-8 px-4">
         {/* Left Content */}
         <div className="flex flex-col justify-center space-y-6 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-bold text-yellow-500">
+          <h1 className="text-3xl md:text-5xl font-bold text-amber-700">
             Elevate Your Style
           </h1>
-          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base">
             Discover our premium women’s collection featuring timeless designs
             and modern trends. Shop now to redefine your wardrobe with elegance.
           </p>
-          <button className="bg-yellow-500 text-gray-900 px-6 py-3 font-semibold rounded-xl hover:bg-yellow-400 transition">
+          <button className="bg-amber-700 text-gray-900 px-6 py-3 font-semibold rounded-xl hover:bg-amber-600 transition">
             Shop Now
           </button>
         </div>
@@ -95,11 +95,11 @@ const WomanClothsHero = () => {
                 className="w-full h-28 md:h-32 lg:h-36 xl:h-44 object-cover transform group-hover:scale-110 transition duration-500"
               />
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition"></div>
+              <div className="absolute inset-0 bg-white/30 opacity-0 group-hover:opacity-100 transition"></div>
               {/* Title + Description */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-2 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+              <div className="absolute bottom-0 left-0 right-0 bg-white/70 text-gray-900 p-2 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
                 <h4 className="text-sm font-semibold">{item.title}</h4>
-                <p className="text-xs text-gray-300">{item.desc}</p>
+                <p className="text-xs text-gray-700">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -110,32 +110,32 @@ const WomanClothsHero = () => {
       {activeImage && (
         <div
           ref={overlayRef}
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4 md:p-6"
+          className="fixed inset-0 bg-white/90 flex items-center justify-center z-50 p-4 md:p-6"
         >
-          <div className="max-w-6xl w-full bg-gray-800 rounded-xl overflow-hidden relative flex flex-col md:flex-row">
+          <div className="max-w-6xl w-full bg-white rounded-xl overflow-hidden relative flex flex-col md:flex-row">
             {/* Close Button */}
             <button
               onClick={() => setActiveImage(null)}
-              className="absolute top-4 right-4 text-white text-3xl"
+              className="absolute top-4 right-4 text-gray-900 text-3xl"
             >
               <IoClose />
             </button>
 
             {/* Left Content */}
             <div className="flex-1 p-4 md:p-6 flex flex-col justify-center text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-amber-600 mb-4">
                 Elegant Women’s Wear
               </h2>
-              <p className="text-gray-300 mb-6 text-sm md:text-base">
+              <p className="text-gray-700 mb-6 text-sm md:text-base">
                 Our latest collection combines elegance and comfort for every
                 occasion. Handcrafted with premium fabrics to ensure durability
                 and style.
               </p>
               <div className="flex gap-3 flex-wrap">
-                <button className="bg-yellow-500 text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-yellow-400 transition">
+                <button className="bg-amber-700 text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-amber-600 transition">
                   Add to Cart
                 </button>
-                <button className="border border-yellow-500 text-yellow-500 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-yellow-500 hover:text-gray-900 transition">
+                <button className="border border-amber-700 text-amber-700 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-amber-700 hover:text-gray-900 transition">
                   View Details
                 </button>
               </div>

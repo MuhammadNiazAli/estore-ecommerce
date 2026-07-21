@@ -4,7 +4,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400"
+        className="w-8 h-8 text-amber-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -22,7 +22,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400"
+        className="w-8 h-8 text-amber-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400"
+        className="w-8 h-8 text-amber-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -59,7 +59,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-yellow-400"
+        className="w-8 h-8 text-amber-600"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -78,19 +78,19 @@ const tips = [
 
 const SizeGuideTips = () => {
   return (
-    <section className="w-full bg-gray-900 text-gray-100 flex justify-center py-12 px-4 sm:px-6 md:py-16">
+    <section className="w-full bg-white text-gray-800 flex justify-center py-12 px-4 sm:px-6 md:py-16">
       <div className="max-w-[1000px] w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {tips.map(({ icon, title, description }, idx) => (
           <div
             key={idx}
-            className="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center shadow-md
-                       hover:bg-yellow-50/10 transition-colors duration-300 cursor-default"
+            className="bg-white rounded-lg p-6 flex flex-col items-center text-center shadow-md
+                       hover:bg-amber-200/10 transition-colors duration-300 cursor-default"
           >
             <div className="mb-4">{icon}</div>
-            <h3 className="text-yellow-400 text-xl sm:text-2xl font-semibold mb-3 select-none">
+            <h3 className="text-amber-600 text-xl sm:text-2xl font-semibold mb-3 select-none">
               {title}
             </h3>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{description}</p>
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{description}</p>
           </div>
         ))}
       </div>

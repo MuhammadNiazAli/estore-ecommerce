@@ -16,7 +16,7 @@ const GamingNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-4 my-5">
+    <section className="bg-white text-amber-600 py-12 px-4 my-5">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
@@ -31,7 +31,7 @@ const GamingNewsletterSignup = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-gray-700 mb-8 max-w-2xl mx-auto"
         >
           Subscribe to our newsletter and stay updated with the latest gaming
           gear, exclusive discounts, and pro tips!
@@ -54,12 +54,12 @@ const GamingNewsletterSignup = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                className="w-full pl-10 pr-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-700"
               />
             </div>
             <button
               type="submit"
-              className="bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition"
+              className="bg-amber-700 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition"
             >
               Subscribe
             </button>

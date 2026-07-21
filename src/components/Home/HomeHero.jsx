@@ -26,7 +26,7 @@ const productCards = [
 function DiscountBadge() {
   return (
     <Tilt scale={1.02} tiltMaxAngleX={7} tiltMaxAngleY={7}>
-      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-red-700 text-white text-[10px] sm:text-sm font-bold flex flex-col items-center justify-center shadow-xl border-[3px] border-white/20 tracking-wide uppercase select-none text-center leading-tight">
+      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-500 to-red-700 text-gray-900 text-[10px] sm:text-sm font-bold flex flex-col items-center justify-center shadow-xl border-[3px] border-gray-200/20 tracking-wide uppercase select-none text-center leading-tight">
         <span className="text-[11px] sm:text-sm leading-none">Save</span>
         <span className="text-lg sm:text-xl font-extrabold -mt-0.5">25%</span>
       </div>
@@ -37,7 +37,7 @@ function DiscountBadge() {
 function ProductCard({ title, price, imgSrc, alt }) {
   return (
     <Tilt scale={1.02} tiltMaxAngleX={10} tiltMaxAngleY={10}>
-      <div className="w-44 sm:w-48 p-2.5 sm:p-3 bg-white/95 rounded-xl shadow-md border border-yellow-400/40 hover:shadow-xl transition-shadow duration-300 flex items-center gap-3 backdrop-blur">
+      <div className="w-44 sm:w-48 p-2.5 sm:p-3 bg-white/95 rounded-xl shadow-md border border-amber-600/40 hover:shadow-xl transition-shadow duration-300 flex items-center gap-3 backdrop-blur">
         <div className="relative w-[46px] h-[46px] shrink-0">
           <Image
             src={imgSrc}
@@ -52,7 +52,7 @@ function ProductCard({ title, price, imgSrc, alt }) {
           <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
             {title}
           </p>
-          <p className="text-[11px] sm:text-xs font-medium text-yellow-600 mt-0.5">
+          <p className="text-[11px] sm:text-xs font-medium text-amber-800 mt-0.5">
             {price}
           </p>
         </div>
@@ -63,7 +63,7 @@ function ProductCard({ title, price, imgSrc, alt }) {
 
 export default function HomeHero() {
   return (
-    <section className="w-full bg-gray-900 text-white px-4 py-14 sm:py-16 lg:py-20">
+    <section className="w-full bg-white text-gray-900 px-4 py-14 sm:py-16 lg:py-20">
       {/* 1240px desktop container */}
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
         {/* Text */}
@@ -71,14 +71,14 @@ export default function HomeHero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug sm:leading-tight tracking-tight">
             Style That Moves With You
             <br />
-            <span className="text-yellow-400 underline decoration-yellow-300 decoration-4 font-extrabold">
+            <span className="text-amber-600 underline decoration-amber-500 decoration-4 font-extrabold">
               Everyday Looks, Made Easy
             </span>
             <br className="hidden sm:block" />
             Wear Today
           </h1>
 
-          <p className="text-sm sm:text-base text-gray-300 max-w-md sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-700 max-w-md sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
             Find pieces that fit your routine — simple, comfortable, and made to stand out.
             No drama. Just clothes that feel good all day.
           </p>
@@ -87,7 +87,7 @@ export default function HomeHero() {
             <Link
               href="/shop"
               aria-label="Browse fresh arrivals"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 bg-yellow-400 text-black rounded-full font-semibold shadow-md hover:bg-yellow-300 hover:shadow-lg transition duration-300 ease-in-out text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/70"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 bg-amber-600 text-black rounded-full font-semibold shadow-md hover:bg-amber-500 hover:shadow-lg transition duration-300 ease-in-out text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600/70"
             >
               Shop Now
             </Link>
@@ -95,7 +95,7 @@ export default function HomeHero() {
             <Link
               href="/collections"
               aria-label="Check new collections"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 border border-white/80 rounded-full font-semibold shadow-md hover:bg-white hover:text-black hover:shadow-lg transition duration-300 ease-in-out text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 border border-gray-200/80 rounded-full font-semibold shadow-md hover:bg-gray-100 hover:text-black hover:shadow-lg transition duration-300 ease-in-out text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-200/70"
             >
               See Collections
             </Link>
@@ -108,7 +108,7 @@ export default function HomeHero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative w-64 sm:w-72 h-80 sm:h-[420px] rounded-2xl overflow-hidden border border-yellow-500/35 shadow-xl hover:shadow-2xl transition-shadow duration-500"
+            className="relative w-64 sm:w-72 h-80 sm:h-[420px] rounded-2xl overflow-hidden border border-amber-700/35 shadow-xl hover:shadow-2xl transition-shadow duration-500"
           >
             <Image
               src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-f-9.webp"
@@ -118,7 +118,7 @@ export default function HomeHero() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/35 via-transparent to-transparent" />
           </motion.div>
 
           <motion.div

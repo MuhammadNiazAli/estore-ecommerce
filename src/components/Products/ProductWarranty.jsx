@@ -17,7 +17,7 @@ const warrantyInfo = {
 const ProductWarranty = () => {
   return (
     <section
-      className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-gray-900 rounded-xl shadow-md text-gray-100"
+      className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-white rounded-xl shadow-md text-gray-800"
       aria-labelledby="warranty-heading"
     >
       <h2
@@ -28,22 +28,22 @@ const ProductWarranty = () => {
       </h2>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-3 border-b border-yellow-400 pb-2">
+        <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">
           Warranty Period
         </h3>
-        <p className="text-gray-300 text-lg">{warrantyInfo.period}</p>
+        <p className="text-gray-700 text-lg">{warrantyInfo.period}</p>
       </div>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4 border-b border-yellow-400 pb-2">
+        <h3 className="text-xl font-semibold mb-4 border-b border-amber-600 pb-2">
           What Is Covered
         </h3>
-        <ul className="list-disc list-inside space-y-2 text-gray-300 text-base">
+        <ul className="list-disc list-inside space-y-2 text-gray-700 text-base">
           {warrantyInfo.coverage.map((item, idx) => (
             <li
               key={idx}
               tabIndex={0}
-              className="focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded-md"
+              className="focus:outline-none focus:ring-2 focus:ring-amber-600 rounded-md"
             >
               {item}
             </li>
@@ -52,14 +52,14 @@ const ProductWarranty = () => {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-4 border-b border-yellow-400 pb-2">
+        <h3 className="text-xl font-semibold mb-4 border-b border-amber-600 pb-2">
           Customer Support
         </h3>
-        <p className="mb-2 text-gray-300 text-base">
+        <p className="mb-2 text-gray-700 text-base">
           Contact us at{" "}
           <a
             href={`mailto:${warrantyInfo.support.contact}`}
-            className="text-yellow-400 underline font-medium hover:text-yellow-500 transition"
+            className="text-amber-600 underline font-medium hover:text-amber-700 transition"
             aria-label={`Send email to ${warrantyInfo.support.contact}`}
           >
             {warrantyInfo.support.contact}
@@ -67,14 +67,14 @@ const ProductWarranty = () => {
           or call{" "}
           <a
             href={`tel:${warrantyInfo.support.phone.replace(/[^+\d]/g, "")}`}
-            className="text-yellow-400 underline font-medium hover:text-yellow-500 transition"
+            className="text-amber-600 underline font-medium hover:text-amber-700 transition"
             aria-label={`Call support at ${warrantyInfo.support.phone}`}
           >
             {warrantyInfo.support.phone}
           </a>
           .
         </p>
-        <p className="text-gray-300 text-base">
+        <p className="text-gray-700 text-base">
           Support Hours: {warrantyInfo.support.hours}
         </p>
       </div>

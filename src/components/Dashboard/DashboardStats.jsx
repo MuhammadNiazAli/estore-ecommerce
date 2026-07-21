@@ -18,7 +18,7 @@ const fetchStats = () => {
           {
             title: 'Revenue',
             value: 52300 + Math.floor(Math.random() * 1000),
-            icon: <DollarSign className="w-6 h-6 text-yellow-400" />,
+            icon: <DollarSign className="w-6 h-6 text-amber-600" />,
             change: '+8.5%',
             changeColor: 'text-green-400',
             description: 'Total revenue generated this month.',
@@ -27,7 +27,7 @@ const fetchStats = () => {
           {
             title: 'Orders',
             value: 1420 + Math.floor(Math.random() * 20),
-            icon: <ShoppingCart className="w-6 h-6 text-yellow-400" />,
+            icon: <ShoppingCart className="w-6 h-6 text-amber-600" />,
             change: '+4.2%',
             changeColor: 'text-green-400',
             description: 'Number of completed orders.',
@@ -35,7 +35,7 @@ const fetchStats = () => {
           {
             title: 'New Users',
             value: 385 + Math.floor(Math.random() * 10),
-            icon: <Users className="w-6 h-6 text-yellow-400" />,
+            icon: <Users className="w-6 h-6 text-amber-600" />,
             change: '-1.3%',
             changeColor: 'text-red-500',
             description: 'New user sign-ups this month.',
@@ -43,7 +43,7 @@ const fetchStats = () => {
           {
             title: 'Growth',
             value: 14.7 + Math.random() * 1,
-            icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+            icon: <TrendingUp className="w-6 h-6 text-amber-600" />,
             change: '+3.9%',
             changeColor: 'text-green-400',
             description: 'Overall growth rate compared to last month.',
@@ -113,16 +113,16 @@ const StatCard = ({
 
   return (
     <article
-      className="bg-gray-800 rounded-xl p-5 shadow hover:shadow-lg transition flex flex-col gap-3 relative group"
+      className="bg-white rounded-xl p-5 shadow hover:shadow-lg transition flex flex-col gap-3 relative group"
       tabIndex={0}
       aria-describedby={`desc-${title.replace(/\s+/g, '-')}`}
     >
       <div className="flex justify-between items-center">
-        <span className="text-gray-400 font-medium">{title}</span>
+        <span className="text-gray-600 font-medium">{title}</span>
         <div aria-hidden="true">{icon}</div>
       </div>
       <div
-        className="text-3xl font-bold text-white"
+        className="text-3xl font-bold text-gray-900"
         aria-live="off"
         aria-atomic="true"
         aria-relevant="additions"
@@ -133,11 +133,11 @@ const StatCard = ({
 
       <div
         id={`desc-${title.replace(/\s+/g, '-')}`}
-        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-56 bg-gray-800 text-gray-300 text-xs rounded-md p-2 opacity-0 pointer-events-none group-focus:opacity-100 group-hover:opacity-100 transition-opacity shadow-lg z-10"
+        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-56 bg-white text-gray-700 text-xs rounded-md p-2 opacity-0 pointer-events-none group-focus:opacity-100 group-hover:opacity-100 transition-opacity shadow-lg z-10"
         role="tooltip"
       >
         <Info
-          className="inline w-4 h-4 mr-1 text-yellow-400 align-text-bottom"
+          className="inline w-4 h-4 mr-1 text-amber-600 align-text-bottom"
           aria-hidden="true"
         />
         {description}
@@ -184,19 +184,19 @@ const DashboardStats = () => {
   if (loading) {
     return (
       <section
-        className="w-full bg-gray-900 flex justify-center px-4 py-10"
+        className="w-full bg-white flex justify-center px-4 py-10"
         aria-busy="true"
         aria-live="polite"
       >
         <div className="w-full max-w-[1000px]">
-          <h2 className="text-2xl font-bold text-yellow-400 mb-6 animate-pulse">
+          <h2 className="text-2xl font-bold text-amber-600 mb-6 animate-pulse">
             Key Statistics
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[...Array(4)].map((_, i) => (
               <div
                 key={i}
-                className="bg-gray-800 rounded-xl p-5 shadow animate-pulse h-32"
+                className="bg-white rounded-xl p-5 shadow animate-pulse h-32"
                 aria-hidden="true"
               />
             ))}
@@ -209,12 +209,12 @@ const DashboardStats = () => {
   if (error) {
     return (
       <section
-        className="w-full bg-gray-900 flex justify-center px-4 py-10"
+        className="w-full bg-white flex justify-center px-4 py-10"
         role="alert"
         aria-live="assertive"
       >
         <div className="w-full max-w-[1000px] text-center">
-          <h2 className="text-2xl font-bold text-yellow-400 mb-4">Key Statistics</h2>
+          <h2 className="text-2xl font-bold text-amber-600 mb-4">Key Statistics</h2>
           <p className="text-red-500 font-semibold">{error}</p>
           <button
             onClick={() => {
@@ -230,7 +230,7 @@ const DashboardStats = () => {
                   setLoading(false);
                 });
             }}
-            className="mt-4 bg-yellow-400 text-black px-5 py-2 rounded-md font-semibold hover:bg-yellow-300 transition"
+            className="mt-4 bg-amber-600 text-black px-5 py-2 rounded-md font-semibold hover:bg-amber-500 transition"
           >
             Retry
           </button>
@@ -241,11 +241,11 @@ const DashboardStats = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 flex justify-center px-4 py-10"
+      className="w-full bg-white flex justify-center px-4 py-10"
       aria-live="polite"
     >
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl font-bold text-yellow-400 mb-6">Key Statistics</h2>
+        <h2 className="text-2xl font-bold text-amber-600 mb-6">Key Statistics</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (

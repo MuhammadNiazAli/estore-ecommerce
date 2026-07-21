@@ -64,7 +64,7 @@ const ShippingRates = () => {
   return (
     <section
       aria-label="Shipping rates"
-      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-300 my-[-100px] mb-[-20px]"
+      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-700 my-[-100px] mb-[-20px]"
     >
       {/* Custom Scrollbar Styles (No Plugin Needed) */}
       <style jsx>{`
@@ -73,10 +73,10 @@ const ShippingRates = () => {
           width: 8px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #111827; /* Tailwind's gray-900 */
+          background: #ffffff; /* Tailwind's gray-900 */
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #0f0f0f; /* Tailwind's gray-950 */
+          background-color: #ffffff; /* Tailwind's gray-950 */
           border-radius: 9999px;
         }
       `}</style>
@@ -87,13 +87,13 @@ const ShippingRates = () => {
 
       {/* Desktop Table View */}
       <div className="hidden sm:block overflow-x-auto rounded-2xl shadow-lg shadow-black/40 custom-scrollbar">
-        <table className="w-full min-w-[900px] text-left border-collapse bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 rounded-2xl">
+        <table className="w-full min-w-[900px] text-left border-collapse bg-gradient-to-tr from-white via-white to-white rounded-2xl">
           <thead>
             <tr>
               {['Method', 'Delivery Time', 'Cost', 'Tracking', 'Insurance', 'Carrier'].map((header) => (
                 <th
                   key={header}
-                  className="sticky top-0 z-10 bg-gray-900 bg-opacity-95 text-amber-400 text-lg font-semibold border-b border-gray-700 px-6 py-4 select-none backdrop-blur"
+                  className="sticky top-0 z-10 bg-white bg-opacity-95 text-amber-400 text-lg font-semibold border-b border-gray-200 px-6 py-4 select-none backdrop-blur"
                 >
                   {header}
                 </th>
@@ -104,8 +104,8 @@ const ShippingRates = () => {
             {rates.map(({ method, delivery, cost, tracking, insurance, carrier, icon }, index) => (
               <tr
                 key={method}
-                className={`border-b border-gray-700 last:border-b-0 transition-colors duration-300 cursor-default ${
-                  index % 2 === 0 ? 'bg-gray-900 bg-opacity-50' : 'bg-gray-800 bg-opacity-40'
+                className={`border-b border-gray-200 last:border-b-0 transition-colors duration-300 cursor-default ${
+                  index % 2 === 0 ? 'bg-white bg-opacity-50' : 'bg-white bg-opacity-40'
                 } hover:bg-amber-600/30`}
               >
                 <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-300 flex items-center gap-2">
@@ -128,7 +128,7 @@ const ShippingRates = () => {
         {rates.map(({ method, delivery, cost, tracking, insurance, carrier, icon }, index) => (
           <div
             key={method}
-            className={`bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-5 shadow-lg shadow-black/40 ${
+            className={`bg-gradient-to-tr from-white via-white to-white rounded-2xl p-5 shadow-lg shadow-black/40 ${
               index % 2 === 0 ? 'bg-opacity-70' : 'bg-opacity-60'
             } hover:bg-amber-600/30 transition-colors duration-300`}
           >
@@ -163,7 +163,7 @@ const ShippingRates = () => {
       </div>
 
       {/* Footer Note */}
-      <p className="mt-8 text-center text-gray-400 text-sm sm:text-base max-w-[600px] mx-auto select-text">
+      <p className="mt-8 text-center text-gray-600 text-sm sm:text-base max-w-[600px] mx-auto select-text">
         * Delivery times are estimates and may vary depending on location, customs, weather, or unforeseen delays. Carrier service level guarantees may not apply to all destinations.
       </p>
     </section>

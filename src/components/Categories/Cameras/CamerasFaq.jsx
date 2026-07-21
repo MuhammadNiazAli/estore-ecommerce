@@ -82,13 +82,13 @@ const CamerasFaq = () => {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-4 my-[-40px]">
+    <section className="bg-white text-gray-900 py-16 px-4 my-[-40px]">
       <div className="max-w-[1000px] mx-auto">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-yellow-400 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600 text-center">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-400 mb-8 text-center max-w-2xl mx-auto">
+        <p className="text-gray-600 mb-8 text-center max-w-2xl mx-auto">
           Find answers to the most common questions about our cameras and gear.
         </p>
 
@@ -97,7 +97,7 @@ const CamerasFaq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-md"
+              className="bg-white rounded-xl overflow-hidden shadow-md"
             >
               <button
                 className="w-full flex justify-between items-center p-5 text-left focus:outline-none"
@@ -106,14 +106,14 @@ const CamerasFaq = () => {
                 <span className="text-lg font-semibold">{faq.question}</span>
                 <FaChevronDown
                   className={`transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180 text-yellow-400" : ""
+                    activeIndex === index ? "rotate-180 text-amber-600" : ""
                   }`}
                 />
               </button>
 
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
-                className="px-5 pb-4 text-gray-300 text-base overflow-hidden"
+                className="px-5 pb-4 text-gray-700 text-base overflow-hidden"
               >
                 {faq.answer}
               </div>

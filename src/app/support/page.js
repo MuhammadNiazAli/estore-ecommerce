@@ -10,7 +10,7 @@ import ContactInfo from '@/components/Support/ContactInfo';
 import SupportArticles from '@/components/Support/SupportArticles';
 export default function SupportPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 py-20 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 py-20 max-w-7xl mx-auto">
       <SupportHero />
       <SupportTopics />
       <FAQSection />

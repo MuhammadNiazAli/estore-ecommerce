@@ -534,20 +534,20 @@ const ClothingProductGrid = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-12 px-4">
+    <section className="bg-white text-gray-900 py-12 px-4">
       <div className="max-w-[1200px] mx-auto">
         {/* Header with Sort */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h2 className="text-2xl font-bold">Trending Clothing Collection</h2>
           <div className="flex items-center gap-3">
-            <label htmlFor="sort" className="text-yellow-400 font-semibold">
+            <label htmlFor="sort" className="text-amber-600 font-semibold">
               Sort By:
             </label>
             <select
               id="sort"
               value={sortOption}
               onChange={(e) => handleSort(e.target.value)}
-              className="bg-gray-800 text-white px-4 py-2 rounded-md border border-gray-700"
+              className="bg-white text-gray-900 px-4 py-2 rounded-md border border-gray-200"
             >
               <option value="">Default</option>
               <option value="low-high">Price: Low to High</option>
@@ -564,7 +564,7 @@ const ClothingProductGrid = () => {
               key={item.id}
               onMouseEnter={() => setHoveredId(item.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="relative bg-gray-800 rounded-xl shadow-lg overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
+              className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform duration-300 hover:scale-[1.02]"
             >
               {/* Image */}
               <div className="relative w-full h-64 overflow-hidden">
@@ -576,13 +576,13 @@ const ClothingProductGrid = () => {
 
                 {/* Hover Overlay */}
                 {hoveredId === item.id && (
-                  <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
-                    <button className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center gap-2">
+                  <div className="absolute inset-0 bg-white/60 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
+                    <button className="bg-amber-600 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition flex items-center gap-2">
                       <FaCartPlus /> Add to Cart
                     </button>
-                    <div className="flex gap-4 text-xl text-white">
-                      <FaHeart className="cursor-pointer hover:text-yellow-400" />
-                      <FaEye className="cursor-pointer hover:text-yellow-400" />
+                    <div className="flex gap-4 text-xl text-gray-900">
+                      <FaHeart className="cursor-pointer hover:text-amber-600" />
+                      <FaEye className="cursor-pointer hover:text-amber-600" />
                     </div>
                   </div>
                 )}
@@ -591,16 +591,16 @@ const ClothingProductGrid = () => {
               {/* Product Info */}
               <div className="p-4 space-y-2">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p className="text-gray-400 text-sm">{item.brand}</p>
+                <p className="text-gray-600 text-sm">{item.brand}</p>
                 <div className="flex justify-between items-center">
-                  <p className="text-xl font-bold text-yellow-400">${item.price}</p>
-                  <span className="text-sm text-gray-300">{item.rating}★</span>
+                  <p className="text-xl font-bold text-amber-600">${item.price}</p>
+                  <span className="text-sm text-gray-700">{item.rating}★</span>
                 </div>
 
                 {/* Features (optional, handle if missing) */}
-                <div className="flex flex-wrap gap-1 text-xs text-gray-400 mt-2">
+                <div className="flex flex-wrap gap-1 text-xs text-gray-600 mt-2">
                   {(item.features || []).slice(0, 3).map((feature, idx) => (
-                    <span key={idx} className="bg-gray-700 px-2 py-1 rounded-md">
+                    <span key={idx} className="bg-white px-2 py-1 rounded-md">
                       {feature}
                     </span>
                   ))}
@@ -623,7 +623,7 @@ const ClothingProductGrid = () => {
           {visibleCount < clothingData.length && (
             <button
               onClick={handleLoadMore}
-              className="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition"
+              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
             >
               Load More
             </button>

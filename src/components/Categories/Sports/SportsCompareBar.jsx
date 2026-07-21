@@ -49,7 +49,7 @@ const SportsCompareBar = () => {
 
   if (compareProducts.length === 0) {
     return (
-      <div className="bg-gray-900 text-yellow-400 p-8 rounded-lg max-w-7xl mx-auto text-center my-5">
+      <div className="bg-white text-amber-600 p-8 rounded-lg max-w-7xl mx-auto text-center my-5">
         <p className="text-xl font-semibold">
           No products selected for comparison.
         </p>
@@ -58,20 +58,20 @@ const SportsCompareBar = () => {
   }
 
   return (
-    <section className="bg-gray-900 text-yellow-400 py-8 px-4 max-w-7xl mx-auto rounded-lg">
+    <section className="bg-white text-amber-600 py-8 px-4 max-w-7xl mx-auto rounded-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Compare Products</h2>
 
       <div className="overflow-auto">
-        <table className="min-w-full border border-gray-700 rounded-lg table-fixed">
-          <thead className="bg-gray-800 sticky top-0 z-10">
+        <table className="min-w-full border border-gray-200 rounded-lg table-fixed">
+          <thead className="bg-white sticky top-0 z-10">
             <tr>
-              <th className="w-48 p-4 border-r border-gray-700 text-left">
+              <th className="w-48 p-4 border-r border-gray-200 text-left">
                 Feature
               </th>
               {compareProducts.map((product) => (
                 <th
                   key={product.id}
-                  className="w-64 p-4 border-r border-gray-700 text-center relative"
+                  className="w-64 p-4 border-r border-gray-200 text-center relative"
                 >
                   {/* Remove button */}
                   <button
@@ -90,7 +90,7 @@ const SportsCompareBar = () => {
                       loading="lazy"
                     />
                     <p className="font-semibold text-lg">{product.name}</p>
-                    <p className="text-gray-400 text-sm">{product.brand}</p>
+                    <p className="text-gray-600 text-sm">{product.brand}</p>
                   </div>
                 </th>
               ))}
@@ -105,7 +105,7 @@ const SportsCompareBar = () => {
             ].map(({ label, key }) => (
               <tr
                 key={key}
-                className="border-t border-gray-700 even:bg-gray-800 odd:bg-gray-900"
+                className="border-t border-gray-200 even:bg-white odd:bg-white"
               >
                 <td className="p-4 font-semibold">{label}</td>
                 {compareProducts.map((product) => (

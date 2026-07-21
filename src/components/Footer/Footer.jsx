@@ -77,7 +77,7 @@ const companyItems = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-20 px-6 sm:px-10 select-none">
+    <footer className="bg-white text-gray-700 py-20 px-6 sm:px-10 select-none">
       <div className="mx-auto max-w-[1050px]">
 
         
@@ -89,21 +89,21 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">
-            <span className="text-yellow-400">e</span>Store
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <span className="text-amber-600">e</span>Store
             </h2>
 
-       <p className="text-gray-400 max-w-xl mx-auto text-[15px] leading-relaxed">
+       <p className="text-gray-600 max-w-xl mx-auto text-[15px] leading-relaxed">
       Discover the perfect blend of modern fashion and timeless style — all in one place.
      </p>
 
-     <address className="not-italic text-gray-400 text-[14px] mt-4 space-y-1">
+     <address className="not-italic text-gray-600 text-[14px] mt-4 space-y-1">
        <p>123 Fashion Avenue, New York, NY 10001</p>
        <p>
-       Phone: <a href="tel:+15551234567" className="hover:text-white">+1 (555)   123‑4567</a>
+       Phone: <a href="tel:+15551234567" className="hover:text-gray-900">+1 (555)   123‑4567</a>
       </p>
        <p>
-       Email: <a href="mailto:hello@example.com"          className="hover:text-white">hello@example.com</a>
+       Email: <a href="mailto:hello@example.com"          className="hover:text-gray-900">hello@example.com</a>
       </p>
        </address>
 
@@ -124,7 +124,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="space-y-4 w-1/3"
             >
-              <h3 className="text-xl font-semibold ml-15 text-white">{title}</h3>
+              <h3 className="text-xl font-semibold ml-15 text-gray-900">{title}</h3>
               <ul className="space-y-2 text-[10px] ml-15">
                 {items.map(({ label, icon: Icon, isCategory, pageLink, dropdown }, i) => {
                   const href = pageLink || (isCategory && slugify ? `/category/${slugify(label)}` : '#');
@@ -132,7 +132,7 @@ export default function Footer() {
                     <motion.li key={i} {...bounceHover}>
                       <a
                         href={href}
-                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-800 hover:text-white transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-all duration-300"
                       >
                         <Icon size={14} />
                         <span>{label}</span>
@@ -168,7 +168,7 @@ export default function Footer() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-xl font-semibold text-white">{title}</h3>
+              <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
               <ul className="space-y-2 text-[14px]">
                 {items.map(({ label, icon: Icon, isCategory, pageLink, dropdown }, i) => {
                   const href = pageLink || (isCategory && slugify ? `/category/${slugify(label)}` : '#');
@@ -176,7 +176,7 @@ export default function Footer() {
                     <motion.li key={i} {...bounceHover}>
                       <a
                         href={href}
-                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-800 hover:text-white transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-all duration-300"
                       >
                         <Icon size={14} />
                         <span>{label}</span>
@@ -196,7 +196,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="border-t border-gray-700 pt-12 space-y-12"
+          className="border-t border-gray-200 pt-12 space-y-12"
         >
           <FooterDownload />
           <FooterSocial />

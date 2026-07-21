@@ -96,9 +96,9 @@ const HelpCenterFAQ = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full px-4 py-12 flex justify-center mb-[-40px]">
-      <div className="w-full max-w-[1000px] text-white">
-        <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 text-center mb-10">
+    <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-40px]">
+      <div className="w-full max-w-[1000px] text-gray-900">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center mb-10">
           Frequently Asked Questions
         </h2>
 
@@ -106,7 +106,7 @@ const HelpCenterFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl p-5 cursor-pointer select-none"
+              className="bg-white rounded-xl p-5 cursor-pointer select-none"
               onClick={() => toggleFAQ(index)}
               aria-expanded={openIndex === index}
               role="button"
@@ -123,9 +123,9 @@ const HelpCenterFAQ = () => {
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-semibold">{faq.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-yellow-400" />
+                  <ChevronUp className="w-5 h-5 text-amber-600" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-yellow-400" />
+                  <ChevronDown className="w-5 h-5 text-amber-600" />
                 )}
               </div>
               <div
@@ -134,7 +134,7 @@ const HelpCenterFAQ = () => {
                 aria-labelledby={`faq-question-${index}`}
                 ref={(el) => (answerRefs.current[index] = el)}
                 style={{ display: 'none', overflow: 'hidden', height: 0, opacity: 0 }}
-                className="mt-3 text-gray-300 leading-relaxed"
+                className="mt-3 text-gray-700 leading-relaxed"
               >
                 {faq.answer}
               </div>

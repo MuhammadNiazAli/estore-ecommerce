@@ -50,19 +50,19 @@ const LaptopBrandsCarousel = () => {
 
   return (
     <section className="relative max-w-[1000px] mx-auto px-4 py-10 my-[-80px] mb-1">
-      <h2 className="text-3xl font-bold mb-6 text-center text-gray-100">Top Laptop Brands</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Top Laptop Brands</h2>
 
       {/* Scroll Arrows */}
       <button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700 text-white p-2 rounded-full shadow-md transition my-8"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition my-8"
         aria-label="Scroll Left"
       >
         <ChevronLeftIcon className="w-5 h-5" />
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/80 hover:bg-gray-700 text-white p-2 rounded-full shadow-md transition my-8"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition my-8"
         aria-label="Scroll Right"
       >
         <ChevronRightIcon className="w-5 h-5" />
@@ -76,7 +76,7 @@ const LaptopBrandsCarousel = () => {
         {brands.map(({ id, name, logo }) => (
           <div
             key={id}
-            className="flex-shrink-0 w-24 h-24 flex items-center justify-center bg-gray-700/70 hover:bg-yellow-500/80 backdrop-blur-md transition rounded-xl cursor-pointer shadow-md"
+            className="flex-shrink-0 w-24 h-24 flex items-center justify-center bg-white/70 hover:bg-amber-700/80 backdrop-blur-md transition rounded-xl cursor-pointer shadow-md"
             title={name}
           >
             <img

@@ -35,14 +35,14 @@ const SecuritingAlerts = () => {
   return (
     <section
       aria-label="Manage security alert preferences"
-      className="w-full bg-gray-900 text-yellow-400 p-6 rounded-2xl shadow-lg space-y-6"
+      className="w-full bg-white text-amber-600 p-6 rounded-2xl shadow-lg space-y-6"
     >
-      <div className="flex items-center gap-3 text-yellow-400">
+      <div className="flex items-center gap-3 text-amber-600">
         <FiBell className="text-2xl" />
         <h2 className="text-xl font-bold">Security Alerts</h2>
       </div>
 
-      <p className="text-sm text-yellow-300 max-w-md">
+      <p className="text-sm text-amber-500 max-w-md">
         Stay informed about activity in your account. Enable alerts to get notified via email or SMS about critical changes or logins.
       </p>
 
@@ -50,17 +50,17 @@ const SecuritingAlerts = () => {
         {alertOptions.map((item) => (
           <li
             key={item.id}
-            className="flex items-center justify-between bg-gray-800 border border-yellow-700 px-4 py-3 rounded-xl"
+            className="flex items-center justify-between bg-white border border-amber-900 px-4 py-3 rounded-xl"
           >
             <div className="flex items-center gap-3">
-              <span className="text-yellow-400 text-xl">{item.icon}</span>
+              <span className="text-amber-600 text-xl">{item.icon}</span>
               <span className="text-sm font-medium">{item.label}</span>
             </div>
 
             {/* Toggle Switch */}
             <div
               className={`w-11 h-6 flex items-center rounded-full p-1 cursor-pointer transition-all duration-300 ${
-                toggles[item.id] ? 'bg-yellow-500' : 'bg-gray-700'
+                toggles[item.id] ? 'bg-amber-700' : 'bg-white'
               }`}
               onClick={() => toggleHandler(item.id)}
               role="switch"

@@ -50,7 +50,7 @@ const ReviewsHero = () => {
   return (
     <section
       aria-label="Interactive customer reviews highlight"
-      className="relative w-full my-[-100px] bg-gray-900 text-white py-24 px-6 flex flex-col items-center overflow-hidden"
+      className="relative w-full my-[-100px] bg-white text-gray-900 py-24 px-6 flex flex-col items-center overflow-hidden"
     >
   
       {/* Stars Section */}
@@ -94,14 +94,14 @@ const ReviewsHero = () => {
                 <Star
                   width={36}
                   height={36}
-                  stroke="#FBBF24"
-                  fill={isClicked ? '#FBBF24' : 'transparent'}
+                  stroke="#b45309"
+                  fill={isClicked ? '#b45309' : 'transparent'}
                   style={{
                     opacity: isClicked ? 1 : 0.7,
                     transition: 'all 0.3s ease-in-out',
                   }}
                   onMouseEnter={(e) => {
-                    if (introComplete && !isClicked) e.currentTarget.style.fill = '#FBBF24';
+                    if (introComplete && !isClicked) e.currentTarget.style.fill = '#b45309';
                   }}
                   onMouseLeave={(e) => {
                     if (introComplete && !isClicked) e.currentTarget.style.fill = 'transparent';
@@ -131,7 +131,7 @@ const ReviewsHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.2 }}
-          className="mt-6 text-gray-300 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed"
+          className="mt-6 text-gray-700 max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed"
         >
           Dive into real customer experiences. From first impressions to fast delivery—see why thousands
           choose us every day.

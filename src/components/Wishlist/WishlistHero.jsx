@@ -27,7 +27,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
   });
 
   return (
-    <section className="relative bg-gray-900 px-6 py-20 sm:py-28 md:py-32 overflow-hidden my-[-60px] mb-0">
+    <section className="relative bg-white px-6 py-20 sm:py-28 md:py-32 overflow-hidden my-[-60px] mb-0">
       
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -49,7 +49,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight"
         >
           Your{' '}
           <span className="text-amber-400 underline underline-offset-4 decoration-amber-500 decoration-4">
@@ -63,7 +63,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1 }}
-          className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed"
+          className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-gray-700 leading-relaxed"
         >
           Organize your dream items, track exclusive offers, and never miss a deal again — your personalized wishlist experience.
         </motion.p>
@@ -73,7 +73,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="mt-10 flex flex-wrap justify-center items-center gap-10 text-gray-300"
+          className="mt-10 flex flex-wrap justify-center items-center gap-10 text-gray-700"
         >
           <div className="flex flex-col items-center">
             <span className="text-4xl font-bold text-amber-400">

@@ -89,7 +89,7 @@ const ToysAccessoriesSection = () => {
     for (let i = 1; i <= 5; i++) {
       stars.push(
         i <= rating ? (
-          <FaStar key={i} className="text-yellow-400" />
+          <FaStar key={i} className="text-amber-600" />
         ) : (
           <FaRegStar key={i} className="text-gray-600" />
         )
@@ -99,8 +99,8 @@ const ToysAccessoriesSection = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-12 px-6 rounded-lg max-w-[1200px] mx-auto my-12">
-      <h2 className="text-3xl font-bold mb-8 text-yellow-400 text-center">
+    <section className="bg-white text-gray-900 py-12 px-6 rounded-lg max-w-[1200px] mx-auto my-12">
+      <h2 className="text-3xl font-bold mb-8 text-amber-600 text-center">
         Toy Accessories
       </h2>
 
@@ -108,7 +108,7 @@ const ToysAccessoriesSection = () => {
         {accessoriesData.map((accessory) => (
           <div
             key={accessory.id}
-            className="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col"
+            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col"
           >
             <img
               src={accessory.image}
@@ -119,11 +119,11 @@ const ToysAccessoriesSection = () => {
             <div className="p-4 flex flex-col flex-grow">
               <h3 className="text-lg font-semibold mb-2">{accessory.name}</h3>
               <div className="flex items-center mb-3">{renderRatingStars(accessory.rating)}</div>
-              <p className="text-yellow-400 text-xl font-bold mb-4">${accessory.price.toFixed(2)}</p>
+              <p className="text-amber-600 text-xl font-bold mb-4">${accessory.price.toFixed(2)}</p>
 
               <button
                 onClick={() => addToCart(accessory)}
-                className="mt-auto bg-yellow-500 hover:bg-yellow-400 text-black rounded-full px-5 py-2 font-semibold flex items-center justify-center gap-2 transition"
+                className="mt-auto bg-amber-700 hover:bg-amber-600 text-black rounded-full px-5 py-2 font-semibold flex items-center justify-center gap-2 transition"
                 aria-label={`Add ${accessory.name} to cart`}
               >
                 <FaCartPlus /> Add to Cart

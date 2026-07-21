@@ -57,9 +57,9 @@ const CareersFAQ = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4">
+    <section className="bg-white w-full flex justify-center px-4">
       <div className="w-full max-w-[1000px] py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10">
           Frequently Asked Questions
         </h2>
 
@@ -67,11 +67,11 @@ const CareersFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-md transition-all duration-300"
+              className="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300"
             >
               <button
                 onClick={() => toggleIndex(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-yellow-300 font-medium hover:bg-gray-700 transition"
+                className="w-full flex justify-between items-center px-6 py-4 text-left text-amber-500 font-medium hover:bg-gray-50 transition"
               >
                 <span>{faq.question}</span>
                 <ChevronDownIcon
@@ -83,7 +83,7 @@ const CareersFAQ = () => {
 
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
-                className="px-6 text-sm text-yellow-100 overflow-hidden opacity-0 h-0"
+                className="px-6 text-sm text-amber-300 overflow-hidden opacity-0 h-0"
               >
                 <div className="pb-4 pt-1">{faq.answer}</div>
               </div>

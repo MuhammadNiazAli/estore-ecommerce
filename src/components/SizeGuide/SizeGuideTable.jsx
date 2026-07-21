@@ -11,22 +11,22 @@ const sizeData = [
 
 const SizeGuideTable = () => {
   return (
-    <section className="w-full bg-gray-900 flex justify-center py-10 px-4 sm:px-6 md:py-16">
-      <div className="max-w-[1000px] w-full overflow-x-auto rounded-lg shadow-lg bg-gray-800">
+    <section className="w-full bg-white flex justify-center py-10 px-4 sm:px-6 md:py-16">
+      <div className="max-w-[1000px] w-full overflow-x-auto rounded-lg shadow-lg bg-white">
         <table className="min-w-[600px] w-full text-left border-collapse">
-          <thead className="border-b border-yellow-400">
+          <thead className="border-b border-amber-600">
             <tr>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base">Size</th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base">Bust (inches)</th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base">Waist (inches)</th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base">Hips (inches)</th>
+              <th className="p-4 text-amber-600 text-sm sm:text-base">Size</th>
+              <th className="p-4 text-amber-600 text-sm sm:text-base">Bust (inches)</th>
+              <th className="p-4 text-amber-600 text-sm sm:text-base">Waist (inches)</th>
+              <th className="p-4 text-amber-600 text-sm sm:text-base">Hips (inches)</th>
             </tr>
           </thead>
           <tbody>
             {sizeData.map(({ size, bust, waist, hips }) => (
               <tr
                 key={size}
-                className="border-b border-gray-700 hover:bg-yellow-50/10 transition-colors"
+                className="border-b border-gray-200 hover:bg-amber-200/10 transition-colors"
               >
                 <td className="p-4 font-semibold text-sm sm:text-base">{size}</td>
                 <td className="p-4 text-sm sm:text-base">{bust}</td>

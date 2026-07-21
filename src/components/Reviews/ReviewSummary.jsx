@@ -37,7 +37,7 @@ const ReviewSummary = () => {
   return (
     <section
       aria-labelledby="review-summary-title"
-      className="w-full bg-gray-900 my-[-20px] py-20 px-6 text-white flex justify-center items-center"
+      className="w-full bg-white my-[-20px] py-20 px-6 text-gray-900 flex justify-center items-center"
       role="region"
       aria-live="polite"
     >
@@ -72,10 +72,10 @@ const ReviewSummary = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
-            className="mt-4 max-w-md text-gray-400 text-base sm:text-lg leading-relaxed"
+            className="mt-4 max-w-md text-gray-600 text-base sm:text-lg leading-relaxed"
           >
             Based on{' '}
-            <span className="text-white font-semibold">12,430 verified reviews</span>, all
+            <span className="text-gray-900 font-semibold">12,430 verified reviews</span>, all
             submitted by real customers just like you — shared in real time.
           </motion.p>
         </div>
@@ -89,20 +89,20 @@ const ReviewSummary = () => {
               className="flex items-center gap-4"
             >
            
-              <span className="w-14 text-sm text-gray-300 font-medium select-none">
+              <span className="w-14 text-sm text-gray-700 font-medium select-none">
                 {stars} star
               </span>
 
         
               <div
-                className="flex-1 bg-gray-800 rounded-full h-4 overflow-hidden shadow-inner"
+                className="flex-1 bg-white rounded-full h-4 overflow-hidden shadow-inner"
                 aria-hidden="true"
               >
                 <RatingBar percent={percent} delay={0.5 + idx * 0.1} />
               </div>
 
         
-              <span className="w-12 text-sm text-gray-400 text-right tabular-nums font-medium select-none">
+              <span className="w-12 text-sm text-gray-600 text-right tabular-nums font-medium select-none">
                 {percent}%
               </span>
             </div>

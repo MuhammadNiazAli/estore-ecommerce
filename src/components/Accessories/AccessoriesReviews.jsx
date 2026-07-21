@@ -176,7 +176,7 @@ const AccessoriesReviews = () => {
   return (
     <div className="w-full max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 mb-6">
         Customer Reviews
       </h2>
 
@@ -185,7 +185,7 @@ const AccessoriesReviews = () => {
         <select
           value={filter}
           onChange={(e) => handleFilterChange(e.target.value)}
-          className="bg-gray-900 text-white border border-gray-700 rounded-lg px-3 sm:px-4 py-2 focus:outline-none w-full md:w-auto"
+          className="bg-white text-gray-900 border border-gray-200 rounded-lg px-3 sm:px-4 py-2 focus:outline-none w-full md:w-auto"
         >
           <option>Newest</option>
           <option>Highest Rated</option>
@@ -195,14 +195,14 @@ const AccessoriesReviews = () => {
           <input
             type="text"
             placeholder="Your Name"
-            className="bg-gray-800 text-white rounded-lg px-3 sm:px-4 py-2 w-full sm:w-40 focus:outline-none"
+            className="bg-white text-gray-900 rounded-lg px-3 sm:px-4 py-2 w-full sm:w-40 focus:outline-none"
             value={newName}
             onChange={(e) => setNewName(e.target.value)}
           />
           <select
             value={newRating}
             onChange={(e) => setNewRating(Number(e.target.value))}
-            className="bg-gray-800 text-white border border-gray-700 rounded-lg px-3 sm:px-4 py-2 w-full sm:w-28 focus:outline-none"
+            className="bg-white text-gray-900 border border-gray-200 rounded-lg px-3 sm:px-4 py-2 w-full sm:w-28 focus:outline-none"
           >
             {[5, 4, 3, 2, 1].map((star) => (
               <option key={star} value={star}>
@@ -218,13 +218,13 @@ const AccessoriesReviews = () => {
         <textarea
           rows={3}
           placeholder="Write your review here..."
-          className="bg-gray-800 text-white rounded-2xl w-full px-4 py-3 resize-none focus:outline-none"
+          className="bg-white text-gray-900 rounded-2xl w-full px-4 py-3 resize-none focus:outline-none"
           value={newReview}
           onChange={(e) => setNewReview(e.target.value)}
         />
         <button
           onClick={handleAddReview}
-          className="mt-3 w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg px-6 py-2 transition"
+          className="mt-3 w-full sm:w-auto bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg px-6 py-2 transition"
         >
           Add Review
         </button>
@@ -235,7 +235,7 @@ const AccessoriesReviews = () => {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="bg-gray-900 rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-800"
+            className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200"
           >
             <div className="flex flex-col md:flex-row items-start gap-4">
               <img
@@ -245,26 +245,26 @@ const AccessoriesReviews = () => {
               />
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h4 className="text-white font-semibold text-lg">{review.name}</h4>
+                  <h4 className="text-gray-900 font-semibold text-lg">{review.name}</h4>
                   {review.verified && (
                     <CheckCircle className="text-green-400 w-5 h-5" />
                   )}
                 </div>
 
                 {/* Stars */}
-                <div className="flex items-center text-yellow-400 mt-1">
+                <div className="flex items-center text-amber-600 mt-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                        i < review.rating ? "fill-yellow-400" : "text-gray-600"
+                        i < review.rating ? "fill-amber-600" : "text-gray-600"
                       }`}
                     />
                   ))}
                 </div>
 
-                <p className="text-gray-400 text-sm mt-1">{review.date}</p>
-                <p className="text-gray-300 mt-3 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-600 text-sm mt-1">{review.date}</p>
+                <p className="text-gray-700 mt-3 leading-relaxed text-sm sm:text-base">
                   {review.review}
                 </p>
 
@@ -274,15 +274,15 @@ const AccessoriesReviews = () => {
                     onClick={() => handleLike(review.id)}
                     className={`flex items-center gap-1 transition ${
                       review.likedByUser
-                        ? "text-yellow-400"
-                        : "text-gray-400 hover:text-yellow-400"
+                        ? "text-amber-600"
+                        : "text-gray-600 hover:text-amber-600"
                     }`}
                   >
                     <ThumbsUp className="w-4 h-4 sm:w-5 sm:h-5" /> {review.likes}
                   </button>
                   <button
                     onClick={() => handleReplyClick(review.id)}
-                    className="flex items-center gap-1 text-gray-400 hover:text-yellow-400 transition"
+                    className="flex items-center gap-1 text-gray-600 hover:text-amber-600 transition"
                   >
                     <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" /> Reply
                   </button>
@@ -290,18 +290,18 @@ const AccessoriesReviews = () => {
 
                 {/* Reply Form */}
                 {replyingToId === review.id && (
-                  <div className="mt-4 p-3 sm:p-4 bg-gray-800 rounded-lg">
+                  <div className="mt-4 p-3 sm:p-4 bg-white rounded-lg">
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="bg-gray-700 text-white rounded-lg px-3 py-2 w-full mb-2 focus:outline-none"
+                      className="bg-white text-gray-900 rounded-lg px-3 py-2 w-full mb-2 focus:outline-none"
                       value={replyName}
                       onChange={(e) => setReplyName(e.target.value)}
                     />
                     <textarea
                       rows={2}
                       placeholder="Write your reply..."
-                      className="bg-gray-700 text-white rounded-lg px-3 py-2 w-full resize-none mb-2 focus:outline-none"
+                      className="bg-white text-gray-900 rounded-lg px-3 py-2 w-full resize-none mb-2 focus:outline-none"
                       value={replyText}
                       onChange={(e) => setReplyText(e.target.value)}
                     />
@@ -312,13 +312,13 @@ const AccessoriesReviews = () => {
                           setReplyText("");
                           setReplyName("");
                         }}
-                        className="px-4 py-2 rounded-md bg-gray-600 hover:bg-gray-700 text-white transition"
+                        className="px-4 py-2 rounded-md bg-white hover:bg-gray-50 text-gray-900 transition"
                       >
                         Cancel
                       </button>
                       <button
                         onClick={() => handleAddReply(review.id)}
-                        className="px-4 py-2 rounded-md bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold transition"
+                        className="px-4 py-2 rounded-md bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold transition"
                       >
                         Submit Reply
                       </button>
@@ -328,7 +328,7 @@ const AccessoriesReviews = () => {
 
                 {/* Replies */}
                 {review.replies.length > 0 && (
-                  <div className="mt-4 pl-3 sm:pl-6 border-l border-gray-700 space-y-4">
+                  <div className="mt-4 pl-3 sm:pl-6 border-l border-gray-200 space-y-4">
                     {review.replies.map((reply) => (
                       <div key={reply.id}>
                         <div className="flex items-center gap-2">
@@ -338,13 +338,13 @@ const AccessoriesReviews = () => {
                             className="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
                           />
                           <div>
-                            <p className="text-white font-semibold text-sm">
+                            <p className="text-gray-900 font-semibold text-sm">
                               {reply.name}
                             </p>
                             <p className="text-gray-500 text-xs">{reply.date}</p>
                           </div>
                         </div>
-                        <p className="text-gray-300 mt-2 text-sm">{reply.text}</p>
+                        <p className="text-gray-700 mt-2 text-sm">{reply.text}</p>
                       </div>
                     ))}
                   </div>

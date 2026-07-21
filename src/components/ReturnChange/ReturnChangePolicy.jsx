@@ -5,25 +5,25 @@ import { Calendar, Package, ShieldCheck, Info } from 'lucide-react';
 
 const policies = [
   {
-    icon: <Calendar className="text-yellow-400" size={28} aria-hidden="true" />,
+    icon: <Calendar className="text-amber-600" size={28} aria-hidden="true" />,
     title: 'Return Window',
     description:
       'Items can be returned within 14 days of receipt, in their original condition and packaging.',
   },
   {
-    icon: <Package className="text-yellow-400" size={28} aria-hidden="true" />,
+    icon: <Package className="text-amber-600" size={28} aria-hidden="true" />,
     title: 'Item Condition',
     description:
       'Products must be unused, unworn, and undamaged. Tags and original packaging must be intact.',
   },
   {
-    icon: <ShieldCheck className="text-yellow-400" size={28} aria-hidden="true" />,
+    icon: <ShieldCheck className="text-amber-600" size={28} aria-hidden="true" />,
     title: 'Refund Process',
     description:
       'Refunds are issued within 3 business days after we receive and inspect the returned item.',
   },
   {
-    icon: <Info className="text-yellow-400" size={28} aria-hidden="true" />,
+    icon: <Info className="text-amber-600" size={28} aria-hidden="true" />,
     title: 'Exceptions',
     description:
       'Custom-made, perishable, and clearance items are not eligible for return or exchange.',
@@ -34,16 +34,16 @@ const ReturnChangePolicy = () => {
   return (
     <section
       aria-labelledby="return-exchange-policy-title"
-      className="bg-gray-900 text-white px-4 py-16 flex justify-center"
+      className="bg-white text-gray-900 px-4 py-16 flex justify-center"
     >
       <div className="max-w-[1000px] w-full text-center">
         <h2
           id="return-exchange-policy-title"
-          className="text-yellow-400 text-4xl font-bold mb-10"
+          className="text-amber-600 text-4xl font-bold mb-10"
         >
           Return & Exchange Policy
         </h2>
-        <p className="text-gray-300 mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
+        <p className="text-gray-700 mb-12 max-w-3xl mx-auto text-lg leading-relaxed">
           Please read our return and exchange policies carefully to ensure a smooth process and
           quick refunds.
         </p>
@@ -52,15 +52,15 @@ const ReturnChangePolicy = () => {
           {policies.map(({ icon, title, description }, idx) => (
             <article
               key={idx}
-              className="bg-gray-800 rounded-xl p-6 shadow-md hover:bg-gray-700 transition cursor-default"
+              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-50 transition cursor-default"
               tabIndex={0}
               aria-label={title}
             >
               <div className="flex items-center mb-4 gap-4">
                 <div className="flex-shrink-0">{icon}</div>
-                <h3 className="text-yellow-300 font-semibold text-xl">{title}</h3>
+                <h3 className="text-amber-500 font-semibold text-xl">{title}</h3>
               </div>
-              <p className="text-gray-300 leading-relaxed">{description}</p>
+              <p className="text-gray-700 leading-relaxed">{description}</p>
             </article>
           ))}
         </div>

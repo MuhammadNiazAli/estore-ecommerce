@@ -16,17 +16,17 @@ const AddressingItem = ({
   onDelete,
 }) => {
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow border border-gray-700 flex justify-between items-start flex-wrap gap-4">
+    <div className="bg-white p-6 rounded-lg shadow border border-gray-200 flex justify-between items-start flex-wrap gap-4">
       <div className="flex flex-col space-y-1 max-w-[70%]">
-        <p className="text-xl font-semibold text-white">{name}</p>
-        <p className="text-gray-300">{street}</p>
-        <p className="text-gray-300">
+        <p className="text-xl font-semibold text-gray-900">{name}</p>
+        <p className="text-gray-700">{street}</p>
+        <p className="text-gray-700">
           {city}, {state} {zip}
         </p>
-        <p className="text-gray-300">{country}</p>
-        <p className="text-gray-300">{phone}</p>
+        <p className="text-gray-700">{country}</p>
+        <p className="text-gray-700">{phone}</p>
         {isDefault && (
-          <span className="inline-block mt-1 px-2 py-1 text-xs bg-yellow-400 text-gray-900 font-bold rounded">
+          <span className="inline-block mt-1 px-2 py-1 text-xs bg-amber-600 text-gray-900 font-bold rounded">
             Default
           </span>
         )}
@@ -38,7 +38,7 @@ const AddressingItem = ({
             onEdit &&
             onEdit({ id, name, street, city, state, zip, country, phone, isDefault })
           }
-          className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition text-white font-semibold"
+          className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition text-gray-900 font-semibold"
           aria-label={`Edit address ${name}`}
         >
           Edit
@@ -49,7 +49,7 @@ const AddressingItem = ({
               onDelete && onDelete(id);
             }
           }}
-          className="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition text-white font-semibold"
+          className="px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition text-gray-900 font-semibold"
           aria-label={`Delete address ${name}`}
         >
           Delete

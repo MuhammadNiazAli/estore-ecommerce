@@ -55,7 +55,7 @@ const GiftHero = () => {
 
       <section
         aria-label="Gift offers hero section"
-        className="relative w-full max-w-[1200px] mx-auto mt-[-80px] mb-10 px-6 sm:px-12 py-16 rounded-lg shadow-2xl overflow-hidden bg-gray-900"
+        className="relative w-full max-w-[1200px] mx-auto mt-[-80px] mb-10 px-6 sm:px-12 py-16 rounded-lg shadow-2xl overflow-hidden bg-white"
       >
         {/* Golden animated sparkle background */}
         <motion.div
@@ -92,25 +92,25 @@ const GiftHero = () => {
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           >
             <GiftIcon
-              className="w-14 h-14 text-yellow-900 drop-shadow-lg"
+              className="w-14 h-14 text-amber-950 drop-shadow-lg"
               aria-hidden="true"
             />
           </motion.div>
 
           {/* Heading */}
-          <h1 className="text-yellow-900 font-extrabold text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-sans drop-shadow-md">
+          <h1 className="text-amber-950 font-extrabold text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight font-sans drop-shadow-md">
             Spread Joy with the Perfect Gift
           </h1>
 
           {/* Description */}
-          <p className="mt-6 text-yellow-900 text-lg sm:text-xl leading-relaxed max-w-xl mx-auto drop-shadow-sm">
+          <p className="mt-6 text-amber-950 text-lg sm:text-xl leading-relaxed max-w-xl mx-auto drop-shadow-sm">
             Exclusive deals, unique gifts, and bundles curated just for your special occasions.
             Find the ideal present to make every moment unforgettable.
           </p>
 
           {/* Countdown Timer */}
           {timeLeft > 0 && (
-            <div className="mt-8 inline-flex items-center justify-center gap-3 bg-yellow-100 text-yellow-900 font-semibold rounded-full px-5 py-2 shadow-md select-none text-sm sm:text-base tracking-wide drop-shadow">
+            <div className="mt-8 inline-flex items-center justify-center gap-3 bg-amber-300 text-amber-950 font-semibold rounded-full px-5 py-2 shadow-md select-none text-sm sm:text-base tracking-wide drop-shadow">
               <SparklesIcon className="w-5 h-5" aria-hidden="true" />
               Limited-Time Offers Ending In: <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
             </div>
@@ -122,7 +122,7 @@ const GiftHero = () => {
               onClick={handleShopClick}
               type="button"
               aria-label="Shop gift deals"
-              className="flex items-center gap-3 bg-yellow-900 text-yellow-100 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-700 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-700 focus:ring-opacity-50 text-base sm:text-lg"
+              className="flex items-center gap-3 bg-amber-950 text-amber-300 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-amber-900 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-900 focus:ring-opacity-50 text-base sm:text-lg"
             >
               <ShoppingBagIcon className="w-6 h-6" aria-hidden="true" />
               Shop Gift Deals
@@ -132,7 +132,7 @@ const GiftHero = () => {
               onClick={handleExploreClick}
               type="button"
               aria-label="Explore collections"
-              className="flex items-center gap-3 border-2 border-yellow-900 text-yellow-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-900 hover:text-yellow-100 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-900 focus:ring-opacity-50 text-base sm:text-lg"
+              className="flex items-center gap-3 border-2 border-amber-950 text-amber-950 px-8 py-3 rounded-full font-semibold hover:bg-amber-950 hover:text-amber-300 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-950 focus:ring-opacity-50 text-base sm:text-lg"
             >
               <SparklesIcon className="w-6 h-6" aria-hidden="true" />
               Explore Collections
@@ -142,7 +142,7 @@ const GiftHero = () => {
               onClick={handlePersonalizeClick}
               type="button"
               aria-label="Personalize your gift"
-              className="flex items-center gap-3 bg-yellow-700 text-yellow-100 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-yellow-600 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-yellow-700 focus:ring-opacity-40 text-base sm:text-lg"
+              className="flex items-center gap-3 bg-amber-900 text-amber-300 font-semibold px-8 py-3 rounded-full shadow-md hover:bg-amber-800 transition-transform transform hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-900 focus:ring-opacity-40 text-base sm:text-lg"
             >
               <GiftIcon className="w-6 h-6" aria-hidden="true" />
               Personalize Your Gift

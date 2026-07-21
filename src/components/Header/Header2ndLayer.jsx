@@ -124,7 +124,7 @@ function Dropdown({ label, options, selectedValue, onSelect }) {
       ref={containerRef}
       className="w-40 min-w-[160px] relative select-none font-sans"
     >
-      <label className="block text-xs font-semibold text-gray-400 mb-1">
+      <label className="block text-xs font-semibold text-gray-600 mb-1">
         {label}
       </label>
 
@@ -133,7 +133,7 @@ function Dropdown({ label, options, selectedValue, onSelect }) {
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full flex justify-between items-center px-3 py-2 text-xs text-white bg-gray-950/90 backdrop-blur-md border border-gray-700 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+        className="w-full flex justify-between items-center px-3 py-2 text-xs text-gray-900 bg-white/90 backdrop-blur-md border border-gray-200 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
       >
         <span>{selectedValue}</span>
         <svg
@@ -155,7 +155,7 @@ function Dropdown({ label, options, selectedValue, onSelect }) {
           role="listbox"
           tabIndex={-1}
           aria-activedescendant={selectedValue}
-          className="absolute z-50 mt-1 w-full max-h-44 overflow-y-auto rounded bg-gray-950/90 backdrop-blur-md border border-gray-700 text-white text-xs shadow-lg custom-scrollbar"
+          className="absolute z-50 mt-1 w-full max-h-44 overflow-y-auto rounded bg-white/90 backdrop-blur-md border border-gray-200 text-gray-900 text-xs shadow-lg custom-scrollbar"
         >
           {options.map((option) => (
             <li
@@ -193,7 +193,7 @@ export default function HeaderSecondLayer() {
   const [country, setCountry] = useState('Pakistan');
 
   return (
-    <section className="hidden md:block border-t border-gray-800 bg-gray-900 text-white select-none">
+    <section className="hidden md:block border-t border-gray-200 bg-white text-gray-900 select-none">
       <div className="max-w-screen-xl mx-auto px-6 py-4">
         {/* Toggle More Options */}
         <button
@@ -201,7 +201,7 @@ export default function HeaderSecondLayer() {
           aria-expanded={isExpanded}
           aria-controls="more-options-panel"
           onClick={() => setIsExpanded((open) => !open)}
-          className="w-full flex justify-between items-center px-4 py-3 mb-4 font-serif font-semibold hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-gray-800 rounded"
+          className="w-full flex justify-between items-center px-4 py-3 mb-4 font-serif font-semibold hover:text-blue-400 transition focus:outline-none focus:ring-2 focus:ring-gray-200 rounded"
         >
           <span>More Options</span>
           <svg
@@ -251,11 +251,11 @@ export default function HeaderSecondLayer() {
                   key={label}
                   href={href}
                   title={label}
-                  className="relative flex items-center justify-center w-8 h-8 text-gray-300 group hover:text-blue-400 transition"
+                  className="relative flex items-center justify-center w-8 h-8 text-gray-700 group hover:text-blue-400 transition"
                 >
                   <IconComponent size={20} />
                   {badgeKey && badgeCounters[badgeKey] > 0 && (
-                    <span className="absolute -top-1 -right-2 min-w-[14px] px-1 text-xs text-center text-white rounded-full bg-blue-600 animate-pulse">
+                    <span className="absolute -top-1 -right-2 min-w-[14px] px-1 text-xs text-center text-gray-900 rounded-full bg-blue-600 animate-pulse">
                       {badgeCounters[badgeKey]}
                     </span>
                   )}
@@ -264,12 +264,12 @@ export default function HeaderSecondLayer() {
             </nav>
 
             {/* Bottom full width advanced features */}
-            <div className="w-full mt-4 pt-4 border-t border-gray-800 flex flex-wrap justify-center gap-3 text-xs font-medium text-gray-300">
+            <div className="w-full mt-4 pt-4 border-t border-gray-200 flex flex-wrap justify-center gap-3 text-xs font-medium text-gray-700">
               {extraFeatures.map(({ icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 px-3 py-1.5 border border-gray-700 rounded-md whitespace-nowrap transition-colors hover:bg-blue-500 hover:text-white"
+                  className="flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md whitespace-nowrap transition-colors hover:bg-blue-500 hover:text-gray-900"
                 >
                   <span className="text-base">{icon}</span>
                   {label}
@@ -286,16 +286,16 @@ export default function HeaderSecondLayer() {
           width: 8px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #171717; /* gray-950 */
+          background: #ffffff; /* gray-950 */
           border-radius: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #2a2a2a; /* gray-900 */
+          background-color: #ffffff; /* gray-900 */
           border-radius: 6px;
         }
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #2a2a2a #171717;
+          scrollbar-color: #ffffff #ffffff;
         }
       `}</style>
     </section>

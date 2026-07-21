@@ -2260,7 +2260,7 @@ const renderStars = (rating) => {
 
   for (let i = 0; i < fullStars; i++) {
     stars.push(
-      <AiFillStar key={"full-" + i} className="text-yellow-400 w-4 h-4" />
+      <AiFillStar key={"full-" + i} className="text-amber-600 w-4 h-4" />
     );
   }
 
@@ -2268,7 +2268,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="half"
-        className="text-yellow-400 w-4 h-4"
+        className="text-amber-600 w-4 h-4"
         style={{ clipPath: "inset(0 50% 0 0)" }}
       />
     );
@@ -2277,7 +2277,7 @@ const renderStars = (rating) => {
   const emptyStars = 5 - stars.length;
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
-      <AiOutlineStar key={"empty-" + i} className="text-yellow-400 w-4 h-4" />
+      <AiOutlineStar key={"empty-" + i} className="text-amber-600 w-4 h-4" />
     );
   }
 
@@ -2311,8 +2311,8 @@ const ProductRelatedItems = () => {
   };
 
   return (
-    <section className="max-w-[1100px] mx-auto px-4 py-8 bg-gray-900">
-      <h2 className="text-2xl font-bold mb-6 text-white ml-3 sm:ml-0">
+    <section className="max-w-[1100px] mx-auto px-4 py-8 bg-white">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900 ml-3 sm:ml-0">
         Related Products
       </h2>
 
@@ -2321,7 +2321,7 @@ const ProductRelatedItems = () => {
         {relatedProducts.slice(0, mobileCount).map(({ id, title, price, image, rating }) => (
           <div
             key={id}
-            className="bg-gray-800 rounded-2xl shadow-md cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+            className="bg-white rounded-2xl shadow-md cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden"
           >
             <div className="w-full h-40 overflow-hidden rounded-t-2xl">
               <img
@@ -2333,18 +2333,18 @@ const ProductRelatedItems = () => {
             </div>
             <div className="p-4">
               <h3
-                className="text-sm font-semibold text-white truncate"
+                className="text-sm font-semibold text-gray-900 truncate"
                 title={title}
               >
                 {title}
               </h3>
               <div className="flex items-center mt-1 space-x-1">
                 {renderStars(rating)}
-                <span className="text-yellow-400 text-xs font-medium ml-1">
+                <span className="text-amber-600 text-xs font-medium ml-1">
                   {rating.toFixed(1)}
                 </span>
               </div>
-              <p className="mt-2 text-lg font-bold text-white">
+              <p className="mt-2 text-lg font-bold text-gray-900">
                 ${price.toFixed(2)}
               </p>
             </div>
@@ -2355,10 +2355,10 @@ const ProductRelatedItems = () => {
           <button
             onClick={loadMoreMobile}
             disabled={loadingMobile}
-            className="mx-auto mt-4 px-6 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-full hover:bg-yellow-500 transition flex items-center justify-center gap-2 min-w-[130px]"
+            className="mx-auto mt-4 px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-700 transition flex items-center justify-center gap-2 min-w-[130px]"
           >
             {loadingMobile ? (
-              <span className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></span>
+              <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin"></span>
             ) : (
               "View More"
             )}
@@ -2371,7 +2371,7 @@ const ProductRelatedItems = () => {
         {relatedProducts.slice(0, desktopCount).map(({ id, title, price, image, rating }) => (
           <div
             key={id}
-            className="bg-gray-800 rounded-2xl shadow-md cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+            className="bg-white rounded-2xl shadow-md cursor-pointer hover:shadow-xl transition-shadow duration-300 overflow-hidden"
           >
             <div className="w-full h-36 overflow-hidden rounded-t-2xl">
               <img
@@ -2383,18 +2383,18 @@ const ProductRelatedItems = () => {
             </div>
             <div className="p-4">
               <h3
-                className="text-sm font-semibold text-white truncate"
+                className="text-sm font-semibold text-gray-900 truncate"
                 title={title}
               >
                 {title}
               </h3>
               <div className="flex items-center mt-1 space-x-1">
                 {renderStars(rating)}
-                <span className="text-yellow-400 text-xs font-medium ml-1">
+                <span className="text-amber-600 text-xs font-medium ml-1">
                   {rating.toFixed(1)}
                 </span>
               </div>
-              <p className="mt-2 text-lg font-bold text-white">
+              <p className="mt-2 text-lg font-bold text-gray-900">
                 ${price.toFixed(2)}
               </p>
             </div>
@@ -2408,10 +2408,10 @@ const ProductRelatedItems = () => {
           <button
             onClick={loadMoreDesktop}
             disabled={loadingDesktop}
-            className="px-6 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-full hover:bg-yellow-500 transition flex items-center justify-center gap-2 min-w-[130px]"
+            className="px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-700 transition flex items-center justify-center gap-2 min-w-[130px]"
           >
             {loadingDesktop ? (
-              <span className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></span>
+              <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin"></span>
             ) : (
               "View More"
             )}

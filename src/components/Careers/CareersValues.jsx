@@ -6,19 +6,19 @@ import { gsap } from 'gsap';
 
 const values = [
   {
-    icon: <LightBulbIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <LightBulbIcon className="h-8 w-8 text-amber-600" />,
     title: 'Innovation',
     description:
       'We constantly push boundaries and encourage creative thinking to solve challenges and drive growth.',
   },
   {
-    icon: <GlobeAltIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <GlobeAltIcon className="h-8 w-8 text-amber-600" />,
     title: 'Diversity & Inclusion',
     description:
       'Our strength lies in embracing different perspectives, backgrounds, and experiences to build a stronger team.',
   },
   {
-    icon: <ShieldCheckIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <ShieldCheckIcon className="h-8 w-8 text-amber-600" />,
     title: 'Integrity',
     description:
       'We act with honesty, transparency, and respect, fostering trust among teammates and clients alike.',
@@ -58,9 +58,9 @@ const CareersValues = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4">
+    <section className="bg-white w-full flex justify-center px-4">
       <div className="w-full max-w-[1000px] py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10">
           Our Core Values
         </h2>
 
@@ -71,12 +71,12 @@ const CareersValues = () => {
               ref={addToRefs}
               onMouseEnter={() => handleMouseEnter(idx)}
               onMouseLeave={() => handleMouseLeave(idx)}
-              className="bg-gray-800 rounded-xl p-6 shadow-md cursor-pointer"
+              className="bg-white rounded-xl p-6 shadow-md cursor-pointer"
               style={{ boxShadow: '0px 4px 10px rgba(0,0,0,0.5)', transformOrigin: 'center' }}
             >
               <div className="mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-yellow-300 mb-2">{value.title}</h3>
-              <p className="text-yellow-100 text-sm leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-semibold text-amber-500 mb-2">{value.title}</h3>
+              <p className="text-amber-300 text-sm leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>

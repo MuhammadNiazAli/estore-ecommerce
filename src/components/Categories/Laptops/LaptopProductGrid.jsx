@@ -59,13 +59,13 @@ const LaptopProductGrid = ({ laptopsData = laptops }) => {
     <section className="max-w-[1000px] mx-auto px-4 py-12 my-[-40px] mb-0">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {laptopsData.length === 0 && (
-          <p className="text-center text-gray-400 col-span-full">No laptops found.</p>
+          <p className="text-center text-gray-600 col-span-full">No laptops found.</p>
         )}
 
         {laptopsData.map(({ id, name, price, image, rating }) => (
           <div
             key={id}
-            className="bg-gray-800 rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+            className="bg-white rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
           >
             <img
               src={image}
@@ -73,12 +73,12 @@ const LaptopProductGrid = ({ laptopsData = laptops }) => {
               className="w-full h-48 object-cover mb-4 rounded-md"
               loading="lazy"
             />
-            <h3 className="text-lg font-semibold text-gray-100 mb-2">{name}</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">{name}</h3>
             <p className="text-blue-400 font-bold text-xl mb-1">${price}</p>
             <div className="flex items-center space-x-1 mb-4">
-              <span className="text-yellow-400 font-semibold">{rating.toFixed(1)}</span>
+              <span className="text-amber-600 font-semibold">{rating.toFixed(1)}</span>
               <svg
-                className="w-5 h-5 text-yellow-400"
+                className="w-5 h-5 text-amber-600"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 aria-hidden="true"
@@ -88,7 +88,7 @@ const LaptopProductGrid = ({ laptopsData = laptops }) => {
             </div>
             <Link
               href={`/laptop/${id}`}
-              className="mt-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md transition inline-block w-full text-center"
+              className="mt-auto bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-2 rounded-md transition inline-block w-full text-center"
             >
               Add to Cart
             </Link>

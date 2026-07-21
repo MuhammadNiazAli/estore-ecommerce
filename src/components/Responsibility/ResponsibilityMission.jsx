@@ -61,7 +61,7 @@ const ResponsibilityMission = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 flex justify-center px-4 py-16 sm:py-20"
+      className="w-full bg-white flex justify-center px-4 py-16 sm:py-20"
       aria-labelledby="mission-title"
       role="region"
     >
@@ -75,14 +75,14 @@ const ResponsibilityMission = () => {
           <motion.h2
             id="mission-title"
             variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 mb-6 select-none"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600 mb-6 select-none"
           >
             Our Mission
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8"
+            className="text-gray-700 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8"
           >
             To lead with integrity and innovation, fostering sustainable growth and
             empowering communities worldwide by integrating responsibility into
@@ -91,9 +91,9 @@ const ResponsibilityMission = () => {
 
           <motion.blockquote
             variants={itemVariants}
-            className="italic text-yellow-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto border-l-4 border-yellow-400 pl-6 mb-8 cursor-default
-              focus:outline-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-2 transition-shadow
-              hover:shadow-yellow-500/40"
+            className="italic text-amber-500 text-base sm:text-lg md:text-xl max-w-2xl mx-auto border-l-4 border-amber-600 pl-6 mb-8 cursor-default
+              focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2 transition-shadow
+              hover:shadow-amber-700/40"
             tabIndex={0}
             aria-label="Quote about responsibility"
             role="blockquote"
@@ -107,7 +107,7 @@ const ResponsibilityMission = () => {
               onClick={() => setShowMore((prev) => !prev)}
               aria-expanded={showMore}
               aria-controls="mission-more-content"
-              className="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-yellow-300 focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               {showMore ? 'Show Less' : 'Read More'}
               <svg
@@ -137,7 +137,7 @@ const ResponsibilityMission = () => {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
-                className="overflow-hidden mt-8 text-gray-300 max-w-3xl mx-auto text-left leading-relaxed select-text"
+                className="overflow-hidden mt-8 text-gray-700 max-w-3xl mx-auto text-left leading-relaxed select-text"
                 ref={contentRef}
               >
                 <p className="mb-4 text-sm sm:text-base md:text-lg">

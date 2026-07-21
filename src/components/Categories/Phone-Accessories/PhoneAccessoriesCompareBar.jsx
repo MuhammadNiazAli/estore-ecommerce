@@ -45,7 +45,7 @@ const PhoneAccessoriesCompareBar = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-yellow-400 p-6 my-10">
+    <div className="bg-white text-amber-600 p-6 my-10">
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {phoneAccessories.map((product) => {
@@ -53,7 +53,7 @@ const PhoneAccessoriesCompareBar = () => {
           return (
             <div
               key={product.id}
-              className="bg-gray-800 rounded-lg shadow-md p-5 flex flex-col items-center text-center"
+              className="bg-white rounded-lg shadow-md p-5 flex flex-col items-center text-center"
             >
               <img
                 src={product.image}
@@ -62,15 +62,15 @@ const PhoneAccessoriesCompareBar = () => {
                 loading="lazy"
               />
               <h3 className="font-semibold text-xl mb-1">{product.name}</h3>
-              <p className="text-yellow-300 mb-3">{product.price}</p>
+              <p className="text-amber-500 mb-3">{product.price}</p>
               <button
                 onClick={() => addToCompare(product)}
                 disabled={!!isAdded}
                 title={isAdded ? "Already added" : "Add to Compare"}
                 className={`w-full py-2 rounded-lg font-semibold transition ${
                   isAdded
-                    ? "bg-yellow-600 cursor-not-allowed"
-                    : "bg-yellow-500 hover:bg-yellow-400 text-gray-900"
+                    ? "bg-amber-800 cursor-not-allowed"
+                    : "bg-amber-700 hover:bg-amber-600 text-gray-900"
                 }`}
               >
                 {isAdded ? "Added" : "Add to Compare"}
@@ -84,7 +84,7 @@ const PhoneAccessoriesCompareBar = () => {
       <AnimatePresence>
         {compareItems.length > 0 && (
           <motion.div
-            className="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-yellow-500 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-4 p-4 z-50"
+            className="fixed bottom-0 left-0 right-0 bg-white border-t border-amber-700 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-4 p-4 z-50"
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             exit={{ y: 100 }}
@@ -94,7 +94,7 @@ const PhoneAccessoriesCompareBar = () => {
               {compareItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-3 bg-gray-800 rounded-lg border border-yellow-500 px-3 py-2 min-w-[150px]"
+                  className="flex items-center gap-3 bg-white rounded-lg border border-amber-700 px-3 py-2 min-w-[150px]"
                 >
                   <img
                     src={item.image}
@@ -104,7 +104,7 @@ const PhoneAccessoriesCompareBar = () => {
                   <span className="truncate">{item.name}</span>
                   <button
                     onClick={() => removeFromCompare(item.id)}
-                    className="text-yellow-400 hover:text-red-400 transition"
+                    className="text-amber-600 hover:text-red-400 transition"
                     aria-label={`Remove ${item.name} from compare`}
                   >
                     <FaTimes size={18} />
@@ -116,7 +116,7 @@ const PhoneAccessoriesCompareBar = () => {
             {/* Compare Button */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-yellow-500 hover:bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition w-full sm:w-auto justify-center"
+              className="bg-amber-700 hover:bg-amber-600 text-gray-900 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition w-full sm:w-auto justify-center"
             >
               <FaBalanceScale />
               Compare ({compareItems.length})
@@ -129,13 +129,13 @@ const PhoneAccessoriesCompareBar = () => {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4 z-50"
+            className="fixed inset-0 bg-white bg-opacity-70 flex justify-center items-center p-4 z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-gray-800 text-yellow-400 rounded-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto p-6 relative"
+              className="bg-white text-amber-600 rounded-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto p-6 relative"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
@@ -145,7 +145,7 @@ const PhoneAccessoriesCompareBar = () => {
                 <h2 className="text-2xl font-bold">Compare Accessories</h2>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="text-yellow-400 hover:text-yellow-300 text-3xl"
+                  className="text-amber-600 hover:text-amber-500 text-3xl"
                   aria-label="Close compare modal"
                 >
                   <FaTimes />
@@ -157,13 +157,13 @@ const PhoneAccessoriesCompareBar = () => {
                 <table className="w-full min-w-[600px] table-auto border-collapse">
                   <thead>
                     <tr>
-                      <th className="border-b border-yellow-500 p-3 text-left">
+                      <th className="border-b border-amber-700 p-3 text-left">
                         Feature
                       </th>
                       {compareItems.map((item) => (
                         <th
                           key={item.id}
-                          className="border-b border-yellow-500 p-3 text-center"
+                          className="border-b border-amber-700 p-3 text-center"
                         >
                           {item.name}
                         </th>
@@ -172,13 +172,13 @@ const PhoneAccessoriesCompareBar = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border-b border-gray-700 p-3 font-semibold">
+                      <td className="border-b border-gray-200 p-3 font-semibold">
                         Image
                       </td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="border-b border-gray-700 p-3 text-center"
+                          className="border-b border-gray-200 p-3 text-center"
                         >
                           <img
                             src={item.image}
@@ -189,26 +189,26 @@ const PhoneAccessoriesCompareBar = () => {
                       ))}
                     </tr>
                     <tr>
-                      <td className="border-b border-gray-700 p-3 font-semibold">
+                      <td className="border-b border-gray-200 p-3 font-semibold">
                         Price
                       </td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="border-b border-gray-700 p-3 text-center"
+                          className="border-b border-gray-200 p-3 text-center"
                         >
                           {item.price}
                         </td>
                       ))}
                     </tr>
                     <tr>
-                      <td className="border-b border-gray-700 p-3 font-semibold">
+                      <td className="border-b border-gray-200 p-3 font-semibold">
                         Specs
                       </td>
                       {compareItems.map((item) => (
                         <td
                           key={item.id}
-                          className="border-b border-gray-700 p-3 text-center text-sm"
+                          className="border-b border-gray-200 p-3 text-center text-sm"
                         >
                           {item.specs.join(", ")}
                         </td>

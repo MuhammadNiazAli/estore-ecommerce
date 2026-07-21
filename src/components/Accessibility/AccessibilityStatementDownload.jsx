@@ -41,7 +41,7 @@ const AccessibilityStatementDownload = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8  mb-[-30px]"
+      className="w-full bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8  mb-[-30px]"
       aria-labelledby="accessibility-download-heading"
     >
       <div className="max-w-[900px] mx-auto text-center space-y-8">
@@ -52,16 +52,16 @@ const AccessibilityStatementDownload = () => {
           transition={{ duration: 0.5 }}
         >
           <FileText
-            className="w-12 h-12 text-yellow-400 mx-auto mb-4"
+            className="w-12 h-12 text-amber-600 mx-auto mb-4"
             aria-hidden="true"
           />
           <h2
             id="accessibility-download-heading"
-            className="text-3xl sm:text-4xl font-bold text-yellow-300"
+            className="text-3xl sm:text-4xl font-bold text-amber-500"
           >
             Download Our Accessibility Statement
           </h2>
-          <p className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+          <p className="mt-2 text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             We’re committed to full transparency. Download our detailed accessibility statement to learn about our standards, audits, and ongoing improvements.
           </p>
         </motion.div>
@@ -76,10 +76,10 @@ const AccessibilityStatementDownload = () => {
             onClick={handleDownload}
             disabled={isDownloading}
             aria-disabled={isDownloading}
-            className={`inline-flex items-center gap-2 bg-yellow-400 text-black font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300 hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50
+            className={`inline-flex items-center gap-2 bg-amber-600 text-black font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-opacity-50
               ${
                 isDownloading
-                  ? 'cursor-not-allowed opacity-60 hover:bg-yellow-400'
+                  ? 'cursor-not-allowed opacity-60 hover:bg-amber-600'
                   : 'hover:brightness-110'
               }
             `}

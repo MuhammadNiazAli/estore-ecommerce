@@ -29,20 +29,20 @@ export default function PromoCode({ applyPromo }) {
   };
 
   return (
-    <section className="w-full bg-gray-900 px-4 py-16 flex justify-center items-center">
+    <section className="w-full bg-white px-4 py-16 flex justify-center items-center">
       <div
         className="
           w-full max-w-[600px]
-          bg-gray-900
-          border border-yellow-700
+          bg-white
+          border border-amber-900
           shadow-2xl rounded-3xl
           p-5 sm:p-8 md:p-10
           backdrop-blur-md
-          ring-1 ring-yellow-600/30
+          ring-1 ring-amber-800/30
           transition-all
         "
       >
-        <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-10 text-white text-center tracking-wide drop-shadow-md select-none">
+        <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-10 text-gray-900 text-center tracking-wide drop-shadow-md select-none">
           Apply Promo Code
         </h2>
 
@@ -62,9 +62,9 @@ export default function PromoCode({ applyPromo }) {
             disabled={loading}
             className="
               px-4 py-3 rounded-lg
-              bg-yellow-900/80 border border-yellow-600
-              placeholder-yellow-300 text-white font-semibold tracking-wide
-              focus:outline-none focus:ring-4 focus:ring-yellow-400
+              bg-amber-950/80 border border-amber-800
+              placeholder-amber-500 text-gray-900 font-semibold tracking-wide
+              focus:outline-none focus:ring-4 focus:ring-amber-600
               transition
               w-full
               disabled:opacity-60 disabled:cursor-not-allowed
@@ -77,10 +77,10 @@ export default function PromoCode({ applyPromo }) {
             disabled={!code.trim() || loading}
             className="
               px-6 py-3 rounded-lg
-              bg-gradient-to-r from-yellow-500 to-yellow-600
-              hover:from-yellow-600 hover:to-yellow-700
+              bg-gradient-to-r from-amber-700 to-amber-800
+              hover:from-amber-800 hover:to-amber-900
               text-gray-900 font-extrabold tracking-wide
-              focus:outline-none focus:ring-4 focus:ring-yellow-300 focus:ring-offset-2
+              focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2
               transition
               sm:w-auto w-full
               disabled:opacity-50 disabled:cursor-not-allowed

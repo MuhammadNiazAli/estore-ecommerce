@@ -5,38 +5,38 @@ import { FaHeadphonesAlt, FaMicrophoneAlt, FaMusic, FaVolumeUp } from "react-ico
 
 const AudioCategoryInfo = () => {
   return (
-    <section className="bg-gray-900 text-white py-12 px-6">
+    <section className="bg-white text-gray-900 py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600">
             Elevate Your Audio Experience
           </h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-gray-700 text-lg leading-relaxed">
             Discover premium headphones, speakers, microphones, and sound systems 
             designed for ultimate clarity and comfort. Whether you're a music lover, 
             gamer, or podcaster, our audio collection brings you exceptional sound quality 
             for every moment.
           </p>
-          <ul className="space-y-3 text-gray-300">
+          <ul className="space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
-              <FaHeadphonesAlt className="text-yellow-400 text-xl" />
+              <FaHeadphonesAlt className="text-amber-600 text-xl" />
               <span>High-Fidelity Headphones for crystal-clear sound</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaMicrophoneAlt className="text-yellow-400 text-xl" />
+              <FaMicrophoneAlt className="text-amber-600 text-xl" />
               <span>Professional Microphones for studio-quality recording</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaVolumeUp className="text-yellow-400 text-xl" />
+              <FaVolumeUp className="text-amber-600 text-xl" />
               <span>Powerful Speakers for immersive experiences</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaMusic className="text-yellow-400 text-xl" />
+              <FaMusic className="text-amber-600 text-xl" />
               <span>Wireless Solutions for seamless connectivity</span>
             </li>
           </ul>
-          <button className="mt-4 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full transition duration-300">
+          <button className="mt-4 bg-amber-700 hover:bg-amber-600 text-black font-semibold px-6 py-3 rounded-full transition duration-300">
             Shop Audio Now
           </button>
         </div>
@@ -49,7 +49,7 @@ const AudioCategoryInfo = () => {
             className="rounded-xl shadow-xl w-full max-w-md object-cover transform hover:scale-105 transition duration-500"
           />
           {/* Decorative Overlay */}
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-white/40 via-white/20 to-transparent"></div>
         </div>
       </div>
     </section>

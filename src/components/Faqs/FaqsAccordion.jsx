@@ -35,17 +35,17 @@ const FaqsAccordion = () => {
   };
 
   return (
-    <div className="w-full max-w-[1000px] px-4 sm:px-6 md:px-8 py-8 bg-gray-900 text-yellow-400 rounded-md shadow-md mx-auto">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-yellow-300 text-center sm:text-left">
+    <div className="w-full max-w-[1000px] px-4 sm:px-6 md:px-8 py-8 bg-white text-amber-600 rounded-md shadow-md mx-auto">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-amber-500 text-center sm:text-left">
         Frequently Asked Questions
       </h2>
 
-      <div className="divide-y divide-yellow-700">
+      <div className="divide-y divide-amber-900">
         {faqs.map(({ id, question, answer }) => (
           <div key={id} className="py-4">
             {/* FAQ Question Button */}
             <button
-              className="flex justify-between items-center w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400"
+              className="flex justify-between items-center w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
               onClick={() => toggleFaq(id)}
               aria-expanded={openId === id}
               aria-controls={`faq-answer-${id}`}
@@ -71,7 +71,7 @@ const FaqsAccordion = () => {
               id={`faq-answer-${id}`}
               role="region"
               aria-labelledby={`faq-question-${id}`}
-              className={`text-yellow-300 text-sm sm:text-base mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`text-amber-500 text-sm sm:text-base mt-2 overflow-hidden transition-all duration-300 ease-in-out ${
                 openId === id ? 'max-h-96' : 'max-h-0'
               }`}
             >

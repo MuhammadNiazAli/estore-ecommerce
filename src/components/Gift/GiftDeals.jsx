@@ -32,17 +32,17 @@ const deals = [
 
 export default function GiftDeals() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-12 bg-gray-900 rounded-lg shadow-2xl text-white">
+    <section className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-12 bg-white rounded-lg shadow-2xl text-gray-900">
       <motion.div
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-yellow-400 text-3xl font-extrabold drop-shadow-lg">
+        <h2 className="text-amber-600 text-3xl font-extrabold drop-shadow-lg">
           Special Gift Deals
         </h2>
-        <p className="text-gray-300 mt-2 max-w-lg mx-auto text-sm sm:text-base">
+        <p className="text-gray-700 mt-2 max-w-lg mx-auto text-sm sm:text-base">
           Grab these exclusive offers before they’re gone!
         </p>
       </motion.div>
@@ -56,7 +56,7 @@ export default function GiftDeals() {
         {deals.map(({ id, title, img, oldPrice, newPrice, discount }) => (
           <div
             key={id}
-            className="group bg-gray-900 border border-yellow-400/20 rounded-xl overflow-hidden shadow-md hover:shadow-yellow-500/40 hover:scale-[1.03] transition-transform cursor-pointer"
+            className="group bg-white border border-amber-600/20 rounded-xl overflow-hidden shadow-md hover:shadow-amber-700/40 hover:scale-[1.03] transition-transform cursor-pointer"
           >
             <img
               src={img}
@@ -65,16 +65,16 @@ export default function GiftDeals() {
               loading="lazy"
             />
             <div className="p-4">
-              <h3 className="text-white font-semibold text-lg truncate" title={title}>
+              <h3 className="text-gray-900 font-semibold text-lg truncate" title={title}>
                 {title}
               </h3>
 
               <div className="flex items-center gap-3 mt-2">
-                <span className="text-yellow-400 font-extrabold text-xl">
+                <span className="text-amber-600 font-extrabold text-xl">
                   {newPrice}
                 </span>
                 <span className="text-gray-500 line-through text-sm">{oldPrice}</span>
-                <span className="ml-auto bg-yellow-400 text-gray-900 font-bold px-2 py-0.5 rounded-full text-xs">
+                <span className="ml-auto bg-amber-600 text-gray-900 font-bold px-2 py-0.5 rounded-full text-xs">
                   -{discount}
                 </span>
               </div>

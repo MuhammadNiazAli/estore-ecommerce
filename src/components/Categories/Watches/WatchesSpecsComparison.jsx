@@ -79,7 +79,7 @@ const WatchesSpecsComparison = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 md:px-8 my-[-50px]">
+    <section className="bg-white text-gray-900 py-10 px-4 md:px-8 my-[-50px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6">
           Compare Watches Specs
@@ -91,7 +91,7 @@ const WatchesSpecsComparison = () => {
             <button
               key={watch.id}
               onClick={() => addWatch(watch)}
-              className="bg-gray-800 hover:bg-yellow-400 hover:text-gray-900 px-4 py-2 rounded-lg text-sm transition"
+              className="bg-white hover:bg-amber-600 hover:text-gray-900 px-4 py-2 rounded-lg text-sm transition"
             >
               + {watch.name}
             </button>
@@ -100,12 +100,12 @@ const WatchesSpecsComparison = () => {
 
         {/* Comparison Table */}
         {selected.length === 0 ? (
-          <p className="text-center text-gray-400">
+          <p className="text-center text-gray-600">
             Select up to 3 watches to compare.
           </p>
         ) : (
           <motion.div
-            className="overflow-x-auto bg-gray-800 rounded-xl shadow-lg"
+            className="overflow-x-auto bg-white rounded-xl shadow-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -117,13 +117,13 @@ const WatchesSpecsComparison = () => {
                   {selected.map((watch) => (
                     <th
                       key={watch.id}
-                      className="p-4 relative text-center border-l border-gray-700"
+                      className="p-4 relative text-center border-l border-gray-200"
                     >
                       <button
                         onClick={() => removeWatch(watch.id)}
-                        className="absolute top-2 right-2 bg-gray-700 p-1 rounded-full hover:bg-red-500"
+                        className="absolute top-2 right-2 bg-white p-1 rounded-full hover:bg-red-500"
                       >
-                        <XMarkIcon className="w-5 h-5 text-white" />
+                        <XMarkIcon className="w-5 h-5 text-gray-900" />
                       </button>
                       <img
                         src={watch.image}
@@ -135,7 +135,7 @@ const WatchesSpecsComparison = () => {
                   ))}
                 </tr>
               </thead>
-              <tbody className="text-gray-300 text-sm">
+              <tbody className="text-gray-700 text-sm">
                 <tr>
                   <td className="p-3 font-semibold">Brand</td>
                   {selected.map((w) => (
@@ -148,7 +148,7 @@ const WatchesSpecsComparison = () => {
                   <td className="p-3 font-semibold">Price</td>
                   {selected.map((w) => (
                     <td key={w.id} className="p-3 text-center">
-                      <span className="text-yellow-400 font-bold">
+                      <span className="text-amber-600 font-bold">
                         ${w.price.toLocaleString()}
                       </span>
                       <br />

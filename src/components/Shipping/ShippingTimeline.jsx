@@ -14,7 +14,7 @@ const ShippingTimeline = () => {
   return (
     <section
       aria-label="Shipping process timeline"
-      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-300"
+      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-700"
     >
       <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-12 text-center drop-shadow-md select-none">
         Shipping Timeline
@@ -63,7 +63,7 @@ const ShippingTimeline = () => {
               <h3 className="text-lg sm:text-xl font-semibold text-amber-300 mb-1">
                 {title}
               </h3>
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {description}
               </p>
             </div>

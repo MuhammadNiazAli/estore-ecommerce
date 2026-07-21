@@ -560,7 +560,7 @@ const PetsFeaturedDeals = () => {
   }
 
   return (
-    <section className="bg-gray-900 text-white py-12 px-6 max-w-[1200px] mx-auto rounded-lg shadow-xl select-none">
+    <section className="bg-white text-gray-900 py-12 px-6 max-w-[1200px] mx-auto rounded-lg shadow-xl select-none">
       <h2 className="text-3xl font-extrabold mb-8 text-center">Pets Featured Deals</h2>
 
       <div className="relative overflow-hidden">
@@ -568,8 +568,8 @@ const PetsFeaturedDeals = () => {
           onClick={prevSlide}
           disabled={currentSlide === 0}
           aria-label="Previous Slide"
-          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
           }`}
         >
           <FaChevronLeft size={20} />
@@ -591,7 +591,7 @@ const PetsFeaturedDeals = () => {
               {items.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-gray-800 rounded-xl shadow-lg flex flex-col max-w-sm w-full transition-shadow duration-300"
+                  className="bg-white rounded-xl shadow-lg flex flex-col max-w-sm w-full transition-shadow duration-300"
                 >
                   <div className="relative h-48 overflow-hidden rounded-t-xl">
                     <img
@@ -609,16 +609,16 @@ const PetsFeaturedDeals = () => {
                         Out of Stock
                       </span>
                     )}
-                    <span className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-md">
+                    <span className="absolute top-2 right-2 bg-amber-700 text-black text-xs font-bold px-2 py-1 rounded-md">
                       {item.category}
                     </span>
                   </div>
 
                   <div className="p-4 flex flex-col justify-between flex-grow">
                     <h3 className="text-lg font-semibold">{item.name}</h3>
-                    <p className="text-sm text-gray-300 mb-1 font-medium">Brand: {item.brand}</p>
+                    <p className="text-sm text-gray-700 mb-1 font-medium">Brand: {item.brand}</p>
 
-                    <ul className="text-xs text-yellow-300 mb-3 list-disc list-inside">
+                    <ul className="text-xs text-amber-500 mb-3 list-disc list-inside">
                       {item.features?.map((feature, i) => (
                         <li key={i}>{feature}</li>
                       ))}
@@ -628,13 +628,13 @@ const PetsFeaturedDeals = () => {
                       {[...Array(5)].map((_, i) => (
                         <FaStar
                           key={i}
-                          className={`${i < item.rating ? "text-yellow-400" : "text-gray-600"}`}
+                          className={`${i < item.rating ? "text-amber-600" : "text-gray-600"}`}
                         />
                       ))}
                     </div>
 
                     <div className="flex items-center justify-between mt-4">
-                      <span className="text-xl font-bold text-yellow-400">${item.price}</span>
+                      <span className="text-xl font-bold text-amber-600">${item.price}</span>
                     </div>
 
                     <button
@@ -642,8 +642,8 @@ const PetsFeaturedDeals = () => {
                       className={`mt-4 w-full py-2 rounded-full font-semibold flex justify-center items-center gap-2 transition
                         ${
                           item.stock
-                            ? "bg-yellow-400 text-black hover:bg-yellow-300"
-                            : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                            ? "bg-amber-600 text-black hover:bg-amber-500"
+                            : "bg-white text-gray-600 cursor-not-allowed"
                         }`}
                     >
                       <FaCartPlus />
@@ -660,8 +660,8 @@ const PetsFeaturedDeals = () => {
           onClick={nextSlide}
           disabled={currentSlide === totalSlides - 1}
           aria-label="Next Slide"
-          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-yellow-500 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-yellow-400"
+          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
           }`}
         >
           <FaChevronRight size={20} />

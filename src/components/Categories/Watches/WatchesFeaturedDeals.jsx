@@ -438,7 +438,7 @@ const DealCountdown = ({ initialSeconds }) => {
   const secs = timeLeft % 60;
 
   return (
-    <span className="text-yellow-400 font-semibold">
+    <span className="text-amber-600 font-semibold">
       {hours}h {minutes}m {secs}s
     </span>
   );
@@ -474,7 +474,7 @@ const WatchesFeaturedDeals = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-yellow-400 py-10 px-4 md:px-8 my-[-50px]">
+    <section className="w-full bg-white text-amber-600 py-10 px-4 md:px-8 my-[-50px]">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -500,21 +500,21 @@ const WatchesFeaturedDeals = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition relative">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition relative">
                         <img
                           src={deal.image}
                           alt={deal.name}
                           className="w-full h-64 object-cover"
                         />
                         {/* Hover Actions */}
-                        <div className="absolute inset-0 bg-gray-950/60 opacity-0 hover:opacity-100 flex justify-center items-center gap-3 transition">
-                          <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:scale-110">
+                        <div className="absolute inset-0 bg-white/60 opacity-0 hover:opacity-100 flex justify-center items-center gap-3 transition">
+                          <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:scale-110">
                             <ShoppingCartIcon className="w-6 h-6" />
                           </button>
-                          <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:scale-110">
+                          <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:scale-110">
                             <HeartIcon className="w-6 h-6" />
                           </button>
-                          <button className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:scale-110">
+                          <button className="p-2 bg-amber-600 text-gray-900 rounded-full hover:scale-110">
                             <EyeIcon className="w-6 h-6" />
                           </button>
                         </div>
@@ -522,14 +522,14 @@ const WatchesFeaturedDeals = () => {
                         <div className="p-4 text-center">
                           <h3 className="text-xl font-semibold">{deal.name}</h3>
                           <p className="mt-2">
-                            <span className="text-yellow-400 text-2xl font-bold">
+                            <span className="text-amber-600 text-2xl font-bold">
                               ${deal.discountPrice.toLocaleString()}
                             </span>
-                            <span className="text-gray-400 line-through ml-2">
+                            <span className="text-gray-600 line-through ml-2">
                               ${deal.originalPrice.toLocaleString()}
                             </span>
                           </p>
-                          <p className="text-sm text-gray-300 mt-2">
+                          <p className="text-sm text-gray-700 mt-2">
                             Deal ends in: <DealCountdown initialSeconds={deal.dealEndsIn} />
                           </p>
                         </div>
@@ -543,13 +543,13 @@ const WatchesFeaturedDeals = () => {
           {/* Navigation */}
           <button
             onClick={prevDeal}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-700 p-3 rounded-full hover:bg-yellow-400 hover:text-gray-900"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full hover:bg-amber-600 hover:text-gray-900"
           >
             <ArrowLeftIcon className="w-6 h-6" />
           </button>
           <button
             onClick={nextDeal}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700 p-3 rounded-full hover:bg-yellow-400 hover:text-gray-900"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full hover:bg-amber-600 hover:text-gray-900"
           >
             <ArrowRightIcon className="w-6 h-6" />
           </button>

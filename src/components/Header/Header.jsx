@@ -152,7 +152,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="static top-0 max-w-[1250px] left-0 w-full bg-gray-900 text-white shadow-lg z-50 select-none font-poppins"
+        className="static top-0 max-w-[1250px] left-0 w-full bg-white text-gray-900 shadow-lg z-50 select-none font-poppins"
       >
         <div
           className="container mx-auto max-w-screen-xl flex items-center justify-between h-20"
@@ -164,7 +164,7 @@ export default function Header() {
             className="flex md:ml-[-10px] items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
             style={{ position: 'relative', left: 0 }}
           >
-            <span className="text-[22px] font-extrabold tracking-tight text-[#F6C90E] select-text">e</span>
+            <span className="text-[22px] font-extrabold tracking-tight text-[#B45309] select-text">e</span>
             <span className="text-[14px] font-semibold tracking-wide">Store</span>
           </Link>
 
@@ -216,7 +216,7 @@ export default function Header() {
                           exit={{ opacity: 0, y: -10 }}
                         >
                           <div
-                            className="bg-gray-800/90 backdrop-blur-md border border-gray-700 rounded-md shadow-xl p-4 grid grid-cols-5 gap-3"
+                            className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-md shadow-xl p-4 grid grid-cols-5 gap-3"
                             style={{ width: '900px' }}
                           >
                             {PRODUCT_CATEGORIES.map(({ label, href, icon }) => (
@@ -255,7 +255,7 @@ export default function Header() {
                   key={label}
                   href={href}
                   className={`relative flex items-center gap-1 px-2 py-2 text-[11px] transition rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 font-normal ${
-                    checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-300 hover:text-gray-300'
+                    checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-700 hover:text-gray-700'
                   }`}
                   aria-current={checkActiveLink(href) ? 'page' : undefined}
                 >
@@ -269,7 +269,7 @@ export default function Header() {
           {/* Mobile menu toggle button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             aria-label={isMobileMenuVisible ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuVisible}
             style={{ marginLeft: 'auto' }}
@@ -300,7 +300,7 @@ export default function Header() {
         {isMobileMenuVisible && (
           <motion.nav
             key="mobile-menu"
-            className="fixed top-[80px] left-0 w-full bg-gray-900/90 backdrop-blur-md text-white shadow-lg z-50 p-4 overflow-auto max-h-[calc(100vh-80px)]"
+            className="fixed top-[80px] left-0 w-full bg-white/90 backdrop-blur-md text-gray-900 shadow-lg z-50 p-4 overflow-auto max-h-[calc(100vh-80px)]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -314,7 +314,7 @@ export default function Header() {
                       <button
                         type="button"
                         onClick={toggleCategoriesMenu}
-                        className="w-full flex items-center justify-between px-3 py-2 text-left text-white hover:bg-gray-800 rounded font-semibold text-sm"
+                        className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-900 hover:bg-gray-50 rounded font-semibold text-sm"
                         aria-haspopup="true"
                         aria-expanded={isCategoriesOpen}
                       >
@@ -328,7 +328,7 @@ export default function Header() {
                       <AnimatePresence>
                         {isCategoriesOpen && (
                           <motion.ul
-                            className="mt-2 ml-4 border-l border-gray-700 pl-3 space-y-2 max-h-72 overflow-y-auto"
+                            className="mt-2 ml-4 border-l border-gray-200 pl-3 space-y-2 max-h-72 overflow-y-auto"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
@@ -364,8 +364,8 @@ export default function Header() {
                       href={href}
                       onClick={() => setMobileMenuVisible(false)}
                       className={`flex items-center gap-2 px-3 py-2 rounded font-normal text-sm ${
-                        checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-300 hover:text-gray-300'
-                      } hover:bg-gray-800`}
+                        checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-700 hover:text-gray-700'
+                      } hover:bg-gray-50`}
                       aria-current={checkActiveLink(href) ? 'page' : undefined}
                     >
                       {icon}
@@ -390,7 +390,7 @@ export default function Header() {
           padding: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
-          background-color: #111827;
+          background-color: #ffffff;
         }
 
         @media (min-width: 768px) {

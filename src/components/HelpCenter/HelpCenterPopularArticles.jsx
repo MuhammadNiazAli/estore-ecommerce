@@ -139,9 +139,9 @@ const HelpCenterPopularArticles = () => {
   };
 
   return (
-    <section className="bg-gray-900 w-full px-4 py-12 flex justify-center mb-[-20px]">
-      <div className="w-full max-w-[1000px] text-white">
-        <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 text-center mb-10">
+    <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-20px]">
+      <div className="w-full max-w-[1000px] text-gray-900">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center mb-10">
           Popular Articles
         </h2>
 
@@ -150,9 +150,9 @@ const HelpCenterPopularArticles = () => {
             <button
               key={index}
               onClick={() => openModal(index)}
-              className="block text-left p-6 bg-gray-800 rounded-xl
-                hover:bg-yellow-500 hover:text-black transition duration-300
-                shadow-md focus:outline-none focus:ring-4 focus:ring-yellow-400"
+              className="block text-left p-6 bg-white rounded-xl
+                hover:bg-amber-700 hover:text-black transition duration-300
+                shadow-md focus:outline-none focus:ring-4 focus:ring-amber-600"
               aria-haspopup="dialog"
               aria-expanded={openIndex === index}
               aria-controls={`article-modal-${index}`}
@@ -173,9 +173,9 @@ const HelpCenterPopularArticles = () => {
             id={`article-modal-${openIndex}`}
             tabIndex={-1}
             ref={modalRef}
-            className="fixed top-1/2 left-1/2 max-w-md w-[90vw] bg-gray-800 rounded-xl p-6 text-white
+            className="fixed top-1/2 left-1/2 max-w-md w-[90vw] bg-white rounded-xl p-6 text-gray-900
               -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-yellow-400"
+              focus:outline-none focus:ring-4 focus:ring-amber-600"
           >
             <h3
               id={`article-title-${openIndex}`}
@@ -183,17 +183,17 @@ const HelpCenterPopularArticles = () => {
             >
               {articles[openIndex].title}
             </h3>
-            <p className="mb-6 text-gray-300 select-text">{articles[openIndex].details}</p>
+            <p className="mb-6 text-gray-700 select-text">{articles[openIndex].details}</p>
             <div className="flex justify-end gap-4">
               <button
                 onClick={openFullArticleModal}
-                className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold hover:bg-yellow-300 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="bg-amber-600 text-black px-4 py-2 rounded-md font-semibold hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Read Full Article
               </button>
               <button
                 onClick={closeModal}
-                className="bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-50 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Close
               </button>
@@ -210,9 +210,9 @@ const HelpCenterPopularArticles = () => {
             id="full-article-modal"
             tabIndex={-1}
             ref={fullModalRef}
-            className="fixed top-1/2 left-1/2 max-w-lg w-[95vw] bg-gray-800 rounded-xl p-6 text-white
+            className="fixed top-1/2 left-1/2 max-w-lg w-[95vw] bg-white rounded-xl p-6 text-gray-900
               -translate-x-1/2 -translate-y-1/2 z-[60] shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-yellow-400"
+              focus:outline-none focus:ring-4 focus:ring-amber-600"
           >
             <h3
               id="full-article-title"
@@ -220,13 +220,13 @@ const HelpCenterPopularArticles = () => {
             >
               Full Article Content
             </h3>
-            <p className="mb-6 text-gray-300 select-text text-center text-lg font-medium">
+            <p className="mb-6 text-gray-700 select-text text-center text-lg font-medium">
               Empty
             </p>
             <div className="flex justify-end gap-4">
               <button
                 onClick={closeFullArticleModal}
-                className="bg-gray-700 px-4 py-2 rounded-md hover:bg-gray-600 transition font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-50 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Close
               </button>

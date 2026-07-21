@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) => {
   return (
-    <section className="flex justify-center items-center bg-gray-900 px-6 py-8 sm:py-12">
+    <section className="flex justify-center items-center bg-white px-6 py-8 sm:py-12">
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
@@ -15,7 +15,7 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
         role="region"
         aria-label="Wishlist management actions"
       >
-        <p className="text-center sm:text-left text-gray-300 text-base sm:text-lg max-w-lg">
+        <p className="text-center sm:text-left text-gray-700 text-base sm:text-lg max-w-lg">
           Manage your wishlist items easily using the actions below.
         </p>
 
@@ -24,12 +24,12 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onShare}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-200 hover:bg-gray-800 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-700 hover:bg-gray-50 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Share your wishlist"
             title="Share your wishlist"
           >
             {isProcessing ? (
-              <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin" />
             ) : (
               <FiShare2 className="w-5 h-5" />
             )}
@@ -40,12 +40,12 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onMoveAll}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-gray-900 font-semibold hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Move all wishlist items to cart"
             title="Move all wishlist items to cart"
           >
             {isProcessing ? (
-              <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin" />
             ) : (
               <FiShoppingCart className="w-5 h-5" />
             )}

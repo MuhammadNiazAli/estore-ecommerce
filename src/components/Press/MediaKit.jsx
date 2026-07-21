@@ -135,12 +135,12 @@ const MediaKit = () => {
   const closeModal = () => setSelectedItem(null);
 
   return (
-    <section className="w-full bg-gray-900 px-4 sm:px-6 py-16 flex justify-center mb-[-30px]">
+    <section className="w-full bg-white px-4 sm:px-6 py-16 flex justify-center mb-[-30px]">
       <div className="max-w-[1200px] w-full text-center">
-        <h2 className="text-yellow-400 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
+        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
           Media Kit
         </h2>
-        <p className="mt-4 text-yellow-300 max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed drop-shadow-md">
+        <p className="mt-4 text-amber-500 max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed drop-shadow-md">
           Everything you need to create professional press releases and marketing materials. Download our official assets here.
         </p>
 
@@ -148,19 +148,19 @@ const MediaKit = () => {
           {mediaItems.map((item) => (
             <div
               key={item.id}
-              className="bg-gray-800 rounded-xl p-6 flex flex-col justify-between shadow-md transition-all duration-300 hover:ring-2 hover:ring-yellow-400"
+              className="bg-white rounded-xl p-6 flex flex-col justify-between shadow-md transition-all duration-300 hover:ring-2 hover:ring-amber-600"
             >
               <div>
-                <h3 className="text-yellow-400 text-lg sm:text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 text-yellow-300 text-sm sm:text-base">{item.description}</p>
+                <h3 className="text-amber-600 text-lg sm:text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 text-amber-500 text-sm sm:text-base">{item.description}</p>
               </div>
-              <div className="mt-4 flex items-center justify-between text-yellow-200 text-xs sm:text-sm font-mono">
+              <div className="mt-4 flex items-center justify-between text-amber-400 text-xs sm:text-sm font-mono">
                 <span>{item.fileType}</span>
                 <span>{item.formats[item.formats.length - 1]?.size || "Size Unknown"}</span>
               </div>
               <button
                 onClick={() => setSelectedItem(item)}
-                className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-2 px-5 rounded-md shadow transition"
+                className="mt-6 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold py-2 px-5 rounded-md shadow transition"
               >
                 Download
               </button>
@@ -173,31 +173,31 @@ const MediaKit = () => {
       {selectedItem && (
         <div
           onClick={closeModal}
-          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-white/70 z-50 flex items-center justify-center p-4"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-gray-900 border border-yellow-400 rounded-xl w-full max-w-md md:max-w-lg lg:max-w-xl p-6 shadow-2xl"
+            className="bg-white border border-amber-600 rounded-xl w-full max-w-md md:max-w-lg lg:max-w-xl p-6 shadow-2xl"
           >
-            <h3 className="text-yellow-400 text-xl sm:text-2xl font-bold mb-4">
+            <h3 className="text-amber-600 text-xl sm:text-2xl font-bold mb-4">
               Download Options
             </h3>
-            <p className="text-yellow-200 mb-6 text-sm sm:text-base">{selectedItem.description}</p>
+            <p className="text-amber-400 mb-6 text-sm sm:text-base">{selectedItem.description}</p>
 
             <ul className="space-y-4">
               {selectedItem.formats.map((format, idx) => (
                 <li
                   key={idx}
-                  className="flex justify-between items-center bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700"
+                  className="flex justify-between items-center bg-white px-4 py-2 rounded-lg hover:bg-gray-50"
                 >
                   <div>
-                    <p className="text-yellow-300 font-semibold">{format.label}</p>
-                    <p className="text-yellow-200 text-xs">{format.size}</p>
+                    <p className="text-amber-500 font-semibold">{format.label}</p>
+                    <p className="text-amber-400 text-xs">{format.size}</p>
                   </div>
                   <a
                     href={format.link}
                     download
-                    className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold px-4 py-1.5 rounded-md text-sm transition"
+                    className="bg-amber-700 hover:bg-amber-800 text-gray-900 font-bold px-4 py-1.5 rounded-md text-sm transition"
                   >
                     Download
                   </a>
@@ -207,7 +207,7 @@ const MediaKit = () => {
 
             <button
               onClick={closeModal}
-              className="mt-6 w-full py-2 rounded-md bg-gray-700 hover:bg-gray-600 text-yellow-300 font-semibold transition"
+              className="mt-6 w-full py-2 rounded-md bg-white hover:bg-gray-50 text-amber-500 font-semibold transition"
             >
               Close
             </button>

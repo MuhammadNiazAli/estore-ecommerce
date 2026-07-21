@@ -89,7 +89,7 @@ const products = [
 const ManClothesGrid = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-gray-50 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
         Featured Men's Collection
       </h2>
 
@@ -110,14 +110,14 @@ const ManClothesGrid = () => {
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition duration-500"
               />
               {/* Hover Overlay Actions */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
-                <button className="bg-yellow-400 text-black p-3 rounded-full hover:bg-yellow-300 transition">
+              <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
+                <button className="bg-amber-600 text-black p-3 rounded-full hover:bg-amber-500 transition">
                   <ShoppingCart size={20} />
                 </button>
                 <button className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition">
                   <Heart size={20} />
                 </button>
-                <button className="bg-black text-white p-3 rounded-full hover:bg-gray-800 transition">
+                <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-50 transition">
                   <Eye size={20} />
                 </button>
               </div>
@@ -130,15 +130,15 @@ const ManClothesGrid = () => {
               </h3>
               <p className="text-sm text-gray-500">{product.brand}</p>
               <div className="flex items-center justify-center gap-2 my-2">
-                <span className="text-xl font-bold text-yellow-500">
+                <span className="text-xl font-bold text-amber-700">
                   ${product.price}
                 </span>
-                <span className="line-through text-gray-400 text-sm">
+                <span className="line-through text-gray-600 text-sm">
                   ${product.oldPrice}
                 </span>
               </div>
               <p className="text-sm text-gray-600">⭐ {product.rating}</p>
-              <button className="mt-3 bg-yellow-500 text-black px-5 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">
+              <button className="mt-3 bg-amber-700 text-black px-5 py-2 rounded-lg font-medium hover:bg-amber-600 transition">
                 Add to Cart
               </button>
             </div>

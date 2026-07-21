@@ -11,7 +11,7 @@ import React from 'react';
 
 export default function OrdersPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white px-4 py-20 max-w-screen-xl mx-auto flex flex-col gap-8">
+    <main className="min-h-screen bg-white text-gray-900 px-4 py-20 max-w-screen-xl mx-auto flex flex-col gap-8">
       <OrderHero/>
       <OrderSummary/>
       <OrderDetails/>

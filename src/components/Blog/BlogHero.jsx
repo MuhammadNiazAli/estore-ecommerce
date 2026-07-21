@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const BlogHero = () => {
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4 sm:px-6 lg:px-8 py-12 my-[-50px]">
+    <section className="bg-white w-full flex justify-center px-4 sm:px-6 lg:px-8 py-12 my-[-50px]">
       <div className="max-w-[1000px] w-full flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Left Content */}
         <motion.div
@@ -16,19 +16,19 @@ const BlogHero = () => {
           transition={{ duration: 0.6 }}
           className="flex-1 text-center md:text-left"
         >
-          <h2 className="text-yellow-400 text-xs sm:text-sm font-semibold uppercase tracking-wide mb-3">
+          <h2 className="text-amber-600 text-xs sm:text-sm font-semibold uppercase tracking-wide mb-3">
             Welcome to Our Blog
           </h2>
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
+          <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
             Discover Insights, Tips & Stories
           </h1>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 max-w-xl mx-auto md:mx-0">
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-6 max-w-xl mx-auto md:mx-0">
             Explore high-quality articles on design, development, tech trends, and eCommerce strategies written by professionals.
           </p>
           <motion.a
             href="#latest-blogs"
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-5 py-3 font-semibold rounded-lg hover:bg-yellow-300 transition-colors mx-auto md:mx-0"
+            className="inline-flex items-center gap-2 bg-amber-600 text-gray-900 px-5 py-3 font-semibold rounded-lg hover:bg-amber-500 transition-colors mx-auto md:mx-0"
           >
             Read Latest Blogs <ArrowRight size={18} />
           </motion.a>

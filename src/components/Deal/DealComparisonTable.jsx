@@ -29,7 +29,7 @@ const DealComparisonTable = () => {
       aria-label="Compare subscription plans"
       className="w-full max-w-[1100px] mx-auto px-4 py-20 mb-[-100px]"
     >
-      <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white mb-16 select-none">
+      <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900 mb-16 select-none">
         Compare Our Plans
       </h2>
 
@@ -43,8 +43,8 @@ const DealComparisonTable = () => {
               relative flex flex-col justify-between rounded-3xl p-8 border-2 transition duration-300
               ${
                 plan.isBest
-                  ? 'bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 border-indigo-500 text-white shadow-xl scale-105 z-10'
-                  : 'bg-gray-800 border-gray-700 text-gray-200 hover:shadow-2xl hover:scale-[1.02]'
+                  ? 'bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 border-indigo-500 text-gray-900 shadow-xl scale-105 z-10'
+                  : 'bg-white border-gray-200 text-gray-700 hover:shadow-2xl hover:scale-[1.02]'
               }
             `}
           >
@@ -80,7 +80,7 @@ const DealComparisonTable = () => {
                 ${
                   plan.isBest
                     ? 'bg-white text-indigo-800 hover:bg-gray-100 focus:ring-indigo-500 focus:ring-offset-indigo-900'
-                    : 'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-400 focus:ring-offset-gray-900'
+                    : 'bg-white text-gray-900 hover:bg-gray-50 focus:ring-gray-400 focus:ring-offset-gray-900'
                 }
               `}
             >

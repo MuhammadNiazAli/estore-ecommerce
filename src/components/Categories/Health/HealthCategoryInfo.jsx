@@ -5,8 +5,8 @@ const HealthCategoryInfo = () => {
   return (
     <section
       className="
-        bg-gray-900 
-        text-yellow-400 
+        bg-white 
+        text-amber-600 
         max-w-[1000px] 
         w-full 
         mx-auto 
@@ -22,7 +22,7 @@ const HealthCategoryInfo = () => {
         products that help you maintain an active and balanced lifestyle —
         from fitness gear and supplements to personal care essentials.
       </p>
-      <p className="text-yellow-300 italic">
+      <p className="text-amber-500 italic">
         Invest in your health today for a better tomorrow.
       </p>
     </section>

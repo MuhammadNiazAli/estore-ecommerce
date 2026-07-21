@@ -64,7 +64,7 @@ const CartActionButtons = ({
 
   return (
     <section
-      className="w-full bg-gray-900 text-white px-4 sm:px-6 py-5 border-t border-gray-800"
+      className="w-full bg-white text-gray-900 px-4 sm:px-6 py-5 border-t border-gray-200"
       aria-label="Cart action buttons"
     >
       <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-4 sm:gap-6 flex-wrap">
@@ -74,7 +74,7 @@ const CartActionButtons = ({
             type="button"
             aria-label="Continue Shopping"
             onClick={onContinueShopping}
-            className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+            className="flex items-center gap-2 text-gray-700 hover:text-amber-600 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
           >
             <ArrowLeftIcon className="w-4 h-4" />
             <span>Continue Shopping</span>
@@ -98,7 +98,7 @@ const CartActionButtons = ({
               type="button"
               aria-label="Apply Promo Code"
               onClick={handleApplyClick}
-              className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 text-sm font-semibold px-5 py-2.5 rounded-full shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-gray-900 text-sm font-semibold px-5 py-2.5 rounded-full shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 w-full sm:w-auto justify-center"
             >
               <TagIcon className="w-4 h-4" />
               <span>Apply Promo Code</span>
@@ -107,7 +107,7 @@ const CartActionButtons = ({
 
           {promoOpen && (
             <div
-              className="flex items-center gap-2 bg-gray-800 rounded-full shadow px-4 py-2 max-w-xs sm:max-w-sm w-full"
+              className="flex items-center gap-2 bg-white rounded-full shadow px-4 py-2 max-w-xs sm:max-w-sm w-full"
               role="region"
               aria-live="polite"
               aria-atomic="true"
@@ -121,8 +121,8 @@ const CartActionButtons = ({
                   setPromoCode(e.target.value.toUpperCase());
                   setPromoStatus(null);
                 }}
-                className={`flex-grow bg-transparent text-white placeholder-gray-400 focus:outline-none ${
-                  promoStatus === 'error' ? 'border-b border-red-500' : 'border-b border-yellow-400'
+                className={`flex-grow bg-transparent text-gray-900 placeholder-gray-400 focus:outline-none ${
+                  promoStatus === 'error' ? 'border-b border-red-500' : 'border-b border-amber-600'
                 } transition duration-200`}
                 placeholder="Enter promo code"
                 maxLength={20}
@@ -144,7 +144,7 @@ const CartActionButtons = ({
                 type="button"
                 onClick={handlePromoSubmit}
                 disabled={isApplying}
-                className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-3 py-1 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-yellow-400 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="bg-amber-600 hover:bg-amber-500 text-gray-900 px-3 py-1 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {isApplying ? (
                   <svg
@@ -181,7 +181,7 @@ const CartActionButtons = ({
                   setIsApplying(false);
                 }}
                 aria-label="Close promo code input"
-                className="text-gray-400 hover:text-yellow-400 transition focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded"
+                className="text-gray-600 hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
               >
                 <XMarkIcon className="w-5 h-5" />
               </button>

@@ -9,7 +9,7 @@ const trackingSteps = [
     description: 'Your order has been confirmed.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -26,7 +26,7 @@ const trackingSteps = [
     description: 'Your order has been packed and is ready for shipment.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -43,7 +43,7 @@ const trackingSteps = [
     description: 'Your order has been shipped.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -60,7 +60,7 @@ const trackingSteps = [
     description: 'Your package is on the way.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -77,7 +77,7 @@ const trackingSteps = [
     description: 'Your package is out for delivery.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -94,7 +94,7 @@ const trackingSteps = [
     description: 'Your package will be delivered today.',
     icon: (
       <svg
-        className="w-5 h-5 text-white"
+        className="w-5 h-5 text-gray-900"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -110,7 +110,7 @@ const trackingSteps = [
 // Tick icon for completed steps
 const TickIcon = () => (
   <svg
-    className="w-5 h-5 text-white"
+    className="w-5 h-5 text-gray-900"
     fill="none"
     stroke="currentColor"
     strokeWidth="3"
@@ -125,9 +125,9 @@ const ShippingTracker = ({ currentStep = 3 }) => {
   return (
     <section
       aria-label="Shipping tracker"
-      className="max-w-[1000px] mx-auto px-6 py-16 sm:py-24 text-gray-300 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-lg shadow-lg my-5"
+      className="max-w-[1000px] mx-auto px-6 py-16 sm:py-24 text-gray-700 bg-gradient-to-r from-white via-white to-white rounded-lg shadow-lg my-5"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-12 text-center drop-shadow-lg tracking-wide">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-12 text-center drop-shadow-lg tracking-wide">
         Track Your Shipment
       </h2>
 
@@ -147,7 +147,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
                       ? 'bg-amber-400 ring-amber-400'
                       : isActive
                       ? 'bg-amber-400 ring-amber-500 animate-pulse'
-                      : 'bg-transparent ring-2 ring-gray-600 group-hover:ring-amber-400'
+                      : 'bg-transparent ring-2 ring-gray-200 group-hover:ring-amber-400'
                   }
                 `}
                 aria-current={isActive ? 'step' : undefined}
@@ -159,7 +159,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
                   icon
                 ) : (
                   // For upcoming steps: empty circle, no icon
-                  <span className="w-3 h-3 rounded-full bg-gray-600 group-hover:bg-amber-400 transition-colors" />
+                  <span className="w-3 h-3 rounded-full bg-white group-hover:bg-amber-400 transition-colors" />
                 )}
               </span>
 
@@ -174,13 +174,13 @@ const ShippingTracker = ({ currentStep = 3 }) => {
                 </time>
                 <h3
                   className={`text-lg sm:text-xl font-semibold mb-1 transition-colors ${
-                    isActive ? 'text-white' : 'text-gray-300'
+                    isActive ? 'text-gray-900' : 'text-gray-700'
                   }`}
                 >
                   {status}
                 </h3>
                 <p
-                  className={`text-gray-400 max-w-xl leading-relaxed transition-opacity ${
+                  className={`text-gray-600 max-w-xl leading-relaxed transition-opacity ${
                     isActive ? 'opacity-100' : 'opacity-70'
                   }`}
                 >
@@ -190,7 +190,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
 
               {/* Tooltip */}
               <div
-                className="absolute left-12 top-0 -translate-x-full max-w-xs rounded-md bg-gray-800 bg-opacity-90 p-3 text-sm text-white opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity shadow-lg z-20"
+                className="absolute left-12 top-0 -translate-x-full max-w-xs rounded-md bg-white bg-opacity-90 p-3 text-sm text-gray-900 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity shadow-lg z-20"
                 role="tooltip"
               >
                 <p>{description}</p>

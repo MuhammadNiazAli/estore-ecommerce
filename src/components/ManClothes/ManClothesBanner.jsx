@@ -36,7 +36,7 @@ const ManClothesBanner = () => {
       />
 
       {/* ✅ Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-white/50"></div>
 
       {/* ✅ Content Section */}
       <motion.div
@@ -46,34 +46,34 @@ const ManClothesBanner = () => {
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 h-full flex flex-col justify-center"
       >
         {/* Discount Badge */}
-        <div className="bg-yellow-400 text-black font-semibold text-xs sm:text-sm px-3 py-1 rounded-full w-fit mb-4 shadow-md">
+        <div className="bg-amber-600 text-black font-semibold text-xs sm:text-sm px-3 py-1 rounded-full w-fit mb-4 shadow-md">
            Limited Time Deal
         </div>
 
         {/* ✅ Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white max-w-2xl leading-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 max-w-2xl leading-tight mb-4">
           Upgrade Your Wardrobe with{" "}
-          <span className="text-yellow-400">Premium</span> Styles
+          <span className="text-amber-600">Premium</span> Styles
         </h1>
 
         {/* ✅ Subheading */}
-        <p className="text-base sm:text-lg text-gray-200 mb-6 max-w-xl">
+        <p className="text-base sm:text-lg text-gray-700 mb-6 max-w-xl">
           Discover exclusive jackets, coats, and suits crafted for elegance and comfort.
         </p>
 
         {/* ✅ Countdown Timer */}
-        <div className="flex items-center gap-2 text-white text-sm sm:text-base mb-6">
-          <span className="bg-gray-800 px-3 py-1 rounded-lg font-semibold">
+        <div className="flex items-center gap-2 text-gray-900 text-sm sm:text-base mb-6">
+          <span className="bg-white px-3 py-1 rounded-lg font-semibold">
             ⏳ Deal Ends In: {formatTime(timeLeft)}
           </span>
         </div>
 
         {/* ✅ Buttons */}
         <div className="flex flex-wrap gap-4">
-          <button className="flex items-center gap-2 bg-yellow-500 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-yellow-400 transition text-sm sm:text-base">
+          <button className="flex items-center gap-2 bg-amber-700 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-amber-600 transition text-sm sm:text-base">
             <ShoppingCart size={18} /> Shop Now
           </button>
-          <button className="flex items-center gap-2 border border-yellow-400 text-yellow-400 px-5 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-yellow-400 hover:text-black transition text-sm sm:text-base">
+          <button className="flex items-center gap-2 border border-amber-600 text-amber-600 px-5 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-amber-600 hover:text-black transition text-sm sm:text-base">
             View Collection <ArrowRight size={18} />
           </button>
         </div>

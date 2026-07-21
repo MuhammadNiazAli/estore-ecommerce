@@ -89,16 +89,16 @@ const GiftCardPurchaseForm = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="max-w-[900px] mx-auto bg-gray-900 text-white rounded-3xl shadow-2xl p-8 space-y-6"
+      className="max-w-[900px] mx-auto bg-white text-gray-900 rounded-3xl shadow-2xl p-8 space-y-6"
       aria-label="Purchase gift card form"
       noValidate
       autoComplete="off"
     >
-      <h2 className="text-3xl font-extrabold mb-6 text-yellow-300 select-none">Purchase Gift Card</h2>
+      <h2 className="text-3xl font-extrabold mb-6 text-amber-500 select-none">Purchase Gift Card</h2>
 
       {/* Recipient Email */}
       <div>
-        <label htmlFor="recipientEmail" className="block mb-1 font-semibold text-yellow-300">
+        <label htmlFor="recipientEmail" className="block mb-1 font-semibold text-amber-500">
           Recipient Email <span className="text-red-500">*</span>
         </label>
         <input
@@ -108,7 +108,7 @@ const GiftCardPurchaseForm = () => {
           value={formData.recipientEmail}
           onChange={handleChange}
           placeholder="recipient@example.com"
-          className={`w-full rounded-md px-4 py-2 bg-gray-800 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
             errors.recipientEmail ? 'ring-2 ring-red-600' : ''
           }`}
           aria-invalid={errors.recipientEmail ? 'true' : 'false'}
@@ -126,7 +126,7 @@ const GiftCardPurchaseForm = () => {
 
       {/* Amount */}
       <div>
-        <label htmlFor="amount" className="block mb-1 font-semibold text-yellow-300">
+        <label htmlFor="amount" className="block mb-1 font-semibold text-amber-500">
           Amount (USD) <span className="text-red-500">*</span>
         </label>
 
@@ -139,9 +139,9 @@ const GiftCardPurchaseForm = () => {
               disabled={loading}
               className={`px-4 py-2 rounded-full font-semibold transition ${
                 formData.amount === amt.toString()
-                  ? 'bg-yellow-400 text-black shadow-lg'
-                  : 'bg-yellow-200 text-black hover:bg-yellow-300'
-              } focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                  ? 'bg-amber-600 text-black shadow-lg'
+                  : 'bg-amber-400 text-black hover:bg-amber-500'
+              } focus:outline-none focus:ring-2 focus:ring-amber-600`}
               aria-pressed={formData.amount === amt.toString()}
             >
               ${amt}
@@ -158,7 +158,7 @@ const GiftCardPurchaseForm = () => {
           value={formData.amount}
           onChange={handleChange}
           placeholder="Enter custom amount"
-          className={`w-full rounded-md px-4 py-2 bg-gray-800 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition ${
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
             errors.amount ? 'ring-2 ring-red-600' : ''
           }`}
           aria-invalid={errors.amount ? 'true' : 'false'}
@@ -175,7 +175,7 @@ const GiftCardPurchaseForm = () => {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block mb-1 font-semibold text-yellow-300">
+        <label htmlFor="message" className="block mb-1 font-semibold text-amber-500">
           Personal Message (optional)
         </label>
         <textarea
@@ -186,14 +186,14 @@ const GiftCardPurchaseForm = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Write a personal message..."
-          className={`w-full rounded-md px-4 py-2 bg-gray-800 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none transition ${
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-none transition ${
             errors.message ? 'ring-2 ring-red-600' : ''
           }`}
           aria-invalid={errors.message ? 'true' : 'false'}
           aria-describedby={errors.message ? 'message-error' : undefined}
           disabled={loading}
         />
-        <p className="text-yellow-200 text-sm mt-1 select-none">{formData.message.length}/200</p>
+        <p className="text-amber-400 text-sm mt-1 select-none">{formData.message.length}/200</p>
         {errors.message && (
           <p id="message-error" className="text-red-500 mt-1 text-sm" role="alert">
             {errors.message}
@@ -206,7 +206,7 @@ const GiftCardPurchaseForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="flex-grow py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-md hover:bg-yellow-300 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="flex-grow py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
           aria-label="Submit gift card purchase"
         >
           {loading ? (
@@ -239,7 +239,7 @@ const GiftCardPurchaseForm = () => {
           type="button"
           onClick={handleClear}
           disabled={loading && !formData.recipientEmail && !formData.amount && !formData.message}
-          className="flex-grow py-3 bg-red-700 hover:bg-red-600 text-white font-semibold rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-grow py-3 bg-red-700 hover:bg-red-600 text-gray-900 font-semibold rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Clear form"
         >
           Clear
@@ -249,7 +249,7 @@ const GiftCardPurchaseForm = () => {
       {/* Success Message */}
       {successMessage && (
         <p
-          className="mt-4 flex items-center gap-2 text-yellow-400 font-semibold select-text"
+          className="mt-4 flex items-center gap-2 text-amber-600 font-semibold select-text"
           role="alert"
           aria-live="polite"
         >

@@ -4,7 +4,7 @@ const TermsContactInfo = () => {
   return (
     <section
       aria-labelledby="contact-info-title"
-      className="bg-gray-900 text-yellow-400 py-12 mb-[-150px]"
+      className="bg-white text-amber-600 py-12 mb-[-150px]"
     >
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
         <h2
@@ -15,18 +15,18 @@ const TermsContactInfo = () => {
           Contact Information
         </h2>
 
-        <p className="mt-6 text-yellow-300 leading-relaxed sm:text-lg">
+        <p className="mt-6 text-amber-500 leading-relaxed sm:text-lg">
           Have questions or need help? Reach out to us anytime via the channels below. We’re here to assist you quickly and effectively.
         </p>
 
-        <section className="mt-8 space-y-8 text-yellow-300 text-sm sm:text-base leading-relaxed">
+        <section className="mt-8 space-y-8 text-amber-500 text-sm sm:text-base leading-relaxed">
           <article>
             <h3 className="text-xl font-semibold mb-2">Email Support</h3>
             <p>
               For general inquiries or support, email us at{" "}
               <a
                 href="mailto:support@example.com"
-                className="underline hover:text-yellow-500 break-words"
+                className="underline hover:text-amber-700 break-words"
               >
                 support@example.com
               </a>
@@ -40,7 +40,7 @@ const TermsContactInfo = () => {
               Prefer to speak directly? Call us at{" "}
               <a
                 href="tel:+1234567890"
-                className="underline hover:text-yellow-500"
+                className="underline hover:text-amber-700"
               >
                 +1 (234) 567-890
               </a>{" "}
@@ -78,7 +78,7 @@ const TermsContactInfo = () => {
                   href="https://twitter.com/example"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-yellow-500"
+                  className="underline hover:text-amber-700"
                 >
                   Twitter
                 </a>
@@ -88,7 +88,7 @@ const TermsContactInfo = () => {
                   href="https://facebook.com/example"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-yellow-500"
+                  className="underline hover:text-amber-700"
                 >
                   Facebook
                 </a>
@@ -98,7 +98,7 @@ const TermsContactInfo = () => {
                   href="https://linkedin.com/company/example"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-yellow-500"
+                  className="underline hover:text-amber-700"
                 >
                   LinkedIn
                 </a>

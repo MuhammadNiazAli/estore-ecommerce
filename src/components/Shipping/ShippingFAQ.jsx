@@ -54,7 +54,7 @@ const ShippingFAQ = () => {
   return (
     <section
       aria-label="Shipping frequently asked questions"
-      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-300"
+      className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-700"
     >
       <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-14 text-center drop-shadow-lg tracking-wide select-none">
         Shipping FAQs
@@ -66,7 +66,7 @@ const ShippingFAQ = () => {
           return (
             <div
               key={question}
-              className="bg-gray-900 rounded-xl shadow-lg overflow-hidden cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-amber-400"
+              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-amber-400"
               onClick={() => toggleIndex(i)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -84,7 +84,7 @@ const ShippingFAQ = () => {
                 <h3
                   id={`faq-question-${i}`}
                   className={`text-lg sm:text-xl font-semibold transition-colors ${
-                    isOpen ? 'text-amber-400' : 'text-gray-300'
+                    isOpen ? 'text-amber-400' : 'text-gray-700'
                   } hover:text-amber-400 underline decoration-amber-600 underline-offset-4`}
                 >
                   {question}
@@ -108,7 +108,7 @@ const ShippingFAQ = () => {
                     exit="collapsed"
                     variants={answerVariants}
                     style={{ originY: 0 }}
-                    className="bg-gray-800 bg-opacity-70 px-6 sm:px-8 text-gray-300 text-base sm:text-lg leading-relaxed"
+                    className="bg-white bg-opacity-70 px-6 sm:px-8 text-gray-700 text-base sm:text-lg leading-relaxed"
                   >
                     {answer}
                   </motion.div>

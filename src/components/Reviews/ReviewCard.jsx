@@ -50,7 +50,7 @@ const ReviewCard = ({
 
   return (
     <article
-      className="bg-gray-900 rounded-xl p-6 shadow-md border border-gray-800 text-white h-full flex flex-col transition-transform hover:scale-[1.02]"
+      className="bg-white rounded-xl p-6 shadow-md border border-gray-200 text-gray-900 h-full flex flex-col transition-transform hover:scale-[1.02]"
       aria-label={`Review by ${name}, rated ${rating} out of 5 stars`}
     >
       <header className="flex items-center gap-4 mb-3">
@@ -68,7 +68,7 @@ const ReviewCard = ({
         )}
 
         <div className="flex flex-col flex-grow min-w-0">
-          <div className="flex items-center gap-2 font-semibold text-white">
+          <div className="flex items-center gap-2 font-semibold text-gray-900">
             <h3 className="text-lg truncate">{name}</h3>
             {verified && (
               <span
@@ -82,7 +82,7 @@ const ReviewCard = ({
           </div>
           <time
             dateTime={new Date(date).toISOString()}
-            className="text-sm text-gray-400 whitespace-nowrap"
+            className="text-sm text-gray-600 whitespace-nowrap"
           >
             Reviewed: {new Date(date).toLocaleDateString(undefined, {
               year: 'numeric',
@@ -147,7 +147,7 @@ const ReviewCard = ({
       )}
 
       {/* Review Text */}
-      <p className="text-gray-300 leading-relaxed text-sm sm:text-base flex-grow mb-3">{text}</p>
+      <p className="text-gray-700 leading-relaxed text-sm sm:text-base flex-grow mb-3">{text}</p>
 
       {/* Pros and Cons */}
       <div className="mb-3 flex gap-6 flex-wrap">
@@ -188,7 +188,7 @@ const ReviewCard = ({
 
       {/* Response from support */}
       {response ? (
-        <blockquote className="border-l-4 border-amber-600 pl-4 italic text-gray-400 text-sm mb-3 select-text">
+        <blockquote className="border-l-4 border-amber-600 pl-4 italic text-gray-600 text-sm mb-3 select-text">
           <p>{response.text}</p>
           <footer className="mt-1 text-xs font-semibold text-amber-400">
             — {response.responder},{' '}
@@ -207,7 +207,7 @@ const ReviewCard = ({
       )}
 
       {/* Likes / Dislikes */}
-      <footer className="mt-auto flex items-center gap-4 text-gray-400 text-sm select-none">
+      <footer className="mt-auto flex items-center gap-4 text-gray-600 text-sm select-none">
         <button
           onClick={toggleLike}
           aria-pressed={liked}
@@ -247,14 +247,14 @@ const ReviewsList = ({ reviews }) => {
   return (
     <section
       aria-label="Customer Reviews"
-      className="max-w-7xl mx-auto my-[-130px] mb-[-15px] px-4 sm:px-6 py-16 sm:py-20 text-white"
+      className="max-w-7xl mx-auto my-[-130px] mb-[-15px] px-4 sm:px-6 py-16 sm:py-20 text-gray-900"
     >
       <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-10 text-center drop-shadow-md">
         Customer Reviews
       </h2>
 
       {reviews.length === 0 ? (
-        <p className="text-center text-gray-400">No reviews available.</p>
+        <p className="text-center text-gray-600">No reviews available.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
           {reviews.map((review) => (

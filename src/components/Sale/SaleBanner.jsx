@@ -12,27 +12,27 @@ const SaleBanner = () => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/30 flex items-center justify-center text-center px-6">
-          <div className="text-white max-w-lg">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/30 flex items-center justify-center text-center px-6">
+          <div className="text-gray-900 max-w-lg">
             {/* Small Label */}
-            <p className="text-yellow-400 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
+            <p className="text-amber-600 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
               Limited Time Offer
             </p>
 
             {/* Main Heading */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-              Flash Sale <span className="text-yellow-400">Up to 70% OFF</span>
+              Flash Sale <span className="text-amber-600">Up to 70% OFF</span>
             </h2>
 
             {/* Subtext */}
-            <p className="mt-3 text-gray-300 text-sm sm:text-lg">
+            <p className="mt-3 text-gray-700 text-sm sm:text-lg">
               Shop your favorite products now. Hurry, this deal won’t last long!
             </p>
 
             {/* CTA Button */}
             <a
               href="#sale-products"
-              className="mt-6 inline-block px-8 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-full shadow-md hover:bg-yellow-300 hover:scale-105 transition-transform duration-300"
+              className="mt-6 inline-block px-8 py-3 bg-amber-600 text-gray-900 font-semibold rounded-full shadow-md hover:bg-amber-500 hover:scale-105 transition-transform duration-300"
             >
               Shop Now
             </a>

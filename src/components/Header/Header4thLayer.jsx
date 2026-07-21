@@ -99,7 +99,7 @@ function Header4thLayer() {
   }, []);
 
   return (
-    <div className="hidden md:block border-t border-gray-800 bg-gray-900 select-none">
+    <div className="hidden md:block border-t border-gray-200 bg-white select-none">
       <div
         className="max-w-screen-xl mx-auto px-6 py-3 flex flex-wrap justify-center gap-5"
         style={{ minHeight: 64 }}
@@ -115,7 +115,7 @@ function Header4thLayer() {
               href={href}
               title={label}
               tabIndex={0}
-              className="magnet-icon group relative flex flex-col items-center text-gray-300 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 rounded cursor-pointer"
+              className="magnet-icon group relative flex flex-col items-center text-gray-700 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 rounded cursor-pointer"
               style={{ width: 48, minWidth: 48 }}
             >
               <Icon size={20} aria-hidden="true" />

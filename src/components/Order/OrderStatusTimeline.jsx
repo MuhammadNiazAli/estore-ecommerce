@@ -63,7 +63,7 @@ const OrderStatusTimeline = () => {
   return (
     <section
       aria-label="Order status timeline"
-      className="max-w-3xl mx-auto px-6 py-10 rounded-2xl bg-gray-900 text-white space-y-10 mb-[-50px]"
+      className="max-w-3xl mx-auto px-6 py-10 rounded-2xl bg-white text-gray-900 space-y-10 mb-[-50px]"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-blue-400 mb-6 tracking-tight">
         Order Status
@@ -79,7 +79,7 @@ const OrderStatusTimeline = () => {
           return (
             <li
               key={step.id}
-              className="relative mb-12 group transition-all duration-300 hover:bg-gray-800/50 rounded-xl pl-4 pb-4"
+              className="relative mb-12 group transition-all duration-300 hover:bg-white/50 rounded-xl pl-4 pb-4"
             >
               {/* Connector Line */}
               {!isLast && (
@@ -91,12 +91,12 @@ const OrderStatusTimeline = () => {
 
               {/* Step Icon */}
               <span
-                className={`absolute -left-5 top-2 z-10 w-9 h-9 flex items-center justify-center rounded-full ring-4 ring-gray-900 transition-all duration-300 
+                className={`absolute -left-5 top-2 z-10 w-9 h-9 flex items-center justify-center rounded-full ring-4 ring-gray-200 transition-all duration-300 
                 ${isCompleted
-                    ? 'bg-blue-600 text-white shadow-md'
+                    ? 'bg-blue-600 text-gray-900 shadow-md'
                     : isCurrent
-                    ? 'bg-yellow-400 text-black animate-pulse ring-yellow-300'
-                    : 'bg-gray-700 text-gray-400 group-hover:bg-gray-600 group-hover:text-gray-200'
+                    ? 'bg-amber-600 text-black animate-pulse ring-amber-500'
+                    : 'bg-white text-gray-600 group-hover:bg-gray-50 group-hover:text-gray-700'
                 }`}
               >
                 {React.cloneElement(step.icon, { size: 18 })}
@@ -107,10 +107,10 @@ const OrderStatusTimeline = () => {
                 <h3
                   className={`text-lg sm:text-xl font-semibold ${
                     isCompleted
-                      ? 'text-white'
+                      ? 'text-gray-900'
                       : isCurrent
-                      ? 'text-yellow-300'
-                      : 'text-gray-400'
+                      ? 'text-amber-500'
+                      : 'text-gray-600'
                   }`}
                 >
                   {step.title}
@@ -128,10 +128,10 @@ const OrderStatusTimeline = () => {
                 <p
                   className={`max-w-xl text-sm leading-relaxed transition ${
                     isCompleted
-                      ? 'text-gray-300'
+                      ? 'text-gray-700'
                       : isCurrent
-                      ? 'text-yellow-200'
-                      : 'text-gray-500 group-hover:text-gray-400 italic'
+                      ? 'text-amber-400'
+                      : 'text-gray-500 group-hover:text-gray-600 italic'
                   }`}
                 >
                   {step.description}

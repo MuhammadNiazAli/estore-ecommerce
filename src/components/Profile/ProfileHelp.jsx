@@ -82,11 +82,11 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.3 }}
-          className="fixed top-1/2 left-1/2 z-[100] w-full max-w-md bg-gray-900 text-white p-6 rounded-xl shadow-xl -translate-x-1/2 -translate-y-1/2"
+          className="fixed top-1/2 left-1/2 z-[100] w-full max-w-md bg-white text-gray-900 p-6 rounded-xl shadow-xl -translate-x-1/2 -translate-y-1/2"
         >
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-bold text-yellow-400">Contact Support</h3>
-            <button onClick={onClose} className="text-gray-400 hover:text-yellow-400">
+            <h3 className="text-xl font-bold text-amber-600">Contact Support</h3>
+            <button onClick={onClose} className="text-gray-600 hover:text-amber-600">
               <XMarkIcon className="w-6 h-6" />
             </button>
           </div>
@@ -99,9 +99,9 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 rounded-md bg-gray-800 text-white border ${
-                  errors.name ? 'border-red-500' : 'border-gray-700'
-                } focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
+                  errors.name ? 'border-red-500' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-amber-600`}
               />
               {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
@@ -113,9 +113,9 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 rounded-md bg-gray-800 text-white border ${
-                  errors.email ? 'border-red-500' : 'border-gray-700'
-                } focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
+                  errors.email ? 'border-red-500' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-amber-600`}
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -127,9 +127,9 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 rows="4"
                 value={form.message}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 rounded-md bg-gray-800 text-white border ${
-                  errors.message ? 'border-red-500' : 'border-gray-700'
-                } focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-y`}
+                className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
+                  errors.message ? 'border-red-500' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-amber-600 resize-y`}
               />
               {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
@@ -137,7 +137,7 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
             <button
               type="submit"
               disabled={submitted}
-              className="w-full bg-yellow-400 text-gray-900 font-semibold py-3 rounded-full hover:bg-yellow-300 transition"
+              className="w-full bg-amber-600 text-gray-900 font-semibold py-3 rounded-full hover:bg-amber-500 transition"
             >
               {submitted ? 'Sending...' : 'Send Message'}
             </button>
@@ -167,17 +167,17 @@ const ProfileHelp = () => {
 
   return (
     <>
-      <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12 mb-[-100px]">
+      <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-8 sm:py-12 mb-[-100px]">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-yellow-400 mb-1">Help & Support</h2>
-              <p className="text-gray-300">Find answers or get in touch with our support team.</p>
+              <h2 className="text-3xl font-bold text-amber-600 mb-1">Help & Support</h2>
+              <p className="text-gray-700">Find answers or get in touch with our support team.</p>
             </div>
-            <div className="flex items-center gap-2 text-yellow-300 font-semibold text-sm">
+            <div className="flex items-center gap-2 text-amber-500 font-semibold text-sm">
               <LifebuoyIcon className="w-6 h-6 animate-pulse" />
-              FAQs <span className="ml-1 bg-yellow-400 text-black rounded-full px-2 text-xs">{faqsData.length}</span>
+              FAQs <span className="ml-1 bg-amber-600 text-black rounded-full px-2 text-xs">{faqsData.length}</span>
             </div>
           </div>
 
@@ -188,32 +188,32 @@ const ProfileHelp = () => {
               placeholder="Search FAQs..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              className="w-full max-w-md px-4 py-2 rounded-md bg-white border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
             />
           </div>
 
           {/* FAQ List */}
           <div className="space-y-4">
             {filteredFaqs.length === 0 && (
-              <p className="text-center text-gray-400">No FAQs found for your search.</p>
+              <p className="text-center text-gray-600">No FAQs found for your search.</p>
             )}
 
             {filteredFaqs.map(({ id, question, answer }) => {
               const isOpen = openFAQ === id;
               return (
-                <div key={id} className="bg-gray-800 rounded-lg overflow-hidden">
+                <div key={id} className="bg-white rounded-lg overflow-hidden">
                   <button
                     onClick={() => toggleFAQ(id)}
                     className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
                   >
                     <div className="flex items-center gap-2">
-                      <QuestionMarkCircleIcon className="w-5 h-5 text-yellow-400" />
+                      <QuestionMarkCircleIcon className="w-5 h-5 text-amber-600" />
                       <span className="text-lg font-semibold">{question}</span>
                     </div>
                     {isOpen ? (
-                      <ChevronUpIcon className="w-5 h-5 text-yellow-400" />
+                      <ChevronUpIcon className="w-5 h-5 text-amber-600" />
                     ) : (
-                      <ChevronDownIcon className="w-5 h-5 text-yellow-400" />
+                      <ChevronDownIcon className="w-5 h-5 text-amber-600" />
                     )}
                   </button>
 
@@ -226,7 +226,7 @@ const ProfileHelp = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                        className="px-6 pb-4 text-gray-300 text-sm"
+                        className="px-6 pb-4 text-gray-700 text-sm"
                       >
                         {answer}
                       </motion.div>
@@ -241,7 +241,7 @@ const ProfileHelp = () => {
           <div className="mt-10 text-center sm:text-right">
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition"
+              className="inline-flex items-center gap-2 bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-500 transition"
             >
               <LifebuoyIcon className="w-5 h-5" />
               Contact Support

@@ -24,7 +24,7 @@ import ProfileHelp from '@/components/Profile/ProfileHelp';
 
 const ProfilePage = () => {
   return (
-    <main className="min-h-screen bg-[#101828] text-white flex flex-col items-center justify-start px-4 py-12 lg:py-20 space-y-10">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-start px-4 py-12 lg:py-20 space-y-10">
 
       {/* Essential Sections */}
       <ProfileHero />

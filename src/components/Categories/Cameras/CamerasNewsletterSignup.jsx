@@ -20,20 +20,20 @@ const CamerasNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-4 my-[-30px]">
+    <section className="bg-white text-gray-900 py-16 px-4 my-[-30px]">
       <div className="max-w-[900px] mx-auto text-center">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-yellow-400">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600">
           Stay Updated with the Latest Cameras
         </h2>
-        <p className="text-gray-400 mb-8 text-lg max-w-xl mx-auto">
+        <p className="text-gray-600 mb-8 text-lg max-w-xl mx-auto">
           Get exclusive deals, new product launches, and photography tips delivered to your inbox.
         </p>
 
         {/* Form */}
         <motion.form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row justify-center items-center gap-4 bg-gray-800 p-4 rounded-2xl shadow-lg max-w-2xl mx-auto"
+          className="flex flex-col sm:flex-row justify-center items-center gap-4 bg-white p-4 rounded-2xl shadow-lg max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -43,11 +43,11 @@ const CamerasNewsletterSignup = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full sm:flex-1 px-4 py-3 rounded-full bg-gray-900 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full sm:flex-1 px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
           />
           <button
             type="submit"
-            className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-yellow-300 transition duration-300"
+            className="bg-amber-600 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-amber-500 transition duration-300"
           >
             Subscribe <FaPaperPlane />
           </button>

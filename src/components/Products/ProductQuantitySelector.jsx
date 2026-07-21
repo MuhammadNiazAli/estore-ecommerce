@@ -18,16 +18,16 @@ const ProductQuantitySelector = ({
   const decrement = () => updateQuantity(quantity - 1);
 
   return (
-    <div className="inline-flex items-center space-x-2 border border-gray-300 rounded-md overflow-hidden bg-white dark:bg-gray-800 dark:border-gray-700 shadow-sm">
+    <div className="inline-flex items-center space-x-2 border border-gray-300 rounded-md overflow-hidden bg-white dark:bg-white dark:border-gray-200 shadow-sm">
       <button
         type="button"
         onClick={decrement}
         disabled={quantity <= min}
         aria-label="Decrease quantity"
-        className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors ${
+        className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-700 transition-colors ${
           quantity <= min
             ? "cursor-not-allowed opacity-50"
-            : "hover:bg-gray-100 dark:hover:bg-gray-700"
+            : "hover:bg-gray-100 dark:hover:bg-gray-50"
         }`}
       >
         −
@@ -38,7 +38,7 @@ const ProductQuantitySelector = ({
         max={max}
         value={quantity}
         onChange={(e) => updateQuantity(e.target.value)}
-        className="w-16 text-center bg-transparent outline-none font-medium text-gray-900 dark:text-white"
+        className="w-16 text-center bg-transparent outline-none font-medium text-gray-900 dark:text-gray-900"
         aria-label="Quantity input"
       />
       <button
@@ -46,10 +46,10 @@ const ProductQuantitySelector = ({
         onClick={increment}
         disabled={quantity >= max}
         aria-label="Increase quantity"
-        className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-300 transition-colors ${
+        className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-700 transition-colors ${
           quantity >= max
             ? "cursor-not-allowed opacity-50"
-            : "hover:bg-gray-100 dark:hover:bg-gray-700"
+            : "hover:bg-gray-100 dark:hover:bg-gray-50"
         }`}
       >
         +

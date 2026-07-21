@@ -4,7 +4,7 @@ const TermsDefinitions = () => {
   return (
     <section
       aria-labelledby="definitions-title"
-      className="bg-gray-900 text-yellow-400 py-12"
+      className="bg-white text-amber-600 py-12"
     >
       <div className="max-w-3xl mx-auto px-6 sm:px-8" style={{ boxSizing: "border-box" }}>
         <h2
@@ -15,7 +15,7 @@ const TermsDefinitions = () => {
           Key Definitions
         </h2>
 
-        <dl className="mt-8 space-y-8 text-yellow-300 text-sm sm:text-base leading-relaxed max-w-full">
+        <dl className="mt-8 space-y-8 text-amber-500 text-sm sm:text-base leading-relaxed max-w-full">
           <div>
             <dt className="font-semibold text-lg sm:text-xl">User</dt>
             <dd className="mt-2 ml-6">

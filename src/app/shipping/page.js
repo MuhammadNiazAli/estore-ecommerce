@@ -11,7 +11,7 @@ import ShippingTracker from '@/components/Shipping/ShippingTracker';
 
 export default function ShippingPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-gray-50 flex flex-col items-center justify-start px-4 pt-20 max-w-[1200px] mx-auto">
+    <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center justify-start px-4 pt-20 max-w-[1200px] mx-auto">
       <ShippingHero />
       <ShippingOptions />
       <ShippingRates />

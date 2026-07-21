@@ -224,15 +224,15 @@ const WishlistedItemsGrid = () => {
   };
 
   return (
-    <section className="bg-gray-900 p-6 max-w-7xl mx-auto rounded-b-xl">
-      <h2 className="text-yellow-400 text-3xl font-extrabold mb-6 text-center sm:text-left">
+    <section className="bg-white p-6 max-w-7xl mx-auto rounded-b-xl">
+      <h2 className="text-amber-600 text-3xl font-extrabold mb-6 text-center sm:text-left">
         Your Wishlist
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {dummyItems.slice(0, visibleCount).map((item) => (
           <div
             key={item.id}
-            className="bg-gray-800 rounded-lg shadow-lg p-5 flex flex-col transition-transform hover:scale-[1.03] duration-300"
+            className="bg-white rounded-lg shadow-lg p-5 flex flex-col transition-transform hover:scale-[1.03] duration-300"
           >
             <img
               src={item.image}
@@ -240,21 +240,21 @@ const WishlistedItemsGrid = () => {
               className="w-full h-48 object-cover rounded-md mb-4"
               loading="lazy"
             />
-            <h3 className="text-yellow-400 font-semibold text-xl truncate mb-1">
+            <h3 className="text-amber-600 font-semibold text-xl truncate mb-1">
               {item.title}
             </h3>
-            <p className="text-yellow-300 text-sm line-clamp-3 mb-3">{item.description}</p>
+            <p className="text-amber-500 text-sm line-clamp-3 mb-3">{item.description}</p>
             <div className="flex justify-between items-center mb-3">
               <div>
-                <span className="text-yellow-400 font-bold text-lg">${item.price}</span>{' '}
+                <span className="text-amber-600 font-bold text-lg">${item.price}</span>{' '}
                 <span className="line-through text-gray-600 text-sm">${item.oldPrice}</span>
               </div>
-              <div className="text-yellow-400 font-semibold">{item.rating}⭐</div>
+              <div className="text-amber-600 font-semibold">{item.rating}⭐</div>
             </div>
 
             <Link
               href={`/product/${item.id}`}
-              className="mt-auto bg-yellow-500 hover:bg-yellow-600 transition-colors rounded-md py-2 text-gray-900 font-semibold text-center block"
+              className="mt-auto bg-amber-700 hover:bg-amber-800 transition-colors rounded-md py-2 text-gray-900 font-semibold text-center block"
               aria-label={`Add ${item.title} to cart`}
             >
               Add to Cart
@@ -267,7 +267,7 @@ const WishlistedItemsGrid = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={handleShowMore}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-6 rounded-lg shadow-md transition-colors"
+            className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-2 px-6 rounded-lg shadow-md transition-colors"
           >
             Show More
           </button>

@@ -38,11 +38,11 @@ const ClearanceFAQ = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white w-full py-12 px-4 sm:px-6 flex justify-center mb-[-100px]">
+    <section className="bg-white text-gray-900 w-full py-12 px-4 sm:px-6 flex justify-center mb-[-100px]">
       <div className="max-w-[1200px] w-full">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 leading-tight">
-          Frequently Asked <span className="text-yellow-400">Questions</span>
+          Frequently Asked <span className="text-amber-600">Questions</span>
         </h2>
 
         {/* FAQ List */}
@@ -50,7 +50,7 @@ const ClearanceFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl px-4 sm:px-6 py-4 sm:py-5 cursor-pointer hover:bg-gray-700 transition duration-300"
+              className="bg-white rounded-xl px-4 sm:px-6 py-4 sm:py-5 cursor-pointer hover:bg-gray-50 transition duration-300"
               onClick={() => toggleFAQ(index)}
               onKeyDown={(e) => e.key === 'Enter' || e.key === ' ' ? toggleFAQ(index) : null}
               role="button"
@@ -63,15 +63,15 @@ const ClearanceFAQ = () => {
                   {faq.question}
                 </h3>
                 <ChevronDown
-                  className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-400 transition-transform duration-300 ease-in-out ${
-                    activeIndex === index ? 'rotate-180 text-yellow-400' : ''
+                  className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-600 transition-transform duration-300 ease-in-out ${
+                    activeIndex === index ? 'rotate-180 text-amber-600' : ''
                   }`}
                 />
               </div>
 
               {/* Answer */}
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out text-gray-400 leading-relaxed ${
+                className={`overflow-hidden transition-all duration-500 ease-in-out text-gray-600 leading-relaxed ${
                   activeIndex === index ? 'max-h-40 mt-3 opacity-100' : 'max-h-0 opacity-0 mt-0'
                 }`}
               >

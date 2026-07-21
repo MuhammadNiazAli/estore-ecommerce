@@ -37,7 +37,7 @@ const FAQItem = ({ faq, isOpen, onToggle, index }) => {
 
   return (
     <div
-      className="bg-gray-800 rounded-2xl shadow-xl border border-yellow-700"
+      className="bg-white rounded-2xl shadow-xl border border-amber-900"
       role="region"
       aria-labelledby={`faq-btn-${index}`}
       tabIndex={-1}
@@ -59,18 +59,18 @@ const FAQItem = ({ faq, isOpen, onToggle, index }) => {
             w-full flex justify-between items-center
             px-6 sm:px-8 lg:px-10
             py-4 sm:py-6
-            text-left text-yellow-400 font-semibold
+            text-left text-amber-600 font-semibold
             text-lg sm:text-xl lg:text-2xl
             rounded-2xl
-            focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-500
-            hover:bg-yellow-600 hover:bg-opacity-20
+            focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-700
+            hover:bg-amber-800 hover:bg-opacity-20
             transition-colors duration-300
             select-none
           "
         >
           <span>{faq.question}</span>
           <svg
-            className={`w-6 h-6 sm:w-7 sm:h-7 text-yellow-400 transform transition-transform duration-400 ease-in-out ${
+            className={`w-6 h-6 sm:w-7 sm:h-7 text-amber-600 transform transition-transform duration-400 ease-in-out ${
               isOpen ? 'rotate-180' : 'rotate-0'
             }`}
             fill="none"
@@ -86,7 +86,7 @@ const FAQItem = ({ faq, isOpen, onToggle, index }) => {
 
       <dd
         id={`faq-desc-${index}`}
-        className="px-6 sm:px-8 lg:px-10 pt-0 pb-6 sm:pb-8 text-yellow-200 text-base sm:text-lg lg:text-xl overflow-hidden"
+        className="px-6 sm:px-8 lg:px-10 pt-0 pb-6 sm:pb-8 text-amber-400 text-base sm:text-lg lg:text-xl overflow-hidden"
         style={{
           maxHeight,
           opacity,
@@ -110,12 +110,12 @@ const SustainabilityFAQ = () => {
   return (
     <section
       aria-labelledby="sustainability-faq-title"
-      className="bg-gray-900 text-yellow-400 px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16"
+      className="bg-white text-amber-600 px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16"
     >
       <div className="max-w-4xl mx-auto">
         <h2
           id="sustainability-faq-title"
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 mb-12 sm:mb-14 text-center tracking-wide select-none drop-shadow-md"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600 mb-12 sm:mb-14 text-center tracking-wide select-none drop-shadow-md"
         >
           Frequently Asked Questions
         </h2>

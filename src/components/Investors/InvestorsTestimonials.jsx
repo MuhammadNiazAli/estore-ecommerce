@@ -41,10 +41,10 @@ const InvestorsTestimonials = () => {
   return (
     <section
       aria-label="Investor Testimonials"
-      className="bg-gray-900 text-yellow-400 py-12 px-4 flex justify-center mb-[-150px]"
+      className="bg-white text-amber-600 py-12 px-4 flex justify-center mb-[-150px]"
     >
       <div className="max-w-[1000px] w-full">
-        <h2 className="text-4xl font-extrabold mb-8 text-yellow-400 text-center select-none">
+        <h2 className="text-4xl font-extrabold mb-8 text-amber-600 text-center select-none">
           What Our Investors Say
         </h2>
         <div
@@ -56,7 +56,7 @@ const InvestorsTestimonials = () => {
               key={id}
               role="listitem"
               tabIndex={0}
-              className="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-yellow-400/50 focus:shadow-yellow-400/70
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-amber-600/50 focus:shadow-amber-600/70
                 transition-shadow duration-300
                 flex flex-col items-center text-center
                 max-w-xs
@@ -73,13 +73,13 @@ const InvestorsTestimonials = () => {
                 width={80}
                 height={80}
               />
-              <p className="text-yellow-300 italic mb-4 leading-relaxed font-medium select-text">
+              <p className="text-amber-500 italic mb-4 leading-relaxed font-medium select-text">
                 “{quote}”
               </p>
-              <h3 className="text-yellow-400 font-semibold text-lg truncate w-full" title={name}>
+              <h3 className="text-amber-600 font-semibold text-lg truncate w-full" title={name}>
                 {name}
               </h3>
-              <p className="text-yellow-300 text-sm truncate w-full" title={title}>
+              <p className="text-amber-500 text-sm truncate w-full" title={title}>
                 {title}
               </p>
             </article>

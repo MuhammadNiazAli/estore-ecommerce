@@ -19,7 +19,7 @@ const renderStars = (rating) => {
   const half = rating % 1 >= 0.5;
   const emptyStars = 5 - fullStars - (half ? 1 : 0);
   return (
-    <div className="flex items-center text-yellow-400 space-x-[2px]">
+    <div className="flex items-center text-amber-600 space-x-[2px]">
       {Array(fullStars).fill().map((_, i) => (
         <AiFillStar key={`full-${i}`} size={14} />
       ))}
@@ -80,7 +80,7 @@ const RecentlyViewedDeals = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white py-12 px-4 relative">
+    <section className="w-full bg-white text-gray-900 py-12 px-4 relative">
       <div className="max-w-[1000px] mx-auto relative">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 tracking-tight">
           Recently Viewed Products
@@ -96,7 +96,7 @@ const RecentlyViewedDeals = () => {
             return (
               <article
                 key={id}
-                className="group bg-gray-800 rounded-xl shadow-md flex-shrink-0 transition"
+                className="group bg-white rounded-xl shadow-md flex-shrink-0 transition"
                 style={{ width: cardWidth ? `${cardWidth}px` : '260px' }}
               >
                 <div className="relative h-48 overflow-hidden rounded-t-xl">
@@ -107,20 +107,20 @@ const RecentlyViewedDeals = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md bg-white/10">
-                    <h3 className="text-white text-lg font-bold text-center px-2 animate-fade-in-up">
+                    <h3 className="text-gray-900 text-lg font-bold text-center px-2 animate-fade-in-up">
                       {title}
                     </h3>
                   </div>
-                  <span className="absolute top-3 left-3 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold z-10">
+                  <span className="absolute top-3 left-3 bg-amber-600 text-black px-2 py-1 rounded-full text-xs font-bold z-10">
                     -{discount}%
                   </span>
                 </div>
 
                 <div className="p-4 flex flex-col justify-between h-[220px]">
-                  <p className="text-gray-300 text-sm line-clamp-3 mb-1">{description}</p>
+                  <p className="text-gray-700 text-sm line-clamp-3 mb-1">{description}</p>
 
                   {/* Features with icons */}
-                  <ul className="text-sm text-gray-400 space-y-1 mb-2">
+                  <ul className="text-sm text-gray-600 space-y-1 mb-2">
                     {features?.slice(0, 3).map((f, idx) => {
                       const Icon = f.icon;
                       return (
@@ -135,24 +135,24 @@ const RecentlyViewedDeals = () => {
                     })}
                   </ul>
 
-                  <div className="flex justify-between items-center text-xs text-gray-400 mb-1">
+                  <div className="flex justify-between items-center text-xs text-gray-600 mb-1">
                     {renderStars(rating)}
                     <span>{reviews}+ reviews</span>
                   </div>
 
                   <div className="flex justify-between items-end mt-auto">
                     <div>
-                      <span className="text-lg font-bold text-yellow-400">${price}</span>
-                      <span className="text-sm line-through text-gray-400 ml-2">${oldPrice}</span>
+                      <span className="text-lg font-bold text-amber-600">${price}</span>
+                      <span className="text-sm line-through text-gray-600 ml-2">${oldPrice}</span>
                     </div>
-                    <div className="flex space-x-2 text-yellow-400">
-                      <Link href="/wishlist" className="hover:text-yellow-300" aria-label={`Wishlist ${title}`}>
+                    <div className="flex space-x-2 text-amber-600">
+                      <Link href="/wishlist" className="hover:text-amber-500" aria-label={`Wishlist ${title}`}>
                         <FiHeart size={18} />
                       </Link>
-                      <Link href={`/product`} className="hover:text-yellow-300" aria-label={`View ${title}`}>
+                      <Link href={`/product`} className="hover:text-amber-500" aria-label={`View ${title}`}>
                         <FiEye size={18} />
                       </Link>
-                      <Link href="/cart" className="hover:text-yellow-300" aria-label={`Add ${title} to cart`}>
+                      <Link href="/cart" className="hover:text-amber-500" aria-label={`Add ${title} to cart`}>
                         <FiShoppingCart size={18} />
                       </Link>
                     </div>
@@ -170,8 +170,8 @@ const RecentlyViewedDeals = () => {
             aria-label="Scroll Left"
             className={`absolute top-1/2 -translate-y-1/2 -left-5 sm:-left-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-gray-900/60 hover:bg-yellow-400 hover:text-black
-              border border-gray-700 text-white backdrop-blur-md shadow-md
+              bg-white/60 hover:bg-amber-600 hover:text-black
+              border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
           >
             <FiChevronLeft size={isMobile ? 18 : 22} />
@@ -185,8 +185,8 @@ const RecentlyViewedDeals = () => {
             aria-label="Scroll Right"
             className={`absolute top-1/2 -translate-y-1/2 -right-5 sm:-right-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-gray-900/60 hover:bg-yellow-400 hover:text-black
-              border border-gray-700 text-white backdrop-blur-md shadow-md
+              bg-white/60 hover:bg-amber-600 hover:text-black
+              border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
           >
             <FiChevronRight size={isMobile ? 18 : 22} />

@@ -38,7 +38,7 @@ const ProductDescription = ({
       stars.push(
         <AiFillStar
           key={`star-full-${i}`}
-          className="text-yellow-400 w-5 h-5"
+          className="text-amber-600 w-5 h-5"
           aria-hidden="true"
         />
       );
@@ -48,11 +48,11 @@ const ProductDescription = ({
       stars.push(
         <span key="star-half" className="relative w-5 h-5 inline-block">
           <AiFillStar
-            className="text-yellow-400 absolute top-0 left-0 w-5 h-5 overflow-hidden"
+            className="text-amber-600 absolute top-0 left-0 w-5 h-5 overflow-hidden"
             style={{ clipPath: "inset(0 50% 0 0)" }}
             aria-hidden="true"
           />
-          <AiOutlineStar className="text-yellow-400 w-5 h-5" aria-hidden="true" />
+          <AiOutlineStar className="text-amber-600 w-5 h-5" aria-hidden="true" />
         </span>
       );
     }
@@ -62,7 +62,7 @@ const ProductDescription = ({
       stars.push(
         <AiOutlineStar
           key={`star-empty-${i}`}
-          className="text-yellow-400 w-5 h-5"
+          className="text-amber-600 w-5 h-5"
           aria-hidden="true"
         />
       );
@@ -72,7 +72,7 @@ const ProductDescription = ({
   };
 
   return (
-    <section className="max-w-4xl w-full mx-auto p-6 sm:p-10 bg-gray-900 rounded-xl shadow-lg select-none text-gray-100">
+    <section className="max-w-4xl w-full mx-auto p-6 sm:p-10 bg-white rounded-xl shadow-lg select-none text-gray-800">
       {/* Title & Rating */}
       <header className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-tight">
@@ -90,8 +90,8 @@ const ProductDescription = ({
           <span className="font-semibold text-sm tabular-nums">
             {product.rating.toFixed(1)}
           </span>
-          <span className="text-gray-400 select-none">·</span>
-          <span className="text-gray-400 text-sm tabular-nums">
+          <span className="text-gray-600 select-none">·</span>
+          <span className="text-gray-600 text-sm tabular-nums">
             {product.reviewsCount} Reviews
           </span>
         </div>
@@ -113,13 +113,13 @@ const ProductDescription = ({
           {product.features.map((feature, idx) => (
             <li
               key={idx}
-              className="flex items-center space-x-2 bg-gray-800 rounded-md px-4 py-2 shadow-sm cursor-default"
+              className="flex items-center space-x-2 bg-white rounded-md px-4 py-2 shadow-sm cursor-default"
               title={feature}
               tabIndex={0}
               aria-label={`Feature: ${feature}`}
             >
-              <AiOutlineCheckCircle className="text-yellow-400 w-5 h-5 flex-shrink-0" />
-              <span className="text-gray-200 text-sm font-medium truncate max-w-xs">
+              <AiOutlineCheckCircle className="text-amber-600 w-5 h-5 flex-shrink-0" />
+              <span className="text-gray-700 text-sm font-medium truncate max-w-xs">
                 {feature}
               </span>
             </li>
@@ -132,11 +132,11 @@ const ProductDescription = ({
         <h2 className="text-xl font-semibold mb-5">
           Technical Specifications
         </h2>
-        <div className="overflow-x-auto rounded-lg border border-gray-700 shadow-inner bg-gray-800">
+        <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-inner bg-white">
           <table className="w-full text-sm sm:text-base">
             <tbody>
               {product.specifications.map((spec, idx) => (
-                <tr key={idx} className={idx % 2 === 0 ? "bg-gray-700" : ""}>
+                <tr key={idx} className={idx % 2 === 0 ? "bg-white" : ""}>
                   <th
                     scope="row"
                     className="px-4 sm:px-6 py-3 font-semibold whitespace-nowrap text-left"
@@ -155,16 +155,16 @@ const ProductDescription = ({
       <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
         <button
           type="button"
-          className="w-full sm:w-auto bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg
-            hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-colors duration-300"
+          className="w-full sm:w-auto bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg
+            hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
           aria-label="Add product to cart"
         >
           Add to Cart
         </button>
         <button
           type="button"
-          className="w-full sm:w-auto bg-gray-700 text-gray-200 font-semibold py-3 px-8 rounded-md shadow-md
-            hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 transition-colors duration-300"
+          className="w-full sm:w-auto bg-white text-gray-700 font-semibold py-3 px-8 rounded-md shadow-md
+            hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
           aria-label="Add product to wishlist"
         >
           Add to Wishlist

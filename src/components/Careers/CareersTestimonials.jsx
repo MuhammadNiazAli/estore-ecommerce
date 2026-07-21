@@ -43,9 +43,9 @@ const CareersTestimonials = () => {
   }, [total]);
 
   return (
-    <section className="bg-gray-900 w-full flex justify-center px-4">
+    <section className="bg-white w-full flex justify-center px-4">
       <div className="w-full max-w-[1000px] py-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10">
           What Our Team Says
         </h2>
 
@@ -57,27 +57,27 @@ const CareersTestimonials = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.6 }}
-              className="bg-gray-800 rounded-xl p-8 shadow-lg"
+              className="bg-white rounded-xl p-8 shadow-lg"
             >
               <div className="flex flex-col items-center text-center">
                 <img
                   src={testimonials[current].photo}
                   alt={testimonials[current].name}
-                  className="h-20 w-20 rounded-full mb-4 object-cover border-4 border-yellow-400"
+                  className="h-20 w-20 rounded-full mb-4 object-cover border-4 border-amber-600"
                   loading="lazy"
                 />
-                <p className="text-yellow-200 italic mb-4 max-w-lg">
+                <p className="text-amber-400 italic mb-4 max-w-lg">
                   &quot;{testimonials[current].text}&quot;
                 </p>
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonials[current].rating)].map((_, i) => (
-                    <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
+                    <StarIcon key={i} className="h-5 w-5 text-amber-600" />
                   ))}
                 </div>
-                <h3 className="text-yellow-400 font-semibold text-lg">
+                <h3 className="text-amber-600 font-semibold text-lg">
                   {testimonials[current].name}
                 </h3>
-                <p className="text-yellow-200 text-sm">{testimonials[current].role}</p>
+                <p className="text-amber-400 text-sm">{testimonials[current].role}</p>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -92,7 +92,7 @@ const CareersTestimonials = () => {
                   width: i === current ? 20 : 10,
                   height: 10,
                   borderRadius: 999,
-                  backgroundColor: i === current ? '#facc15' : '#facc15',
+                  backgroundColor: i === current ? '#b45309' : '#b45309',
                   opacity: i === current ? 1 : 0.3,
                 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}

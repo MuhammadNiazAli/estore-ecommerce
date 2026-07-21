@@ -573,15 +573,15 @@ const AccessoriesTrending = () => {
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background: linear-gradient(45deg, #d4af37, #f7e27d); /* Golden gradient */
+          background: linear-gradient(45deg, #b45309, #b45309); /* Golden gradient */
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(45deg, #f7e27d, #d4af37);
+          background: linear-gradient(45deg, #b45309, #b45309);
         }
       `}</style>
 
-      <section className="w-full max-w-[1200px] mx-auto px-3 sm:px-4 py-8 bg-gray-900 rounded-lg text-yellow-400 select-none">
+      <section className="w-full max-w-[1200px] mx-auto px-3 sm:px-4 py-8 bg-white rounded-lg text-amber-600 select-none">
         {/* Heading */}
         <h1 className="text-xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
           Trending Accessories
@@ -596,14 +596,14 @@ const AccessoriesTrending = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-gray-900/80 p-3 sm:p-5 rounded-lg max-w-[85%] sm:max-w-[50%]">
+          <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-white/80 p-3 sm:p-5 rounded-lg max-w-[85%] sm:max-w-[50%]">
             <h2 className="text-lg sm:text-2xl md:text-4xl font-bold leading-snug">
               {selected.name}
             </h2>
-            <p className="mt-1 sm:mt-2 text-yellow-300 font-semibold text-base sm:text-lg md:text-2xl">
+            <p className="mt-1 sm:mt-2 text-amber-500 font-semibold text-base sm:text-lg md:text-2xl">
               ${selected.price.toFixed(2)}
             </p>
-            <p className="mt-1 text-gray-300 text-xs sm:text-sm md:text-base">
+            <p className="mt-1 text-gray-700 text-xs sm:text-sm md:text-base">
               {selected.description}
             </p>
           </div>
@@ -611,7 +611,7 @@ const AccessoriesTrending = () => {
           {/* Thumbnails with custom scrollbar */}
           <div
             ref={scrollRef}
-            className="custom-scroll absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-gray-800/80 rounded-lg p-2 flex gap-2 overflow-x-auto max-w-[75%] sm:max-w-[50%] snap-x cursor-grab active:cursor-grabbing"
+            className="custom-scroll absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-white/80 rounded-lg p-2 flex gap-2 overflow-x-auto max-w-[75%] sm:max-w-[50%] snap-x cursor-grab active:cursor-grabbing"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -626,8 +626,8 @@ const AccessoriesTrending = () => {
                 onClick={() => !isDragging && setSelected(item)}
                 className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-md overflow-hidden border-2 transition-all duration-300 ${
                   selected.id === item.id
-                    ? "border-yellow-400 scale-110"
-                    : "border-transparent hover:border-yellow-300"
+                    ? "border-amber-600 scale-110"
+                    : "border-transparent hover:border-amber-500"
                 }`}
               >
                 <img
@@ -648,11 +648,11 @@ const AccessoriesTrending = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            className="flex-1 px-4 py-2 rounded-lg bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="flex-1 px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-600"
           />
           <button
             onClick={handleSearch}
-            className="px-4 sm:px-6 py-2 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-300 transition"
+            className="px-4 sm:px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg hover:bg-amber-500 transition"
           >
             Search
           </button>
@@ -661,7 +661,7 @@ const AccessoriesTrending = () => {
         {/* Loading */}
         {loading && (
           <div className="flex justify-center py-6">
-            <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-10 h-10 border-4 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
 
@@ -671,7 +671,7 @@ const AccessoriesTrending = () => {
             {filteredProducts.map((item) => (
               <div
                 key={item.id}
-                className="bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl transition"
+                className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col hover:shadow-2xl transition"
               >
                 <img
                   src={item.img}
@@ -679,20 +679,20 @@ const AccessoriesTrending = () => {
                   className="w-full h-40 sm:h-48 object-cover"
                 />
                 <div className="p-4 flex flex-col flex-grow">
-                  <h3 className="text-base sm:text-lg font-bold text-white">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900">
                     {item.name}
                   </h3>
-                  <p className="text-yellow-300 font-semibold text-lg sm:text-xl">
+                  <p className="text-amber-500 font-semibold text-lg sm:text-xl">
                     ${item.price.toFixed(2)}
                   </p>
-                  <p className="text-gray-300 text-xs sm:text-sm mt-1 flex-grow">
+                  <p className="text-gray-700 text-xs sm:text-sm mt-1 flex-grow">
                     {item.description}
                   </p>
                   <div className="flex gap-2 mt-4">
-                    <button className="flex-1 px-3 sm:px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                    <button className="flex-1 px-3 sm:px-4 py-2 bg-amber-600 text-gray-900 rounded-lg font-semibold hover:bg-amber-500 transition">
                       Add to Cart
                     </button>
-                    <button className="flex-1 px-3 sm:px-4 py-2 border border-yellow-400 text-yellow-400 rounded-lg font-semibold hover:bg-yellow-400 hover:text-gray-900 transition">
+                    <button className="flex-1 px-3 sm:px-4 py-2 border border-amber-600 text-amber-600 rounded-lg font-semibold hover:bg-amber-600 hover:text-gray-900 transition">
                       View
                     </button>
                   </div>
@@ -703,7 +703,7 @@ const AccessoriesTrending = () => {
         )}
 
         {!loading && searchQuery.trim() && filteredProducts.length === 0 && (
-          <p className="text-center text-yellow-300 font-semibold mt-8">
+          <p className="text-center text-amber-500 font-semibold mt-8">
             No products found for "{searchQuery.trim()}"
           </p>
         )}

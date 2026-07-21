@@ -12,27 +12,27 @@ const sizeComparisonData = [
 const SizeGuideComparison = () => {
   return (
     <section
-      className="w-full bg-gray-900 text-gray-100 flex justify-center py-10 px-4 sm:px-6 md:py-14"
+      className="w-full bg-white text-gray-800 flex justify-center py-10 px-4 sm:px-6 md:py-14"
       aria-label="Size guide comparison table"
     >
       <div
-        className="max-w-5xl w-full overflow-x-auto rounded-lg shadow-lg bg-gray-800
-          scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-700"
+        className="max-w-5xl w-full overflow-x-auto rounded-lg shadow-lg bg-white
+          scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-700"
         tabIndex={0}
       >
         <table className="min-w-[600px] w-full text-left border-collapse">
-          <thead className="border-b border-yellow-400">
+          <thead className="border-b border-amber-600">
             <tr>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
                 US Size
               </th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
                 UK Size
               </th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
                 EU Size
               </th>
-              <th className="p-4 text-yellow-400 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
                 Bust / Chest (inches)
               </th>
             </tr>
@@ -41,7 +41,7 @@ const SizeGuideComparison = () => {
             {sizeComparisonData.map(({ us, uk, eu, inches }) => (
               <tr
                 key={us}
-                className="border-b border-gray-700 hover:bg-yellow-50/10 transition-colors"
+                className="border-b border-gray-200 hover:bg-amber-200/10 transition-colors"
               >
                 <td className="p-4 font-semibold text-sm sm:text-base md:text-lg">
                   {us}

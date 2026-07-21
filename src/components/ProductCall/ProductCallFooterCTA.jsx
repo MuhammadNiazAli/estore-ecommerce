@@ -5,21 +5,21 @@ import { ArrowRight } from 'lucide-react';
 
 const ProductCallFooterCTA = () => {
   return (
-    <footer className="w-full bg-gray-900 flex justify-center items-center px-4 py-12 sm:px-6 mb-[-50px]">
+    <footer className="w-full bg-white flex justify-center items-center px-4 py-12 sm:px-6 mb-[-50px]">
       <div className="max-w-[1000px] w-full text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 mb-4">
           Ready to Elevate Your Shopping Experience?
         </h2>
-        <p className="text-gray-300 text-sm sm:text-base mb-6 max-w-xl mx-auto px-2 sm:px-0">
+        <p className="text-gray-700 text-sm sm:text-base mb-6 max-w-xl mx-auto px-2 sm:px-0">
           Don’t miss out on our limited-time deals and premium product lineup. Shop now and enjoy exclusive perks.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto">
+          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-700 text-black font-semibold rounded-xl hover:bg-amber-600 transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto">
             Shop Now
             <ArrowRight className="w-4 h-4" />
           </button>
-          <button className="px-6 py-3 border border-yellow-500 text-yellow-400 font-semibold rounded-xl hover:bg-yellow-500 hover:text-black transition-all duration-200 w-full max-w-xs sm:w-auto">
+          <button className="px-6 py-3 border border-amber-700 text-amber-600 font-semibold rounded-xl hover:bg-amber-700 hover:text-black transition-all duration-200 w-full max-w-xs sm:w-auto">
             Contact Support
           </button>
         </div>

@@ -901,7 +901,7 @@ const SportsFilters = () => {
   };
 
   return (
-    <section id="sports-section" className="w-full bg-gray-900 py-12">
+    <section id="sports-section" className="w-full bg-white py-12">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -911,9 +911,9 @@ const SportsFilters = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full font-semibold ${
                 selectedCategory === cat
-                  ? "bg-yellow-400 text-black"
-                  : "bg-gray-800 text-white"
-              } hover:bg-yellow-300 hover:text-black transition`}
+                  ? "bg-amber-600 text-black"
+                  : "bg-white text-gray-900"
+              } hover:bg-amber-500 hover:text-black transition`}
             >
               {cat}
             </button>
@@ -922,7 +922,7 @@ const SportsFilters = () => {
 
         {/* Price & Rating */}
         <div className="flex flex-wrap justify-center items-center gap-8 mb-10">
-          <div className="flex flex-col items-center text-white">
+          <div className="flex flex-col items-center text-gray-900">
             <label className="font-semibold mb-2">Max Price: ${priceRange}</label>
             <input
               type="range"
@@ -933,7 +933,7 @@ const SportsFilters = () => {
               className="w-48"
             />
           </div>
-          <div className="flex flex-col items-center text-white">
+          <div className="flex flex-col items-center text-gray-900">
             <label className="font-semibold mb-2">Min Rating: {ratingFilter}★</label>
             <input
               type="range"
@@ -959,12 +959,12 @@ const SportsFilters = () => {
                 className="w-full h-48 object-cover rounded-lg"
               />
               <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
-              <p className="text-yellow-500 font-bold mt-1">${product.price}</p>
+              <p className="text-amber-700 font-bold mt-1">${product.price}</p>
               <p className="text-gray-500 text-sm">Rating: {product.rating}★</p>
 
               {/* Buttons */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-3 transition">
-                <button className="bg-yellow-400 p-3 rounded-full text-black hover:bg-yellow-300">
+              <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-3 transition">
+                <button className="bg-amber-600 p-3 rounded-full text-black hover:bg-amber-500">
                   <FaCartPlus size={18} />
                 </button>
                 <button className="bg-white p-3 rounded-full text-gray-800 hover:bg-gray-200">
@@ -981,14 +981,14 @@ const SportsFilters = () => {
             {visibleCount < filteredProducts.length ? (
               <button
                 onClick={showMore}
-                className="bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold shadow hover:bg-yellow-300 transition"
+                className="bg-amber-600 text-black px-8 py-3 rounded-full font-semibold shadow hover:bg-amber-500 transition"
               >
                 Show More
               </button>
             ) : (
               <button
                 onClick={showLess}
-                className="bg-gray-800 text-white px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-700 transition"
+                className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-50 transition"
               >
                 Show Less
               </button>

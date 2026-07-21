@@ -40,7 +40,7 @@ const orders = [
 
 const statusStyles = {
   Delivered: 'bg-green-600 text-green-100',
-  Shipped: 'bg-yellow-600 text-yellow-100',
+  Shipped: 'bg-amber-800 text-amber-300',
   Cancelled: 'bg-red-600 text-red-100',
 };
 
@@ -57,22 +57,22 @@ const ProfileOrders = () => {
   const closeDrawer = () => setSelectedOrder(null);
 
   return (
-    <section className="relative w-full bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12 overflow-hidden">
+    <section className="relative w-full bg-white text-gray-900 px-4 sm:px-6 py-8 sm:py-12 overflow-hidden">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl font-bold text-yellow-400 mb-1">Your Orders</h2>
-            <p className="text-sm text-gray-300">Track and review your past orders in detail.</p>
+            <h2 className="text-3xl font-bold text-amber-600 mb-1">Your Orders</h2>
+            <p className="text-sm text-gray-700">Track and review your past orders in detail.</p>
           </div>
-          <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
             <ClipboardDocumentCheckIcon className="w-5 h-5 animate-pulse" />
             <span>Order History</span>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gray-700 my-6" />
+        <div className="w-full h-px bg-white my-6" />
 
         {/* Orders */}
         <div className="space-y-6">
@@ -80,13 +80,13 @@ const ProfileOrders = () => {
             <button
               key={order.id}
               onClick={() => openDrawer(order)}
-              className="w-full text-left bg-gray-800 hover:bg-gray-700 transition rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between shadow-md group"
+              className="w-full text-left bg-white hover:bg-gray-50 transition rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between shadow-md group"
             >
               <div className="mb-3 sm:mb-0">
-                <p className="text-white font-semibold text-lg">{order.id}</p>
-                <p className="text-gray-400 text-sm">{order.date}</p>
+                <p className="text-gray-900 font-semibold text-lg">{order.id}</p>
+                <p className="text-gray-600 text-sm">{order.date}</p>
               </div>
-              <div className="mb-3 sm:mb-0 text-yellow-400 font-semibold text-lg">{order.total}</div>
+              <div className="mb-3 sm:mb-0 text-amber-600 font-semibold text-lg">{order.total}</div>
               <div
                 className={`inline-flex items-center gap-1 px-3 py-1 rounded-full font-semibold text-sm ${
                   statusStyles[order.status]
@@ -95,7 +95,7 @@ const ProfileOrders = () => {
                 {statusIcons[order.status]}
                 <span>{order.status}</span>
               </div>
-              <ChevronRightIcon className="w-5 h-5 text-gray-400 group-hover:translate-x-1 transition" />
+              <ChevronRightIcon className="w-5 h-5 text-gray-600 group-hover:translate-x-1 transition" />
             </button>
           ))}
         </div>
@@ -109,33 +109,33 @@ const ProfileOrders = () => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween' }}
-            className="fixed top-0 right-0 w-full sm:w-[500px] h-full bg-gray-950 text-white z-50 shadow-2xl overflow-y-auto"
+            className="fixed top-0 right-0 w-full sm:w-[500px] h-full bg-white text-gray-900 z-50 shadow-2xl overflow-y-auto"
           >
-            <div className="flex justify-between items-center px-5 py-4 border-b border-gray-800 sticky top-0 bg-gray-950 z-10">
-              <h3 className="text-xl font-bold text-yellow-400">Order Details</h3>
+            <div className="flex justify-between items-center px-5 py-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+              <h3 className="text-xl font-bold text-amber-600">Order Details</h3>
               <button onClick={closeDrawer}>
-                <XMarkIcon className="w-6 h-6 text-gray-400 hover:text-red-400 transition" />
+                <XMarkIcon className="w-6 h-6 text-gray-600 hover:text-red-400 transition" />
               </button>
             </div>
 
             <div className="p-5 space-y-4">
               <div>
-                <p className="text-sm text-gray-400">Order ID</p>
+                <p className="text-sm text-gray-600">Order ID</p>
                 <p className="font-semibold text-lg">{selectedOrder.id}</p>
               </div>
 
               <div>
-                <p className="text-sm text-gray-400">Placed on</p>
+                <p className="text-sm text-gray-600">Placed on</p>
                 <p>{selectedOrder.date}</p>
               </div>
 
               <div>
-                <p className="text-sm text-gray-400">Delivery Address</p>
+                <p className="text-sm text-gray-600">Delivery Address</p>
                 <p>{selectedOrder.address}</p>
               </div>
 
               <div>
-                <p className="text-sm text-gray-400 mb-2">Items</p>
+                <p className="text-sm text-gray-600 mb-2">Items</p>
                 <ul className="space-y-2">
                   {selectedOrder.items.map((item, index) => (
                     <li key={index} className="flex justify-between text-sm">
@@ -146,15 +146,15 @@ const ProfileOrders = () => {
                 </ul>
               </div>
 
-              <div className="text-right mt-4 font-bold text-yellow-400 text-lg">
+              <div className="text-right mt-4 font-bold text-amber-600 text-lg">
                 Total: {selectedOrder.total}
               </div>
 
               <div className="flex gap-3 mt-6">
-                <button className="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-300 text-sm font-semibold transition">
+                <button className="px-4 py-2 bg-amber-600 text-black rounded hover:bg-amber-500 text-sm font-semibold transition">
                   Track Order
                 </button>
-                <button className="px-4 py-2 bg-gray-800 border border-gray-600 text-white rounded hover:bg-gray-700 text-sm font-semibold transition">
+                <button className="px-4 py-2 bg-white border border-gray-200 text-gray-900 rounded hover:bg-gray-50 text-sm font-semibold transition">
                   Download Invoice
                 </button>
               </div>

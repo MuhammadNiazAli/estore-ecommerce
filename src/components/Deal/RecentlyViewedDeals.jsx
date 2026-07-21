@@ -539,7 +539,7 @@ const RecentlyViewedDeals = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white py-10 px-4 select-none">
+    <section className="w-full bg-white text-gray-900 py-10 px-4 select-none">
       <div className="max-w-[1000px] mx-auto relative">
         <h2 className="text-2xl font-semibold mb-6">Recently Viewed Products</h2>
 
@@ -555,7 +555,7 @@ const RecentlyViewedDeals = () => {
             return (
               <article
                 key={id}
-                className="bg-gray-800 rounded-xl shadow-lg flex-shrink-0 snap-start cursor-pointer flex flex-col group transition-transform duration-300"
+                className="bg-white rounded-xl shadow-lg flex-shrink-0 snap-start cursor-pointer flex flex-col group transition-transform duration-300"
                 style={{ width: cardWidth ? `${cardWidth}px` : '260px' }}
               >
                 <div className="relative h-44 rounded-t-xl overflow-hidden">
@@ -567,7 +567,7 @@ const RecentlyViewedDeals = () => {
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm"
                   />
                   {discount > 0 && (
-                    <span className="absolute top-3 left-[-100px] group-hover:left-3 transition-all duration-300 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full z-10">
+                    <span className="absolute top-3 left-[-100px] group-hover:left-3 transition-all duration-300 bg-amber-600 text-black text-xs font-bold px-2 py-1 rounded-full z-10">
                       -{discount}%
                     </span>
                   )}
@@ -575,18 +575,18 @@ const RecentlyViewedDeals = () => {
 
                 <div className="p-4 flex flex-col flex-grow">
                   <h3 className="text-sm font-semibold line-clamp-2 mb-1">{title}</h3>
-                  <p className="text-xs text-gray-300 mb-2 line-clamp-2">{description}</p>
+                  <p className="text-xs text-gray-700 mb-2 line-clamp-2">{description}</p>
 
-                  <ul className="text-xs text-gray-400 mb-3 max-h-20 overflow-y-auto list-disc list-inside space-y-1">
+                  <ul className="text-xs text-gray-600 mb-3 max-h-20 overflow-y-auto list-disc list-inside space-y-1">
                     {details.map((detail, idx) => (
                       <li key={idx}>{detail}</li>
                     ))}
                   </ul>
 
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-lg font-bold text-yellow-400">${price}</span>
+                    <span className="text-lg font-bold text-amber-600">${price}</span>
                     {oldPrice && (
-                      <span className="text-sm line-through text-gray-400">${oldPrice}</span>
+                      <span className="text-sm line-through text-gray-600">${oldPrice}</span>
                     )}
                   </div>
 
@@ -624,7 +624,7 @@ const RecentlyViewedDeals = () => {
           <button
             onClick={() => scroll('left')}
             aria-label="Scroll Left"
-            className={`absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-gray-700 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
+            className={`absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
               isMobile ? 'w-12 h-12' : 'w-14 h-14'
             } shadow-lg`}
           >
@@ -636,7 +636,7 @@ const RecentlyViewedDeals = () => {
           <button
             onClick={() => scroll('right')}
             aria-label="Scroll Right"
-            className={`absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-gray-700 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
+            className={`absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
               isMobile ? 'w-12 h-12' : 'w-14 h-14'
             } shadow-lg`}
           >
@@ -668,7 +668,7 @@ const RecentlyViewedDeals = () => {
           width: 36px;
           height: 36px;
           border-radius: 9999px;
-          color: #facc15;
+          color: #b45309;
           background-color: rgba(255, 255, 255, 0.05);
           transition: all 0.3s ease;
           overflow: hidden;

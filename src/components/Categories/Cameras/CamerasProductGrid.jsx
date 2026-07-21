@@ -64,17 +64,17 @@ const CamerasProductGrid = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-12 my-[-50px]">
+    <section className="bg-white text-gray-900 py-12 my-[-50px]">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header and Sort */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <h2 className="text-3xl font-bold text-yellow-400">
+          <h2 className="text-3xl font-bold text-amber-600">
             Explore Premium Cameras
           </h2>
           <select
             value={sortOption}
             onChange={(e) => handleSort(e.target.value)}
-            className="bg-gray-800 text-white border border-gray-700 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="bg-white text-gray-900 border border-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"
           >
             <option value="">Sort by</option>
             <option value="low-high">Price: Low to High</option>
@@ -87,7 +87,7 @@ const CamerasProductGrid = () => {
           {products.map((camera) => (
             <div
               key={camera.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-2xl transition duration-300 group"
+              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition duration-300 group"
             >
               {/* Image */}
               <div className="relative w-full h-52 overflow-hidden">
@@ -97,11 +97,11 @@ const CamerasProductGrid = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 {/* Hover Icons */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                  <button className="bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-300">
+                <div className="absolute inset-0 bg-white bg-opacity-40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
+                  <button className="bg-amber-600 text-black p-2 rounded-full hover:bg-amber-500">
                     <FaEye />
                   </button>
-                  <button className="bg-yellow-400 text-black p-2 rounded-full hover:bg-yellow-300">
+                  <button className="bg-amber-600 text-black p-2 rounded-full hover:bg-amber-500">
                     <FaHeart />
                   </button>
                 </div>
@@ -110,17 +110,17 @@ const CamerasProductGrid = () => {
               {/* Details */}
               <div className="p-4 space-y-3">
                 <h3 className="text-lg font-semibold">{camera.name}</h3>
-                <p className="text-gray-400 text-sm">{camera.brand}</p>
+                <p className="text-gray-600 text-sm">{camera.brand}</p>
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) =>
                     i < camera.rating ? (
-                      <FaStar key={i} className="text-yellow-400 text-sm" />
+                      <FaStar key={i} className="text-amber-600 text-sm" />
                     ) : (
                       <FaRegStar key={i} className="text-gray-500 text-sm" />
                     )
                   )}
                 </div>
-                <p className="text-xl font-bold text-yellow-400">
+                <p className="text-xl font-bold text-amber-600">
                   ${camera.price}
                 </p>
                 <p
@@ -132,7 +132,7 @@ const CamerasProductGrid = () => {
                 </p>
                 {/* Add to Cart */}
                 <button
-                  className="w-full bg-yellow-400 text-black px-5 py-2 mt-3 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center justify-center gap-2"
+                  className="w-full bg-amber-600 text-black px-5 py-2 mt-3 rounded-full font-semibold hover:bg-amber-500 transition flex items-center justify-center gap-2"
                 >
                   <FaCartPlus /> Add to Cart
                 </button>

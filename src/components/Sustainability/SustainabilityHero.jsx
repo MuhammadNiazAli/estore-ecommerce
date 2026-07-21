@@ -21,13 +21,13 @@ const SustainabilityHero = () => {
   return (
     <section
       aria-labelledby="sustainability-hero-title"
-      className="bg-gray-900 text-yellow-400 flex justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20 my-[-80px]"
+      className="bg-white text-amber-600 flex justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20 my-[-80px]"
     >
       <div className="max-w-[1000px] w-full text-center">
         {/* Hero Title */}
         <h1
           id="sustainability-hero-title"
-          className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight sm:leading-snug text-yellow-300 drop-shadow-lg"
+          className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight sm:leading-snug text-amber-500 drop-shadow-lg"
           tabIndex={0} // ensure focusable for screen readers
         >
           Building a Sustainable Tomorrow
@@ -35,7 +35,7 @@ const SustainabilityHero = () => {
 
         {/* Hero Subtitle */}
         <p
-          className="mt-4 text-lg sm:text-xl text-yellow-200 max-w-xl mx-auto"
+          className="mt-4 text-lg sm:text-xl text-amber-400 max-w-xl mx-auto"
           tabIndex={0}
         >
           Empowering businesses and communities to reduce carbon footprints and foster eco-friendly growth.
@@ -45,7 +45,7 @@ const SustainabilityHero = () => {
         <button
           type="button"
           aria-label="Learn more about sustainability initiatives"
-          className={`mt-8 inline-block bg-yellow-400 hover:bg-yellow-300 focus-visible:outline-yellow-500 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50 disabled:opacity-60 disabled:cursor-not-allowed`}
+          className={`mt-8 inline-block bg-amber-600 hover:bg-amber-500 focus-visible:outline-amber-700 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-lg transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-opacity-50 disabled:opacity-60 disabled:cursor-not-allowed`}
           onClick={handleLearnMore}
           disabled={isLoading}
         >
@@ -84,7 +84,7 @@ const SustainabilityHero = () => {
           <div
             role="alert"
             aria-live="assertive"
-            className="mt-6 max-w-md mx-auto bg-yellow-700 bg-opacity-80 rounded-md px-4 py-3 text-yellow-100 font-semibold drop-shadow-md"
+            className="mt-6 max-w-md mx-auto bg-amber-900 bg-opacity-80 rounded-md px-4 py-3 text-amber-300 font-semibold drop-shadow-md"
           >
             {alertMessage}
           </div>
@@ -114,17 +114,17 @@ const SustainabilityHero = () => {
           ].map(({ title, description }, idx) => (
             <section
               key={title}
-              className="bg-yellow-900 bg-opacity-10 rounded-lg p-6 hover:bg-yellow-900 hover:bg-opacity-20 transition-colors duration-300 cursor-default focus-within:ring-4 focus-within:ring-yellow-400"
+              className="bg-amber-950 bg-opacity-10 rounded-lg p-6 hover:bg-amber-950 hover:bg-opacity-20 transition-colors duration-300 cursor-default focus-within:ring-4 focus-within:ring-amber-600"
               tabIndex={0}
               aria-labelledby={`feature-title-${idx}`}
             >
               <h3
                 id={`feature-title-${idx}`}
-                className="text-yellow-300 font-semibold text-lg mb-2"
+                className="text-amber-500 font-semibold text-lg mb-2"
               >
                 {title}
               </h3>
-              <p className="text-yellow-200 text-sm sm:text-base leading-relaxed">{description}</p>
+              <p className="text-amber-400 text-sm sm:text-base leading-relaxed">{description}</p>
             </section>
           ))}
         </article>

@@ -20,15 +20,15 @@ const BestsellersFilters = () => {
   }
 
   return (
-    <section className="bg-gray-900 p-6 sm:p-8 rounded-xl max-w-5xl mx-auto">
-      <h3 className="text-yellow-400 text-2xl font-bold mb-6 select-none">
+    <section className="bg-white p-6 sm:p-8 rounded-xl max-w-5xl mx-auto">
+      <h3 className="text-amber-600 text-2xl font-bold mb-6 select-none">
         Filter Bestsellers
       </h3>
 
       <div className="flex flex-col md:flex-row md:space-x-8 space-y-6 md:space-y-0">
         {/* Category Filter */}
         <div className="flex-1">
-          <h4 className="text-yellow-300 font-semibold mb-3">Category</h4>
+          <h4 className="text-amber-500 font-semibold mb-3">Category</h4>
           <div className="flex flex-wrap gap-3">
             {categories.map((cat) => (
               <button
@@ -37,10 +37,10 @@ const BestsellersFilters = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300
                   ${
                     selectedCategory === cat
-                      ? 'bg-yellow-400 text-gray-900 shadow-lg shadow-yellow-400/50'
-                      : 'bg-yellow-900 bg-opacity-20 text-yellow-300 hover:bg-yellow-400 hover:text-gray-900'
+                      ? 'bg-amber-600 text-gray-900 shadow-lg shadow-amber-600/50'
+                      : 'bg-amber-950 bg-opacity-20 text-amber-500 hover:bg-amber-600 hover:text-gray-900'
                   }
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600
                   `}
                 aria-pressed={selectedCategory === cat}
               >
@@ -52,7 +52,7 @@ const BestsellersFilters = () => {
 
         {/* Price Filter */}
         <div className="flex-1">
-          <h4 className="text-yellow-300 font-semibold mb-3">Price Range</h4>
+          <h4 className="text-amber-500 font-semibold mb-3">Price Range</h4>
           <div className="flex flex-wrap gap-3">
             {prices.map((price) => (
               <button
@@ -61,10 +61,10 @@ const BestsellersFilters = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300
                   ${
                     selectedPrice === price
-                      ? 'bg-yellow-400 text-gray-900 shadow-lg shadow-yellow-400/50'
-                      : 'bg-yellow-900 bg-opacity-20 text-yellow-300 hover:bg-yellow-400 hover:text-gray-900'
+                      ? 'bg-amber-600 text-gray-900 shadow-lg shadow-amber-600/50'
+                      : 'bg-amber-950 bg-opacity-20 text-amber-500 hover:bg-amber-600 hover:text-gray-900'
                   }
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600
                   `}
                 aria-pressed={selectedPrice === price}
               >
@@ -76,7 +76,7 @@ const BestsellersFilters = () => {
 
         {/* Rating Filter */}
         <div className="flex-1">
-          <h4 className="text-yellow-300 font-semibold mb-3">Rating</h4>
+          <h4 className="text-amber-500 font-semibold mb-3">Rating</h4>
           <div className="flex flex-wrap gap-3">
             {ratings.map((rate) => (
               <button
@@ -85,10 +85,10 @@ const BestsellersFilters = () => {
                 className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300
                   ${
                     selectedRating === rate
-                      ? 'bg-yellow-400 text-gray-900 shadow-lg shadow-yellow-400/50'
-                      : 'bg-yellow-900 bg-opacity-20 text-yellow-300 hover:bg-yellow-400 hover:text-gray-900'
+                      ? 'bg-amber-600 text-gray-900 shadow-lg shadow-amber-600/50'
+                      : 'bg-amber-950 bg-opacity-20 text-amber-500 hover:bg-amber-600 hover:text-gray-900'
                   }
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600
                   `}
                 aria-pressed={selectedRating === rate}
                 aria-label={`${rate} star${rate > 1 ? 's' : ''} & up`}

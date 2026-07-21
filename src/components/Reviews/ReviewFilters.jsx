@@ -152,7 +152,7 @@ const FilterButton = ({ filter, isActive, onClick }) => (
     onClick={onClick}
     className={`relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300
       focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400
-      ${isActive ? 'text-gray-900' : 'text-gray-300 hover:text-white'}`}
+      ${isActive ? 'text-gray-900' : 'text-gray-700 hover:text-gray-900'}`}
     aria-pressed={isActive}
   >
     <AnimatePresence>
@@ -211,7 +211,7 @@ const ReviewCard = ({ review }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.3 }}
-      className="bg-gray-800 rounded-xl p-6 shadow-md space-y-4"
+      className="bg-white rounded-xl p-6 shadow-md space-y-4"
     >
       <div className="flex items-center gap-4">
         <img
@@ -221,13 +221,13 @@ const ReviewCard = ({ review }) => {
           loading="lazy"
         />
         <div className="flex-grow">
-          <h4 className="text-white font-semibold">{review.name}</h4>
+          <h4 className="text-gray-900 font-semibold">{review.name}</h4>
           <div className="flex gap-0.5 mt-1" aria-label={`Rating: ${review.rating} out of 5 stars`}>
             {[1, 2, 3, 4, 5].map((i) => (
               <Star key={i} filled={i <= review.rating} />
             ))}
           </div>
-          <p className="text-xs text-gray-400 mt-1">
+          <p className="text-xs text-gray-600 mt-1">
             {review.brand} &bull; {review.product} &bull; {review.location}
           </p>
         </div>
@@ -241,14 +241,14 @@ const ReviewCard = ({ review }) => {
         )}
       </div>
 
-      <p className="text-gray-300 text-sm">{review.text}</p>
+      <p className="text-gray-700 text-sm">{review.text}</p>
       <p className="text-xs text-gray-500">Reviewed on: {review.date}</p>
 
       {review.images.length > 0 && (
         <div
           className="flex gap-3 overflow-x-auto scrollbar-thin"
           style={{
-            scrollbarColor: '#18181b #121212', // thumb #18181b (gray-900), track #121212 (gray-950)
+            scrollbarColor: '#ffffff #ffffff', // thumb #ffffff (gray-900), track #ffffff (gray-950)
           }}
         >
           <style>{`
@@ -257,18 +257,18 @@ const ReviewCard = ({ review }) => {
               height: 4px;
             }
             div::-webkit-scrollbar-track {
-              background: #121212; /* gray-950 */
+              background: #ffffff; /* gray-950 */
             }
             div::-webkit-scrollbar-thumb {
-              background-color: #18181b; /* gray-900 */
+              background-color: #ffffff; /* gray-900 */
               border-radius: 9999px;
-              border: 2px solid #121212;
+              border: 2px solid #ffffff;
             }
 
             /* For Firefox */
             div {
               scrollbar-width: thin;
-              scrollbar-color: #18181b #121212;
+              scrollbar-color: #ffffff #ffffff;
             }
           `}</style>
           {review.images.map((img, i) => (
@@ -282,11 +282,11 @@ const ReviewCard = ({ review }) => {
         </div>
       )}
 
-      <div className="flex items-center gap-6 pt-2 border-t border-gray-700">
+      <div className="flex items-center gap-6 pt-2 border-t border-gray-200">
         <button
           onClick={handleLike}
           className={`flex items-center text-sm gap-1 transition-colors duration-200 ${
-            liked ? 'text-amber-400' : 'text-gray-400 hover:text-white'
+            liked ? 'text-amber-400' : 'text-gray-600 hover:text-gray-900'
           }`}
           aria-pressed={liked}
           aria-label="Like review"
@@ -298,7 +298,7 @@ const ReviewCard = ({ review }) => {
         <button
           onClick={handleDislike}
           className={`flex items-center text-sm gap-1 transition-colors duration-200 ${
-            disliked ? 'text-amber-400' : 'text-gray-400 hover:text-white'
+            disliked ? 'text-amber-400' : 'text-gray-600 hover:text-gray-900'
           }`}
           aria-pressed={disliked}
           aria-label="Dislike review"
@@ -339,7 +339,7 @@ const ReviewFiltersWithContent = () => {
   });
 
   return (
-    <section className="w-full bg-gray-900 py-14 px-4 text-white">
+    <section className="w-full bg-white py-14 px-4 text-gray-900">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center md:justify-start gap-3 mb-12">
         {filterOptions.map((filter) => (
           <FilterButton
@@ -362,7 +362,7 @@ const ReviewFiltersWithContent = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-gray-400 col-span-full text-center"
+              className="text-gray-600 col-span-full text-center"
             >
               No reviews match this filter.
             </motion.p>

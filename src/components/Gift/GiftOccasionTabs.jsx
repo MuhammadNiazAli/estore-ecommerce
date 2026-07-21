@@ -57,10 +57,10 @@ export default function GiftOccasionTabs() {
 
   return (
     <section
-      className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-gray-900 rounded-2xl shadow-2xl text-yellow-900 select-none"
+      className="max-w-[1100px] mx-auto p-6 sm:p-10 bg-white rounded-2xl shadow-2xl text-amber-950 select-none"
       aria-label="Gift ideas by occasion"
     >
-      <h2 className="text-yellow-900 text-3xl sm:text-4xl font-extrabold mb-10 text-center drop-shadow-md tracking-wide font-sans">
+      <h2 className="text-amber-950 text-3xl sm:text-4xl font-extrabold mb-10 text-center drop-shadow-md tracking-wide font-sans">
         Gift Ideas by Occasion
       </h2>
 
@@ -98,7 +98,7 @@ export default function GiftOccasionTabs() {
                   setActive(occasions[prevIndex].id);
                 }
               }}
-              className={`flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-700 my-1 focus:ring-opacity-60
+              className={`flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-900 my-1 focus:ring-opacity-60
               
               `}
             >
@@ -120,7 +120,7 @@ export default function GiftOccasionTabs() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="bg-gray-900 bg-opacity-20 rounded-xl shadow-md text-yellow-100 max-w-3xl mx-auto text-center text-lg sm:text-xl leading-relaxed select-text px-6 py-8 font-sans"
+            className="bg-white bg-opacity-20 rounded-xl shadow-md text-amber-300 max-w-3xl mx-auto text-center text-lg sm:text-xl leading-relaxed select-text px-6 py-8 font-sans"
           >
             {currentOccasion.description}
           </motion.div>

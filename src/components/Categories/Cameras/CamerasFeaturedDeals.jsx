@@ -70,16 +70,16 @@ const CamerasFeaturedDeals = () => {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-white py-16 my-[-40px]">
+    <section className="bg-white text-gray-900 py-16 my-[-40px]">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-4 md:mb-0">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-4 md:mb-0">
              Featured Camera Deals
           </h2>
-          <div className="flex gap-2 text-lg font-semibold bg-gray-800 px-4 py-2 rounded-lg">
+          <div className="flex gap-2 text-lg font-semibold bg-white px-4 py-2 rounded-lg">
             <span> Deal ends in:</span>
-            <span className="text-yellow-400">
+            <span className="text-amber-600">
               {String(timeLeft.hours).padStart(2, "0")}:
               {String(timeLeft.minutes).padStart(2, "0")}:
               {String(timeLeft.seconds).padStart(2, "0")}
@@ -92,10 +92,10 @@ const CamerasFeaturedDeals = () => {
           {featuredDeals.map((deal) => (
             <div
               key={deal.id}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-2xl transition relative group"
+              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition relative group"
             >
               {/* Discount Badge */}
-              <span className="absolute top-3 left-3 bg-yellow-400 text-black font-bold text-xs px-3 py-1 rounded-full">
+              <span className="absolute top-3 left-3 bg-amber-600 text-black font-bold text-xs px-3 py-1 rounded-full">
                 -{deal.discount}%
               </span>
 
@@ -116,7 +116,7 @@ const CamerasFeaturedDeals = () => {
                     <FaStar
                       key={i}
                       className={`text-sm ${
-                        i < deal.rating ? "text-yellow-400" : "text-gray-500"
+                        i < deal.rating ? "text-amber-600" : "text-gray-500"
                       }`}
                     />
                   ))}
@@ -124,16 +124,16 @@ const CamerasFeaturedDeals = () => {
 
                 {/* Price */}
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl font-extrabold text-yellow-400">
+                  <span className="text-2xl font-extrabold text-amber-600">
                     ${deal.price}
                   </span>
-                  <span className="line-through text-gray-400 text-sm">
+                  <span className="line-through text-gray-600 text-sm">
                     ${deal.oldPrice}
                   </span>
                 </div>
 
                 {/* CTA */}
-                <button className="bg-yellow-400 text-black w-full py-2 rounded-full font-semibold hover:bg-yellow-300 transition flex items-center justify-center gap-2">
+                <button className="bg-amber-600 text-black w-full py-2 rounded-full font-semibold hover:bg-amber-500 transition flex items-center justify-center gap-2">
                   Grab Deal <FaArrowRight />
                 </button>
               </div>

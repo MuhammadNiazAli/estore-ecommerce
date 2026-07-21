@@ -7,7 +7,7 @@ export default function PlaceOrderButton({
 }) {
   return (
     <section
-      className="w-full flex justify-center bg-gray-900 px-4 py-12 mt-[-100px] mb-[-25px]"
+      className="w-full flex justify-center bg-white px-4 py-12 mt-[-100px] mb-[-25px]"
       aria-live="polite"
     >
       <div className="w-full max-w-[1000px] flex justify-center">
@@ -30,8 +30,8 @@ export default function PlaceOrderButton({
             select-none
             ${
               disabled
-                ? "bg-gradient-to-r from-yellow-800 to-yellow-900 text-yellow-300/60 cursor-not-allowed pointer-events-none border border-yellow-700"
-                : "bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 active:scale-95 cursor-pointer text-gray-900 shadow-yellow-400/30 focus:ring-yellow-300 focus:ring-offset-yellow-950"
+                ? "bg-gradient-to-r from-amber-900 to-amber-950 text-amber-500/60 cursor-not-allowed pointer-events-none border border-amber-900"
+                : "bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 active:scale-95 cursor-pointer text-gray-900 shadow-amber-600/30 focus:ring-amber-500 focus:ring-offset-amber-950"
             }
           `}
         >

@@ -11,7 +11,7 @@ const HealthNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-12 px-4">
+    <section className="bg-white py-12 px-4">
       <div className="max-w-md mx-auto text-center">
         <h2 className="text-3xl font-bold text-green-400 mb-2">
           Boost Your Health with Our Latest Tips & Offers
@@ -29,7 +29,7 @@ const HealthNewsletterSignup = () => {
             aria-label="Email address"
             required
             placeholder="Enter your email"
-            className="flex-grow px-4 py-3 rounded-md border border-green-400 bg-gray-800 text-green-100 placeholder-green-400 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="flex-grow px-4 py-3 rounded-md border border-green-400 bg-white text-green-100 placeholder-green-400 focus:outline-none focus:ring-2 focus:ring-green-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

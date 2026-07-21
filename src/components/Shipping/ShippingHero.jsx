@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const ShippingHero = () => {
   return (
     <section
-      className="relative w-full overflow-hidden bg-gray-900 text-white px-6 py-24 sm:py-32 flex items-center justify-center"
+      className="relative w-full overflow-hidden bg-white text-gray-900 px-6 py-24 sm:py-32 flex items-center justify-center"
       aria-label="Shipping hero section"
     >
 
@@ -29,7 +29,7 @@ const ShippingHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1.1 }}
-          className="mt-8 text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed drop-shadow"
+          className="mt-8 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed drop-shadow"
         >
           Experience lightning-fast delivery with real-time tracking, proactive updates,
           and global reach — your package, delivered on time, every time.

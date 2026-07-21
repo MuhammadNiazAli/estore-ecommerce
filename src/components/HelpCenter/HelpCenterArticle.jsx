@@ -24,21 +24,21 @@ const HelpCenterArticle = () => {
   ];
 
   return (
-    <section className="bg-gray-900 min-h-screen w-full px-6 py-16 flex justify-center">
-      <article className="w-full max-w-[900px] text-white space-y-10 sm:space-y-12 md:space-y-16">
+    <section className="bg-white min-h-screen w-full px-6 py-16 flex justify-center">
+      <article className="w-full max-w-[900px] text-gray-900 space-y-10 sm:space-y-12 md:space-y-16">
         {/* Title & Meta */}
         <header className="text-center space-y-3 max-w-[650px] mx-auto">
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-yellow-400 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-amber-600 tracking-tight leading-tight">
             How to Cancel an Order
           </h1>
-          <p className="text-sm sm:text-base text-gray-400">
+          <p className="text-sm sm:text-base text-gray-600">
             Updated <time dateTime="2025-07">July 2025</time> &bull; by{' '}
-            <span className="text-yellow-300 font-semibold">Support Team</span>
+            <span className="text-amber-500 font-semibold">Support Team</span>
           </p>
         </header>
 
         {/* Article Content */}
-        <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed prose-a:text-yellow-400 prose-a:no-underline prose-a:hover:underline prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-1 prose-li:mb-1 sm:prose-lg">
+        <div className="prose prose-invert max-w-none text-gray-700 leading-relaxed prose-a:text-amber-600 prose-a:no-underline prose-a:hover:underline prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-1 prose-li:mb-1 sm:prose-lg">
           <p>
             If you placed an order by mistake or want to cancel it for any reason, please follow the steps below carefully.
           </p>
@@ -64,9 +64,9 @@ const HelpCenterArticle = () => {
         {/* Feedback Section */}
         <section
           aria-label="Article feedback"
-          className="bg-gray-800 p-8 rounded-xl max-w-[600px] mx-auto text-center shadow-lg"
+          className="bg-white p-8 rounded-xl max-w-[600px] mx-auto text-center shadow-lg"
         >
-          <p className="text-yellow-200 text-xl font-semibold mb-6">
+          <p className="text-amber-400 text-xl font-semibold mb-6">
             Was this article helpful?
           </p>
 
@@ -86,7 +86,7 @@ const HelpCenterArticle = () => {
             <div className="flex justify-center gap-6">
               <button
                 onClick={() => handleFeedback('yes')}
-                className="flex items-center gap-2 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-black shadow-md transition hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500"
+                className="flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 font-semibold text-black shadow-md transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700"
                 aria-label="Yes, this article was helpful"
               >
                 <svg
@@ -109,7 +109,7 @@ const HelpCenterArticle = () => {
 
               <button
                 onClick={() => handleFeedback('no')}
-                className="flex items-center gap-2 rounded-full bg-yellow-400 px-6 py-3 font-semibold text-black shadow-md transition hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-500"
+                className="flex items-center gap-2 rounded-full bg-amber-600 px-6 py-3 font-semibold text-black shadow-md transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700"
                 aria-label="No, this article was not helpful"
               >
                 <svg
@@ -134,16 +134,16 @@ const HelpCenterArticle = () => {
         </section>
 
         {/* Related Articles */}
-        <aside aria-label="Related articles" className="pt-12 border-t border-gray-700 max-w-[650px] mx-auto">
-          <h3 className="text-xl font-semibold text-yellow-400 mb-6 tracking-wide">
+        <aside aria-label="Related articles" className="pt-12 border-t border-gray-200 max-w-[650px] mx-auto">
+          <h3 className="text-xl font-semibold text-amber-600 mb-6 tracking-wide">
             Related Articles
           </h3>
-          <ul className="space-y-4 text-gray-200">
+          <ul className="space-y-4 text-gray-700">
             {relatedArticles.map((title, i) => (
               <li key={i}>
                 <a
                   href="#"
-                  className="block rounded-md px-4 py-3 bg-gray-800 hover:bg-yellow-600 transition text-yellow-300 hover:text-yellow-50 shadow-sm"
+                  className="block rounded-md px-4 py-3 bg-white hover:bg-amber-800 transition text-amber-500 hover:text-amber-200 shadow-sm"
                   tabIndex={0}
                   onClick={(e) => e.preventDefault()} // placeholder
                   onKeyDown={(e) => {

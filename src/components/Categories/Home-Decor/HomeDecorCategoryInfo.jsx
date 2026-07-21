@@ -30,7 +30,7 @@ const categories = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-yellow-500"
+        className="h-12 w-12 text-amber-700"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -98,7 +98,7 @@ const HomeDecorCategoryInfo = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-10 sm:py-16 my-[-50px]">
       <header className="text-center max-w-3xl mx-auto mb-10">
-        <h2 className="text-3xl font-semibold text-gray-50 mb-2">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-2">
           Explore Our Home Decor Categories
         </h2>
         <p className="text-gray-600 text-lg">

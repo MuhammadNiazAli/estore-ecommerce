@@ -34,7 +34,7 @@ const ShopMobileFilters = ({ onFilterChange }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex items-center justify-center px-4 bg-black/50 backdrop-blur-md"
+            className="fixed inset-0 z-40 flex items-center justify-center px-4 bg-white/50 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -46,18 +46,18 @@ const ShopMobileFilters = ({ onFilterChange }) => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className="relative max-w-[400px] w-full bg-gray-900/80 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-gray-700"
+              className="relative max-w-[400px] w-full bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-gray-200"
             >
               {/* Close Button */}
               <button
                 onClick={toggleModal}
                 aria-label="Close Filters"
-                className="absolute top-4 right-4 text-gray-400 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-full"
+                className="absolute top-4 right-4 text-gray-600 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-full"
               >
                 <FiX size={24} />
               </button>
 
-              <h2 className="text-xl sm:text-2xl font-extrabold text-white mb-6 text-center">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-6 text-center">
                 Filter by Category
               </h2>
 
@@ -71,7 +71,7 @@ const ShopMobileFilters = ({ onFilterChange }) => {
                       ${
                         active === category
                           ? 'bg-amber-400 text-gray-900 shadow-md'
-                          : 'bg-gray-800 text-gray-300 hover:bg-amber-400 hover:text-gray-900'
+                          : 'bg-white text-gray-700 hover:bg-amber-400 hover:text-gray-900'
                       }
                       focus:outline-none focus:ring-4 focus:ring-amber-400`}
                   >

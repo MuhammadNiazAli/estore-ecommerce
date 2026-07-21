@@ -4,14 +4,14 @@ import React from 'react';
 
 const Skeleton = ({ className }) => (
   <div
-    className={`animate-pulse bg-gray-700 rounded ${className}`}
+    className={`animate-pulse bg-white rounded ${className}`}
     aria-hidden="true"
   />
 );
 
 const BlogLoading = () => {
   return (
-    <section className="w-full flex justify-center bg-gray-900 px-4 py-12 sm:px-6 lg:px-8 mb-[-130px]">
+    <section className="w-full flex justify-center bg-white px-4 py-12 sm:px-6 lg:px-8 mb-[-130px]">
       <div className="max-w-[1000px] w-full space-y-12">
         {/* Hero Skeleton */}
         <div className="flex flex-col md:flex-row gap-6">
@@ -31,7 +31,7 @@ const BlogLoading = () => {
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className="bg-gray-800 rounded-xl overflow-hidden flex flex-col shadow-sm"
+              className="bg-white rounded-xl overflow-hidden flex flex-col shadow-sm"
             >
               <Skeleton className="h-36 sm:h-40 w-full rounded-md" />
               <div className="p-5 flex flex-col gap-3">

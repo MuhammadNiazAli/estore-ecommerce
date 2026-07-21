@@ -59,7 +59,7 @@ const ResponsibilityTimeline = () => {
   return (
     <section
       ref={ref}
-      className="w-full bg-gray-900 flex justify-center px-4 py-16"
+      className="w-full bg-white flex justify-center px-4 py-16"
       aria-labelledby="timeline-title"
       role="region"
     >
@@ -69,7 +69,7 @@ const ResponsibilityTimeline = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-yellow-400 text-4xl font-bold text-center mb-12 select-none"
+          className="text-amber-600 text-4xl font-bold text-center mb-12 select-none"
         >
           Our Journey
         </motion.h2>
@@ -77,7 +77,7 @@ const ResponsibilityTimeline = () => {
         {/* Timeline vertical line */}
         <div
           aria-hidden="true"
-          className="hidden sm:block absolute top-16 left-1/2 -translate-x-1/2 w-1 bg-yellow-400 h-[calc(100%-4rem)] rounded-full"
+          className="hidden sm:block absolute top-16 left-1/2 -translate-x-1/2 w-1 bg-amber-600 h-[calc(100%-4rem)] rounded-full"
         />
 
         {/* Timeline items container */}
@@ -87,9 +87,9 @@ const ResponsibilityTimeline = () => {
             return (
               <motion.article
                 key={idx}
-                className={`relative bg-gray-800 rounded-lg p-6 shadow-lg cursor-default
-                  focus:outline-yellow-400 focus-visible:outline-2 focus-visible:outline-offset-2
-                  hover:scale-[1.04] hover:shadow-yellow-500/50 transition-transform duration-300
+                className={`relative bg-white rounded-lg p-6 shadow-lg cursor-default
+                  focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
+                  hover:scale-[1.04] hover:shadow-amber-700/50 transition-transform duration-300
                   sm:max-w-[90%]`}
                 tabIndex={0}
                 aria-labelledby={`event-title-${idx}`}
@@ -107,23 +107,23 @@ const ResponsibilityTimeline = () => {
                 <span
                   className={`hidden sm:block absolute top-6 ${
                     isLeft ? 'right-[-20px]' : 'left-[-20px]'
-                  } w-6 h-6 rounded-full bg-yellow-400 border-2 border-gray-900`}
+                  } w-6 h-6 rounded-full bg-amber-600 border-2 border-gray-200`}
                 />
                 <time
                   id={`event-year-${idx}`}
-                  className="text-yellow-400 font-bold text-lg select-none"
+                  className="text-amber-600 font-bold text-lg select-none"
                 >
                   {event.year}
                 </time>
                 <h3
                   id={`event-title-${idx}`}
-                  className="text-white text-xl font-semibold mt-2 mb-2"
+                  className="text-gray-900 text-xl font-semibold mt-2 mb-2"
                 >
                   {event.title}
                 </h3>
                 <p
                   id={`event-desc-${idx}`}
-                  className="text-gray-300 text-sm leading-relaxed"
+                  className="text-gray-700 text-sm leading-relaxed"
                 >
                   {event.description}
                 </p>

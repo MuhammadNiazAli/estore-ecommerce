@@ -74,19 +74,19 @@ const CartHero = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-8 sm:py-12 my-[-80px] mb-0 min-h-[calc(100vh-160px)] flex flex-col">
+    <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-8 sm:py-12 my-[-80px] mb-0 min-h-[calc(100vh-160px)] flex flex-col">
       <div className="w-full max-w-[1200px] mx-auto flex flex-col flex-grow">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-1">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 mb-1">
               Your Shopping Cart
             </h1>
-            <p className="text-sm sm:text-base text-gray-300 max-w-md">
+            <p className="text-sm sm:text-base text-gray-700 max-w-md">
               Review your selected items and proceed to checkout when ready.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
             <ShoppingCartIcon className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
             <span aria-live="polite" aria-atomic="true">
               {totalItems} item{totalItems !== 1 ? 's' : ''} in cart
@@ -95,7 +95,7 @@ const CartHero = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-px bg-gray-700 my-6" />
+        <div className="w-full h-px bg-white my-6" />
 
         {/* Cart Items List */}
         <div
@@ -125,37 +125,37 @@ const CartHero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.3 }}
-                  className="flex justify-between items-center bg-yellow-900/20 rounded-lg p-4 flex-wrap gap-3"
+                  className="flex justify-between items-center bg-amber-950/20 rounded-lg p-4 flex-wrap gap-3"
                   role="listitem"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 flex-grow min-w-[180px]">
-                    <h3 className="text-yellow-400 font-semibold truncate">{title}</h3>
-                    <p className="text-gray-300 sm:whitespace-nowrap">
+                    <h3 className="text-amber-600 font-semibold truncate">{title}</h3>
+                    <p className="text-gray-700 sm:whitespace-nowrap">
                       ${price.toFixed(2)} × {quantity} ={' '}
-                      <span className="font-bold text-yellow-300">
+                      <span className="font-bold text-amber-500">
                         ${(price * quantity).toFixed(2)}
                       </span>
                     </p>
                   </div>
 
                   {/* Quantity Controls */}
-                  <div className="flex items-center gap-1 border border-yellow-400 rounded-full overflow-hidden select-none">
+                  <div className="flex items-center gap-1 border border-amber-600 rounded-full overflow-hidden select-none">
                     <button
                       onClick={() => decrementQuantity(id)}
                       aria-label={`Decrease quantity of ${title}`}
-                      className="px-3 py-1 hover:bg-yellow-400 hover:text-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-3 py-1 hover:bg-amber-600 hover:text-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed"
                       disabled={quantity <= 1}
                       type="button"
                     >
                       <MinusIcon className="w-5 h-5" />
                     </button>
-                    <span className="px-3 py-1 bg-yellow-400 text-gray-900 font-semibold min-w-[32px] text-center select-none">
+                    <span className="px-3 py-1 bg-amber-600 text-gray-900 font-semibold min-w-[32px] text-center select-none">
                       {quantity}
                     </span>
                     <button
                       onClick={() => incrementQuantity(id)}
                       aria-label={`Increase quantity of ${title}`}
-                      className="px-3 py-1 hover:bg-yellow-400 hover:text-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-3 py-1 hover:bg-amber-600 hover:text-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed"
                       disabled={quantity >= 99}
                       type="button"
                     >
@@ -180,19 +180,19 @@ const CartHero = () => {
 
         {/* Summary Section */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm sm:text-base">
-          <div className="space-y-1 text-gray-400 max-w-xs sm:max-w-none">
+          <div className="space-y-1 text-gray-600 max-w-xs sm:max-w-none">
             <p>
               Estimated Delivery:{' '}
-              <span className="text-white font-medium">2–5 business days</span>
+              <span className="text-gray-900 font-medium">2–5 business days</span>
             </p>
             <p>
-              Shipping Fee: <span className="text-white font-medium">Free</span>
+              Shipping Fee: <span className="text-gray-900 font-medium">Free</span>
             </p>
           </div>
 
-          <div className="text-base sm:text-lg md:text-xl font-bold text-yellow-400 mt-3 sm:mt-0 whitespace-nowrap">
+          <div className="text-base sm:text-lg md:text-xl font-bold text-amber-600 mt-3 sm:mt-0 whitespace-nowrap">
             Total:{' '}
-            <span className="text-white">${totalPrice}</span>
+            <span className="text-gray-900">${totalPrice}</span>
           </div>
         </div>
 
@@ -204,8 +204,8 @@ const CartHero = () => {
             className={`flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg transition
               ${
                 cartItems.length === 0
-                  ? 'bg-yellow-400/50 text-gray-700 cursor-not-allowed'
-                  : 'bg-yellow-400 hover:bg-yellow-300 text-gray-900'
+                  ? 'bg-amber-600/50 text-gray-700 cursor-not-allowed'
+                  : 'bg-amber-600 hover:bg-amber-500 text-gray-900'
               }`}
             aria-label="Proceed to secure checkout"
             type="button"

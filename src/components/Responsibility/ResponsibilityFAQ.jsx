@@ -46,7 +46,7 @@ const ResponsibilityFAQ = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 flex justify-center px-4 py-12 sm:py-16 md:py-20 mb-0"
+      className="w-full bg-white flex justify-center px-4 py-12 sm:py-16 md:py-20 mb-0"
       aria-label="Frequently Asked Questions"
     >
       <div className="w-full max-w-[1000px]">
@@ -56,7 +56,7 @@ const ResponsibilityFAQ = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-center mb-10 sm:mb-12 select-none px-2 sm:px-0"
+          className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-10 sm:mb-12 select-none px-2 sm:px-0"
         >
           Frequently Asked Questions
         </motion.h2>
@@ -68,14 +68,14 @@ const ResponsibilityFAQ = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden"
+                className="bg-white/50 border border-gray-200 rounded-xl overflow-hidden"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
-                  className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left text-yellow-400 font-semibold text-base sm:text-lg md:text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 rounded-lg transition"
+                  className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left text-amber-600 font-semibold text-base sm:text-lg md:text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded-lg transition"
                 >
                   {faq.question}
                   <motion.div
@@ -85,9 +85,9 @@ const ResponsibilityFAQ = () => {
                     aria-hidden="true"
                   >
                     {isOpen ? (
-                      <Minus className="w-5 h-5 text-yellow-400" />
+                      <Minus className="w-5 h-5 text-amber-600" />
                     ) : (
-                      <Plus className="w-5 h-5 text-yellow-400" />
+                      <Plus className="w-5 h-5 text-amber-600" />
                     )}
                   </motion.div>
                 </button>
@@ -107,7 +107,7 @@ const ResponsibilityFAQ = () => {
                         collapsed: { opacity: 0, height: 0 },
                       }}
                       transition={transition}
-                      className="px-4 sm:px-6 pb-6 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed select-text overflow-hidden"
+                      className="px-4 sm:px-6 pb-6 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed select-text overflow-hidden"
                       ref={(el) => (contentRefs.current[index] = el)}
                     >
                       {faq.answer}

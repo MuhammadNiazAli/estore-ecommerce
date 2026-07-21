@@ -30,13 +30,13 @@ const testimonials = [
 
 const ClearanceTestimonials = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12">
+    <section className="bg-white text-amber-600 py-12">
       <div className="max-w-[1000px] mx-auto px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
           What Our Customers Say
         </h2>
-        <p className="text-gray-300 text-center mb-10 text-sm md:text-base">
+        <p className="text-gray-700 text-center mb-10 text-sm md:text-base">
           Real feedback from happy shoppers who grabbed amazing clearance deals.
         </p>
 
@@ -45,20 +45,20 @@ const ClearanceTestimonials = () => {
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-gray-800 w-full md:min-w-[300px] rounded-xl shadow-lg p-6 transition"
+              className="bg-white w-full md:min-w-[300px] rounded-xl shadow-lg p-6 transition"
             >
               {/* User Image */}
               <div className="flex items-center gap-4 mb-4">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-yellow-400"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-600"
                 />
                 <div>
-                  <h3 className="text-white font-semibold text-sm md:text-base">
+                  <h3 className="text-gray-900 font-semibold text-sm md:text-base">
                     {item.name}
                   </h3>
-                  <div className="flex text-yellow-400">
+                  <div className="flex text-amber-600">
                     {Array(5)
                       .fill()
                       .map((_, i) => (
@@ -73,7 +73,7 @@ const ClearanceTestimonials = () => {
               </div>
 
               {/* Review */}
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 {item.review}
               </p>
             </div>

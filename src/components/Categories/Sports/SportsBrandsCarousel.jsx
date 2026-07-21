@@ -121,12 +121,12 @@ const SportsBrandsCarousel = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-14 text-yellow-400 mb-[-50px]">
+    <section className="bg-white py-14 text-amber-600 mb-[-50px]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold">Top Sports Brands</h2>
-          <p className="text-gray-300 mt-2">
+          <p className="text-gray-700 mt-2">
             Trusted by professionals worldwide
           </p>
         </div>
@@ -136,7 +136,7 @@ const SportsBrandsCarousel = () => {
           {/* Left Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-yellow-400 p-3 rounded-full shadow-lg z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-amber-600 p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Left"
           >
             <FaChevronLeft size={20} />
@@ -159,7 +159,7 @@ const SportsBrandsCarousel = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="flex-shrink-0 w-40 h-24 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gray-700 transition"
+                className="flex-shrink-0 w-40 h-24 bg-white rounded-xl flex items-center justify-center hover:bg-gray-50 transition"
               >
                 <img
                   src={brand.logo}
@@ -173,7 +173,7 @@ const SportsBrandsCarousel = () => {
           {/* Right Button */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-yellow-400 p-3 rounded-full shadow-lg z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-amber-600 p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Right"
           >
             <FaChevronRight size={20} />

@@ -33,7 +33,7 @@ const testimonials = [
 const Star = ({ filled }) => (
   <svg
     aria-hidden="true"
-    className={`w-5 h-5 ${filled ? 'text-yellow-400' : 'text-gray-600'}`}
+    className={`w-5 h-5 ${filled ? 'text-amber-600' : 'text-gray-600'}`}
     fill="currentColor"
     viewBox="0 0 20 20"
   >
@@ -43,7 +43,7 @@ const Star = ({ filled }) => (
 
 const DealTestimonials = () => {
   return (
-    <section className="w-full px-4 py-16 bg-gray-900 my-[-44px] mb-[-10px] text-white flex justify-center">
+    <section className="w-full px-4 py-16 bg-white my-[-44px] mb-[-10px] text-gray-900 flex justify-center">
       <div className="max-w-[900px] w-full space-y-12">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
           What Our Customers Say
@@ -53,7 +53,7 @@ const DealTestimonials = () => {
           {testimonials.map(({ id, name, photo, rating, review }) => (
             <motion.div
               key={id}
-              className="bg-gray-800 p-6 rounded-2xl shadow-lg"
+              className="bg-white p-6 rounded-2xl shadow-lg"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -64,7 +64,7 @@ const DealTestimonials = () => {
                 <img
                   src={photo}
                   alt={name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-yellow-400"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-600"
                 />
                 <div>
                   <h3 className="font-semibold text-lg">{name}</h3>
@@ -77,7 +77,7 @@ const DealTestimonials = () => {
               </div>
 
            
-              <p className="text-gray-300 text-sm leading-relaxed">{review}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{review}</p>
             </motion.div>
           ))}
         </div>

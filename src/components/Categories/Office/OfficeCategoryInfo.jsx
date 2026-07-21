@@ -32,9 +32,9 @@ const categories = [
 
 const OfficeCategoryInfo = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 py-12 px-6">
+    <section className="bg-white text-amber-600 py-12 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-yellow-300">
+        <h2 className="text-3xl font-bold mb-10 text-center text-amber-500">
           Office Product Categories
         </h2>
 
@@ -42,11 +42,11 @@ const OfficeCategoryInfo = () => {
           {categories.map(({ icon, title, description }) => (
             <div
               key={title}
-              className="flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+              className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-amber-600 transition-shadow duration-300"
             >
-              <div className="mb-4 text-yellow-400">{icon}</div>
+              <div className="mb-4 text-amber-600">{icon}</div>
               <h3 className="text-xl font-semibold mb-2">{title}</h3>
-              <p className="text-yellow-300 text-sm">{description}</p>
+              <p className="text-amber-500 text-sm">{description}</p>
             </div>
           ))}
         </div>

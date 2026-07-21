@@ -38,9 +38,9 @@ const ideas = [
 
 export default function GiftIdeas() {
   return (
-    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 bg-gray-900 text-white rounded-2xl shadow-lg">
+    <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 bg-white text-gray-900 rounded-2xl shadow-lg">
       <motion.h2
-        className="text-3xl sm:text-4xl font-extrabold text-center text-yellow-400 mb-12 drop-shadow-xl"
+        className="text-3xl sm:text-4xl font-extrabold text-center text-amber-600 mb-12 drop-shadow-xl"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -53,7 +53,7 @@ export default function GiftIdeas() {
         {ideas.map(({ id, title, img }) => (
           <motion.div
             key={id}
-            className="relative overflow-hidden rounded-xl group cursor-pointer shadow-xl border border-gray-800 transition-all duration-300"
+            className="relative overflow-hidden rounded-xl group cursor-pointer shadow-xl border border-gray-200 transition-all duration-300"
             role="button"
             tabIndex={0}
             onClick={() => alert(`You selected: ${title}`)}
@@ -74,8 +74,8 @@ export default function GiftIdeas() {
               className="w-full h-64 object-cover rounded-xl transform transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
-            <h3 className="absolute bottom-4 left-4 text-xl sm:text-2xl font-bold text-yellow-400 drop-shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
+            <h3 className="absolute bottom-4 left-4 text-xl sm:text-2xl font-bold text-amber-600 drop-shadow-lg">
               {title}
             </h3>
           </motion.div>

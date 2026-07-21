@@ -6,12 +6,12 @@ import { FaHeart } from 'react-icons/fa';
 
 const features = [
   {
-    icon: <FiHeart className="text-yellow-400" style={{ fontSize: '10px' }} />,
-    label: <span className="text-yellow-400" style={{ fontSize: '11.5px' }}>Save Favorite Products</span>,
+    icon: <FiHeart className="text-amber-600" style={{ fontSize: '10px' }} />,
+    label: <span className="text-amber-600" style={{ fontSize: '11.5px' }}>Save Favorite Products</span>,
   },
   {
-    icon: <FiStar className="text-yellow-400" style={{ fontSize: '10px' }} />,
-    label: <span className="text-yellow-400" style={{ fontSize: '11.5px' }}>Quick Access Anytime</span>,
+    icon: <FiStar className="text-amber-600" style={{ fontSize: '10px' }} />,
+    label: <span className="text-amber-600" style={{ fontSize: '11.5px' }}>Quick Access Anytime</span>,
   },
 ];
 
@@ -27,21 +27,21 @@ const WishlistingHero = () => {
   return (
     <section
       aria-label="Manage your wishlist"
-      className="w-full max-w-[900px] mx-auto px-6 py-12 lg:py-16 my-[-30px] mb-5 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-yellow-400 rounded-3xl shadow-2xl overflow-hidden relative"
+      className="w-full max-w-[900px] mx-auto px-6 py-12 lg:py-16 my-[-30px] mb-5 bg-gradient-to-br from-white via-white to-white text-amber-600 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="max-w-md mx-auto lg:mx-0 space-y-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight">
             Your Personal{' '}
-            <span className="text-yellow-400 underline decoration-yellow-300 decoration-4 underline-offset-4">
+            <span className="text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
               Wishlist Hub
             </span>
             <br />
             Save Now, Shop Later
           </h1>
 
-          <p className="text-yellow-300 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
+          <p className="text-amber-500 text-sm sm:text-base leading-relaxed max-w-sm mx-auto lg:mx-0">
             Keep all your favorite items in one place. Easily revisit, manage, and purchase the
             products you love — anytime, from anywhere.
           </p>
@@ -64,7 +64,7 @@ const WishlistingHero = () => {
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 pt-3">
             <button
               type="button"
-              className="px-7 py-2.5 bg-yellow-400 text-black font-semibold rounded-full shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2"
+              className="px-7 py-2.5 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               aria-label="Browse products"
             >
               Browse Products
@@ -72,7 +72,7 @@ const WishlistingHero = () => {
 
             <button
               type="button"
-              className="px-7 py-2.5 border border-yellow-400 text-yellow-400 font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+              className="px-7 py-2.5 border border-amber-600 text-amber-600 font-semibold rounded-full hover:bg-amber-600 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
               aria-label="Share wishlist"
             >
               Share Wishlist
@@ -85,7 +85,7 @@ const WishlistingHero = () => {
           {imageUrls.map((url, idx) => (
             <div
               key={idx}
-              className="relative w-60 h-40 sm:w-64 sm:h-44 md:w-72 md:h-48 rounded-3xl overflow-hidden border-4 border-yellow-400 bg-gray-800 shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
+              className="relative w-60 h-40 sm:w-64 sm:h-44 md:w-72 md:h-48 rounded-3xl overflow-hidden border-4 border-amber-600 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.4)]"
               aria-hidden="true"
             >
               <img
@@ -98,7 +98,7 @@ const WishlistingHero = () => {
 
               {/* Badge on first */}
               {idx === 0 && (
-                <div className="absolute top-3 right-3 bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-sm select-none pointer-events-none">
+                <div className="absolute top-3 right-3 bg-amber-600 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-sm select-none pointer-events-none">
                   Wishlisted
                 </div>
               )}
@@ -108,7 +108,7 @@ const WishlistingHero = () => {
       </div>
 
       {/* Floating Decorative Icon */}
-      <div className="absolute top-6 left-6 hidden lg:block text-yellow-400 text-4xl opacity-15 pointer-events-none select-none">
+      <div className="absolute top-6 left-6 hidden lg:block text-amber-600 text-4xl opacity-15 pointer-events-none select-none">
         <FaHeart />
       </div>
     </section>

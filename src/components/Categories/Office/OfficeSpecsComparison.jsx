@@ -27,14 +27,14 @@ const products = [
 
 const OfficeSpecsComparison = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 p-6 rounded-lg max-w-6xl mx-auto my-12">
-      <h2 className="text-3xl font-bold mb-8 text-center text-yellow-300">
+    <section className="bg-white text-amber-600 p-6 rounded-lg max-w-6xl mx-auto my-12">
+      <h2 className="text-3xl font-bold mb-8 text-center text-amber-500">
         Office Products Specs Comparison
       </h2>
 
       <div className="overflow-x-auto">
-        <table className="min-w-full border border-yellow-600 rounded-lg">
-          <thead className="bg-yellow-700 text-black">
+        <table className="min-w-full border border-amber-800 rounded-lg">
+          <thead className="bg-amber-900 text-black">
             <tr>
               <th className="p-3 text-left">Product</th>
               <th className="p-3 text-left">Brand</th>
@@ -47,7 +47,7 @@ const OfficeSpecsComparison = () => {
             {products.map(({ name, brand, price, features, rating }) => (
               <tr
                 key={name}
-                className="border-t border-yellow-600 hover:bg-yellow-900 transition-colors"
+                className="border-t border-amber-800 hover:bg-amber-950 transition-colors"
               >
                 <td className="p-3 font-semibold">{name}</td>
                 <td className="p-3">{brand}</td>

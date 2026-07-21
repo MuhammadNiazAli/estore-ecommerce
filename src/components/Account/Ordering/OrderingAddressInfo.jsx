@@ -7,7 +7,7 @@ const OrderingAddressInfo = ({ address }) => {
     return (
       <section
         aria-label="Shipping address"
-        className="text-center text-sm text-gray-400 py-6"
+        className="text-center text-sm text-gray-600 py-6"
       >
         No shipping address available.
       </section>
@@ -19,9 +19,9 @@ const OrderingAddressInfo = ({ address }) => {
   return (
     <section
       aria-label="Shipping address"
-      className="bg-gray-800 text-gray-200 rounded-lg p-6 max-w-md mx-auto lg:mx-0 shadow-md"
+      className="bg-white text-gray-700 rounded-lg p-6 max-w-md mx-auto lg:mx-0 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-yellow-400 border-b border-yellow-400 pb-2 mb-4">
+      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-4">
         Shipping Address
       </h2>
 

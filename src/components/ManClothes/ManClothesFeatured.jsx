@@ -70,7 +70,7 @@ const ManClothesFeatured = () => {
   const currentProduct = featuredProducts[currentIndex];
 
   return (
-    <div className="relative w-full min-h-[600px] lg:min-h-[700px] bg-black text-white overflow-hidden">
+    <div className="relative w-full min-h-[600px] lg:min-h-[700px] bg-white text-gray-900 overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentProduct.id}
@@ -88,34 +88,34 @@ const ManClothesFeatured = () => {
           />
 
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-white/60"></div>
 
           {/* Content Section */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge for Desktop */}
-            <div className="hidden lg:inline-block bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-4">
+            <div className="hidden lg:inline-block bg-amber-700 text-black text-xs font-bold px-3 py-1 rounded-full mb-4">
               Limited Stock
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold text-yellow-400 mb-2">
+            <h1 className="text-4xl lg:text-5xl font-bold text-amber-600 mb-2">
               {currentProduct.name}
             </h1>
-            <p className="text-sm lg:text-lg text-gray-200 mb-3">
+            <p className="text-sm lg:text-lg text-gray-700 mb-3">
               {currentProduct.description}
             </p>
 
             {/* Extra Details for Desktop */}
-            <div className="hidden lg:flex flex-col gap-2 text-gray-300 text-sm mb-4">
-              <span>Brand: <span className="text-yellow-400">{currentProduct.brand}</span></span>
+            <div className="hidden lg:flex flex-col gap-2 text-gray-700 text-sm mb-4">
+              <span>Brand: <span className="text-amber-600">{currentProduct.brand}</span></span>
               <span>Rating: ⭐ {currentProduct.rating}</span>
             </div>
 
             {/* Pricing */}
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-3xl lg:text-4xl font-bold text-yellow-400">
+              <span className="text-3xl lg:text-4xl font-bold text-amber-600">
                 ${currentProduct.price}
               </span>
-              <span className="line-through text-gray-400 text-lg">
+              <span className="line-through text-gray-600 text-lg">
                 ${currentProduct.oldPrice}
               </span>
             </div>
@@ -136,7 +136,7 @@ const ManClothesFeatured = () => {
               {currentProduct.sizes.map((size) => (
                 <span
                   key={size}
-                  className="px-3 py-1 border border-yellow-400 text-yellow-400 rounded text-xs font-medium"
+                  className="px-3 py-1 border border-amber-600 text-amber-600 rounded text-xs font-medium"
                 >
                   {size}
                 </span>
@@ -144,7 +144,7 @@ const ManClothesFeatured = () => {
             </div>
 
             {/* Features for Desktop */}
-            <ul className="hidden lg:grid grid-cols-2 gap-2 text-gray-300 text-sm mb-6">
+            <ul className="hidden lg:grid grid-cols-2 gap-2 text-gray-700 text-sm mb-6">
               {currentProduct.features.map((feature, i) => (
                 <li key={i} className="flex items-center gap-2">
                    {feature}
@@ -154,10 +154,10 @@ const ManClothesFeatured = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="bg-yellow-500 text-black px-5 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+              <button className="bg-amber-700 text-black px-5 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:bg-amber-600 transition">
                 Add to Cart
               </button>
-              <button className="border border-yellow-500 text-yellow-400 px-5 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-yellow-500 hover:text-black transition">
+              <button className="border border-amber-700 text-amber-600 px-5 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-amber-700 hover:text-black transition">
                 View Details
               </button>
             </div>
@@ -172,7 +172,7 @@ const ManClothesFeatured = () => {
             key={i}
             onClick={() => setCurrentIndex(i)}
             className={`w-3 h-3 rounded-full ${
-              i === currentIndex ? "bg-yellow-400" : "bg-gray-500"
+              i === currentIndex ? "bg-amber-600" : "bg-gray-500"
             }`}
           ></button>
         ))}

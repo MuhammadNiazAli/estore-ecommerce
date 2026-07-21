@@ -40,14 +40,14 @@ const featuredDeals = [
 
 const SportsFeaturedDeals = () => {
   return (
-    <section className="bg-gray-900 text-yellow-400 py-14 my-[-50px]">
+    <section className="bg-white text-amber-600 py-14 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4">
         {/* ✅ Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold tracking-tight">
             Featured Sports Deals
           </h2>
-          <p className="text-gray-300 mt-3 text-lg">
+          <p className="text-gray-700 mt-3 text-lg">
             Grab the hottest discounts on premium sports gear
           </p>
         </div>
@@ -61,7 +61,7 @@ const SportsFeaturedDeals = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300"
             >
               {/* Image */}
               <div className="relative">
@@ -70,24 +70,24 @@ const SportsFeaturedDeals = () => {
                   alt={deal.name}
                   className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold">
+                <span className="absolute top-4 left-4 bg-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold">
                   {deal.discount}
                 </span>
               </div>
 
               {/* Info */}
               <div className="p-5">
-                <h3 className="text-xl font-bold text-white">{deal.name}</h3>
+                <h3 className="text-xl font-bold text-gray-900">{deal.name}</h3>
                 <div className="flex items-center gap-2 mt-2">
-                  <span className="text-yellow-400 font-extrabold text-2xl">
+                  <span className="text-amber-600 font-extrabold text-2xl">
                     ${deal.price}
                   </span>
-                  <span className="text-gray-400 line-through text-sm">
+                  <span className="text-gray-600 line-through text-sm">
                     ${deal.oldPrice}
                   </span>
                 </div>
 
-                <div className="flex items-center gap-1 mt-2 text-yellow-400">
+                <div className="flex items-center gap-1 mt-2 text-amber-600">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
@@ -95,12 +95,12 @@ const SportsFeaturedDeals = () => {
                       className={i < Math.round(deal.rating) ? "" : "opacity-40"}
                     />
                   ))}
-                  <span className="text-sm text-gray-300 ml-1">
+                  <span className="text-sm text-gray-700 ml-1">
                     {deal.rating}
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-yellow-400 text-black font-semibold py-2 rounded-full hover:bg-yellow-300 transition flex items-center justify-center gap-2">
+                <button className="mt-4 w-full bg-amber-600 text-black font-semibold py-2 rounded-full hover:bg-amber-500 transition flex items-center justify-center gap-2">
                   <FaCartPlus /> Add to Cart
                 </button>
               </div>

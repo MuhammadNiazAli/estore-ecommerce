@@ -9,9 +9,9 @@ const SecuritingDeleteAccount = () => {
   return (
     <section
       aria-label="Delete your account permanently"
-      className="w-full bg-gradient-to-br from-yellow-900 via-yellow-800 to-yellow-700 text-black p-6 rounded-2xl shadow-xl space-y-6"
+      className="w-full bg-gradient-to-br from-amber-950 via-amber-900 to-amber-900 text-black p-6 rounded-2xl shadow-xl space-y-6"
     >
-      <div className="flex items-center gap-3 text-yellow-500">
+      <div className="flex items-center gap-3 text-amber-700">
         <FiAlertTriangle className="text-2xl" />
         <h2 className="text-xl font-bold">Delete Account</h2>
       </div>
@@ -24,7 +24,7 @@ const SecuritingDeleteAccount = () => {
         <button
           type="button"
           onClick={() => setConfirming(true)}
-          className="bg-yellow-600 hover:bg-yellow-500 px-6 py-2.5 rounded-full font-semibold shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 text-black flex items-center gap-2"
+          className="bg-amber-800 hover:bg-amber-700 px-6 py-2.5 rounded-full font-semibold shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-black flex items-center gap-2"
         >
           <FiTrash2 />
           Delete My Account
@@ -37,14 +37,14 @@ const SecuritingDeleteAccount = () => {
           <div className="flex gap-4">
             <button
               type="button"
-              className="px-6 py-2 bg-yellow-700 hover:bg-yellow-600 text-black rounded-full text-sm font-medium transition"
+              className="px-6 py-2 bg-amber-900 hover:bg-amber-800 text-black rounded-full text-sm font-medium transition"
               onClick={() => alert('Account deletion logic triggered')}
             >
               Yes, Delete Permanently
             </button>
             <button
               type="button"
-              className="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-full text-sm font-medium transition"
+              className="px-6 py-2 bg-white hover:bg-gray-50 text-gray-900 rounded-full text-sm font-medium transition"
               onClick={() => setConfirming(false)}
             >
               Cancel

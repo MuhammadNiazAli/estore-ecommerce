@@ -162,12 +162,12 @@ const SportsReviewsPreview = () => {
   const displayedReviews = showAll ? reviews : reviews.slice(0, 3);
 
   return (
-    <section className="bg-gray-900 py-14 text-yellow-400 my-[-50px]">
+    <section className="bg-white py-14 text-amber-600 my-[-50px]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold">Customer Reviews</h2>
-          <p className="text-gray-300 mt-2 text-lg">
+          <p className="text-gray-700 mt-2 text-lg">
             See what athletes say about our premium gear
           </p>
         </div>
@@ -182,22 +182,22 @@ const SportsReviewsPreview = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center text-center min-h-[260px]"
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center min-h-[260px]"
               >
                 {/* Avatar */}
                 <img
                   src={review.avatar}
                   alt={review.name}
-                  className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-yellow-400"
+                  className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-amber-600"
                 />
 
                 {/* Name */}
-                <h3 className="text-white font-semibold text-lg mb-2">
+                <h3 className="text-gray-900 font-semibold text-lg mb-2">
                   {review.name}
                 </h3>
 
                 {/* Rating */}
-                <div className="flex justify-center mb-3 text-yellow-400">
+                <div className="flex justify-center mb-3 text-amber-600">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
@@ -208,7 +208,7 @@ const SportsReviewsPreview = () => {
                 </div>
 
                 {/* Review */}
-                <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                <p className="text-gray-700 text-sm leading-relaxed line-clamp-3">
                   "{review.review}"
                 </p>
               </motion.div>
@@ -220,7 +220,7 @@ const SportsReviewsPreview = () => {
         <div className="text-center mt-10">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-300 transition"
+            className="px-6 py-3 bg-amber-600 text-black font-semibold rounded-full hover:bg-amber-500 transition"
           >
             {showAll ? "Show Less" : "View All Reviews"}
           </button>

@@ -201,14 +201,14 @@ const relatedAccessories = [
 const AccessoriesRelated = () => {
   return (
     <section className="max-w-[1000px] mx-auto px-4 py-10">
-      <h3 className="text-4xl font-extrabold text-yellow-400 mb-8 text-center md:text-left tracking-wide">
+      <h3 className="text-4xl font-extrabold text-amber-600 mb-8 text-center md:text-left tracking-wide">
         Related Accessories Gallery
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {relatedAccessories.map((item) => (
           <div
             key={item.id}
-            className="relative group rounded-xl overflow-hidden shadow-lg bg-gray-900 cursor-pointer focus:outline-yellow-400"
+            className="relative group rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer focus:outline-amber-600"
             tabIndex={0}
             aria-label={`View details for ${item.name}`}
           >
@@ -224,17 +224,17 @@ const AccessoriesRelated = () => {
             {/* Discount / Best Seller Badge */}
             <div className="absolute top-3 left-3 space-y-1 z-20">
               {item.bestSeller && (
-                <span className="bg-yellow-500 text-gray-900 font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide shadow-lg select-none">
+                <span className="bg-amber-700 text-gray-900 font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide shadow-lg select-none">
                   Best Seller
                 </span>
               )}
-              <span className="bg-red-600 text-white font-semibold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide shadow-lg select-none">
+              <span className="bg-red-600 text-gray-900 font-semibold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide shadow-lg select-none">
                 {item.discount}
               </span>
             </div>
 
             {/* Overlay Info */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/95 to-transparent p-3 text-yellow-400 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/95 to-transparent p-3 text-amber-600 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
               <h4
                 className="text-sm font-semibold mb-0.5 truncate"
                 title={item.name}
@@ -251,26 +251,26 @@ const AccessoriesRelated = () => {
                       size={12}
                       className={
                         i < Math.round(item.rating)
-                          ? "text-yellow-400"
+                          ? "text-amber-600"
                           : "text-gray-600"
                       }
-                      fill={i < Math.round(item.rating) ? "#facc15" : "none"}
+                      fill={i < Math.round(item.rating) ? "#b45309" : "none"}
                     />
                   ))}
                 </div>
-                <span className="text-gray-400 text-xs select-none">
+                <span className="text-gray-600 text-xs select-none">
                   ({item.reviewsCount} reviews)
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 text-xs line-clamp-3 mb-2 leading-snug select-none">
+              <p className="text-gray-700 text-xs line-clamp-3 mb-2 leading-snug select-none">
                 {item.description}
               </p>
 
               {/* Prices */}
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-yellow-400 font-bold text-sm">
+                <span className="text-amber-600 font-bold text-sm">
                   ${item.price.toFixed(2)}
                 </span>
                 <span className="line-through text-gray-600 text-xs">
@@ -282,14 +282,14 @@ const AccessoriesRelated = () => {
               <div className="flex gap-2">
                 <button
                   type="button"
-                  className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-md px-2 py-0.5 text-xs transition select-none whitespace-nowrap"
+                  className="bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-md px-2 py-0.5 text-xs transition select-none whitespace-nowrap"
                   aria-label={`Quick view of ${item.name}`}
                 >
                   Quick View
                 </button>
                 <button
                   type="button"
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md px-2 py-0.5 text-xs transition select-none whitespace-nowrap"
+                  className="bg-red-600 hover:bg-red-700 text-gray-900 font-semibold rounded-md px-2 py-0.5 text-xs transition select-none whitespace-nowrap"
                   aria-label={`Add ${item.name} to cart`}
                 >
                   Add to Cart

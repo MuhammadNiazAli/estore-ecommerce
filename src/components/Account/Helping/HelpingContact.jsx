@@ -5,22 +5,22 @@ import { FaPhoneAlt, FaEnvelope, FaComments, FaTimes } from 'react-icons/fa';
 
 const contactHelpFeatures = [
   {
-    icon: <FaPhoneAlt className="text-yellow-400 text-base" />,
+    icon: <FaPhoneAlt className="text-amber-600 text-base" />,
     label: 'Call Our Support Team',
   },
   {
-    icon: <FaEnvelope className="text-yellow-400 text-base" />,
+    icon: <FaEnvelope className="text-amber-600 text-base" />,
     label: 'Email Us Anytime',
   },
   {
-    icon: <FaComments className="text-yellow-400 text-base" />,
+    icon: <FaComments className="text-amber-600 text-base" />,
     label: 'Live Chat Assistance',
   },
 ];
 
 const callSupportContent = (
-  <div className="text-center text-xs text-gray-300 space-y-3">
-    <h3 className="text-lg font-semibold text-yellow-400">Call Support</h3>
+  <div className="text-center text-xs text-gray-700 space-y-3">
+    <h3 className="text-lg font-semibold text-amber-600">Call Support</h3>
     <p>Speak directly with our team for urgent help:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li><strong>+1 (800) 123-4567</strong></li>
@@ -31,8 +31,8 @@ const callSupportContent = (
 );
 
 const emailSupportContent = (
-  <div className="text-center text-xs text-gray-300 space-y-3">
-    <h3 className="text-lg font-semibold text-yellow-400">Email Support</h3>
+  <div className="text-center text-xs text-gray-700 space-y-3">
+    <h3 className="text-lg font-semibold text-amber-600">Email Support</h3>
     <p>Send us an email with your issue and we’ll respond within 24 hours:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li><strong>support@estore.com</strong></li>
@@ -43,8 +43,8 @@ const emailSupportContent = (
 );
 
 const chatSupportContent = (
-  <div className="text-center text-xs text-gray-300 space-y-3">
-    <h3 className="text-lg font-semibold text-yellow-400">Live Chat</h3>
+  <div className="text-center text-xs text-gray-700 space-y-3">
+    <h3 className="text-lg font-semibold text-amber-600">Live Chat</h3>
     <p>Chat with our friendly support agents in real-time:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Start a conversation instantly</li>
@@ -64,17 +64,17 @@ export default function HelpingContact() {
   return (
     <section
       aria-label="Contact help and support"
-      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-white rounded-3xl shadow-2xl overflow-hidden relative"
+      className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center">
-        <h2 className="text-3xl font-extrabold text-yellow-400 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
           Get In Touch With Us
         </h2>
-        <p className="text-gray-300 max-w-md mx-auto text-sm">
+        <p className="text-gray-700 max-w-md mx-auto text-sm">
           Have questions or need assistance? Reach out through any of the options below — we’re here to help 24/7.
         </p>
 
-        <ul className="flex flex-col sm:flex-row justify-center gap-6 text-gray-400 font-medium text-xs max-w-md mx-auto">
+        <ul className="flex flex-col sm:flex-row justify-center gap-6 text-gray-600 font-medium text-xs max-w-md mx-auto">
           {contactHelpFeatures.map(({ icon, label }, idx) => (
             <li
               key={idx}
@@ -93,8 +93,8 @@ export default function HelpingContact() {
             onClick={() => toggleSection('call')}
             className={`px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'call'
-                ? 'bg-yellow-300 text-black ring-yellow-300'
-                : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                ? 'bg-amber-500 text-black ring-amber-500'
+                : 'bg-amber-600 text-black hover:bg-amber-500'
             } text-sm`}
             aria-label="Toggle call section"
           >
@@ -105,8 +105,8 @@ export default function HelpingContact() {
             onClick={() => toggleSection('email')}
             className={`px-6 py-3 rounded-full border font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'email'
-                ? 'bg-white text-black ring-white'
-                : 'border-white text-white hover:bg-white hover:text-black'
+                ? 'bg-white text-black ring-gray-200'
+                : 'border-gray-200 text-gray-900 hover:bg-gray-100 hover:text-black'
             } text-sm`}
             aria-label="Toggle email section"
           >
@@ -117,8 +117,8 @@ export default function HelpingContact() {
             onClick={() => toggleSection('chat')}
             className={`px-6 py-3 rounded-full border font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'chat'
-                ? 'bg-yellow-400 text-black ring-yellow-300'
-                : 'border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black'
+                ? 'bg-amber-600 text-black ring-amber-500'
+                : 'border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-black'
             } text-sm`}
             aria-label="Toggle live chat section"
           >
@@ -127,10 +127,10 @@ export default function HelpingContact() {
         </div>
 
         {activeSection && (
-          <div className="relative mt-8 p-6 bg-gray-900 border border-gray-700 rounded-xl transition-all duration-300 shadow-lg">
+          <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-400 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
               aria-label="Close section"
             >
               <FaTimes />

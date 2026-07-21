@@ -9,7 +9,7 @@ const statsData = [
     title: "Active Affiliates",
     value: 12345,
     suffix: "+",
-    icon: <Users className="w-8 h-8 text-yellow-400" />,
+    icon: <Users className="w-8 h-8 text-amber-600" />,
     description: "Engaged partners promoting our platform daily.",
   },
   {
@@ -18,7 +18,7 @@ const statsData = [
     value: 120000,
     prefix: "$",
     suffix: "+",
-    icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
+    icon: <DollarSign className="w-8 h-8 text-amber-600" />,
     description: "Total rewards distributed to our affiliate partners.",
   },
   {
@@ -26,7 +26,7 @@ const statsData = [
     title: "Total Sales Generated",
     value: 89000,
     suffix: "+",
-    icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
+    icon: <TrendingUp className="w-8 h-8 text-amber-600" />,
     description: "Sales made directly through affiliate links.",
   },
   {
@@ -34,7 +34,7 @@ const statsData = [
     title: "Conversion Rate",
     value: 7.9,
     suffix: "%",
-    icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+    icon: <BarChart3 className="w-8 h-8 text-amber-600" />,
     description: "Average conversion rate across all campaigns.",
     decimal: 1,
   },
@@ -89,10 +89,10 @@ const AffiliatesStats = () => {
   return (
     <section
       aria-label="Affiliate Program Key Statistics"
-      className="bg-gray-900 text-yellow-400 py-16 px-6 sm:px-8"
+      className="bg-white text-amber-600 py-16 px-6 sm:px-8"
     >
       <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-center font-extrabold mb-12 tracking-wide text-yellow-400
+        <h2 className="text-center font-extrabold mb-12 tracking-wide text-amber-600
           text-[clamp(1.75rem,4vw,2.5rem)]"
         >
           Key Affiliate Statistics
@@ -106,7 +106,7 @@ const AffiliatesStats = () => {
             aria-label="Loading affiliate statistics"
           >
             <svg
-              className="animate-spin h-12 w-12 text-yellow-400"
+              className="animate-spin h-12 w-12 text-amber-600"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -156,13 +156,13 @@ const AffiliatesStats = () => {
                     aria-describedby={`desc-${id}`}
                     onClick={() => setSelectedId(isSelected ? null : id)}
                     onKeyDown={(e) => handleKeyDown(e, id)}
-                    className={`relative bg-gray-800 rounded-2xl p-6 flex flex-col items-start justify-start shadow-lg cursor-pointer
-                      focus:outline-none focus:ring-4 focus:ring-yellow-500
+                    className={`relative bg-white rounded-2xl p-6 flex flex-col items-start justify-start shadow-lg cursor-pointer
+                      focus:outline-none focus:ring-4 focus:ring-amber-700
                       transition-all duration-300 ease-in-out
                       ${
                         isSelected
-                          ? "bg-yellow-900 shadow-yellow-500/60 scale-[1.03]"
-                          : "hover:bg-gray-700 hover:shadow-yellow-500/30 hover:scale-[1.02]"
+                          ? "bg-amber-950 shadow-amber-700/60 scale-[1.03]"
+                          : "hover:bg-gray-50 hover:shadow-amber-700/30 hover:scale-[1.02]"
                       }`}
                   >
                     <div className="mb-4" aria-hidden="true">
@@ -171,7 +171,7 @@ const AffiliatesStats = () => {
 
                     {/* Value */}
                     <h3
-                      className="font-extrabold tracking-tight mb-1 select-none text-yellow-400
+                      className="font-extrabold tracking-tight mb-1 select-none text-amber-600
                         text-[clamp(1.75rem,3vw,2rem)] leading-tight"
                       aria-label={`${title} value`}
                     >
@@ -184,7 +184,7 @@ const AffiliatesStats = () => {
                     </h3>
 
                     {/* Title */}
-                    <p className="text-sm font-semibold text-yellow-300 mb-2 select-none
+                    <p className="text-sm font-semibold text-amber-500 mb-2 select-none
                       tracking-wide"
                     >
                       {title}
@@ -194,7 +194,7 @@ const AffiliatesStats = () => {
                     {isSelected ? (
                       <p
                         id={`desc-${id}`}
-                        className="mt-3 text-yellow-400 text-sm leading-relaxed select-text
+                        className="mt-3 text-amber-600 text-sm leading-relaxed select-text
                           transition-opacity duration-300"
                         aria-live="polite"
                       >

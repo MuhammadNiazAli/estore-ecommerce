@@ -8,7 +8,7 @@ const steps = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-12 h-12 text-yellow-400"
+        className="w-12 h-12 text-amber-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -25,7 +25,7 @@ const steps = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-12 h-12 text-yellow-400"
+        className="w-12 h-12 text-amber-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -43,7 +43,7 @@ const steps = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-12 h-12 text-yellow-400"
+        className="w-12 h-12 text-amber-600"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -57,9 +57,9 @@ const steps = [
 
 const SizeGuideHowToMeasure = () => {
   return (
-    <section className="w-full bg-gray-900 text-gray-100 flex justify-center py-12 px-4 sm:px-6 md:py-16">
+    <section className="w-full bg-white text-gray-800 flex justify-center py-12 px-4 sm:px-6 md:py-16">
       <div className="max-w-[1000px] w-full">
-        <h2 className="text-yellow-400 text-3xl sm:text-4xl font-extrabold mb-12 text-center select-none">
+        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-12 text-center select-none">
           How to Measure Yourself
         </h2>
 
@@ -67,11 +67,11 @@ const SizeGuideHowToMeasure = () => {
           {steps.map(({ title, description, icon }, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center md:items-start text-center md:text-left bg-gray-800 p-6 rounded-lg shadow-md flex-1 transition-transform hover:scale-[1.03]"
+              className="flex flex-col items-center md:items-start text-center md:text-left bg-white p-6 rounded-lg shadow-md flex-1 transition-transform hover:scale-[1.03]"
             >
               <div className="mb-5">{icon}</div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-yellow-400 mb-3">{title}</h3>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">{description}</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-amber-600 mb-3">{title}</h3>
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">{description}</p>
             </div>
           ))}
         </div>

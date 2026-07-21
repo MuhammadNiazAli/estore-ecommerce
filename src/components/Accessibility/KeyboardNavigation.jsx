@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const KeyboardNavigation = () => {
   return (
-    <section className="w-full bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 mb-[-50px]">
+    <section className="w-full bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8 mb-[-50px]">
       <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center space-y-8">
         {/* Icon */}
         <motion.div
@@ -15,7 +15,7 @@ const KeyboardNavigation = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           aria-hidden="true"
         >
-          <Keyboard className="w-16 h-16 sm:w-20 sm:h-20 text-yellow-400" />
+          <Keyboard className="w-16 h-16 sm:w-20 sm:h-20 text-amber-600" />
         </motion.div>
 
         {/* Heading */}
@@ -23,7 +23,7 @@ const KeyboardNavigation = () => {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
-          className="text-3xl sm:text-4xl font-bold text-yellow-300 leading-tight max-w-xl"
+          className="text-3xl sm:text-4xl font-bold text-amber-500 leading-tight max-w-xl"
         >
           Keyboard Navigation Support
         </motion.h2>
@@ -33,7 +33,7 @@ const KeyboardNavigation = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-          className="max-w-3xl text-gray-400 text-base sm:text-lg leading-relaxed px-2 sm:px-0"
+          className="max-w-3xl text-gray-600 text-base sm:text-lg leading-relaxed px-2 sm:px-0"
         >
           Our website is fully navigable using a keyboard alone. You can tab through all interactive elements, activate buttons with Enter or Space, and see clear focus outlines for easy navigation.
         </motion.p>
@@ -43,7 +43,7 @@ const KeyboardNavigation = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-          className="list-disc list-inside text-gray-300 max-w-xl text-left space-y-2 px-4 sm:px-0"
+          className="list-disc list-inside text-gray-700 max-w-xl text-left space-y-2 px-4 sm:px-0"
         >
           <li>Logical tab order following the visual layout</li>
           <li>Visible focus indicators on all interactive elements</li>

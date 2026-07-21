@@ -11,28 +11,28 @@ const specsData = [
 
 const ProductSpecifications = () => {
   return (
-    <section className="max-w-[1100px] w-full mx-auto p-4 sm:p-10 bg-gray-900 rounded-xl shadow-md">
-      <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-white tracking-tight">
+    <section className="max-w-[1100px] w-full mx-auto p-4 sm:p-10 bg-white rounded-xl shadow-md">
+      <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 sm:mb-8 text-gray-900 tracking-tight">
         Product Specifications
       </h2>
 
-      <div className="overflow-x-auto rounded-lg border border-gray-700 shadow-sm">
+      <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
         <table
           className="min-w-full border-collapse"
           role="table"
           aria-label="Product Specifications"
         >
-          <thead className="bg-gray-800 sticky top-0 z-10">
+          <thead className="bg-white sticky top-0 z-10">
             <tr>
               <th
                 scope="col"
-                className="text-left px-4 sm:px-6 py-3 text-gray-300 font-semibold text-sm sm:text-base select-none"
+                className="text-left px-4 sm:px-6 py-3 text-gray-700 font-semibold text-sm sm:text-base select-none"
               >
                 Specification
               </th>
               <th
                 scope="col"
-                className="text-left px-4 sm:px-6 py-3 text-gray-300 font-semibold text-sm sm:text-base select-none"
+                className="text-left px-4 sm:px-6 py-3 text-gray-700 font-semibold text-sm sm:text-base select-none"
               >
                 Details
               </th>
@@ -43,16 +43,16 @@ const ProductSpecifications = () => {
               <tr
                 key={idx}
                 className={`transition-colors duration-200 ${
-                  idx % 2 === 0 ? "bg-gray-900" : "bg-gray-800"
-                } hover:bg-yellow-900 cursor-default`}
+                  idx % 2 === 0 ? "bg-white" : "bg-white"
+                } hover:bg-amber-950 cursor-default`}
               >
                 <th
                   scope="row"
-                  className="px-4 sm:px-6 py-3 border-b border-gray-700 text-white font-medium whitespace-nowrap text-sm sm:text-base"
+                  className="px-4 sm:px-6 py-3 border-b border-gray-200 text-gray-900 font-medium whitespace-nowrap text-sm sm:text-base"
                 >
                   {label}
                 </th>
-                <td className="px-4 sm:px-6 py-3 border-b border-gray-700 text-gray-300 text-sm sm:text-base">
+                <td className="px-4 sm:px-6 py-3 border-b border-gray-200 text-gray-700 text-sm sm:text-base">
                   {value}
                 </td>
               </tr>

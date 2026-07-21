@@ -69,11 +69,11 @@ const ProductHome = () => {
   };
 
   return (
-    <section className="max-w-[1200px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 text-white bg-gray-900 my-[-50px]">
+    <section className="max-w-[1200px] mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-900 bg-white my-[-50px]">
       {/* LEFT SIDE */}
       <div>
         <div
-          className="relative rounded-xl overflow-hidden border border-gray-800 bg-gray-50 flex items-center justify-center"
+          className="relative rounded-xl overflow-hidden border border-gray-200 bg-gray-50 flex items-center justify-center"
           style={{ maxWidth: 500, height: 500 }}
           onMouseEnter={() => setShowMagnifier(true)}
           onMouseLeave={() => setShowMagnifier(false)}
@@ -123,7 +123,7 @@ const ProductHome = () => {
               key={i}
               onClick={() => setMainImageIndex(i)}
               className={`w-20 h-20 border-2 rounded-lg overflow-hidden cursor-pointer ${
-                mainImageIndex === i ? "border-yellow-500" : "border-gray-700 hover:border-yellow-600"
+                mainImageIndex === i ? "border-amber-700" : "border-gray-200 hover:border-amber-800"
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -137,23 +137,23 @@ const ProductHome = () => {
       <div className="flex flex-col justify-between">
         <div>
           <h1 className="text-3xl font-bold mb-2">Premium Winter Jacket</h1>
-          <div className="flex items-center gap-2 text-yellow-400 mb-4">
+          <div className="flex items-center gap-2 text-amber-600 mb-4">
             <AiFillStar />
             <span className="font-semibold">4.6</span>
-            <span className="text-sm text-gray-400">(241 reviews)</span>
+            <span className="text-sm text-gray-600">(241 reviews)</span>
           </div>
 
           <div className="mb-4">
-            <span className="text-2xl font-bold text-yellow-400">${totalPrice}</span>
+            <span className="text-2xl font-bold text-amber-600">${totalPrice}</span>
             <span className="text-sm line-through text-gray-500 ml-3">${originalPrice}</span>
             <span className="ml-2 text-green-400 text-sm">{discountPercent}% OFF</span>
           </div>
 
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-700 mb-6">
             Durable and stylish winter jacket perfect for extreme cold, snow, and outdoor adventures. Breathable, windproof, and waterproof.
           </p>
 
-          <ul className="list-disc pl-5 mb-6 text-sm text-gray-400 space-y-1">
+          <ul className="list-disc pl-5 mb-6 text-sm text-gray-600 space-y-1">
             <li>Wind & Waterproof Fabric</li>
             <li>Multiple Pockets</li>
             <li>Adjustable Hoodie</li>
@@ -169,7 +169,7 @@ const ProductHome = () => {
                   key={id}
                   style={{ backgroundColor: colorCode }}
                   className={`w-8 h-8 rounded-full border-2 ${
-                    selectedColor === id ? "border-yellow-400 scale-110" : "border-gray-500 hover:scale-105"
+                    selectedColor === id ? "border-amber-600 scale-110" : "border-gray-500 hover:scale-105"
                   } transition-transform`}
                   onClick={() => {
                     setSelectedColor(id);
@@ -189,8 +189,8 @@ const ProductHome = () => {
                   key={size}
                   className={`px-4 py-1 border-2 rounded-md font-medium ${
                     selectedSize === size
-                      ? "bg-yellow-500 text-black border-yellow-400"
-                      : "border-gray-600 text-white hover:bg-gray-800"
+                      ? "bg-amber-700 text-black border-amber-600"
+                      : "border-gray-200 text-gray-900 hover:bg-gray-50"
                   }`}
                   onClick={() => setSelectedSize(size)}
                 >
@@ -203,7 +203,7 @@ const ProductHome = () => {
           {/* Quantity */}
           <div className="mb-6">
             <h3 className="mb-2 font-semibold">Quantity:</h3>
-            <div className="flex items-center border border-gray-700 rounded-md overflow-hidden w-max bg-gray-800">
+            <div className="flex items-center border border-gray-200 rounded-md overflow-hidden w-max bg-white">
               <button className="px-3 text-xl" onClick={decrement}>−</button>
               <input
                 value={quantity}
@@ -222,20 +222,20 @@ const ProductHome = () => {
         {/* Add to Cart + Wishlist */}
         <div className="space-y-4">
           <Link href="/cart">
-            <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded-md hover:bg-yellow-300 transition cursor-pointer">
+            <button className="w-full bg-amber-600 text-black font-bold py-3 rounded-md hover:bg-amber-500 transition cursor-pointer">
               Add to Cart
             </button>
           </Link>
 
-          <div className="flex flex-wrap items-center gap-4 justify-center text-sm text-gray-400 my-6">
+          <div className="flex flex-wrap items-center gap-4 justify-center text-sm text-gray-600 my-6">
             <Link href="/compare">
-              <button className="flex items-center gap-1 hover:text-white cursor-pointer">
+              <button className="flex items-center gap-1 hover:text-gray-900 cursor-pointer">
                 <MdCompareArrows className="text-lg" /> Compare
               </button>
             </Link>
 
             <Link href="/wishlist">
-              <button className="flex items-center gap-1 hover:text-white cursor-pointer">
+              <button className="flex items-center gap-1 hover:text-gray-900 cursor-pointer">
                 <AiOutlineHeart className="text-lg" /> Wishlist
               </button>
             </Link>

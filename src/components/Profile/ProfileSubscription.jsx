@@ -20,7 +20,7 @@ const initialSubscription = {
 const statusStyles = {
   Active: 'bg-green-600/90 text-green-100',
   Expired: 'bg-red-600/90 text-red-100',
-  Pending: 'bg-yellow-600/90 text-yellow-100',
+  Pending: 'bg-amber-800/90 text-amber-300',
 };
 
 const statusIcons = {
@@ -61,39 +61,39 @@ const ProfileSubscription = () => {
   const showWarning = useMemo(() => subscription.status === 'Expired', [subscription]);
 
   return (
-    <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-10 sm:py-14">
+    <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-10 sm:py-14">
       <div className="w-full max-w-[900px] mx-auto space-y-6">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-1">
               Subscription
             </h2>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-gray-700">
               View or modify your subscription and billing preferences.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm">
+          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm">
             <CreditCardIcon className="w-5 h-5 animate-pulse" />
             Plan Details
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gray-700" />
+        <div className="h-px bg-white" />
 
         {/* Subscription Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="bg-gray-800 rounded-2xl p-6 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative"
+          className="bg-white rounded-2xl p-6 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative"
         >
           <div className="flex-1 space-y-2">
-            <p className="text-yellow-400 text-lg font-semibold">{subscription.planName}</p>
-            <p className="text-gray-300 text-sm">{subscription.price}</p>
-            <p className="text-gray-400 text-sm">
-              Renewal Date: <span className="font-medium text-white">{subscription.renewalDate}</span>
+            <p className="text-amber-600 text-lg font-semibold">{subscription.planName}</p>
+            <p className="text-gray-700 text-sm">{subscription.price}</p>
+            <p className="text-gray-600 text-sm">
+              Renewal Date: <span className="font-medium text-gray-900">{subscription.renewalDate}</span>
             </p>
             {showWarning && (
               <p className="text-red-400 text-sm pt-2">
@@ -105,7 +105,7 @@ const ProfileSubscription = () => {
           {/* Status Badge */}
           <div
             className={`inline-flex items-center gap-1 px-4 py-2 rounded-full font-semibold text-sm sm:text-base transition ${
-              statusStyles[subscription.status] || 'bg-gray-600 text-gray-200'
+              statusStyles[subscription.status] || 'bg-white text-gray-700'
             }`}
           >
             {statusIcons[subscription.status]}
@@ -117,7 +117,7 @@ const ProfileSubscription = () => {
             <button
               onClick={handleUpgrade}
               disabled={loading || subscription.status === 'Pending'}
-              className="px-5 py-2.5 rounded-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-5 py-2.5 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Upgrade subscription"
             >
               {loading && subscription.status !== 'Expired' ? (
@@ -129,7 +129,7 @@ const ProfileSubscription = () => {
             <button
               onClick={handleCancel}
               disabled={loading || subscription.status === 'Expired'}
-              className="px-5 py-2.5 rounded-full bg-gray-700 hover:bg-gray-600 text-yellow-400 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-5 py-2.5 rounded-full bg-white hover:bg-gray-50 text-amber-600 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Cancel subscription"
             >
               {loading && subscription.status !== 'Pending' ? (

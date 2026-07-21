@@ -25,24 +25,24 @@ const CouponCodeBox = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="max-w-xl mx-auto bg-gray-900 rounded-3xl p-8 my-8 shadow-xl text-white select-none"
+      className="max-w-xl mx-auto bg-white rounded-3xl p-8 my-8 shadow-xl text-gray-900 select-none"
       aria-label="Special coupon offer"
       role="region"
     >
       <header className="mb-4">
-        <h2 className="text-yellow-400 font-semibold tracking-widest uppercase text-sm">
+        <h2 className="text-amber-600 font-semibold tracking-widest uppercase text-sm">
           Special Offer
         </h2>
         <p className="text-4xl font-extrabold leading-tight mt-1">{discount}</p>
       </header>
 
-      <p className="text-gray-300 text-base mb-6 leading-relaxed">
+      <p className="text-gray-700 text-base mb-6 leading-relaxed">
         {description}
       </p>
 
-      <div className="flex items-center justify-between bg-gray-700 px-5 py-3 rounded-xl ring-1 ring-yellow-500 focus-within:ring-2 focus-within:ring-yellow-400 transition-all">
+      <div className="flex items-center justify-between bg-white px-5 py-3 rounded-xl ring-1 ring-amber-700 focus-within:ring-2 focus-within:ring-amber-600 transition-all">
         <code
-          className="font-mono text-xl tracking-widest text-yellow-300 select-text"
+          className="font-mono text-xl tracking-widest text-amber-500 select-text"
           aria-label="Coupon code"
         >
           {code}
@@ -51,8 +51,8 @@ const CouponCodeBox = ({
           onClick={handleCopy}
           aria-live="polite"
           aria-label={copied ? 'Coupon code copied' : 'Copy coupon code'}
-          className={`flex items-center gap-2 text-yellow-400 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded px-3 py-1
-          ${copied ? 'cursor-default text-green-400' : 'hover:text-yellow-300 active:scale-95 transition-transform duration-150'}
+          className={`flex items-center gap-2 text-amber-600 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-3 py-1
+          ${copied ? 'cursor-default text-green-400' : 'hover:text-amber-500 active:scale-95 transition-transform duration-150'}
           `}
           disabled={copied}
           type="button"
@@ -85,7 +85,7 @@ const CouponCodeBox = ({
 
       <button
         type="button"
-        className="mt-8 w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 rounded-2xl shadow-lg shadow-yellow-600/30 transition-colors focus:outline-none focus:ring-4 focus:ring-yellow-500"
+        className="mt-8 w-full bg-amber-600 hover:bg-amber-500 text-black font-bold py-3 rounded-2xl shadow-lg shadow-amber-800/30 transition-colors focus:outline-none focus:ring-4 focus:ring-amber-700"
         onClick={() => alert(`Coupon code "${code}" applied!`)}
         aria-label="Apply coupon code"
       >

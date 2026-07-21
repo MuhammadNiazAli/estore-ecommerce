@@ -60,23 +60,23 @@ const ToysFeaturedDeals = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-10 px-4 rounded-xl mt-10">
+    <section className="bg-white text-gray-900 py-10 px-4 rounded-xl mt-10">
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Section Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-yellow-400">
+          <h2 className="text-2xl md:text-3xl font-bold text-amber-600">
             Featured Toy Deals
           </h2>
           <div className="flex gap-2">
             <button
               onClick={prevSlide}
-              className="p-2 bg-gray-800 rounded-full hover:bg-yellow-500 hover:text-black transition"
+              className="p-2 bg-white rounded-full hover:bg-amber-700 hover:text-black transition"
             >
               <FaChevronLeft />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2 bg-gray-800 rounded-full hover:bg-yellow-500 hover:text-black transition"
+              className="p-2 bg-white rounded-full hover:bg-amber-700 hover:text-black transition"
             >
               <FaChevronRight />
             </button>
@@ -92,7 +92,7 @@ const ToysFeaturedDeals = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.6 }}
-              className="absolute inset-0 flex flex-col md:flex-row bg-gray-800 rounded-xl shadow-lg overflow-hidden"
+              className="absolute inset-0 flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden"
             >
               {/* ✅ Image */}
               <div className="w-full md:w-1/2 h-[200px] md:h-full">
@@ -105,21 +105,21 @@ const ToysFeaturedDeals = () => {
 
               {/* ✅ Info */}
               <div className="flex flex-col justify-center p-6 md:w-1/2">
-                <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold w-max mb-3">
+                <span className="bg-amber-700 text-black px-3 py-1 rounded-full text-xs font-bold w-max mb-3">
                   {featuredToys[currentIndex].discount}
                 </span>
                 <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {featuredToys[currentIndex].name}
                 </h3>
                 <div className="flex items-center gap-3 mb-4">
-                  <p className="text-2xl font-bold text-yellow-400">
+                  <p className="text-2xl font-bold text-amber-600">
                     ${featuredToys[currentIndex].price}
                   </p>
-                  <p className="text-gray-400 line-through text-lg">
+                  <p className="text-gray-600 line-through text-lg">
                     ${featuredToys[currentIndex].oldPrice}
                   </p>
                 </div>
-                <button className="flex items-center justify-center gap-2 bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition w-max">
+                <button className="flex items-center justify-center gap-2 bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition w-max">
                   <FaCartPlus /> Add to Cart
                 </button>
               </div>
@@ -134,7 +134,7 @@ const ToysFeaturedDeals = () => {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`w-3 h-3 rounded-full ${
-                idx === currentIndex ? "bg-yellow-400" : "bg-gray-600"
+                idx === currentIndex ? "bg-amber-600" : "bg-white"
               }`}
             ></button>
           ))}

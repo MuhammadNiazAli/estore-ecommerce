@@ -9,6 +9,8 @@ html,body{
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #ffffff;
+  color: #111827;
 }
 
 
@@ -19,14 +21,14 @@ body::-webkit-scrollbar {
 
 /* Scrollbar track (background) */
 body::-webkit-scrollbar-track {
-  background-color: #101828; /* Tailwind gray-950 */
+  background-color: #f3f4f6; /* Tailwind gray-100 */
 }
 
 /* Scrollbar thumb (the draggable part) */
 body::-webkit-scrollbar-thumb {
   background-color: #374151; /* Tailwind gray-900 */
   border-radius: 10px;
-  border: 4px solid #101828; /* Track ke color se border, thoda padding effect ke liye */
+  border: 4px solid #f3f4f6; /* Track ke color se border, thoda padding effect ke liye */
 }
 
 /* Optional: Thumb hover effect */

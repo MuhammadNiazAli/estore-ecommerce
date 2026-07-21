@@ -23,13 +23,13 @@ const WomanClothsNewsletter = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-6">
+    <section className="bg-white text-gray-900 py-16 px-6">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4 text-yellow-400">
+        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4 text-amber-600">
           Join Our Exclusive Newsletter
         </h2>
-        <p className="text-lg text-gray-300 mb-8 font-light">
+        <p className="text-lg text-gray-700 mb-8 font-light">
           Be the first to know about new arrivals, special offers, and
           premium fashion insights.
         </p>
@@ -44,11 +44,11 @@ const WomanClothsNewsletter = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="w-full sm:w-96 px-5 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-yellow-400 border-none"
+            className="w-full sm:w-96 px-5 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-amber-600 border-none"
           />
           <button
             type="submit"
-            className="bg-yellow-400 text-gray-900 font-semibold px-8 py-4 rounded-full hover:bg-yellow-500 transition-colors duration-300 shadow-md hover:shadow-lg"
+            className="bg-amber-600 text-gray-900 font-semibold px-8 py-4 rounded-full hover:bg-amber-700 transition-colors duration-300 shadow-md hover:shadow-lg"
           >
             Subscribe
           </button>
@@ -72,7 +72,7 @@ const WomanClothsNewsletter = () => {
         </div>
 
         {/* Extra Info */}
-        <div className="mt-8 text-gray-400 text-sm">
+        <div className="mt-8 text-gray-600 text-sm">
           We respect your privacy. Unsubscribe at any time.
         </div>
       </div>

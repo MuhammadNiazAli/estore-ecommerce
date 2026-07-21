@@ -55,7 +55,7 @@ const ReviewFAQ = () => {
       className="w-full max-w-[900px] mb-[-26px] mx-auto mt-16  px-6"
       aria-label="Frequently Asked Questions"
     >
-      <h2 className="text-3xl font-bold mb-8 text-white text-center">
+      <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">
         Frequently Asked Questions
       </h2>
 
@@ -66,7 +66,7 @@ const ReviewFAQ = () => {
           return (
             <div
               key={idx}
-              className="bg-gray-800 rounded-lg p-5 cursor-pointer select-none shadow-md"
+              className="bg-white rounded-lg p-5 cursor-pointer select-none shadow-md"
               onClick={() => toggleIndex(idx)}
               onKeyDown={(e) => onKeyDown(e, idx)}
               tabIndex={0}
@@ -97,7 +97,7 @@ const ReviewFAQ = () => {
                 {isOpen && (
                   <motion.p
                     id={`faq-answer-${idx}`}
-                    className="mt-3 text-gray-300 leading-relaxed"
+                    className="mt-3 text-gray-700 leading-relaxed"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}

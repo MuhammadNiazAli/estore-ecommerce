@@ -19,7 +19,7 @@ import ShopTopBarStats from '@/components/Shop/ShopTopBarStats';
 
 export default function ShopPage() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4 py-20">
+    <main className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-center px-4 py-20">
       <ShopHero />
       <ShopBreadcrumb />
       <ShopCategoryNav />

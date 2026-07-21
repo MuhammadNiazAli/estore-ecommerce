@@ -55,13 +55,13 @@ const CamerasReviewsPreview = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-16 px-4 my-[-40px]">
+    <section className="bg-white text-gray-900 py-16 px-4 my-[-40px]">
       <div className="max-w-[1200px] mx-auto text-center">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-yellow-400">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600">
           What Our Customers Say
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-600 mb-8">
           Real reviews from photographers who love our cameras.
         </p>
 
@@ -72,18 +72,18 @@ const CamerasReviewsPreview = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.5 }}
-          className="bg-gray-800 rounded-2xl shadow-lg p-8 max-w-2xl mx-auto relative"
+          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto relative"
         >
-          <FaQuoteLeft className="text-yellow-400 text-3xl absolute top-4 left-4 opacity-30" />
+          <FaQuoteLeft className="text-amber-600 text-3xl absolute top-4 left-4 opacity-30" />
 
           <img
             src={reviewsData[currentIndex].avatar}
             alt={reviewsData[currentIndex].name}
-            className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-yellow-400 object-cover"
+            className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-amber-600 object-cover"
           />
 
           <h3 className="text-xl font-bold">{reviewsData[currentIndex].name}</h3>
-          <p className="text-sm text-gray-400 mb-4">{reviewsData[currentIndex].date}</p>
+          <p className="text-sm text-gray-600 mb-4">{reviewsData[currentIndex].date}</p>
 
           <div className="flex justify-center mb-4">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -91,18 +91,18 @@ const CamerasReviewsPreview = () => {
                 key={i}
                 className={`${
                   i < reviewsData[currentIndex].rating
-                    ? "text-yellow-400"
+                    ? "text-amber-600"
                     : "text-gray-600"
                 }`}
               />
             ))}
           </div>
 
-          <p className="text-gray-300 text-lg italic leading-relaxed mb-4">
+          <p className="text-gray-700 text-lg italic leading-relaxed mb-4">
             "{reviewsData[currentIndex].review}"
           </p>
 
-          <p className="text-sm text-yellow-400 font-semibold">
+          <p className="text-sm text-amber-600 font-semibold">
             Reviewed for: {reviewsData[currentIndex].camera}
           </p>
         </motion.div>
@@ -111,13 +111,13 @@ const CamerasReviewsPreview = () => {
         <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={prevReview}
-            className="bg-gray-700 px-4 py-2 rounded-full hover:bg-gray-600 transition"
+            className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition"
           >
             ◀
           </button>
           <button
             onClick={nextReview}
-            className="bg-gray-700 px-4 py-2 rounded-full hover:bg-gray-600 transition"
+            className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition"
           >
             ▶
           </button>

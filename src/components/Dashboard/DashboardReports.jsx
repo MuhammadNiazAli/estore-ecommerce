@@ -8,7 +8,7 @@ const initialReports = [
     id: 1,
     title: 'Monthly Sales Report',
     description: 'Detailed summary of revenue and orders for this month.',
-    icon: <BarChart2 className="w-6 h-6 text-yellow-400" />,
+    icon: <BarChart2 className="w-6 h-6 text-amber-600" />,
     date: 'July 2025',
     downloadLink: '/reports/monthly-sales.pdf',
   },
@@ -16,7 +16,7 @@ const initialReports = [
     id: 2,
     title: 'Customer Insights',
     description: 'Breakdown of customer behavior and demographics.',
-    icon: <PieChart className="w-6 h-6 text-yellow-400" />,
+    icon: <PieChart className="w-6 h-6 text-amber-600" />,
     date: 'Q2 2025',
     downloadLink: '/reports/customer-insights.pdf',
   },
@@ -24,7 +24,7 @@ const initialReports = [
     id: 3,
     title: 'Inventory Status',
     description: 'Stock levels and movement summary.',
-    icon: <FileText className="w-6 h-6 text-yellow-400" />,
+    icon: <FileText className="w-6 h-6 text-amber-600" />,
     date: 'July 20, 2025',
     downloadLink: '/reports/inventory-status.pdf',
   },
@@ -36,7 +36,7 @@ const moreReportsMock = [
     id: 4,
     title: 'Weekly Traffic Report',
     description: 'Website visits and user engagement overview.',
-    icon: <BarChart2 className="w-6 h-6 text-yellow-400" />,
+    icon: <BarChart2 className="w-6 h-6 text-amber-600" />,
     date: 'Week 29, 2025',
     downloadLink: '/reports/weekly-traffic.pdf',
   },
@@ -44,7 +44,7 @@ const moreReportsMock = [
     id: 5,
     title: 'Marketing ROI',
     description: 'Return on investment for marketing campaigns.',
-    icon: <PieChart className="w-6 h-6 text-yellow-400" />,
+    icon: <PieChart className="w-6 h-6 text-amber-600" />,
     date: 'H1 2025',
     downloadLink: '/reports/marketing-roi.pdf',
   },
@@ -52,7 +52,7 @@ const moreReportsMock = [
     id: 6,
     title: 'Supplier Performance',
     description: 'Analysis of supplier reliability and delivery times.',
-    icon: <FileText className="w-6 h-6 text-yellow-400" />,
+    icon: <FileText className="w-6 h-6 text-amber-600" />,
     date: 'July 2025',
     downloadLink: '/reports/supplier-performance.pdf',
   },
@@ -109,15 +109,15 @@ const DashboardReports = () => {
   };
 
   const ReportCardSkeleton = () => (
-    <div className="bg-gray-800 p-5 rounded-xl animate-pulse h-48" aria-hidden="true" />
+    <div className="bg-white p-5 rounded-xl animate-pulse h-48" aria-hidden="true" />
   );
 
   return (
-    <section className="w-full bg-gray-900 flex justify-center px-4 py-10">
+    <section className="w-full bg-white flex justify-center px-4 py-10">
       <div className="w-full max-w-[1000px]">
         <div className="mb-6">
-          <h2 className="text-2xl font-bold text-yellow-400">Reports</h2>
-          <p className="text-sm text-gray-400 mt-1">
+          <h2 className="text-2xl font-bold text-amber-600">Reports</h2>
+          <p className="text-sm text-gray-600 mt-1">
             Quick access to your most important business reports.
           </p>
         </div>
@@ -140,14 +140,14 @@ const DashboardReports = () => {
             return (
               <article
                 key={report.id}
-                className="bg-gray-800 p-5 rounded-xl hover:shadow-lg transition group flex flex-col justify-between"
+                className="bg-white p-5 rounded-xl hover:shadow-lg transition group flex flex-col justify-between"
                 role="listitem"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <div className="text-yellow-400">{report.icon}</div>
+                    <div className="text-amber-600">{report.icon}</div>
                     <time
-                      className="text-xs text-gray-400 flex items-center gap-1"
+                      className="text-xs text-gray-600 flex items-center gap-1"
                       {...(isoDate ? { dateTime: isoDate } : {})}
                     >
                       <Calendar className="w-4 h-4" />
@@ -155,8 +155,8 @@ const DashboardReports = () => {
                     </time>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-white mb-1">{report.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{report.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{report.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{report.description}</p>
                 </div>
 
                 <button
@@ -164,13 +164,13 @@ const DashboardReports = () => {
                   disabled={status === 'loading'}
                   aria-live="polite"
                   aria-busy={status === 'loading'}
-                  className={`inline-flex items-center gap-2 text-sm font-medium rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition
+                  className={`inline-flex items-center gap-2 text-sm font-medium rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600 transition
                     ${
                       status === 'loading'
-                        ? 'bg-yellow-400 text-black cursor-wait'
+                        ? 'bg-amber-600 text-black cursor-wait'
                         : status === 'error'
-                        ? 'bg-red-600 text-white hover:bg-red-700'
-                        : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                        ? 'bg-red-600 text-gray-900 hover:bg-red-700'
+                        : 'bg-amber-600 text-black hover:bg-amber-500'
                     }
                   `}
                 >
@@ -198,7 +198,7 @@ const DashboardReports = () => {
             <button
               onClick={loadMoreReports}
               disabled={loadingMore}
-              className="inline-flex items-center gap-2 bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+              className="inline-flex items-center gap-2 bg-amber-600 text-black px-6 py-3 rounded-md font-semibold hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
               aria-live="polite"
               aria-busy={loadingMore}
             >

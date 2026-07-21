@@ -146,26 +146,26 @@ const ProfileActivityLog = () => {
 
   return (
     <section
-      className="w-full max-w-[1200px] mx-auto bg-gray-900 text-white rounded-lg px-4 py-8 sm:px-8 sm:py-12 md:px-10 md:py-14"
+      className="w-full max-w-[1200px] mx-auto bg-white text-gray-900 rounded-lg px-4 py-8 sm:px-8 sm:py-12 md:px-10 md:py-14"
       aria-label="User activity log section"
     >
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div className="max-w-full sm:max-w-lg">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-400 mb-2 drop-shadow-lg leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-600 mb-2 drop-shadow-lg leading-tight">
             Activity Log
           </h2>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-md">
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-md">
             Review your recent account activities, actions, and changes.
           </p>
         </div>
         <div
-          className="flex items-center gap-2 sm:gap-3 text-yellow-300 font-semibold text-xs sm:text-sm md:text-base select-none whitespace-nowrap"
+          className="flex items-center gap-2 sm:gap-3 text-amber-500 font-semibold text-xs sm:text-sm md:text-base select-none whitespace-nowrap"
           aria-live="polite"
           aria-atomic="true"
           aria-relevant="text"
         >
-          <ClockIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 animate-spin-slow text-yellow-400 drop-shadow-md" />
+          <ClockIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 animate-spin-slow text-amber-600 drop-shadow-md" />
           Last updated: {lastUpdated.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </div>
       </div>
@@ -183,9 +183,9 @@ const ProfileActivityLog = () => {
               }}
               className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-sm sm:text-base whitespace-nowrap transition ${
                 filter === type
-                  ? 'bg-yellow-400 text-gray-900 shadow-lg'
-                  : 'bg-yellow-400/30 text-yellow-300 hover:bg-yellow-400/60'
-              } focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+                  ? 'bg-amber-600 text-gray-900 shadow-lg'
+                  : 'bg-amber-600/30 text-amber-500 hover:bg-amber-600/60'
+              } focus:outline-none focus:ring-2 focus:ring-amber-600`}
               aria-pressed={filter === type}
               aria-label={`Filter activity log by ${type}`}
               type="button"
@@ -204,13 +204,13 @@ const ProfileActivityLog = () => {
             setSearchTerm(e.target.value);
             setPage(1);
           }}
-          className="w-full sm:w-64 md:w-72 px-4 py-2 rounded-full bg-gray-800 border border-yellow-400/50 placeholder-yellow-400 text-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition text-sm sm:text-base"
+          className="w-full sm:w-64 md:w-72 px-4 py-2 rounded-full bg-white border border-amber-600/50 placeholder-amber-600 text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition text-sm sm:text-base"
           aria-label="Search activity log"
         />
       </div>
 
       {/* Divider */}
-      <div className="w-full h-[1.5px] bg-yellow-400/30 rounded-full mb-8 shadow-sm" />
+      <div className="w-full h-[1.5px] bg-amber-600/30 rounded-full mb-8 shadow-sm" />
 
       {/* Activity Items List */}
       <ul
@@ -226,7 +226,7 @@ const ProfileActivityLog = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-yellow-400 text-center font-semibold py-10"
+              className="text-amber-600 text-center font-semibold py-10"
             >
               No activities match your filter or search.
             </motion.li>
@@ -240,17 +240,17 @@ const ProfileActivityLog = () => {
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3 }}
               tabIndex={0}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gray-800 p-4 rounded-lg shadow-inner border border-yellow-400/20 focus:outline-none focus:ring-4 focus:ring-yellow-400 cursor-default"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white p-4 rounded-lg shadow-inner border border-amber-600/20 focus:outline-none focus:ring-4 focus:ring-amber-600 cursor-default"
               aria-label={`${type} activity: ${description} on ${formatDateTime(timestamp)}`}
             >
               <Icon
-                className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-0.5 sm:mt-0"
+                className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5 sm:mt-0"
                 aria-hidden="true"
               />
               <div className="flex flex-col">
-                <p className="text-white font-semibold text-sm sm:text-base md:text-lg">{description}</p>
+                <p className="text-gray-900 font-semibold text-sm sm:text-base md:text-lg">{description}</p>
                 <time
-                  className="text-gray-400 text-xs sm:text-sm"
+                  className="text-gray-600 text-xs sm:text-sm"
                   dateTime={timestamp.toISOString()}
                 >
                   {formatDateTime(timestamp)} ({timeAgo(timestamp)})
@@ -266,7 +266,7 @@ const ProfileActivityLog = () => {
         <div className="mt-6 flex justify-center sm:justify-end">
           <button
             onClick={() => setPage((p) => p + 1)}
-            className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-yellow-500"
+            className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-700"
             aria-label="Load more activity log items"
             type="button"
           >

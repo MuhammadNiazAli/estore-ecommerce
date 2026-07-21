@@ -41,11 +41,11 @@ const categories = [
 
 const SportsCategoryInfo = () => {
   return (
-    <section className="bg-gray-900 py-14">
+    <section className="bg-white py-14">
       <div className="max-w-6xl mx-auto px-4">
         {/* ✅ Section Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold text-gray-50">
+          <h2 className="text-4xl font-bold text-gray-800">
             Explore Sports Categories
           </h2>
           <p className="text-gray-500 mt-3 text-lg">
@@ -73,7 +73,7 @@ const SportsCategoryInfo = () => {
 
               {/* Overlay Info */}
               <div className="p-5 text-center">
-                <div className="flex justify-center mb-3 text-yellow-500">
+                <div className="flex justify-center mb-3 text-amber-700">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">
@@ -83,7 +83,7 @@ const SportsCategoryInfo = () => {
                   {category.description}
                 </p>
 
-                <button className="mt-4 px-5 py-2 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300 transition">
+                <button className="mt-4 px-5 py-2 bg-amber-600 text-black rounded-full font-semibold hover:bg-amber-500 transition">
                   Shop Now
                 </button>
               </div>

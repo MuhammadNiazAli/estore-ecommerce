@@ -45,14 +45,14 @@ const wishlistProducts = [
 
 const WishlistItems = () => {
   return (
-    <section className="max-w-[1100px] mx-auto p-4 sm:p-6 bg-gray-900 rounded-md">
-      <h2 className="text-xl font-semibold text-white mb-4">Your Wishlist Items</h2>
+    <section className="max-w-[1100px] mx-auto p-4 sm:p-6 bg-white rounded-md">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Wishlist Items</h2>
 
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {wishlistProducts.map(({ id, title, price, image }) => (
           <li
             key={id}
-            className="bg-white dark:bg-gray-800 rounded-md shadow-md hover:shadow-xl transition overflow-hidden relative group"
+            className="bg-white dark:bg-white rounded-md shadow-md hover:shadow-xl transition overflow-hidden relative group"
           >
             <div className="relative w-full h-28 sm:h-32 rounded-t-md overflow-hidden">
               <Image
@@ -65,19 +65,19 @@ const WishlistItems = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-between items-start p-2">
+              <div className="absolute inset-0 bg-white/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-between items-start p-2">
                 <div className="flex gap-2 translate-x-[-20px] group-hover:translate-x-0 transition-all duration-300 delay-100">
                   <Link
                     href="/cart"
                     title="Add to Cart"
-                    className="p-1.5 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                    className="p-1.5 rounded-full bg-indigo-600 text-gray-900 hover:bg-indigo-700 transition"
                   >
                     <FiShoppingCart size={16} />
                   </Link>
                   <button
                     type="button"
                     title="Remove from Wishlist"
-                    className="p-1.5 rounded-full bg-red-600 text-white hover:bg-red-700 transition"
+                    className="p-1.5 rounded-full bg-red-600 text-gray-900 hover:bg-red-700 transition"
                   >
                     <FiTrash2 size={16} />
                   </button>
@@ -86,7 +86,7 @@ const WishlistItems = () => {
             </div>
 
             <div className="p-3 flex flex-col items-center text-center">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white truncate w-full">
+              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-900 truncate w-full">
                 {title}
               </h3>
               <p className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm mt-1">

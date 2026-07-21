@@ -795,15 +795,15 @@ export default function AccessoriesFilters() {
     });
 
   const sidebarContent = (
-    <div className="p-4 sm:p-6 space-y-5 text-white text-sm sm:text-base">
-      <h2 className="text-xl sm:text-2xl font-bold text-yellow-400">Filters</h2>
+    <div className="p-4 sm:p-6 space-y-5 text-gray-900 text-sm sm:text-base">
+      <h2 className="text-xl sm:text-2xl font-bold text-amber-600">Filters</h2>
 
       <input
         type="text"
         placeholder="Search Accessories..."
         value={filters.search}
         onChange={(e) => handleFilterChange('search', e.target.value)}
-        className="w-full p-2 sm:p-3 rounded-lg text-gray-50 bg-gray-900 text-sm"
+        className="w-full p-2 sm:p-3 rounded-lg text-gray-800 bg-white text-sm"
       />
 
       {[{ name: 'category', options: categories, label: 'All Categories' },
@@ -813,7 +813,7 @@ export default function AccessoriesFilters() {
       ].map(({ name, options, label }) => (
         <select
           key={name}
-          className="w-full p-2 rounded-lg text-gray-50 bg-gray-900 text-sm"
+          className="w-full p-2 rounded-lg text-gray-800 bg-white text-sm"
           value={filters[name]}
           onChange={(e) => handleFilterChange(name, e.target.value)}
         >
@@ -826,7 +826,7 @@ export default function AccessoriesFilters() {
 
       {/* Price Filter */}
       <div>
-        <h3 className="font-semibold mb-1">Price: <span className="text-yellow-400">${filters.price}</span></h3>
+        <h3 className="font-semibold mb-1">Price: <span className="text-amber-600">${filters.price}</span></h3>
         <input
           type="range"
           min="50"
@@ -839,7 +839,7 @@ export default function AccessoriesFilters() {
 
       {/* Discount */}
       <div>
-        <h3 className="font-semibold mb-1">Discount: <span className="text-yellow-400">{filters.discount}%</span></h3>
+        <h3 className="font-semibold mb-1">Discount: <span className="text-amber-600">{filters.discount}%</span></h3>
         <input
           type="range"
           min="0"
@@ -852,7 +852,7 @@ export default function AccessoriesFilters() {
 
       {/* Rating */}
       <div>
-        <h3 className="font-semibold mb-1">Rating: <span className="text-yellow-400">{filters.rating}★</span></h3>
+        <h3 className="font-semibold mb-1">Rating: <span className="text-amber-600">{filters.rating}★</span></h3>
         <input
           type="range"
           min="0"
@@ -876,7 +876,7 @@ export default function AccessoriesFilters() {
 
       {/* Sort */}
       <select
-        className="w-full p-2 rounded-lg text-gray-50 bg-gray-900 text-sm"
+        className="w-full p-2 rounded-lg text-gray-800 bg-white text-sm"
         value={filters.sort}
         onChange={(e) => handleFilterChange('sort', e.target.value)}
       >
@@ -889,7 +889,7 @@ export default function AccessoriesFilters() {
       {/* Reset */}
       <button
         onClick={resetFilters}
-        className="w-full bg-yellow-400 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-yellow-500 transition"
+        className="w-full bg-amber-600 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-amber-700 transition"
       >
         Reset Filters
       </button>
@@ -897,7 +897,7 @@ export default function AccessoriesFilters() {
   );
 
   return (
-    <section className="w-full bg-gray-900 text-white relative">
+    <section className="w-full bg-white text-gray-900 relative">
       <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row gap-6 px-4 py-10 relative">
         
         {/* Sticky toggle button only inside section */}
@@ -905,7 +905,7 @@ export default function AccessoriesFilters() {
           <div className="absolute left-2 top-1/2 -translate-y-1/2 lg:hidden">
             <button
               onClick={() => setMobileOpen(true)}
-              className="bg-yellow-400 text-gray-900 w-10 h-10 flex items-center justify-center rounded-full shadow-md ml-[-35px]"
+              className="bg-amber-600 text-gray-900 w-10 h-10 flex items-center justify-center rounded-full shadow-md ml-[-35px]"
             >
               ➤
             </button>
@@ -920,11 +920,11 @@ export default function AccessoriesFilters() {
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.4 }}
-              className="fixed top-0 left-0 w-3/4 h-full bg-gray-800 z-50 shadow-xl lg:hidden overflow-y-auto custom-scrollbar"
+              className="fixed top-0 left-0 w-3/4 h-full bg-white z-50 shadow-xl lg:hidden overflow-y-auto custom-scrollbar"
             >
-              <div className="flex justify-between items-center p-4 border-b border-gray-700">
-                <h2 className="text-xl font-bold text-yellow-400">Filters</h2>
-                <button onClick={() => setMobileOpen(false)} className="text-white text-3xl">&times;</button>
+              <div className="flex justify-between items-center p-4 border-b border-gray-200">
+                <h2 className="text-xl font-bold text-amber-600">Filters</h2>
+                <button onClick={() => setMobileOpen(false)} className="text-gray-900 text-3xl">&times;</button>
               </div>
               {sidebarContent}
             </motion.aside>
@@ -932,7 +932,7 @@ export default function AccessoriesFilters() {
         </AnimatePresence>
 
         {/* Desktop Sidebar */}
-        <aside className="hidden lg:block w-1/3 bg-gray-800 rounded-xl shadow-lg overflow-y-auto custom-scrollbar sticky top-6" style={{ maxHeight: 'calc(100vh - 2rem)' }}>
+        <aside className="hidden lg:block w-1/3 bg-white rounded-xl shadow-lg overflow-y-auto custom-scrollbar sticky top-6" style={{ maxHeight: 'calc(100vh - 2rem)' }}>
           {sidebarContent}
         </aside>
 
@@ -942,18 +942,18 @@ export default function AccessoriesFilters() {
             <motion.div
               key={product.id}
               whileHover={{ scale: 1.05 }}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-lg flex flex-col max-w-sm w-full"
+              className="bg-white rounded-xl overflow-hidden shadow-lg flex flex-col max-w-sm w-full"
             >
               <img src={product.image} alt={product.name} className="w-full h-40 sm:h-48 object-cover rounded-t-xl" />
               <div className="p-3 sm:p-4 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold text-yellow-400">{product.name}</h4>
-                <p className="text-white mt-1">${product.price}</p>
-                <p className="text-gray-400">{product.brand} | {product.rating}★</p>
+                <h4 className="text-lg font-semibold text-amber-600">{product.name}</h4>
+                <p className="text-gray-900 mt-1">${product.price}</p>
+                <p className="text-gray-600">{product.brand} | {product.rating}★</p>
                 <div className="flex gap-2 mt-3">
-                  <button className="bg-yellow-400 text-gray-900 px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 text-sm">
+                  <button className="bg-amber-600 text-gray-900 px-3 py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm">
                     Add to Cart
                   </button>
-                  <button className="border border-yellow-400 text-yellow-400 px-3 py-2 rounded-lg font-semibold hover:bg-yellow-500 hover:text-gray-900 text-sm">
+                  <button className="border border-amber-600 text-amber-600 px-3 py-2 rounded-lg font-semibold hover:bg-amber-700 hover:text-gray-900 text-sm">
                     View
                   </button>
                 </div>
@@ -964,7 +964,7 @@ export default function AccessoriesFilters() {
           {visibleCount < filteredProducts.length && (
             <button
               onClick={() => setVisibleCount((prev) => prev + 5)}
-              className="col-span-full bg-yellow-400 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-yellow-500 transition"
+              className="col-span-full bg-amber-600 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-amber-700 transition"
             >
               Show More
             </button>
@@ -976,16 +976,16 @@ export default function AccessoriesFilters() {
       <style jsx>{`
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #facc15 #1f1f1f;
+          scrollbar-color: #b45309 #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar {
           width: 8px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-          background: #1f1f1f;
+          background: #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #facc15;
+          background-color: #b45309;
           border-radius: 4px;
         }
       `}</style>

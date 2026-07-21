@@ -29,12 +29,12 @@ const NewseasonCountdown = () => {
   }, []);
 
   return (
-    <section className="bg-gray-900 py-16 px-6 my-[-30px]">
+    <section className="bg-white py-16 px-6 my-[-30px]">
       <div className="max-w-[1000px] mx-auto text-center">
-        <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-amber-600 text-3xl md:text-4xl font-bold mb-4">
           Limited Time New Season Offer!
         </h2>
-        <p className="text-yellow-200 text-lg mb-10">
+        <p className="text-amber-400 text-lg mb-10">
           Hurry up! This exclusive deal ends soon. Don’t miss out.
         </p>
 
@@ -47,15 +47,15 @@ const NewseasonCountdown = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-gray-800 w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center rounded-lg border border-yellow-400"
+              className="bg-white w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center rounded-lg border border-amber-600"
             >
-              <span className="text-yellow-400 text-3xl font-bold">{item.value}</span>
-              <span className="text-yellow-200 text-sm">{item.label}</span>
+              <span className="text-amber-600 text-3xl font-bold">{item.value}</span>
+              <span className="text-amber-400 text-sm">{item.label}</span>
             </div>
           ))}
         </div>
 
-        <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-10 rounded-lg shadow-lg transition-all duration-300">
+        <button className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-3 px-10 rounded-lg shadow-lg transition-all duration-300">
           Shop Now
         </button>
       </div>

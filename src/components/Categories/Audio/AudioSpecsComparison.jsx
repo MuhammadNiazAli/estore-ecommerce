@@ -33,22 +33,22 @@ const audioComparisonData = [
 
 const AudioSpecsComparison = () => {
   return (
-    <section className="bg-gray-900 text-white py-12 px-4 my-10">
+    <section className="bg-white text-gray-900 py-12 px-4 my-10">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-600">
             Compare Audio Specs
           </h2>
-          <p className="text-gray-400 mt-2 text-lg">
+          <p className="text-gray-600 mt-2 text-lg">
             Find the perfect audio device that fits your lifestyle.
           </p>
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto bg-gray-800 rounded-xl shadow-lg">
+        <div className="overflow-x-auto bg-white rounded-xl shadow-lg">
           <table className="w-full text-left">
-            <thead className="bg-gray-700 text-yellow-400 uppercase text-sm">
+            <thead className="bg-white text-amber-600 uppercase text-sm">
               <tr>
                 <th className="py-4 px-4">Feature</th>
                 <th className="py-4 px-4">Premium Headphones</th>
@@ -59,11 +59,11 @@ const AudioSpecsComparison = () => {
               {audioComparisonData.map((item, idx) => (
                 <tr
                   key={idx}
-                  className={`border-b border-gray-700 ${
-                    idx % 2 === 0 ? "bg-gray-800" : "bg-gray-900"
+                  className={`border-b border-gray-200 ${
+                    idx % 2 === 0 ? "bg-white" : "bg-white"
                   }`}
                 >
-                  <td className="py-4 px-4 font-semibold text-gray-300">
+                  <td className="py-4 px-4 font-semibold text-gray-700">
                     {item.feature}
                   </td>
                   <td className="py-4 px-4 text-center">
@@ -97,11 +97,11 @@ const AudioSpecsComparison = () => {
         {/* Responsive Cards for Mobile */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:hidden">
           {/* Product A Card */}
-          <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-yellow-400 mb-4">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold text-amber-600 mb-4">
               Premium Headphones
             </h3>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-gray-700">
               {audioComparisonData.map((item, idx) => (
                 <li key={idx} className="flex justify-between">
                   <span>{item.feature}</span>
@@ -122,11 +122,11 @@ const AudioSpecsComparison = () => {
           </div>
 
           {/* Product B Card */}
-          <div className="bg-gray-800 p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-yellow-400 mb-4">
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold text-amber-600 mb-4">
               Budget Headphones
             </h3>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-gray-700">
               {audioComparisonData.map((item, idx) => (
                 <li key={idx} className="flex justify-between">
                   <span>{item.feature}</span>

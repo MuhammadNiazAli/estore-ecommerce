@@ -56,25 +56,25 @@ const ProfilePaymentMethods = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 text-white px-4 sm:px-6 py-10 sm:py-14 relative">
+    <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-10 sm:py-14 relative">
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-1">
+            <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
               Payment Methods
             </h2>
-            <p className="text-sm sm:text-base text-gray-300 max-w-md">
+            <p className="text-sm sm:text-base text-gray-700 max-w-md">
               Securely manage your credit and debit cards.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-yellow-300 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
             <ShieldCheckIcon className="w-6 h-6 animate-pulse" />
             <span>Protected by Encryption</span>
           </div>
         </div>
 
-        <div className="w-full h-px bg-gray-700 my-6" />
+        <div className="w-full h-px bg-white my-6" />
 
         {/* Payment Cards */}
         <div className="space-y-6">
@@ -85,19 +85,19 @@ const ProfilePaymentMethods = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className={`bg-gray-800 rounded-xl p-5 flex justify-between items-center shadow-md border ${
-                isDefault ? 'border-yellow-400' : 'border-transparent'
+              className={`bg-white rounded-xl p-5 flex justify-between items-center shadow-md border ${
+                isDefault ? 'border-amber-600' : 'border-transparent'
               }`}
             >
               <div className="flex items-center gap-4">
-                <CreditCardIcon className="w-10 h-10 text-yellow-400 flex-shrink-0" />
+                <CreditCardIcon className="w-10 h-10 text-amber-600 flex-shrink-0" />
                 <div>
-                  <p className="text-white font-semibold text-lg">
+                  <p className="text-gray-900 font-semibold text-lg">
                     {cardType}{' '}
-                    {isDefault && <span className="text-yellow-400">(Default)</span>}
+                    {isDefault && <span className="text-amber-600">(Default)</span>}
                   </p>
-                  <p className="text-gray-400 text-sm">{cardNumber}</p>
-                  <p className="text-gray-400 text-sm">Expires {expiry}</p>
+                  <p className="text-gray-600 text-sm">{cardNumber}</p>
+                  <p className="text-gray-600 text-sm">Expires {expiry}</p>
                 </div>
               </div>
               <button
@@ -116,7 +116,7 @@ const ProfilePaymentMethods = () => {
           <button
             type="button"
             onClick={() => setShowForm(true)}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold shadow-lg transition"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition"
           >
             <PlusCircleIcon className="w-6 h-6" />
             Add New Method
@@ -131,7 +131,7 @@ const ProfilePaymentMethods = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
-            className="fixed inset-0 z-50 bg-gray-900/90 backdrop-blur flex items-center justify-center px-4"
+            className="fixed inset-0 z-50 bg-white/90 backdrop-blur flex items-center justify-center px-4"
           >
             <div className="bg-white rounded-xl p-6 w-full max-w-md text-gray-900 relative">
               <button
@@ -167,7 +167,7 @@ const ProfilePaymentMethods = () => {
                 />
                 <button
                   onClick={handleAddCard}
-                  className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 rounded mt-2"
+                  className="w-full bg-amber-600 hover:bg-amber-500 text-black font-bold py-2 rounded mt-2"
                 >
                   Save Card
                 </button>
@@ -184,7 +184,7 @@ const ProfilePaymentMethods = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed inset-0 z-50 bg-gray-900/90 backdrop-blur flex items-center justify-center px-4"
+            className="fixed inset-0 z-50 bg-white/90 backdrop-blur flex items-center justify-center px-4"
           >
             <div className="bg-white rounded-xl p-6 w-full max-w-sm text-gray-900">
               <h3 className="text-lg font-bold mb-4">Remove Card?</h3>
@@ -200,7 +200,7 @@ const ProfilePaymentMethods = () => {
                 </button>
                 <button
                   onClick={() => handleDelete(deleteId)}
-                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded"
+                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-900 rounded"
                 >
                   Remove
                 </button>

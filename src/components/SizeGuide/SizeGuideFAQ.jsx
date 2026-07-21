@@ -56,11 +56,11 @@ const SizeGuideFAQ = () => {
 
   return (
     <section
-      className="w-full bg-gray-900 text-gray-100 flex justify-center py-12 px-4 sm:px-6 md:py-16 "
+      className="w-full bg-white text-gray-800 flex justify-center py-12 px-4 sm:px-6 md:py-16 "
       aria-label="Frequently Asked Questions"
     >
       <div className="max-w-4xl w-full">
-        <h2 className="text-yellow-400 text-3xl sm:text-4xl font-extrabold mb-10 select-none text-center">
+        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-10 select-none text-center">
           Frequently Asked Questions
         </h2>
 
@@ -68,7 +68,7 @@ const SizeGuideFAQ = () => {
           {faqData.map(({ question, answer }, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-md shadow-md overflow-hidden"
+              className="bg-white rounded-md shadow-md overflow-hidden"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -76,13 +76,13 @@ const SizeGuideFAQ = () => {
                 aria-controls={`faq-content-${index}`}
                 id={`faq-header-${index}`}
                 className="w-full flex justify-between items-center p-5 text-left
-                           focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600
                            text-lg sm:text-xl font-semibold"
                 type="button"
               >
                 <span>{question}</span>
                 <svg
-                  className={`w-6 h-6 text-yellow-400 transition-transform duration-300 ease-in-out ${
+                  className={`w-6 h-6 text-amber-600 transition-transform duration-300 ease-in-out ${
                     openIndex === index ? "rotate-45" : "rotate-0"
                   }`}
                   fill="none"
@@ -103,7 +103,7 @@ const SizeGuideFAQ = () => {
                 id={`faq-content-${index}`}
                 role="region"
                 aria-labelledby={`faq-header-${index}`}
-                className="px-5 text-gray-300 overflow-hidden transition-[max-height,padding] duration-500 ease-in-out box-border"
+                className="px-5 text-gray-700 overflow-hidden transition-[max-height,padding] duration-500 ease-in-out box-border"
                 ref={(el) => (contentRefs.current[index] = el)}
                 style={{
                   maxHeight: 0,

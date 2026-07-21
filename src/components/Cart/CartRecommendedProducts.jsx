@@ -50,9 +50,9 @@ const recommendedProducts = [
 
 const CartRecommendedProducts = () => {
   return (
-    <div className="w-full bg-gray-900 text-white flex justify-center px-4 sm:px-6 py-10">
+    <div className="w-full bg-white text-gray-900 flex justify-center px-4 sm:px-6 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-yellow-400 text-2xl font-semibold mb-6">
+        <h2 className="text-amber-600 text-2xl font-semibold mb-6">
           Recommended for You
         </h2>
 
@@ -60,7 +60,7 @@ const CartRecommendedProducts = () => {
           {recommendedProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-gray-800 rounded-lg p-4 flex flex-col items-center hover:bg-gray-700 transition cursor-pointer"
+              className="bg-white rounded-lg p-4 flex flex-col items-center hover:bg-gray-50 transition cursor-pointer"
             >
               <img
                 src={product.image}
@@ -68,15 +68,15 @@ const CartRecommendedProducts = () => {
                 className="w-full h-40 object-cover rounded-md mb-4"
                 loading="lazy"
               />
-              <h3 className="text-white font-semibold text-lg mb-2 text-center truncate w-full">
+              <h3 className="text-gray-900 font-semibold text-lg mb-2 text-center truncate w-full">
                 {product.title}
               </h3>
-              <p className="text-yellow-400 font-semibold text-lg mb-4">
+              <p className="text-amber-600 font-semibold text-lg mb-4">
                 ${product.price.toFixed(2)}
               </p>
              <button
                 type="button"
-                className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-5 py-2 rounded-full w-full transition shadow-md"
+                className="bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-2 rounded-full w-full transition shadow-md"
                 onClick={() => alert(`Added "${product.title}" to cart.`)}
               >
                 Add to Cart

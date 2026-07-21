@@ -26,13 +26,13 @@ const WatchesNewsletterSignup = () => {
   };
 
   return (
-    <section className="w-full bg-gray-900 py-14 px-4">
-      <div className="max-w-5xl mx-auto text-center text-gray-50">
+    <section className="w-full bg-white py-14 px-4">
+      <div className="max-w-5xl mx-auto text-center text-gray-800">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-3">
           Stay Updated on Luxury Timepieces
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-600 mb-8">
           Get exclusive offers, news, and watch care tips directly to your inbox.
         </p>
 
@@ -47,19 +47,19 @@ const WatchesNewsletterSignup = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full md:flex-1 px-4 py-3 rounded-lg text-gray-50 focus:outline-none border border-gray-700 focus:border-yellow-400 transition"
+              className="w-full md:flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none border border-gray-200 focus:border-amber-600 transition"
             />
             <button
               type="submit"
               disabled={loading}
               className={`w-full md:w-auto px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center justify-center ${
                 loading
-                  ? "bg-yellow-500 cursor-not-allowed"
-                  : "bg-yellow-400 hover:bg-yellow-300 text-gray-900"
+                  ? "bg-amber-700 cursor-not-allowed"
+                  : "bg-amber-600 hover:bg-amber-500 text-gray-900"
               }`}
             >
               {loading ? (
-                <span className="animate-spin border-2 border-gray-900 border-t-transparent rounded-full h-5 w-5"></span>
+                <span className="animate-spin border-2 border-gray-200 border-t-transparent rounded-full h-5 w-5"></span>
               ) : (
                 "Subscribe"
               )}

@@ -11,7 +11,7 @@ const ShopBannerStrip = () => {
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      className="w-full bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 text-white py-4 px-6 shadow-md relative overflow-hidden"
+      className="w-full bg-gradient-to-r from-amber-700 via-orange-600 to-red-600 text-gray-900 py-4 px-6 shadow-md relative overflow-hidden"
       aria-label="Summer Sale Banner"
     >
 
@@ -20,7 +20,7 @@ const ShopBannerStrip = () => {
         className="absolute inset-0 opacity-30"
         style={{
           background:
-            'linear-gradient(270deg, #fbbf24, #f97316, #dc2626, #fbbf24, #f97316, #dc2626)',
+            'linear-gradient(270deg, #b45309, #f97316, #dc2626, #b45309, #f97316, #dc2626)',
           backgroundSize: '1200% 1200%',
         }}
         animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
@@ -34,7 +34,7 @@ const ShopBannerStrip = () => {
           className="flex items-center gap-4"
         >
           <FiGift
-            className="w-7 h-7 text-white shrink-0 drop-shadow-lg"
+            className="w-7 h-7 text-gray-900 shrink-0 drop-shadow-lg"
             aria-hidden="true"
           />
           <p className="text-base sm:text-lg font-semibold tracking-wide leading-tight drop-shadow-md max-w-lg">

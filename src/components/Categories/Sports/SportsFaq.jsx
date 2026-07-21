@@ -45,12 +45,12 @@ const SportsFaq = () => {
   };
 
   return (
-    <section className="bg-gray-900 py-14 text-yellow-400 my-[-30px]">
+    <section className="bg-white py-14 text-amber-600 my-[-30px]">
       <div className="max-w-4xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
-          <p className="text-gray-300 mt-2 text-lg">
+          <p className="text-gray-700 mt-2 text-lg">
             Got questions? We’ve got answers.
           </p>
         </div>
@@ -60,15 +60,15 @@ const SportsFaq = () => {
           {faqs.map((faq, index) => (
             <div
               key={faq.id}
-              className="bg-gray-800 rounded-xl shadow-md p-5 cursor-pointer"
+              className="bg-white rounded-xl shadow-md p-5 cursor-pointer"
               onClick={() => toggleFAQ(index)}
             >
               {/* Question */}
               <div className="flex justify-between items-center">
-                <h3 className="text-white text-lg font-semibold">
+                <h3 className="text-gray-900 text-lg font-semibold">
                   {faq.question}
                 </h3>
-                <span className="text-yellow-400">
+                <span className="text-amber-600">
                   {openIndex === index ? <FaMinus /> : <FaPlus />}
                 </span>
               </div>
@@ -81,7 +81,7 @@ const SportsFaq = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="mt-3 text-gray-300 text-sm leading-relaxed"
+                    className="mt-3 text-gray-700 text-sm leading-relaxed"
                   >
                     {faq.answer}
                   </motion.div>

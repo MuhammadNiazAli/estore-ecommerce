@@ -7,7 +7,7 @@ const specsToCompare = ['CPU', 'RAM', 'Storage', 'Display', 'Battery', 'Weight']
 const LaptopSpecsComparison = ({ laptops = [] }) => {
   if (laptops.length === 0) {
     return (
-      <section className="max-w-[1000px] mx-auto px-4 text-center text-gray-400 py-8">
+      <section className="max-w-[1000px] mx-auto px-4 text-center text-gray-600 py-8">
         No laptops available for comparison.
       </section>
     );
@@ -15,19 +15,19 @@ const LaptopSpecsComparison = ({ laptops = [] }) => {
 
   return (
     <section className="max-w-[1000px] mx-auto px-4 py-10 my-[-50px] mb-0">
-      <h2 className="text-3xl font-bold text-gray-100 mb-6">Compare Laptop Specs</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Compare Laptop Specs</h2>
 
-      <div className="overflow-x-auto rounded-xl border border-gray-700 shadow-lg backdrop-blur-md bg-gray-800/60 custom-scroll">
-        <table className="min-w-full text-sm text-gray-200 border-separate border-spacing-0">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-lg backdrop-blur-md bg-white/60 custom-scroll">
+        <table className="min-w-full text-sm text-gray-700 border-separate border-spacing-0">
           <thead>
-            <tr className="bg-gray-900/70 backdrop-blur-md">
-              <th className="sticky left-0 z-10 px-4 py-3 text-left font-semibold text-gray-100 bg-gray-900/80 backdrop-blur-lg border-r border-gray-700">
+            <tr className="bg-white/70 backdrop-blur-md">
+              <th className="sticky left-0 z-10 px-4 py-3 text-left font-semibold text-gray-800 bg-white/80 backdrop-blur-lg border-r border-gray-200">
                 Specification
               </th>
               {laptops.map(({ id, name }) => (
                 <th
                   key={id}
-                  className="px-6 py-3 text-center font-medium border-b border-gray-700 whitespace-nowrap"
+                  className="px-6 py-3 text-center font-medium border-b border-gray-200 whitespace-nowrap"
                 >
                   <span title={name} className="truncate inline-block max-w-[120px]">
                     {name}
@@ -41,9 +41,9 @@ const LaptopSpecsComparison = ({ laptops = [] }) => {
             {specsToCompare.map((spec, rowIdx) => (
               <tr
                 key={spec}
-                className={`${rowIdx % 2 === 0 ? 'bg-gray-800/60' : 'bg-gray-700/50'} hover:bg-gray-700/60 transition`}
+                className={`${rowIdx % 2 === 0 ? 'bg-white/60' : 'bg-white/50'} hover:bg-white/60 transition`}
               >
-                <td className="sticky left-0 z-10 px-4 py-3 font-semibold bg-gray-900/80 border-r border-gray-700 text-gray-100 backdrop-blur-lg">
+                <td className="sticky left-0 z-10 px-4 py-3 font-semibold bg-white/80 border-r border-gray-200 text-gray-800 backdrop-blur-lg">
                   {spec}
                 </td>
                 {laptops.map(({ id, specs }) => {
@@ -74,7 +74,7 @@ const LaptopSpecsComparison = ({ laptops = [] }) => {
                   return (
                     <td
                       key={id}
-                      className="px-6 py-3 text-center border-b border-gray-700"
+                      className="px-6 py-3 text-center border-b border-gray-200"
                       title={value || 'N/A'}
                     >
                       {value || (
@@ -95,7 +95,7 @@ const LaptopSpecsComparison = ({ laptops = [] }) => {
           height: 8px;
         }
         .custom-scroll::-webkit-scrollbar-track {
-          background: #1f2937; /* gray-800 */
+          background: #ffffff; /* gray-800 */
         }
         .custom-scroll::-webkit-scrollbar-thumb {
           background: #374151; /* gray-700 */

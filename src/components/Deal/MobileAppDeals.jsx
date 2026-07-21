@@ -5,21 +5,21 @@ import { FaApple, FaAndroid } from 'react-icons/fa';
 
 const MobileAppDeals = () => {
   return (
-    <section className="w-full bg-gray-900 text-white py-16 px-4 flex justify-center mb-[-50px]">
+    <section className="w-full bg-white text-gray-900 py-16 px-4 flex justify-center mb-[-50px]">
       <div className="max-w-[1000px] flex flex-col-reverse sm:flex-row items-center gap-10">
     
         <div className="sm:w-1/2 text-center sm:text-left space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Unlock Exclusive Deals on Our Mobile App
           </h2>
-          <p className="text-gray-400 max-w-md mx-auto sm:mx-0">
+          <p className="text-gray-600 max-w-md mx-auto sm:mx-0">
             Download the app now and get special discounts, early notifications, and seamless shopping anytime, anywhere.
           </p>
 
           <div className="flex justify-center sm:justify-start gap-6 mt-4">
             <a
               href="#"
-              className="flex items-center gap-3 bg-black bg-opacity-60 hover:bg-opacity-80 transition px-5 py-3 rounded-xl shadow-md"
+              className="flex items-center gap-3 bg-white bg-opacity-60 hover:bg-opacity-80 transition px-5 py-3 rounded-xl shadow-md"
               aria-label="Download on the Apple App Store"
             >
               <FaApple size={24} />
@@ -31,7 +31,7 @@ const MobileAppDeals = () => {
 
             <a
               href="#"
-              className="flex items-center gap-3 bg-black bg-opacity-60 hover:bg-opacity-80 transition px-5 py-3 rounded-xl shadow-md"
+              className="flex items-center gap-3 bg-white bg-opacity-60 hover:bg-opacity-80 transition px-5 py-3 rounded-xl shadow-md"
               aria-label="Get it on Google Play"
             >
               <FaAndroid size={24} />

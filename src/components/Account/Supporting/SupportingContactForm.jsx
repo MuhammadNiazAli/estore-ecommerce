@@ -52,7 +52,7 @@ const SupportingContactForm = () => {
   return (
     <section
       aria-label="Contact support form"
-      className="max-w-[700px] mx-auto bg-gray-900 rounded-3xl p-8 shadow-2xl text-yellow-100"
+      className="max-w-[700px] mx-auto bg-white rounded-3xl p-8 shadow-2xl text-amber-300"
     >
       <h2 className="text-3xl font-extrabold mb-6 text-center tracking-tight">
         Contact Support
@@ -61,11 +61,11 @@ const SupportingContactForm = () => {
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block mb-1 font-semibold text-yellow-400">
+          <label htmlFor="name" className="block mb-1 font-semibold text-amber-600">
             Name
           </label>
           <div className="relative">
-            <FiMail className="absolute top-3 left-3 text-yellow-400" />
+            <FiMail className="absolute top-3 left-3 text-amber-600" />
             <input
               type="text"
               id="name"
@@ -73,9 +73,9 @@ const SupportingContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               placeholder="Your full name"
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-yellow-800 placeholder-yellow-600 text-yellow-100
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-amber-900 placeholder-amber-800 text-amber-300
                 focus:outline-none focus:ring-2 ${
-                  errors.name ? 'focus:ring-red-500' : 'focus:ring-yellow-400'
+                  errors.name ? 'focus:ring-red-500' : 'focus:ring-amber-600'
                 }`}
               aria-invalid={errors.name ? 'true' : 'false'}
               aria-describedby={errors.name ? 'name-error' : undefined}
@@ -91,11 +91,11 @@ const SupportingContactForm = () => {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block mb-1 font-semibold text-yellow-400">
+          <label htmlFor="email" className="block mb-1 font-semibold text-amber-600">
             Email
           </label>
           <div className="relative">
-            <FiMail className="absolute top-3 left-3 text-yellow-400" />
+            <FiMail className="absolute top-3 left-3 text-amber-600" />
             <input
               type="email"
               id="email"
@@ -103,9 +103,9 @@ const SupportingContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="you@example.com"
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-yellow-800 placeholder-yellow-600 text-yellow-100
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-amber-900 placeholder-amber-800 text-amber-300
                 focus:outline-none focus:ring-2 ${
-                  errors.email ? 'focus:ring-red-500' : 'focus:ring-yellow-400'
+                  errors.email ? 'focus:ring-red-500' : 'focus:ring-amber-600'
                 }`}
               aria-invalid={errors.email ? 'true' : 'false'}
               aria-describedby={errors.email ? 'email-error' : undefined}
@@ -121,11 +121,11 @@ const SupportingContactForm = () => {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block mb-1 font-semibold text-yellow-400">
+          <label htmlFor="message" className="block mb-1 font-semibold text-amber-600">
             Message
           </label>
           <div className="relative">
-            <FiMessageCircle className="absolute top-3 left-3 text-yellow-400" />
+            <FiMessageCircle className="absolute top-3 left-3 text-amber-600" />
             <textarea
               id="message"
               name="message"
@@ -133,9 +133,9 @@ const SupportingContactForm = () => {
               onChange={handleChange}
               rows={5}
               placeholder="Write your message here..."
-              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-yellow-800 placeholder-yellow-600 text-yellow-100 resize-y
+              className={`w-full pl-10 pr-4 py-3 rounded-xl bg-amber-900 placeholder-amber-800 text-amber-300 resize-y
                 focus:outline-none focus:ring-2 ${
-                  errors.message ? 'focus:ring-red-500' : 'focus:ring-yellow-400'
+                  errors.message ? 'focus:ring-red-500' : 'focus:ring-amber-600'
                 }`}
               aria-invalid={errors.message ? 'true' : 'false'}
               aria-describedby={errors.message ? 'message-error' : undefined}
@@ -152,9 +152,9 @@ const SupportingContactForm = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className={`w-full bg-yellow-400 text-yellow-900 font-semibold py-3 rounded-xl shadow-md
-            transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2
-            ${isSubmitting ? 'cursor-not-allowed opacity-70' : 'hover:bg-yellow-300'}`}
+          className={`w-full bg-amber-600 text-amber-950 font-semibold py-3 rounded-xl shadow-md
+            transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
+            ${isSubmitting ? 'cursor-not-allowed opacity-70' : 'hover:bg-amber-500'}`}
           aria-label="Send support message"
           disabled={isSubmitting}
         >
@@ -166,7 +166,7 @@ const SupportingContactForm = () => {
         <p
           role="alert"
           aria-live="polite"
-          className="mt-4 text-center text-yellow-300 font-semibold"
+          className="mt-4 text-center text-amber-500 font-semibold"
         >
           {submitStatus}
         </p>
