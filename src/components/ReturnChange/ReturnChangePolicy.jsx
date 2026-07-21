@@ -52,7 +52,7 @@ const ReturnChangePolicy = () => {
           {policies.map(({ icon, title, description }, idx) => (
             <article
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-50 transition cursor-default"
+              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-default"
               tabIndex={0}
               aria-label={title}
             >

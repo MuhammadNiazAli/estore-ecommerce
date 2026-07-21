@@ -42,7 +42,7 @@ const NotificationEmpty = () => {
       <button
         onClick={handleRefresh}
         type="button"
-        className={`mt-6 px-6 py-2.5 flex items-center justify-center gap-2 bg-white hover:bg-gray-50 active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 text-gray-900 text-sm font-medium rounded-full transition-all duration-300 ${
+        className={`mt-6 px-6 py-2.5 flex items-center justify-center gap-2 bg-white hover:bg-gray-500 active:scale-95 focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 text-gray-900 text-sm font-medium rounded-full transition-all duration-300 ${
           isLoading ? 'cursor-not-allowed opacity-80' : ''
         }`}
         disabled={isLoading}

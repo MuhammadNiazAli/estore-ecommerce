@@ -28,7 +28,7 @@ const LaptopPagination = ({ totalPages = 5, onPageChange }) => {
         className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-md border transition font-medium 
           ${currentPage === 1
             ? 'bg-white text-gray-500 cursor-not-allowed'
-            : 'bg-white text-gray-900 hover:bg-blue-600'}
+            : 'bg-white text-gray-900 hover:bg-amber-800'}
         `}
         aria-label="Previous Page"
       >
@@ -44,8 +44,8 @@ const LaptopPagination = ({ totalPages = 5, onPageChange }) => {
           className={`px-3 py-1.5 sm:px-4 sm:py-2 border rounded-md font-medium transition
             ${
               page === currentPage
-                ? 'bg-blue-600 text-gray-900'
-                : 'bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                ? 'bg-amber-800 text-gray-900'
+                : 'bg-white text-gray-700 hover:bg-gray-500 hover:text-gray-900'
             }`}
         >
           {page}
@@ -59,7 +59,7 @@ const LaptopPagination = ({ totalPages = 5, onPageChange }) => {
         className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-md border transition font-medium
           ${currentPage === totalPages
             ? 'bg-white text-gray-500 cursor-not-allowed'
-            : 'bg-white text-gray-900 hover:bg-blue-600'}
+            : 'bg-white text-gray-900 hover:bg-amber-800'}
         `}
         aria-label="Next Page"
       >

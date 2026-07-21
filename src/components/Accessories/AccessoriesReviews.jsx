@@ -312,7 +312,7 @@ const AccessoriesReviews = () => {
                           setReplyText("");
                           setReplyName("");
                         }}
-                        className="px-4 py-2 rounded-md bg-white hover:bg-gray-50 text-gray-900 transition"
+                        className="px-4 py-2 rounded-md bg-white hover:bg-gray-500 text-gray-900 transition"
                       >
                         Cancel
                       </button>

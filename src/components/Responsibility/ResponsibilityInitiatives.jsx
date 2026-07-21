@@ -23,7 +23,7 @@ const initiatives = [
     title: 'Empowering Local Leaders',
     description:
       'Training and mentoring local leaders to foster sustainable development.',
-    icon: <Users className="w-10 h-10 sm:w-12 sm:h-12 text-blue-400" />,
+    icon: <Users className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600" />,
   },
   {
     id: 4,

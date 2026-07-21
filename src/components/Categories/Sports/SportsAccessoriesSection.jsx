@@ -900,7 +900,7 @@ const SportsAccessoriesSection = () => {
               {/* Wishlist Button */}
               <button
                 onClick={() => toggleWishlist(item)}
-                className="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:bg-gray-100 z-10"
+                className="absolute top-3 right-3 bg-white rounded-full p-2 shadow hover:bg-gray-500 z-10"
               >
                 <HeartIcon
                   className={`h-6 w-6 ${
@@ -928,7 +928,7 @@ const SportsAccessoriesSection = () => {
                 {/* Add to Cart */}
                 <button
                   onClick={() => addToCart(item)}
-                  className="mt-3 w-full flex items-center justify-center gap-2 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-50 transition"
+                  className="mt-3 w-full flex items-center justify-center gap-2 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-500 transition"
                 >
                   <ShoppingBagIcon className="h-5 w-5" />
                   Add to Cart

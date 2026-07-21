@@ -204,8 +204,8 @@ const OrderSummary = () => {
         : active
         ? 'bg-amber-700 text-gray-900 shadow-lg shadow-amber-800/50 border border-amber-600'
         : done
-        ? 'text-amber-600 border border-amber-800 bg-white hover:bg-gray-50'
-        : 'text-gray-500 border border-gray-200 hover:text-amber-500 hover:bg-gray-50 cursor-pointer'
+        ? 'text-amber-600 border border-amber-800 bg-white hover:bg-gray-500'
+        : 'text-gray-500 border border-gray-200 hover:text-amber-500 hover:bg-gray-500 cursor-pointer'
     }
   `}
   disabled={isCancelled && key !== 'cancelled'}
@@ -316,7 +316,7 @@ const OrderSummary = () => {
                 href={order.trackingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 underline hover:text-blue-300"
+                className="text-amber-600 underline hover:text-amber-500"
               >
                 1234567890 <FiChevronRight className="inline" />
               </a>
@@ -405,7 +405,7 @@ const OrderSummary = () => {
   <ul className="space-y-6 text-amber-400 text-sm sm:text-base">
     {faqData.map(({ question, answer }, i) => (
       <li key={i}>
-        <details className="group bg-white rounded-lg p-4 cursor-pointer shadow-md hover:bg-gray-50 transition">
+        <details className="group bg-white rounded-lg p-4 cursor-pointer shadow-md hover:bg-gray-500 transition">
           <summary className="flex items-center justify-between font-semibold text-amber-300">
             {question}
             <FiChevronRight className="transition-transform group-open:rotate-90 text-amber-600" />
@@ -431,7 +431,7 @@ const OrderSummary = () => {
 
 const InfoCard = ({ icon, title, lines }) => (
   <div className="bg-white rounded-xl p-6 text-sm sm:text-base space-y-2 shadow-md">
-    <h4 className="flex items-center gap-3 font-semibold text-blue-400 text-lg mb-2 select-none">
+    <h4 className="flex items-center gap-3 font-semibold text-amber-600 text-lg mb-2 select-none">
       {icon} {title}
     </h4>
     {lines.map((line, i) =>
@@ -465,7 +465,7 @@ const ActionButton = ({ icon, label, primary, danger, onClick }) => (
         ? 'bg-amber-700 text-gray-900 hover:bg-amber-800 shadow-lg shadow-amber-600/40'
         : danger
         ? 'border border-red-600 text-red-500 hover:bg-red-900 shadow-inner'
-        : 'border border-gray-200 text-gray-700 hover:bg-gray-50'
+        : 'border border-gray-200 text-gray-700 hover:bg-gray-500'
     }
     w-full sm:w-auto whitespace-nowrap
   `}

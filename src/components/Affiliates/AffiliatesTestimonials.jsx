@@ -44,7 +44,7 @@ const AffiliatesTestimonials = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-white hover:bg-gray-50 transition-all duration-300 ease-in-out rounded-2xl p-6 shadow-xl flex flex-col"
+              className="bg-white hover:bg-gray-500 transition-all duration-300 ease-in-out rounded-2xl p-6 shadow-xl flex flex-col"
             >
               <div className="flex items-center gap-4 mb-4">
                 <img

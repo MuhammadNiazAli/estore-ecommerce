@@ -62,19 +62,19 @@ const ReturnChangeContactHelp = () => {
 
         {/* Contact Methods */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 text-left">
-          <div className="bg-white hover:bg-gray-50 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
+          <div className="bg-white hover:bg-gray-500 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
             <Phone className="text-amber-600 mb-3" size={32} />
             <h4 className="text-amber-500 font-semibold text-lg mb-1">Call Us</h4>
             <p className="text-gray-600">Mon–Sat, 9 AM to 6 PM</p>
             <p className="mt-1 text-gray-900 font-medium select-text">+1 800 123 4567</p>
           </div>
-          <div className="bg-white hover:bg-gray-50 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
+          <div className="bg-white hover:bg-gray-500 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
             <Mail className="text-amber-600 mb-3" size={32} />
             <h4 className="text-amber-500 font-semibold text-lg mb-1">Email Support</h4>
             <p className="text-gray-600">Response within 12–24 hrs</p>
             <p className="mt-1 text-gray-900 font-medium select-text">support@yourshop.com</p>
           </div>
-          <div className="bg-white hover:bg-gray-50 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
+          <div className="bg-white hover:bg-gray-500 transition rounded-xl p-6 shadow-lg flex flex-col items-start">
             <MessageSquare className="text-amber-600 mb-3" size={32} />
             <h4 className="text-amber-500 font-semibold text-lg mb-1">Live Chat</h4>
             <p className="text-gray-600">24/7 chat available via website widget</p>

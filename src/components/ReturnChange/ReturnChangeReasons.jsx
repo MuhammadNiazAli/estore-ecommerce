@@ -66,7 +66,7 @@ const ReturnChangeReasons = () => {
                   // Optional: handle click or interaction here
                 }
               }}
-              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-50 transition cursor-pointer focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 focus:ring-offset-1"
+              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-pointer focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 focus:ring-offset-1"
             >
               <div className="mb-4">{icon}</div>
               <h3 className="text-amber-500 font-semibold text-xl mb-2">{title}</h3>

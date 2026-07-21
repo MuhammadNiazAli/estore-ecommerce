@@ -97,7 +97,7 @@ const DashboardHeader = () => {
             onClick={toggleUserMenu}
             aria-haspopup="true"
             aria-expanded={userMenuOpen}
-            className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
           >
             <User className="w-4 h-4 text-amber-600" />
             <span className="text-sm text-gray-700 select-text">Niaz</span>
@@ -206,7 +206,7 @@ const DashboardHeader = () => {
               onClick={toggleUserMenu}
               aria-haspopup="true"
               aria-expanded={userMenuOpen}
-              className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <User className="w-4 h-4 text-amber-600" />
               <span className="text-sm text-gray-700 select-text">Niaz</span>

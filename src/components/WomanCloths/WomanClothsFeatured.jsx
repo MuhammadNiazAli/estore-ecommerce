@@ -429,7 +429,7 @@ const WomanClothsFeatured = () => {
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
               activeFilter === filter
                 ? "bg-amber-600 text-black"
-                : "bg-white text-gray-700 hover:bg-gray-50"
+                : "bg-white text-gray-700 hover:bg-gray-500"
             }`}
           >
             {filter}

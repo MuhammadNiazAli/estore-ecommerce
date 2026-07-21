@@ -25,7 +25,7 @@ const OrderActions = ({ status = 'Processing' }) => {
         type="button"
         aria-label="Download Invoice"
         onClick={() => alert('Download Invoice clicked')}
-        className={`${baseBtn} bg-gradient-to-r from-indigo-600 to-indigo-500 text-gray-900 hover:scale-105 hover:shadow-indigo-500/30 focus:outline-none focus:ring-4 focus:ring-indigo-400`}
+        className={`${baseBtn} bg-gradient-to-r from-amber-800 to-amber-700 text-gray-900 hover:scale-105 hover:shadow-amber-700/30 focus:outline-none focus:ring-4 focus:ring-amber-600`}
       >
         <FiDownload size={20} className={`${iconClass} group-hover:scale-110`} />
         Download Invoice
@@ -73,7 +73,7 @@ const OrderActions = ({ status = 'Processing' }) => {
         type="button"
         aria-label="Ask a Question"
         onClick={() => alert('Contact Support clicked')}
-        className={`${baseBtn} border-2 border-blue-500 text-blue-300 bg-blue-900/10 hover:bg-blue-900/30 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400`}
+        className={`${baseBtn} border-2 border-amber-700 text-amber-500 bg-amber-950/10 hover:bg-amber-950/30 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-600`}
       >
         <FiMessageCircle size={20} className={`${iconClass} group-hover:scale-110`} />
         Ask a Question

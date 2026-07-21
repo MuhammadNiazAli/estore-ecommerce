@@ -97,7 +97,7 @@ export default function HelpingPayments() {
             className={`px-8 py-3 rounded-full border font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'learn'
                 ? 'bg-white text-black ring-gray-200'
-                : 'border-gray-200 text-gray-900 hover:bg-gray-100 hover:text-black'
+                : 'border-gray-200 text-gray-900 hover:bg-gray-500 hover:text-black'
             }`}
             aria-label="Toggle learn more about payments"
           >

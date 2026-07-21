@@ -37,9 +37,9 @@ const SupportArticles = () => {
             <a
               key={idx}
               href={url}
-              className="block bg-white border border-gray-200 rounded-xl p-6 hover:bg-gray-50 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 shadow-md hover:shadow-xl"
+              className="block bg-white border border-gray-200 rounded-xl p-6 hover:bg-gray-500 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-amber-700 shadow-md hover:shadow-xl"
             >
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-amber-600 transition-colors">
                 {title}
               </h3>
               <p className="text-gray-700">{excerpt}</p>

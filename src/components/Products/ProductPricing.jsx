@@ -141,7 +141,7 @@ const ProductPricing = ({
             onClick={decrement}
             aria-label="Decrease quantity"
             className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
-            hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600
+            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600
             ${quantity === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 1}
           >
@@ -164,7 +164,7 @@ const ProductPricing = ({
             onClick={increment}
             aria-label="Increase quantity"
             className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
-            hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600
+            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600
             ${quantity === 99 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 99}
           >

@@ -62,7 +62,7 @@ export default function HelpingHero() {
 
             <button
               type="button"
-              className="px-7 py-2.5 border border-gray-200 text-gray-900 font-semibold rounded-full hover:bg-gray-100 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2"
+              className="px-7 py-2.5 border border-gray-200 text-gray-900 font-semibold rounded-full hover:bg-gray-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2"
               aria-label="Learn more"
             >
               Learn More

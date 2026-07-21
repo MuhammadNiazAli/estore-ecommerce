@@ -38,7 +38,7 @@ const SupportTopics = () => {
               key={idx}
               href={link}
               tabIndex={0}
-              className="block group border border-gray-200 bg-white hover:bg-gray-50 transition-colors duration-300 rounded-xl p-6 focus:ring-4 focus:ring-amber-700 focus:outline-none shadow-lg hover:shadow-xl"
+              className="block group border border-gray-200 bg-white hover:bg-gray-500 transition-colors duration-300 rounded-xl p-6 focus:ring-4 focus:ring-amber-700 focus:outline-none shadow-lg hover:shadow-xl"
             >
               <h3 className="text-xl font-semibold mb-2 group-hover:text-amber-600 transition-colors">
                 {title}

@@ -41,7 +41,7 @@ const NewarrivalsSort = () => {
           transition
           duration-300
           cursor-pointer
-          hover:bg-gray-50
+          hover:bg-gray-500
           sm:text-base text-sm
         "
         aria-label="Sort products"

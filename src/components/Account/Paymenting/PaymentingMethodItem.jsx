@@ -23,7 +23,7 @@ const PaymentingMethodItem = ({
         ${
           selected
             ? 'border-amber-700 bg-amber-950 shadow-lg ring-2 ring-amber-700'
-            : 'border-gray-200 bg-white hover:border-amber-700 hover:bg-gray-50 focus:ring-2 focus:ring-amber-700'
+            : 'border-gray-200 bg-white hover:border-amber-700 hover:bg-gray-500 focus:ring-2 focus:ring-amber-700'
         }
         focus:outline-none
         active:scale-[0.98] active:shadow-inner

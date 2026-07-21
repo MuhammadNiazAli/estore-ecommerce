@@ -117,7 +117,7 @@ const ManClothesGrid = () => {
                 <button className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition">
                   <Heart size={20} />
                 </button>
-                <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-50 transition">
+                <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-500 transition">
                   <Eye size={20} />
                 </button>
               </div>

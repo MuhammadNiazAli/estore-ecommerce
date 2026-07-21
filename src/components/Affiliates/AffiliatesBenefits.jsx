@@ -240,7 +240,7 @@ const AffiliatesBenefits = () => {
             {initialBenefits.slice(0, visibleCount).map(({ id, title, description, icon }) => (
               <motion.li
                 key={id}
-                className="flex items-start gap-4 p-5 rounded-lg bg-white hover:bg-gray-50 transition-colors duration-300 focus-within:ring-2 ring-amber-600"
+                className="flex items-start gap-4 p-5 rounded-lg bg-white hover:bg-gray-500 transition-colors duration-300 focus-within:ring-2 ring-amber-600"
                 tabIndex={0}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -162,7 +162,7 @@ const AffiliatesStats = () => {
                       ${
                         isSelected
                           ? "bg-amber-950 shadow-amber-700/60 scale-[1.03]"
-                          : "hover:bg-gray-50 hover:shadow-amber-700/30 hover:scale-[1.02]"
+                          : "hover:bg-gray-500 hover:shadow-amber-700/30 hover:scale-[1.02]"
                       }`}
                   >
                     <div className="mb-4" aria-hidden="true">

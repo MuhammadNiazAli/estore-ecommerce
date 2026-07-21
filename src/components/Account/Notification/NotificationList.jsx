@@ -17,7 +17,7 @@ const notifications = [
     id: 2,
     title: 'Profile Updated',
     message: 'You successfully updated your profile details.',
-    icon: <FaCheckCircle className="text-blue-400 text-lg" />,
+    icon: <FaCheckCircle className="text-amber-600 text-lg" />,
     time: 'Yesterday',
   },
   {

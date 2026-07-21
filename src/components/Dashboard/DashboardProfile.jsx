@@ -198,7 +198,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
                     aria-label={`Name: ${user.name}. Click to edit`}
                   >
                     {user.name}
@@ -253,7 +253,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
                     aria-label={`Email: ${user.email}. Click to edit`}
                   >
                     <Mail className="inline w-4 h-4 mr-1 text-amber-600" />
@@ -300,7 +300,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none"
                     aria-label={`Role: ${user.role}. Click to edit`}
                   >
                     {user.role}
@@ -346,7 +346,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none flex items-center gap-1"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none flex items-center gap-1"
                     aria-label={`Status: ${user.status}. Click to edit`}
                   >
                     <CheckCircle className="w-4 h-4 text-green-400" />
@@ -378,7 +378,7 @@ const DashboardProfile = () => {
                   <button
                     onClick={handleCancel}
                     disabled={saving}
-                    className="bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-50 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
                   >
                     <X className="w-4 h-4" />
                     Cancel
@@ -412,7 +412,7 @@ const DashboardProfile = () => {
           <div className="mt-8 flex justify-end">
             <button
               onClick={() => setShowSettings(true)}
-              className="bg-white text-gray-900 px-6 py-2 rounded-md hover:bg-gray-50 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="bg-white text-gray-900 px-6 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <UserCog className="w-5 h-5 text-amber-600" />
               Account Settings

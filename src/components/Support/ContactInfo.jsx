@@ -43,12 +43,12 @@ const ContactInfo = () => {
 
             <div className="space-y-5 text-gray-700">
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaPhoneAlt className="text-blue-400 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaPhoneAlt className="text-amber-600 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Phone</p>
                   <a
                     href="tel:+1234567890"
-                    className="text-blue-400 hover:underline break-words text-xs sm:text-sm"
+                    className="text-amber-600 hover:underline break-words text-xs sm:text-sm"
                   >
                     +1 (234) 567-890
                   </a>
@@ -144,7 +144,7 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-blue-500 hover:text-gray-900 transition transform hover:scale-110"
+              className="text-amber-700 hover:text-gray-900 transition transform hover:scale-110"
             >
               <FaFacebookF />
             </a>
@@ -162,7 +162,7 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="text-sky-400 hover:text-gray-900 transition transform hover:scale-110"
+              className="text-amber-600 hover:text-gray-900 transition transform hover:scale-110"
             >
               <FaTwitter />
             </a>

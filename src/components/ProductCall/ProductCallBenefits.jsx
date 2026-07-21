@@ -33,7 +33,7 @@ const ProductCallBenefits = () => {
         {benefits.map((benefit) => (
           <div
             key={benefit.title}
-            className="flex items-start gap-4 p-5 rounded-xl bg-white hover:bg-gray-50 transition-all duration-200"
+            className="flex items-start gap-4 p-5 rounded-xl bg-white hover:bg-gray-500 transition-all duration-200"
           >
             <div>{benefit.icon}</div>
             <div>

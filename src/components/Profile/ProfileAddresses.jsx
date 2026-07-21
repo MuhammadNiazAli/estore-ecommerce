@@ -208,7 +208,7 @@ const ProfileAddresses = () => {
                   <button
                     onClick={cancelDelete}
                     aria-label="Cancel delete address"
-                    className="p-1 rounded-full bg-white text-amber-600 hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="p-1 rounded-full bg-white text-amber-600 hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                     type="button"
                   >
                     No
@@ -383,7 +383,7 @@ const ProfileAddresses = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                   >
                     Cancel
                   </button>

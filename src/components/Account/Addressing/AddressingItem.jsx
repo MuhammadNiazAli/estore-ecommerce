@@ -38,7 +38,7 @@ const AddressingItem = ({
             onEdit &&
             onEdit({ id, name, street, city, state, zip, country, phone, isDefault })
           }
-          className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition text-gray-900 font-semibold"
+          className="px-4 py-2 bg-amber-800 rounded hover:bg-amber-900 transition text-gray-900 font-semibold"
           aria-label={`Edit address ${name}`}
         >
           Edit

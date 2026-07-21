@@ -132,7 +132,7 @@ export default function Footer() {
                     <motion.li key={i} {...bounceHover}>
                       <a
                         href={href}
-                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-500 hover:text-gray-900 transition-all duration-300"
                       >
                         <Icon size={14} />
                         <span>{label}</span>
@@ -176,7 +176,7 @@ export default function Footer() {
                     <motion.li key={i} {...bounceHover}>
                       <a
                         href={href}
-                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-50 hover:text-gray-900 transition-all duration-300"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-500 hover:text-gray-900 transition-all duration-300"
                       >
                         <Icon size={14} />
                         <span>{label}</span>

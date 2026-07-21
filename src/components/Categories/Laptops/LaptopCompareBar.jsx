@@ -29,7 +29,7 @@ const LaptopCompareBar = ({ selectedLaptops = [], onRemove, onCompare }) => {
       </div>
       <button
         onClick={onCompare}
-        className="ml-auto bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-2 rounded-md transition"
+        className="ml-auto bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold px-6 py-2 rounded-md transition"
       >
         Compare ({selectedLaptops.length})
       </button>

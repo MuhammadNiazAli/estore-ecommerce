@@ -285,7 +285,7 @@ const ProfileDetails = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
                   >
                     Cancel
                   </button>

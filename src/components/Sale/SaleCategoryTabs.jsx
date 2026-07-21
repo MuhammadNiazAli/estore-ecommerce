@@ -21,7 +21,7 @@ const SaleCategoryTabs = ({ categories = [], onTabChange }) => {
                 ${
                   activeTab === category
                     ? "text-gray-900 bg-amber-600 shadow-md scale-100"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-500"
                 }`}
             >
               {category}

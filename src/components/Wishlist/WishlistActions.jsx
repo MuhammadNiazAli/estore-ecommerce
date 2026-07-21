@@ -24,7 +24,7 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onShare}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-700 hover:bg-gray-50 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-700 hover:bg-gray-500 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Share your wishlist"
             title="Share your wishlist"
           >
@@ -40,7 +40,7 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onMoveAll}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-gray-900 font-semibold hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-amber-800 text-gray-900 font-semibold hover:bg-amber-900 active:bg-amber-900 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Move all wishlist items to cart"
             title="Move all wishlist items to cart"
           >

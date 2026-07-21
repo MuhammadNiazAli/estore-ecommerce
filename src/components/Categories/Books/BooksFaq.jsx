@@ -78,7 +78,7 @@ const BooksFaq = () => {
               className="bg-white rounded-lg border border-amber-700 shadow-lg overflow-hidden"
             >
               <button
-                className="w-full flex justify-between items-center px-5 py-4 text-left text-lg font-medium hover:bg-gray-50 transition"
+                className="w-full flex justify-between items-center px-5 py-4 text-left text-lg font-medium hover:bg-gray-500 transition"
                 onClick={() => toggleFAQ(index)}
               >
                 {item.question}

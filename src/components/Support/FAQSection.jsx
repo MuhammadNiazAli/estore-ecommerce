@@ -48,7 +48,7 @@ const FAQSection = () => {
               onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && toggleFAQ(idx)}
               aria-expanded={activeIndex === idx}
               aria-controls={`faq-answer-${idx}`}
-              className="border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              className="border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-amber-700 transition"
             >
               <div className="flex justify-between items-center p-5 cursor-pointer select-none">
                 <h3 className="text-lg font-medium text-gray-900">{question}</h3>

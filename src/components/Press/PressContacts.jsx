@@ -79,7 +79,7 @@ const PressContacts = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${type}: ${value}`}
-              className="flex flex-col items-center justify-center bg-white hover:bg-gray-50 hover:ring-2 hover:ring-amber-600 rounded-2xl p-6 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="flex flex-col items-center justify-center bg-white hover:bg-gray-500 hover:ring-2 hover:ring-amber-600 rounded-2xl p-6 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600"
             >
               <div className="mb-3">{icon}</div>
               <h3 className="text-amber-600 font-semibold text-lg sm:text-xl">{type}</h3>

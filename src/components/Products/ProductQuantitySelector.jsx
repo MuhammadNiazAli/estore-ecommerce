@@ -27,7 +27,7 @@ const ProductQuantitySelector = ({
         className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-700 transition-colors ${
           quantity <= min
             ? "cursor-not-allowed opacity-50"
-            : "hover:bg-gray-100 dark:hover:bg-gray-50"
+            : "hover:bg-gray-500 dark:hover:bg-gray-500"
         }`}
       >
         −
@@ -49,7 +49,7 @@ const ProductQuantitySelector = ({
         className={`px-3 py-1 text-lg font-semibold text-gray-700 dark:text-gray-700 transition-colors ${
           quantity >= max
             ? "cursor-not-allowed opacity-50"
-            : "hover:bg-gray-100 dark:hover:bg-gray-50"
+            : "hover:bg-gray-500 dark:hover:bg-gray-500"
         }`}
       >
         +

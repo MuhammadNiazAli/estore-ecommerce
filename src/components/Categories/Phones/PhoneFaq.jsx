@@ -141,7 +141,7 @@ const PhoneCategories = () => {
             className="
               flex-shrink-0 w-64 lg:w-full bg-white rounded-2xl shadow hover:shadow-xl
               transition-shadow duration-300 p-4 flex items-center gap-4 cursor-pointer
-              focus:outline-none focus:ring-4 focus:ring-indigo-300
+              focus:outline-none focus:ring-4 focus:ring-amber-500
             "
           >
             <img

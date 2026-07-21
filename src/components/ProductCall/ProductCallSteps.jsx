@@ -48,7 +48,7 @@ const ProductCallSteps = () => {
           {steps.map(({ icon, title, description }, idx) => (
             <article
               key={idx}
-              className="flex flex-col items-center bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:bg-gray-50 duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="flex flex-col items-center bg-white rounded-2xl p-6 sm:p-8 shadow-md hover:bg-gray-500 duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600"
               tabIndex={0}
               aria-label={`${title} step`}
             >

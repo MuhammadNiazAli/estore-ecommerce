@@ -221,7 +221,7 @@ const DashboardTasks = () => {
           {filteredTasks.map(({ id, title, completed, priority, due }) => (
             <li
               key={id}
-              className={`flex items-center justify-between p-3 rounded-md cursor-pointer hover:bg-gray-50 transition select-text ${
+              className={`flex items-center justify-between p-3 rounded-md cursor-pointer hover:bg-gray-500 transition select-text ${
                 completed ? 'opacity-60 line-through' : ''
               }`}
               onClick={() => toggleTask(id)}

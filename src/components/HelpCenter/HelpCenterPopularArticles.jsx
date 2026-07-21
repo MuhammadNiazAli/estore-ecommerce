@@ -193,7 +193,7 @@ const HelpCenterPopularArticles = () => {
               </button>
               <button
                 onClick={closeModal}
-                className="bg-white px-4 py-2 rounded-md hover:bg-gray-50 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Close
               </button>
@@ -226,7 +226,7 @@ const HelpCenterPopularArticles = () => {
             <div className="flex justify-end gap-4">
               <button
                 onClick={closeFullArticleModal}
-                className="bg-white px-4 py-2 rounded-md hover:bg-gray-50 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
               >
                 Close
               </button>

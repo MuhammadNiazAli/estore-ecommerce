@@ -112,7 +112,7 @@ const ProfileSecurityQuestions = () => {
                     </button>
                     <button
                       onClick={handleCancel}
-                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-gray-50 text-gray-900 font-medium text-sm transition"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-white hover:bg-gray-500 text-gray-900 font-medium text-sm transition"
                     >
                       <XMarkIcon className="w-5 h-5" />
                       Cancel

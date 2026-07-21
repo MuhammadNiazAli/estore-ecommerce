@@ -84,7 +84,7 @@ const CamerasSpecsComparison = () => {
               className={`border px-4 py-2 rounded-lg transition ${
                 selectedCameras.find((c) => c.id === camera.id)
                   ? "bg-amber-600 text-black border-amber-600"
-                  : "border-gray-200 text-gray-900 hover:bg-gray-50"
+                  : "border-gray-200 text-gray-900 hover:bg-gray-500"
               }`}
             >
               {camera.name}

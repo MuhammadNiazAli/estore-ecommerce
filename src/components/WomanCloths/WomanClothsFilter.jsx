@@ -939,7 +939,7 @@ const WomanClothsFilter = () => {
                 className={`px-3 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-sm font-medium transition whitespace-nowrap ${
                   selectedCategory === cat
                     ? "bg-amber-700 text-gray-900"
-                    : "bg-white hover:bg-gray-50"
+                    : "bg-white hover:bg-gray-500"
                 }`}
               >
                 {cat}
@@ -977,7 +977,7 @@ const WomanClothsFilter = () => {
                 className={`px-2 md:px-3 py-1 rounded-md text-xs font-medium transition border whitespace-nowrap ${
                   selectedColor === clr
                     ? "bg-amber-700 text-gray-900 border-amber-700"
-                    : "border-gray-200 text-gray-700 hover:bg-gray-50"
+                    : "border-gray-200 text-gray-700 hover:bg-gray-500"
                 }`}
               >
                 {clr}

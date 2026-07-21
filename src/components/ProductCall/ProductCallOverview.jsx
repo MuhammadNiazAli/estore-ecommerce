@@ -39,7 +39,7 @@ const ProductCallOverview = () => {
           {features.map(({ icon, title, description }, idx) => (
             <div
               key={idx}
-              className="flex flex-col items-center bg-white rounded-xl p-6 hover:bg-gray-50 transition-colors duration-200"
+              className="flex flex-col items-center bg-white rounded-xl p-6 hover:bg-gray-500 transition-colors duration-200"
             >
               <div className="mb-4">{icon}</div>
               <h3 className="text-xl font-semibold text-amber-600 mb-2">{title}</h3>

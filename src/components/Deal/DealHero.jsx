@@ -87,7 +87,7 @@ const DealHero = () => {
             <button className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold flex items-center hover:bg-amber-500 transition duration-300 shadow-md hover:shadow-lg">
               Start Shopping <FiArrowRight className="ml-2" size={18} />
             </button>
-            <button className="border border-gray-200 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-black transition duration-300 shadow-md hover:shadow-lg">
+            <button className="border border-gray-200 px-6 py-3 rounded-full font-semibold hover:bg-gray-500 hover:text-black transition duration-300 shadow-md hover:shadow-lg">
               View All Offers
             </button>
           </div>
@@ -108,7 +108,7 @@ const DealHero = () => {
             {featureList.map((feature, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-2 text-[10px] sm:text-sm text-black hover:bg-gray-100/40 p-2 rounded-lg transition"
+                className="flex items-start gap-2 text-[10px] sm:text-sm text-black hover:bg-gray-500/40 p-2 rounded-lg transition"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

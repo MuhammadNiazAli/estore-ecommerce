@@ -60,7 +60,7 @@ const CartRecommendedProducts = () => {
           {recommendedProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-white rounded-lg p-4 flex flex-col items-center hover:bg-gray-50 transition cursor-pointer"
+              className="bg-white rounded-lg p-4 flex flex-col items-center hover:bg-gray-500 transition cursor-pointer"
             >
               <img
                 src={product.image}

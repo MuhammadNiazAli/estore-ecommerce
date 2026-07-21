@@ -27,7 +27,7 @@ const BestdealsCategoryTabs = () => {
                 ${
                   activeTab === category
                     ? 'bg-amber-600 text-gray-900 shadow-lg scale-100'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'bg-white text-gray-700 hover:bg-gray-500 hover:text-gray-900'
                 }`}
             >
               {category}

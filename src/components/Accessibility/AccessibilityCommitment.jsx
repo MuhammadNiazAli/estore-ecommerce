@@ -47,7 +47,7 @@ const AccessibilityCommitment = () => {
           {commitments.map(({ icon, title, description }) => (
             <li
               key={title}
-              className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-lg hover:bg-gray-50 transition-colors duration-300"
+              className="flex items-start space-x-4 bg-white p-5 rounded-lg shadow-lg hover:bg-gray-500 transition-colors duration-300"
             >
               <div>{icon}</div>
               <div>

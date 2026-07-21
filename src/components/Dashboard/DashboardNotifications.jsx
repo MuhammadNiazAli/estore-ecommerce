@@ -7,7 +7,7 @@ const initialNotifications = [
   {
     id: 1,
     type: 'info',
-    icon: <Info className="text-blue-400 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
     message: 'New product review added by Sarah.',
     time: '2 mins ago',
   },
@@ -46,7 +46,7 @@ const moreNotificationsBatch = [
   {
     id: 6,
     type: 'info',
-    icon: <Info className="text-blue-400 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
     message: 'Inventory updated for SKU #12345.',
     time: '3 hours ago',
   },
@@ -91,7 +91,7 @@ const DashboardNotifications = () => {
       const newNotif = {
         id: Date.now(),
         type: 'info',
-        icon: <Info className="text-blue-400 w-5 h-5" aria-hidden="true" />,
+        icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
         message: 'New order placed: #45326.',
         time: 'Just now',
       };
@@ -175,7 +175,7 @@ const DashboardNotifications = () => {
             <div
               key={item.id}
               role="listitem"
-              className="flex items-start gap-3 bg-white p-3 rounded-lg hover:bg-gray-50 transition relative"
+              className="flex items-start gap-3 bg-white p-3 rounded-lg hover:bg-gray-500 transition relative"
             >
               <div>{item.icon}</div>
               <div className="flex-1">

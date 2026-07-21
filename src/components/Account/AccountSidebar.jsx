@@ -161,7 +161,7 @@ const AccountSidebar = () => {
                       ${
                         active === item.id
                           ? 'bg-amber-600 text-black shadow'
-                          : 'hover:bg-gray-50 text-gray-700'
+                          : 'hover:bg-gray-500 text-gray-700'
                       }`}
                   >
                     <span className="text-lg">{item.icon}</span>
@@ -175,7 +175,7 @@ const AccountSidebar = () => {
                       ${
                         active === item.id
                           ? 'bg-amber-600 text-black shadow'
-                          : 'hover:bg-gray-50 text-gray-700'
+                          : 'hover:bg-gray-500 text-gray-700'
                       }`}
                     onClick={() => handleNavClick(item.id)}
                   >
@@ -207,7 +207,7 @@ const AccountSidebar = () => {
                   ${
                     active === item.id
                       ? 'bg-amber-600 text-black shadow'
-                      : 'hover:bg-gray-50 text-gray-700'
+                      : 'hover:bg-gray-500 text-gray-700'
                   }`}
               >
                 <span className="text-lg">{item.icon}</span>
@@ -221,7 +221,7 @@ const AccountSidebar = () => {
                   ${
                     active === item.id
                       ? 'bg-amber-600 text-black shadow'
-                      : 'hover:bg-gray-50 text-gray-700'
+                      : 'hover:bg-gray-500 text-gray-700'
                   }`}
                 onClick={() => handleNavClick(item.id)}
               >

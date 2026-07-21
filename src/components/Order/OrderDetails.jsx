@@ -75,13 +75,13 @@ const OrderDetails = () => {
       className="max-w-[1100px] mx-auto px-4 sm:px-8 py-10 bg-white text-gray-900 space-y-10 relative z-10 border border-gray-200 my-[-70px] mb-0"
     >
       {/* Order Header */}
-      <header className="border-b border-blue-600 pb-6">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">
+      <header className="border-b border-amber-800 pb-6">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 tracking-tight">
            Order Summary
         </h2>
         <p className="text-gray-700 mt-2 text-base">
           Order <span className="text-gray-900 font-semibold">#{details.orderId}</span> •{' '}
-          <span className="text-blue-400 font-semibold">{details.status}</span>
+          <span className="text-amber-600 font-semibold">{details.status}</span>
         </p>
         <p className="text-gray-500 mt-1 text-sm">Placed on: {details.placedOn}</p>
       </header>
@@ -112,7 +112,7 @@ const OrderDetails = () => {
       <Section title="Shipping Method & Tracking" icon={<FiTruck />} border>
         <p className="text-gray-700">{details.shippingMethod}</p>
         <p className="text-gray-700">
-          Tracking Number: <span className="text-blue-400 font-semibold">{details.trackingNumber}</span>
+          Tracking Number: <span className="text-amber-600 font-semibold">{details.trackingNumber}</span>
         </p>
         <p className="text-gray-500 text-sm">Estimated Delivery: <span className="text-gray-900">{details.estimatedDelivery}</span></p>
       </Section>
@@ -162,14 +162,14 @@ const OrderDetails = () => {
           For help with your order, contact us:
         </p>
         <p>
-          <FiPhone size={14} className="inline text-blue-400 mr-1" />
-          <a href={`tel:${details.supportContact.phone}`} className="text-blue-400 hover:text-blue-300 underline">
+          <FiPhone size={14} className="inline text-amber-600 mr-1" />
+          <a href={`tel:${details.supportContact.phone}`} className="text-amber-600 hover:text-amber-500 underline">
             {details.supportContact.phone}
           </a>
         </p>
         <p>
-          <FiMail size={14} className="inline text-blue-400 mr-1" />
-          <a href={`mailto:${details.supportContact.email}`} className="text-blue-400 hover:text-blue-300 underline">
+          <FiMail size={14} className="inline text-amber-600 mr-1" />
+          <a href={`mailto:${details.supportContact.email}`} className="text-amber-600 hover:text-amber-500 underline">
             {details.supportContact.email}
           </a>
         </p>
@@ -184,7 +184,7 @@ export default OrderDetails;
 // 🔧 Reusable Section Block
 const Section = ({ title, icon, children, border = false }) => (
   <section className={`${border ? 'border-b border-gray-200 pb-6' : ''}`}>
-    <h3 className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-blue-400 mb-2">
+    <h3 className="flex items-center gap-2 text-lg sm:text-xl font-semibold text-amber-600 mb-2">
       {icon} {title}
     </h3>
     <div className="space-y-2">{children}</div>
@@ -200,14 +200,14 @@ const AddressBlock = ({ data }) => (
     <p>{data.country}</p>
     {data.phone && (
       <p>
-        <FiPhone className="inline text-blue-400 mr-1" size={14} />
-        <a href={`tel:${data.phone}`} className="text-blue-400 underline hover:text-blue-300">{data.phone}</a>
+        <FiPhone className="inline text-amber-600 mr-1" size={14} />
+        <a href={`tel:${data.phone}`} className="text-amber-600 underline hover:text-amber-500">{data.phone}</a>
       </p>
     )}
     {data.email && (
       <p>
-        <FiMail className="inline text-blue-400 mr-1" size={14} />
-        <a href={`mailto:${data.email}`} className="text-blue-400 underline hover:text-blue-300">{data.email}</a>
+        <FiMail className="inline text-amber-600 mr-1" size={14} />
+        <a href={`mailto:${data.email}`} className="text-amber-600 underline hover:text-amber-500">{data.email}</a>
       </p>
     )}
   </address>

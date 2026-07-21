@@ -46,7 +46,7 @@ const HelpCenterHowItWorks = () => {
               tabIndex={0}
               role="listitem"
               aria-describedby={`step-desc-${index}`}
-              className="bg-white hover:bg-gray-50 rounded-2xl px-6 py-10 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2"
+              className="bg-white hover:bg-gray-500 rounded-2xl px-6 py-10 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2"
             >
               <div className="mb-6 flex justify-center">{step.icon}</div>
               <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-gray-900">

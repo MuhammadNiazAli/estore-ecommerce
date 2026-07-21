@@ -111,13 +111,13 @@ const CamerasReviewsPreview = () => {
         <div className="flex justify-center gap-4 mt-6">
           <button
             onClick={prevReview}
-            className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition"
+            className="bg-white px-4 py-2 rounded-full hover:bg-gray-500 transition"
           >
             ◀
           </button>
           <button
             onClick={nextReview}
-            className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition"
+            className="bg-white px-4 py-2 rounded-full hover:bg-gray-500 transition"
           >
             ▶
           </button>

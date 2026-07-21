@@ -48,7 +48,7 @@ const ShopHero = () => {
           animate={controls}
           initial={{ opacity: 0, scale: 0.75 }}
           whileTap={{ scale: 0.9 }}
-          className="inline-flex items-center justify-center mb-12 cursor-grab active:cursor-grabbing text-blue-500 drop-shadow-[0_0_25px_rgba(59,130,246,0.85)]"
+          className="inline-flex items-center justify-center mb-12 cursor-grab active:cursor-grabbing text-amber-700 drop-shadow-[0_0_25px_rgba(59,130,246,0.85)]"
           aria-label="Draggable shopping bag icon"
           role="img"
         >
@@ -89,7 +89,7 @@ const ShopHero = () => {
         >
           <button
             type="button"
-            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-blue-600 to-blue-800 text-gray-900 font-semibold shadow-lg hover:from-blue-700 hover:to-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-600 focus:ring-offset-2 transition-transform active:scale-95"
+            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-amber-800 to-amber-900 text-gray-900 font-semibold shadow-lg hover:from-amber-900 hover:to-amber-950 focus:outline-none focus:ring-4 focus:ring-amber-800 focus:ring-offset-2 transition-transform active:scale-95"
             aria-label="Start shopping now"
           >
             <FiShoppingBag className="w-5 h-5" aria-hidden="true" />
@@ -105,7 +105,7 @@ const ShopHero = () => {
           </button>
           <button
             type="button"
-            className="px-14 py-4 rounded-full bg-white text-gray-700 font-semibold hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200 focus:ring-offset-2 transition"
+            className="px-14 py-4 rounded-full bg-white text-gray-700 font-semibold hover:bg-gray-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200 focus:ring-offset-2 transition"
             aria-label="Learn more about our collection"
           >
             Learn More

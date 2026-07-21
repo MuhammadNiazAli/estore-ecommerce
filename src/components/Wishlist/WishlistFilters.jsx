@@ -302,10 +302,10 @@ export default function WishlistFilters() {
         text-sm sm:text-base
         ${
           activeFilter === filter
-            ? 'bg-blue-600 text-gray-900 border-blue-600 shadow-lg'
-            : 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-100 dark:hover:bg-gray-50'
+            ? 'bg-amber-800 text-gray-900 border-amber-800 shadow-lg'
+            : 'bg-transparent text-amber-800 border-amber-800 hover:bg-amber-300 dark:hover:bg-gray-500'
         }
-        focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1
+        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1
         w-full
         max-w-full
         sm:max-w-[130px]
@@ -348,7 +348,7 @@ export default function WishlistFilters() {
               transition={{ duration: 0.5, ease: 'easeOut' }}
               className="bg-white dark:bg-white rounded-lg shadow-md overflow-hidden cursor-pointer
                          hover:shadow-xl focus:shadow-xl focus:outline-none
-                         ring-1 ring-transparent focus:ring-blue-400 transition-shadow duration-300"
+                         ring-1 ring-transparent focus:ring-amber-600 transition-shadow duration-300"
               tabIndex={0}
               aria-label={`${product.title}, price $${product.price.toFixed(2)}`}
             >
@@ -384,7 +384,7 @@ export default function WishlistFilters() {
                     tabIndex={0}
                     role="button"
                     aria-label="Add to cart"
-                    className="w-6 h-6 hover:text-blue-600 cursor-pointer transition-colors duration-200"
+                    className="w-6 h-6 hover:text-amber-800 cursor-pointer transition-colors duration-200"
                     onClick={() => router.push(`/cart`)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') router.push(`/cart`);
@@ -412,7 +412,7 @@ export default function WishlistFilters() {
                     tabIndex={0}
                     role="button"
                     aria-label="View details"
-                    className="w-6 h-6 hover:text-blue-400 cursor-pointer transition-colors duration-200"
+                    className="w-6 h-6 hover:text-amber-600 cursor-pointer transition-colors duration-200"
                     onClick={() => router.push(`/product`)}
                     onKeyDown={(e) => {
                       if (e.key === 'Enter') router.push(`/product`);

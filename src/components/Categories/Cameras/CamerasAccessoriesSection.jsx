@@ -153,7 +153,7 @@ const CamerasAccessoriesSection = () => {
                     <FaCartPlus size={14} /> Add
                   </button>
                   <button
-                    className="flex-1 bg-white text-amber-600 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-50 transition"
+                    className="flex-1 bg-white text-amber-600 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-500 transition"
                     onClick={() => handleViewDetails(item)}
                   >
                     <FaEye size={14} /> View

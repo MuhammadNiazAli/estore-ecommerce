@@ -114,7 +114,7 @@ const LaptopHero = () => {
             <button className="bg-amber-600 text-black px-7 py-3 rounded-full font-semibold hover:bg-amber-500 transition">
               Buy Now
             </button>
-            <button className="border border-gray-200 px-7 py-3 rounded-full font-semibold hover:bg-gray-100 hover:text-black transition">
+            <button className="border border-gray-200 px-7 py-3 rounded-full font-semibold hover:bg-gray-500 hover:text-black transition">
               View Specs
             </button>
           </div>

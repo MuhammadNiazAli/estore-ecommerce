@@ -125,7 +125,7 @@ const SaleFilter = ({ categories = [], onFilterChange }) => {
               ${
                 activeCategory === category
                   ? 'bg-amber-600 text-gray-900'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  : 'bg-white text-gray-700 hover:bg-gray-500'
               }
               px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2`}
           >

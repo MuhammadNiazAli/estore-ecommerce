@@ -109,7 +109,7 @@ const LaptopReviewsPreview = () => {
                   <div className="flex items-center space-x-1 sm:space-x-2 text-sm sm:text-base font-medium text-gray-800">
                     <span>{username}</span>
                     <CheckBadgeIcon
-                      className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-amber-700"
                       title="Verified Buyer"
                     />
                   </div>

@@ -32,7 +32,7 @@ const AboutTeam = () => {
 
 
           <h3 className="text-2xl font-semibold mb-1">Mr. Niaz Ali</h3>
-          <p className="text-indigo-400 mb-6">Full Stack Developer & eStore Architect</p>
+          <p className="text-amber-600 mb-6">Full Stack Developer & eStore Architect</p>
 
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed px-2">
             I'm a passionate developer who began my journey at the age of 20 with HTML & CSS. 

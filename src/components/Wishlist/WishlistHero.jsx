@@ -84,7 +84,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
             </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-blue-500">
+            <span className="text-4xl font-bold text-amber-700">
               {savedDeals}
             </span>
             <span className="text-sm tracking-widest uppercase">

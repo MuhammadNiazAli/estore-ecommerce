@@ -100,7 +100,7 @@ const AccountHero = () => {
             <Link href="/account/profile" passHref>
               <button
                 aria-label="Manage your profile"
-                className="px-6 sm:px-7 py-2.5 border border-gray-200 text-gray-900 font-semibold rounded-full hover:bg-gray-100 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2"
+                className="px-6 sm:px-7 py-2.5 border border-gray-200 text-gray-900 font-semibold rounded-full hover:bg-gray-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2"
               >
                 Manage Profile
               </button>
@@ -109,7 +109,7 @@ const AccountHero = () => {
             <button
               aria-label="Logout"
               onClick={() => alert('Logging out...')}
-              className="flex items-center gap-2 px-6 py-2.5 bg-white text-amber-600 font-semibold rounded-full shadow-md hover:bg-gray-50 hover:text-amber-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="flex items-center gap-2 px-6 py-2.5 bg-white text-amber-600 font-semibold rounded-full shadow-md hover:bg-gray-500 hover:text-amber-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               type="button"
             >
               <FiLogOut className="text-lg" aria-hidden="true" />

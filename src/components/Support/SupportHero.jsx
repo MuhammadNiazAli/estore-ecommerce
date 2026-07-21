@@ -60,7 +60,7 @@ const SupportHero = () => {
             <a
               key={label}
               href={href}
-              className="flex flex-col items-center gap-3 bg-white rounded-xl p-6 hover:bg-gray-50 transition duration-300 shadow-md hover:shadow-lg text-gray-700"
+              className="flex flex-col items-center gap-3 bg-white rounded-xl p-6 hover:bg-gray-500 transition duration-300 shadow-md hover:shadow-lg text-gray-700"
             >
               <div className="text-amber-700 text-3xl">{icon}</div>
               <span className="font-semibold text-lg">{label}</span>

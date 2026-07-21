@@ -44,7 +44,7 @@ const SecuritingDeleteAccount = () => {
             </button>
             <button
               type="button"
-              className="px-6 py-2 bg-white hover:bg-gray-50 text-gray-900 rounded-full text-sm font-medium transition"
+              className="px-6 py-2 bg-white hover:bg-gray-500 text-gray-900 rounded-full text-sm font-medium transition"
               onClick={() => setConfirming(false)}
             >
               Cancel

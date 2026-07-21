@@ -565,7 +565,7 @@ const FitnessPagination = () => {
             className={`flex items-center gap-1 px-4 py-2 rounded-lg border min-w-[80px] whitespace-nowrap ${
               currentPage === 1
                 ? "bg-gray-200 text-gray-600 cursor-not-allowed"
-                : "bg-white text-gray-700 hover:bg-gray-100"
+                : "bg-white text-gray-700 hover:bg-gray-500"
             }`}
           >
             <ChevronLeftIcon className="h-5 w-5" />
@@ -581,7 +581,7 @@ const FitnessPagination = () => {
                 className={`px-4 py-2 rounded-lg font-medium min-w-[50px] whitespace-nowrap transition ${
                   currentPage === page
                     ? "bg-white text-gray-900 border border-amber-50"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
+                    : "bg-white text-gray-700 hover:bg-gray-500"
                 }`}
               >
                 {page}
@@ -596,7 +596,7 @@ const FitnessPagination = () => {
             className={`flex items-center gap-1 px-4 py-2 rounded-lg border min-w-[80px] whitespace-nowrap ${
               currentPage === totalPages
                 ? "bg-gray-200 text-gray-600 cursor-not-allowed"
-                : "bg-white text-gray-700 hover:bg-gray-100"
+                : "bg-white text-gray-700 hover:bg-gray-500"
             }`}
           >
             Next

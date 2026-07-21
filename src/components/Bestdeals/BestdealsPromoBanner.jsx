@@ -16,7 +16,7 @@ const BestdealsPromoBanner = () => {
         </div>
         <a
           href="#shop-now"
-          className="inline-block bg-white text-amber-600 font-semibold rounded-lg px-6 py-3 text-center hover:bg-gray-50 transition duration-300 whitespace-nowrap flex-shrink-0"
+          className="inline-block bg-white text-amber-600 font-semibold rounded-lg px-6 py-3 text-center hover:bg-gray-500 transition duration-300 whitespace-nowrap flex-shrink-0"
           aria-label="Shop Now - Flash Sale"
         >
           Shop Now

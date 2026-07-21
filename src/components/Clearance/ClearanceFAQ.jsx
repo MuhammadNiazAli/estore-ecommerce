@@ -50,7 +50,7 @@ const ClearanceFAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl px-4 sm:px-6 py-4 sm:py-5 cursor-pointer hover:bg-gray-50 transition duration-300"
+              className="bg-white rounded-xl px-4 sm:px-6 py-4 sm:py-5 cursor-pointer hover:bg-gray-500 transition duration-300"
               onClick={() => toggleFAQ(index)}
               onKeyDown={(e) => e.key === 'Enter' || e.key === ' ' ? toggleFAQ(index) : null}
               role="button"

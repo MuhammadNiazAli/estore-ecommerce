@@ -51,7 +51,7 @@ const HomeCall = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           onClick={() => alert('Redirecting to shop...')}
-          className="flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:bg-gray-50 transition duration-200"
+          className="flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-sm sm:text-base shadow-md hover:bg-gray-500 transition duration-200"
           aria-label="Shop Now"
         >
           <FiShoppingBag className="text-lg" aria-hidden="true" />

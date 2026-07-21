@@ -55,7 +55,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
                 placeholder="John Doe"
               />
             </div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
                 placeholder="john@example.com"
               />
             </div>
@@ -87,7 +87,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 bg-white border border-gray-200 rounded resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
                 placeholder="Let us know how we can help..."
               />
             </div>
@@ -95,7 +95,7 @@ const ContactForm = () => {
   
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 transition-colors text-gray-900 py-3 rounded font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full bg-amber-800 hover:bg-amber-900 transition-colors text-gray-900 py-3 rounded font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-amber-700"
             >
               Send Message
             </button>

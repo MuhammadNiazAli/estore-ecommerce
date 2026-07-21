@@ -324,7 +324,7 @@ const PhoneList = () => {
                 >
                   {phone.name}
                 </h3>
-                <p className="text-blue-600 font-bold text-base mt-1">${phone.price.toFixed(2)}</p>
+                <p className="text-amber-800 font-bold text-base mt-1">${phone.price.toFixed(2)}</p>
                 <div className="flex items-center gap-2 mt-2">
                   <StarRating rating={phone.rating} />
                   <span className="text-gray-500 text-sm">
@@ -366,7 +366,7 @@ const PhoneList = () => {
         <div className="flex justify-center mt-12">
           <button
             onClick={handleSeeMore}
-            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-gray-900 rounded-full font-semibold text-base hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400"
+            className="px-8 py-3 bg-gradient-to-r from-amber-800 to-amber-800 text-gray-900 rounded-full font-semibold text-base hover:from-amber-700 hover:to-amber-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600"
             type="button"
             aria-label="Load more phones"
           >

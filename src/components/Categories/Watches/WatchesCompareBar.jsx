@@ -627,7 +627,7 @@ const WatchesCompareBar = () => {
                     ))}
                   </ul>
 
-                  <button className="w-full bg-white text-gray-900 py-2 rounded hover:bg-gray-50 text-xs">
+                  <button className="w-full bg-white text-gray-900 py-2 rounded hover:bg-gray-500 text-xs">
                     View Details
                   </button>
                 </div>

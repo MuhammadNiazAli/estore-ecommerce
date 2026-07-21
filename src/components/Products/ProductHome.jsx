@@ -190,7 +190,7 @@ const ProductHome = () => {
                   className={`px-4 py-1 border-2 rounded-md font-medium ${
                     selectedSize === size
                       ? "bg-amber-700 text-black border-amber-600"
-                      : "border-gray-200 text-gray-900 hover:bg-gray-50"
+                      : "border-gray-200 text-gray-900 hover:bg-gray-500"
                   }`}
                   onClick={() => setSelectedSize(size)}
                 >

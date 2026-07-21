@@ -19,7 +19,7 @@ const GamingCategoryInfo = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {/* Feature 1 */}
-          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-50 transition">
+          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-500 transition">
             <div className="text-amber-600 text-3xl">
               <FaGamepad />
             </div>
@@ -34,7 +34,7 @@ const GamingCategoryInfo = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-50 transition">
+          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-500 transition">
             <div className="text-amber-600 text-3xl">
               <FaCrown />
             </div>
@@ -49,7 +49,7 @@ const GamingCategoryInfo = () => {
           </div>
 
           {/* Feature 3 */}
-          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-50 transition">
+          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-500 transition">
             <div className="text-amber-600 text-3xl">
               <FaTrophy />
             </div>
@@ -64,7 +64,7 @@ const GamingCategoryInfo = () => {
           </div>
 
           {/* Feature 4 */}
-          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-50 transition">
+          <div className="flex items-start gap-4 bg-white rounded-xl p-4 hover:bg-gray-500 transition">
             <div className="text-amber-600 text-3xl">
               <FaUsers />
             </div>

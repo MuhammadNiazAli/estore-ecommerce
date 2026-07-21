@@ -97,7 +97,7 @@ const BestsellerParallaxHero = () => {
       </p>
       <a
         href={product.shopLink}
-        className="bg-white text-amber-600 font-semibold py-2 px-5 rounded-md shadow-lg hover:bg-gray-50 transition"
+        className="bg-white text-amber-600 font-semibold py-2 px-5 rounded-md shadow-lg hover:bg-gray-500 transition"
         aria-label="Shop mobile bestseller"
       >
         Shop Mobile Deals

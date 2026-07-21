@@ -85,7 +85,7 @@ const ToysFaq = () => {
           >
             <button
               onClick={() => toggleFaq(id)}
-              className={`w-full text-left px-5 py-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center ${
+              className={`w-full text-left px-5 py-4 bg-white hover:bg-gray-500 focus:outline-none flex justify-between items-center ${
                 activeId === id ? "font-semibold text-amber-600" : "font-medium"
               }`}
               aria-expanded={activeId === id}

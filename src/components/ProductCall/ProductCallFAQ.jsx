@@ -48,7 +48,7 @@ const ProductCallFAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-amber-500 hover:bg-gray-50 transition-colors"
+                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-amber-500 hover:bg-gray-500 transition-colors"
               >
                 <span className="text-base sm:text-lg font-medium">{faq.question}</span>
                 {openIndex === index ? (

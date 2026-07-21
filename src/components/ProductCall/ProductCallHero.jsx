@@ -236,7 +236,7 @@ const ProductCallHero = () => {
           {visibleProducts.length < allProducts.length && (
             <button
               onClick={loadMoreProducts}
-              className="mt-8 px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-200 w-full max-w-xs sm:w-auto"
+              className="mt-8 px-6 py-3 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-500 transition-all duration-200 w-full max-w-xs sm:w-auto"
             >
               Show More
             </button>

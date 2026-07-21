@@ -125,7 +125,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
                     focus:outline-none focus:ring-4 focus:ring-amber-400
                     ${isActive
                       ? 'text-gray-900 bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg'
-                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'}
+                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-500'}
                   `}
                 >
                   <AnimatePresence>

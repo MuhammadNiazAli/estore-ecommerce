@@ -252,7 +252,7 @@ const ShopCategoryNav = () => {
                     ${
                       isActive
                         ? 'border-amber-400 text-amber-400 bg-white shadow-[0_0_8px_rgba(251,191,36,0.7)]'
-                        : 'border-gray-200 text-gray-700 hover:border-amber-400 hover:text-amber-400 hover:bg-gray-50'
+                        : 'border-gray-200 text-gray-700 hover:border-amber-400 hover:text-amber-400 hover:bg-gray-500'
                     }`}
                 >
                   <span className={`w-5 h-5 ${isActive ? 'text-amber-400' : 'text-gray-600'}`}>

@@ -568,7 +568,7 @@ const CareersHero = () => {
                             <button
                               type="button"
                               onClick={handleBackToList}
-                              className="inline-flex items-center gap-1 px-4 py-2 rounded-md bg-white hover:bg-gray-50 transition text-amber-600 font-semibold"
+                              className="inline-flex items-center gap-1 px-4 py-2 rounded-md bg-white hover:bg-gray-500 transition text-amber-600 font-semibold"
                             >
                               ← Back to roles
                             </button>

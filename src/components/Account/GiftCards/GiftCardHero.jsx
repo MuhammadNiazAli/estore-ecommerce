@@ -60,7 +60,7 @@ const GiftCardHero = () => {
             <button
               type="button"
               className="px-7 py-2.5 border border-gray-200 text-gray-900 font-semibold rounded-full 
-                hover:bg-gray-100 hover:text-amber-950 transition-all duration-300 outline-none"
+                hover:bg-gray-500 hover:text-amber-950 transition-all duration-300 outline-none"
               aria-label="Learn more about gift cards"
             >
               Learn More

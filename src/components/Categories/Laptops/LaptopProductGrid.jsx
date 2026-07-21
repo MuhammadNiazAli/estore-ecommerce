@@ -74,7 +74,7 @@ const LaptopProductGrid = ({ laptopsData = laptops }) => {
               loading="lazy"
             />
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{name}</h3>
-            <p className="text-blue-400 font-bold text-xl mb-1">${price}</p>
+            <p className="text-amber-600 font-bold text-xl mb-1">${price}</p>
             <div className="flex items-center space-x-1 mb-4">
               <span className="text-amber-600 font-semibold">{rating.toFixed(1)}</span>
               <svg
@@ -88,7 +88,7 @@ const LaptopProductGrid = ({ laptopsData = laptops }) => {
             </div>
             <Link
               href={`/laptop/${id}`}
-              className="mt-auto bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold px-6 py-2 rounded-md transition inline-block w-full text-center"
+              className="mt-auto bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold px-6 py-2 rounded-md transition inline-block w-full text-center"
             >
               Add to Cart
             </Link>

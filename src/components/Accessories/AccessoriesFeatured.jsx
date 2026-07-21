@@ -1022,7 +1022,7 @@ const AccessoriesFeatured = () => {
             aria-label="Scroll left"
             onClick={handleScrollLeft}
             disabled={currentIndex === 0}
-            className={`absolute top-1/2 -left-6 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition
+            className={`absolute top-1/2 -left-6 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-gray-500 transition
               ${currentIndex === 0 ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
             `}
           >
@@ -1046,7 +1046,7 @@ const AccessoriesFeatured = () => {
             aria-label="Scroll right"
             onClick={handleScrollRight}
             disabled={currentIndex === maxIndex}
-            className={`absolute top-1/2 -right-6 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition
+            className={`absolute top-1/2 -right-6 transform -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-gray-500 transition
               ${currentIndex === maxIndex ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
             `}
           >

@@ -42,7 +42,7 @@ const StickyDealCart = () => {
         </div>
 
         <button
-          className="mt-1 bg-blue-600 hover:bg-blue-700 transition-colors rounded py-1 text-xs font-semibold"
+          className="mt-1 bg-amber-800 hover:bg-amber-900 transition-colors rounded py-1 text-xs font-semibold"
           onClick={(e) => {
             e.stopPropagation();
             setIsPopupVisible(true);
@@ -98,7 +98,7 @@ const StickyDealCart = () => {
 
             <Link
               href="/cart"
-              className="mt-4 block w-full text-center bg-blue-600 hover:bg-blue-700 text-gray-900 rounded py-2 text-sm font-semibold transition-colors"
+              className="mt-4 block w-full text-center bg-amber-800 hover:bg-amber-900 text-gray-900 rounded py-2 text-sm font-semibold transition-colors"
               onClick={() => setIsPopupVisible(false)}
             >
               Go to Cart

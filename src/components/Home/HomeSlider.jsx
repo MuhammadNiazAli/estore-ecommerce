@@ -124,7 +124,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
         <button
           type="button"
           aria-label="More product information"
-          className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-blue-500/65 text-blue-300 transition-colors"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-amber-700/65 text-amber-500 transition-colors"
         >
           <FiInfo className="w-5 h-5" />
         </button>

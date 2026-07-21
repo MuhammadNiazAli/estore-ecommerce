@@ -14,7 +14,7 @@ const certifications = [
     id: 2,
     title: 'Global Compact',
     description: 'UN-backed Sustainability Commitment',
-    icon: <Globe className="w-8 h-8 text-blue-400" />,
+    icon: <Globe className="w-8 h-8 text-amber-600" />,
   },
   {
     id: 3,

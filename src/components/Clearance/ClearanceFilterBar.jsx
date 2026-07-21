@@ -129,13 +129,13 @@ export default function ClearanceFilterBar() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setViewMode("grid")}
-              className={`p-2 rounded-md ${viewMode === "grid" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-50"}`}
+              className={`p-2 rounded-md ${viewMode === "grid" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-500"}`}
             >
               <Grid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode("list")}
-              className={`p-2 rounded-md ${viewMode === "list" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-50"}`}
+              className={`p-2 rounded-md ${viewMode === "list" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-500"}`}
             >
               <List className="w-4 h-4" />
             </button>

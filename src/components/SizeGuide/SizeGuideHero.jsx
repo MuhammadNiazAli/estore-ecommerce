@@ -51,7 +51,7 @@ const SizeGuideHero = () => {
                 ${
                   activeTab === tab
                     ? "bg-amber-600 text-gray-900 shadow-lg"
-                    : "bg-white text-gray-600 hover:text-amber-600 hover:bg-gray-50"
+                    : "bg-white text-gray-600 hover:text-amber-600 hover:bg-gray-500"
                 }
               `}
               aria-pressed={activeTab === tab}

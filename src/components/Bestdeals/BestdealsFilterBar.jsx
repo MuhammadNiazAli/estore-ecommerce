@@ -43,7 +43,7 @@ const BestdealsFilterBar = () => {
             className={`p-2 rounded-lg transition ${
               viewMode === 'grid'
                 ? 'bg-amber-600 text-gray-900'
-                : 'bg-white hover:bg-gray-50'
+                : 'bg-white hover:bg-gray-500'
             }`}
           >
             <Grid className="w-5 h-5" />
@@ -53,7 +53,7 @@ const BestdealsFilterBar = () => {
             className={`p-2 rounded-lg transition ${
               viewMode === 'list'
                 ? 'bg-amber-600 text-gray-900'
-                : 'bg-white hover:bg-gray-50'
+                : 'bg-white hover:bg-gray-500'
             }`}
           >
             <List className="w-5 h-5" />

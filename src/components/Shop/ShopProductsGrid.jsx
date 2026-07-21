@@ -212,7 +212,7 @@ const ShopProductsGrid = () => {
                   className={`p-1.5 rounded-full transition-all focus:outline-none focus:ring-2 flex items-center justify-center text-xs sm:text-sm ${
                     favorites.includes(product.id)
                       ? 'bg-red-600 text-gray-900 shadow-md hover:bg-red-700'
-                      : 'bg-white hover:bg-gray-50 text-amber-400'
+                      : 'bg-white hover:bg-gray-500 text-amber-400'
                   }`}
                 >
                   <FiHeart className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -222,7 +222,7 @@ const ShopProductsGrid = () => {
                 <button
                   onClick={() => router.push(`/product`)}
                   aria-label={`View details for ${product.title}`}
-                  className="p-1.5 bg-white rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-400 transition flex items-center justify-center text-xs sm:text-sm text-amber-400 hover:text-gray-900"
+                  className="p-1.5 bg-white rounded-full hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition flex items-center justify-center text-xs sm:text-sm text-amber-400 hover:text-gray-900"
                 >
                   <FiEye className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>

@@ -174,7 +174,7 @@ const AccountSecurity = () => {
             {dummyLoginActivity.map(({ id, device, location, date }) => (
               <tr
                 key={id}
-                className="border-b border-gray-200 hover:bg-gray-50 transition-colors cursor-default"
+                className="border-b border-gray-200 hover:bg-gray-500 transition-colors cursor-default"
               >
                 <td className="py-3 px-6 whitespace-nowrap font-semibold">{device}</td>
                 <td className="py-3 px-6 whitespace-nowrap">{location}</td>

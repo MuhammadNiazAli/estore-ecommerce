@@ -60,7 +60,7 @@ const BestdealsTopBrands = () => {
                 bg-white rounded-xl p-3
                 w-full sm:w-28 sm:h-28 h-24
                 flex items-center justify-center
-                hover:scale-100 hover:bg-gray-50 transition-transform duration-300 shadow-md
+                hover:scale-100 hover:bg-gray-500 transition-transform duration-300 shadow-md
               "
               style={{ boxSizing: 'border-box' }}
             >

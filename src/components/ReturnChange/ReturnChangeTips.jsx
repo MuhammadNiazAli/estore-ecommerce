@@ -47,7 +47,7 @@ const ReturnChangeTips = () => {
           {tips.map(({ icon, title, description }, idx) => (
             <article
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-50 transition cursor-default focus:outline-amber-600 focus:outline-2 focus:outline-offset-2"
+              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-default focus:outline-amber-600 focus:outline-2 focus:outline-offset-2"
               tabIndex={0}
               aria-label={title}
             >

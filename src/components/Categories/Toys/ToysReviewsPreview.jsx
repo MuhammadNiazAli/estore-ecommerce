@@ -48,7 +48,7 @@ const ToysReviewsPreview = () => {
             <button className="bg-amber-700 text-black px-4 py-2 rounded-full font-semibold hover:bg-amber-600 transition text-sm">
               Write a Review
             </button>
-            <button className="bg-white px-4 py-2 rounded-full hover:bg-gray-50 transition text-sm">
+            <button className="bg-white px-4 py-2 rounded-full hover:bg-gray-500 transition text-sm">
               See All Reviews
             </button>
           </div>

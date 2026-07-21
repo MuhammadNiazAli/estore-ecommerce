@@ -77,7 +77,7 @@ const LaptopAccessoriesSection = () => {
                     )}
                   </button>
                   <Link href={`/product/${id}`}>
-                    <button className="p-2 rounded-full bg-white hover:bg-blue-600">
+                    <button className="p-2 rounded-full bg-white hover:bg-amber-800">
                       <EyeIcon className="h-5 w-5 text-gray-900" />
                     </button>
                   </Link>
@@ -91,7 +91,7 @@ const LaptopAccessoriesSection = () => {
                 <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
                 <p className="text-gray-600 text-sm mt-1">{description}</p>
                 <Link href="/cart">
-                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-gray-900 rounded-lg hover:bg-blue-700 transition">
+                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-amber-800 text-gray-900 rounded-lg hover:bg-amber-900 transition">
                     <ShoppingCartIcon className="h-5 w-5" />
                     Add to Cart
                   </button>

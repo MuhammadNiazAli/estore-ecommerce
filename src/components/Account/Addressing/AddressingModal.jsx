@@ -192,7 +192,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 border border-gray-400 rounded hover:bg-gray-100 transition"
+            className="px-4 py-2 border border-gray-400 rounded hover:bg-gray-500 transition"
           >
             Cancel
           </button>

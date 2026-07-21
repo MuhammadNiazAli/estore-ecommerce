@@ -57,7 +57,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
         <button
   type="button"
   onClick={handleReset}
-  className="flex items-center gap-1 text-xs bg-white hover:bg-gray-50 px-2 py-1 rounded-full transition"
+  className="flex items-center gap-1 text-xs bg-white hover:bg-gray-500 px-2 py-1 rounded-full transition"
 >
   <XCircle className="w-3 h-3" />
   Reset All
@@ -176,7 +176,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
           <button
             type="button"
             onClick={handleReset}
-            className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold shadow hover:bg-gray-50 transition text-sm"
+            className="bg-white text-gray-900 px-8 py-2 rounded-full font-semibold shadow hover:bg-gray-500 transition text-sm"
           >
             Reset Filters
           </button>

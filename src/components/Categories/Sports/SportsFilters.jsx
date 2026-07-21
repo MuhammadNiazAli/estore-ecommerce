@@ -988,7 +988,7 @@ const SportsFilters = () => {
             ) : (
               <button
                 onClick={showLess}
-                className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-50 transition"
+                className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold shadow hover:bg-gray-500 transition"
               >
                 Show Less
               </button>

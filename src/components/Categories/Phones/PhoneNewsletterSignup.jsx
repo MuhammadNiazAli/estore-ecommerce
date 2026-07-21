@@ -103,7 +103,7 @@ const PhoneNewsletterSignup = () => {
               className="
                 bg-white text-amber-600 font-semibold
                 px-5 py-3 rounded-lg shadow-md
-                hover:bg-gray-50 hover:shadow-lg
+                hover:bg-gray-500 hover:shadow-lg
                 transition text-sm xs:text-base
               "
             >

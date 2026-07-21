@@ -45,7 +45,7 @@ const ReturnChangeSteps = () => {
           {steps.map(({ title, description, icon }, idx) => (
             <article
               key={idx}
-              className="flex flex-col items-center bg-white rounded-xl p-6 shadow-md hover:bg-gray-50 transition cursor-default flex-1 max-w-sm mx-auto md:max-w-none"
+              className="flex flex-col items-center bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-default flex-1 max-w-sm mx-auto md:max-w-none"
               aria-label={`${title} step`}
               tabIndex={0}
             >

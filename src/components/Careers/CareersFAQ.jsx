@@ -71,7 +71,7 @@ const CareersFAQ = () => {
             >
               <button
                 onClick={() => toggleIndex(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-amber-500 font-medium hover:bg-gray-50 transition"
+                className="w-full flex justify-between items-center px-6 py-4 text-left text-amber-500 font-medium hover:bg-gray-500 transition"
               >
                 <span>{faq.question}</span>
                 <ChevronDownIcon

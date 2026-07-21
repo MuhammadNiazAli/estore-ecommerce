@@ -53,7 +53,7 @@ const ProductFAQs = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 bg-white text-left text-gray-900 font-semibold text-lg hover:bg-gray-50 transition"
+                className="w-full flex justify-between items-center px-6 py-4 bg-white text-left text-gray-900 font-semibold text-lg hover:bg-gray-500 transition"
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${index}`}
                 id={`faq-question-${index}`}

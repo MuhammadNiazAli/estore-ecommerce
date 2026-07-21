@@ -33,13 +33,13 @@ const LaptopNewsletterSignup = () => {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-grow px-4 py-3 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-grow px-4 py-3 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
           required
           aria-label="Email address"
         />
         <button
           type="submit"
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-semibold rounded-md transition"
+          className="px-6 py-3 bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold rounded-md transition"
         >
           Subscribe
         </button>

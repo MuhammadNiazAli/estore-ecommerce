@@ -85,14 +85,14 @@ const WishlistRecommendations = () => {
                       <Link
                         href={`/compare`}
                         title="Compare"
-                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-50 transition"
+                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-500 transition"
                       >
                         <MdCompareArrows size={18} />
                       </Link>
                       <Link
                         href={`/product`}
                         title="View"
-                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-50 transition"
+                        className="p-2 rounded-full bg-white dark:bg-white text-gray-800 dark:text-gray-900 shadow hover:scale-110 hover:bg-gray-200 dark:hover:bg-gray-500 transition"
                       >
                         <FiEye size={18} />
                       </Link>
@@ -111,14 +111,14 @@ const WishlistRecommendations = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-900 line-clamp-2">
                     {item.title}
                   </h3>
-                  <p className="text-indigo-600 dark:text-indigo-400 font-semibold text-lg mt-2">
+                  <p className="text-amber-800 dark:text-amber-600 font-semibold text-lg mt-2">
                     ${item.price.toFixed(2)}
                   </p>
 
                   <div className="mt-auto flex justify-between gap-3 pt-6">
                     <Link
                       href="/cart"
-                      className="flex-1 px-5 py-2 rounded-full bg-indigo-600 text-gray-900 hover:bg-indigo-700 transition text-sm font-semibold flex items-center justify-center gap-2"
+                      className="flex-1 px-5 py-2 rounded-full bg-amber-800 text-gray-900 hover:bg-amber-900 transition text-sm font-semibold flex items-center justify-center gap-2"
                     >
                       <FiShoppingCart size={18} />
                       Add to Cart
@@ -131,7 +131,7 @@ const WishlistRecommendations = () => {
                         'p-2 rounded-full border transition',
                         isFavorite
                           ? 'bg-red-600 text-gray-900 border-red-600 hover:bg-red-700'
-                          : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-50'
+                          : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-500 dark:hover:bg-gray-500'
                       )}
                     >
                       <FiHeart size={20} />

@@ -3360,7 +3360,7 @@ const ProductReviewsAdvanced = () => {
                     }
                     aria-expanded={replyingTo === review.id}
                     aria-controls={`reply-form-${review.id}`}
-                    className="hover:text-blue-500 transition font-medium"
+                    className="hover:text-amber-700 transition font-medium"
                   >
                     Reply
                   </button>
@@ -3368,7 +3368,7 @@ const ProductReviewsAdvanced = () => {
                   <button
                     onClick={() => shareReview(review)}
                     aria-label="Share review"
-                    className="hover:text-blue-500 transition flex items-center gap-1"
+                    className="hover:text-amber-700 transition flex items-center gap-1"
                   >
                     Share
                     <FaFacebookF />
@@ -3395,7 +3395,7 @@ const ProductReviewsAdvanced = () => {
                         onChange={(e) => setReplyText(e.target.value)}
                         placeholder="Write your reply..."
                         rows={3}
-                        className="w-full rounded-md border border-gray-200 p-2 text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full rounded-md border border-gray-200 p-2 text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-amber-700"
                         required
                       />
                       <div className="mt-2 flex justify-end gap-2">
@@ -3405,13 +3405,13 @@ const ProductReviewsAdvanced = () => {
                             setReplyingTo(null);
                             setReplyText("");
                           }}
-                          className="px-4 py-2 rounded-md border border-gray-500 text-gray-700 hover:bg-gray-50 transition"
+                          className="px-4 py-2 rounded-md border border-gray-500 text-gray-700 hover:bg-gray-500 transition"
                         >
                           Cancel
                         </button>
                         <button
                           type="submit"
-                          className="px-4 py-2 rounded-md bg-blue-600 text-gray-900 hover:bg-blue-700 transition"
+                          className="px-4 py-2 rounded-md bg-amber-800 text-gray-900 hover:bg-amber-900 transition"
                         >
                           Submit
                         </button>
@@ -3473,7 +3473,7 @@ const ProductReviewsAdvanced = () => {
                             <button
                               onClick={() => alert("Share functionality coming soon!")}
                               aria-label="Share reply"
-                              className="hover:text-blue-500 transition flex items-center gap-1 text-sm"
+                              className="hover:text-amber-700 transition flex items-center gap-1 text-sm"
                             >
                               Share <FaFacebookF className="w-3 h-3" />
                             </button>
@@ -3493,7 +3493,7 @@ const ProductReviewsAdvanced = () => {
         <div className="mt-8 flex justify-center">
           <button
             onClick={showMore}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 rounded-md transition"
+            className="px-6 py-2 bg-amber-800 hover:bg-amber-900 text-gray-900 rounded-md transition"
           >
             Show More Reviews
           </button>

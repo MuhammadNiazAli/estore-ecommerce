@@ -113,7 +113,7 @@ const ReturnChangeFAQ = () => {
               >
                 <button
                   onClick={() => toggleIndex(index)}
-                  className="w-full flex justify-between items-center text-left text-amber-500 font-semibold text-lg px-5 py-5 hover:bg-gray-50 transition"
+                  className="w-full flex justify-between items-center text-left text-amber-500 font-semibold text-lg px-5 py-5 hover:bg-gray-500 transition"
                   aria-expanded={isActive}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}

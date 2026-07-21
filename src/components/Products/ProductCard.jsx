@@ -132,7 +132,7 @@ const ProductCard = ({
             <button
               type="button"
               aria-label="Add to wishlist"
-              className="p-3 rounded-lg hover:bg-gray-50 transition-colors duration-300 cursor-pointer shadow-md hover:shadow-lg"
+              className="p-3 rounded-lg hover:bg-gray-500 transition-colors duration-300 cursor-pointer shadow-md hover:shadow-lg"
               onClick={() => alert("Added to wishlist!")}
             >
               <AiOutlineHeart className="text-gray-600 hover:text-red-500 w-7 h-7" />

@@ -7,7 +7,7 @@ import { CheckCircle, XCircle, Info, AlertTriangle } from 'lucide-react';
 const icons = {
   success: <CheckCircle className="text-green-500 w-5 h-5" />,
   error: <XCircle className="text-red-500 w-5 h-5" />,
-  info: <Info className="text-blue-500 w-5 h-5" />,
+  info: <Info className="text-amber-700 w-5 h-5" />,
   warning: <AlertTriangle className="text-amber-700 w-5 h-5" />,
 };
 

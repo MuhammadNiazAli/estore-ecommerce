@@ -93,7 +93,7 @@ const AccountOrders = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="border-b border-gray-200 hover:bg-gray-50 hover:shadow-[0_0_12px_#b45309] transition cursor-pointer"
+                  className="border-b border-gray-200 hover:bg-gray-500 hover:shadow-[0_0_12px_#b45309] transition cursor-pointer"
                 >
                   <td className="py-4 px-6 font-mono text-amber-600 text-sm underline hover:text-amber-500 transition">
                     {id}

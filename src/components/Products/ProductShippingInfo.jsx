@@ -24,7 +24,7 @@ const shippingDetails = [
     href: "/express-delivery",
   },
   {
-    icon: <AiOutlineCar className="w-8 h-8 text-blue-400 group-hover:translate-x-1 transition-transform" />,
+    icon: <AiOutlineCar className="w-8 h-8 text-amber-600 group-hover:translate-x-1 transition-transform" />,
     title: "Order Tracking",
     description: "Track your order live from dispatch to doorstep.",
     linkText: "Track your order",
@@ -45,7 +45,7 @@ const shippingDetails = [
     href: "/return-policy",
   },
   {
-    icon: <AiOutlineCustomerService className="w-8 h-8 text-indigo-400 group-hover:scale-110 transition-transform" />,
+    icon: <AiOutlineCustomerService className="w-8 h-8 text-amber-600 group-hover:scale-110 transition-transform" />,
     title: "24/7 Support",
     description: "We’re always here to help, anytime you need us.",
     linkText: "Contact customer support",
@@ -71,7 +71,7 @@ const ProductShippingInfo = () => {
             <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
             <a
               href={href}
-              className="text-sm text-blue-400 font-medium mt-2 hover:underline"
+              className="text-sm text-amber-600 font-medium mt-2 hover:underline"
             >
               {linkText}
             </a>

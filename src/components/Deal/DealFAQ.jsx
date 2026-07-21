@@ -67,7 +67,7 @@ const DealFAQ = () => {
               <button
                 onClick={() => toggleIndex(index)}
                 className={`w-full text-left px-5 py-4 flex justify-between items-center focus:outline-none text-lg font-medium transition-colors duration-300 ${
-                  isActive ? 'bg-white text-amber-600' : 'hover:bg-gray-50'
+                  isActive ? 'bg-white text-amber-600' : 'hover:bg-gray-500'
                 }`}
                 aria-expanded={isActive}
                 aria-controls={`faq-content-${index}`}

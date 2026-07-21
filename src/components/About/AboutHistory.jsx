@@ -23,7 +23,7 @@ const AboutHistory = () => {
           My Journey
         </h2>
 
-        <div className="relative border-l-4 border-indigo-600 pl-6 sm:pl-10">
+        <div className="relative border-l-4 border-amber-800 pl-6 sm:pl-10">
           {milestones.map(({ age, event }, index) => (
             <motion.div
               key={age}

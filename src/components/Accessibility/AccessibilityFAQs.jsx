@@ -105,7 +105,7 @@ const AccessibilityFAQs = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left text-amber-500 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 hover:bg-gray-50 transition select-none"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left text-amber-500 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 hover:bg-gray-500 transition select-none"
                   aria-controls={`faq-panel-${index}`}
                   aria-expanded={isOpen}
                   type="button"

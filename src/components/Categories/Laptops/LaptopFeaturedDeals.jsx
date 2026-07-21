@@ -113,14 +113,14 @@ const LaptopFeaturedDeals = () => {
       {/* Scroll Arrows */}
       <button
         onClick={() => scroll('left')}
-        className="absolute z-10 top-1/2 -left-4 transform -translate-y-1/2 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition"
+        className="absolute z-10 top-1/2 -left-4 transform -translate-y-1/2 bg-white/80 hover:bg-gray-500 text-gray-900 p-2 rounded-full shadow-md transition"
         aria-label="Scroll Left"
       >
         <ChevronLeftIcon className="w-5 h-5" />
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute z-10 top-1/2 -right-4 transform -translate-y-1/2 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition"
+        className="absolute z-10 top-1/2 -right-4 transform -translate-y-1/2 bg-white/80 hover:bg-gray-500 text-gray-900 p-2 rounded-full shadow-md transition"
         aria-label="Scroll Right"
       >
         <ChevronRightIcon className="w-5 h-5" />
@@ -158,7 +158,7 @@ const LaptopFeaturedDeals = () => {
 
               <Link
                 href={`/laptop/${id}`}
-                className="p-2 rounded-full bg-white hover:bg-blue-600 transition text-gray-900"
+                className="p-2 rounded-full bg-white hover:bg-amber-800 transition text-gray-900"
               >
                 <EyeIcon className="w-5 h-5" />
               </Link>
@@ -176,7 +176,7 @@ const LaptopFeaturedDeals = () => {
                 {name}
               </h3>
               <div className="flex items-center space-x-3 mb-2">
-                <span className="text-blue-500 font-bold text-xl">${price}</span>
+                <span className="text-amber-700 font-bold text-xl">${price}</span>
                 <span className="line-through text-gray-500">${oldPrice}</span>
               </div>
               <div className="flex items-center space-x-1">

@@ -135,7 +135,7 @@ const ShopSortBar = ({ onSortChange }) => {
           <select
             id="sort"
             className="block w-full sm:w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
-              focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer transition duration-200 hover:bg-gray-50"
+              focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer transition duration-200 hover:bg-gray-500"
             value={selected}
             onChange={(e) => {
               const value = e.target.value;
@@ -159,7 +159,7 @@ const ShopSortBar = ({ onSortChange }) => {
               aria-expanded={open}
               className="relative w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
                 focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer text-left
-                hover:bg-gray-50 flex justify-between items-center"
+                hover:bg-gray-500 flex justify-between items-center"
             >
               <span>{selectedLabel}</span>
               <svg

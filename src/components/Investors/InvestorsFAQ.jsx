@@ -60,7 +60,7 @@ const InvestorsFAQ = () => {
                 aria-expanded={isOpen}
                 aria-controls={`faq-desc-${index}`}
                 aria-labelledby={`faq-label-${index}`}
-                className="bg-white rounded-xl px-5 py-4 sm:py-5 cursor-pointer select-none transition-all duration-200 hover:bg-gray-50 focus:outline-none"
+                className="bg-white rounded-xl px-5 py-4 sm:py-5 cursor-pointer select-none transition-all duration-200 hover:bg-gray-500 focus:outline-none"
               >
                 <dt
                   id={`faq-label-${index}`}

@@ -967,7 +967,7 @@ function AppCard({ app }) {
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-gray-900 rounded hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
+            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white text-gray-900 rounded hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-colors"
             aria-label={`Visit ${name} official website`}
           >
             <FiExternalLink className="w-4 h-4" />

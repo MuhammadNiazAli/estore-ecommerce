@@ -56,7 +56,7 @@ const ConfirmModal = ({ onConfirm, onCancel, visible }) => (
           <div className="flex justify-end gap-3 flex-wrap">
             <button
               onClick={onCancel}
-              className="px-4 py-2 rounded-md bg-gray-200 dark:bg-white text-gray-800 dark:text-gray-700 hover:bg-gray-300 dark:hover:bg-gray-50 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-2 rounded-md bg-gray-200 dark:bg-white text-gray-800 dark:text-gray-700 hover:bg-gray-300 dark:hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
             >
               Cancel
             </button>
@@ -126,7 +126,7 @@ const WishlistSummary = ({
           {/* CENTER: Item count bubble (only if items exist) */}
           {totalItems > 0 && (
             <motion.div
-              className="hidden sm:flex items-center justify-center bg-blue-600 dark:bg-blue-700 text-gray-900 font-semibold rounded-full w-12 h-12 select-none"
+              className="hidden sm:flex items-center justify-center bg-amber-800 dark:bg-amber-900 text-gray-900 font-semibold rounded-full w-12 h-12 select-none"
               initial={{ scale: 0.7, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -143,10 +143,10 @@ const WishlistSummary = ({
               onClick={onMoveAllToCart}
               disabled={totalItems === 0 || isProcessing}
               className={twMerge(
-                'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-gray-900 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400 focus-visible:ring-offset-2',
+                'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-gray-900 transition focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-offset-2',
                 totalItems === 0 || isProcessing
-                  ? 'bg-blue-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800'
+                  ? 'bg-amber-600 cursor-not-allowed'
+                  : 'bg-amber-800 hover:bg-amber-900 active:bg-amber-900'
               )}
               aria-label="Move all wishlist items to cart"
             >
@@ -162,7 +162,7 @@ const WishlistSummary = ({
                 'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold border transition focus:outline-none focus-visible:ring-4 focus-visible:ring-red-400 focus-visible:ring-offset-2',
                 totalItems === 0 || isProcessing
                   ? 'border-gray-400 text-gray-600 cursor-not-allowed'
-                  : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-50'
+                  : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-500 dark:hover:bg-gray-500'
               )}
               aria-label="Clear wishlist"
             >

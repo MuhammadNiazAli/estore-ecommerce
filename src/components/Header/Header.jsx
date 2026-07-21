@@ -161,7 +161,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex md:ml-[-10px] items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex md:ml-[-10px] items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-amber-700"
             style={{ position: 'relative', left: 0 }}
           >
             <span className="text-[22px] font-extrabold tracking-tight text-[#B45309] select-text">e</span>
@@ -190,10 +190,10 @@ export default function Header() {
                       onClick={toggleCategoriesMenu}
                       aria-haspopup="true"
                       aria-expanded={isCategoriesOpen}
-                      className={`flex items-center gap-1 transition font-normal px-2 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded text-[12px] ${
+                      className={`flex items-center gap-1 transition font-normal px-2 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded text-[12px] ${
                         isCategoriesOpen
-                          ? 'text-indigo-400 underline decoration-indigo-500'
-                          : 'hover:text-indigo-400'
+                          ? 'text-amber-600 underline decoration-amber-700'
+                          : 'hover:text-amber-600'
                       }`}
                     >
                       {icon}
@@ -233,9 +233,9 @@ export default function Header() {
                                   onClick={() => setCategoriesOpen(false)}
                                   role="menuitem"
                                   tabIndex={0}
-                                  className="flex items-center gap-2 w-full text-indigo-300 transition font-normal text-[12px] truncate"
+                                  className="flex items-center gap-2 w-full text-amber-500 transition font-normal text-[12px] truncate"
                                 >
-                                  <motion.span layoutId={`icon-${label}`} className="text-indigo-400">
+                                  <motion.span layoutId={`icon-${label}`} className="text-amber-600">
                                     {icon}
                                   </motion.span>
                                   <motion.span layoutId={`text-${label}`}>{label}</motion.span>
@@ -254,8 +254,8 @@ export default function Header() {
                 <Link
                   key={label}
                   href={href}
-                  className={`relative flex items-center gap-1 px-2 py-2 text-[11px] transition rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 font-normal ${
-                    checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-700 hover:text-gray-700'
+                  className={`relative flex items-center gap-1 px-2 py-2 text-[11px] transition rounded focus:outline-none focus:ring-2 focus:ring-amber-700 font-normal ${
+                    checkActiveLink(href) ? 'text-amber-600' : 'text-gray-700 hover:text-gray-700'
                   }`}
                   aria-current={checkActiveLink(href) ? 'page' : undefined}
                 >
@@ -269,7 +269,7 @@ export default function Header() {
           {/* Mobile menu toggle button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700"
             aria-label={isMobileMenuVisible ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuVisible}
             style={{ marginLeft: 'auto' }}
@@ -314,7 +314,7 @@ export default function Header() {
                       <button
                         type="button"
                         onClick={toggleCategoriesMenu}
-                        className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-900 hover:bg-gray-50 rounded font-semibold text-sm"
+                        className="w-full flex items-center justify-between px-3 py-2 text-left text-gray-900 hover:bg-gray-500 rounded font-semibold text-sm"
                         aria-haspopup="true"
                         aria-expanded={isCategoriesOpen}
                       >
@@ -342,7 +342,7 @@ export default function Header() {
                                     setMobileMenuVisible(false);
                                     setCategoriesOpen(false);
                                   }}
-                                  className="flex items-center gap-2 px-3 py-1 text-indigo-300 hover:text-indigo-400 rounded font-normal text-sm"
+                                  className="flex items-center gap-2 px-3 py-1 text-amber-500 hover:text-amber-600 rounded font-normal text-sm"
                                   role="menuitem"
                                   tabIndex={0}
                                 >
@@ -364,8 +364,8 @@ export default function Header() {
                       href={href}
                       onClick={() => setMobileMenuVisible(false)}
                       className={`flex items-center gap-2 px-3 py-2 rounded font-normal text-sm ${
-                        checkActiveLink(href) ? 'text-indigo-400' : 'text-gray-700 hover:text-gray-700'
-                      } hover:bg-gray-50`}
+                        checkActiveLink(href) ? 'text-amber-600' : 'text-gray-700 hover:text-gray-700'
+                      } hover:bg-gray-500`}
                       aria-current={checkActiveLink(href) ? 'page' : undefined}
                     >
                       {icon}

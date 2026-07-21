@@ -214,7 +214,7 @@ const ProductList = () => {
         {allProducts.slice(0, visibleCount).map(({ id, title, price, originalPrice, rating, image }) => (
           <li
             key={id}
-            className="flex items-center space-x-6 py-4 hover:bg-gray-50 rounded-md transition-colors cursor-pointer"
+            className="flex items-center space-x-6 py-4 hover:bg-gray-500 rounded-md transition-colors cursor-pointer"
           >
             <img
               src={image}

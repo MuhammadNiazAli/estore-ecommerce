@@ -127,7 +127,7 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
               {['Facebook', 'Twitter', 'Copy Link'].map((platform) => (
                 <li key={platform}>
                   <button
-                    className="block px-4 py-2 hover:bg-gray-50 w-full text-left text-gray-900"
+                    className="block px-4 py-2 hover:bg-gray-500 w-full text-left text-gray-900"
                     onClick={() => alert(`Shared on ${platform}`)}
                   >
                     {platform}
@@ -279,7 +279,7 @@ export default function ReviewsSystem() {
                 className={`px-5 py-2 rounded-full font-semibold text-sm transition-all ${
                   filter === f
                     ? 'bg-amber-500 text-gray-900 shadow'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-amber-400'
+                    : 'bg-white text-gray-600 hover:bg-gray-500 hover:text-amber-400'
                 }`}
               >
                 {f === 'All' ? 'All Ratings' : `${f} Stars`} ({count})

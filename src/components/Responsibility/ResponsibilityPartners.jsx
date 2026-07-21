@@ -86,7 +86,7 @@ const ResponsibilityPartners = () => {
           disabled={!canScrollLeft}
           className={`hidden sm:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-gray-900 rounded-full p-2 z-20 transition
             focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
-            ${!canScrollLeft ? 'opacity-40 cursor-not-allowed hover:bg-gray-50 hover:text-gray-600' : ''}`}
+            ${!canScrollLeft ? 'opacity-40 cursor-not-allowed hover:bg-gray-500 hover:text-gray-600' : ''}`}
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
@@ -134,7 +134,7 @@ const ResponsibilityPartners = () => {
           disabled={!canScrollRight}
           className={`hidden sm:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-gray-900 rounded-full p-2 z-20 transition
             focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
-            ${!canScrollRight ? 'opacity-40 cursor-not-allowed hover:bg-gray-50 hover:text-gray-600' : ''}`}
+            ${!canScrollRight ? 'opacity-40 cursor-not-allowed hover:bg-gray-500 hover:text-gray-600' : ''}`}
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>

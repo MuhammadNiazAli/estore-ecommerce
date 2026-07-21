@@ -80,7 +80,7 @@ const ProfileOrders = () => {
             <button
               key={order.id}
               onClick={() => openDrawer(order)}
-              className="w-full text-left bg-white hover:bg-gray-50 transition rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between shadow-md group"
+              className="w-full text-left bg-white hover:bg-gray-500 transition rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between shadow-md group"
             >
               <div className="mb-3 sm:mb-0">
                 <p className="text-gray-900 font-semibold text-lg">{order.id}</p>
@@ -154,7 +154,7 @@ const ProfileOrders = () => {
                 <button className="px-4 py-2 bg-amber-600 text-black rounded hover:bg-amber-500 text-sm font-semibold transition">
                   Track Order
                 </button>
-                <button className="px-4 py-2 bg-white border border-gray-200 text-gray-900 rounded hover:bg-gray-50 text-sm font-semibold transition">
+                <button className="px-4 py-2 bg-white border border-gray-200 text-gray-900 rounded hover:bg-gray-500 text-sm font-semibold transition">
                   Download Invoice
                 </button>
               </div>

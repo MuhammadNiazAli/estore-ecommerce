@@ -162,7 +162,7 @@ const DashboardOverview = () => {
                 aria-expanded={dropdownOpen}
                 aria-labelledby="period-label"
                 id="period-button"
-                className="flex items-center gap-1 bg-white text-amber-600 px-3 py-1.5 rounded-md cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none"
+                className="flex items-center gap-1 bg-white text-amber-600 px-3 py-1.5 rounded-md cursor-pointer hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none"
               >
                 <span id="period-label">{selectedPeriod}</span>
                 <ChevronDown className="w-4 h-4" aria-hidden="true" />

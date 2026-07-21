@@ -47,7 +47,7 @@ const LaptopFaq = () => {
           >
             <button
               onClick={() => toggle(id)}
-              className="w-full text-left px-6 py-4 flex justify-between items-center bg-white hover:bg-gray-50 transition focus:outline-none"
+              className="w-full text-left px-6 py-4 flex justify-between items-center bg-white hover:bg-gray-500 transition focus:outline-none"
               aria-expanded={openId === id}
               aria-controls={`faq-${id}`}
             >

@@ -58,7 +58,7 @@ export default function FooterLatter() {
           )}
         </section>
 
-        <section className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 text-center text-indigo-300">
+        <section className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 text-center text-amber-500">
           <div className="space-y-3">
             <FiStar className="mx-auto text-amber-700" size={40} />
             <p className="text-gray-900 font-bold text-xl sm:text-2xl">Rated 4.8/5</p>

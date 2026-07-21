@@ -58,7 +58,7 @@ const PrivacyFAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-5 py-4 text-left text-amber-500 hover:bg-gray-50 transition-colors"
+                className="w-full flex justify-between items-center px-5 py-4 text-left text-amber-500 hover:bg-gray-500 transition-colors"
               >
                 <span className="font-medium text-base sm:text-lg leading-snug">
                   {faq.question}

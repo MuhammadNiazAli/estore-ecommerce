@@ -129,7 +129,7 @@ const ProfileSubscription = () => {
             <button
               onClick={handleCancel}
               disabled={loading || subscription.status === 'Expired'}
-              className="px-5 py-2.5 rounded-full bg-white hover:bg-gray-50 text-amber-600 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-5 py-2.5 rounded-full bg-white hover:bg-gray-500 text-amber-600 font-semibold shadow-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Cancel subscription"
             >
               {loading && subscription.status !== 'Pending' ? (

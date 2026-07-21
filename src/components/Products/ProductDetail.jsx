@@ -256,7 +256,7 @@ const ProductDetail = ({ product }) => {
               <button
                 type="button"
                 aria-label="Add to wishlist"
-                className="p-2 rounded-md hover:bg-gray-50 transition-colors duration-300 cursor-pointer shadow-sm hover:shadow-md"
+                className="p-2 rounded-md hover:bg-gray-500 transition-colors duration-300 cursor-pointer shadow-sm hover:shadow-md"
                 onClick={() => alert(`Added ${product.title} to wishlist!`)}
               >
                 <AiOutlineHeart className="text-gray-600 hover:text-red-500 w-5 h-5" />

@@ -188,7 +188,7 @@ const MediaKit = () => {
               {selectedItem.formats.map((format, idx) => (
                 <li
                   key={idx}
-                  className="flex justify-between items-center bg-white px-4 py-2 rounded-lg hover:bg-gray-50"
+                  className="flex justify-between items-center bg-white px-4 py-2 rounded-lg hover:bg-gray-500"
                 >
                   <div>
                     <p className="text-amber-500 font-semibold">{format.label}</p>
@@ -207,7 +207,7 @@ const MediaKit = () => {
 
             <button
               onClick={closeModal}
-              className="mt-6 w-full py-2 rounded-md bg-white hover:bg-gray-50 text-amber-500 font-semibold transition"
+              className="mt-6 w-full py-2 rounded-md bg-white hover:bg-gray-500 text-amber-500 font-semibold transition"
             >
               Close
             </button>

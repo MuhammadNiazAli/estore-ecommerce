@@ -43,13 +43,13 @@ const DealComparisonTable = () => {
               relative flex flex-col justify-between rounded-3xl p-8 border-2 transition duration-300
               ${
                 plan.isBest
-                  ? 'bg-gradient-to-br from-indigo-700 via-indigo-800 to-indigo-900 border-indigo-500 text-gray-900 shadow-xl scale-105 z-10'
+                  ? 'bg-gradient-to-br from-amber-900 via-amber-900 to-amber-950 border-amber-700 text-gray-900 shadow-xl scale-105 z-10'
                   : 'bg-white border-gray-200 text-gray-700 hover:shadow-2xl hover:scale-[1.02]'
               }
             `}
           >
             {plan.isBest && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-600 px-4 py-1.5 rounded-full text-sm font-bold shadow-md select-none animate-pulse">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-amber-800 px-4 py-1.5 rounded-full text-sm font-bold shadow-md select-none animate-pulse">
                  Recommended
               </div>
             )}
@@ -79,8 +79,8 @@ const DealComparisonTable = () => {
               className={`mt-10 w-full py-3 rounded-xl text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-offset-2
                 ${
                   plan.isBest
-                    ? 'bg-white text-indigo-800 hover:bg-gray-100 focus:ring-indigo-500 focus:ring-offset-indigo-900'
-                    : 'bg-white text-gray-900 hover:bg-gray-50 focus:ring-gray-400 focus:ring-offset-gray-900'
+                    ? 'bg-white text-amber-900 hover:bg-gray-500 focus:ring-amber-700 focus:ring-offset-amber-950'
+                    : 'bg-white text-gray-900 hover:bg-gray-500 focus:ring-gray-400 focus:ring-offset-gray-900'
                 }
               `}
             >

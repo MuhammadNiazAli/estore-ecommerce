@@ -14,7 +14,7 @@ const benefits = [
     desc: "Guidelines on ideal light conditions for each plant.",
   },
   {
-    icon: <FaTint className="text-blue-400 w-6 h-6" />,
+    icon: <FaTint className="text-amber-600 w-6 h-6" />,
     title: "Watering Tips",
     desc: "Learn how to water your plants perfectly for long-lasting health.",
   },
@@ -56,7 +56,7 @@ const BeautyCategoryInfo = () => {
           {brands.map((brand, i) => (
             <li
               key={i}
-              className="text-amber-700 font-medium text-lg md:text-xl border border-amber-500 rounded-md px-5 py-2 hover:bg-gray-50 transition"
+              className="text-amber-700 font-medium text-lg md:text-xl border border-amber-500 rounded-md px-5 py-2 hover:bg-gray-500 transition"
             >
               {brand}
             </li>

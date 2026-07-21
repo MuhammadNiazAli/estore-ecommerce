@@ -115,7 +115,7 @@ const ManClothesFlashDeals = () => {
                 <button className="bg-white text-gray-700 p-3 rounded-full hover:bg-gray-200 transition shadow-lg">
                   <Heart size={18} />
                 </button>
-                <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-50 transition shadow-lg">
+                <button className="bg-white text-gray-900 p-3 rounded-full hover:bg-gray-500 transition shadow-lg">
                   <Eye size={18} />
                 </button>
               </div>

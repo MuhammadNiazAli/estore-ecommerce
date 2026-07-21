@@ -90,7 +90,7 @@ const KitchenFaq = () => {
               className="bg-white rounded-lg border border-amber-700 overflow-hidden"
             >
               <button
-                className="w-full flex justify-between items-center px-4 py-3 font-semibold text-left text-amber-500 hover:bg-gray-50 transition"
+                className="w-full flex justify-between items-center px-4 py-3 font-semibold text-left text-amber-500 hover:bg-gray-500 transition"
                 onClick={() => toggleFaq(faq.id)}
               >
                 {faq.question}

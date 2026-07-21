@@ -180,7 +180,7 @@ const ReturnChangeHero = () => {
 
         {/* Features grid */}
         <div className="grid md:grid-cols-3 gap-6 text-left text-sm text-gray-700 max-w-[900px] mx-auto">
-          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-50 transition flex flex-col items-start">
+          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
             <Truck className="text-amber-600 mb-3 w-7 h-7" />
             <h3 className="text-amber-500 font-medium mb-1">Fast Pickup</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -188,7 +188,7 @@ const ReturnChangeHero = () => {
             </p>
           </div>
 
-          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-50 transition flex flex-col items-start">
+          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
             <RefreshCcw className="text-amber-600 mb-3 w-7 h-7" />
             <h3 className="text-amber-500 font-medium mb-1">Instant Refunds</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -196,7 +196,7 @@ const ReturnChangeHero = () => {
             </p>
           </div>
 
-          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-50 transition flex flex-col items-start">
+          <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
             <ShieldCheck className="text-amber-600 mb-3 w-7 h-7" />
             <h3 className="text-amber-500 font-medium mb-1">Secure Process</h3>
             <p className="text-gray-700 leading-relaxed">

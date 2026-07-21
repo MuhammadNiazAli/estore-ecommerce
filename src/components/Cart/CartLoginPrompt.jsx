@@ -7,7 +7,7 @@ import { FaFacebookF, FaApple, FaUserCircle, FaSpinner, FaTimes } from 'react-ic
 
 const loginProviders = [
   { id: 'google', name: 'Google', icon: <FcGoogle className="w-6 h-6" /> },
-  { id: 'facebook', name: 'Facebook', icon: <FaFacebookF className="w-6 h-6 text-blue-600" /> },
+  { id: 'facebook', name: 'Facebook', icon: <FaFacebookF className="w-6 h-6 text-amber-800" /> },
   { id: 'apple', name: 'Apple', icon: <FaApple className="w-6 h-6" /> },
 ];
 
@@ -162,7 +162,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
                     type="button"
                     disabled={loadingProvider !== null}
                     aria-busy={loadingProvider === id}
-                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-white hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50"
+                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50"
                   >
                     {loadingProvider === id ? (
                       <Spinner />

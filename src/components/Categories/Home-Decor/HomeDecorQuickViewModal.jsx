@@ -346,7 +346,7 @@ const HomeDecorQuickViewModalPage = () => {
       {/* Trigger */}
       <button
         onClick={() => openQuickView(products[0])}
-        className="bg-white text-gray-900 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 transition text-lg"
+        className="bg-white text-gray-900 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-500 transition text-lg"
       >
         Quick View Fitness
       </button>
@@ -422,18 +422,18 @@ const HomeDecorQuickViewModalPage = () => {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex items-center justify-center gap-2 bg-white text-gray-900 py-3 px-6 rounded-lg hover:bg-gray-50 transition w-full sm:w-auto">
+                  <button className="flex items-center justify-center gap-2 bg-white text-gray-900 py-3 px-6 rounded-lg hover:bg-gray-500 transition w-full sm:w-auto">
                     <ShoppingCartIcon className="h-5 w-5" />
                     Add to Cart
                   </button>
                   <div className="flex items-center gap-2">
-                    <button className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-100 transition">
+                    <button className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-500 transition">
                       <HeartIcon className="h-5 w-5" />
                       Wishlist
                     </button>
                     <button
                       onClick={() => setIsRelatedOpen(true)}
-                      className="bg-white text-gray-900 rounded-lg p-3 hover:bg-gray-50 transition"
+                      className="bg-white text-gray-900 rounded-lg p-3 hover:bg-gray-500 transition"
                       title="View related products"
                     >
                       <ArrowRightIcon className="h-5 w-5" />
@@ -499,7 +499,7 @@ const HomeDecorQuickViewModalPage = () => {
                           openQuickView(item);
                           setIsRelatedOpen(false);
                         }}
-                        className="w-full mt-3 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-50 transition"
+                        className="w-full mt-3 bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-500 transition"
                       >
                         View
                       </button>

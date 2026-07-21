@@ -136,7 +136,7 @@ export default function ShopByCategory() {
           ${
             isSelected
               ? 'bg-amber-600 text-black border-amber-600 shadow-lg'
-              : 'border-gray-200 text-gray-900 hover:bg-gray-100 hover:text-black hover:shadow-md'
+              : 'border-gray-200 text-gray-900 hover:bg-gray-500 hover:text-black hover:shadow-md'
           }
         `}
       >
@@ -251,7 +251,7 @@ export default function ShopByCategory() {
                     <FiMessageCircle className="text-lg" />
                     <button
                       onClick={() => setCurrentProduct(product)}
-                      className="hover:underline text-blue-600"
+                      className="hover:underline text-amber-800"
                       aria-haspopup="dialog"
                       aria-controls="review-dialog"
                       aria-expanded={currentProduct?.id === product.id}

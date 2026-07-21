@@ -136,7 +136,7 @@ const SportsBrandsCarousel = () => {
           {/* Left Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-amber-600 p-3 rounded-full shadow-lg z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-amber-600 p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Left"
           >
             <FaChevronLeft size={20} />
@@ -159,7 +159,7 @@ const SportsBrandsCarousel = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
-                className="flex-shrink-0 w-40 h-24 bg-white rounded-xl flex items-center justify-center hover:bg-gray-50 transition"
+                className="flex-shrink-0 w-40 h-24 bg-white rounded-xl flex items-center justify-center hover:bg-gray-500 transition"
               >
                 <img
                   src={brand.logo}
@@ -173,7 +173,7 @@ const SportsBrandsCarousel = () => {
           {/* Right Button */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-amber-600 p-3 rounded-full shadow-lg z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-amber-600 p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Right"
           >
             <FaChevronRight size={20} />

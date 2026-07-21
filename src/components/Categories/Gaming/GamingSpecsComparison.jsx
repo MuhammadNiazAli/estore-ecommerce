@@ -71,7 +71,7 @@ const GamingSpecsComparison = () => {
                   key={rowIndex}
                   className={`${
                     rowIndex % 2 === 0 ? "bg-white" : "bg-white"
-                  } hover:bg-gray-50 transition`}
+                  } hover:bg-gray-500 transition`}
                 >
                   <td className="p-3 font-medium text-amber-600">{specKey}</td>
                   {specsData.map((product, colIndex) => (

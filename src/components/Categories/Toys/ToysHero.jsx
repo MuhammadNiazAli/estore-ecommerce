@@ -82,7 +82,7 @@ const ToysHero = () => {
             <button className="bg-amber-700 text-gray-900 px-7 py-3 rounded-full font-semibold shadow-md hover:bg-amber-600 transition duration-300 ease-in-out">
               Shop Now
             </button>
-            <button className="border border-gray-200 px-7 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 hover:text-black transition duration-300 ease-in-out">
+            <button className="border border-gray-200 px-7 py-3 rounded-full font-semibold shadow-md hover:bg-gray-500 hover:text-black transition duration-300 ease-in-out">
               View Details
             </button>
           </div>

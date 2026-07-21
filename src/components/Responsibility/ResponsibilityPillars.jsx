@@ -41,7 +41,7 @@ const IconUsers = (props) => (
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 24 24"
-    className="w-12 h-12 text-blue-400"
+    className="w-12 h-12 text-amber-600"
     aria-hidden="true"
   >
     <path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />

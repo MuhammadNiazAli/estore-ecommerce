@@ -94,7 +94,7 @@ const ResponsibilityTestimonials = () => {
           disabled={!canScrollLeft}
           className={`hidden sm:flex absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full p-2 z-10 transition
             bg-white/70 hover:bg-amber-700 hover:text-gray-900
-            ${!canScrollLeft ? 'opacity-30 cursor-not-allowed hover:bg-gray-50 hover:text-amber-600' : ''}`}
+            ${!canScrollLeft ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-amber-600' : ''}`}
           tabIndex={canScrollLeft ? 0 : -1}
           type="button"
         >
@@ -146,7 +146,7 @@ const ResponsibilityTestimonials = () => {
           disabled={!canScrollRight}
           className={`hidden sm:flex absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full p-2 z-10 transition
             bg-white/70 hover:bg-amber-700 hover:text-gray-900
-            ${!canScrollRight ? 'opacity-30 cursor-not-allowed hover:bg-gray-50 hover:text-amber-600' : ''}`}
+            ${!canScrollRight ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-amber-600' : ''}`}
           tabIndex={canScrollRight ? 0 : -1}
           type="button"
         >

@@ -56,7 +56,7 @@ export default function FooterSocial() {
         Follow & Connect With Us
       </h4>
 
-      <p className="text-indigo-300 max-w-xl mx-auto md:mx-0 mb-12 text-center md:text-left text-lg leading-relaxed tracking-wide">
+      <p className="text-amber-500 max-w-xl mx-auto md:mx-0 mb-12 text-center md:text-left text-lg leading-relaxed tracking-wide">
         Stay updated on the latest deals, trends, and offers by following our social channels and e-commerce platforms. We’re everywhere you shop!
       </p>
 
@@ -79,11 +79,11 @@ export default function FooterSocial() {
                 transition
                 transform
                 hover:text-gray-900
-                focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900
+                focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-gray-900
                 group-hover:scale-110
                 group-focus:scale-110
                 shadow-lg
-                hover:shadow-indigo-500/70
+                hover:shadow-amber-700/70
                 cursor-pointer
               "
               style={{ color }}
@@ -96,7 +96,7 @@ export default function FooterSocial() {
               className="
                 pointer-events-none
                 absolute bottom-full mb-3 left-1/2 transform -translate-x-1/2
-                rounded-md bg-indigo-700 text-gray-900 text-xs font-semibold
+                rounded-md bg-amber-900 text-gray-900 text-xs font-semibold
                 px-3 py-1.5
                 opacity-0
                 group-hover:opacity-100 group-focus:opacity-100
@@ -104,7 +104,7 @@ export default function FooterSocial() {
                 whitespace-nowrap
                 select-none
                 z-20
-                before:absolute before:bottom-[-6px] before:left-1/2 before:-translate-x-1/2 before:border-6 before:border-transparent before:border-t-indigo-700
+                before:absolute before:bottom-[-6px] before:left-1/2 before:-translate-x-1/2 before:border-6 before:border-transparent before:border-t-amber-900
               "
             >
               {name}

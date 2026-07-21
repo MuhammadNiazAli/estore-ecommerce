@@ -164,7 +164,7 @@ const ProductDescription = ({
         <button
           type="button"
           className="w-full sm:w-auto bg-white text-gray-700 font-semibold py-3 px-8 rounded-md shadow-md
-            hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
+            hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
           aria-label="Add product to wishlist"
         >
           Add to Wishlist

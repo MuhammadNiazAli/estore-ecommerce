@@ -92,8 +92,8 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   onClick={() => toggleBrand(brand)}
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedBrands.includes(brand)
-                      ? "bg-blue-600 border-blue-600 text-gray-900"
-                      : "border-gray-200 text-gray-700 hover:bg-gray-50"
+                      ? "bg-amber-800 border-amber-800 text-gray-900"
+                      : "border-gray-200 text-gray-700 hover:bg-gray-500"
                   }`}
                 >
                   {brand}
@@ -131,7 +131,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
               step="50"
               value={priceRange[1]}
               onChange={(e) => handlePriceChange(1, e.target.value)}
-              className="w-full mt-2 accent-blue-600"
+              className="w-full mt-2 accent-amber-800"
             />
           </div>
 
@@ -146,7 +146,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedRam.includes(ram)
                       ? "bg-green-600 border-green-600 text-gray-900"
-                      : "border-gray-200 text-gray-700 hover:bg-gray-50"
+                      : "border-gray-200 text-gray-700 hover:bg-gray-500"
                   }`}
                 >
                   {ram}

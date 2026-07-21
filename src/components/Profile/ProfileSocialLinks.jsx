@@ -20,13 +20,13 @@ const initialAccounts = [
     id: 1,
     platform: 'Facebook',
     username: 'niaz.ali',
-    icon: <FaFacebookF className="w-6 h-6 text-blue-600" />,
+    icon: <FaFacebookF className="w-6 h-6 text-amber-800" />,
   },
   {
     id: 2,
     platform: 'Twitter',
     username: '@niazali',
-    icon: <FaTwitter className="w-6 h-6 text-sky-400" />,
+    icon: <FaTwitter className="w-6 h-6 text-amber-600" />,
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const initialAccounts = [
     id: 4,
     platform: 'LinkedIn',
     username: 'niaz-ali',
-    icon: <FaLinkedinIn className="w-6 h-6 text-blue-700" />,
+    icon: <FaLinkedinIn className="w-6 h-6 text-amber-900" />,
   },
 ];
 
@@ -136,7 +136,7 @@ const ProfileSocialLinks = () => {
                       </button>
                       <button
                         onClick={() => setEditingId(null)}
-                        className="p-2 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition"
+                        className="p-2 bg-white text-gray-900 rounded-full hover:bg-gray-500 transition"
                         aria-label="Cancel"
                       >
                         <XMarkIcon className="w-5 h-5" />
@@ -190,7 +190,7 @@ const ProfileSocialLinks = () => {
                 <div className="flex justify-end gap-3">
                   <button
                     onClick={() => setDeletingId(null)}
-                    className="px-4 py-2 rounded-md bg-white hover:bg-gray-50 transition"
+                    className="px-4 py-2 rounded-md bg-white hover:bg-gray-500 transition"
                   >
                     Cancel
                   </button>

@@ -697,7 +697,7 @@ const HomeDecorProductGrid = () => {
                   {item.features.slice(0, 3).map((feature, idx) => (
                     <span
                       key={idx}
-                      className="bg-indigo-100 px-3 py-1 rounded-full"
+                      className="bg-amber-300 px-3 py-1 rounded-full"
                     >
                       {feature}
                     </span>

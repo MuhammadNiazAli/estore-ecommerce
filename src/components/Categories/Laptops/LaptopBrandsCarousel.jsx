@@ -55,14 +55,14 @@ const LaptopBrandsCarousel = () => {
       {/* Scroll Arrows */}
       <button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition my-8"
+        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-500 text-gray-900 p-2 rounded-full shadow-md transition my-8"
         aria-label="Scroll Left"
       >
         <ChevronLeftIcon className="w-5 h-5" />
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-50 text-gray-900 p-2 rounded-full shadow-md transition my-8"
+        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-gray-500 text-gray-900 p-2 rounded-full shadow-md transition my-8"
         aria-label="Scroll Right"
       >
         <ChevronRightIcon className="w-5 h-5" />

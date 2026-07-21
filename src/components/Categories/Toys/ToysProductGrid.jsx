@@ -653,10 +653,10 @@ const ToysProductGrid = () => {
                   <button className="bg-amber-700 text-black px-3 py-2 rounded-full flex-1 font-semibold hover:bg-amber-600 transition text-sm">
                     <FaCartPlus className="inline mr-1" /> Add to Cart
                   </button>
-                  <button className="bg-white p-2 rounded-full hover:bg-gray-50 transition">
+                  <button className="bg-white p-2 rounded-full hover:bg-gray-500 transition">
                     <FaEye />
                   </button>
-                  <button className="bg-white p-2 rounded-full hover:bg-gray-50 transition">
+                  <button className="bg-white p-2 rounded-full hover:bg-gray-500 transition">
                     <FaHeart />
                   </button>
                 </div>

@@ -16,7 +16,7 @@ const NotificationSettingsLink = () => {
       <Link
         href="/account/settings/notifications"
         aria-label="Manage notification settings"
-        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-900 text-sm font-medium rounded-full shadow-sm hover:bg-gray-50 hover:text-amber-600 hover:shadow-amber-700/20 focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 transition-all duration-300 active:scale-95"
+        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-900 text-sm font-medium rounded-full shadow-sm hover:bg-gray-500 hover:text-amber-600 hover:shadow-amber-700/20 focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 transition-all duration-300 active:scale-95"
       >
         <FiSettings className="text-amber-600 text-base" />
         <span>Manage Notification Settings</span>

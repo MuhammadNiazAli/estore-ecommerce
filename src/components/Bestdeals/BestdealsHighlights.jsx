@@ -44,7 +44,7 @@ const BestdealsHighlights = () => {
             aria-labelledby={`highlight-title-${item.id}`}
             className="bg-white rounded-xl p-6 flex flex-col items-center text-center cursor-pointer
                        focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2
-                       hover:scale-[1.06] hover:bg-gray-50 active:scale-[0.98]
+                       hover:scale-[1.06] hover:bg-gray-500 active:scale-[0.98]
                        transition-transform duration-300 shadow-lg select-none"
           >
             <div className="mb-5">{item.icon}</div>
