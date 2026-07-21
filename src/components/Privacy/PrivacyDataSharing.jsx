@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const PrivacyDataSharing = () => {
   return (
     <section
-      className="bg-white text-amber-600 w-full flex justify-center px-4 sm:px-6 lg:px-8"
+      className="bg-white text-black w-full flex justify-center px-4 sm:px-6 lg:px-8"
       style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
       aria-label="Data Sharing Section"
     >
@@ -24,7 +24,7 @@ const PrivacyDataSharing = () => {
 
         {/* Description */}
         <motion.p
-          className="text-amber-500 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2 sm:px-0"
+          className="text-black max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2 sm:px-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -45,10 +45,10 @@ const PrivacyDataSharing = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Users className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Users className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Service Providers</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 We may share data with trusted partners who help us operate the platform—such as payment
                 processors, analytics tools, and customer support platforms.
               </p>
@@ -60,10 +60,10 @@ const PrivacyDataSharing = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Lock className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Lock className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Legal Compliance</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 We may disclose your data when required by law or in response to valid legal processes,
                 such as subpoenas or court orders.
               </p>
@@ -75,10 +75,10 @@ const PrivacyDataSharing = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Building2 className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Building2 className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Business Transfers</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 In the event of a merger, acquisition, or asset sale, your information may be transferred
                 as part of that transaction—only under strict privacy commitments.
               </p>
@@ -90,10 +90,10 @@ const PrivacyDataSharing = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
           >
-            <ExternalLink className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <ExternalLink className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">With Your Consent</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 We will always ask for your permission before sharing your data with third parties
                 for purposes outside the scope of this privacy policy.
               </p>
@@ -103,7 +103,7 @@ const PrivacyDataSharing = () => {
 
         {/* Legal Assurance */}
         <motion.p
-          className="pt-8 text-xs sm:text-sm text-amber-600 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
+          className="pt-8 text-xs sm:text-sm text-black max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}

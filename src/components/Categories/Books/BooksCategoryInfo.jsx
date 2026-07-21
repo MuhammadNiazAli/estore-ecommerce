@@ -9,7 +9,7 @@ const BooksCategoryInfo = () => {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* ✅ Left Section - Info */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Discover the World of Knowledge
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -21,8 +21,8 @@ const BooksCategoryInfo = () => {
 
           {/* ✅ Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
-              <FaBookOpen className="text-amber-600 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-black/30 transition">
+              <FaBookOpen className="text-black text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Wide Selection</h4>
                 <p className="text-sm text-gray-600">
@@ -30,8 +30,8 @@ const BooksCategoryInfo = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
-              <FaStar className="text-amber-600 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-black/30 transition">
+              <FaStar className="text-black text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Top Rated</h4>
                 <p className="text-sm text-gray-600">
@@ -39,8 +39,8 @@ const BooksCategoryInfo = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
-              <FaTruck className="text-amber-600 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-black/30 transition">
+              <FaTruck className="text-black text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Fast Delivery</h4>
                 <p className="text-sm text-gray-600">
@@ -48,8 +48,8 @@ const BooksCategoryInfo = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-amber-700/30 transition">
-              <FaUndo className="text-amber-600 text-3xl" />
+            <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg hover:shadow-black/30 transition">
+              <FaUndo className="text-black text-3xl" />
               <div>
                 <h4 className="font-semibold text-lg">Easy Returns</h4>
                 <p className="text-sm text-gray-600">
@@ -63,7 +63,7 @@ const BooksCategoryInfo = () => {
           <div className="mt-8">
             <a
               href="#books-grid"
-              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition text-lg"
+              className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition text-lg"
             >
               Browse Books
             </a>

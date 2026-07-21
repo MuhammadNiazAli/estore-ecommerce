@@ -12,7 +12,7 @@ const SizeGuideBanner = () => {
         {/* Text */}
         <div className="text-center md:text-left max-w-lg">
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-600 mb-3 select-none leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black mb-3 select-none leading-tight"
           >
             Not sure about your size?
           </h2>
@@ -27,8 +27,8 @@ const SizeGuideBanner = () => {
         <div>
           <a
             href="/size-guide"
-            className="inline-block bg-amber-600 text-gray-900 font-semibold rounded-md px-7 py-3.5 shadow-lg
-              hover:bg-amber-700 transition-colors duration-300 select-none text-base sm:text-lg"
+            className="inline-block bg-black text-gray-900 font-semibold rounded-md px-7 py-3.5 shadow-lg
+              hover:bg-black transition-colors duration-300 select-none text-base sm:text-lg"
             aria-label="Go to Size Guide"
           >
             View Size Guide

@@ -13,10 +13,10 @@ const TravelNewsletterSignup = () => {
   return (
     <section className="bg-white py-12 px-4">
       <div className="max-w-md mx-auto text-center">
-        <h2 className="text-3xl font-bold text-amber-600 mb-2">
+        <h2 className="text-3xl font-bold text-black mb-2">
           Discover Travel Tips & Exclusive Deals
         </h2>
-        <p className="text-amber-500 mb-6">
+        <p className="text-black mb-6">
           Subscribe to our travel newsletter for expert advice, destination guides, and special offers!
         </p>
         <form
@@ -29,13 +29,13 @@ const TravelNewsletterSignup = () => {
             aria-label="Email address"
             required
             placeholder="Enter your email"
-            className="flex-grow px-4 py-3 rounded-md border border-amber-600 bg-white text-amber-300 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-700"
+            className="flex-grow px-4 py-3 rounded-md border border-black bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"
-            className="px-6 py-3 rounded-md bg-amber-700 text-gray-900 font-semibold hover:bg-amber-600 transition"
+            className="px-6 py-3 rounded-md bg-black text-gray-900 font-semibold hover:bg-black transition"
           >
             Subscribe
           </button>

@@ -10,7 +10,7 @@ const AddressingHeader = ({ onBack }) => {
         <button
           onClick={onBack}
           aria-label="Go back"
-          className="p-2 rounded-full hover:bg-amber-600 hover:text-black transition"
+          className="p-2 rounded-full hover:bg-black hover:text-black transition"
           type="button"
         >
           <FiArrowLeft size={24} />

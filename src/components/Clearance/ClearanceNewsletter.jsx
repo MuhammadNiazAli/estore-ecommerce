@@ -26,7 +26,7 @@ const ClearanceNewsletter = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12">
+    <section className="bg-white text-black py-12">
       <div className="max-w-[1000px] mx-auto text-center px-4">
         {/* Heading */}
         <h2 className="text-3xl font-bold mb-3">
@@ -46,11 +46,11 @@ const ClearanceNewsletter = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-             className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-white text-amber-600 placeholder-amber-800 text-lg outline-none border-2 border-transparent focus:border-amber-600 transition"
+             className="w-full sm:flex-1 px-4 py-3 rounded-lg bg-white text-black placeholder-gray-500 text-lg outline-none border-2 border-transparent focus:border-black transition"
           />
           <button
             type="submit"
-            className="bg-amber-700 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-amber-600 transition w-full sm:w-auto"
+            className="bg-black text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-black transition w-full sm:w-auto"
           >
             Subscribe
           </button>
@@ -60,7 +60,7 @@ const ClearanceNewsletter = () => {
         {message.text && (
           <p
             className={`mt-4 text-sm font-medium ${
-              message.type === "error" ? "text-red-500" : "text-green-400"
+              message.type === "error" ? "text-black" : "text-black"
             }`}
           >
             {message.text}

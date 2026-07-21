@@ -155,7 +155,7 @@ const WatchesProductGrid = () => {
   const totalPages = Math.ceil(products.length / itemsPerPage);
 
   return (
-    <div className="w-full px-4 md:px-8 py-6 bg-white text-amber-600">
+    <div className="w-full px-4 md:px-8 py-6 bg-white text-black">
       {/* Controls */}
       <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
         {/* Search */}
@@ -164,14 +164,14 @@ const WatchesProductGrid = () => {
           placeholder="Search watches..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full md:w-72 rounded-lg bg-white text-gray-900 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+          className="w-full md:w-72 rounded-lg bg-white text-gray-900 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
         />
 
         {/* Sort */}
         <select
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="rounded-lg bg-white text-amber-600 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+          className="rounded-lg bg-white text-black px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black"
         >
           <option value="default">Sort By: Default</option>
           <option value="priceLowHigh">Price: Low to High</option>
@@ -209,13 +209,13 @@ const WatchesProductGrid = () => {
 
             <div className={`${viewMode === "list" ? "flex-1" : "p-4 text-center"}`}>
               <h3 className="text-lg font-semibold">{watch.name}</h3>
-              <p className="text-sm text-amber-500">{watch.brand}</p>
+              <p className="text-sm text-black">{watch.brand}</p>
               <div className="flex justify-center md:justify-start mt-2 gap-1">
                 {[...Array(5)].map((_, i) => (
                   <StarIcon
                     key={i}
                     className={`w-4 h-4 ${
-                      i < watch.rating ? "text-amber-600" : "text-gray-500"
+                      i < watch.rating ? "text-black" : "text-gray-500"
                     }`}
                   />
                 ))}
@@ -223,7 +223,7 @@ const WatchesProductGrid = () => {
               <p className="mt-2 text-xl font-bold">${watch.price.toLocaleString()}</p>
               <p
                 className={`text-sm mt-1 ${
-                  watch.stock ? "text-green-400" : "text-red-400"
+                  watch.stock ? "text-black" : "text-black"
                 }`}
               >
                 {watch.stock ? "In Stock" : "Out of Stock"}
@@ -242,8 +242,8 @@ const WatchesProductGrid = () => {
               onClick={() => setCurrentPage(i + 1)}
               className={`px-4 py-2 rounded-lg ${
                 currentPage === i + 1
-                  ? "bg-amber-600 text-gray-900"
-                  : "bg-white text-amber-600"
+                  ? "bg-black text-gray-900"
+                  : "bg-white text-black"
               }`}
             >
               {i + 1}

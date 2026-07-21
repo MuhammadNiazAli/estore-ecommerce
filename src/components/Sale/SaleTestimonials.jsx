@@ -54,7 +54,7 @@ const testimonials = [
 const SaleTestimonials = () => {
   return (
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-12">
-      <h2 className="text-3xl font-semibold text-amber-600 text-center mb-10 tracking-wide">
+      <h2 className="text-3xl font-semibold text-black text-center mb-10 tracking-wide">
         What Our Customers Say
       </h2>
 
@@ -68,18 +68,18 @@ const SaleTestimonials = () => {
               <img
                 src={photo}
                 alt={name}
-                className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-amber-600"
+                className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-black"
               />
               <div>
-                <h3 className="text-amber-500 font-semibold text-lg">{name}</h3>
-                <p className="text-amber-400 text-sm">{role}</p>
+                <h3 className="text-black font-semibold text-lg">{name}</h3>
+                <p className="text-black text-sm">{role}</p>
               </div>
             </div>
 
             <p className="text-gray-700 flex-grow leading-relaxed text-sm">
-              <span className="text-amber-600 text-2xl mr-2 select-none">“</span>
+              <span className="text-black text-2xl mr-2 select-none">“</span>
               {text}
-              <span className="text-amber-600 text-2xl ml-2 select-none">”</span>
+              <span className="text-black text-2xl ml-2 select-none">”</span>
             </p>
           </div>
         ))}

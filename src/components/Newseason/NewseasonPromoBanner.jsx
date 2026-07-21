@@ -15,15 +15,15 @@ const NewseasonPromoBanner = () => {
 
       {/* Content */}
       <div className="relative max-w-[1000px] mx-auto px-6 py-20 text-center z-10">
-        <h2 className="text-amber-600 text-4xl md:text-5xl font-extrabold mb-4">
+        <h2 className="text-black text-4xl md:text-5xl font-extrabold mb-4">
           New Season Exclusive Sale
         </h2>
-        <p className="text-amber-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        <p className="text-black text-lg md:text-xl max-w-2xl mx-auto mb-8">
           Upgrade your wardrobe with premium styles at unbeatable prices. Limited-time offer—don’t miss out!
         </p>
         <button
           type="button"
-          className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-3 px-10 rounded-lg shadow-lg transition-all duration-300"
+          className="bg-black hover:bg-black text-gray-900 font-bold py-3 px-10 rounded-lg shadow-lg transition-all duration-300"
         >
           Shop Now
         </button>

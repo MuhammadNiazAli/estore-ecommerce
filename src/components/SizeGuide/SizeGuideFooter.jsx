@@ -52,11 +52,11 @@ const SizeGuideFooter = () => {
         {/* Left text */}
         <div className="text-center md:text-left text-sm md:text-base leading-relaxed">
           <p>&copy; {new Date().getFullYear()} YourStoreName. All rights reserved.</p>
-          <p className="mt-1 text-amber-600 font-semibold select-none">
+          <p className="mt-1 text-black font-semibold select-none">
             Need help?{' '}
             <a
               href="/contact"
-              className="text-amber-500 hover:text-amber-700 underline"
+              className="text-black hover:text-black underline"
             >
               Contact Support
             </a>
@@ -70,21 +70,21 @@ const SizeGuideFooter = () => {
         >
           <a
             href="/returns"
-            className="hover:text-amber-600 transition-colors"
+            className="hover:text-black transition-colors"
             aria-label="Return Policy"
           >
             Return Policy
           </a>
           <a
             href="/shipping"
-            className="hover:text-amber-600 transition-colors"
+            className="hover:text-black transition-colors"
             aria-label="Shipping Information"
           >
             Shipping Info
           </a>
           <a
             href="/faq"
-            className="hover:text-amber-600 transition-colors"
+            className="hover:text-black transition-colors"
             aria-label="FAQ"
           >
             FAQ
@@ -100,7 +100,7 @@ const SizeGuideFooter = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={name}
-              className="text-amber-600 hover:text-amber-700 transition-colors"
+              className="text-black hover:text-black transition-colors"
             >
               {svg}
             </a>

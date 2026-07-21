@@ -68,16 +68,16 @@ const LaptopAccessoriesSection = () => {
                 <div className="absolute top-2 right-2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                   <button
                     onClick={() => toggleFavorite(id)}
-                    className="p-2 rounded-full bg-white hover:bg-pink-600"
+                    className="p-2 rounded-full bg-white hover:bg-black"
                   >
                     {isFavorited ? (
-                      <HeartSolid className="h-5 w-5 text-pink-400" />
+                      <HeartSolid className="h-5 w-5 text-black" />
                     ) : (
                       <HeartOutline className="h-5 w-5 text-gray-900" />
                     )}
                   </button>
                   <Link href={`/product/${id}`}>
-                    <button className="p-2 rounded-full bg-white hover:bg-amber-800">
+                    <button className="p-2 rounded-full bg-white hover:bg-black">
                       <EyeIcon className="h-5 w-5 text-gray-900" />
                     </button>
                   </Link>
@@ -91,7 +91,7 @@ const LaptopAccessoriesSection = () => {
                 <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
                 <p className="text-gray-600 text-sm mt-1">{description}</p>
                 <Link href="/cart">
-                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-amber-800 text-gray-900 rounded-lg hover:bg-amber-900 transition">
+                  <button className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-black text-gray-900 rounded-lg hover:bg-black transition">
                     <ShoppingCartIcon className="h-5 w-5" />
                     Add to Cart
                   </button>

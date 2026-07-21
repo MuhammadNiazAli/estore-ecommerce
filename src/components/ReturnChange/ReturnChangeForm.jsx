@@ -89,14 +89,14 @@ const ReturnChangeForm = () => {
   return (
     <section className="w-full bg-white px-4 py-14 flex justify-center min-h-[calc(100vh-120px)] my-[-50px]">
       <div className="w-full max-w-[1000px] text-gray-900">
-        <h2 className="text-3xl font-bold text-amber-600 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-black mb-8 text-center">
           Return / Exchange Request Form
         </h2>
 
         {submitted && (
           <div
             role="alert"
-            className="mb-6 bg-green-700 rounded-md p-4 text-center font-semibold text-gray-900 select-none"
+            className="mb-6 bg-black rounded-md p-4 text-center font-semibold text-gray-900 select-none"
           >
             ✅ Your request was submitted successfully!
           </div>
@@ -111,9 +111,9 @@ const ReturnChangeForm = () => {
           <div className="mb-6">
             <label
               htmlFor="orderId"
-              className="block mb-2 font-semibold text-amber-500"
+              className="block mb-2 font-semibold text-black"
             >
-              Order ID <span className="text-red-500">*</span>
+              Order ID <span className="text-black">*</span>
             </label>
             <input
               id="orderId"
@@ -125,14 +125,14 @@ const ReturnChangeForm = () => {
               aria-invalid={!!errors.orderId}
               aria-describedby={errors.orderId ? 'orderId-error' : undefined}
               className={`w-full p-3 rounded-md bg-white border ${
-                errors.orderId ? 'border-red-500' : 'border-gray-200'
-              } text-gray-900 placeholder-gray-500 focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
+                errors.orderId ? 'border-black' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 focus:outline-black focus:ring-1 focus:ring-black transition`}
               disabled={submitted}
             />
             {errors.orderId && (
               <p
                 id="orderId-error"
-                className="mt-1 text-red-500 text-sm"
+                className="mt-1 text-black text-sm"
                 role="alert"
               >
                 {errors.orderId}
@@ -143,9 +143,9 @@ const ReturnChangeForm = () => {
           <div className="mb-6">
             <label
               htmlFor="reason"
-              className="block mb-2 font-semibold text-amber-500"
+              className="block mb-2 font-semibold text-black"
             >
-              Reason for Return/Exchange <span className="text-red-500">*</span>
+              Reason for Return/Exchange <span className="text-black">*</span>
             </label>
             <textarea
               id="reason"
@@ -157,14 +157,14 @@ const ReturnChangeForm = () => {
               aria-invalid={!!errors.reason}
               aria-describedby={errors.reason ? 'reason-error' : undefined}
               className={`w-full p-3 rounded-md bg-white border ${
-                errors.reason ? 'border-red-500' : 'border-gray-200'
-              } text-gray-900 placeholder-gray-500 resize-none focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
+                errors.reason ? 'border-black' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 resize-none focus:outline-black focus:ring-1 focus:ring-black transition`}
               disabled={submitted}
             />
             {errors.reason && (
               <p
                 id="reason-error"
-                className="mt-1 text-red-500 text-sm"
+                className="mt-1 text-black text-sm"
                 role="alert"
               >
                 {errors.reason}
@@ -175,9 +175,9 @@ const ReturnChangeForm = () => {
           <div className="mb-6">
             <label
               htmlFor="condition"
-              className="block mb-2 font-semibold text-amber-500"
+              className="block mb-2 font-semibold text-black"
             >
-              Condition of the Product <span className="text-red-500">*</span>
+              Condition of the Product <span className="text-black">*</span>
             </label>
             <select
               id="condition"
@@ -187,8 +187,8 @@ const ReturnChangeForm = () => {
               aria-invalid={!!errors.condition}
               aria-describedby={errors.condition ? 'condition-error' : undefined}
               className={`w-full p-3 rounded-md bg-white border ${
-                errors.condition ? 'border-red-500' : 'border-gray-200'
-              } text-gray-900 placeholder-gray-500 focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
+                errors.condition ? 'border-black' : 'border-gray-200'
+              } text-gray-900 placeholder-gray-500 focus:outline-black focus:ring-1 focus:ring-black transition`}
               disabled={submitted}
             >
               <option value="" disabled>
@@ -203,7 +203,7 @@ const ReturnChangeForm = () => {
             {errors.condition && (
               <p
                 id="condition-error"
-                className="mt-1 text-red-500 text-sm"
+                className="mt-1 text-black text-sm"
                 role="alert"
               >
                 {errors.condition}
@@ -212,7 +212,7 @@ const ReturnChangeForm = () => {
           </div>
 
           <div className="mb-6">
-            <label className="block mb-2 font-semibold text-amber-500">
+            <label className="block mb-2 font-semibold text-black">
               Upload Photos (optional)
             </label>
             <input
@@ -235,7 +235,7 @@ const ReturnChangeForm = () => {
                 {filePreviews.map((url, idx) => (
                   <div
                     key={idx}
-                    className="w-20 h-20 rounded-md overflow-hidden border border-amber-600"
+                    className="w-20 h-20 rounded-md overflow-hidden border border-black"
                     title={formData.files[idx]?.name || 'Uploaded image preview'}
                   >
                     <img
@@ -255,8 +255,8 @@ const ReturnChangeForm = () => {
             className={`w-full py-3 rounded-md font-semibold transition 
             ${
               submitted
-                ? 'bg-amber-500 text-black cursor-not-allowed'
-                : 'bg-amber-600 text-black hover:bg-amber-700 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600'
+                ? 'bg-black text-black cursor-not-allowed'
+                : 'bg-black text-black hover:bg-black focus:outline-black focus:ring-2 focus:ring-black'
             }`}
             aria-busy={submitted}
           >

@@ -6,66 +6,66 @@ import { Clock, CheckCircle, XCircle, Activity } from 'lucide-react';
 
 
 const allActivities = [
-  { id: 1, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #45312 has been completed.', time: 'Just now' },
-  { id: 2, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #45291 failed.', time: '12 mins ago' },
-  { id: 3, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.3', time: '30 mins ago' },
-  { id: 4, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #45255 shipped via FedEx.', time: '1 hour ago' },
-  { id: 5, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #45200 has been completed.', time: '2 hours ago' },
-  { id: 6, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #45100 failed.', time: '3 hours ago' },
-  { id: 7, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.10', time: '5 hours ago' },
-  { id: 8, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #45000 shipped via DHL.', time: '1 day ago' },
-  { id: 9, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44950 has been completed.', time: '2 days ago' },
-  { id: 10, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44900 failed.', time: '3 days ago' },
+  { id: 1, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #45312 has been completed.', time: 'Just now' },
+  { id: 2, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #45291 failed.', time: '12 mins ago' },
+  { id: 3, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.3', time: '30 mins ago' },
+  { id: 4, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #45255 shipped via FedEx.', time: '1 hour ago' },
+  { id: 5, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #45200 has been completed.', time: '2 hours ago' },
+  { id: 6, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #45100 failed.', time: '3 hours ago' },
+  { id: 7, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.10', time: '5 hours ago' },
+  { id: 8, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #45000 shipped via DHL.', time: '1 day ago' },
+  { id: 9, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44950 has been completed.', time: '2 days ago' },
+  { id: 10, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44900 failed.', time: '3 days ago' },
 
-  { id: 11, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44800 has been completed.', time: '3 days ago' },
-  { id: 12, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.15', time: '4 days ago' },
-  { id: 13, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #44700 shipped via UPS.', time: '5 days ago' },
-  { id: 14, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44650 failed.', time: '5 days ago' },
-  { id: 15, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44600 has been completed.', time: '6 days ago' },
-  { id: 16, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.20', time: '6 days ago' },
-  { id: 17, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #44550 shipped via FedEx.', time: '1 week ago' },
-  { id: 18, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44500 failed.', time: '1 week ago' },
-  { id: 19, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44450 has been completed.', time: '1 week ago' },
-  { id: 20, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.25', time: '1 week ago' },
+  { id: 11, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44800 has been completed.', time: '3 days ago' },
+  { id: 12, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.15', time: '4 days ago' },
+  { id: 13, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44700 shipped via UPS.', time: '5 days ago' },
+  { id: 14, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44650 failed.', time: '5 days ago' },
+  { id: 15, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44600 has been completed.', time: '6 days ago' },
+  { id: 16, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.20', time: '6 days ago' },
+  { id: 17, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44550 shipped via FedEx.', time: '1 week ago' },
+  { id: 18, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44500 failed.', time: '1 week ago' },
+  { id: 19, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44450 has been completed.', time: '1 week ago' },
+  { id: 20, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.25', time: '1 week ago' },
 
-  { id: 21, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44400 has been completed.', time: '1 week ago' },
-  { id: 22, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44350 failed.', time: '1 week ago' },
-  { id: 23, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.30', time: '2 weeks ago' },
-  { id: 24, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #44300 shipped via DHL.', time: '2 weeks ago' },
-  { id: 25, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44250 has been completed.', time: '2 weeks ago' },
-  { id: 26, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44200 failed.', time: '2 weeks ago' },
-  { id: 27, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.35', time: '2 weeks ago' },
-  { id: 28, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #44150 shipped via UPS.', time: '2 weeks ago' },
-  { id: 29, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #44100 has been completed.', time: '3 weeks ago' },
-  { id: 30, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.40', time: '3 weeks ago' },
+  { id: 21, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44400 has been completed.', time: '1 week ago' },
+  { id: 22, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44350 failed.', time: '1 week ago' },
+  { id: 23, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.30', time: '2 weeks ago' },
+  { id: 24, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44300 shipped via DHL.', time: '2 weeks ago' },
+  { id: 25, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44250 has been completed.', time: '2 weeks ago' },
+  { id: 26, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44200 failed.', time: '2 weeks ago' },
+  { id: 27, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.35', time: '2 weeks ago' },
+  { id: 28, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44150 shipped via UPS.', time: '2 weeks ago' },
+  { id: 29, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44100 has been completed.', time: '3 weeks ago' },
+  { id: 30, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.40', time: '3 weeks ago' },
 
-  { id: 31, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #44050 failed.', time: '3 weeks ago' },
-  { id: 32, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #44000 shipped via FedEx.', time: '3 weeks ago' },
-  { id: 33, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43950 has been completed.', time: '3 weeks ago' },
-  { id: 34, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.45', time: '3 weeks ago' },
-  { id: 35, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43900 failed.', time: '4 weeks ago' },
-  { id: 36, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #43850 shipped via DHL.', time: '4 weeks ago' },
-  { id: 37, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43800 has been completed.', time: '4 weeks ago' },
-  { id: 38, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.50', time: '4 weeks ago' },
-  { id: 39, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43750 failed.', time: '4 weeks ago' },
-  { id: 40, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #43700 shipped via UPS.', time: '1 month ago' },
+  { id: 31, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #44050 failed.', time: '3 weeks ago' },
+  { id: 32, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #44000 shipped via FedEx.', time: '3 weeks ago' },
+  { id: 33, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43950 has been completed.', time: '3 weeks ago' },
+  { id: 34, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.45', time: '3 weeks ago' },
+  { id: 35, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43900 failed.', time: '4 weeks ago' },
+  { id: 36, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43850 shipped via DHL.', time: '4 weeks ago' },
+  { id: 37, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43800 has been completed.', time: '4 weeks ago' },
+  { id: 38, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.50', time: '4 weeks ago' },
+  { id: 39, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43750 failed.', time: '4 weeks ago' },
+  { id: 40, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43700 shipped via UPS.', time: '1 month ago' },
 
-  { id: 41, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43650 has been completed.', time: '1 month ago' },
-  { id: 42, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.55', time: '1 month ago' },
-  { id: 43, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43600 failed.', time: '1 month ago' },
-  { id: 44, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #43550 shipped via FedEx.', time: '1 month ago' },
-  { id: 45, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43500 has been completed.', time: '1 month ago' },
-  { id: 46, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.60', time: '1 month ago' },
-  { id: 47, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43450 failed.', time: '1 month ago' },
-  { id: 48, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #43400 shipped via DHL.', time: '1 month ago' },
-  { id: 49, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43350 has been completed.', time: '1 month ago' },
-  { id: 50, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.65', time: '1 month ago' },
+  { id: 41, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43650 has been completed.', time: '1 month ago' },
+  { id: 42, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.55', time: '1 month ago' },
+  { id: 43, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43600 failed.', time: '1 month ago' },
+  { id: 44, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43550 shipped via FedEx.', time: '1 month ago' },
+  { id: 45, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43500 has been completed.', time: '1 month ago' },
+  { id: 46, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.60', time: '1 month ago' },
+  { id: 47, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43450 failed.', time: '1 month ago' },
+  { id: 48, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43400 shipped via DHL.', time: '1 month ago' },
+  { id: 49, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43350 has been completed.', time: '1 month ago' },
+  { id: 50, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.65', time: '1 month ago' },
 
-  { id: 51, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43300 failed.', time: '1 month ago' },
-  { id: 52, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-amber-600', message: 'Order #43250 shipped via UPS.', time: '1 month ago' },
-  { id: 53, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-green-400', message: 'Order #43200 has been completed.', time: '1 month ago' },
-  { id: 54, type: 'User Login', icon: Activity, iconColor: 'text-amber-600', message: 'New login from IP 192.168.0.70', time: '1 month ago' },
-  { id: 55, type: 'Payment Failed', icon: XCircle, iconColor: 'text-red-400', message: 'Payment for order #43150 failed.', time: '1 month ago' },
+  { id: 51, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43300 failed.', time: '1 month ago' },
+  { id: 52, type: 'Order Shipped', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43250 shipped via UPS.', time: '1 month ago' },
+  { id: 53, type: 'Order Completed', icon: CheckCircle, iconColor: 'text-black', message: 'Order #43200 has been completed.', time: '1 month ago' },
+  { id: 54, type: 'User Login', icon: Activity, iconColor: 'text-black', message: 'New login from IP 192.168.0.70', time: '1 month ago' },
+  { id: 55, type: 'Payment Failed', icon: XCircle, iconColor: 'text-black', message: 'Payment for order #43150 failed.', time: '1 month ago' },
 ];
 
 const PAGE_SIZE = 4;
@@ -143,7 +143,7 @@ const DashboardActivity = () => {
       <div className="w-full max-w-[1000px]">
         {/* Header */}
         <header className="mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-amber-600">Recent Activity</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-black">Recent Activity</h2>
           <p className="text-sm text-gray-600 mt-1">
             Stay updated with the latest system and user events.
           </p>
@@ -153,7 +153,7 @@ const DashboardActivity = () => {
         <div className="flex flex-col sm:flex-row items-center gap-3 mb-4">
           <select
             aria-label="Filter activities by type"
-            className="px-3 py-1 rounded bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="px-3 py-1 rounded bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-black"
             value={filterType}
             onChange={(e) => setFilterType(e.target.value)}
           >
@@ -168,7 +168,7 @@ const DashboardActivity = () => {
             type="search"
             aria-label="Search activities"
             placeholder="Search activity messages..."
-            className="flex-1 px-3 py-1 rounded bg-white text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="flex-1 px-3 py-1 rounded bg-white text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             spellCheck={false}
@@ -182,21 +182,21 @@ const DashboardActivity = () => {
             p-4
             max-h-[320px] sm:max-h-[400px] md:max-h-[500px]
             overflow-y-auto
-            scrollbar-thin scrollbar-thumb-amber-700 scrollbar-track-gray-700
+            scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700
             space-y-4
           "
-          style={{ scrollbarWidth: 'thin', scrollbarColor: '#b45309 #374151' }}
+          style={{ scrollbarWidth: 'thin', scrollbarColor: '#111827 #374151' }}
         >
           {/* Loading */}
           {loading && (
-            <div className="flex justify-center items-center py-10 text-amber-600 font-semibold">
+            <div className="flex justify-center items-center py-10 text-black font-semibold">
               Loading activities...
             </div>
           )}
 
           {/* Error */}
           {error && (
-            <div className="bg-red-700 text-red-100 p-4 rounded text-center font-semibold">
+            <div className="bg-black text-black p-4 rounded text-center font-semibold">
               {error}
             </div>
           )}
@@ -234,7 +234,7 @@ const DashboardActivity = () => {
                     select-none
                     transition
                     ${isRead ? 'bg-white' : 'bg-white hover:bg-gray-500'}
-                    focus:outline-none focus:ring-2 focus:ring-amber-600
+                    focus:outline-none focus:ring-2 focus:ring-black
                   `}
                   aria-pressed={isRead}
                   aria-label={`${activity.type} - ${activity.message} - ${isRead ? 'Read' : 'Unread'}. Click to mark as ${isRead ? 'unread' : 'read'}.`}
@@ -257,7 +257,7 @@ const DashboardActivity = () => {
                   {/* Read/Unread badge */}
                   <div
                     className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold ${
-                      isRead ? 'bg-white text-gray-700' : 'bg-amber-700 text-amber-950'
+                      isRead ? 'bg-white text-gray-700' : 'bg-black text-black'
                     } select-none`}
                   >
                     {isRead ? 'Read' : 'New'}
@@ -274,11 +274,11 @@ const DashboardActivity = () => {
               onClick={() => setPage((p) => p + 1)}
               className="
                 px-5 py-2
-                bg-amber-600 text-gray-900 font-semibold
+                bg-black text-gray-900 font-semibold
                 rounded-lg shadow-md
-                hover:bg-amber-700
+                hover:bg-black
                 transition
-                focus:outline-none focus:ring-2 focus:ring-amber-600
+                focus:outline-none focus:ring-2 focus:ring-black
                 disabled:opacity-50 disabled:cursor-not-allowed
               "
               aria-label="Load more activities"

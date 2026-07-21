@@ -9,9 +9,9 @@ const SecuritingDeleteAccount = () => {
   return (
     <section
       aria-label="Delete your account permanently"
-      className="w-full bg-gradient-to-br from-amber-950 via-amber-900 to-amber-900 text-black p-6 rounded-2xl shadow-xl space-y-6"
+      className="w-full bg-gradient-to-br from-black via-gray-700 to-gray-900 text-black p-6 rounded-2xl shadow-xl space-y-6"
     >
-      <div className="flex items-center gap-3 text-amber-700">
+      <div className="flex items-center gap-3 text-black">
         <FiAlertTriangle className="text-2xl" />
         <h2 className="text-xl font-bold">Delete Account</h2>
       </div>
@@ -24,7 +24,7 @@ const SecuritingDeleteAccount = () => {
         <button
           type="button"
           onClick={() => setConfirming(true)}
-          className="bg-amber-800 hover:bg-amber-700 px-6 py-2.5 rounded-full font-semibold shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 text-black flex items-center gap-2"
+          className="bg-black hover:bg-black px-6 py-2.5 rounded-full font-semibold shadow-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 text-black flex items-center gap-2"
         >
           <FiTrash2 />
           Delete My Account
@@ -37,7 +37,7 @@ const SecuritingDeleteAccount = () => {
           <div className="flex gap-4">
             <button
               type="button"
-              className="px-6 py-2 bg-amber-900 hover:bg-amber-800 text-black rounded-full text-sm font-medium transition"
+              className="px-6 py-2 bg-black hover:bg-black text-black rounded-full text-sm font-medium transition"
               onClick={() => alert('Account deletion logic triggered')}
             >
               Yes, Delete Permanently

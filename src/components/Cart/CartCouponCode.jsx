@@ -55,7 +55,7 @@ const CartCouponCode = () => {
   return (
     <section className="w-full bg-white text-gray-900 px-4 sm:px-6 py-6">
       <div className="max-w-[1200px] mx-auto">
-        <h3 className="text-xl sm:text-2xl font-semibold text-amber-600 mb-5 select-none">
+        <h3 className="text-xl sm:text-2xl font-semibold text-black mb-5 select-none">
           Have a Coupon Code?
         </h3>
 
@@ -85,15 +85,15 @@ const CartCouponCode = () => {
               focus:outline-none focus:ring-2 transition duration-300
               ${
                 status === 'error'
-                  ? 'focus:ring-red-500 ring-red-500'
-                  : 'focus:ring-amber-600'
+                  ? 'focus:ring-black ring-black'
+                  : 'focus:ring-black'
               } disabled:opacity-60 disabled:cursor-not-allowed`}
           />
 
           <button
             type="submit"
             disabled={isApplying}
-            className="bg-amber-600 hover:bg-amber-500 disabled:bg-amber-500 disabled:cursor-not-allowed
+            className="bg-black hover:bg-black disabled:bg-black disabled:cursor-not-allowed
               text-gray-900 font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg transition shadow-md text-sm sm:text-base
               flex justify-center items-center gap-2 select-none"
             aria-live="polite"
@@ -134,7 +134,7 @@ const CartCouponCode = () => {
           <p
             id="coupon-message"
             className={`mt-3 text-sm sm:text-base max-w-md select-text ${
-              status === 'error' ? 'text-red-500' : 'text-green-400'
+              status === 'error' ? 'text-black' : 'text-black'
             }`}
             role={status === 'error' ? 'alert' : 'status'}
           >

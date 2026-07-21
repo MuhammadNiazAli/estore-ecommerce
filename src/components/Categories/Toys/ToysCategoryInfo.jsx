@@ -16,7 +16,7 @@ const ToysCategoryInfo = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-amber-600">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             Toys & Games Collection
           </h1>
           <p className="text-gray-700 text-sm md:text-base mb-6 leading-relaxed">
@@ -28,25 +28,25 @@ const ToysCategoryInfo = () => {
           {/* ✅ Key Highlights */}
           <ul className="space-y-3 mb-6">
             <li className="flex items-center gap-3">
-              <FaCheckCircle className="text-amber-600 text-lg" />
+              <FaCheckCircle className="text-black text-lg" />
               <span>Wide range of toys for all age groups</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaCheckCircle className="text-amber-600 text-lg" />
+              <FaCheckCircle className="text-black text-lg" />
               <span>Premium quality & child-safe materials</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaCheckCircle className="text-amber-600 text-lg" />
+              <FaCheckCircle className="text-black text-lg" />
               <span>Exclusive deals and discounts every week</span>
             </li>
           </ul>
 
           {/* ✅ Call to Action */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-amber-700 hover:bg-amber-600 text-black font-semibold px-6 py-3 rounded-full transition">
+            <button className="bg-black hover:bg-black text-black font-semibold px-6 py-3 rounded-full transition">
               Shop Now
             </button>
-            <button className="border border-amber-700 hover:bg-amber-700 hover:text-black font-semibold px-6 py-3 rounded-full transition">
+            <button className="border border-black hover:bg-black hover:text-black font-semibold px-6 py-3 rounded-full transition">
               Learn More
             </button>
           </div>
@@ -69,7 +69,7 @@ const ToysCategoryInfo = () => {
               key={idx}
               className="bg-white p-4 rounded-xl flex flex-col items-center text-center shadow hover:shadow-lg transition"
             >
-              <div className="text-amber-600 text-3xl mb-3">{item.icon}</div>
+              <div className="text-black text-3xl mb-3">{item.icon}</div>
               <h4 className="font-semibold text-lg">{item.title}</h4>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>

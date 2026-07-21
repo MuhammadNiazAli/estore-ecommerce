@@ -32,7 +32,7 @@ function FAQItem({ faq, isOpen, onToggle, id }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl transition-all duration-300">
       <button
-        className="w-full flex items-center justify-between px-5 py-4 text-left text-amber-500 font-semibold text-sm sm:text-base focus:outline-none"
+        className="w-full flex items-center justify-between px-5 py-4 text-left text-black font-semibold text-sm sm:text-base focus:outline-none"
         aria-expanded={isOpen}
         aria-controls={`faq-content-${id}`}
         onClick={onToggle}
@@ -40,7 +40,7 @@ function FAQItem({ faq, isOpen, onToggle, id }) {
         {faq.question}
         <FaChevronDown
           className={`transition-transform duration-300 ${
-            isOpen ? 'rotate-180 text-amber-500' : 'rotate-0 text-gray-600'
+            isOpen ? 'rotate-180 text-black' : 'rotate-0 text-gray-600'
           }`}
           aria-hidden="true"
         />
@@ -68,7 +68,7 @@ export default function RewardingFAQs() {
   return (
     <section className="w-full bg-white text-gray-900 p-6 sm:p-10 rounded-2xl shadow-xl">
       <header className="flex items-center gap-3 mb-6">
-        <FaQuestionCircle className="text-amber-600 text-xl" aria-hidden="true" />
+        <FaQuestionCircle className="text-black text-xl" aria-hidden="true" />
         <h2 className="text-xl sm:text-2xl font-bold">Frequently Asked Questions</h2>
       </header>
 

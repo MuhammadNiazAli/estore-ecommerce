@@ -34,7 +34,7 @@ const timeAgo = (date) => {
 };
 
 const StarRating = ({ rating }) => (
-  <div className="flex items-center gap-1 text-amber-400" role="img" aria-label={`Rating: ${rating} stars`}>
+  <div className="flex items-center gap-1 text-black" role="img" aria-label={`Rating: ${rating} stars`}>
     {[1, 2, 3, 4, 5].map((i) => (
       <Star key={i} size={18} fill={i <= rating ? 'currentColor' : 'none'} stroke="currentColor" />
     ))}
@@ -51,9 +51,9 @@ const Comment = ({ comment, onToggleLike }) => (
     <div className="flex items-center gap-4 mt-1 text-gray-600 text-xs">
       <button
         onClick={() => onToggleLike(comment.id)}
-        className="flex items-center gap-1 hover:text-amber-400 transition"
+        className="flex items-center gap-1 hover:text-black transition"
       >
-        <ThumbsUp size={14} className={comment.liked ? 'text-amber-400 scale-110' : ''} />
+        <ThumbsUp size={14} className={comment.liked ? 'text-black scale-110' : ''} />
         <span>{comment.likes}</span>
       </button>
     </div>
@@ -79,14 +79,14 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
         {review.avatar ? (
           <img src={review.avatar} className="w-16 h-16 rounded-full object-cover" alt={review.name} />
         ) : (
-          <div className="w-16 h-16 rounded-full bg-amber-500 text-gray-900 font-bold text-2xl flex items-center justify-center">
+          <div className="w-16 h-16 rounded-full bg-black text-gray-900 font-bold text-2xl flex items-center justify-center">
             {getInitials(review.name)}
           </div>
         )}
         <div>
           <h3 className="text-gray-900 font-semibold text-xl">{review.name}</h3>
           {review.verified && (
-            <span className="text-sm text-amber-400 flex items-center mt-1">
+            <span className="text-sm text-black flex items-center mt-1">
               <BadgeCheck className="w-4 h-4 mr-1" /> Verified Buyer
             </span>
           )}
@@ -100,15 +100,15 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
       <div className="flex items-center gap-8 mt-6 text-gray-600 text-sm">
         <button
           onClick={() => onLikeReview(review.id)}
-          className="flex items-center gap-2 hover:text-amber-400 transition"
+          className="flex items-center gap-2 hover:text-black transition"
         >
-          <ThumbsUp size={20} className={review.liked ? 'text-amber-400 scale-110' : ''} />
+          <ThumbsUp size={20} className={review.liked ? 'text-black scale-110' : ''} />
           {review.likes}
         </button>
 
         <button
           onClick={() => setShowCommentForm((v) => !v)}
-          className="flex items-center gap-2 hover:text-amber-400 transition"
+          className="flex items-center gap-2 hover:text-black transition"
         >
           <MessageCircle size={20} />
           {review.comments.length}
@@ -117,7 +117,7 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
         <div className="relative">
           <button
             onClick={() => setShowShare((v) => !v)}
-            className="flex items-center gap-2 hover:text-amber-400 transition"
+            className="flex items-center gap-2 hover:text-black transition"
           >
             <Share2 size={20} />
             Share
@@ -145,12 +145,12 @@ const Review = ({ review, onLikeReview, onAddComment, onToggleLikeComment }) => 
             rows={3}
             value={commentText}
             onChange={(e) => setCommentText(e.target.value)}
-            className="w-full bg-white rounded-lg p-4 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-amber-400 resize-none"
+            className="w-full bg-white rounded-lg p-4 text-gray-800 placeholder-gray-500 focus:ring-2 focus:ring-black resize-none"
             placeholder="Write a comment..."
           />
           <button
             type="submit"
-            className="mt-3 bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold px-6 py-2 rounded-md"
+            className="mt-3 bg-black hover:bg-black text-gray-900 font-semibold px-6 py-2 rounded-md"
           >
             Post Comment
           </button>
@@ -278,8 +278,8 @@ export default function ReviewsSystem() {
                 onClick={() => setFilter(f)}
                 className={`px-5 py-2 rounded-full font-semibold text-sm transition-all ${
                   filter === f
-                    ? 'bg-amber-500 text-gray-900 shadow'
-                    : 'bg-white text-gray-600 hover:bg-gray-500 hover:text-amber-400'
+                    ? 'bg-black text-gray-900 shadow'
+                    : 'bg-white text-gray-600 hover:bg-gray-500 hover:text-black'
                 }`}
               >
                 {f === 'All' ? 'All Ratings' : `${f} Stars`} ({count})

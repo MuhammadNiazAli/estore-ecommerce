@@ -40,12 +40,12 @@ const ProductAddToCartButton = ({
           whileTap={{ scale: 0.95 }}
           className={`
             flex-1
-            bg-amber-600 
-            hover:bg-amber-700 
-            active:bg-amber-800 
+            bg-black 
+            hover:bg-black 
+            active:bg-black 
             focus:outline-none 
             focus:ring-4 
-            focus:ring-amber-500 
+            focus:ring-black 
             text-black 
             font-semibold 
             py-3 

@@ -43,12 +43,12 @@ const ContactInfo = () => {
 
             <div className="space-y-5 text-gray-700">
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaPhoneAlt className="text-amber-600 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaPhoneAlt className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Phone</p>
                   <a
                     href="tel:+1234567890"
-                    className="text-amber-600 hover:underline break-words text-xs sm:text-sm"
+                    className="text-black hover:underline break-words text-xs sm:text-sm"
                   >
                     +1 (234) 567-890
                   </a>
@@ -56,14 +56,14 @@ const ContactInfo = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaWhatsapp className="text-green-400 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaWhatsapp className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">WhatsApp</p>
                   <a
                     href="https://wa.me/1234567890"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-400 hover:underline break-words text-xs sm:text-sm"
+                    className="text-black hover:underline break-words text-xs sm:text-sm"
                   >
                     Chat with us
                   </a>
@@ -71,12 +71,12 @@ const ContactInfo = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaEnvelope className="text-amber-600 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaEnvelope className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Email</p>
                   <a
                     href="mailto:support@ecommerce.com"
-                    className="text-amber-500 hover:underline break-words text-xs sm:text-sm"
+                    className="text-black hover:underline break-words text-xs sm:text-sm"
                   >
                     support@ecommerce.com
                   </a>
@@ -84,7 +84,7 @@ const ContactInfo = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaClock className="text-amber-600 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaClock className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Working Hours</p>
                   <p className="text-xs sm:text-sm">Mon – Fri, 9:00 AM – 6:00 PM</p>
@@ -106,7 +106,7 @@ const ContactInfo = () => {
 
             <div className="space-y-6 sm:space-y-8 text-gray-700">
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaMapMarkerAlt className="text-red-400 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaMapMarkerAlt className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Headquarters</p>
                   <address className="not-italic leading-relaxed text-xs sm:text-sm">
@@ -117,7 +117,7 @@ const ContactInfo = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <FaMapMarkerAlt className="text-red-400 mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
+                <FaMapMarkerAlt className="text-black mt-1 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="font-semibold text-gray-900 text-sm sm:text-base">Branch Office</p>
                   <address className="not-italic leading-relaxed text-xs sm:text-sm">
@@ -144,7 +144,7 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-amber-700 hover:text-gray-900 transition transform hover:scale-110"
+              className="text-black hover:text-gray-900 transition transform hover:scale-110"
             >
               <FaFacebookF />
             </a>
@@ -153,7 +153,7 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-pink-500 hover:text-gray-900 transition transform hover:scale-110"
+              className="text-black hover:text-gray-900 transition transform hover:scale-110"
             >
               <FaInstagram />
             </a>
@@ -162,7 +162,7 @@ const ContactInfo = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="text-amber-600 hover:text-gray-900 transition transform hover:scale-110"
+              className="text-black hover:text-gray-900 transition transform hover:scale-110"
             >
               <FaTwitter />
             </a>

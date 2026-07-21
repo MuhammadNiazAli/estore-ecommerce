@@ -30,8 +30,8 @@ export default function PlaceOrderButton({
             select-none
             ${
               disabled
-                ? "bg-gradient-to-r from-amber-900 to-amber-950 text-amber-500/60 cursor-not-allowed pointer-events-none border border-amber-900"
-                : "bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:to-amber-900 active:scale-95 cursor-pointer text-gray-900 shadow-amber-600/30 focus:ring-amber-500 focus:ring-offset-amber-950"
+                ? "bg-gradient-to-r from-black to-gray-900 text-black/60 cursor-not-allowed pointer-events-none border border-black"
+                : "bg-gradient-to-r from-black via-gray-700 to-gray-900 hover:from-black hover:to-gray-900 active:scale-95 cursor-pointer text-gray-900 shadow-black/30 focus:ring-black focus:ring-offset-white"
             }
           `}
         >

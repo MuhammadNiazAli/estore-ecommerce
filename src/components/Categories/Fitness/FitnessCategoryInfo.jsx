@@ -4,22 +4,22 @@ import { FaDumbbell, FaHeartbeat, FaShieldAlt, FaLeaf } from "react-icons/fa";
 
 const features = [
   {
-    icon: <FaDumbbell className="text-amber-600 w-8 h-8" />,
+    icon: <FaDumbbell className="text-black w-8 h-8" />,
     title: "Premium Quality Equipment",
     desc: "Engineered from top-grade materials for durability and performance.",
   },
   {
-    icon: <FaHeartbeat className="text-amber-600 w-8 h-8" />,
+    icon: <FaHeartbeat className="text-black w-8 h-8" />,
     title: "Improve Your Health",
     desc: "Designed to boost your endurance, strength, and overall fitness.",
   },
   {
-    icon: <FaShieldAlt className="text-amber-600 w-8 h-8" />,
+    icon: <FaShieldAlt className="text-black w-8 h-8" />,
     title: "Safe & Reliable",
     desc: "Tested to meet highest safety standards for worry-free workouts.",
   },
   {
-    icon: <FaLeaf className="text-amber-600 w-8 h-8" />,
+    icon: <FaLeaf className="text-black w-8 h-8" />,
     title: "Eco-Friendly Materials",
     desc: "Sustainable manufacturing processes for a greener planet.",
   },
@@ -43,7 +43,7 @@ const FitnessCategoryInfo = () => {
         {features.map(({ icon, title, desc }, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-5 p-6 bg-white rounded-2xl shadow-lg hover:shadow-amber-600/50 transition-shadow duration-300 cursor-default"
+            className="flex items-start gap-5 p-6 bg-white rounded-2xl shadow-lg hover:shadow-black/50 transition-shadow duration-300 cursor-default"
           >
             <div className="flex-shrink-0">{icon}</div>
             <div>

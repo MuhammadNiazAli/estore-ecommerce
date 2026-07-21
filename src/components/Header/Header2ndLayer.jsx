@@ -133,7 +133,7 @@ function Dropdown({ label, options, selectedValue, onSelect }) {
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full flex justify-between items-center px-3 py-2 text-xs text-gray-900 bg-white/90 backdrop-blur-md border border-gray-200 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-700 transition"
+        className="w-full flex justify-between items-center px-3 py-2 text-xs text-gray-900 bg-white/90 backdrop-blur-md border border-gray-200 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-black transition"
       >
         <span>{selectedValue}</span>
         <svg
@@ -174,8 +174,8 @@ function Dropdown({ label, options, selectedValue, onSelect }) {
                   setIsOpen(false);
                 }
               }}
-              className={`cursor-pointer px-3 py-2 hover:bg-amber-800 ${
-                option === selectedValue ? 'bg-amber-900 font-semibold' : ''
+              className={`cursor-pointer px-3 py-2 hover:bg-black ${
+                option === selectedValue ? 'bg-black font-semibold' : ''
               }`}
             >
               {option}
@@ -201,7 +201,7 @@ export default function HeaderSecondLayer() {
           aria-expanded={isExpanded}
           aria-controls="more-options-panel"
           onClick={() => setIsExpanded((open) => !open)}
-          className="w-full flex justify-between items-center px-4 py-3 mb-4 font-serif font-semibold hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-gray-200 rounded"
+          className="w-full flex justify-between items-center px-4 py-3 mb-4 font-serif font-semibold hover:text-black transition focus:outline-none focus:ring-2 focus:ring-gray-200 rounded"
         >
           <span>More Options</span>
           <svg
@@ -251,11 +251,11 @@ export default function HeaderSecondLayer() {
                   key={label}
                   href={href}
                   title={label}
-                  className="relative flex items-center justify-center w-8 h-8 text-gray-700 group hover:text-amber-600 transition"
+                  className="relative flex items-center justify-center w-8 h-8 text-gray-700 group hover:text-black transition"
                 >
                   <IconComponent size={20} />
                   {badgeKey && badgeCounters[badgeKey] > 0 && (
-                    <span className="absolute -top-1 -right-2 min-w-[14px] px-1 text-xs text-center text-gray-900 rounded-full bg-amber-800 animate-pulse">
+                    <span className="absolute -top-1 -right-2 min-w-[14px] px-1 text-xs text-center text-gray-900 rounded-full bg-black animate-pulse">
                       {badgeCounters[badgeKey]}
                     </span>
                   )}
@@ -269,7 +269,7 @@ export default function HeaderSecondLayer() {
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md whitespace-nowrap transition-colors hover:bg-amber-700 hover:text-gray-900"
+                  className="flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md whitespace-nowrap transition-colors hover:bg-black hover:text-gray-900"
                 >
                   <span className="text-base">{icon}</span>
                   {label}

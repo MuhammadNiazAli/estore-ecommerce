@@ -13,37 +13,37 @@ import { motion } from 'framer-motion';
 
 const assistiveTechs = [
   {
-    icon: <MonitorSpeaker className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <MonitorSpeaker className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Screen Reader Compatibility',
     description:
       'We support major screen readers like NVDA, JAWS, and VoiceOver with proper ARIA labeling and semantic HTML structure.',
   },
   {
-    icon: <Mic className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Mic className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Voice Command Navigation',
     description:
       'Our interface can be accessed using voice-control tools like Dragon NaturallySpeaking and Google Voice Access.',
   },
   {
-    icon: <MousePointerClick className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <MousePointerClick className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Pointer & Switch Devices',
     description:
       'We ensure clickable elements are large, visible, and logically ordered for alternative pointer/switch input devices.',
   },
   {
-    icon: <Eye className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Eye className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Screen Magnifiers',
     description:
       'The layout and typography are optimized for users relying on magnification tools and zoom features.',
   },
   {
-    icon: <ScreenShare className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <ScreenShare className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Text-to-Speech Tools',
     description:
       'Content is structured for clarity and simplicity so that tools like ChromeVox and Narrator deliver accurate results.',
   },
   {
-    icon: <Smartphone className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Smartphone className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Mobile Accessibility',
     description:
       'Our platform supports mobile assistive tech such as TalkBack and VoiceOver for seamless experiences on smartphones and tablets.',
@@ -59,7 +59,7 @@ const AssistiveTechSupport = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-3xl md:text-4xl font-bold text-amber-500"
+          className="text-3xl md:text-4xl font-bold text-black"
         >
           Assistive Technology Support
         </motion.h2>
@@ -91,7 +91,7 @@ const AssistiveTechSupport = () => {
                 {tech.icon}
                 <h3
                   id={`tech-title-${index}`}
-                  className="text-lg font-semibold text-amber-400"
+                  className="text-lg font-semibold text-black"
                 >
                   {tech.title}
                 </h3>

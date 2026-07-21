@@ -31,7 +31,7 @@ const GiftCardConfirmation = ({
       aria-live="polite"
     >
       <FaCheckCircle
-        className="text-amber-600 text-7xl"
+        className="text-black text-7xl"
         aria-hidden="true"
         focusable="false"
       />
@@ -40,19 +40,19 @@ const GiftCardConfirmation = ({
         Thank You for Your Purchase!
       </h2>
 
-      <p className="text-amber-400 max-w-md text-center leading-relaxed select-text">
+      <p className="text-black max-w-md text-center leading-relaxed select-text">
         Your gift card has been successfully processed. A confirmation email has been sent to your inbox.
       </p>
 
-      <div className="bg-amber-900 rounded-xl p-6 w-full max-w-md shadow-inner">
+      <div className="bg-black rounded-xl p-6 w-full max-w-md shadow-inner">
         <h3
           className="text-xl font-semibold mb-4 flex items-center gap-2 select-text"
           tabIndex={-1}
         >
-          <FaGift className="text-amber-600" aria-hidden="true" />
+          <FaGift className="text-black" aria-hidden="true" />
           Gift Card Details
         </h3>
-        <ul className="text-amber-400 space-y-2 text-sm sm:text-base select-text">
+        <ul className="text-black space-y-2 text-sm sm:text-base select-text">
           <li>
             <strong>Amount:</strong>{' '}
             {amount.toLocaleString('en-US', {
@@ -76,8 +76,8 @@ const GiftCardConfirmation = ({
         <button
           type="button"
           onClick={onBuyAnother}
-          className="flex-1 px-8 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md
-            hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
+          className="flex-1 px-8 py-3 bg-black text-black font-semibold rounded-full shadow-md
+            hover:bg-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2
             transition duration-300 active:scale-[0.97] select-none"
           aria-label="Buy another gift card"
         >
@@ -86,9 +86,9 @@ const GiftCardConfirmation = ({
         <button
           type="button"
           onClick={onGoHome}
-          className="flex-1 flex items-center justify-center gap-2 px-8 py-3 border border-amber-600
-            text-amber-600 font-semibold rounded-full hover:bg-amber-900 hover:text-gray-900
-            focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
+          className="flex-1 flex items-center justify-center gap-2 px-8 py-3 border border-black
+            text-black font-semibold rounded-full hover:bg-black hover:text-gray-900
+            focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2
             transition duration-300 active:scale-[0.97] select-none"
           aria-label="Go to home page"
         >

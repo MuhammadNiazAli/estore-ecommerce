@@ -4,7 +4,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-amber-600"
+        className="w-8 h-8 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -22,7 +22,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-amber-600"
+        className="w-8 h-8 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-amber-600"
+        className="w-8 h-8 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -59,7 +59,7 @@ const tips = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-amber-600"
+        className="w-8 h-8 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -84,10 +84,10 @@ const SizeGuideTips = () => {
           <div
             key={idx}
             className="bg-white rounded-lg p-6 flex flex-col items-center text-center shadow-md
-                       hover:bg-amber-200/10 transition-colors duration-300 cursor-default"
+                       hover:bg-black/10 transition-colors duration-300 cursor-default"
           >
             <div className="mb-4">{icon}</div>
-            <h3 className="text-amber-600 text-xl sm:text-2xl font-semibold mb-3 select-none">
+            <h3 className="text-black text-xl sm:text-2xl font-semibold mb-3 select-none">
               {title}
             </h3>
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{description}</p>

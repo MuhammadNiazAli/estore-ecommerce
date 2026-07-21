@@ -92,14 +92,14 @@ const ProfileDeviceSessions = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-1">
             Device Sessions
           </h2>
           <p className="text-sm sm:text-base text-gray-700 max-w-md">
             Review devices where your account is currently logged in.
           </p>
         </div>
-        <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base select-none">
+        <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base select-none">
           <DevicePhoneMobileIcon className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" />
           <span>Active Sessions</span>
         </div>
@@ -118,11 +118,11 @@ const ProfileDeviceSessions = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             className={`bg-white rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-md border ${
-              session.current ? 'border-2 border-amber-600' : 'border border-gray-200'
+              session.current ? 'border-2 border-black' : 'border border-gray-200'
             }`}
           >
             <div className="flex items-center gap-4">
-              <DevicePhoneMobileIcon className="w-10 h-10 text-amber-600 flex-shrink-0" aria-hidden="true" />
+              <DevicePhoneMobileIcon className="w-10 h-10 text-black flex-shrink-0" aria-hidden="true" />
               <div>
                 <p className="text-gray-900 font-semibold text-lg">{session.device}</p>
                 <p className="text-gray-600 text-sm sm:text-base">
@@ -134,11 +134,11 @@ const ProfileDeviceSessions = () => {
               </div>
             </div>
             <div className="flex items-center gap-3 text-gray-700 text-sm sm:text-base whitespace-nowrap">
-              <ClockIcon className="w-5 h-5 text-amber-600" aria-hidden="true" />
+              <ClockIcon className="w-5 h-5 text-black" aria-hidden="true" />
               <span>{timeAgo(session.lastActive)}</span>
               {session.current && (
                 <span
-                  className="ml-4 px-3 py-1 rounded-full text-amber-950 bg-amber-600 font-semibold text-xs sm:text-sm"
+                  className="ml-4 px-3 py-1 rounded-full text-black bg-black font-semibold text-xs sm:text-sm"
                   aria-label="Current session"
                 >
                   Current Session
@@ -149,7 +149,7 @@ const ProfileDeviceSessions = () => {
                   onClick={() => openConfirmModal(session.id)}
                   type="button"
                   aria-label={`Log out from device ${session.device}`}
-                  className="ml-4 flex items-center gap-1 text-red-500 hover:text-red-400 transition text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-red-400 rounded"
+                  className="ml-4 flex items-center gap-1 text-black hover:text-black transition text-xs sm:text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-black rounded"
                 >
                   <ArrowRightOnRectangleIcon className="w-5 h-5" />
                   Log out
@@ -166,7 +166,7 @@ const ProfileDeviceSessions = () => {
           <button
             type="button"
             onClick={openLogoutAllModal}
-            className="px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition text-sm sm:text-base focus:outline-none focus:ring-4 focus:ring-amber-700"
+            className="px-6 py-3 rounded-full bg-black hover:bg-black text-gray-900 font-semibold shadow-lg transition text-sm sm:text-base focus:outline-none focus:ring-4 focus:ring-black"
             aria-label="Log out from all other sessions except current"
           >
             Log out from other sessions
@@ -200,7 +200,7 @@ const ProfileDeviceSessions = () => {
             >
               <h3
                 id="confirm-logout-title"
-                className="text-xl font-bold text-amber-600 mb-4"
+                className="text-xl font-bold text-black mb-4"
               >
                 Confirm Logout
               </h3>
@@ -211,13 +211,13 @@ const ProfileDeviceSessions = () => {
               <div className="flex justify-end gap-4">
                 <button
                   onClick={closeConfirmModal}
-                  className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={() => logoutSession(confirmModal.sessionId)}
-                  className="px-5 py-2 rounded-full bg-red-600 text-gray-900 font-semibold hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500"
+                  className="px-5 py-2 rounded-full bg-black text-gray-900 font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   Log Out
                 </button>
@@ -227,7 +227,7 @@ const ProfileDeviceSessions = () => {
               <button
                 onClick={closeConfirmModal}
                 aria-label="Close confirmation modal"
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-black hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-black"
                 type="button"
               >
                 <XMarkIcon className="w-6 h-6" />
@@ -263,7 +263,7 @@ const ProfileDeviceSessions = () => {
             >
               <h3
                 id="confirm-logout-all-title"
-                className="text-xl font-bold text-amber-600 mb-4"
+                className="text-xl font-bold text-black mb-4"
               >
                 Confirm Logout from All Other Sessions
               </h3>
@@ -274,13 +274,13 @@ const ProfileDeviceSessions = () => {
               <div className="flex justify-end gap-4">
                 <button
                   onClick={closeLogoutAllModal}
-                  className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={logoutAllExceptCurrent}
-                  className="px-5 py-2 rounded-full bg-red-600 text-gray-900 font-semibold hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500"
+                  className="px-5 py-2 rounded-full bg-black text-gray-900 font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   Log Out All
                 </button>
@@ -290,7 +290,7 @@ const ProfileDeviceSessions = () => {
               <button
                 onClick={closeLogoutAllModal}
                 aria-label="Close logout all confirmation modal"
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-black hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-black"
                 type="button"
               >
                 <XMarkIcon className="w-6 h-6" />

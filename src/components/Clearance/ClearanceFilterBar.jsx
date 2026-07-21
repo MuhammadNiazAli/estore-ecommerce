@@ -94,7 +94,7 @@ export default function ClearanceFilterBar() {
   }, [sortOption, selectedCategory, priceRange, minRating]);
 
   return (
-    <div className="bg-white text-amber-600 w-full flex flex-col items-center py-4 px-3 sm:px-6 my-5">
+    <div className="bg-white text-black w-full flex flex-col items-center py-4 px-3 sm:px-6 my-5">
       {/* FILTER BAR */}
       <div className="max-w-[1200px] w-full flex flex-col gap-3 mb-6">
         {/* Categories: 2 per row on mobile, inline on bigger screens */}
@@ -105,8 +105,8 @@ export default function ClearanceFilterBar() {
               onClick={() => setSelectedCategory(cat)}
               className={`px-3 py-2 text-xs sm:text-sm rounded-md font-medium transition ${
                 selectedCategory === cat
-                  ? "bg-amber-600 text-gray-900"
-                  : "border border-amber-600 hover:bg-amber-600 hover:text-gray-900"
+                  ? "bg-black text-gray-900"
+                  : "border border-black hover:bg-black hover:text-gray-900"
               }`}
             >
               {cat}
@@ -119,7 +119,7 @@ export default function ClearanceFilterBar() {
           <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-            className="bg-white border border-amber-600 text-amber-600 px-3 py-2 text-xs sm:text-sm rounded-md"
+            className="bg-white border border-black text-black px-3 py-2 text-xs sm:text-sm rounded-md"
           >
             {sortOptions.map((opt) => (
               <option key={opt} value={opt}>{opt}</option>
@@ -129,19 +129,19 @@ export default function ClearanceFilterBar() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setViewMode("grid")}
-              className={`p-2 rounded-md ${viewMode === "grid" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-500"}`}
+              className={`p-2 rounded-md ${viewMode === "grid" ? "bg-black text-gray-900" : "hover:bg-gray-500"}`}
             >
               <Grid className="w-4 h-4" />
             </button>
             <button
               onClick={() => setViewMode("list")}
-              className={`p-2 rounded-md ${viewMode === "list" ? "bg-amber-600 text-gray-900" : "hover:bg-gray-500"}`}
+              className={`p-2 rounded-md ${viewMode === "list" ? "bg-black text-gray-900" : "hover:bg-gray-500"}`}
             >
               <List className="w-4 h-4" />
             </button>
 
             <button
-              className="sm:hidden p-2 rounded-md border border-amber-600 hover:bg-amber-600 hover:text-gray-900"
+              className="sm:hidden p-2 rounded-md border border-black hover:bg-black hover:text-gray-900"
               onClick={() => setIsFilterOpen(true)}
             >
               <Filter className="w-4 h-4" />
@@ -158,11 +158,11 @@ export default function ClearanceFilterBar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 w-4/5 sm:w-1/3 h-full bg-white text-amber-600 p-5 shadow-lg z-50 overflow-y-auto"
+            className="fixed top-0 right-0 w-4/5 sm:w-1/3 h-full bg-white text-black p-5 shadow-lg z-50 overflow-y-auto"
           >
             <button
               onClick={() => setIsFilterOpen(false)}
-              className="text-gray-700 mb-4 border border-amber-600 px-3 py-1 rounded-md"
+              className="text-gray-700 mb-4 border border-black px-3 py-1 rounded-md"
             >
               Close
             </button>
@@ -212,14 +212,14 @@ export default function ClearanceFilterBar() {
                 className="w-full h-36 sm:h-44 object-cover"
               />
               <div className="p-3 text-xs sm:text-sm">
-                <h3 className="text-amber-600 font-semibold truncate">{product.name}</h3>
-                <p className="text-amber-500">${product.price.toFixed(2)}</p>
-                <p className="text-amber-600 text-[11px]">{product.rating} ★</p>
+                <h3 className="text-black font-semibold truncate">{product.name}</h3>
+                <p className="text-black">${product.price.toFixed(2)}</p>
+                <p className="text-black text-[11px]">{product.rating} ★</p>
               </div>
             </div>
           ))
         ) : (
-          <p className="text-amber-500 text-center col-span-full text-sm">No products match your filters.</p>
+          <p className="text-black text-center col-span-full text-sm">No products match your filters.</p>
         )}
       </div>
     </div>

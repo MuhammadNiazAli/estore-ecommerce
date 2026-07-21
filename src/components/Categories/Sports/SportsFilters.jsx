@@ -911,9 +911,9 @@ const SportsFilters = () => {
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full font-semibold ${
                 selectedCategory === cat
-                  ? "bg-amber-600 text-black"
+                  ? "bg-black text-black"
                   : "bg-white text-gray-900"
-              } hover:bg-amber-500 hover:text-black transition`}
+              } hover:bg-black hover:text-black transition`}
             >
               {cat}
             </button>
@@ -959,12 +959,12 @@ const SportsFilters = () => {
                 className="w-full h-48 object-cover rounded-lg"
               />
               <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
-              <p className="text-amber-700 font-bold mt-1">${product.price}</p>
+              <p className="text-black font-bold mt-1">${product.price}</p>
               <p className="text-gray-500 text-sm">Rating: {product.rating}★</p>
 
               {/* Buttons */}
               <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-3 transition">
-                <button className="bg-amber-600 p-3 rounded-full text-black hover:bg-amber-500">
+                <button className="bg-black p-3 rounded-full text-black hover:bg-black">
                   <FaCartPlus size={18} />
                 </button>
                 <button className="bg-white p-3 rounded-full text-gray-800 hover:bg-gray-200">
@@ -981,7 +981,7 @@ const SportsFilters = () => {
             {visibleCount < filteredProducts.length ? (
               <button
                 onClick={showMore}
-                className="bg-amber-600 text-black px-8 py-3 rounded-full font-semibold shadow hover:bg-amber-500 transition"
+                className="bg-black text-black px-8 py-3 rounded-full font-semibold shadow hover:bg-black transition"
               >
                 Show More
               </button>

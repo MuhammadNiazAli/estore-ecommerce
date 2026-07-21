@@ -13,19 +13,19 @@ const AddressingFooter = ({ onAddNewClick }) => {
           <h3 className="text-gray-900 text-xl font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <FiPhone className="text-amber-600" />
-              <a href="tel:+1234567890" className="hover:text-amber-600 transition">
+              <FiPhone className="text-black" />
+              <a href="tel:+1234567890" className="hover:text-black transition">
                 +1 (234) 567-890
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <FiMail className="text-amber-600" />
-              <a href="mailto:support@example.com" className="hover:text-amber-600 transition">
+              <FiMail className="text-black" />
+              <a href="mailto:support@example.com" className="hover:text-black transition">
                 support@example.com
               </a>
             </li>
             <li className="flex items-center gap-2">
-              <FiMapPin className="text-amber-600" />
+              <FiMapPin className="text-black" />
               <address className="not-italic">
                 123 Delivery St., Cityville, Country
               </address>
@@ -38,25 +38,25 @@ const AddressingFooter = ({ onAddNewClick }) => {
           <h3 className="text-gray-900 text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#" className="hover:text-amber-600 transition">
+              <a href="#" className="hover:text-black transition">
                 Manage Addresses
               </a>
             </li>
             <li>
               <button
                 onClick={onAddNewClick}
-                className="hover:text-amber-600 transition text-left w-full"
+                className="hover:text-black transition text-left w-full"
               >
                 Add New Address
               </button>
             </li>
             <li>
-              <a href="#" className="hover:text-amber-600 transition">
+              <a href="#" className="hover:text-black transition">
                 Delivery FAQs
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-amber-600 transition">
+              <a href="#" className="hover:text-black transition">
                 Shipping Policy
               </a>
             </li>
@@ -66,13 +66,13 @@ const AddressingFooter = ({ onAddNewClick }) => {
         {/* Social Media */}
         <div>
           <h3 className="text-gray-900 text-xl font-semibold mb-4">Follow Us</h3>
-          <div className="flex gap-6 text-amber-600 text-lg">
+          <div className="flex gap-6 text-black text-lg">
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="hover:text-amber-500 transition"
+              className="hover:text-black transition"
             >
               <FaFacebookF />
             </a>
@@ -81,7 +81,7 @@ const AddressingFooter = ({ onAddNewClick }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="hover:text-amber-500 transition"
+              className="hover:text-black transition"
             >
               <FaTwitter />
             </a>
@@ -90,7 +90,7 @@ const AddressingFooter = ({ onAddNewClick }) => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="hover:text-amber-500 transition"
+              className="hover:text-black transition"
             >
               <FaInstagram />
             </a>

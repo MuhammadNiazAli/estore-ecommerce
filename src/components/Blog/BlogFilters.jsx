@@ -223,8 +223,8 @@ const BlogFilters = () => {
               className={`px-4 sm:px-5 py-2 rounded-full border transition-colors font-semibold text-sm sm:text-base
                 ${
                   active === cat
-                    ? 'bg-amber-600 text-gray-900 border-amber-600'
-                    : 'bg-transparent text-amber-600 border-amber-600 hover:bg-amber-600 hover:text-gray-900'
+                    ? 'bg-black text-gray-900 border-black'
+                    : 'bg-transparent text-black border-black hover:bg-black hover:text-gray-900'
                 }`}
               type="button"
             >
@@ -253,7 +253,7 @@ const BlogFilters = () => {
                   loading="lazy"
                 />
                 <div className="p-4 sm:p-5 flex flex-col flex-grow">
-                  <h3 className="text-lg sm:text-xl font-bold text-amber-600 mb-2 line-clamp-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-black mb-2 line-clamp-2">
                     {blog.title}
                   </h3>
                   <p className="text-gray-700 text-sm sm:text-base mb-4 line-clamp-3 flex-grow">
@@ -261,7 +261,7 @@ const BlogFilters = () => {
                   </p>
                   <a
                     href="#"
-                    className="text-amber-600 font-semibold hover:underline text-sm sm:text-base mt-auto"
+                    className="text-black font-semibold hover:underline text-sm sm:text-base mt-auto"
                     tabIndex={0}
                     aria-label={`Read more about ${blog.title}`}
                   >
@@ -278,7 +278,7 @@ const BlogFilters = () => {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-500 transition-colors"
+              className="px-6 py-2 bg-black text-gray-900 font-semibold rounded-full hover:bg-black transition-colors"
               type="button"
             >
               Show More

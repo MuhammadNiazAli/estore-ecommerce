@@ -36,7 +36,7 @@ const LaptopQuickViewModal = ({ laptop, isOpen, onClose }) => {
           <div className="md:w-1/2 text-gray-700">
             <h2 className="text-3xl font-semibold mb-4">{laptop.name}</h2>
             <p className="mb-4">{laptop.description || 'No description available.'}</p>
-            <p className="text-xl font-bold text-amber-700 mb-6">${laptop.price}</p>
+            <p className="text-xl font-bold text-black mb-6">${laptop.price}</p>
             {laptop.specs && (
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Specifications</h3>
@@ -50,7 +50,7 @@ const LaptopQuickViewModal = ({ laptop, isOpen, onClose }) => {
               </div>
             )}
             <button
-              className="mt-6 bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold px-6 py-3 rounded-md transition"
+              className="mt-6 bg-black hover:bg-black text-gray-900 font-semibold px-6 py-3 rounded-md transition"
               onClick={() => alert('Add to cart clicked!')}
             >
               Add to Cart

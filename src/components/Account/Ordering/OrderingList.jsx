@@ -23,9 +23,9 @@ const OrderingList = ({ orders, selectedOrder, onSelect }) => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Delivered':
-        return 'text-green-400';
+        return 'text-black';
       case 'Shipped':
-        return 'text-amber-600';
+        return 'text-black';
       default:
         return 'text-gray-600';
     }
@@ -36,7 +36,7 @@ const OrderingList = ({ orders, selectedOrder, onSelect }) => {
       aria-label="Order list"
       className="max-w-4xl mx-auto lg:mx-0 bg-white rounded-lg p-6 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-6">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-6">
         Your Orders
       </h2>
 
@@ -57,8 +57,8 @@ const OrderingList = ({ orders, selectedOrder, onSelect }) => {
               tabIndex={0}
               className={`flex justify-between items-center py-4 px-3 rounded-md cursor-pointer transition-colors ${
                 isSelected
-                  ? 'bg-amber-700 bg-opacity-20'
-                  : 'hover:bg-amber-600 hover:bg-opacity-10'
+                  ? 'bg-black bg-opacity-20'
+                  : 'hover:bg-black hover:bg-opacity-10'
               }`}
               onClick={() => handleSelect(order)}
               onKeyDown={(e) => {
@@ -81,7 +81,7 @@ const OrderingList = ({ orders, selectedOrder, onSelect }) => {
                 >
                   {status}
                 </span>
-                <span className="font-bold text-amber-600">
+                <span className="font-bold text-black">
                   ${total.toFixed(2)}
                 </span>
               </div>

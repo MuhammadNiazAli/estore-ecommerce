@@ -10,9 +10,9 @@ const initialTasks = [
 ];
 
 const priorityColors = {
-  High: 'bg-red-500',
-  Medium: 'bg-amber-600',
-  Low: 'bg-green-400',
+  High: 'bg-black',
+  Medium: 'bg-black',
+  Low: 'bg-black',
 };
 
 const dueOptions = ['Today', 'Tomorrow', 'This Week', 'Next Week'];
@@ -104,7 +104,7 @@ const DashboardTasks = () => {
     return (
       <section className="w-full bg-white flex justify-center px-4 py-10" aria-busy="true">
         <div className="w-full max-w-[1000px]">
-          <h2 className="text-2xl font-bold text-amber-600 mb-6 animate-pulse">Tasks</h2>
+          <h2 className="text-2xl font-bold text-black mb-6 animate-pulse">Tasks</h2>
           <div className="space-y-3">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="h-12 bg-white rounded animate-pulse" />
@@ -118,7 +118,7 @@ const DashboardTasks = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl font-bold text-amber-600 mb-6">Tasks</h2>
+        <h2 className="text-2xl font-bold text-black mb-6">Tasks</h2>
 
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-700">
@@ -154,7 +154,7 @@ const DashboardTasks = () => {
           <button
             onClick={clearCompleted}
             disabled={!tasks.some((t) => t.completed)}
-            className="ml-auto bg-amber-600 text-black px-3 py-1.5 rounded font-semibold hover:bg-amber-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="ml-auto bg-black text-black px-3 py-1.5 rounded font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed"
             aria-disabled={!tasks.some((t) => t.completed)}
           >
             Clear Completed
@@ -173,7 +173,7 @@ const DashboardTasks = () => {
             placeholder="New task title"
             value={newTitle}
             onChange={(e) => setNewTitle(e.target.value)}
-            className="flex-1 bg-white rounded px-3 py-2 text-gray-900 placeholder-gray-500 focus:outline-amber-600"
+            className="flex-1 bg-white rounded px-3 py-2 text-gray-900 placeholder-gray-500 focus:outline-black"
             disabled={adding}
             required
           />
@@ -202,7 +202,7 @@ const DashboardTasks = () => {
           <button
             type="submit"
             disabled={adding || !newTitle.trim()}
-            className="bg-amber-600 text-black px-5 py-2 rounded font-semibold hover:bg-amber-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-black text-black px-5 py-2 rounded font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {adding ? 'Adding...' : 'Add Task'}
           </button>
@@ -241,7 +241,7 @@ const DashboardTasks = () => {
                   type="checkbox"
                   checked={completed}
                   onChange={() => toggleTask(id)}
-                  className="w-5 h-5 cursor-pointer accent-amber-600"
+                  className="w-5 h-5 cursor-pointer accent-black"
                   onClick={(e) => e.stopPropagation()}
                   aria-label={`Mark task "${title}" as ${completed ? 'incomplete' : 'complete'}`}
                 />
@@ -263,7 +263,7 @@ const DashboardTasks = () => {
                     e.stopPropagation();
                     deleteTask(id);
                   }}
-                  className="ml-3 text-red-500 hover:text-red-400 transition"
+                  className="ml-3 text-black hover:text-black transition"
                   title="Delete task"
                 >
                   ✕

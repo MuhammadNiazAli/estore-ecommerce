@@ -2260,7 +2260,7 @@ const renderStars = (rating) => {
 
   for (let i = 0; i < fullStars; i++) {
     stars.push(
-      <AiFillStar key={"full-" + i} className="text-amber-600 w-4 h-4" />
+      <AiFillStar key={"full-" + i} className="text-black w-4 h-4" />
     );
   }
 
@@ -2268,7 +2268,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="half"
-        className="text-amber-600 w-4 h-4"
+        className="text-black w-4 h-4"
         style={{ clipPath: "inset(0 50% 0 0)" }}
       />
     );
@@ -2277,7 +2277,7 @@ const renderStars = (rating) => {
   const emptyStars = 5 - stars.length;
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
-      <AiOutlineStar key={"empty-" + i} className="text-amber-600 w-4 h-4" />
+      <AiOutlineStar key={"empty-" + i} className="text-black w-4 h-4" />
     );
   }
 
@@ -2340,7 +2340,7 @@ const ProductRelatedItems = () => {
               </h3>
               <div className="flex items-center mt-1 space-x-1">
                 {renderStars(rating)}
-                <span className="text-amber-600 text-xs font-medium ml-1">
+                <span className="text-black text-xs font-medium ml-1">
                   {rating.toFixed(1)}
                 </span>
               </div>
@@ -2355,7 +2355,7 @@ const ProductRelatedItems = () => {
           <button
             onClick={loadMoreMobile}
             disabled={loadingMobile}
-            className="mx-auto mt-4 px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-700 transition flex items-center justify-center gap-2 min-w-[130px]"
+            className="mx-auto mt-4 px-6 py-2 bg-black text-gray-900 font-semibold rounded-full hover:bg-black transition flex items-center justify-center gap-2 min-w-[130px]"
           >
             {loadingMobile ? (
               <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin"></span>
@@ -2390,7 +2390,7 @@ const ProductRelatedItems = () => {
               </h3>
               <div className="flex items-center mt-1 space-x-1">
                 {renderStars(rating)}
-                <span className="text-amber-600 text-xs font-medium ml-1">
+                <span className="text-black text-xs font-medium ml-1">
                   {rating.toFixed(1)}
                 </span>
               </div>
@@ -2408,7 +2408,7 @@ const ProductRelatedItems = () => {
           <button
             onClick={loadMoreDesktop}
             disabled={loadingDesktop}
-            className="px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-full hover:bg-amber-700 transition flex items-center justify-center gap-2 min-w-[130px]"
+            className="px-6 py-2 bg-black text-gray-900 font-semibold rounded-full hover:bg-black transition flex items-center justify-center gap-2 min-w-[130px]"
           >
             {loadingDesktop ? (
               <span className="w-4 h-4 border-2 border-gray-200 border-t-transparent rounded-full animate-spin"></span>

@@ -37,7 +37,7 @@ const SupportHero = () => {
       <div className="max-w-[960px] mx-auto text-center">
 
         <div className="flex flex-col items-center gap-4">
-          <div className="p-4 bg-amber-800 rounded-full shadow-lg">
+          <div className="p-4 bg-black rounded-full shadow-lg">
             <FaHeadset size={36} />
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
@@ -48,7 +48,7 @@ const SupportHero = () => {
           </p>
           <a
             href="mailto:support@ecommerce.com"
-            className="inline-block bg-amber-800 hover:bg-amber-900 transition-colors duration-300 text-gray-900 px-10 py-3 rounded-full font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-opacity-50"
+            className="inline-block bg-black hover:bg-black transition-colors duration-300 text-gray-900 px-10 py-3 rounded-full font-semibold shadow-lg focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50"
           >
             Contact Support
           </a>
@@ -62,7 +62,7 @@ const SupportHero = () => {
               href={href}
               className="flex flex-col items-center gap-3 bg-white rounded-xl p-6 hover:bg-gray-500 transition duration-300 shadow-md hover:shadow-lg text-gray-700"
             >
-              <div className="text-amber-700 text-3xl">{icon}</div>
+              <div className="text-black text-3xl">{icon}</div>
               <span className="font-semibold text-lg">{label}</span>
             </a>
           ))}
@@ -78,7 +78,7 @@ const SupportHero = () => {
             <li>
               <a
                 href="/support/faq#order-status"
-                className="hover:text-amber-600 transition-colors"
+                className="hover:text-black transition-colors"
               >
                 • How can I check the status of my order?
               </a>
@@ -86,7 +86,7 @@ const SupportHero = () => {
             <li>
               <a
                 href="/support/faq#return-policy"
-                className="hover:text-amber-600 transition-colors"
+                className="hover:text-black transition-colors"
               >
                 • What’s your return policy?
               </a>
@@ -94,7 +94,7 @@ const SupportHero = () => {
             <li>
               <a
                 href="/support/faq#payment-options"
-                className="hover:text-amber-600 transition-colors"
+                className="hover:text-black transition-colors"
               >
                 • What payment methods do you accept?
               </a>

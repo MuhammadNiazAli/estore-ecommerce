@@ -97,8 +97,8 @@ const CareersOpenRoles = () => {
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-amber-600">{role.title}</h3>
-                  <div className="mt-2 flex flex-wrap items-center gap-4 text-amber-400 text-sm">
+                  <h3 className="text-xl font-semibold text-black">{role.title}</h3>
+                  <div className="mt-2 flex flex-wrap items-center gap-4 text-black text-sm">
                     <span className="flex items-center gap-1">
                       <MapPinIcon className="h-4 w-4" />
                       {role.location}
@@ -112,7 +112,7 @@ const CareersOpenRoles = () => {
 
                 <button
                   onClick={() => handleApplyClick(role)}
-                  className="bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-2 rounded-lg transition cursor-pointer"
+                  className="bg-black hover:bg-black text-gray-900 font-semibold px-5 py-2 rounded-lg transition cursor-pointer"
                 >
                   Apply Now
                 </button>
@@ -137,18 +137,18 @@ const CareersOpenRoles = () => {
                 transition={{ duration: 0.3 }}
                 className="bg-white w-full max-w-lg rounded-xl p-6 relative text-gray-900"
               >
-                <button onClick={handleClose} className="absolute top-4 right-4 text-gray-900 hover:text-amber-600 ">
+                <button onClick={handleClose} className="absolute top-4 right-4 text-gray-900 hover:text-black ">
                   <XMarkIcon className="h-6 w-6" />
                 </button>
 
                 {!submitted ? (
                   <>
                     <h3 className="text-2xl font-bold mb-1">{selectedRole.title}</h3>
-                    <p className="text-amber-600 mb-6">{selectedRole.location} · {selectedRole.type}</p>
+                    <p className="text-black mb-6">{selectedRole.location} · {selectedRole.type}</p>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="flex items-center gap-2 bg-white p-2 rounded">
-                        <UserIcon className="h-5 w-5 text-amber-600" />
+                        <UserIcon className="h-5 w-5 text-black" />
                         <input
                           type="text"
                           placeholder="Full Name"
@@ -159,7 +159,7 @@ const CareersOpenRoles = () => {
                         />
                       </div>
                       <div className="flex items-center gap-2 bg-white p-2 rounded">
-                        <EnvelopeIcon className="h-5 w-5 text-amber-600" />
+                        <EnvelopeIcon className="h-5 w-5 text-black" />
                         <input
                           type="email"
                           placeholder="Email"
@@ -170,7 +170,7 @@ const CareersOpenRoles = () => {
                         />
                       </div>
                       <div className="flex items-center gap-2 bg-white p-2 rounded">
-                        <PhoneIcon className="h-5 w-5 text-amber-600" />
+                        <PhoneIcon className="h-5 w-5 text-black" />
                         <input
                           type="tel"
                           placeholder="Phone"
@@ -181,7 +181,7 @@ const CareersOpenRoles = () => {
                         />
                       </div>
                       <div className="flex items-start gap-2 bg-white p-2 rounded">
-                        <DocumentTextIcon className="h-5 w-5 text-amber-600 mt-1" />
+                        <DocumentTextIcon className="h-5 w-5 text-black mt-1" />
                         <textarea
                           placeholder="Why should we hire you?"
                           required
@@ -193,7 +193,7 @@ const CareersOpenRoles = () => {
 
                       <button
                         type="submit"
-                        className="w-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-bold py-2 rounded transition flex justify-center items-center"
+                        className="w-full bg-black hover:bg-black text-gray-900 font-bold py-2 rounded transition flex justify-center items-center"
                       >
                         {loading ? (
                           <motion.div
@@ -211,11 +211,11 @@ const CareersOpenRoles = () => {
                     animate={{ scale: 1, opacity: 1 }}
                     className="text-center p-6"
                   >
-                    <h3 className="text-2xl font-bold text-green-400 mb-4">Application Submitted!</h3>
+                    <h3 className="text-2xl font-bold text-black mb-4">Application Submitted!</h3>
                     <p className="text-gray-900">Thank you for applying. We’ve received your details and will contact you via email shortly.</p>
                     <button
                       onClick={handleClose}
-                      className="mt-6 bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-6 py-2 rounded-lg transition cursor-pointer"
+                      className="mt-6 bg-black hover:bg-black text-gray-900 font-semibold px-6 py-2 rounded-lg transition cursor-pointer"
                     >
                       Close
                     </button>

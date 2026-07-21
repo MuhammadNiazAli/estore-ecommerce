@@ -37,7 +37,7 @@ const AudioSpecsComparison = () => {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Compare Audio Specs
           </h2>
           <p className="text-gray-600 mt-2 text-lg">
@@ -48,7 +48,7 @@ const AudioSpecsComparison = () => {
         {/* Table */}
         <div className="overflow-x-auto bg-white rounded-xl shadow-lg">
           <table className="w-full text-left">
-            <thead className="bg-white text-amber-600 uppercase text-sm">
+            <thead className="bg-white text-black uppercase text-sm">
               <tr>
                 <th className="py-4 px-4">Feature</th>
                 <th className="py-4 px-4">Premium Headphones</th>
@@ -69,9 +69,9 @@ const AudioSpecsComparison = () => {
                   <td className="py-4 px-4 text-center">
                     {typeof item.productA === "boolean" ? (
                       item.productA ? (
-                        <FaCheckCircle className="text-green-400 text-xl mx-auto" />
+                        <FaCheckCircle className="text-black text-xl mx-auto" />
                       ) : (
-                        <FaTimesCircle className="text-red-400 text-xl mx-auto" />
+                        <FaTimesCircle className="text-black text-xl mx-auto" />
                       )
                     ) : (
                       <span>{item.productA}</span>
@@ -80,9 +80,9 @@ const AudioSpecsComparison = () => {
                   <td className="py-4 px-4 text-center">
                     {typeof item.productB === "boolean" ? (
                       item.productB ? (
-                        <FaCheckCircle className="text-green-400 text-xl mx-auto" />
+                        <FaCheckCircle className="text-black text-xl mx-auto" />
                       ) : (
-                        <FaTimesCircle className="text-red-400 text-xl mx-auto" />
+                        <FaTimesCircle className="text-black text-xl mx-auto" />
                       )
                     ) : (
                       <span>{item.productB}</span>
@@ -98,7 +98,7 @@ const AudioSpecsComparison = () => {
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:hidden">
           {/* Product A Card */}
           <div className="bg-white p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-amber-600 mb-4">
+            <h3 className="text-xl font-semibold text-black mb-4">
               Premium Headphones
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -108,9 +108,9 @@ const AudioSpecsComparison = () => {
                   <span>
                     {typeof item.productA === "boolean" ? (
                       item.productA ? (
-                        <FaCheckCircle className="text-green-400" />
+                        <FaCheckCircle className="text-black" />
                       ) : (
-                        <FaTimesCircle className="text-red-400" />
+                        <FaTimesCircle className="text-black" />
                       )
                     ) : (
                       item.productA
@@ -123,7 +123,7 @@ const AudioSpecsComparison = () => {
 
           {/* Product B Card */}
           <div className="bg-white p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl font-semibold text-amber-600 mb-4">
+            <h3 className="text-xl font-semibold text-black mb-4">
               Budget Headphones
             </h3>
             <ul className="space-y-2 text-gray-700">
@@ -133,9 +133,9 @@ const AudioSpecsComparison = () => {
                   <span>
                     {typeof item.productB === "boolean" ? (
                       item.productB ? (
-                        <FaCheckCircle className="text-green-400" />
+                        <FaCheckCircle className="text-black" />
                       ) : (
-                        <FaTimesCircle className="text-red-400" />
+                        <FaTimesCircle className="text-black" />
                       )
                     ) : (
                       item.productB

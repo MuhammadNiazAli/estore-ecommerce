@@ -3,25 +3,25 @@ import { Eye, Handshake, Heart, Ear } from 'lucide-react';
 
 const commitments = [
   {
-    icon: <Eye className="w-8 h-8 text-amber-600" aria-hidden="true" />,
+    icon: <Eye className="w-8 h-8 text-black" aria-hidden="true" />,
     title: 'Visual Clarity',
     description:
       'Ensuring all content is perceivable with high contrast and screen reader support.',
   },
   {
-    icon: <Handshake className="w-8 h-8 text-amber-600" aria-hidden="true" />,
+    icon: <Handshake className="w-8 h-8 text-black" aria-hidden="true" />,
     title: 'User Empowerment',
     description:
       'We prioritize intuitive navigation and user control for everyone.',
   },
   {
-    icon: <Heart className="w-8 h-8 text-amber-600" aria-hidden="true" />,
+    icon: <Heart className="w-8 h-8 text-black" aria-hidden="true" />,
     title: 'Inclusive Design',
     description:
       'Our design considers all abilities and disabilities to create a welcoming experience.',
   },
   {
-    icon: <Ear className="w-8 h-8 text-amber-600" aria-hidden="true" />,
+    icon: <Ear className="w-8 h-8 text-black" aria-hidden="true" />,
     title: 'Assistive Technologies',
     description:
       'Compatibility with assistive devices ensures no user is left behind.',
@@ -34,7 +34,7 @@ const AccessibilityCommitment = () => {
       aria-labelledby="commitment-heading"
       className="w-full bg-white flex justify-center px-4 py-10 sm:py-16"
     >
-      <div className="max-w-[1000px] w-full text-amber-600">
+      <div className="max-w-[1000px] w-full text-black">
         <h2
           id="commitment-heading"
           className="text-3xl sm:text-4xl font-bold mb-8 text-center"

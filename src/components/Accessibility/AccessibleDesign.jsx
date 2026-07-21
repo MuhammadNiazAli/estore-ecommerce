@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 
 const designTips = [
   {
-    icon: <Contrast className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Contrast className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'High Contrast Colors',
     description:
       'Use strong contrast between text and background to improve readability for visually impaired users.',
   },
   {
-    icon: <Keyboard className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Keyboard className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Keyboard Navigation',
     description:
       'Ensure all features and actions are accessible using only a keyboard, with visible focus indicators.',
   },
   {
-    icon: <MousePointerClick className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <MousePointerClick className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Click Targets & Spacing',
     description:
       'Make buttons and links large enough with clear spacing to be easily clickable on all devices.',
   },
   {
-    icon: <Accessibility className="w-7 h-7 text-amber-600" aria-hidden="true" />,
+    icon: <Accessibility className="w-7 h-7 text-black" aria-hidden="true" />,
     title: 'Semantic Structure',
     description:
       'Use proper HTML semantics for headings, lists, and landmarks to aid screen reader navigation.',
@@ -40,7 +40,7 @@ const AccessibleDesign = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-3xl md:text-4xl font-bold text-amber-500"
+          className="text-3xl md:text-4xl font-bold text-black"
           tabIndex={-1}
         >
           Principles of Accessible Design
@@ -73,7 +73,7 @@ const AccessibleDesign = () => {
                 {tip.icon}
                 <h3
                   id={`tip-title-${index}`}
-                  className="text-lg font-semibold text-amber-400"
+                  className="text-lg font-semibold text-black"
                 >
                   {tip.title}
                 </h3>

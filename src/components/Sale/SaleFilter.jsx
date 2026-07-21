@@ -88,7 +88,7 @@ export default function SalePage() {
     <main className="min-h-screen bg-white text-gray-800 flex flex-col items-center px-4 py-10 space-y-10 max-w-7xl mx-auto mb-[-20px]">
       {/* ✅ Heading */}
       <h1 className="text-2xl md:text-4xl font-extrabold text-center leading-snug">
-        Hot Deals <span className="text-amber-700">This Season</span>
+        Hot Deals <span className="text-black">This Season</span>
       </h1>
 
       {/* ✅ Filter */}
@@ -124,7 +124,7 @@ const SaleFilter = ({ categories = [], onFilterChange }) => {
             className={`rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 shadow-md
               ${
                 activeCategory === category
-                  ? 'bg-amber-600 text-gray-900'
+                  ? 'bg-black text-gray-900'
                   : 'bg-white text-gray-700 hover:bg-gray-500'
               }
               px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2`}
@@ -165,16 +165,16 @@ const SaleProducts = ({ products }) => {
               </h3>
 
               {/* Price */}
-              <p className="text-amber-700 font-bold mt-1 text-sm sm:text-base">
+              <p className="text-black font-bold mt-1 text-sm sm:text-base">
                 ${product.price}
               </p>
 
               {/* Button */}
            <button
   className="mt-2 sm:mt-3 px-3 sm:px-4 md:px-5 py-1.5 sm:py-1.5 md:py-2
-             bg-white text-amber-600 rounded-full whitespace-nowrap
+             bg-white text-black rounded-full whitespace-nowrap
              text-xs sm:text-sm md:text-base font-semibold
-             hover:bg-amber-600 hover:text-gray-900 transition-all duration-300"
+             hover:bg-black hover:text-gray-900 transition-all duration-300"
 >
   Add to Cart
 </button>

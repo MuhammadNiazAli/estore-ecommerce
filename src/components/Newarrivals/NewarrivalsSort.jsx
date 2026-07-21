@@ -19,7 +19,7 @@ const NewarrivalsSort = () => {
     <section className="w-full max-w-sm mx-auto my-6 px-4">
       <label
         htmlFor="sort"
-        className="block mb-2 text-amber-600 font-semibold text-lg tracking-wide"
+        className="block mb-2 text-black font-semibold text-lg tracking-wide"
       >
         Sort By:
       </label>
@@ -30,14 +30,14 @@ const NewarrivalsSort = () => {
         className="
           w-full
           bg-white
-          text-amber-500
-          border border-amber-700
+          text-black
+          border border-black
           rounded-lg
           px-5 py-3
           shadow-md
           appearance-none
           focus:outline-none
-          focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60
+          focus:ring-4 focus:ring-black focus:ring-opacity-60
           transition
           duration-300
           cursor-pointer

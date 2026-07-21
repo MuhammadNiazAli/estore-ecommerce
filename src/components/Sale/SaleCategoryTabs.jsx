@@ -20,7 +20,7 @@ const SaleCategoryTabs = ({ categories = [], onTabChange }) => {
               className={`relative font-semibold text-sm sm:text-base whitespace-nowrap px-4 sm:px-5 py-2 rounded-md transition-all duration-300
                 ${
                   activeTab === category
-                    ? "text-gray-900 bg-amber-600 shadow-md scale-100"
+                    ? "text-gray-900 bg-black shadow-md scale-100"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-500"
                 }`}
             >

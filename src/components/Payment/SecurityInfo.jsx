@@ -28,15 +28,15 @@ export default function SecurityInfo() {
           w-full max-w-5xl
           bg-white
           rounded-3xl
-          border border-amber-800
-          shadow-lg shadow-amber-950/30
+          border border-black
+          shadow-lg shadow-black/30
           backdrop-blur-md
           p-8 sm:p-14
           text-gray-900
           select-none
           transition-all
           -mt-24 sm:-mt-20 mb-[-60px]
-          focus-within:shadow-amber-800/60
+          focus-within:shadow-black/60
         "
       >
         <h2
@@ -59,9 +59,9 @@ export default function SecurityInfo() {
                 className="
                   flex items-center justify-center
                   w-14 h-14
-                  bg-amber-800/20
+                  bg-black/20
                   rounded-full
-                  text-amber-600 text-3xl
+                  text-black text-3xl
                   drop-shadow-lg
                   group transition-transform
                   hover:scale-110 focus-within:scale-110

@@ -71,7 +71,7 @@ const CareersFAQ = () => {
             >
               <button
                 onClick={() => toggleIndex(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left text-amber-500 font-medium hover:bg-gray-500 transition"
+                className="w-full flex justify-between items-center px-6 py-4 text-left text-black font-medium hover:bg-gray-500 transition"
               >
                 <span>{faq.question}</span>
                 <ChevronDownIcon
@@ -83,7 +83,7 @@ const CareersFAQ = () => {
 
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
-                className="px-6 text-sm text-amber-300 overflow-hidden opacity-0 h-0"
+                className="px-6 text-sm text-black overflow-hidden opacity-0 h-0"
               >
                 <div className="pb-4 pt-1">{faq.answer}</div>
               </div>

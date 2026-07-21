@@ -5,22 +5,22 @@ import { FaHandsHelping, FaUserShield, FaEnvelopeOpenText, FaTimes } from 'react
 
 const accountHelpFeatures = [
   {
-    icon: <FaUserShield className="text-amber-600 text-base" />,
+    icon: <FaUserShield className="text-black text-base" />,
     label: 'Secure Account Management',
   },
   {
-    icon: <FaEnvelopeOpenText className="text-amber-600 text-base" />,
+    icon: <FaEnvelopeOpenText className="text-black text-base" />,
     label: 'Update Contact Information',
   },
   {
-    icon: <FaHandsHelping className="text-amber-600 text-base" />,
+    icon: <FaHandsHelping className="text-black text-base" />,
     label: 'Support for Account Issues',
   },
 ];
 
 const accountSettingsContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Account Settings Guide</h3>
+    <h3 className="text-lg font-semibold text-black">Account Settings Guide</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Change your password securely.</li>
       <li>Update your email, phone number, or username.</li>
@@ -33,7 +33,7 @@ const accountSettingsContent = (
 
 const contactSupportContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Contact Support</h3>
+    <h3 className="text-lg font-semibold text-black">Contact Support</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Describe your issue clearly for faster assistance.</li>
       <li>Include screenshots or error codes if applicable.</li>
@@ -57,7 +57,7 @@ export default function HelpingAccount() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Account Support Center
         </h2>
         <p className="text-gray-700 max-w-md mx-auto text-sm">
@@ -83,8 +83,8 @@ export default function HelpingAccount() {
             onClick={() => handleSectionToggle('settings')}
             className={`px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'settings'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             } text-sm`}
             aria-label="Toggle account settings section"
           >
@@ -108,7 +108,7 @@ export default function HelpingAccount() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

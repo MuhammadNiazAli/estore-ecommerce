@@ -90,7 +90,7 @@ export default function Footer() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            <span className="text-amber-600">e</span>Store
+            <span className="text-black">e</span>Store
             </h2>
 
        <p className="text-gray-600 max-w-xl mx-auto text-[15px] leading-relaxed">

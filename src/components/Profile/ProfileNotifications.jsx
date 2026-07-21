@@ -25,9 +25,9 @@ const notifications = [
 ];
 
 const iconByType = {
-  success: <CheckCircleIcon className="w-6 h-6 text-green-400" />,
-  info: <BellIcon className="w-6 h-6 text-amber-600" />,
-  error: <XCircleIcon className="w-6 h-6 text-red-500" />,
+  success: <CheckCircleIcon className="w-6 h-6 text-black" />,
+  info: <BellIcon className="w-6 h-6 text-black" />,
+  error: <XCircleIcon className="w-6 h-6 text-black" />,
 };
 
 const ProfileNotifications = () => {
@@ -37,14 +37,14 @@ const ProfileNotifications = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 mb-1">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-1">
               Notifications
             </h2>
             <p className="text-sm sm:text-base text-gray-700 max-w-md">
               Stay updated with the latest alerts and messages about your account.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base">
             <BellIcon className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
             <span>Recent Alerts</span>
           </div>
@@ -74,7 +74,7 @@ const ProfileNotifications = () => {
         <div className="mt-8 flex justify-center sm:justify-end">
           <button
             type="button"
-            className="px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition text-sm sm:text-base"
+            className="px-6 py-3 rounded-full bg-black hover:bg-black text-gray-900 font-semibold shadow-lg transition text-sm sm:text-base"
             aria-label="Clear all notifications"
           >
             Clear All

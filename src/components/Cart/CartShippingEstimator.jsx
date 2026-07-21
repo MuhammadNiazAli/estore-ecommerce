@@ -45,7 +45,7 @@ const CartShippingEstimator = () => {
           name="country"
           value={country}
           onChange={(e) => setCountry(e.target.value)}
-          className="bg-white border border-gray-200 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-700"
+          className="bg-white border border-gray-200 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-black"
         >
           <option value="" disabled>
             Select your country
@@ -68,26 +68,26 @@ const CartShippingEstimator = () => {
           value={postalCode}
           onChange={(e) => setPostalCode(e.target.value)}
           placeholder="Enter postal code"
-          className="bg-white border border-gray-200 rounded-md py-2 px-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
+          className="bg-white border border-gray-200 rounded-md py-2 px-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
         />
 
         {/* Estimate button */}
         <button
           type="button"
           onClick={handleEstimate}
-          className="w-full bg-amber-800 hover:bg-amber-900 transition-colors rounded-md py-2 text-gray-900 font-semibold focus:outline-none focus:ring-2 focus:ring-amber-700"
+          className="w-full bg-black hover:bg-black transition-colors rounded-md py-2 text-gray-900 font-semibold focus:outline-none focus:ring-2 focus:ring-black"
         >
           Estimate Shipping
         </button>
 
         {/* Error message */}
         {error && (
-          <p className="text-red-500 text-sm font-medium text-center">{error}</p>
+          <p className="text-black text-sm font-medium text-center">{error}</p>
         )}
 
         {/* Result */}
         {shippingCost && (
-          <p className="text-amber-600 text-center font-semibold">
+          <p className="text-black text-center font-semibold">
             Estimated Shipping Cost: ${shippingCost}
           </p>
         )}

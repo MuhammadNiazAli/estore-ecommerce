@@ -58,8 +58,8 @@ const FlashDealTimer = ({
         className={`max-w-[960px] w-full rounded-3xl p-8 shadow-xl border
         ${
           expired
-            ? 'bg-red-100 border-red-300 text-red-800 animate-pulse'
-            : 'bg-amber-200 border-amber-500 text-amber-950'
+            ? 'bg-black border-black text-black animate-pulse'
+            : 'bg-black border-black text-black'
         }`}
         role="region"
       >
@@ -68,14 +68,14 @@ const FlashDealTimer = ({
           <div className="text-center sm:text-left max-w-md space-y-3">
             <h2
               className={`font-extrabold tracking-tight text-3xl sm:text-4xl ${
-                expired ? 'text-red-700' : 'text-amber-950'
+                expired ? 'text-black' : 'text-black'
               }`}
             >
               {expired ? 'Deal Expired' : 'Limited Time Flash Deal!'}
             </h2>
             <p
               className={`text-base font-medium max-w-sm ${
-                expired ? 'text-red-600' : 'text-amber-900'
+                expired ? 'text-black' : 'text-black'
               }`}
             >
               {expired
@@ -97,7 +97,7 @@ const FlashDealTimer = ({
               />
               <FiClock
                 size={24}
-                className="text-amber-900 ml-2 flex-shrink-0"
+                className="text-black ml-2 flex-shrink-0"
                 aria-hidden="true"
               />
             </div>
@@ -106,7 +106,7 @@ const FlashDealTimer = ({
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-center text-xl sm:text-2xl font-bold text-red-600"
+              className="text-center text-xl sm:text-2xl font-bold text-black"
             >
               Deal Ended
             </motion.div>
@@ -125,8 +125,8 @@ const TimeBox = ({ label, value, pulse = false }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       className={`min-w-[60px] sm:min-w-[70px] rounded-xl px-4 py-2 flex flex-col items-center
-        bg-amber-300 text-amber-950 font-semibold
-        ${pulse ? 'border border-red-500 animate-pulse' : ''}`}
+        bg-black text-black font-semibold
+        ${pulse ? 'border border-black animate-pulse' : ''}`}
       aria-label={`${value} ${label}`}
       role="timer"
     >

@@ -34,11 +34,11 @@ export default function PromoCode({ applyPromo }) {
         className="
           w-full max-w-[600px]
           bg-white
-          border border-amber-900
+          border border-black
           shadow-2xl rounded-3xl
           p-5 sm:p-8 md:p-10
           backdrop-blur-md
-          ring-1 ring-amber-800/30
+          ring-1 ring-black/30
           transition-all
         "
       >
@@ -62,9 +62,9 @@ export default function PromoCode({ applyPromo }) {
             disabled={loading}
             className="
               px-4 py-3 rounded-lg
-              bg-amber-950/80 border border-amber-800
-              placeholder-amber-500 text-gray-900 font-semibold tracking-wide
-              focus:outline-none focus:ring-4 focus:ring-amber-600
+              bg-black/80 border border-black
+              placeholder-gray-500 text-gray-900 font-semibold tracking-wide
+              focus:outline-none focus:ring-4 focus:ring-black
               transition
               w-full
               disabled:opacity-60 disabled:cursor-not-allowed
@@ -77,10 +77,10 @@ export default function PromoCode({ applyPromo }) {
             disabled={!code.trim() || loading}
             className="
               px-6 py-3 rounded-lg
-              bg-gradient-to-r from-amber-700 to-amber-800
-              hover:from-amber-800 hover:to-amber-900
+              bg-gradient-to-r from-black to-gray-900
+              hover:from-black hover:to-gray-900
               text-gray-900 font-extrabold tracking-wide
-              focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2
+              focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2
               transition
               sm:w-auto w-full
               disabled:opacity-50 disabled:cursor-not-allowed
@@ -95,7 +95,7 @@ export default function PromoCode({ applyPromo }) {
           <p
             role="alert"
             className={`mt-6 text-center text-sm font-semibold select-text ${
-              isSuccess ? "text-green-400" : "text-red-400"
+              isSuccess ? "text-black" : "text-black"
             }`}
           >
             {message}

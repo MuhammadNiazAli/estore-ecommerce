@@ -38,7 +38,7 @@ const InvestorsFinancials = () => {
   return (
     <section
       aria-label="Investors Financial Summary"
-      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex justify-center my-[-100px]"
+      className="bg-white text-black px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex justify-center my-[-100px]"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -47,12 +47,12 @@ const InvestorsFinancials = () => {
         viewport={{ once: true }}
         className="max-w-[1000px] w-full"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 text-amber-600 leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 text-black leading-tight">
           Financial Summary
         </h2>
 
         {/* Desktop/Table View */}
-        <div className="hidden sm:block overflow-x-auto rounded-xl shadow-md ring-1 ring-amber-900/40 bg-white">
+        <div className="hidden sm:block overflow-x-auto rounded-xl shadow-md ring-1 ring-black/40 bg-white">
           <table className="min-w-[600px] w-full border-separate border-spacing-y-2">
             <thead className="bg-white sticky top-0 z-10">
               <tr>
@@ -60,7 +60,7 @@ const InvestorsFinancials = () => {
                   <th
                     key={key}
                     scope="col"
-                    className="text-left py-3 px-5 text-amber-500 font-semibold whitespace-nowrap text-base"
+                    className="text-left py-3 px-5 text-black font-semibold whitespace-nowrap text-base"
                   >
                     {label}
                   </th>
@@ -71,12 +71,12 @@ const InvestorsFinancials = () => {
               {financialData.map((item) => (
                 <tr
                   key={item.year}
-                  className="bg-white/30 hover:bg-amber-950/20 transition-colors"
+                  className="bg-white/30 hover:bg-black/20 transition-colors"
                 >
                   {headers.map(({ key }) => (
                     <td
                       key={key}
-                      className="py-4 px-5 text-amber-300 text-base whitespace-nowrap"
+                      className="py-4 px-5 text-black text-base whitespace-nowrap"
                     >
                       {item[key]}
                     </td>
@@ -92,22 +92,22 @@ const InvestorsFinancials = () => {
           {financialData.map((item) => (
             <div
               key={item.year}
-              className="bg-white rounded-xl p-5 shadow-md ring-1 ring-amber-900/40"
+              className="bg-white rounded-xl p-5 shadow-md ring-1 ring-black/40"
             >
               {headers.map(({ key, label }) => (
                 <div
                   key={key}
-                  className="flex justify-between border-b border-amber-900/30 last:border-none py-2"
+                  className="flex justify-between border-b border-black/30 last:border-none py-2"
                 >
-                  <span className="text-amber-500 font-semibold">{label}</span>
-                  <span className="text-amber-300 font-normal">{item[key]}</span>
+                  <span className="text-black font-semibold">{label}</span>
+                  <span className="text-black font-normal">{item[key]}</span>
                 </div>
               ))}
             </div>
           ))}
         </div>
 
-        <p className="text-xs sm:text-sm text-amber-500 text-center mt-6 italic px-4 max-w-[600px] mx-auto">
+        <p className="text-xs sm:text-sm text-black text-center mt-6 italic px-4 max-w-[600px] mx-auto">
           *Figures are in USD and rounded. Past performance does not guarantee future results.
         </p>
       </motion.div>

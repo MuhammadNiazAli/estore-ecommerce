@@ -567,7 +567,7 @@ const RecentlyViewedDeals = () => {
                     className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:blur-sm"
                   />
                   {discount > 0 && (
-                    <span className="absolute top-3 left-[-100px] group-hover:left-3 transition-all duration-300 bg-amber-600 text-black text-xs font-bold px-2 py-1 rounded-full z-10">
+                    <span className="absolute top-3 left-[-100px] group-hover:left-3 transition-all duration-300 bg-black text-black text-xs font-bold px-2 py-1 rounded-full z-10">
                       -{discount}%
                     </span>
                   )}
@@ -584,7 +584,7 @@ const RecentlyViewedDeals = () => {
                   </ul>
 
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-lg font-bold text-amber-600">${price}</span>
+                    <span className="text-lg font-bold text-black">${price}</span>
                     {oldPrice && (
                       <span className="text-sm line-through text-gray-600">${oldPrice}</span>
                     )}
@@ -624,7 +624,7 @@ const RecentlyViewedDeals = () => {
           <button
             onClick={() => scroll('left')}
             aria-label="Scroll Left"
-            className={`absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
+            className={`absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-black rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
               isMobile ? 'w-12 h-12' : 'w-14 h-14'
             } shadow-lg`}
           >
@@ -636,7 +636,7 @@ const RecentlyViewedDeals = () => {
           <button
             onClick={() => scroll('right')}
             aria-label="Scroll Right"
-            className={`absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-amber-600 rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
+            className={`absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-black rounded-full flex items-center justify-center transition-colors duration-300 z-50 ${
               isMobile ? 'w-12 h-12' : 'w-14 h-14'
             } shadow-lg`}
           >
@@ -668,7 +668,7 @@ const RecentlyViewedDeals = () => {
           width: 36px;
           height: 36px;
           border-radius: 9999px;
-          color: #b45309;
+          color: #111827;
           background-color: rgba(255, 255, 255, 0.05);
           transition: all 0.3s ease;
           overflow: hidden;

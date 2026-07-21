@@ -71,7 +71,7 @@ const CamerasSpecsComparison = () => {
     <section className="bg-white text-gray-900 py-16 my-[-40px]">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6 text-center">
           Compare Camera Specifications
         </h2>
 
@@ -83,7 +83,7 @@ const CamerasSpecsComparison = () => {
               onClick={() => toggleCamera(camera)}
               className={`border px-4 py-2 rounded-lg transition ${
                 selectedCameras.find((c) => c.id === camera.id)
-                  ? "bg-amber-600 text-black border-amber-600"
+                  ? "bg-black text-black border-black"
                   : "border-gray-200 text-gray-900 hover:bg-gray-500"
               }`}
             >
@@ -107,13 +107,13 @@ const CamerasSpecsComparison = () => {
                         className="w-32 h-32 object-cover rounded-lg mb-2"
                       />
                       <p className="font-semibold">{camera.name}</p>
-                      <p className="text-amber-600 font-bold">${camera.price}</p>
+                      <p className="text-black font-bold">${camera.price}</p>
                       <div className="flex justify-center mt-1">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <FaStar
                             key={i}
                             className={`text-sm ${
-                              i < camera.rating ? "text-amber-600" : "text-gray-500"
+                              i < camera.rating ? "text-black" : "text-gray-500"
                             }`}
                           />
                         ))}
@@ -140,11 +140,11 @@ const CamerasSpecsComparison = () => {
                 {selectedCameras.map((camera) => (
                   <td key={camera.id} className="p-4 text-center">
                     {camera.features.includes("IBIS") ? (
-                      <p className="text-green-400 flex items-center justify-center gap-1">
+                      <p className="text-black flex items-center justify-center gap-1">
                         <FaCheck /> IBIS
                       </p>
                     ) : (
-                      <p className="text-red-400 flex items-center justify-center gap-1">
+                      <p className="text-black flex items-center justify-center gap-1">
                         <FaTimes /> No IBIS
                       </p>
                     )}

@@ -146,7 +146,7 @@ const ReviewPhotosGallery = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute top-5 right-5 text-amber-400 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+              className="absolute top-5 right-5 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
               aria-label="Close fullscreen photo view"
             >
               <X size={28} />
@@ -154,7 +154,7 @@ const ReviewPhotosGallery = () => {
 
             <button
               onClick={showPrevPhoto}
-              className="absolute left-5 top-1/2 -translate-y-1/2 text-amber-400 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+              className="absolute left-5 top-1/2 -translate-y-1/2 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
               aria-label="Previous photo"
             >
               <ChevronLeft size={40} />
@@ -181,7 +181,7 @@ const ReviewPhotosGallery = () => {
 
             <button
               onClick={showNextPhoto}
-              className="absolute right-5 top-1/2 -translate-y-1/2 text-amber-400 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+              className="absolute right-5 top-1/2 -translate-y-1/2 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
               aria-label="Next photo"
             >
               <ChevronRight size={40} />

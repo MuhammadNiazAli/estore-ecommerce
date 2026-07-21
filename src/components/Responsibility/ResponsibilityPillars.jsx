@@ -13,7 +13,7 @@ const IconBalanceScale = (props) => (
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 24 24"
-    className="w-12 h-12 text-amber-600"
+    className="w-12 h-12 text-black"
     aria-hidden="true"
   >
     <path d="M3 21h18M12 3v18M7 21V9m10 12V9M7 9l5-6 5 6" />
@@ -25,7 +25,7 @@ const IconLeaf = (props) => (
     {...props}
     fill="currentColor"
     viewBox="0 0 24 24"
-    className="w-12 h-12 text-green-400"
+    className="w-12 h-12 text-black"
     aria-hidden="true"
   >
     <path d="M12 2C8 6 3 12 12 22c9-10 4-16 0-20z" />
@@ -41,7 +41,7 @@ const IconUsers = (props) => (
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 24 24"
-    className="w-12 h-12 text-amber-600"
+    className="w-12 h-12 text-black"
     aria-hidden="true"
   >
     <path d="M17 21v-2a4 4 0 0 0-3-3.87M7 21v-2a4 4 0 0 1 3-3.87M12 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
@@ -57,7 +57,7 @@ const IconGlobe = (props) => (
     strokeLinecap="round"
     strokeLinejoin="round"
     viewBox="0 0 24 24"
-    className="w-12 h-12 text-amber-600"
+    className="w-12 h-12 text-black"
     aria-hidden="true"
   >
     <circle cx="12" cy="12" r="10" />
@@ -110,7 +110,7 @@ const ResponsibilityPillars = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-amber-600 text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 sm:mb-12 select-none max-w-full"
+          className="text-black text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 sm:mb-12 select-none max-w-full"
         >
           Our Responsibility Pillars
         </motion.h2>
@@ -135,8 +135,8 @@ const ResponsibilityPillars = () => {
                 visible: { opacity: 1, y: 0 },
               }}
               className="bg-white rounded-xl p-5 sm:p-6 cursor-default
-                hover:shadow-amber-700/40 hover:scale-[1.05] transition-transform duration-300
-                focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2"
+                hover:shadow-black/40 hover:scale-[1.05] transition-transform duration-300
+                focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2"
               tabIndex={0}
               role="listitem"
               aria-labelledby={`pillar-title-${id}`}
@@ -145,7 +145,7 @@ const ResponsibilityPillars = () => {
               <div className="mb-3 flex justify-center">{icon}</div>
               <h3
                 id={`pillar-title-${id}`}
-                className="text-amber-600 text-lg sm:text-xl font-semibold mb-2 select-none"
+                className="text-black text-lg sm:text-xl font-semibold mb-2 select-none"
               >
                 {title}
               </h3>

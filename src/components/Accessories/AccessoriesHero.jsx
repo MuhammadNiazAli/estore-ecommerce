@@ -88,7 +88,7 @@ const AccessoriesHero = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-transparent bg-clip-text select-none leading-snug sm:leading-tight"
+          className="text-3xl sm:text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-black via-gray-700 to-gray-900 text-transparent bg-clip-text select-none leading-snug sm:leading-tight"
         >
           Elevate Your Accessories Game
         </motion.h1>
@@ -115,8 +115,8 @@ const AccessoriesHero = () => {
               className={`flex flex-col items-center rounded-lg p-2 sm:p-4 md:p-5 transition-colors duration-300 text-center text-xs sm:text-sm md:text-base font-semibold
                 ${
                   activeFeature.id === feature.id
-                    ? 'bg-amber-700 text-gray-900 shadow-lg shadow-amber-600/40'
-                    : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-gray-900'
+                    ? 'bg-black text-gray-900 shadow-lg shadow-black/40'
+                    : 'bg-white text-black hover:bg-black hover:text-gray-900'
                 }`}
               aria-pressed={activeFeature.id === feature.id}
             >
@@ -149,7 +149,7 @@ const AccessoriesHero = () => {
               </div>
               {/* Content */}
               <div className="p-5 sm:p-8 md:p-12 lg:p-14 text-left sm:w-1/2 flex flex-col justify-center">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-amber-600 mb-3 md:mb-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-3 md:mb-4">
                   {activeFeature.title}
                 </h2>
                 {activeFeature.description.map((para, idx) => (
@@ -161,7 +161,7 @@ const AccessoriesHero = () => {
                   </p>
                 ))}
 
-                <ul className="list-disc list-inside text-amber-400 space-y-1 sm:space-y-2 mb-4 md:mb-6 lg:mb-8 text-xs sm:text-sm md:text-base lg:text-lg">
+                <ul className="list-disc list-inside text-black space-y-1 sm:space-y-2 mb-4 md:mb-6 lg:mb-8 text-xs sm:text-sm md:text-base lg:text-lg">
                   {activeFeature.details.map((detail, idx) => (
                     <li key={idx}>{detail}</li>
                   ))}
@@ -169,7 +169,7 @@ const AccessoriesHero = () => {
 
                 <button
                   type="button"
-                  className="inline-block px-5 py-2 sm:px-6 sm:py-3 bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold rounded-full shadow-lg shadow-amber-700/40 transition duration-300 text-xs sm:text-sm md:text-base"
+                  className="inline-block px-5 py-2 sm:px-6 sm:py-3 bg-black hover:bg-black text-gray-900 font-semibold rounded-full shadow-lg shadow-black/40 transition duration-300 text-xs sm:text-sm md:text-base"
                   onClick={() =>
                     alert(`Learn more about ${activeFeature.title}!`)
                   }

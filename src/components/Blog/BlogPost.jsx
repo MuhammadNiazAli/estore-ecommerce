@@ -82,9 +82,9 @@ export default function BlogPost() {
       <div className="max-w-[900px] w-full prose prose-invert sm:prose-lg md:prose-xl lg:prose-xl xl:prose-2xl">
         {/* Title */}
         <header className="mb-6 sm:mb-8">
-          <h1 className="font-extrabold text-amber-600 break-words">{blogPost.title}</h1>
+          <h1 className="font-extrabold text-black break-words">{blogPost.title}</h1>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mt-3">
-            <figure className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-amber-600 flex-shrink-0">
+            <figure className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-black flex-shrink-0">
               <Image
                 src={blogPost.author.avatar}
                 alt={blogPost.author.name}
@@ -94,7 +94,7 @@ export default function BlogPost() {
               />
             </figure>
             <div className="text-gray-600 text-sm sm:text-base">
-              <p className="text-amber-600 font-semibold">{blogPost.author.name}</p>
+              <p className="text-black font-semibold">{blogPost.author.name}</p>
               <time dateTime={blogPost.publishedDate}>{blogPost.publishedDateFormatted}</time>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function BlogPost() {
           {blogPost.tags.map((tag) => (
             <button
               key={tag}
-              className="flex items-center gap-1 text-amber-600 bg-amber-950 bg-opacity-20 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold hover:bg-amber-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
+              className="flex items-center gap-1 text-black bg-black bg-opacity-20 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
               onClick={() => setOpenTag(tag)}
             >
               <Tag size={14} />
@@ -136,14 +136,14 @@ export default function BlogPost() {
         {openTag && (
           <div
             ref={modalRef}
-            className="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-white w-[90%] max-w-[400px] rounded-lg shadow-lg p-6 border border-amber-900 animate-scaleUp sm:w-[400px]"
+            className="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-white w-[90%] max-w-[400px] rounded-lg shadow-lg p-6 border border-black animate-scaleUp sm:w-[400px]"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
           >
             <button
               onClick={() => setOpenTag(null)}
-              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
+              className="absolute top-4 right-4 text-black hover:text-black focus:outline-none"
               aria-label="Close modal"
             >
               <X size={20} />
@@ -151,7 +151,7 @@ export default function BlogPost() {
 
             <h2
               id="modal-title"
-              className="text-amber-600 text-lg sm:text-xl font-bold mb-3 break-words"
+              className="text-black text-lg sm:text-xl font-bold mb-3 break-words"
             >
               {tagDetails[openTag]?.title || openTag}
             </h2>

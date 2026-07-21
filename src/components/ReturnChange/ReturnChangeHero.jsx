@@ -135,7 +135,7 @@ const ReturnChangeHero = () => {
   return (
     <section className="bg-white text-gray-900 flex justify-center px-4 py-10 min-h-[600px]">
       <div className="w-full max-w-[1000px] text-center">
-        <h1 className="text-4xl font-bold text-amber-600 mb-4">
+        <h1 className="text-4xl font-bold text-black mb-4">
           Return & Exchange Center
         </h1>
         <p className="text-lg text-gray-700 mb-8 max-w-[600px] mx-auto">
@@ -149,10 +149,10 @@ const ReturnChangeHero = () => {
             <button
               key={key}
               type="button"
-              className={`px-6 py-3 rounded-full font-semibold border-2 transition duration-300 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 ${
+              className={`px-6 py-3 rounded-full font-semibold border-2 transition duration-300 focus:outline-black focus:ring-2 focus:ring-black ${
                 activeTab === key
-                  ? 'bg-amber-600 text-black border-amber-600'
-                  : 'border-amber-600 text-amber-600 hover:bg-amber-700 hover:text-black'
+                  ? 'bg-black text-black border-black'
+                  : 'border-black text-black hover:bg-black hover:text-black'
               }`}
               onClick={() => handleTabChange(key)}
               aria-pressed={activeTab === key}
@@ -164,7 +164,7 @@ const ReturnChangeHero = () => {
 
         {/* Info box + button */}
         <div className="bg-white rounded-xl p-6 shadow-xl mb-10 max-w-[600px] mx-auto text-left">
-          <h2 className="text-2xl font-semibold text-amber-500 mb-2">
+          <h2 className="text-2xl font-semibold text-black mb-2">
             {tabs[activeTab].title}
           </h2>
           <p className="text-gray-700 mb-6">{tabs[activeTab].desc}</p>
@@ -172,7 +172,7 @@ const ReturnChangeHero = () => {
           <button
             type="button"
             onClick={() => setOpenModal(true)}
-            className="px-5 py-3 bg-amber-600 text-black font-semibold rounded-md hover:bg-amber-700 transition focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 w-full sm:w-auto"
+            className="px-5 py-3 bg-black text-black font-semibold rounded-md hover:bg-black transition focus:outline-black focus:ring-2 focus:ring-black w-full sm:w-auto"
           >
             Start {activeTab === 'return' ? 'Return' : 'Exchange'} Request
           </button>
@@ -181,24 +181,24 @@ const ReturnChangeHero = () => {
         {/* Features grid */}
         <div className="grid md:grid-cols-3 gap-6 text-left text-sm text-gray-700 max-w-[900px] mx-auto">
           <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
-            <Truck className="text-amber-600 mb-3 w-7 h-7" />
-            <h3 className="text-amber-500 font-medium mb-1">Fast Pickup</h3>
+            <Truck className="text-black mb-3 w-7 h-7" />
+            <h3 className="text-black font-medium mb-1">Fast Pickup</h3>
             <p className="text-gray-700 leading-relaxed">
               We’ll pick up the item from your doorstep within 48 hours.
             </p>
           </div>
 
           <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
-            <RefreshCcw className="text-amber-600 mb-3 w-7 h-7" />
-            <h3 className="text-amber-500 font-medium mb-1">Instant Refunds</h3>
+            <RefreshCcw className="text-black mb-3 w-7 h-7" />
+            <h3 className="text-black font-medium mb-1">Instant Refunds</h3>
             <p className="text-gray-700 leading-relaxed">
               Get your money back within 1–3 business days after pickup.
             </p>
           </div>
 
           <div className="bg-white p-5 rounded-xl shadow-md hover:bg-gray-500 transition flex flex-col items-start">
-            <ShieldCheck className="text-amber-600 mb-3 w-7 h-7" />
-            <h3 className="text-amber-500 font-medium mb-1">Secure Process</h3>
+            <ShieldCheck className="text-black mb-3 w-7 h-7" />
+            <h3 className="text-black font-medium mb-1">Secure Process</h3>
             <p className="text-gray-700 leading-relaxed">
               All return and exchange requests are verified for your safety.
             </p>
@@ -220,7 +220,7 @@ const ReturnChangeHero = () => {
           >
             <button
               aria-label="Close modal"
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600 rounded"
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 focus:outline-black focus:ring-2 focus:ring-black rounded"
               onClick={() => setOpenModal(false)}
             >
               <X size={24} />
@@ -228,7 +228,7 @@ const ReturnChangeHero = () => {
 
             <h3
               id="modal-title"
-              className="text-2xl font-bold text-amber-600 mb-3"
+              className="text-2xl font-bold text-black mb-3"
             >
               {activeTab === 'return' ? 'Return Product' : 'Exchange Product'}
             </h3>
@@ -241,9 +241,9 @@ const ReturnChangeHero = () => {
               <div>
                 <label
                   htmlFor="input-orderId"
-                  className="block mb-1 font-semibold text-amber-500"
+                  className="block mb-1 font-semibold text-black"
                 >
-                  Order ID <span className="text-red-500">*</span>
+                  Order ID <span className="text-black">*</span>
                 </label>
                 <input
                   id="input-orderId"
@@ -255,15 +255,15 @@ const ReturnChangeHero = () => {
                   aria-invalid={errors.orderId ? 'true' : 'false'}
                   aria-describedby={errors.orderId ? 'error-orderId' : undefined}
                   className={`w-full p-3 rounded-md bg-white border ${
-                    errors.orderId ? 'border-red-500' : 'border-gray-200'
-                  } text-gray-900 placeholder-gray-500 focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
+                    errors.orderId ? 'border-black' : 'border-gray-200'
+                  } text-gray-900 placeholder-gray-500 focus:outline-black focus:ring-1 focus:ring-black transition`}
                   disabled={submitting}
                   autoComplete="off"
                 />
                 {errors.orderId && (
                   <p
                     id="error-orderId"
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-black text-sm"
                     role="alert"
                   >
                     {errors.orderId}
@@ -274,9 +274,9 @@ const ReturnChangeHero = () => {
               <div>
                 <label
                   htmlFor="input-reason"
-                  className="block mb-1 font-semibold text-amber-500"
+                  className="block mb-1 font-semibold text-black"
                 >
-                  Reason for request <span className="text-red-500">*</span>
+                  Reason for request <span className="text-black">*</span>
                 </label>
                 <textarea
                   id="input-reason"
@@ -288,14 +288,14 @@ const ReturnChangeHero = () => {
                   aria-invalid={errors.reason ? 'true' : 'false'}
                   aria-describedby={errors.reason ? 'error-reason' : undefined}
                   className={`w-full p-3 rounded-md bg-white border ${
-                    errors.reason ? 'border-red-500' : 'border-gray-200'
-                  } text-gray-900 placeholder-gray-500 resize-none focus:outline-amber-600 focus:ring-1 focus:ring-amber-600 transition`}
+                    errors.reason ? 'border-black' : 'border-gray-200'
+                  } text-gray-900 placeholder-gray-500 resize-none focus:outline-black focus:ring-1 focus:ring-black transition`}
                   disabled={submitting}
                 />
                 {errors.reason && (
                   <p
                     id="error-reason"
-                    className="mt-1 text-red-500 text-sm"
+                    className="mt-1 text-black text-sm"
                     role="alert"
                   >
                     {errors.reason}
@@ -308,8 +308,8 @@ const ReturnChangeHero = () => {
                 disabled={submitting}
                 className={`w-full py-3 rounded-md font-semibold transition ${
                   submitting
-                    ? 'bg-amber-500 text-black cursor-not-allowed'
-                    : 'bg-amber-600 text-black hover:bg-amber-700 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600'
+                    ? 'bg-black text-black cursor-not-allowed'
+                    : 'bg-black text-black hover:bg-black focus:outline-black focus:ring-2 focus:ring-black'
                 }`}
                 aria-busy={submitting}
               >

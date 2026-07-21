@@ -4,16 +4,16 @@ const SustainabilityMission = () => {
   return (
     <section
       aria-labelledby="sustainability-mission-title"
-      className="bg-white text-amber-600 px-6 sm:px-8 lg:px-12 py-16"
+      className="bg-white text-black px-6 sm:px-8 lg:px-12 py-16"
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2
           id="sustainability-mission-title"
-          className="text-4xl font-extrabold text-amber-500 mb-8 select-none"
+          className="text-4xl font-extrabold text-black mb-8 select-none"
         >
           Our Mission
         </h2>
-        <p className="text-amber-400 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto tracking-wide">
+        <p className="text-black text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto tracking-wide">
           We are committed to fostering a sustainable future by driving innovation, promoting
           responsible environmental stewardship, and empowering communities worldwide. Our
           mission is to integrate sustainable practices into every aspect of business and society,
@@ -42,19 +42,19 @@ const SustainabilityMission = () => {
               tabIndex={0}
               aria-label={title}
               className="
-                bg-amber-950/20 rounded-xl p-6 shadow-lg flex-1
+                bg-black/20 rounded-xl p-6 shadow-lg flex-1
                 cursor-default
                 outline-none
                 transition-colors duration-300
-                hover:bg-amber-950/30
-                focus-visible:ring-4 focus-visible:ring-amber-700
+                hover:bg-black/30
+                focus-visible:ring-4 focus-visible:ring-black
                 focus-visible:ring-opacity-70
-                focus-visible:shadow-amber-600
+                focus-visible:shadow-black
                 select-text
               "
             >
-              <h3 className="text-amber-500 font-semibold text-2xl mb-4">{title}</h3>
-              <p className="text-amber-400 text-base leading-relaxed tracking-wide">{description}</p>
+              <h3 className="text-black font-semibold text-2xl mb-4">{title}</h3>
+              <p className="text-black text-base leading-relaxed tracking-wide">{description}</p>
             </article>
           ))}
         </div>

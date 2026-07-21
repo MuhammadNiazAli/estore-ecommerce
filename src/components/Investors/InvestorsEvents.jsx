@@ -31,7 +31,7 @@ const InvestorsEvents = () => {
   return (
     <section
       aria-label="Upcoming Investor Events"
-      className="bg-white text-amber-600 flex justify-center px-4 sm:px-6 md:px-8 py-16"
+      className="bg-white text-black flex justify-center px-4 sm:px-6 md:px-8 py-16"
     >
       <div className="w-full max-w-5xl">
         <motion.h2
@@ -54,27 +54,27 @@ const InvestorsEvents = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: id * 0.1 }}
-              className="bg-white rounded-xl p-6 sm:p-7 md:p-8 shadow-md hover:shadow-amber-600/40 transition-all duration-300 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4"
+              className="bg-white rounded-xl p-6 sm:p-7 md:p-8 shadow-md hover:shadow-black/40 transition-all duration-300 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6">
                 <time
                   dateTime={date}
-                  className="text-amber-500 font-mono text-sm sm:text-base mb-2 sm:mb-0"
+                  className="text-black font-mono text-sm sm:text-base mb-2 sm:mb-0"
                 >
                   {date}
                 </time>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-amber-600 leading-snug">
+                  <h3 className="text-lg sm:text-xl font-semibold text-black leading-snug">
                     {title}
                   </h3>
-                  <p className="text-sm sm:text-base text-amber-500">{location}</p>
+                  <p className="text-sm sm:text-base text-black">{location}</p>
                 </div>
               </div>
 
               <div className="text-right sm:text-left">
                 <a
                   href={link}
-                  className="inline-block px-5 py-2.5 rounded-md bg-amber-700 text-gray-900 font-semibold shadow-md hover:bg-amber-800 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60 transition duration-200"
+                  className="inline-block px-5 py-2.5 rounded-md bg-black text-gray-900 font-semibold shadow-md hover:bg-black focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-60 transition duration-200"
                   aria-label={`Register for ${title}`}
                 >
                   Register

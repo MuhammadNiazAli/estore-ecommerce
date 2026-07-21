@@ -610,12 +610,12 @@ const ToysProductGrid = () => {
               placeholder="Search toys..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full md:w-64 px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-amber-700"
+              className="w-full md:w-64 px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-black"
             />
             <select
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
-              className="px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-amber-700"
+              className="px-4 py-2 rounded-md border border-gray-200 bg-white text-gray-900 focus:outline-none focus:border-black"
             >
               <option value="">Sort By</option>
               <option value="low-high">Price: Low to High</option>
@@ -641,7 +641,7 @@ const ToysProductGrid = () => {
                 />
                 <h3 className="font-semibold text-lg">{toy.name}</h3>
                 <p className="text-sm text-gray-600">{toy.brand}</p>
-                <p className="text-amber-600 text-lg font-bold">
+                <p className="text-black text-lg font-bold">
                   ₹{toy.price}
                 </p>
                 <p className="text-sm mb-2">
@@ -650,7 +650,7 @@ const ToysProductGrid = () => {
 
                 {/* ✅ Buttons */}
                 <div className="flex items-center gap-3 mt-3">
-                  <button className="bg-amber-700 text-black px-3 py-2 rounded-full flex-1 font-semibold hover:bg-amber-600 transition text-sm">
+                  <button className="bg-black text-black px-3 py-2 rounded-full flex-1 font-semibold hover:bg-black transition text-sm">
                     <FaCartPlus className="inline mr-1" /> Add to Cart
                   </button>
                   <button className="bg-white p-2 rounded-full hover:bg-gray-500 transition">
@@ -672,7 +672,7 @@ const ToysProductGrid = () => {
           <div className="text-center mt-8">
             <button
               onClick={() => setVisibleCount((prev) => prev + 6)}
-              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+              className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition"
             >
               Load More
             </button>

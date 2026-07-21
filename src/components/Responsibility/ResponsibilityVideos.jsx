@@ -41,7 +41,7 @@ const ResponsibilityVideos = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-amber-600 text-4xl font-bold mb-12 text-center select-none"
+          className="text-black text-4xl font-bold mb-12 text-center select-none"
         >
           Responsibility in Motion
         </motion.h2>
@@ -54,7 +54,7 @@ const ResponsibilityVideos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: id * 0.2, duration: 0.5 }}
-              className="relative group rounded-xl overflow-hidden cursor-pointer shadow-lg bg-white focus:outline-none focus:ring-4 focus:ring-amber-700"
+              className="relative group rounded-xl overflow-hidden cursor-pointer shadow-lg bg-white focus:outline-none focus:ring-4 focus:ring-black"
               tabIndex={0}
               aria-label={`Play video titled ${title}`}
               onFocus={() => setActiveVideoId(id)}
@@ -80,7 +80,7 @@ const ResponsibilityVideos = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-16 h-16 text-amber-600"
+                  className="w-16 h-16 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -108,7 +108,7 @@ const ResponsibilityVideos = () => {
 
               {/* Title bar */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/80 to-transparent p-3">
-                <h3 className="text-amber-600 font-semibold text-sm sm:text-base truncate">
+                <h3 className="text-black font-semibold text-sm sm:text-base truncate">
                   {title}
                 </h3>
               </div>

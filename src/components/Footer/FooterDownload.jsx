@@ -907,7 +907,7 @@ function StarRating({ count }) {
         return (
           <FiStar
             key={idx}
-            className={`text-xs ${active ? 'text-amber-600 fill-amber-600' : 'text-gray-600'}`}
+            className={`text-xs ${active ? 'text-black fill-black' : 'text-gray-600'}`}
             aria-hidden="true"
           />
         );
@@ -956,7 +956,7 @@ function AppCard({ app }) {
             href={playStore}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-amber-600 text-black rounded hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors"
+            className="flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-black text-black rounded hover:bg-black focus:outline-none focus:ring-2 focus:ring-black transition-colors"
             aria-label={`Download ${name} from Google Play Store`}
           >
             <FiShoppingCart className="w-4 h-4" />

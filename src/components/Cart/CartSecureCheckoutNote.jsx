@@ -7,9 +7,9 @@ const CartSecureCheckoutNote = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 sm:px-6 py-6">
       <div className="max-w-[1000px] flex flex-col sm:flex-row items-center gap-4 text-gray-900 text-center sm:text-left">
-        <ShieldCheckIcon className="w-8 h-8 text-amber-600 flex-shrink-0" />
+        <ShieldCheckIcon className="w-8 h-8 text-black flex-shrink-0" />
         <p className="text-sm sm:text-base max-w-xl leading-relaxed">
-          <span className="font-semibold text-amber-600">Secure Checkout:</span>{' '}
+          <span className="font-semibold text-black">Secure Checkout:</span>{' '}
           Your payment information is encrypted and processed securely. Shop with confidence.
         </p>
       </div>

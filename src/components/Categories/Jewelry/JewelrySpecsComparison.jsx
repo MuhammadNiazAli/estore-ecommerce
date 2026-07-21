@@ -32,32 +32,32 @@ const JewelrySpecsComparison = () => {
   return (
     <section className="bg-white py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-amber-600 text-3xl font-bold mb-8 text-center">
+        <h2 className="text-black text-3xl font-bold mb-8 text-center">
           Jewelry Specifications Comparison
         </h2>
 
         <div className="overflow-x-auto">
-          <table className="min-w-full border border-amber-800 rounded-lg overflow-hidden text-amber-500">
-            <thead className="bg-amber-950">
+          <table className="min-w-full border border-black rounded-lg overflow-hidden text-black">
+            <thead className="bg-black">
               <tr>
-                <th className="py-3 px-6 text-left border-b border-amber-800">Item</th>
-                <th className="py-3 px-6 text-left border-b border-amber-800">Metal</th>
-                <th className="py-3 px-6 text-left border-b border-amber-800">Weight</th>
-                <th className="py-3 px-6 text-left border-b border-amber-800">Gemstone</th>
-                <th className="py-3 px-6 text-left border-b border-amber-800">Price</th>
+                <th className="py-3 px-6 text-left border-b border-black">Item</th>
+                <th className="py-3 px-6 text-left border-b border-black">Metal</th>
+                <th className="py-3 px-6 text-left border-b border-black">Weight</th>
+                <th className="py-3 px-6 text-left border-b border-black">Gemstone</th>
+                <th className="py-3 px-6 text-left border-b border-black">Price</th>
               </tr>
             </thead>
             <tbody>
               {specsData.map(({ id, name, metal, weight, gemstone, price }) => (
                 <tr
                   key={id}
-                  className="even:bg-amber-950/20 odd:bg-amber-950/10 hover:bg-amber-900 transition-colors"
+                  className="even:bg-black/20 odd:bg-black/10 hover:bg-black transition-colors"
                 >
-                  <td className="py-3 px-6 border-b border-amber-800 font-semibold">{name}</td>
-                  <td className="py-3 px-6 border-b border-amber-800">{metal}</td>
-                  <td className="py-3 px-6 border-b border-amber-800">{weight}</td>
-                  <td className="py-3 px-6 border-b border-amber-800">{gemstone}</td>
-                  <td className="py-3 px-6 border-b border-amber-800 font-semibold text-amber-600">{price}</td>
+                  <td className="py-3 px-6 border-b border-black font-semibold">{name}</td>
+                  <td className="py-3 px-6 border-b border-black">{metal}</td>
+                  <td className="py-3 px-6 border-b border-black">{weight}</td>
+                  <td className="py-3 px-6 border-b border-black">{gemstone}</td>
+                  <td className="py-3 px-6 border-b border-black font-semibold text-black">{price}</td>
                 </tr>
               ))}
             </tbody>

@@ -36,7 +36,7 @@ const ProductCallFAQ = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 py-12 sm:px-6 my-[-70px] mb-0">
       <div className="max-w-[1000px] w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black text-center mb-8">
           Frequently Asked Questions
         </h2>
 
@@ -48,13 +48,13 @@ const ProductCallFAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-amber-500 hover:bg-gray-500 transition-colors"
+                className="w-full flex justify-between items-center px-4 py-3 sm:px-5 sm:py-4 text-left text-black hover:bg-gray-500 transition-colors"
               >
                 <span className="text-base sm:text-lg font-medium">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-amber-600" />
+                  <ChevronUp className="w-5 h-5 text-black" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-amber-600" />
+                  <ChevronDown className="w-5 h-5 text-black" />
                 )}
               </button>
 

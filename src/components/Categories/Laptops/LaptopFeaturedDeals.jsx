@@ -146,11 +146,11 @@ const LaptopFeaturedDeals = () => {
             {/* Glass-blur Overlay */}
             <div className="absolute inset-0 backdrop-blur-md bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center space-x-4">
               <button
-                className="p-2 rounded-full bg-white hover:bg-red-600 transition text-gray-900"
+                className="p-2 rounded-full bg-white hover:bg-black transition text-gray-900"
                 onClick={() => toggleFavorite(id)}
               >
                 {favorites.includes(id) ? (
-                  <HeartSolid className="w-5 h-5 text-red-500" />
+                  <HeartSolid className="w-5 h-5 text-black" />
                 ) : (
                   <HeartOutline className="w-5 h-5" />
                 )}
@@ -158,14 +158,14 @@ const LaptopFeaturedDeals = () => {
 
               <Link
                 href={`/laptop/${id}`}
-                className="p-2 rounded-full bg-white hover:bg-amber-800 transition text-gray-900"
+                className="p-2 rounded-full bg-white hover:bg-black transition text-gray-900"
               >
                 <EyeIcon className="w-5 h-5" />
               </Link>
 
               <Link
                 href={`/compare/${id}`}
-                className="p-2 rounded-full bg-white hover:bg-green-600 transition text-gray-900"
+                className="p-2 rounded-full bg-white hover:bg-black transition text-gray-900"
               >
                 <ArrowsRightLeftIcon className="w-5 h-5" />
               </Link>
@@ -176,14 +176,14 @@ const LaptopFeaturedDeals = () => {
                 {name}
               </h3>
               <div className="flex items-center space-x-3 mb-2">
-                <span className="text-amber-700 font-bold text-xl">${price}</span>
+                <span className="text-black font-bold text-xl">${price}</span>
                 <span className="line-through text-gray-500">${oldPrice}</span>
               </div>
               <div className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-5 h-5 ${i < 4 ? 'text-amber-600' : 'text-gray-600'}`}
+                    className={`w-5 h-5 ${i < 4 ? 'text-black' : 'text-gray-600'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"

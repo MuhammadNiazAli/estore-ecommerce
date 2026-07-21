@@ -5,22 +5,22 @@ import { FaGift, FaPercentage, FaTicketAlt, FaStar } from 'react-icons/fa';
 
 const redeemItems = [
   {
-    icon: <FaGift className="text-amber-600 text-3xl" aria-hidden="true" />,
+    icon: <FaGift className="text-black text-3xl" aria-hidden="true" />,
     title: 'Exclusive Gift Boxes',
     pointsRequired: 500,
   },
   {
-    icon: <FaPercentage className="text-amber-600 text-3xl" aria-hidden="true" />,
+    icon: <FaPercentage className="text-black text-3xl" aria-hidden="true" />,
     title: '10% Discount Coupon',
     pointsRequired: 300,
   },
   {
-    icon: <FaTicketAlt className="text-amber-600 text-3xl" aria-hidden="true" />,
+    icon: <FaTicketAlt className="text-black text-3xl" aria-hidden="true" />,
     title: 'Free Shipping Voucher',
     pointsRequired: 400,
   },
   {
-    icon: <FaStar className="text-amber-600 text-3xl" aria-hidden="true" />,
+    icon: <FaStar className="text-black text-3xl" aria-hidden="true" />,
     title: 'VIP Event Access',
     pointsRequired: 1000,
   },
@@ -46,15 +46,15 @@ export default function RewardingRedeemOptions() {
             role="button"
             tabIndex={0}
             aria-label={`Redeem ${title} for ${pointsRequired} points`}
-            className="bg-white border border-gray-200 hover:border-amber-600 rounded-xl p-6 shadow-lg flex flex-col items-center text-center transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+            className="bg-white border border-gray-200 hover:border-black rounded-xl p-6 shadow-lg flex flex-col items-center text-center transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           >
             <div className="mb-4">{icon}</div>
-            <h3 className="text-lg font-semibold text-amber-500 mb-2">{title}</h3>
+            <h3 className="text-lg font-semibold text-black mb-2">{title}</h3>
             <p className="text-gray-600 text-sm">{pointsRequired} Points</p>
             <button
               type="button"
               aria-label={`Redeem ${title}`}
-              className="mt-4 px-5 py-2 bg-amber-600 text-black font-semibold rounded-full hover:bg-amber-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="mt-4 px-5 py-2 bg-black text-black font-semibold rounded-full hover:bg-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
               Redeem
             </button>

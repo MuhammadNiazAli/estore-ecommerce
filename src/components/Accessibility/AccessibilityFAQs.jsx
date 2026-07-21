@@ -89,7 +89,7 @@ const AccessibilityFAQs = () => {
     <section className="w-full bg-white text-gray-900 py-16 px-4 sm:px-6 lg:px-8 mb-[-150px]">
       <div className="max-w-[900px] mx-auto space-y-12">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-600 tracking-tight select-none">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-black tracking-tight select-none">
           Accessibility FAQs
         </h2>
 
@@ -105,14 +105,14 @@ const AccessibilityFAQs = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left text-amber-500 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 hover:bg-gray-500 transition select-none"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left text-black font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-black hover:bg-gray-500 transition select-none"
                   aria-controls={`faq-panel-${index}`}
                   aria-expanded={isOpen}
                   type="button"
                 >
                   <span className="text-base md:text-lg">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-amber-600 transform transition-transform duration-300 ease-in-out ${
+                    className={`w-5 h-5 text-black transform transition-transform duration-300 ease-in-out ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden="true"

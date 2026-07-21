@@ -62,7 +62,7 @@ const ReviewCard = ({
             loading="lazy"
           />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-amber-500 text-gray-900 font-bold flex items-center justify-center text-xl select-none">
+          <div className="w-12 h-12 rounded-full bg-black text-gray-900 font-bold flex items-center justify-center text-xl select-none">
             {getInitials(name)}
           </div>
         )}
@@ -72,7 +72,7 @@ const ReviewCard = ({
             <h3 className="text-lg truncate">{name}</h3>
             {verified && (
               <span
-                className="flex items-center text-amber-400 text-xs font-medium whitespace-nowrap"
+                className="flex items-center text-black text-xs font-medium whitespace-nowrap"
                 title="Verified Buyer"
               >
                 <BadgeCheck className="w-4 h-4 mr-1 flex-shrink-0" />
@@ -111,7 +111,7 @@ const ReviewCard = ({
               ? badges.map((badge, i) => (
                   <span
                     key={i}
-                    className="inline-block bg-amber-600 text-xs px-2 py-0.5 rounded-full font-semibold"
+                    className="inline-block bg-black text-xs px-2 py-0.5 rounded-full font-semibold"
                   >
                     {badge}
                   </span>
@@ -122,7 +122,7 @@ const ReviewCard = ({
       </header>
 
       {/* Star Rating */}
-      <div className="flex items-center gap-1 text-amber-400 mb-3" aria-label={`Rating: ${rating} out of 5`}>
+      <div className="flex items-center gap-1 text-black mb-3" aria-label={`Rating: ${rating} out of 5`}>
         {[1, 2, 3, 4, 5].map((i) => {
           const fillPercent = i <= rating ? 100 : i - rating < 1 ? (rating % 1) * 100 : 0;
           return (
@@ -134,14 +134,14 @@ const ReviewCard = ({
               style={{
                 fillOpacity: fillPercent / 100,
               }}
-              className="stroke-amber-400"
+              className="stroke-black"
             />
           );
         })}
       </div>
 
       {reviewTitle && (
-        <h4 className="text-lg font-semibold text-amber-300 mb-2 truncate" title={reviewTitle}>
+        <h4 className="text-lg font-semibold text-black mb-2 truncate" title={reviewTitle}>
           {reviewTitle}
         </h4>
       )}
@@ -152,8 +152,8 @@ const ReviewCard = ({
       {/* Pros and Cons */}
       <div className="mb-3 flex gap-6 flex-wrap">
         <div className="flex-1 min-w-[120px]">
-          <h5 className="font-semibold text-amber-400 mb-1">Pros</h5>
-          <ul className="list-disc list-inside text-green-400 text-sm space-y-0.5">
+          <h5 className="font-semibold text-black mb-1">Pros</h5>
+          <ul className="list-disc list-inside text-black text-sm space-y-0.5">
             {fixedPros.map((pro, i) => (
               <li key={i} title={pro}>
                 {pro}
@@ -162,8 +162,8 @@ const ReviewCard = ({
           </ul>
         </div>
         <div className="flex-1 min-w-[120px]">
-          <h5 className="font-semibold text-amber-400 mb-1">Cons</h5>
-          <ul className="list-disc list-inside text-red-400 text-sm space-y-0.5">
+          <h5 className="font-semibold text-black mb-1">Cons</h5>
+          <ul className="list-disc list-inside text-black text-sm space-y-0.5">
             {fixedCons.map((con, i) => (
               <li key={i} title={con}>
                 {con}
@@ -188,9 +188,9 @@ const ReviewCard = ({
 
       {/* Response from support */}
       {response ? (
-        <blockquote className="border-l-4 border-amber-600 pl-4 italic text-gray-600 text-sm mb-3 select-text">
+        <blockquote className="border-l-4 border-black pl-4 italic text-gray-600 text-sm mb-3 select-text">
           <p>{response.text}</p>
-          <footer className="mt-1 text-xs font-semibold text-amber-400">
+          <footer className="mt-1 text-xs font-semibold text-black">
             — {response.responder},{' '}
             <time dateTime={new Date(response.date).toISOString()}>
               {new Date(response.date).toLocaleDateString(undefined, {
@@ -212,8 +212,8 @@ const ReviewCard = ({
           onClick={toggleLike}
           aria-pressed={liked}
           aria-label={`Like review by ${name}`}
-          className={`flex items-center gap-1 hover:text-amber-400 transition-colors ${
-            liked ? 'text-amber-400' : ''
+          className={`flex items-center gap-1 hover:text-black transition-colors ${
+            liked ? 'text-black' : ''
           }`}
           type="button"
         >
@@ -225,8 +225,8 @@ const ReviewCard = ({
           onClick={toggleDislike}
           aria-pressed={disliked}
           aria-label={`Dislike review by ${name}`}
-          className={`flex items-center gap-1 hover:text-red-500 transition-colors ${
-            disliked ? 'text-red-500' : ''
+          className={`flex items-center gap-1 hover:text-black transition-colors ${
+            disliked ? 'text-black' : ''
           }`}
           type="button"
         >
@@ -249,7 +249,7 @@ const ReviewsList = ({ reviews }) => {
       aria-label="Customer Reviews"
       className="max-w-7xl mx-auto my-[-130px] mb-[-15px] px-4 sm:px-6 py-16 sm:py-20 text-gray-900"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-10 text-center drop-shadow-md">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-10 text-center drop-shadow-md">
         Customer Reviews
       </h2>
 

@@ -13,7 +13,7 @@ const BlogAuthor = () => {
       <div className="max-w-[1000px] w-full flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-10 lg:gap-12">
         {/* Author Image */}
         <div
-          className="w-28 h-28 xs:w-32 xs:h-32 md:w-36 md:h-36 relative rounded-full overflow-hidden border-4 border-amber-600 shadow-lg flex-shrink-0"
+          className="w-28 h-28 xs:w-32 xs:h-32 md:w-36 md:h-36 relative rounded-full overflow-hidden border-4 border-black shadow-lg flex-shrink-0"
           aria-label="Author profile picture"
         >
           <Image
@@ -34,7 +34,7 @@ const BlogAuthor = () => {
           >
             Niaz Ali
           </h2>
-          <p className="text-amber-600 text-xs sm:text-sm font-semibold mb-4 tracking-wide uppercase">
+          <p className="text-black text-xs sm:text-sm font-semibold mb-4 tracking-wide uppercase">
             Lead Frontend Engineer & Tech Blogger
           </p>
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
@@ -51,7 +51,7 @@ const BlogAuthor = () => {
               href="https://twitter.com/niazali"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-600 hover:text-amber-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded"
+              className="text-black hover:text-black transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
               aria-label="Visit Twitter profile"
             >
               <Twitter size={24} />
@@ -60,14 +60,14 @@ const BlogAuthor = () => {
               href="https://linkedin.com/in/niazali"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-amber-600 hover:text-amber-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded"
+              className="text-black hover:text-black transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
               aria-label="Visit LinkedIn profile"
             >
               <Linkedin size={24} />
             </a>
             <a
               href="mailto:niaz@example.com"
-              className="text-amber-600 hover:text-amber-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded"
+              className="text-black hover:text-black transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
               aria-label="Send email to Niaz Ali"
             >
               <Mail size={24} />

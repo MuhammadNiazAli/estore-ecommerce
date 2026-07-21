@@ -25,12 +25,12 @@ const AccountHero = () => {
       className="w-full max-w-[1200px] mx-auto px-6 py-14 lg:py-20 mb-6 bg-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative my-[-35px]"
     >
       {/* Top Icon */}
-      <div className="absolute md:block hidden top-5 left-5 text-amber-600 text-4xl opacity-10 pointer-events-none select-none">
+      <div className="absolute md:block hidden top-5 left-5 text-black text-4xl opacity-10 pointer-events-none select-none">
         <FiUserCheck aria-hidden="true" />
       </div>
 
       {/* Mobile Icon */}
-      <div className="md:hidden flex justify-start items-start absolute top-4 left-4 text-amber-600 opacity-20 text-3xl">
+      <div className="md:hidden flex justify-start items-start absolute top-4 left-4 text-black opacity-20 text-3xl">
         <FiUserCheck aria-hidden="true" />
       </div>
 
@@ -44,12 +44,12 @@ const AccountHero = () => {
         >
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
             {greeting},{' '}
-            <span className="block mt-2 text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
+            <span className="block mt-2 text-black underline decoration-black decoration-4 underline-offset-4">
               NDev
             </span>
           </h1>
 
-          <p className="inline-block bg-amber-700/20 text-amber-500 text-sm font-semibold px-3 py-1 rounded-full tracking-wide select-none w-max">
+          <p className="inline-block bg-black/20 text-black text-sm font-semibold px-3 py-1 rounded-full tracking-wide select-none w-max">
             Pro Developer
           </p>
 
@@ -60,7 +60,7 @@ const AccountHero = () => {
           </p>
 
           {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-8 mt-4 text-amber-600">
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-8 mt-4 text-black">
             <div className="flex items-center gap-1 md:gap-2">
               <FiPackage className="text-base md:text-xl" aria-hidden="true" />
               <span className="font-semibold text-xs sm:text-sm md:text-base">
@@ -82,7 +82,7 @@ const AccountHero = () => {
           </div>
 
           {/* Motivational Quote */}
-          <p className="mt-5 text-amber-500 italic text-xs sm:text-sm max-w-md mx-auto md:mx-0">
+          <p className="mt-5 text-black italic text-xs sm:text-sm max-w-md mx-auto md:mx-0">
             "Code is like humor. When you have to explain it, it’s bad." — Cory House
           </p>
 
@@ -91,7 +91,7 @@ const AccountHero = () => {
             <Link href="/account/orders" passHref>
               <button
                 aria-label="View your project history"
-                className="px-6 sm:px-7 py-2.5 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+                className="px-6 sm:px-7 py-2.5 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               >
                 Project History
               </button>
@@ -109,7 +109,7 @@ const AccountHero = () => {
             <button
               aria-label="Logout"
               onClick={() => alert('Logging out...')}
-              className="flex items-center gap-2 px-6 py-2.5 bg-white text-amber-600 font-semibold rounded-full shadow-md hover:bg-gray-500 hover:text-amber-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="flex items-center gap-2 px-6 py-2.5 bg-white text-black font-semibold rounded-full shadow-md hover:bg-gray-500 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               type="button"
             >
               <FiLogOut className="text-lg" aria-hidden="true" />
@@ -126,7 +126,7 @@ const AccountHero = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <div
-            className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-amber-600 shadow-[0_10px_30px_rgba(0,0,0,0.4)] bg-white transition-transform duration-300 hover:scale-105"
+            className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-black shadow-[0_10px_30px_rgba(0,0,0,0.4)] bg-white transition-transform duration-300 hover:scale-105"
             role="img"
             aria-label="User profile picture"
           >

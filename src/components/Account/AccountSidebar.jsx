@@ -112,7 +112,7 @@ const AccountSidebar = () => {
       {/* Open button */}
       <button
         onClick={handleOpenSidebar}
-        className="lg:hidden fixed top-24 left-0 z-[1] bg-amber-600 text-black p-2 rounded-tr-xl rounded-br-xl shadow"
+        className="lg:hidden fixed top-24 left-0 z-[1] bg-black text-black p-2 rounded-tr-xl rounded-br-xl shadow"
         style={{ width: '36px', height: '56px' }}
         hidden={mobileOpen || showSidebar}
         aria-label="Open sidebar"
@@ -145,7 +145,7 @@ const AccountSidebar = () => {
             <div className="flex justify-end">
               <button
                 onClick={handleCloseSidebar}
-                className="text-amber-600 hover:text-amber-500"
+                className="text-black hover:text-black"
                 aria-label="Close sidebar"
               >
                 <FaTimes size={22} />
@@ -160,7 +160,7 @@ const AccountSidebar = () => {
                     className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                       ${
                         active === item.id
-                          ? 'bg-amber-600 text-black shadow'
+                          ? 'bg-black text-black shadow'
                           : 'hover:bg-gray-500 text-gray-700'
                       }`}
                   >
@@ -174,7 +174,7 @@ const AccountSidebar = () => {
                     className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                       ${
                         active === item.id
-                          ? 'bg-amber-600 text-black shadow'
+                          ? 'bg-black text-black shadow'
                           : 'hover:bg-gray-500 text-gray-700'
                       }`}
                     onClick={() => handleNavClick(item.id)}
@@ -206,7 +206,7 @@ const AccountSidebar = () => {
                 className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                   ${
                     active === item.id
-                      ? 'bg-amber-600 text-black shadow'
+                      ? 'bg-black text-black shadow'
                       : 'hover:bg-gray-500 text-gray-700'
                   }`}
               >
@@ -220,7 +220,7 @@ const AccountSidebar = () => {
                 className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg font-medium transition
                   ${
                     active === item.id
-                      ? 'bg-amber-600 text-black shadow'
+                      ? 'bg-black text-black shadow'
                       : 'hover:bg-gray-500 text-gray-700'
                   }`}
                 onClick={() => handleNavClick(item.id)}

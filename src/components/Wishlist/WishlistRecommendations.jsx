@@ -111,14 +111,14 @@ const WishlistRecommendations = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-900 line-clamp-2">
                     {item.title}
                   </h3>
-                  <p className="text-amber-800 dark:text-amber-600 font-semibold text-lg mt-2">
+                  <p className="text-black dark:text-black font-semibold text-lg mt-2">
                     ${item.price.toFixed(2)}
                   </p>
 
                   <div className="mt-auto flex justify-between gap-3 pt-6">
                     <Link
                       href="/cart"
-                      className="flex-1 px-5 py-2 rounded-full bg-amber-800 text-gray-900 hover:bg-amber-900 transition text-sm font-semibold flex items-center justify-center gap-2"
+                      className="flex-1 px-5 py-2 rounded-full bg-black text-gray-900 hover:bg-black transition text-sm font-semibold flex items-center justify-center gap-2"
                     >
                       <FiShoppingCart size={18} />
                       Add to Cart
@@ -130,7 +130,7 @@ const WishlistRecommendations = () => {
                       className={clsx(
                         'p-2 rounded-full border transition',
                         isFavorite
-                          ? 'bg-red-600 text-gray-900 border-red-600 hover:bg-red-700'
+                          ? 'bg-black text-gray-900 border-black hover:bg-black'
                           : 'border-gray-300 dark:border-gray-200 text-gray-700 dark:text-gray-700 hover:bg-gray-500 dark:hover:bg-gray-500'
                       )}
                     >

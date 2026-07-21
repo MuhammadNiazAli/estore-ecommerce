@@ -7,7 +7,7 @@ const WomanClothsFooterBanner = () => {
         
         {/* Content Section */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-3 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-3 leading-tight">
             Elevate Your Style Today!
           </h2>
           <p className="text-gray-700 text-base sm:text-lg max-w-lg font-light">
@@ -26,7 +26,7 @@ const WomanClothsFooterBanner = () => {
           {/* Button Over Image */}
          <a
   href="#shop"
-  className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-amber-600/70 text-gray-900 font-semibold text-sm px-8 py-1.5 rounded-full shadow-lg hover:bg-amber-700/80 hover:text-gray-900 transition-all duration-300"
+  className="absolute bottom-3 left-1/2 transform -translate-x-1/2 bg-black/70 text-gray-900 font-semibold text-sm px-8 py-1.5 rounded-full shadow-lg hover:bg-black/80 hover:text-gray-900 transition-all duration-300"
 >
   Shop Now
 </a>
@@ -37,7 +37,7 @@ const WomanClothsFooterBanner = () => {
         <div className="sm:hidden">
           <a
             href="#shop"
-            className="inline-block bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-amber-700 transition-all duration-300"
+            className="inline-block bg-black text-gray-900 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-black transition-all duration-300"
           >
             Shop Now
           </a>
@@ -45,7 +45,7 @@ const WomanClothsFooterBanner = () => {
       </div>
 
       {/* Decorative Bottom Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-black via-gray-700 to-gray-900"></div>
     </section>
   );
 };

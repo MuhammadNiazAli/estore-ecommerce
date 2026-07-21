@@ -69,7 +69,7 @@ const CartAnalyticsTracker = () => {
       case 'currency':
         return <AnimatedNumber value={stat.value} prefix="$" decimals={2} />;
       case 'risk': {
-        const riskColors = { Low: 'text-green-400', Medium: 'text-amber-600', High: 'text-red-500' };
+        const riskColors = { Low: 'text-black', Medium: 'text-black', High: 'text-black' };
         return (
           <span className={`${riskColors[stat.value] || 'text-gray-600'} font-semibold`}>
             {stat.value}
@@ -83,7 +83,7 @@ const CartAnalyticsTracker = () => {
             <span className="font-semibold select-text">{stat.value}</span>
             <div className="flex">
               {[...Array(tierIndex)].map((_, i) => (
-                <StarIcon key={i} className="w-5 h-5 text-amber-600" aria-hidden="true" />
+                <StarIcon key={i} className="w-5 h-5 text-black" aria-hidden="true" />
               ))}
             </div>
           </div>
@@ -97,7 +97,7 @@ const CartAnalyticsTracker = () => {
   return (
     <div className="w-full bg-white text-gray-900 flex justify-center px-4 sm:px-6 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-6 select-none">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 select-none">
           Cart Activity & Insights
         </h2>
 
@@ -114,7 +114,7 @@ const CartAnalyticsTracker = () => {
                 role="group"
                 aria-label={`${stat.label}: ${stat.value}`}
               >
-                <Icon className="w-8 h-8 text-amber-600 flex-shrink-0" aria-hidden="true" />
+                <Icon className="w-8 h-8 text-black flex-shrink-0" aria-hidden="true" />
                 <div>
                   <p className="text-sm text-gray-600 select-text">{stat.label}</p>
                   {/* Changed from <p> to <div> here to avoid div inside p */}

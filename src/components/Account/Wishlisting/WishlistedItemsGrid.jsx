@@ -225,7 +225,7 @@ const WishlistedItemsGrid = () => {
 
   return (
     <section className="bg-white p-6 max-w-7xl mx-auto rounded-b-xl">
-      <h2 className="text-amber-600 text-3xl font-extrabold mb-6 text-center sm:text-left">
+      <h2 className="text-black text-3xl font-extrabold mb-6 text-center sm:text-left">
         Your Wishlist
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
@@ -240,21 +240,21 @@ const WishlistedItemsGrid = () => {
               className="w-full h-48 object-cover rounded-md mb-4"
               loading="lazy"
             />
-            <h3 className="text-amber-600 font-semibold text-xl truncate mb-1">
+            <h3 className="text-black font-semibold text-xl truncate mb-1">
               {item.title}
             </h3>
-            <p className="text-amber-500 text-sm line-clamp-3 mb-3">{item.description}</p>
+            <p className="text-black text-sm line-clamp-3 mb-3">{item.description}</p>
             <div className="flex justify-between items-center mb-3">
               <div>
-                <span className="text-amber-600 font-bold text-lg">${item.price}</span>{' '}
+                <span className="text-black font-bold text-lg">${item.price}</span>{' '}
                 <span className="line-through text-gray-600 text-sm">${item.oldPrice}</span>
               </div>
-              <div className="text-amber-600 font-semibold">{item.rating}⭐</div>
+              <div className="text-black font-semibold">{item.rating}⭐</div>
             </div>
 
             <Link
               href={`/product/${item.id}`}
-              className="mt-auto bg-amber-700 hover:bg-amber-800 transition-colors rounded-md py-2 text-gray-900 font-semibold text-center block"
+              className="mt-auto bg-black hover:bg-black transition-colors rounded-md py-2 text-gray-900 font-semibold text-center block"
               aria-label={`Add ${item.title} to cart`}
             >
               Add to Cart
@@ -267,7 +267,7 @@ const WishlistedItemsGrid = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={handleShowMore}
-            className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-2 px-6 rounded-lg shadow-md transition-colors"
+            className="bg-black hover:bg-black text-gray-900 font-bold py-2 px-6 rounded-lg shadow-md transition-colors"
           >
             Show More
           </button>

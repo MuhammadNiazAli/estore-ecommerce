@@ -68,7 +68,7 @@ function ChristmasTree() {
     return temp;
   }, [layers]);
 
-  const lightColors = useMemo(() => ['#ff5555', '#55ff55', '#5555ff', '#b45309', '#ff55ff', '#55ffff'], []);
+  const lightColors = useMemo(() => ['#ff5555', '#55ff55', '#5555ff', '#111827', '#ff55ff', '#55ffff'], []);
 
   return (
     <group ref={groupRef} position={[0, -1, 0]}>
@@ -126,8 +126,8 @@ function ChristmasTree() {
       <mesh position={[0, 3.1, 0]} castShadow>
         <coneGeometry args={[0.15, 0.4, 5]} />
         <meshPhysicalMaterial
-          color="#b45309"
-          emissive="#b45309"
+          color="#111827"
+          emissive="#111827"
           emissiveIntensity={2}
           metalness={1}
           roughness={0.1}
@@ -156,7 +156,7 @@ function GiftBox({ position = [2, 0, 0], rotationY = 0 }) {
       <mesh castShadow receiveShadow>
         <boxGeometry args={[1.4, 0.8, 1]} />
         <meshPhysicalMaterial
-          color="#c62828"
+          color="#6b7280"
           metalness={0.7}
           roughness={0.2}
           clearcoat={1}
@@ -171,7 +171,7 @@ function GiftBox({ position = [2, 0, 0], rotationY = 0 }) {
       <mesh position={[0, 0.4, 0]} castShadow receiveShadow>
         <boxGeometry args={[1.45, 0.15, 1.05]} />
         <meshPhysicalMaterial
-          color="#b71c1c"
+          color="#111827"
           metalness={0.8}
           roughness={0.15}
           clearcoat={1}
@@ -184,13 +184,13 @@ function GiftBox({ position = [2, 0, 0], rotationY = 0 }) {
       {/* Ribbon vertical */}
       <mesh position={[0, 0, 0.52]}>
         <boxGeometry args={[0.2, 0.9, 0.12]} />
-        <meshStandardMaterial color="#b45309" metalness={0.9} roughness={0.3} />
+        <meshStandardMaterial color="#111827" metalness={0.9} roughness={0.3} />
       </mesh>
 
       {/* Ribbon horizontal */}
       <mesh rotation={[0, Math.PI / 2, 0]} position={[0.52, 0, 0]}>
         <boxGeometry args={[0.2, 0.9, 0.12]} />
-        <meshStandardMaterial color="#b45309" metalness={0.9} roughness={0.3} />
+        <meshStandardMaterial color="#111827" metalness={0.9} roughness={0.3} />
       </mesh>
     </group>
   );
@@ -215,19 +215,19 @@ function GiftBow({ position = [2, 0.9, 0], rotationY = 0 }) {
       {/* Left loop */}
       <mesh rotation={[0, 0, Math.PI / 6]}>
         <torusGeometry args={[0.15, 0.06, 16, 100]} />
-        <meshPhysicalMaterial color="#b45309" metalness={0.95} roughness={0.15} clearcoat={1} />
+        <meshPhysicalMaterial color="#111827" metalness={0.95} roughness={0.15} clearcoat={1} />
       </mesh>
 
       {/* Right loop */}
       <mesh rotation={[0, 0, -Math.PI / 6]}>
         <torusGeometry args={[0.15, 0.06, 16, 100]} />
-        <meshPhysicalMaterial color="#b45309" metalness={0.95} roughness={0.15} clearcoat={1} />
+        <meshPhysicalMaterial color="#111827" metalness={0.95} roughness={0.15} clearcoat={1} />
       </mesh>
 
       {/* Center knot */}
       <mesh>
         <sphereGeometry args={[0.08, 16, 16]} />
-        <meshPhysicalMaterial color="#b45309" metalness={1} roughness={0.2} clearcoat={1} />
+        <meshPhysicalMaterial color="#111827" metalness={1} roughness={0.2} clearcoat={1} />
       </mesh>
     </group>
   );
@@ -253,9 +253,9 @@ export default function ChristmasTreeHero() {
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
             shadow-bias={-0.0005}
-            color="#b45309"
+            color="#111827"
           />
-          <pointLight position={[0, 5, 0]} intensity={0.25} color="#aaffaa" />
+          <pointLight position={[0, 5, 0]} intensity={0.25} color="#ffffff" />
           <pointLight position={[-5, 2, 5]} intensity={0.25} color="#77cc77" />
 
           {/* Scene */}

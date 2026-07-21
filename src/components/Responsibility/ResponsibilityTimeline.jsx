@@ -69,7 +69,7 @@ const ResponsibilityTimeline = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-amber-600 text-4xl font-bold text-center mb-12 select-none"
+          className="text-black text-4xl font-bold text-center mb-12 select-none"
         >
           Our Journey
         </motion.h2>
@@ -77,7 +77,7 @@ const ResponsibilityTimeline = () => {
         {/* Timeline vertical line */}
         <div
           aria-hidden="true"
-          className="hidden sm:block absolute top-16 left-1/2 -translate-x-1/2 w-1 bg-amber-600 h-[calc(100%-4rem)] rounded-full"
+          className="hidden sm:block absolute top-16 left-1/2 -translate-x-1/2 w-1 bg-black h-[calc(100%-4rem)] rounded-full"
         />
 
         {/* Timeline items container */}
@@ -88,8 +88,8 @@ const ResponsibilityTimeline = () => {
               <motion.article
                 key={idx}
                 className={`relative bg-white rounded-lg p-6 shadow-lg cursor-default
-                  focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
-                  hover:scale-[1.04] hover:shadow-amber-700/50 transition-transform duration-300
+                  focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2
+                  hover:scale-[1.04] hover:shadow-black/50 transition-transform duration-300
                   sm:max-w-[90%]`}
                 tabIndex={0}
                 aria-labelledby={`event-title-${idx}`}
@@ -107,11 +107,11 @@ const ResponsibilityTimeline = () => {
                 <span
                   className={`hidden sm:block absolute top-6 ${
                     isLeft ? 'right-[-20px]' : 'left-[-20px]'
-                  } w-6 h-6 rounded-full bg-amber-600 border-2 border-gray-200`}
+                  } w-6 h-6 rounded-full bg-black border-2 border-gray-200`}
                 />
                 <time
                   id={`event-year-${idx}`}
-                  className="text-amber-600 font-bold text-lg select-none"
+                  className="text-black font-bold text-lg select-none"
                 >
                   {event.year}
                 </time>

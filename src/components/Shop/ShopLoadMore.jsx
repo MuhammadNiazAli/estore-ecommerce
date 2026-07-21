@@ -13,11 +13,11 @@ const ShopLoadMore = ({ isLoading = false, onClick }) => {
           whileHover={{ scale: 1.03 }}
           onClick={onClick}
           disabled={isLoading}
-          className="relative inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-br from-amber-600 via-amber-500 to-amber-600 text-gray-900 font-semibold text-base shadow-2xl hover:shadow-amber-700/30 focus:outline-none focus:ring-4 focus:ring-amber-300 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="relative inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-br from-black via-gray-700 to-gray-900 text-gray-900 font-semibold text-base shadow-2xl hover:shadow-black/30 focus:outline-none focus:ring-4 focus:ring-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
       
           <motion.span
-            className="absolute -inset-px rounded-full bg-gradient-to-r from-amber-500 to-amber-500 blur-md opacity-25 group-hover:opacity-60 transition-opacity duration-500"
+            className="absolute -inset-px rounded-full bg-gradient-to-r from-black to-gray-900 blur-md opacity-25 group-hover:opacity-60 transition-opacity duration-500"
             aria-hidden="true"
           />
 

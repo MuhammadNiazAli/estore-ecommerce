@@ -121,7 +121,7 @@ const relatedArticlesData = {
 const Spinner = () => (
   <div className="flex justify-center items-center py-10" aria-label="Loading">
     <svg
-      className="animate-spin h-10 w-10 text-amber-600"
+      className="animate-spin h-10 w-10 text-black"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -726,10 +726,10 @@ const PressReleases = () => {
     <>
       <section className="bg-white py-16 px-4 sm:px-8 mb-[-30px] my-15">
         <div className="max-w-[1000px] mx-auto text-center">
-          <h2 className="text-amber-600 text-3xl sm:text-4xl font-bold">
+          <h2 className="text-black text-3xl sm:text-4xl font-bold">
             Press Releases
           </h2>
-          <p className="mt-4 text-amber-500 text-lg my-[-50px]">
+          <p className="mt-4 text-black text-lg my-[-50px]">
             Stay updated with our latest news and official announcements.
           </p>
 
@@ -740,13 +740,13 @@ const PressReleases = () => {
               aria-label="Search press releases"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="w-full max-w-md px-4 py-2 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
 
           <div className="mt-10 space-y-6 text-left max-w-3xl mx-auto">
             {filteredReleases.length === 0 ? (
-              <p className="text-center italic text-amber-500">
+              <p className="text-center italic text-black">
                 No press releases found.
               </p>
             ) : (
@@ -754,14 +754,14 @@ const PressReleases = () => {
                 <button
                   key={id}
                   onClick={() => openModal(id)}
-                  className="w-full text-left bg-white rounded-lg p-6 shadow hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="w-full text-left bg-white rounded-lg p-6 shadow hover:shadow-md transition focus:outline-none focus:ring-2 focus:ring-black"
                   aria-label={`Read ${title}`}
                 >
-                  <h3 className="text-amber-600 text-xl font-semibold">
+                  <h3 className="text-black text-xl font-semibold">
                     {title}
                   </h3>
-                  <time className="text-amber-500 text-sm font-mono">{date}</time>
-                  <p className="mt-2 text-amber-500">{summary}</p>
+                  <time className="text-black text-sm font-mono">{date}</time>
+                  <p className="mt-2 text-black">{summary}</p>
                 </button>
               ))
             )}
@@ -784,7 +784,7 @@ const PressReleases = () => {
             <button
               onClick={closeModal}
               aria-label="Close"
-              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
+              className="absolute top-4 right-4 text-black hover:text-black focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -801,13 +801,13 @@ const PressReleases = () => {
               <Spinner />
             ) : selectedRelease ? (
               <>
-                <h2 className="text-amber-600 text-2xl font-bold mb-2">
+                <h2 className="text-black text-2xl font-bold mb-2">
                   {selectedRelease.title}
                 </h2>
-                <time className="text-amber-500 text-sm font-mono">
+                <time className="text-black text-sm font-mono">
                   {selectedRelease.date}
                 </time>
-                <p className="mt-4 text-amber-500 whitespace-pre-line">
+                <p className="mt-4 text-black whitespace-pre-line">
                   {selectedRelease.content}
                 </p>
                 <a
@@ -815,15 +815,15 @@ const PressReleases = () => {
                   onClick={(e) =>
                     openFullArticle(e, selectedRelease.title, largeArticleText)
                   }
-                  className="mt-6 inline-block bg-amber-600 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-amber-500 focus:outline-none"
+                  className="mt-6 inline-block bg-black text-gray-900 font-semibold px-4 py-2 rounded hover:bg-black focus:outline-none"
                   role="button"
                 >
                   Read Full Article
                 </a>
 
                 {relatedArticlesData[selectedRelease.id] && (
-                  <section className="mt-10 border-t border-amber-900 pt-6">
-                    <h3 className="text-amber-600 text-xl font-semibold mb-4">
+                  <section className="mt-10 border-t border-black pt-6">
+                    <h3 className="text-black text-xl font-semibold mb-4">
                       Related Articles
                     </h3>
                     <ul className="space-y-4">
@@ -835,11 +835,11 @@ const PressReleases = () => {
                           >
                             <button
                               onClick={(e) => openFullArticle(e, title, content)}
-                              className="text-amber-500 text-lg font-semibold hover:text-amber-600 focus:outline-none"
+                              className="text-black text-lg font-semibold hover:text-black focus:outline-none"
                             >
                               {title}
                             </button>
-                            <p className="mt-1 text-amber-500">{summary}</p>
+                            <p className="mt-1 text-black">{summary}</p>
                           </li>
                         )
                       )}
@@ -848,7 +848,7 @@ const PressReleases = () => {
                 )}
               </>
             ) : (
-              <p className="text-amber-500">No content to display.</p>
+              <p className="text-black">No content to display.</p>
             )}
           </div>
         </div>
@@ -869,7 +869,7 @@ const PressReleases = () => {
             <button
               onClick={closeFullArticle}
               aria-label="Close"
-              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
+              className="absolute top-4 right-4 text-black hover:text-black focus:outline-none"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -881,10 +881,10 @@ const PressReleases = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <h2 className="text-amber-600 text-3xl font-bold mb-6">
+            <h2 className="text-black text-3xl font-bold mb-6">
               {fullArticleTitle}
             </h2>
-            <article className="text-amber-500 text-sm sm:text-base whitespace-pre-line leading-relaxed">
+            <article className="text-black text-sm sm:text-base whitespace-pre-line leading-relaxed">
               {fullArticleContent}
             </article>
           </div>

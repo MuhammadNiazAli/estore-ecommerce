@@ -27,15 +27,15 @@ const orders = [
 
 const statusStyles = {
   Delivered: {
-    class: 'bg-green-600 text-gray-900 shadow-md',
+    class: 'bg-black text-gray-900 shadow-md',
     icon: <FaCheckCircle className="mr-1" />,
   },
   Processing: {
-    class: 'bg-amber-600 text-black shadow-md',
+    class: 'bg-black text-black shadow-md',
     icon: <FaSpinner className="mr-1 animate-spin-slow" />,
   },
   Cancelled: {
-    class: 'bg-red-600 text-gray-900 shadow-md',
+    class: 'bg-black text-gray-900 shadow-md',
     icon: <FaTimesCircle className="mr-1" />,
   },
   Pending: {
@@ -93,9 +93,9 @@ const AccountOrders = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="border-b border-gray-200 hover:bg-gray-500 hover:shadow-[0_0_12px_#b45309] transition cursor-pointer"
+                  className="border-b border-gray-200 hover:bg-gray-500 hover:shadow-[0_0_12px_#111827] transition cursor-pointer"
                 >
-                  <td className="py-4 px-6 font-mono text-amber-600 text-sm underline hover:text-amber-500 transition">
+                  <td className="py-4 px-6 font-mono text-black text-sm underline hover:text-black transition">
                     {id}
                   </td>
                   <td className="py-4 px-6 text-gray-700 text-sm">
@@ -123,7 +123,7 @@ const AccountOrders = () => {
                       type="button"
                       onClick={() => alert(`Opening order details for ${id}`)}
                       whileTap={tapSpring}
-                      className="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-black font-semibold text-sm px-4 py-2 rounded-md shadow-md transition"
+                      className="inline-flex items-center gap-2 bg-black hover:bg-black text-black font-semibold text-sm px-4 py-2 rounded-md shadow-md transition"
                       aria-label={`View details for order ${id}`}
                     >
                       <FaEye />
@@ -146,7 +146,7 @@ const AccountOrders = () => {
           background: #ffffff;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background-color: #b45309;
+          background-color: #111827;
           border-radius: 6px;
         }
         .animate-spin-slow {

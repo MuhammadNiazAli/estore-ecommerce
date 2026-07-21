@@ -3,24 +3,24 @@
 import React from 'react';
 
 const statusClasses = {
-  Delivered: 'bg-green-600 text-green-100',
-  Processing: 'bg-amber-700 text-amber-950',
-  Cancelled: 'bg-red-600 text-red-100',
+  Delivered: 'bg-black text-black',
+  Processing: 'bg-black text-black',
+  Cancelled: 'bg-black text-black',
 };
 
 const PerchasigHistoryDetails = ({ order, onClose }) => {
   if (!order) return null;
 
   const { id, date, status, total, items = [] } = order;
-  const statusBadge = statusClasses[status] || 'bg-amber-900 text-amber-400';
+  const statusBadge = statusClasses[status] || 'bg-black text-black';
 
   return (
     <section
       aria-label={`Details for order ${id}`}
       className="
         max-w-[900px] mx-auto
-        bg-gradient-to-br from-amber-950 via-amber-900 to-amber-900
-        rounded-3xl shadow-2xl p-8 text-amber-300
+        bg-gradient-to-br from-black via-gray-700 to-gray-900
+        rounded-3xl shadow-2xl p-8 text-black
       "
       style={{ minHeight: '320px' }}
     >
@@ -31,19 +31,19 @@ const PerchasigHistoryDetails = ({ order, onClose }) => {
         aria-label="Close order details"
         className="
           mb-6 px-6 py-2 rounded-full
-          bg-amber-600 text-amber-950 font-semibold
-          hover:bg-amber-500 transition duration-300 shadow-md
-          focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2
+          bg-black text-black font-semibold
+          hover:bg-black transition duration-300 shadow-md
+          focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2
         "
       >
         Close
       </button>
 
       {/* Order Overview */}
-      <h2 className="text-3xl font-extrabold mb-4 text-amber-300">
+      <h2 className="text-3xl font-extrabold mb-4 text-black">
         Order #{id}
       </h2>
-      <div className="mb-6 space-y-2 text-amber-400">
+      <div className="mb-6 space-y-2 text-black">
         <p>
           <span className="font-semibold">Order Date:</span> {date}
         </p>
@@ -61,26 +61,26 @@ const PerchasigHistoryDetails = ({ order, onClose }) => {
       </div>
 
       {/* Items List */}
-      <h3 className="text-xl font-semibold mb-3 text-amber-300">
+      <h3 className="text-xl font-semibold mb-3 text-black">
         Items Purchased:
       </h3>
       <ul className="space-y-4 mb-6">
         {items.length === 0 ? (
-          <li className="text-amber-500 italic">No items available for this order.</li>
+          <li className="text-black italic">No items available for this order.</li>
         ) : (
           items.map(({ id: itemId, name, quantity, price }) => (
             <li
               key={itemId}
               className="
                 flex justify-between items-center
-                bg-amber-900 rounded-lg p-4
+                bg-black rounded-lg p-4
               "
             >
               <div>
-                <p className="font-semibold text-amber-300">{name}</p>
-                <p className="text-amber-500 text-sm">Qty: {quantity}</p>
+                <p className="font-semibold text-black">{name}</p>
+                <p className="text-black text-sm">Qty: {quantity}</p>
               </div>
-              <p className="font-semibold text-amber-300">{price}</p>
+              <p className="font-semibold text-black">{price}</p>
             </li>
           ))
         )}
@@ -88,7 +88,7 @@ const PerchasigHistoryDetails = ({ order, onClose }) => {
 
       {/* Order Total */}
       <div className="text-right">
-        <p className="text-amber-600 font-bold text-lg">Total: {total}</p>
+        <p className="text-black font-bold text-lg">Total: {total}</p>
       </div>
     </section>
   );

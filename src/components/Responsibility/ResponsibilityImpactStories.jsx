@@ -72,7 +72,7 @@ const ResponsibilityImpactStories = () => {
               variants={cardVariants}
               tabIndex={0}
               aria-label={`Impact story by ${story.name} from ${story.location}`}
-              className="bg-white/70 border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl focus:shadow-xl transition-shadow duration-300 outline-none focus:outline-amber-600 focus:outline-2 focus:outline-offset-2 cursor-pointer"
+              className="bg-white/70 border border-gray-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl focus:shadow-xl transition-shadow duration-300 outline-none focus:outline-black focus:outline-2 focus:outline-offset-2 cursor-pointer"
               role="group"
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') e.currentTarget.click();
@@ -88,7 +88,7 @@ const ResponsibilityImpactStories = () => {
                 />
               </div>
               <div className="p-5 sm:p-6">
-                <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-1">
+                <h3 className="text-black font-semibold text-base sm:text-lg mb-1">
                   {story.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 italic mb-3">{story.location}</p>

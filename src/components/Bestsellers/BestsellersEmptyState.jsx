@@ -24,7 +24,7 @@ const BestsellersEmptyState = () => {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden h-[45vh] flex flex-col items-center justify-center bg-white text-amber-600 select-none my-16 mb-0 px-4 sm:px-6 lg:px-8"
+      className="relative overflow-hidden h-[45vh] flex flex-col items-center justify-center bg-white text-black select-none my-16 mb-0 px-4 sm:px-6 lg:px-8"
     >
       {/* Background geometric shapes */}
       <svg
@@ -68,12 +68,12 @@ const BestsellersEmptyState = () => {
         <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 drop-shadow-md">
           No Bestsellers Yet
         </h2>
-        <p className="text-lg sm:text-xl text-amber-500 mb-8 drop-shadow-md">
+        <p className="text-lg sm:text-xl text-black mb-8 drop-shadow-md">
           We're crafting the perfect collection for you. Check back soon to find exclusive deals and top-rated items!
         </p>
         <button
           type="button"
-          className="inline-block rounded-full bg-amber-700 px-8 py-3 font-semibold text-black hover:bg-amber-600 transition-shadow shadow-lg hover:shadow-amber-500/20"
+          className="inline-block rounded-full bg-black px-8 py-3 font-semibold text-black hover:bg-black transition-shadow shadow-lg hover:shadow-black/20"
         >
           Explore Collections
         </button>

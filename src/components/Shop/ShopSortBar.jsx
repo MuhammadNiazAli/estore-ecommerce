@@ -135,7 +135,7 @@ const ShopSortBar = ({ onSortChange }) => {
           <select
             id="sort"
             className="block w-full sm:w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
-              focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer transition duration-200 hover:bg-gray-500"
+              focus:outline-none focus:ring-2 focus:ring-black cursor-pointer transition duration-200 hover:bg-gray-500"
             value={selected}
             onChange={(e) => {
               const value = e.target.value;
@@ -158,7 +158,7 @@ const ShopSortBar = ({ onSortChange }) => {
               aria-haspopup="listbox"
               aria-expanded={open}
               className="relative w-72 bg-white text-gray-700 px-5 py-3 pr-10 rounded-md shadow-md
-                focus:outline-none focus:ring-2 focus:ring-amber-400 cursor-pointer text-left
+                focus:outline-none focus:ring-2 focus:ring-black cursor-pointer text-left
                 hover:bg-gray-500 flex justify-between items-center"
             >
               <span>{selectedLabel}</span>
@@ -207,10 +207,10 @@ const ShopSortBar = ({ onSortChange }) => {
                           transition-all duration-200
                           ${
                             isSelected
-                              ? 'bg-amber-500 text-gray-900 font-bold'
-                              : 'text-gray-700 hover:bg-amber-400 hover:text-gray-900'
+                              ? 'bg-black text-gray-900 font-bold'
+                              : 'text-gray-700 hover:bg-black hover:text-gray-900'
                           }
-                          focus:outline-none focus:ring-2 focus:ring-amber-400`}
+                          focus:outline-none focus:ring-2 focus:ring-black`}
                       >
                         {label}
                       </li>

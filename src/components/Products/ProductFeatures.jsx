@@ -69,7 +69,7 @@ const itemVariants = {
 const FeatureCard = ({ feature, onOpen }) => {
   return (
     <motion.div
-      className="flex flex-col bg-white rounded-xl p-5 cursor-pointer focus:outline-none focus:ring-4 focus:ring-green-400 transition-shadow"
+      className="flex flex-col bg-white rounded-xl p-5 cursor-pointer focus:outline-none focus:ring-4 focus:ring-black transition-shadow"
       variants={itemVariants}
       initial="hidden"
       animate="visible"
@@ -83,11 +83,11 @@ const FeatureCard = ({ feature, onOpen }) => {
       }}
     >
       <div className="flex items-center space-x-3 mb-2">
-        <AiOutlineCheckCircle className="text-green-500 w-7 h-7 flex-shrink-0" />
+        <AiOutlineCheckCircle className="text-black w-7 h-7 flex-shrink-0" />
         <h3 className="text-lg font-semibold text-gray-800 flex items-center">
           {feature.title}
           {feature.premium && (
-            <span className="ml-2 px-2 py-0.5 text-xs font-bold text-gray-900 bg-green-600 rounded-full select-none">
+            <span className="ml-2 px-2 py-0.5 text-xs font-bold text-gray-900 bg-black rounded-full select-none">
               Premium
             </span>
           )}
@@ -96,7 +96,7 @@ const FeatureCard = ({ feature, onOpen }) => {
       <p className="text-gray-700 line-clamp-3">{feature.description}</p>
       <motion.button
         aria-label={`More info about ${feature.title}`}
-        className="mt-3 inline-flex items-center text-green-400 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 rounded"
+        className="mt-3 inline-flex items-center text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
         onClick={(e) => {
           e.stopPropagation();
           onOpen(feature);
@@ -173,7 +173,7 @@ const ProductFeatures = () => {
                 {selectedFeature.description}
               </p>
               {selectedFeature.premium && (
-                <span className="inline-block mt-6 px-3 py-1 text-sm font-semibold text-gray-900 bg-green-600 rounded-full select-none">
+                <span className="inline-block mt-6 px-3 py-1 text-sm font-semibold text-gray-900 bg-black rounded-full select-none">
                   Premium Feature
                 </span>
               )}

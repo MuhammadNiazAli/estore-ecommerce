@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, Info, AlertTriangle } from 'lucide-react';
 
 const icons = {
-  success: <CheckCircle className="text-green-500 w-5 h-5" />,
-  error: <XCircle className="text-red-500 w-5 h-5" />,
-  info: <Info className="text-amber-700 w-5 h-5" />,
-  warning: <AlertTriangle className="text-amber-700 w-5 h-5" />,
+  success: <CheckCircle className="text-black w-5 h-5" />,
+  error: <XCircle className="text-black w-5 h-5" />,
+  info: <Info className="text-black w-5 h-5" />,
+  warning: <AlertTriangle className="text-black w-5 h-5" />,
 };
 
 const CartToastNotification = ({ type = 'success', message, visible, onClose }) => {

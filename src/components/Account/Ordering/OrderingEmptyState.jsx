@@ -9,7 +9,7 @@ const OrderingEmptyState = () => {
       {/* Decorative icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-20 h-20 mb-6 text-amber-600"
+        className="w-20 h-20 mb-6 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -35,7 +35,7 @@ const OrderingEmptyState = () => {
       {/* Call to action */}
       <a
         href="/shop"
-        className="inline-block px-8 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+        className="inline-block px-8 py-3 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
       >
         Start Shopping
       </a>

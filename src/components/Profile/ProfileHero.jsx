@@ -25,10 +25,10 @@ const initialProfileData = {
 };
 
 const statsData = [
-  { label: 'Orders Completed', value: 124, icon: <TruckIcon className="w-5 h-5 text-amber-600" /> },
-  { label: 'Wishlist Items', value: 37, icon: <HeartIcon className="w-5 h-5 text-amber-600" /> },
-  { label: 'Saved Payment Methods', value: 3, icon: <CreditCardIcon className="w-5 h-5 text-amber-600" /> },
-  { label: 'Profile Updates', value: 14, icon: <PencilSquareIcon className="w-5 h-5 text-amber-600" /> },
+  { label: 'Orders Completed', value: 124, icon: <TruckIcon className="w-5 h-5 text-black" /> },
+  { label: 'Wishlist Items', value: 37, icon: <HeartIcon className="w-5 h-5 text-black" /> },
+  { label: 'Saved Payment Methods', value: 3, icon: <CreditCardIcon className="w-5 h-5 text-black" /> },
+  { label: 'Profile Updates', value: 14, icon: <PencilSquareIcon className="w-5 h-5 text-black" /> },
 ];
 
 export default function ProfileHero() {
@@ -54,7 +54,7 @@ export default function ProfileHero() {
           className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0"
         >
           <div className="max-w-lg">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-600 drop-shadow-lg mb-1 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black drop-shadow-lg mb-1 leading-tight">
               Welcome back, {profile.name}
             </h1>
             <p className="text-gray-700 text-sm sm:text-base">
@@ -62,11 +62,11 @@ export default function ProfileHero() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2 text-amber-500 font-semibold text-xs sm:text-sm">
+          <div className="flex items-center gap-2 text-black font-semibold text-xs sm:text-sm">
             <UserIcon className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" />
             <span>
               Logged in as{' '}
-              <span className="text-gray-900 font-bold underline decoration-amber-600 decoration-2 underline-offset-3">
+              <span className="text-gray-900 font-bold underline decoration-black decoration-2 underline-offset-3">
                 {profile.name}
               </span>
             </span>
@@ -74,7 +74,7 @@ export default function ProfileHero() {
         </motion.div>
 
         {/* Divider */}
-        <div className="w-full h-[1.5px] bg-amber-700/40 my-6 rounded-full shadow-lg" />
+        <div className="w-full h-[1.5px] bg-black/40 my-6 rounded-full shadow-lg" />
 
         {/* Stats Grid */}
         <motion.div
@@ -86,13 +86,13 @@ export default function ProfileHero() {
           {statsData.map(({ label, value, icon }) => (
             <div
               key={label}
-              className="flex items-center gap-3 p-3 rounded-md bg-amber-950/10 backdrop-blur-sm border border-amber-600/30 shadow-md hover:scale-[1.02] transition-transform cursor-default"
+              className="flex items-center gap-3 p-3 rounded-md bg-black/10 backdrop-blur-sm border border-black/30 shadow-md hover:scale-[1.02] transition-transform cursor-default"
               title={label}
               aria-label={`${value} ${label}`}
             >
-              <div className="p-2 bg-amber-600/20 rounded-full">{icon}</div>
+              <div className="p-2 bg-black/20 rounded-full">{icon}</div>
               <div>
-                <p className="text-amber-600 font-extrabold text-2xl sm:text-3xl leading-none">
+                <p className="text-black font-extrabold text-2xl sm:text-3xl leading-none">
                   <AnimatedNumber value={value} />
                 </p>
                 <p className="text-gray-700 text-xs sm:text-sm">{label}</p>
@@ -109,8 +109,8 @@ export default function ProfileHero() {
           className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {/* Left Info */}
-          <div className="space-y-4 bg-white/50 p-4 rounded-md shadow-md border border-amber-600/30">
-            <h2 className="text-lg font-semibold text-amber-600 mb-2 flex items-center gap-1.5">
+          <div className="space-y-4 bg-white/50 p-4 rounded-md shadow-md border border-black/30">
+            <h2 className="text-lg font-semibold text-black mb-2 flex items-center gap-1.5">
               <IdentificationIcon className="w-5 h-5" />
               Profile Summary
             </h2>
@@ -128,8 +128,8 @@ export default function ProfileHero() {
                 <strong className="text-gray-900">Last Login:</strong> {profile.lastLogin}
               </li>
               <li className="flex items-center gap-1">
-                <CheckCircleIcon className="w-4 h-4 text-green-500" />
-                <span className="text-green-400 font-semibold text-sm">
+                <CheckCircleIcon className="w-4 h-4 text-black" />
+                <span className="text-black font-semibold text-sm">
                   {profile.verified ? 'Verified Account' : 'Unverified Account'}
                 </span>
               </li>
@@ -137,7 +137,7 @@ export default function ProfileHero() {
             <button
               aria-label="Edit Profile Information"
               onClick={() => setIsDrawerOpen(true)}
-              className="mt-3 flex items-center gap-1.5 text-amber-600 hover:text-amber-500 font-semibold transition text-sm"
+              className="mt-3 flex items-center gap-1.5 text-black hover:text-black font-semibold transition text-sm"
             >
               <PencilSquareIcon className="w-4 h-4" />
               Edit Profile
@@ -145,8 +145,8 @@ export default function ProfileHero() {
           </div>
 
           {/* Right Info */}
-          <div className="space-y-4 bg-white/50 p-4 rounded-md shadow-md border border-amber-600/30">
-            <h2 className="text-lg font-semibold text-amber-600 mb-2 flex items-center gap-1.5">
+          <div className="space-y-4 bg-white/50 p-4 rounded-md shadow-md border border-black/30">
+            <h2 className="text-lg font-semibold text-black mb-2 flex items-center gap-1.5">
               <ClockIcon className="w-5 h-5" />
               Recent Activity
             </h2>
@@ -167,7 +167,7 @@ export default function ProfileHero() {
 
             <button
               aria-label="View Full Activity Log"
-              className="mt-3 inline-block text-amber-600 hover:text-amber-500 font-semibold underline transition text-sm"
+              className="mt-3 inline-block text-black hover:text-black font-semibold underline transition text-sm"
             >
               View Full Activity Log →
             </button>
@@ -183,7 +183,7 @@ export default function ProfileHero() {
         >
           <button
             onClick={() => setIsDrawerOpen(true)}
-            className="flex items-center gap-2 px-5 py-2 rounded-full text-base bg-amber-600 hover:bg-amber-500 text-gray-900 font-extrabold shadow-md transition-transform hover:scale-[1.03] focus-visible:ring-4 focus-visible:ring-amber-700"
+            className="flex items-center gap-2 px-5 py-2 rounded-full text-base bg-black hover:bg-black text-gray-900 font-extrabold shadow-md transition-transform hover:scale-[1.03] focus-visible:ring-4 focus-visible:ring-black"
             aria-label="Manage your profile"
           >
             <IdentificationIcon className="w-5 h-5" />
@@ -308,14 +308,14 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
             aria-labelledby="drawer-title"
           >
             {/* Header */}
-            <header className="flex items-center justify-between pb-2 border-b border-amber-600/40">
-              <h2 id="drawer-title" className="text-lg font-bold text-amber-600">
+            <header className="flex items-center justify-between pb-2 border-b border-black/40">
+              <h2 id="drawer-title" className="text-lg font-bold text-black">
                 Manage Profile
               </h2>
               <button
                 onClick={onClose}
                 aria-label="Close Profile Drawer"
-                className="text-amber-600 hover:text-amber-500 focus:outline-none"
+                className="text-black hover:text-black focus:outline-none"
               >
                 <XMarkIcon className="w-6 h-6" />
               </button>
@@ -327,7 +327,7 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
               className="flex flex-col gap-3 mt-4"
               autoComplete="off"
             >
-              <label className="flex flex-col text-amber-600 text-sm font-semibold">
+              <label className="flex flex-col text-black text-sm font-semibold">
                 Full Name
                 <input
                   type="text"
@@ -336,11 +336,11 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
                   onChange={handleChange}
                   placeholder="Your full name"
                   required
-                  className="mt-1 rounded-md bg-white border border-amber-600/50 p-2 text-gray-900 placeholder-amber-800 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="mt-1 rounded-md bg-white border border-black/50 p-2 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </label>
 
-              <label className="flex flex-col text-amber-600 text-sm font-semibold">
+              <label className="flex flex-col text-black text-sm font-semibold">
                 Email Address
                 <input
                   type="email"
@@ -349,11 +349,11 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
                   onChange={handleChange}
                   placeholder="you@example.com"
                   required
-                  className="mt-1 rounded-md bg-white border border-amber-600/50 p-2 text-gray-900 placeholder-amber-800 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="mt-1 rounded-md bg-white border border-black/50 p-2 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </label>
 
-              <label className="flex flex-col text-amber-600 text-sm font-semibold">
+              <label className="flex flex-col text-black text-sm font-semibold">
                 Phone Number
                 <input
                   type="tel"
@@ -361,39 +361,39 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+31 6 1234 5678"
-                  className="mt-1 rounded-md bg-white border border-amber-600/50 p-2 text-gray-900 placeholder-amber-800 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600"
+                  className="mt-1 rounded-md bg-white border border-black/50 p-2 text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
               </label>
 
-              <label className="flex flex-col text-amber-600 text-sm font-semibold">
+              <label className="flex flex-col text-black text-sm font-semibold">
                 Member Since
                 <input
                   type="text"
                   name="memberSince"
                   value={formData.memberSince}
                   readOnly
-                  className="mt-1 rounded-md bg-white border border-amber-600/50 p-2 text-amber-500 text-sm cursor-not-allowed"
+                  className="mt-1 rounded-md bg-white border border-black/50 p-2 text-black text-sm cursor-not-allowed"
                 />
               </label>
 
-              <label className="flex flex-col text-amber-600 text-sm font-semibold">
+              <label className="flex flex-col text-black text-sm font-semibold">
                 Last Login
                 <input
                   type="text"
                   name="lastLogin"
                   value={formData.lastLogin}
                   readOnly
-                  className="mt-1 rounded-md bg-white border border-amber-600/50 p-2 text-amber-500 text-sm cursor-not-allowed"
+                  className="mt-1 rounded-md bg-white border border-black/50 p-2 text-black text-sm cursor-not-allowed"
                 />
               </label>
 
-              <label className="inline-flex items-center gap-2 text-amber-600 text-sm font-semibold mt-2">
+              <label className="inline-flex items-center gap-2 text-black text-sm font-semibold mt-2">
                 <input
                   type="checkbox"
                   name="verified"
                   checked={formData.verified}
                   onChange={handleChange}
-                  className="w-4 h-4 rounded border-amber-600 text-amber-600 focus:ring-amber-600"
+                  className="w-4 h-4 rounded border-black text-black focus:ring-black"
                 />
                 Verified Account
               </label>
@@ -402,13 +402,13 @@ function ProfileDrawer({ isOpen, onClose, profile, onSave }) {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-4 py-1.5 rounded-full border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-gray-900 transition font-semibold text-sm"
+                  className="px-4 py-1.5 rounded-full border border-black text-black hover:bg-black hover:text-gray-900 transition font-semibold text-sm"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-1.5 rounded-full bg-amber-600 text-gray-900 font-extrabold hover:bg-amber-500 transition text-sm"
+                  className="px-5 py-1.5 rounded-full bg-black text-gray-900 font-extrabold hover:bg-black transition text-sm"
                 >
                   Save Changes
                 </button>

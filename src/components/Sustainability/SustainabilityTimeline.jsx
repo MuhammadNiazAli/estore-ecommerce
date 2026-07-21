@@ -31,31 +31,31 @@ const SustainabilityTimeline = () => {
   return (
     <section
       aria-labelledby="sustainability-timeline-title"
-      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16"
+      className="bg-white text-black px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="max-w-4xl mx-auto">
         <h2
           id="sustainability-timeline-title"
-          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-16 text-center select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-black mb-16 text-center select-none"
         >
           Our Sustainability Journey
         </h2>
 
-        <ol className="relative border-l-2 border-amber-900 ml-6 sm:ml-10 space-y-12">
+        <ol className="relative border-l-2 border-black ml-6 sm:ml-10 space-y-12">
           {timelineEvents.map(({ date, title, description }, index) => (
             <li key={index} className="relative pl-8 sm:pl-12">
               {/* Circle */}
               <span
-                className="absolute -left-[18px] top-2 w-6 h-6 rounded-full bg-amber-600 border-2 border-amber-900 shadow-md"
+                className="absolute -left-[18px] top-2 w-6 h-6 rounded-full bg-black border-2 border-black shadow-md"
                 aria-hidden="true"
               ></span>
 
-              <time className="text-amber-500 font-semibold text-sm sm:text-base select-text">
+              <time className="text-black font-semibold text-sm sm:text-base select-text">
                 {date}
               </time>
 
-              <h3 className="mt-2 text-amber-400 text-xl font-semibold select-text">{title}</h3>
-              <p className="mt-2 text-amber-400 text-sm sm:text-base leading-relaxed max-w-prose select-text">
+              <h3 className="mt-2 text-black text-xl font-semibold select-text">{title}</h3>
+              <p className="mt-2 text-black text-sm sm:text-base leading-relaxed max-w-prose select-text">
                 {description}
               </p>
             </li>

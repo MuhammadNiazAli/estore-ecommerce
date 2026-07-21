@@ -35,7 +35,7 @@ const DealOfTheHour = () => {
   return (
     <section className="w-full max-w-[1000px] mx-auto bg-white text-gray-900 rounded-3xl overflow-hidden shadow-lg p-6 flex flex-col sm:flex-row items-center gap-6">
     
-      <div className="relative w-full sm:w-1/3 h-48 sm:h-56 rounded-xl overflow-hidden border-2 border-amber-600 shadow-md">
+      <div className="relative w-full sm:w-1/3 h-48 sm:h-56 rounded-xl overflow-hidden border-2 border-black shadow-md">
         <img
           src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Deal Product"
@@ -52,7 +52,7 @@ const DealOfTheHour = () => {
 
 
         <div className="flex items-center gap-4">
-          <span className="text-amber-600 text-3xl font-extrabold">$49</span>
+          <span className="text-black text-3xl font-extrabold">$49</span>
           <span className="line-through text-gray-500 text-lg">$79</span>
         </div>
 
@@ -73,7 +73,7 @@ const DealOfTheHour = () => {
         </div>
 
 
-        <button className="mt-4 sm:mt-6 bg-amber-600 text-black font-semibold py-3 rounded-full max-w-xs w-full hover:bg-amber-500 transition">
+        <button className="mt-4 sm:mt-6 bg-black text-black font-semibold py-3 rounded-full max-w-xs w-full hover:bg-black transition">
           Buy Now
         </button>
       </div>

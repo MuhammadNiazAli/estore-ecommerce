@@ -14,7 +14,7 @@ const BlogPostCard = ({ post }) => {
       className="
         w-full max-w-[480px] 
         bg-white rounded-lg shadow-md overflow-hidden 
-        flex flex-col hover:shadow-amber-600 transition-shadow duration-300 cursor-pointer
+        flex flex-col hover:shadow-black transition-shadow duration-300 cursor-pointer
         mx-auto
         sm:max-w-sm
         md:max-w-md
@@ -36,7 +36,7 @@ const BlogPostCard = ({ post }) => {
         )}
       </div>
       <div className="p-5 flex flex-col flex-grow">
-        <h2 className="text-amber-600 font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2">
+        <h2 className="text-black font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2">
           {title || 'Untitled'}
         </h2>
         <p className="text-gray-700 flex-grow mb-4 line-clamp-3 text-sm sm:text-base">
@@ -49,12 +49,12 @@ const BlogPostCard = ({ post }) => {
         {url ? (
           <a
             href={url}
-            className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-500 font-semibold transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 text-black hover:text-black font-semibold transition-colors text-sm sm:text-base"
           >
             Read More <ArrowRight size={16} />
           </a>
         ) : (
-          <span className="text-amber-600 font-semibold text-sm sm:text-base">Read More</span>
+          <span className="text-black font-semibold text-sm sm:text-base">Read More</span>
         )}
       </div>
     </article>

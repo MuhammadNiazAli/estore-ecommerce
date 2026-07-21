@@ -195,8 +195,8 @@ const ShopCategoryNav = () => {
           disabled={!canScrollLeft}
           aria-label="Scroll left"
           className={`hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-20
-            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-amber-400 shadow-md
-            hover:bg-amber-400 hover:text-gray-950 transition
+            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-black shadow-md
+            hover:bg-black hover:text-gray-950 transition
             disabled:opacity-30 disabled:pointer-events-none`}
         >
           <FiChevronLeft size={20} />
@@ -208,8 +208,8 @@ const ShopCategoryNav = () => {
           disabled={!canScrollRight}
           aria-label="Scroll right"
           className={`hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-20
-            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-amber-400 shadow-md
-            hover:bg-amber-400 hover:text-gray-950 transition
+            w-9 h-9 rounded-full backdrop-blur-md bg-white/80 text-black shadow-md
+            hover:bg-black hover:text-gray-950 transition
             disabled:opacity-30 disabled:pointer-events-none`}
         >
           <FiChevronRight size={20} />
@@ -251,11 +251,11 @@ const ShopCategoryNav = () => {
                   className={`flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all duration-200 whitespace-nowrap text-sm font-medium
                     ${
                       isActive
-                        ? 'border-amber-400 text-amber-400 bg-white shadow-[0_0_8px_rgba(251,191,36,0.7)]'
-                        : 'border-gray-200 text-gray-700 hover:border-amber-400 hover:text-amber-400 hover:bg-gray-500'
+                        ? 'border-black text-black bg-white shadow-[0_0_8px_rgba(251,191,36,0.7)]'
+                        : 'border-gray-200 text-gray-700 hover:border-black hover:text-black hover:bg-gray-500'
                     }`}
                 >
-                  <span className={`w-5 h-5 ${isActive ? 'text-amber-400' : 'text-gray-600'}`}>
+                  <span className={`w-5 h-5 ${isActive ? 'text-black' : 'text-gray-600'}`}>
                     {cat.icon}
                   </span>
                   {cat.name}

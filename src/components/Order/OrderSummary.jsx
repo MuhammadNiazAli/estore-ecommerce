@@ -174,7 +174,7 @@ const OrderSummary = () => {
     <section className="w-full max-w-[1100px] mx-auto bg-white text-gray-900 p-6 sm:p-10 rounded-2xl mb-15">
    
       <header className="mb-8 border-b border-gray-200 pb-6">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-amber-600 mb-2 select-none my-10">
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-black mb-2 select-none my-10">
           Order Summary
         </h1>
         <p className="text-gray-600 text-sm sm:text-base">
@@ -202,10 +202,10 @@ const OrderSummary = () => {
       isCancelled && key !== 'cancelled'
         ? 'cursor-not-allowed text-gray-600 border border-gray-200 bg-white'
         : active
-        ? 'bg-amber-700 text-gray-900 shadow-lg shadow-amber-800/50 border border-amber-600'
+        ? 'bg-black text-gray-900 shadow-lg shadow-black/50 border border-black'
         : done
-        ? 'text-amber-600 border border-amber-800 bg-white hover:bg-gray-500'
-        : 'text-gray-500 border border-gray-200 hover:text-amber-500 hover:bg-gray-500 cursor-pointer'
+        ? 'text-black border border-black bg-white hover:bg-gray-500'
+        : 'text-gray-500 border border-gray-200 hover:text-black hover:bg-gray-500 cursor-pointer'
     }
   `}
   disabled={isCancelled && key !== 'cancelled'}
@@ -214,9 +214,9 @@ const OrderSummary = () => {
   <div
     className={`p-2 rounded-full mb-1 ${
       active
-        ? 'bg-white text-amber-600'
+        ? 'bg-white text-black'
         : done
-        ? 'bg-amber-700 text-black'
+        ? 'bg-black text-black'
         : 'bg-white text-gray-600'
     }`}
   >
@@ -231,12 +231,12 @@ const OrderSummary = () => {
 
     
       <section className="bg-white p-6 rounded-xl mb-10">
-  <h2 className="flex items-center gap-3 text-2xl font-bold text-amber-600 mb-3 select-none">
+  <h2 className="flex items-center gap-3 text-2xl font-bold text-black mb-3 select-none">
     {statusDetails[selectedStatus].icon}
     {statusDetails[selectedStatus].title}
   </h2>
-  <p className="text-amber-400 text-base mb-4">{statusDetails[selectedStatus].description}</p>
-  <ul className="list-disc list-inside text-amber-500 text-sm mb-6 space-y-1">
+  <p className="text-black text-base mb-4">{statusDetails[selectedStatus].description}</p>
+  <ul className="list-disc list-inside text-black text-sm mb-6 space-y-1">
     {statusDetails[selectedStatus].extended.map((line, i) => (
       <li key={i}>{line}</li>
     ))}
@@ -245,7 +245,7 @@ const OrderSummary = () => {
     {statusDetails[selectedStatus].actions.map((action, i) => (
       <button
         key={i}
-        className="px-5 py-2 rounded-full bg-amber-700 hover:bg-amber-800 transition text-black font-semibold text-sm shadow-md flex items-center gap-2"
+        className="px-5 py-2 rounded-full bg-black hover:bg-black transition text-black font-semibold text-sm shadow-md flex items-center gap-2"
         onClick={() => alert(action)}
         type="button"
       >
@@ -316,7 +316,7 @@ const OrderSummary = () => {
                 href={order.trackingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-600 underline hover:text-amber-500"
+                className="text-black underline hover:text-black"
               >
                 1234567890 <FiChevronRight className="inline" />
               </a>
@@ -327,7 +327,7 @@ const OrderSummary = () => {
 
      
       <section className="mb-10">
-  <h3 className="flex items-center gap-3 text-2xl font-bold text-amber-600 mb-6 select-none">
+  <h3 className="flex items-center gap-3 text-2xl font-bold text-black mb-6 select-none">
     <FiShoppingBag />
     Items in Your Order
   </h3>
@@ -341,22 +341,22 @@ const OrderSummary = () => {
           loading="lazy"
           decoding="async"
         />
-        <div className="flex-grow space-y-2 text-amber-400 text-sm sm:text-base">
-          <h4 className="text-lg font-semibold text-amber-300">{item.name}</h4>
-          <p className="italic text-amber-600">{item.brand}</p>
+        <div className="flex-grow space-y-2 text-black text-sm sm:text-base">
+          <h4 className="text-lg font-semibold text-black">{item.name}</h4>
+          <p className="italic text-black">{item.brand}</p>
           <p>{item.description}</p>
-          <p className="text-xs sm:text-sm text-amber-500">
-            <span className="font-semibold text-amber-300">SKU:</span> {item.sku} &nbsp;|&nbsp;{' '}
-            <span className="font-semibold text-amber-300">Category:</span> {item.category} &nbsp;|&nbsp;{' '}
-            <span className="font-semibold text-amber-300">Variants:</span> {item.variants.join(', ')}
+          <p className="text-xs sm:text-sm text-black">
+            <span className="font-semibold text-black">SKU:</span> {item.sku} &nbsp;|&nbsp;{' '}
+            <span className="font-semibold text-black">Category:</span> {item.category} &nbsp;|&nbsp;{' '}
+            <span className="font-semibold text-black">Variants:</span> {item.variants.join(', ')}
           </p>
           <p>
-            Quantity: <strong className="text-amber-300">{item.qty}</strong>
+            Quantity: <strong className="text-black">{item.qty}</strong>
           </p>
           <p>
-            Price each: <strong className="text-amber-300">${item.price.toFixed(2)}</strong>
+            Price each: <strong className="text-black">${item.price.toFixed(2)}</strong>
           </p>
-          <p className="text-lg font-bold text-amber-400">
+          <p className="text-lg font-bold text-black">
             Total: ${(item.price * item.qty).toFixed(2)}
           </p>
         </div>
@@ -381,36 +381,36 @@ const OrderSummary = () => {
       </section>
 
    
-      <section className="bg-white border border-amber-900 rounded-lg p-6 text-amber-500 mb-10 max-w-xl mx-auto ">
+      <section className="bg-white border border-black rounded-lg p-6 text-black mb-10 max-w-xl mx-auto ">
         <h4 className="font-semibold text-lg mb-3 select-none flex items-center gap-2">
           <FiMessageCircle /> Order Notes
         </h4>
         <textarea
-          className="w-full bg-white border border-amber-900 rounded-md p-3 text-amber-400 resize-y focus:outline-none focus:ring-2 focus:ring-amber-700 transition"
+          className="w-full bg-white border border-black rounded-md p-3 text-black resize-y focus:outline-none focus:ring-2 focus:ring-black transition"
           rows={4}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           aria-label="Edit order notes"
         />
-        <p className="mt-2 text-amber-600 text-xs italic select-none">
+        <p className="mt-2 text-black text-xs italic select-none">
           You can add special instructions or update notes for your order.
         </p>
       </section>
 
      
       <section className="max-w-xl mx-auto mb-10">
-  <h3 className="text-2xl font-bold text-amber-600 mb-6 select-none">
+  <h3 className="text-2xl font-bold text-black mb-6 select-none">
     Customer Support & FAQ
   </h3>
-  <ul className="space-y-6 text-amber-400 text-sm sm:text-base">
+  <ul className="space-y-6 text-black text-sm sm:text-base">
     {faqData.map(({ question, answer }, i) => (
       <li key={i}>
         <details className="group bg-white rounded-lg p-4 cursor-pointer shadow-md hover:bg-gray-500 transition">
-          <summary className="flex items-center justify-between font-semibold text-amber-300">
+          <summary className="flex items-center justify-between font-semibold text-black">
             {question}
-            <FiChevronRight className="transition-transform group-open:rotate-90 text-amber-600" />
+            <FiChevronRight className="transition-transform group-open:rotate-90 text-black" />
           </summary>
-          <p className="mt-3 text-amber-500">{answer}</p>
+          <p className="mt-3 text-black">{answer}</p>
         </details>
       </li>
     ))}
@@ -431,7 +431,7 @@ const OrderSummary = () => {
 
 const InfoCard = ({ icon, title, lines }) => (
   <div className="bg-white rounded-xl p-6 text-sm sm:text-base space-y-2 shadow-md">
-    <h4 className="flex items-center gap-3 font-semibold text-amber-600 text-lg mb-2 select-none">
+    <h4 className="flex items-center gap-3 font-semibold text-black text-lg mb-2 select-none">
       {icon} {title}
     </h4>
     {lines.map((line, i) =>
@@ -449,7 +449,7 @@ const InfoCard = ({ icon, title, lines }) => (
 const SummaryLine = ({ label, value, highlight }) => (
   <div
     className={`flex justify-between ${
-      highlight ? 'text-green-400 font-semibold' : ''
+      highlight ? 'text-black font-semibold' : ''
     }`}
   >
     <span>{label}</span>
@@ -462,9 +462,9 @@ const ActionButton = ({ icon, label, primary, danger, onClick }) => (
   className={`flex items-center justify-center gap-2 px-6 py-2 rounded-full text-sm font-semibold transition
     ${
       primary
-        ? 'bg-amber-700 text-gray-900 hover:bg-amber-800 shadow-lg shadow-amber-600/40'
+        ? 'bg-black text-gray-900 hover:bg-black shadow-lg shadow-black/40'
         : danger
-        ? 'border border-red-600 text-red-500 hover:bg-red-900 shadow-inner'
+        ? 'border border-black text-black hover:bg-black shadow-inner'
         : 'border border-gray-200 text-gray-700 hover:bg-gray-500'
     }
     w-full sm:w-auto whitespace-nowrap

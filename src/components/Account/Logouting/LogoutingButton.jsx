@@ -8,7 +8,7 @@ const LogoutingButton = ({ onLogout, onCancel }) => {
       <button
         type="button"
         onClick={onLogout}
-        className="px-8 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+        className="px-8 py-3 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         aria-label="Confirm logout"
       >
         Confirm Logout
@@ -17,7 +17,7 @@ const LogoutingButton = ({ onLogout, onCancel }) => {
       <button
         type="button"
         onClick={onCancel}
-        className="px-8 py-3 border border-amber-600 text-amber-600 font-semibold rounded-full hover:bg-amber-600 hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+        className="px-8 py-3 border border-black text-black font-semibold rounded-full hover:bg-black hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         aria-label="Cancel logout"
       >
         Cancel

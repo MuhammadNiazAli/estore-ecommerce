@@ -81,7 +81,7 @@ const ResponsibilityTestimonials = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-amber-600 text-4xl font-bold mb-12 text-center max-w-[1000px] select-none"
+        className="text-black text-4xl font-bold mb-12 text-center max-w-[1000px] select-none"
       >
         What People Are Saying
       </motion.h2>
@@ -93,8 +93,8 @@ const ResponsibilityTestimonials = () => {
           onClick={() => scrollBy(-1)}
           disabled={!canScrollLeft}
           className={`hidden sm:flex absolute top-1/2 left-0 transform -translate-y-1/2 rounded-full p-2 z-10 transition
-            bg-white/70 hover:bg-amber-700 hover:text-gray-900
-            ${!canScrollLeft ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-amber-600' : ''}`}
+            bg-white/70 hover:bg-black hover:text-gray-900
+            ${!canScrollLeft ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-black' : ''}`}
           tabIndex={canScrollLeft ? 0 : -1}
           type="button"
         >
@@ -125,12 +125,12 @@ const ResponsibilityTestimonials = () => {
                 <img
                   src={photo}
                   alt={name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-600"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-black"
                   loading="lazy"
                   draggable={false}
                 />
                 <div>
-                  <p className="text-amber-600 font-semibold">{name}</p>
+                  <p className="text-black font-semibold">{name}</p>
                   <p className="text-gray-600 text-sm">{role}</p>
                 </div>
               </div>
@@ -145,8 +145,8 @@ const ResponsibilityTestimonials = () => {
           onClick={() => scrollBy(1)}
           disabled={!canScrollRight}
           className={`hidden sm:flex absolute top-1/2 right-0 transform -translate-y-1/2 rounded-full p-2 z-10 transition
-            bg-white/70 hover:bg-amber-700 hover:text-gray-900
-            ${!canScrollRight ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-amber-600' : ''}`}
+            bg-white/70 hover:bg-black hover:text-gray-900
+            ${!canScrollRight ? 'opacity-30 cursor-not-allowed hover:bg-gray-500 hover:text-black' : ''}`}
           tabIndex={canScrollRight ? 0 : -1}
           type="button"
         >

@@ -26,7 +26,7 @@ export default function PaymentMethod({ initialMethod = 'creditCard', onSubmit }
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-[95vw] sm:max-w-[520px] md:max-w-[620px] lg:max-w-[700px]
-          bg-white rounded-3xl shadow-2xl border border-amber-800
+          bg-white rounded-3xl shadow-2xl border border-black
           p-5 sm:p-8 md:p-10 backdrop-blur-md transition
           my-[-40px] mb-[-70px]"
         aria-labelledby="payment-method-title"
@@ -34,7 +34,7 @@ export default function PaymentMethod({ initialMethod = 'creditCard', onSubmit }
       >
         <h2
           id="payment-method-title"
-          className="text-xl sm:text-3xl font-extrabold text-center text-amber-500 mb-6 sm:mb-8 select-none tracking-wide"
+          className="text-xl sm:text-3xl font-extrabold text-center text-black mb-6 sm:mb-8 select-none tracking-wide"
         >
           Select Payment Method
         </h2>
@@ -76,7 +76,7 @@ export default function PaymentMethod({ initialMethod = 'creditCard', onSubmit }
           <p
             id="payment-method-error"
             role="alert"
-            className="mt-5 text-center text-sm text-red-500 font-semibold select-none"
+            className="mt-5 text-center text-sm text-black font-semibold select-none"
           >
             {error}
           </p>
@@ -86,15 +86,15 @@ export default function PaymentMethod({ initialMethod = 'creditCard', onSubmit }
           type="submit"
           className="
             mt-8 sm:mt-10 w-full
-            bg-gradient-to-r from-amber-600 to-amber-800
-            hover:from-amber-700 hover:to-amber-900
+            bg-gradient-to-r from-black to-gray-900
+            hover:from-black hover:to-gray-900
             text-gray-900 font-bold
             py-3 sm:py-3.5
             px-6 sm:px-10 md:px-12
             text-base sm:text-lg md:text-xl
             rounded-full
             shadow-md hover:shadow-lg
-            focus:outline-none focus:ring-4 focus:ring-amber-500/70 focus:ring-offset-2
+            focus:outline-none focus:ring-4 focus:ring-black/70 focus:ring-offset-2
             transition-all duration-200
             tracking-wide
             select-none
@@ -117,10 +117,10 @@ function PaymentOption({ id, label, description, value, selected, onChange }) {
         rounded-xl cursor-pointer border-2 transition-colors duration-200
         ${
           isActive
-            ? 'border-amber-600 bg-white shadow-[0_0_10px_rgba(252,211,77,0.6)]'
-            : 'border-amber-800 hover:border-amber-600 bg-amber-900/60'
+            ? 'border-black bg-white shadow-[0_0_10px_rgba(252,211,77,0.6)]'
+            : 'border-black hover:border-black bg-black/60'
         }
-        focus-within:ring-1 focus-within:ring-amber-500 focus-within:ring-opacity-50
+        focus-within:ring-1 focus-within:ring-black focus-within:ring-opacity-50
       `}
     >
       <input
@@ -130,13 +130,13 @@ function PaymentOption({ id, label, description, value, selected, onChange }) {
         value={value}
         checked={isActive}
         onChange={onChange}
-        className="h-5 w-5 text-amber-700 mt-0.5 sm:mt-0 bg-amber-900 border-amber-800 focus:ring-amber-500 transition cursor-pointer"
+        className="h-5 w-5 text-black mt-0.5 sm:mt-0 bg-black border-black focus:ring-black transition cursor-pointer"
       />
       <div className="flex flex-col">
-        <span className="text-amber-300 font-semibold text-sm sm:text-base select-none">
+        <span className="text-black font-semibold text-sm sm:text-base select-none">
           {label}
         </span>
-        <span className="text-amber-400/90 text-xs sm:text-sm select-none">
+        <span className="text-black/90 text-xs sm:text-sm select-none">
           {description}
         </span>
       </div>

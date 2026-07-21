@@ -644,7 +644,7 @@ const SportsPagination = () => {
                 onClick={() => handlePageChange(page)}
                 className={`px-4 py-2 rounded-lg font-medium min-w-[50px] whitespace-nowrap transition ${
                   currentPage === page
-                    ? "bg-white text-gray-900 border border-amber-50"
+                    ? "bg-white text-gray-900 border border-black"
                     : "bg-white text-gray-700 hover:bg-gray-500"
                 }`}
               >

@@ -24,7 +24,7 @@ const PerchasigHistoryLoader = () => {
       style={{ minHeight: '320px' }}
     >
       <svg
-        className="animate-spin h-14 w-14 text-amber-600"
+        className="animate-spin h-14 w-14 text-black"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ const PerchasigHistoryLoader = () => {
           d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
         />
       </svg>
-      <span className="text-amber-500 font-semibold text-lg">Loading Purchase History...</span>
+      <span className="text-black font-semibold text-lg">Loading Purchase History...</span>
     </div>
   );
 };

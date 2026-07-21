@@ -289,7 +289,7 @@ const FitnessFilters = () => {
         {/* ✅ Filter Toggle for Mobile */}
         <div className="lg:hidden sticky top-20 z-40">
           <button
-            className="bg-amber-700 text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+            className="bg-black text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
             onClick={() => setIsFilterOpen(true)}
           >
             <FaFilter /> Filters
@@ -304,7 +304,7 @@ const FitnessFilters = () => {
         >
           {/* Close Btn for Mobile */}
           <button
-            className="absolute top-4 right-4 text-amber-600 text-2xl lg:hidden"
+            className="absolute top-4 right-4 text-black text-2xl lg:hidden"
             onClick={() => setIsFilterOpen(false)}
           >
             <FaTimes />
@@ -312,7 +312,7 @@ const FitnessFilters = () => {
 
           <h2 className="text-xl font-bold mb-4">Filters</h2>
           <button
-            className="text-sm text-amber-600 hover:underline mb-4"
+            className="text-sm text-black hover:underline mb-4"
             onClick={resetFilters}
           >
             Reset Filters
@@ -329,7 +329,7 @@ const FitnessFilters = () => {
 
           {/* Brand */}
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Brand</h3>
+            <h3 className="font-semibold mb-2 text-black">Brand</h3>
             {["FitPro", "ProRun", "ZenFlex", "IronCore"].map((brand) => (
               <label key={brand} className="block mb-1 text-sm">
                 <input
@@ -345,7 +345,7 @@ const FitnessFilters = () => {
 
           {/* Category */}
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Category</h3>
+            <h3 className="font-semibold mb-2 text-black">Category</h3>
             {["Strength", "Cardio", "Yoga"].map((cat) => (
               <label key={cat} className="block mb-1 text-sm">
                 <input
@@ -361,7 +361,7 @@ const FitnessFilters = () => {
 
           {/* Features */}
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Features</h3>
+            <h3 className="font-semibold mb-2 text-black">Features</h3>
             {[
               "Adjustable Weight",
               "Compact",
@@ -384,7 +384,7 @@ const FitnessFilters = () => {
 
           {/* Price */}
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Price</h3>
+            <h3 className="font-semibold mb-2 text-black">Price</h3>
             <input
               type="range"
               min="0"
@@ -400,12 +400,12 @@ const FitnessFilters = () => {
 
           {/* Rating */}
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Rating</h3>
+            <h3 className="font-semibold mb-2 text-black">Rating</h3>
             {[5, 4, 3].map((r) => (
               <button
                 key={r}
                 className={`mr-2 mb-2 px-2 py-1 border rounded ${
-                  filters.rating === r ? "bg-amber-600 text-black" : ""
+                  filters.rating === r ? "bg-black text-black" : ""
                 }`}
                 onClick={() => setFilters({ ...filters, rating: r })}
               >
@@ -416,7 +416,7 @@ const FitnessFilters = () => {
 
           {/* Stock */}
           <div>
-            <h3 className="font-semibold mb-2 text-amber-600">Availability</h3>
+            <h3 className="font-semibold mb-2 text-black">Availability</h3>
             <label className="block">
               <input
                 type="radio"
@@ -469,13 +469,13 @@ const FitnessFilters = () => {
                 />
                 <h3 className="font-semibold">{product.name}</h3>
                 <p className="text-sm text-gray-600">{product.brand}</p>
-                <p className="text-lg font-bold text-amber-600">
+                <p className="text-lg font-bold text-black">
                   ${product.price}
                 </p>
                 <p className="text-sm">
                   {product.stock ? "In Stock" : "Out of Stock"}
                 </p>
-                <button className="mt-3 bg-amber-700 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition inline-flex items-center justify-center whitespace-nowrap text-sm sm:text-base">
+                <button className="mt-3 bg-black text-black px-5 py-2 rounded-full font-semibold hover:bg-black transition inline-flex items-center justify-center whitespace-nowrap text-sm sm:text-base">
                   Add to Cart
                 </button>
               </div>
@@ -487,7 +487,7 @@ const FitnessFilters = () => {
             <div className="text-center mt-6">
               <button
                 onClick={() => setVisibleCount((prev) => prev + 8)}
-                className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+                className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition"
               >
                 Load More
               </button>

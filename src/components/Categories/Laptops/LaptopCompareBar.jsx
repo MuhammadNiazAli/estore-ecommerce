@@ -20,7 +20,7 @@ const LaptopCompareBar = ({ selectedLaptops = [], onRemove, onCompare }) => {
             <button
               onClick={() => onRemove(id)}
               aria-label={`Remove ${name} from comparison`}
-              className="ml-3 text-red-500 hover:text-red-600 focus:outline-none"
+              className="ml-3 text-black hover:text-black focus:outline-none"
             >
               &#10005;
             </button>
@@ -29,7 +29,7 @@ const LaptopCompareBar = ({ selectedLaptops = [], onRemove, onCompare }) => {
       </div>
       <button
         onClick={onCompare}
-        className="ml-auto bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold px-6 py-2 rounded-md transition"
+        className="ml-auto bg-black hover:bg-black text-gray-900 font-semibold px-6 py-2 rounded-md transition"
       >
         Compare ({selectedLaptops.length})
       </button>

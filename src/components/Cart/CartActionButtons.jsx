@@ -74,7 +74,7 @@ const CartActionButtons = ({
             type="button"
             aria-label="Continue Shopping"
             onClick={onContinueShopping}
-            className="flex items-center gap-2 text-gray-700 hover:text-amber-600 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="flex items-center gap-2 text-gray-700 hover:text-black text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             <ArrowLeftIcon className="w-4 h-4" />
             <span>Continue Shopping</span>
@@ -84,7 +84,7 @@ const CartActionButtons = ({
             type="button"
             aria-label="Clear Cart"
             onClick={handleClearCart}
-            className="flex items-center gap-2 text-red-400 hover:text-red-500 text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+            className="flex items-center gap-2 text-black hover:text-black text-sm font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             <TrashIcon className="w-4 h-4" />
             <span>Clear Cart</span>
@@ -98,7 +98,7 @@ const CartActionButtons = ({
               type="button"
               aria-label="Apply Promo Code"
               onClick={handleApplyClick}
-              className="flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-gray-900 text-sm font-semibold px-5 py-2.5 rounded-full shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2 w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 text-sm font-semibold px-5 py-2.5 rounded-full shadow transition duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full sm:w-auto justify-center"
             >
               <TagIcon className="w-4 h-4" />
               <span>Apply Promo Code</span>
@@ -122,7 +122,7 @@ const CartActionButtons = ({
                   setPromoStatus(null);
                 }}
                 className={`flex-grow bg-transparent text-gray-900 placeholder-gray-400 focus:outline-none ${
-                  promoStatus === 'error' ? 'border-b border-red-500' : 'border-b border-amber-600'
+                  promoStatus === 'error' ? 'border-b border-black' : 'border-b border-black'
                 } transition duration-200`}
                 placeholder="Enter promo code"
                 maxLength={20}
@@ -144,7 +144,7 @@ const CartActionButtons = ({
                 type="button"
                 onClick={handlePromoSubmit}
                 disabled={isApplying}
-                className="bg-amber-600 hover:bg-amber-500 text-gray-900 px-3 py-1 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="bg-black hover:bg-black text-gray-900 px-3 py-1 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-black disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {isApplying ? (
                   <svg
@@ -181,7 +181,7 @@ const CartActionButtons = ({
                   setIsApplying(false);
                 }}
                 aria-label="Close promo code input"
-                className="text-gray-600 hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+                className="text-gray-600 hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
               >
                 <XMarkIcon className="w-5 h-5" />
               </button>
@@ -191,7 +191,7 @@ const CartActionButtons = ({
           {/* Promo status messages */}
           {promoStatus === 'error' && (
             <p
-              className="mt-1 text-xs text-red-500 max-w-xs sm:max-w-sm select-none"
+              className="mt-1 text-xs text-black max-w-xs sm:max-w-sm select-none"
               role="alert"
               aria-live="assertive"
             >
@@ -200,7 +200,7 @@ const CartActionButtons = ({
           )}
           {promoStatus === 'success' && (
             <p
-              className="mt-1 text-xs text-green-400 max-w-xs sm:max-w-sm select-none"
+              className="mt-1 text-xs text-black max-w-xs sm:max-w-sm select-none"
               role="alert"
               aria-live="polite"
             >

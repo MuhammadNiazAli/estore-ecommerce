@@ -273,7 +273,7 @@ const CartRecentlyViewed = () => {
                     Category: {category}
                   </span>
                 </div>
-                <p className="text-amber-600 font-bold text-lg mt-4">${price.toFixed(2)}</p>
+                <p className="text-black font-bold text-lg mt-4">${price.toFixed(2)}</p>
               </div>
             </article>
           ))}
@@ -286,7 +286,7 @@ const CartRecentlyViewed = () => {
             aria-label="Scroll Left"
             className={`absolute top-1/2 -translate-y-1/2 -left-5 sm:-left-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-white/60 hover:bg-amber-600 hover:text-black
+              bg-white/60 hover:bg-black hover:text-black
               border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
             type="button"
@@ -302,7 +302,7 @@ const CartRecentlyViewed = () => {
             aria-label="Scroll Right"
             className={`absolute top-1/2 -translate-y-1/2 -right-5 sm:-right-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-white/60 hover:bg-amber-600 hover:text-black
+              bg-white/60 hover:bg-black hover:text-black
               border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
             type="button"

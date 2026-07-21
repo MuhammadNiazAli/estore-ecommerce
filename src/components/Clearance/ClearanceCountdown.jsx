@@ -38,7 +38,7 @@ const ClearanceCountdown = () => {
   }, []);
 
   return (
-    <section className="bg-white text-amber-600 py-10 flex justify-center">
+    <section className="bg-white text-black py-10 flex justify-center">
       <div className="max-w-[1000px] w-full text-center px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-4">

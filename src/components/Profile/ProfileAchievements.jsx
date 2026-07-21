@@ -17,7 +17,7 @@ const achievementsData = [
     id: 1,
     title: 'First Purchase',
     description: 'Congrats on completing your first purchase!',
-    icon: <SparklesIcon className="w-6 h-6 text-amber-600" />,
+    icon: <SparklesIcon className="w-6 h-6 text-black" />,
     progress: 100,
     category: 'Completed',
   },
@@ -25,7 +25,7 @@ const achievementsData = [
     id: 2,
     title: 'Top Reviewer',
     description: 'You have written 50+ helpful reviews.',
-    icon: <StarIcon className="w-6 h-6 text-amber-600" />,
+    icon: <StarIcon className="w-6 h-6 text-black" />,
     progress: 75,
     category: 'In Progress',
   },
@@ -33,7 +33,7 @@ const achievementsData = [
     id: 3,
     title: 'Loyal Customer',
     description: 'You’ve shopped with us for over 1 year.',
-    icon: <CheckBadgeIcon className="w-6 h-6 text-amber-600" />,
+    icon: <CheckBadgeIcon className="w-6 h-6 text-black" />,
     progress: 50,
     category: 'In Progress',
   },
@@ -41,7 +41,7 @@ const achievementsData = [
     id: 4,
     title: 'Holiday Shopper',
     description: 'Active during holiday sales with 5+ purchases.',
-    icon: <TrophyIcon className="w-6 h-6 text-amber-600" />,
+    icon: <TrophyIcon className="w-6 h-6 text-black" />,
     progress: 40,
     category: 'In Progress',
   },
@@ -49,7 +49,7 @@ const achievementsData = [
     id: 5,
     title: 'Early Adopter',
     description: 'Joined within the first 6 months of launch.',
-    icon: <SparklesIcon className="w-6 h-6 text-amber-600" />,
+    icon: <SparklesIcon className="w-6 h-6 text-black" />,
     progress: 100,
     category: 'Completed',
   },
@@ -57,7 +57,7 @@ const achievementsData = [
     id: 6,
     title: 'Wishlist Master',
     description: 'Added over 100 items to your wishlist.',
-    icon: <HeartIcon className="w-6 h-6 text-amber-600" />,
+    icon: <HeartIcon className="w-6 h-6 text-black" />,
     progress: 60,
     category: 'In Progress',
   },
@@ -93,15 +93,15 @@ const ProfileAchievements = () => {
         className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6"
       >
         <div className="max-w-full sm:max-w-lg">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-amber-600 mb-2 drop-shadow-lg leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-black mb-2 drop-shadow-lg leading-tight">
             Your Achievements
           </h2>
           <p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-md">
             Celebrate your progress and milestones reached on our platform.
           </p>
         </div>
-        <div className="flex items-center gap-2 sm:gap-3 text-amber-500 font-semibold text-xs sm:text-sm md:text-base select-none whitespace-nowrap">
-          <TrophyIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 animate-bounce text-amber-600 drop-shadow-md" />
+        <div className="flex items-center gap-2 sm:gap-3 text-black font-semibold text-xs sm:text-sm md:text-base select-none whitespace-nowrap">
+          <TrophyIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 animate-bounce text-black drop-shadow-md" />
           <AnimatedNumber value={achievementsData.length} /> badges earned
         </div>
       </motion.div>
@@ -116,9 +116,9 @@ const ProfileAchievements = () => {
               onClick={() => setFilter(cat)}
               className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold transition text-sm sm:text-base whitespace-nowrap ${
                 filter === cat
-                  ? 'bg-amber-600 text-gray-900 shadow-lg'
-                  : 'bg-amber-600/30 text-amber-500 hover:bg-amber-600/60'
-              } focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                  ? 'bg-black text-gray-900 shadow-lg'
+                  : 'bg-black/30 text-black hover:bg-black/60'
+              } focus:outline-none focus:ring-2 focus:ring-black`}
               aria-pressed={filter === cat}
               aria-label={`Filter achievements by ${cat}`}
             >
@@ -133,13 +133,13 @@ const ProfileAchievements = () => {
           placeholder="Search achievements..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full sm:w-64 md:w-72 px-4 py-2 rounded-full bg-white border border-amber-600/50 placeholder-amber-600 text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition text-sm sm:text-base"
+          className="w-full sm:w-64 md:w-72 px-4 py-2 rounded-full bg-white border border-black/50 placeholder-gray-500 text-black focus:outline-none focus:ring-2 focus:ring-black transition text-sm sm:text-base"
           aria-label="Search achievements"
         />
       </div>
 
       {/* Divider */}
-      <div className="w-full h-[1.5px] bg-amber-600/30 rounded-full mb-8 shadow-sm" />
+      <div className="w-full h-[1.5px] bg-black/30 rounded-full mb-8 shadow-sm" />
 
       {/* Achievements Grid */}
       <motion.div
@@ -149,7 +149,7 @@ const ProfileAchievements = () => {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
       >
         {filteredAchievements.length === 0 && (
-          <p className="text-amber-600 col-span-full text-center py-10 font-semibold">
+          <p className="text-black col-span-full text-center py-10 font-semibold">
             No achievements match your filter/search criteria.
           </p>
         )}
@@ -173,7 +173,7 @@ const ProfileAchievements = () => {
       >
         <button
           aria-label="View all achievements"
-          className="flex items-center gap-2 sm:gap-3 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-base sm:text-lg bg-amber-600 hover:bg-amber-500 text-gray-900 font-extrabold shadow-xl transition-transform hover:scale-[1.05] focus-visible:ring-4 focus-visible:ring-amber-700 focus:outline-none"
+          className="flex items-center gap-2 sm:gap-3 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-base sm:text-lg bg-black hover:bg-black text-gray-900 font-extrabold shadow-xl transition-transform hover:scale-[1.05] focus-visible:ring-4 focus-visible:ring-black focus:outline-none"
           onClick={() => alert('Navigate to full achievements page or show modal')}
           type="button"
         >
@@ -191,7 +191,7 @@ const AchievementCard = ({ title, description, icon, progress }) => {
   return (
     <div
       tabIndex={0}
-      className="relative flex flex-col gap-3 bg-white p-4 sm:p-5 rounded-xl shadow-inner border border-amber-600/20 hover:border-amber-600 transition cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-600"
+      className="relative flex flex-col gap-3 bg-white p-4 sm:p-5 rounded-xl shadow-inner border border-black/20 hover:border-black transition cursor-pointer focus:outline-none focus:ring-4 focus:ring-black"
       aria-describedby={`desc-${title.replace(/\s+/g, '-')}`}
       role="group"
       onMouseEnter={() => setShowTooltip(true)}
@@ -200,18 +200,18 @@ const AchievementCard = ({ title, description, icon, progress }) => {
       onBlur={() => setShowTooltip(false)}
     >
       <div className="flex items-center gap-3 sm:gap-4">
-        <div className="p-2 sm:p-3 bg-amber-600/20 rounded-full flex items-center justify-center min-w-[38px] min-h-[38px] sm:min-w-[44px] sm:min-h-[44px]">
+        <div className="p-2 sm:p-3 bg-black/20 rounded-full flex items-center justify-center min-w-[38px] min-h-[38px] sm:min-w-[44px] sm:min-h-[44px]">
           {icon}
         </div>
         <h3 className="text-gray-900 font-semibold text-base sm:text-lg md:text-xl truncate">{title}</h3>
-        <InformationCircleIcon className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500 opacity-70" />
+        <InformationCircleIcon className="w-4 h-4 sm:w-5 sm:h-5 text-black opacity-70" />
       </div>
 
       {/* Tooltip */}
       {showTooltip && (
         <div
           role="tooltip"
-          className="absolute top-full left-5 z-20 mt-2 max-w-xs bg-white text-amber-500 text-sm sm:text-base p-3 rounded-md shadow-lg pointer-events-none select-none"
+          className="absolute top-full left-5 z-20 mt-2 max-w-xs bg-white text-black text-sm sm:text-base p-3 rounded-md shadow-lg pointer-events-none select-none"
         >
           {description}
         </div>
@@ -227,7 +227,7 @@ const AchievementCard = ({ title, description, icon, progress }) => {
 
       {/* Progress Bar */}
       <div
-        className="w-full bg-amber-600/20 rounded-full h-2.5 sm:h-3 overflow-hidden"
+        className="w-full bg-black/20 rounded-full h-2.5 sm:h-3 overflow-hidden"
         aria-label={`${title} progress`}
         role="progressbar"
         aria-valuemin={0}
@@ -238,11 +238,11 @@ const AchievementCard = ({ title, description, icon, progress }) => {
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 1.5 }}
-          className="h-2.5 sm:h-3 bg-amber-600 rounded-full shadow-lg"
+          className="h-2.5 sm:h-3 bg-black rounded-full shadow-lg"
         />
       </div>
 
-      <div className="flex items-center gap-1 sm:gap-2 text-amber-600 font-semibold text-xs sm:text-sm md:text-base">
+      <div className="flex items-center gap-1 sm:gap-2 text-black font-semibold text-xs sm:text-sm md:text-base">
         <CheckCircleIcon className="w-4 h-4 sm:w-5 sm:h-5" />
         {progress === 100 ? 'Completed' : `${progress}% Complete`}
       </div>

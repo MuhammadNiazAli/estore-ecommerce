@@ -50,28 +50,28 @@ const InvestorsStockInfo = () => {
   return (
     <section
       aria-label="Stock Information"
-      className="bg-white text-amber-600 flex justify-center py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-white text-black flex justify-center py-12 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-[1000px] w-full bg-white rounded-lg p-8 shadow-lg">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-extrabold mb-8 text-amber-600 text-center"
+          className="text-4xl font-extrabold mb-8 text-black text-center"
         >
           Stock Information
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div className="flex flex-col items-center justify-center">
-            <p className="text-amber-500 font-semibold tracking-wide">Symbol</p>
-            <p className="text-amber-600 text-4xl font-bold tracking-wider mt-1 select-text">
+            <p className="text-black font-semibold tracking-wide">Symbol</p>
+            <p className="text-black text-4xl font-bold tracking-wider mt-1 select-text">
               {stockData.symbol}
             </p>
           </div>
 
           <div className="flex flex-col items-center justify-center relative">
-            <p className="text-amber-500 font-semibold tracking-wide">
+            <p className="text-black font-semibold tracking-wide">
               Current Price
             </p>
             <AnimatePresence mode="wait" initial={false}>
@@ -82,7 +82,7 @@ const InvestorsStockInfo = () => {
                 animate="animate"
                 exit="exit"
                 transition={{ duration: 0.4 }}
-                className="text-amber-600 text-4xl font-bold tracking-wider mt-1 select-text"
+                className="text-black text-4xl font-bold tracking-wider mt-1 select-text"
                 aria-live="polite"
               >
                 ${stockData.price.toFixed(2)}
@@ -97,7 +97,7 @@ const InvestorsStockInfo = () => {
               transition={{ duration: 0.4 }}
               aria-live="polite"
               className={`mt-2 flex items-center justify-center space-x-1 font-semibold ${
-                isPositive ? 'text-green-400' : 'text-red-500'
+                isPositive ? 'text-black' : 'text-black'
               }`}
             >
               {isPositive ? (
@@ -114,25 +114,25 @@ const InvestorsStockInfo = () => {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <p className="text-amber-500 font-semibold tracking-wide">Market Cap</p>
-            <p className="text-amber-600 text-3xl font-semibold mt-1 select-text">
+            <p className="text-black font-semibold tracking-wide">Market Cap</p>
+            <p className="text-black text-3xl font-semibold mt-1 select-text">
               {stockData.marketCap}
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 text-center text-amber-500 font-medium tracking-wide">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 text-center text-black font-medium tracking-wide">
           <div>
             <p className="mb-1">Volume</p>
-            <p className="text-amber-600 select-text">{stockData.volume}</p>
+            <p className="text-black select-text">{stockData.volume}</p>
           </div>
           <div>
             <p className="mb-1">Open</p>
-            <p className="text-amber-600 select-text">${stockData.open.toFixed(2)}</p>
+            <p className="text-black select-text">${stockData.open.toFixed(2)}</p>
           </div>
           <div>
             <p className="mb-1">Day’s Range</p>
-            <p className="text-amber-600 select-text">
+            <p className="text-black select-text">
               ${stockData.low.toFixed(2)} - ${stockData.high.toFixed(2)}
             </p>
           </div>

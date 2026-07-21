@@ -48,10 +48,10 @@ const PressGallery = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 sm:px-6 py-16">
       <div className="max-w-[1280px] w-full text-center">
-        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
+        <h2 className="text-black text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
           Press Gallery
         </h2>
-        <p className="mt-4 text-amber-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed drop-shadow-md">
+        <p className="mt-4 text-black max-w-2xl mx-auto text-base sm:text-lg leading-relaxed drop-shadow-md">
           Explore photos from our latest press events and media appearances.
         </p>
 
@@ -60,7 +60,7 @@ const PressGallery = () => {
             <button
               key={id}
               onClick={() => setSelectedImage({ src, alt })}
-              className="relative group overflow-hidden rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-amber-600"
+              className="relative group overflow-hidden rounded-xl shadow-lg focus:outline-none focus:ring-4 focus:ring-black"
               aria-label={`View larger image of ${alt}`}
             >
               <div className="w-full aspect-[4/3]">
@@ -73,7 +73,7 @@ const PressGallery = () => {
               </div>
               <div className="absolute inset-0 bg-white/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
                 <p className="text-gray-900 text-sm sm:text-base font-semibold">{alt}</p>
-                <span className="mt-1 text-amber-500 text-xs sm:text-sm">View Details</span>
+                <span className="mt-1 text-black text-xs sm:text-sm">View Details</span>
               </div>
             </button>
           ))}
@@ -101,7 +101,7 @@ const PressGallery = () => {
               <button
                 onClick={() => setSelectedImage(null)}
                 aria-label="Close image preview"
-                className="absolute top-4 right-4 text-amber-600 text-3xl font-bold hover:text-amber-800 focus:outline-none"
+                className="absolute top-4 right-4 text-black text-3xl font-bold hover:text-black focus:outline-none"
               >
                 &times;
               </button>

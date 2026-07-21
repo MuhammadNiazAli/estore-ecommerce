@@ -6,7 +6,7 @@ const TravelCategoryInfo = () => {
     <section
       className="
         bg-white
-        text-amber-600
+        text-black
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const TravelCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Explore our top travel essentials and accessories designed to make your journeys smooth and unforgettable.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         From backpacks to gadgets, find everything you need for your next adventure.
       </p>
     </section>

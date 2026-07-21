@@ -9,7 +9,7 @@ const AccessibilityHero = () => {
     >
       <div
         className="max-w-[1000px] w-full text-center"
-        style={{ color: '#b45309' /* gold/yellow */, lineHeight: 1.4 }}
+        style={{ color: '#111827' /* gold/yellow */, lineHeight: 1.4 }}
       >
         <h1
           className="text-4xl sm:text-5xl font-extrabold mb-3"

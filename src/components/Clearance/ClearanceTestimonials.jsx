@@ -30,7 +30,7 @@ const testimonials = [
 
 const ClearanceTestimonials = () => {
   return (
-    <section className="bg-white text-amber-600 py-12">
+    <section className="bg-white text-black py-12">
       <div className="max-w-[1000px] mx-auto px-4">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -52,13 +52,13 @@ const ClearanceTestimonials = () => {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-600"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-black"
                 />
                 <div>
                   <h3 className="text-gray-900 font-semibold text-sm md:text-base">
                     {item.name}
                   </h3>
-                  <div className="flex text-amber-600">
+                  <div className="flex text-black">
                     {Array(5)
                       .fill()
                       .map((_, i) => (

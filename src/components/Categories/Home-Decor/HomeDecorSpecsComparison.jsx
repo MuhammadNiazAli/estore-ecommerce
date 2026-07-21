@@ -42,14 +42,14 @@ const specsData = [
 
 const HomeDecorSpecsComparison = () => {
   return (
-    <section className="bg-white text-amber-600 py-10 px-4 max-w-7xl mx-auto rounded-lg shadow-lg my-[-30px]">
+    <section className="bg-white text-black py-10 px-4 max-w-7xl mx-auto rounded-lg shadow-lg my-[-30px]">
       <h2 className="text-3xl font-bold mb-8 text-center">Product Specs Comparison</h2>
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[600px] table-auto border-collapse text-left">
           <thead>
-            <tr className="border-b border-amber-800">
-              <th className="px-4 py-3 text-amber-500">Feature</th>
+            <tr className="border-b border-black">
+              <th className="px-4 py-3 text-black">Feature</th>
               <th className="px-4 py-3">Elegant Wooden Table</th>
               <th className="px-4 py-3">Ceramic Vase Set</th>
               <th className="px-4 py-3">Cozy Throw Blanket</th>
@@ -61,7 +61,7 @@ const HomeDecorSpecsComparison = () => {
                 key={feature}
                 className={idx % 2 === 0 ? "bg-white" : "bg-white"}
               >
-                <td className="px-4 py-3 font-semibold text-amber-500">{feature}</td>
+                <td className="px-4 py-3 font-semibold text-black">{feature}</td>
                 <td className="px-4 py-3">{productA}</td>
                 <td className="px-4 py-3">{productB}</td>
                 <td className="px-4 py-3">{productC}</td>

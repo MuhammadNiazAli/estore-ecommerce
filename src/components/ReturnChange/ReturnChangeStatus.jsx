@@ -47,7 +47,7 @@ const ReturnChangeStatus = () => {
       <div className="max-w-[1000px] w-full text-center">
         <h2
           id="return-exchange-status-title"
-          className="text-amber-600 text-3xl md:text-4xl font-bold mb-12"
+          className="text-black text-3xl md:text-4xl font-bold mb-12"
         >
           Return & Exchange Status
         </h2>
@@ -60,7 +60,7 @@ const ReturnChangeStatus = () => {
             return (
               <div
                 key={id}
-                className="relative flex-1 flex flex-col items-center cursor-default group focus-within:ring-2 focus-within:ring-amber-600 rounded-md"
+                className="relative flex-1 flex flex-col items-center cursor-default group focus-within:ring-2 focus-within:ring-black rounded-md"
                 tabIndex={0}
                 aria-current={isActive ? 'step' : undefined}
                 aria-label={`${title} - ${
@@ -72,7 +72,7 @@ const ReturnChangeStatus = () => {
                   <span
                     aria-hidden="true"
                     className={`hidden md:block absolute top-7 left-1/2 transform -translate-x-1/2 h-1 rounded-full transition-colors duration-300 ${
-                      isCompleted ? 'bg-amber-600' : 'bg-amber-900'
+                      isCompleted ? 'bg-black' : 'bg-black'
                     }`}
                     style={{ width: 'calc(100% + 1.5rem)', zIndex: 0 }}
                   />
@@ -82,10 +82,10 @@ const ReturnChangeStatus = () => {
                 <div
                   className={`z-10 w-14 h-14 rounded-full flex items-center justify-center border-4 transition-colors duration-300 ${
                     isActive
-                      ? 'border-amber-600 bg-amber-700 text-black shadow-lg'
+                      ? 'border-black bg-black text-black shadow-lg'
                       : isCompleted
-                      ? 'border-amber-600 bg-amber-950 text-amber-600'
-                      : 'border-amber-950 bg-white text-amber-900'
+                      ? 'border-black bg-black text-black'
+                      : 'border-black bg-white text-black'
                   }`}
                 >
                   {/* Icon wrapper ensures perfect centering */}
@@ -97,10 +97,10 @@ const ReturnChangeStatus = () => {
                 <h3
                   className={`mt-4 font-semibold text-center leading-snug transition-colors duration-300 max-w-[100px] truncate ${
                     isActive
-                      ? 'text-amber-600'
+                      ? 'text-black'
                       : isCompleted
-                      ? 'text-amber-500'
-                      : 'text-amber-900'
+                      ? 'text-black'
+                      : 'text-black'
                   }`}
                   title={title} // show full title on hover
                 >
@@ -125,7 +125,7 @@ const ReturnChangeStatus = () => {
           <button
             onClick={() => setCurrentStep((s) => Math.max(1, s - 1))}
             disabled={currentStep === 1}
-            className="px-5 py-2 rounded-md border border-amber-600 text-amber-600 disabled:opacity-40 hover:bg-amber-600 hover:text-black transition"
+            className="px-5 py-2 rounded-md border border-black text-black disabled:opacity-40 hover:bg-black hover:text-black transition"
             aria-disabled={currentStep === 1}
           >
             Previous
@@ -133,7 +133,7 @@ const ReturnChangeStatus = () => {
           <button
             onClick={() => setCurrentStep((s) => Math.min(steps.length, s + 1))}
             disabled={currentStep === steps.length}
-            className="px-5 py-2 rounded-md border border-amber-600 text-amber-600 disabled:opacity-40 hover:bg-amber-600 hover:text-black transition"
+            className="px-5 py-2 rounded-md border border-black text-black disabled:opacity-40 hover:bg-black hover:text-black transition"
             aria-disabled={currentStep === steps.length}
           >
             Next

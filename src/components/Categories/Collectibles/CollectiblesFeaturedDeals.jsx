@@ -617,8 +617,8 @@ const CollectiblesFeaturedDeals = () => {
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}
-          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
+          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-black text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-black"
           }`}
           aria-label="Previous Slide"
         >
@@ -653,12 +653,12 @@ const CollectiblesFeaturedDeals = () => {
                     />
                     <span
                       className={`absolute top-2 left-2 text-xs font-bold px-2 py-1 rounded-md ${
-                        deal.stock ? "bg-green-600" : "bg-red-600"
+                        deal.stock ? "bg-black" : "bg-black"
                       }`}
                     >
                       {deal.stock ? "In Stock" : "Out of Stock"}
                     </span>
-                    <span className="absolute top-2 right-2 bg-amber-700 text-black text-xs font-bold px-2 py-1 rounded-md">
+                    <span className="absolute top-2 right-2 bg-black text-black text-xs font-bold px-2 py-1 rounded-md">
                       {deal.category}
                     </span>
                   </div>
@@ -674,14 +674,14 @@ const CollectiblesFeaturedDeals = () => {
                         <FaStar
                           key={i}
                           className={`${
-                            i < deal.rating ? "text-amber-600" : "text-gray-600"
+                            i < deal.rating ? "text-black" : "text-gray-600"
                           }`}
                         />
                       ))}
                     </div>
 
                     <div className="flex items-center justify-between mt-4">
-                      <span className="text-xl font-bold text-amber-600">
+                      <span className="text-xl font-bold text-black">
                         ${deal.price}
                       </span>
                     </div>
@@ -690,7 +690,7 @@ const CollectiblesFeaturedDeals = () => {
                       disabled={!deal.stock}
                       className={`mt-4 w-full py-2 rounded-full font-semibold flex justify-center items-center gap-2 transition ${
                         deal.stock
-                          ? "bg-amber-600 text-black hover:bg-amber-500"
+                          ? "bg-black text-black hover:bg-black"
                           : "bg-white text-gray-600 cursor-not-allowed"
                       }`}
                     >
@@ -708,10 +708,10 @@ const CollectiblesFeaturedDeals = () => {
         <button
           onClick={nextSlide}
           disabled={currentSlide === totalSlides - 1}
-          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-black text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
             currentSlide === totalSlides - 1
               ? "opacity-40 cursor-not-allowed"
-              : "hover:bg-amber-600"
+              : "hover:bg-black"
           }`}
           aria-label="Next Slide"
         >

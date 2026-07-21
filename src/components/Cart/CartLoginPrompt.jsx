@@ -7,7 +7,7 @@ import { FaFacebookF, FaApple, FaUserCircle, FaSpinner, FaTimes } from 'react-ic
 
 const loginProviders = [
   { id: 'google', name: 'Google', icon: <FcGoogle className="w-6 h-6" /> },
-  { id: 'facebook', name: 'Facebook', icon: <FaFacebookF className="w-6 h-6 text-amber-800" /> },
+  { id: 'facebook', name: 'Facebook', icon: <FaFacebookF className="w-6 h-6 text-black" /> },
   { id: 'apple', name: 'Apple', icon: <FaApple className="w-6 h-6" /> },
 ];
 
@@ -87,7 +87,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               type="button"
               aria-haspopup="dialog"
               aria-expanded={showModal}
-              className="flex-grow bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60"
+              className="flex-grow bg-black hover:bg-black text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-60"
             >
               Log In
             </button>
@@ -97,7 +97,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               type="button"
               aria-label="Continue as guest without logging in"
               aria-busy={loadingGuest}
-              className="flex-grow border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-gray-900 font-semibold px-6 py-3 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-40"
+              className="flex-grow border border-black text-black hover:bg-black hover:text-gray-900 font-semibold px-6 py-3 rounded-full transition disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-40"
             >
               {loadingGuest ? <Spinner /> : 'Continue as Guest'}
             </button>
@@ -106,7 +106,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
           <Link
             href="/profile"
             aria-label="Go to your profile page"
-            className="flex items-center justify-center gap-3 bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60 w-full"
+            className="flex items-center justify-center gap-3 bg-black text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg transition hover:bg-black focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-60 w-full"
           >
             <FaUserCircle className="w-6 h-6" />
             Your Profile
@@ -130,14 +130,14 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               id="login-modal-title"
               ref={headingRef}
               tabIndex={-1}
-              className="text-xl font-semibold text-amber-600 mb-6"
+              className="text-xl font-semibold text-black mb-6"
             >
               Choose a login method
             </h3>
             <button
               onClick={() => !loadingProvider && setShowModal(false)}
               aria-label="Close login options"
-              className="absolute top-4 right-4 text-amber-600 hover:text-amber-500 focus:outline-none"
+              className="absolute top-4 right-4 text-black hover:text-black focus:outline-none"
             >
               <FaTimes className="w-6 h-6" />
             </button>
@@ -146,7 +146,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
               <div
                 role="status"
                 aria-live="polite"
-                className="bg-green-700 bg-opacity-80 px-4 py-3 rounded text-green-200 font-semibold mb-4 text-center"
+                className="bg-black bg-opacity-80 px-4 py-3 rounded text-black font-semibold mb-4 text-center"
               >
                 Successfully logged in with{' '}
                 {loginProviders.find((p) => p.id === loggedInProvider)?.name}!
@@ -162,7 +162,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
                     type="button"
                     disabled={loadingProvider !== null}
                     aria-busy={loadingProvider === id}
-                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50"
+                    className="flex items-center gap-3 justify-center rounded-full px-5 py-3 font-semibold shadow-lg transition disabled:opacity-60 disabled:cursor-not-allowed bg-white hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50"
                   >
                     {loadingProvider === id ? (
                       <Spinner />
@@ -185,7 +185,7 @@ const CartLoginPrompt = ({ onLogin, onContinueAsGuest }) => {
 
 const Spinner = () => (
   <FaSpinner
-    className="animate-spin text-amber-600 w-5 h-5 mx-auto"
+    className="animate-spin text-black w-5 h-5 mx-auto"
     aria-hidden="true"
   />
 );

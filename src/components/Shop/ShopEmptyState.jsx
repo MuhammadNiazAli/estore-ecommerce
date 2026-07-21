@@ -13,7 +13,7 @@ const ShopEmptyState = ({ onBrowseAll }) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-20 h-20 sm:w-24 sm:h-24 mb-6 mx-auto text-amber-400"
+        className="w-20 h-20 sm:w-24 sm:h-24 mb-6 mx-auto text-black"
         fill="none"
         viewBox="0 0 64 64"
         stroke="currentColor"
@@ -36,7 +36,7 @@ const ShopEmptyState = ({ onBrowseAll }) => {
 
       <button
         onClick={onBrowseAll}
-        className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-amber-400 text-gray-900 font-semibold shadow hover:bg-amber-500 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-amber-400/40"
+        className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full bg-black text-gray-900 font-semibold shadow hover:bg-black transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-black/40"
       >
         Browse All Products
       </button>

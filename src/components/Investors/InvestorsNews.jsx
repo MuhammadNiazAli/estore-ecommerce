@@ -37,7 +37,7 @@ const InvestorsNews = () => {
   return (
     <section
       aria-label="Latest Investor News"
-      className="bg-white text-amber-600 flex justify-center py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-white text-black flex justify-center py-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-[1000px] w-full">
         <motion.h2
@@ -58,11 +58,11 @@ const InvestorsNews = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: id * 0.1 }}
-              className="bg-white rounded-2xl p-6 md:p-7 shadow-md hover:shadow-amber-600/40 transition-all duration-300 group"
+              className="bg-white rounded-2xl p-6 md:p-7 shadow-md hover:shadow-black/40 transition-all duration-300 group"
             >
               <time
                 dateTime={date}
-                className="block text-amber-500 font-mono text-xs sm:text-sm mb-2 uppercase tracking-wide"
+                className="block text-black font-mono text-xs sm:text-sm mb-2 uppercase tracking-wide"
               >
                 {displayDate}
               </time>
@@ -76,9 +76,9 @@ const InvestorsNews = () => {
                 <h3 className="text-lg sm:text-xl font-semibold group-hover:underline group-focus-visible:underline transition-colors">
                   {title}
                 </h3>
-                <ArrowUpRight className="w-5 h-5 text-amber-600 mt-1 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowUpRight className="w-5 h-5 text-black mt-1 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
-              <p className="mt-3 text-amber-500 text-sm sm:text-base leading-relaxed">
+              <p className="mt-3 text-black text-sm sm:text-base leading-relaxed">
                 {summary}
               </p>
             </motion.li>

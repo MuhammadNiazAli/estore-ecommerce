@@ -203,11 +203,11 @@ const StarRating = ({ rating }) => {
   let rem = rating;
   for (let i = 0; i < 5; i++) {
     if (rem >= 1) {
-      stars.push(<FaStar key={i} className="text-amber-600" aria-hidden="true" />);
+      stars.push(<FaStar key={i} className="text-black" aria-hidden="true" />);
     } else if (rem >= 0.5) {
-      stars.push(<FaStarHalfAlt key={i} className="text-amber-600" aria-hidden="true" />);
+      stars.push(<FaStarHalfAlt key={i} className="text-black" aria-hidden="true" />);
     } else {
-      stars.push(<FaRegStar key={i} className="text-amber-600" aria-hidden="true" />);
+      stars.push(<FaRegStar key={i} className="text-black" aria-hidden="true" />);
     }
     rem -= 1;
   }
@@ -224,7 +224,7 @@ const Toast = ({ message, onClose }) => {
     <div
       role="alert"
       aria-live="assertive"
-      className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-amber-600 text-black px-6 py-3 rounded shadow-lg z-50 font-semibold text-sm select-none"
+      className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black text-black px-6 py-3 rounded shadow-lg z-50 font-semibold text-sm select-none"
     >
       {message}
     </div>
@@ -309,7 +309,7 @@ const PhoneList = () => {
                     ? `Remove ${phone.name} from favorites`
                     : `Add ${phone.name} to favorites`
                 }
-                className="absolute top-3 right-3 text-2xl text-red-500 hover:scale-110 transition-transform z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded"
+                className="absolute top-3 right-3 text-2xl text-black hover:scale-110 transition-transform z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded"
                 type="button"
                 aria-pressed={favorites[phone.id] ? 'true' : 'false'}
               >
@@ -324,7 +324,7 @@ const PhoneList = () => {
                 >
                   {phone.name}
                 </h3>
-                <p className="text-amber-800 font-bold text-base mt-1">${phone.price.toFixed(2)}</p>
+                <p className="text-black font-bold text-base mt-1">${phone.price.toFixed(2)}</p>
                 <div className="flex items-center gap-2 mt-2">
                   <StarRating rating={phone.rating} />
                   <span className="text-gray-500 text-sm">
@@ -351,8 +351,8 @@ const PhoneList = () => {
                   disabled={addingToCartId === phone.id}
                   className={`flex-1 py-2 rounded-full font-semibold text-sm transition
                     ${addingToCartId === phone.id
-                      ? 'bg-amber-500 text-black cursor-not-allowed'
-                      : 'bg-amber-600 text-black hover:bg-amber-500'}`}
+                      ? 'bg-black text-black cursor-not-allowed'
+                      : 'bg-black text-black hover:bg-black'}`}
                 >
                   {addingToCartId === phone.id ? 'Adding...' : 'Add to Cart'}
                 </button>
@@ -366,7 +366,7 @@ const PhoneList = () => {
         <div className="flex justify-center mt-12">
           <button
             onClick={handleSeeMore}
-            className="px-8 py-3 bg-gradient-to-r from-amber-800 to-amber-800 text-gray-900 rounded-full font-semibold text-base hover:from-amber-700 hover:to-amber-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600"
+            className="px-8 py-3 bg-gradient-to-r from-black to-gray-900 text-gray-900 rounded-full font-semibold text-base hover:from-black hover:to-gray-900 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-black"
             type="button"
             aria-label="Load more phones"
           >

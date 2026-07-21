@@ -51,29 +51,29 @@ const BeautySpecsComparison = () => {
   const [products] = useState(beautyProducts);
 
   return (
-    <section className="bg-white text-amber-600 py-12 my-[-50px]">
+    <section className="bg-white text-black py-12 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8 text-amber-600">
+        <h2 className="text-3xl font-bold text-center mb-8 text-black">
           Compare Nature & Plant Specs
         </h2>
 
         {/* Desktop View: Table */}
-        <div className="hidden lg:block border border-amber-800 rounded-lg shadow-lg overflow-hidden">
+        <div className="hidden lg:block border border-black rounded-lg shadow-lg overflow-hidden">
           <div className="min-w-full">
             {/* Header Row */}
             <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-white">
-              <div className="p-3 font-semibold text-amber-700">Specs</div>
+              <div className="p-3 font-semibold text-black">Specs</div>
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="p-3 text-center border-l border-amber-800"
+                  className="p-3 text-center border-l border-black"
                 >
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-20 h-20 mx-auto object-cover rounded mb-2 border-2 border-amber-700"
+                    className="w-20 h-20 mx-auto object-cover rounded mb-2 border-2 border-black"
                   />
-                  <p className="text-sm font-semibold text-amber-600">{product.name}</p>
+                  <p className="text-sm font-semibold text-black">{product.name}</p>
                 </div>
               ))}
             </div>
@@ -86,16 +86,16 @@ const BeautySpecsComparison = () => {
                   idx % 2 === 0 ? "bg-white" : "bg-white"
                 }`}
               >
-                <div className="p-3 font-semibold text-amber-700">
+                <div className="p-3 font-semibold text-black">
                   {spec.label}
                 </div>
                 {products.map((product) => (
                   <div
                     key={product.id + spec.key}
-                    className="p-3 text-center border-l border-amber-800 text-sm text-amber-500"
+                    className="p-3 text-center border-l border-black text-sm text-black"
                   >
                     {spec.key === "petSafe" && product[spec.key] === "Yes" ? (
-                      <FaCheckCircle className="text-amber-600 mx-auto" />
+                      <FaCheckCircle className="text-black mx-auto" />
                     ) : (
                       product[spec.key]
                     )}
@@ -114,27 +114,27 @@ const BeautySpecsComparison = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-amber-950 rounded-lg shadow-lg border border-amber-800 overflow-hidden"
+              className="bg-black rounded-lg shadow-lg border border-black overflow-hidden"
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-40 object-cover border-b border-amber-800"
+                className="w-full h-40 object-cover border-b border-black"
               />
               <div className="p-4">
-                <h3 className="text-lg font-semibold mb-2 text-amber-600">
+                <h3 className="text-lg font-semibold mb-2 text-black">
                   {product.name}
                 </h3>
-                <ul className="space-y-2 text-sm text-amber-500">
+                <ul className="space-y-2 text-sm text-black">
                   {specs.map((spec, i) => (
                     <li
                       key={i}
-                      className="flex justify-between items-center border-b border-amber-900 pb-1"
+                      className="flex justify-between items-center border-b border-black pb-1"
                     >
-                      <span className="text-amber-700">{spec.label}</span>
+                      <span className="text-black">{spec.label}</span>
                       <span>
                         {spec.key === "petSafe" && product[spec.key] === "Yes" ? (
-                          <FaCheckCircle className="text-amber-600" />
+                          <FaCheckCircle className="text-black" />
                         ) : (
                           product[spec.key]
                         )}

@@ -94,12 +94,12 @@ const GiftCardPurchaseForm = () => {
       noValidate
       autoComplete="off"
     >
-      <h2 className="text-3xl font-extrabold mb-6 text-amber-500 select-none">Purchase Gift Card</h2>
+      <h2 className="text-3xl font-extrabold mb-6 text-black select-none">Purchase Gift Card</h2>
 
       {/* Recipient Email */}
       <div>
-        <label htmlFor="recipientEmail" className="block mb-1 font-semibold text-amber-500">
-          Recipient Email <span className="text-red-500">*</span>
+        <label htmlFor="recipientEmail" className="block mb-1 font-semibold text-black">
+          Recipient Email <span className="text-black">*</span>
         </label>
         <input
           id="recipientEmail"
@@ -108,8 +108,8 @@ const GiftCardPurchaseForm = () => {
           value={formData.recipientEmail}
           onChange={handleChange}
           placeholder="recipient@example.com"
-          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-            errors.recipientEmail ? 'ring-2 ring-red-600' : ''
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-black transition ${
+            errors.recipientEmail ? 'ring-2 ring-black' : ''
           }`}
           aria-invalid={errors.recipientEmail ? 'true' : 'false'}
           aria-describedby={errors.recipientEmail ? 'email-error' : undefined}
@@ -118,7 +118,7 @@ const GiftCardPurchaseForm = () => {
           autoFocus
         />
         {errors.recipientEmail && (
-          <p id="email-error" className="text-red-500 mt-1 text-sm" role="alert">
+          <p id="email-error" className="text-black mt-1 text-sm" role="alert">
             {errors.recipientEmail}
           </p>
         )}
@@ -126,8 +126,8 @@ const GiftCardPurchaseForm = () => {
 
       {/* Amount */}
       <div>
-        <label htmlFor="amount" className="block mb-1 font-semibold text-amber-500">
-          Amount (USD) <span className="text-red-500">*</span>
+        <label htmlFor="amount" className="block mb-1 font-semibold text-black">
+          Amount (USD) <span className="text-black">*</span>
         </label>
 
         <div className="flex flex-wrap gap-3 mb-2">
@@ -139,9 +139,9 @@ const GiftCardPurchaseForm = () => {
               disabled={loading}
               className={`px-4 py-2 rounded-full font-semibold transition ${
                 formData.amount === amt.toString()
-                  ? 'bg-amber-600 text-black shadow-lg'
-                  : 'bg-amber-400 text-black hover:bg-amber-500'
-              } focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                  ? 'bg-black text-black shadow-lg'
+                  : 'bg-black text-black hover:bg-black'
+              } focus:outline-none focus:ring-2 focus:ring-black`}
               aria-pressed={formData.amount === amt.toString()}
             >
               ${amt}
@@ -158,8 +158,8 @@ const GiftCardPurchaseForm = () => {
           value={formData.amount}
           onChange={handleChange}
           placeholder="Enter custom amount"
-          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-            errors.amount ? 'ring-2 ring-red-600' : ''
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-black transition ${
+            errors.amount ? 'ring-2 ring-black' : ''
           }`}
           aria-invalid={errors.amount ? 'true' : 'false'}
           aria-describedby={errors.amount ? 'amount-error' : undefined}
@@ -167,7 +167,7 @@ const GiftCardPurchaseForm = () => {
           disabled={loading}
         />
         {errors.amount && (
-          <p id="amount-error" className="text-red-500 mt-1 text-sm" role="alert">
+          <p id="amount-error" className="text-black mt-1 text-sm" role="alert">
             {errors.amount}
           </p>
         )}
@@ -175,7 +175,7 @@ const GiftCardPurchaseForm = () => {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block mb-1 font-semibold text-amber-500">
+        <label htmlFor="message" className="block mb-1 font-semibold text-black">
           Personal Message (optional)
         </label>
         <textarea
@@ -186,16 +186,16 @@ const GiftCardPurchaseForm = () => {
           value={formData.message}
           onChange={handleChange}
           placeholder="Write a personal message..."
-          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-none transition ${
-            errors.message ? 'ring-2 ring-red-600' : ''
+          className={`w-full rounded-md px-4 py-2 bg-white text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-black resize-none transition ${
+            errors.message ? 'ring-2 ring-black' : ''
           }`}
           aria-invalid={errors.message ? 'true' : 'false'}
           aria-describedby={errors.message ? 'message-error' : undefined}
           disabled={loading}
         />
-        <p className="text-amber-400 text-sm mt-1 select-none">{formData.message.length}/200</p>
+        <p className="text-black text-sm mt-1 select-none">{formData.message.length}/200</p>
         {errors.message && (
-          <p id="message-error" className="text-red-500 mt-1 text-sm" role="alert">
+          <p id="message-error" className="text-black mt-1 text-sm" role="alert">
             {errors.message}
           </p>
         )}
@@ -206,7 +206,7 @@ const GiftCardPurchaseForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="flex-grow py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="flex-grow py-3 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
           aria-label="Submit gift card purchase"
         >
           {loading ? (
@@ -239,7 +239,7 @@ const GiftCardPurchaseForm = () => {
           type="button"
           onClick={handleClear}
           disabled={loading && !formData.recipientEmail && !formData.amount && !formData.message}
-          className="flex-grow py-3 bg-red-700 hover:bg-red-600 text-gray-900 font-semibold rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex-grow py-3 bg-black hover:bg-black text-gray-900 font-semibold rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           aria-label="Clear form"
         >
           Clear
@@ -249,7 +249,7 @@ const GiftCardPurchaseForm = () => {
       {/* Success Message */}
       {successMessage && (
         <p
-          className="mt-4 flex items-center gap-2 text-amber-600 font-semibold select-text"
+          className="mt-4 flex items-center gap-2 text-black font-semibold select-text"
           role="alert"
           aria-live="polite"
         >

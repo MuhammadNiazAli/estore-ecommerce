@@ -91,7 +91,7 @@ const WatchesSpecsComparison = () => {
             <button
               key={watch.id}
               onClick={() => addWatch(watch)}
-              className="bg-white hover:bg-amber-600 hover:text-gray-900 px-4 py-2 rounded-lg text-sm transition"
+              className="bg-white hover:bg-black hover:text-gray-900 px-4 py-2 rounded-lg text-sm transition"
             >
               + {watch.name}
             </button>
@@ -121,7 +121,7 @@ const WatchesSpecsComparison = () => {
                     >
                       <button
                         onClick={() => removeWatch(watch.id)}
-                        className="absolute top-2 right-2 bg-white p-1 rounded-full hover:bg-red-500"
+                        className="absolute top-2 right-2 bg-white p-1 rounded-full hover:bg-black"
                       >
                         <XMarkIcon className="w-5 h-5 text-gray-900" />
                       </button>
@@ -148,7 +148,7 @@ const WatchesSpecsComparison = () => {
                   <td className="p-3 font-semibold">Price</td>
                   {selected.map((w) => (
                     <td key={w.id} className="p-3 text-center">
-                      <span className="text-amber-600 font-bold">
+                      <span className="text-black font-bold">
                         ${w.price.toLocaleString()}
                       </span>
                       <br />

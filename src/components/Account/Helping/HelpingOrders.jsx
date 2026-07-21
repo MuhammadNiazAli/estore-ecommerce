@@ -5,22 +5,22 @@ import { FaShippingFast, FaWarehouse, FaReceipt, FaTimes } from 'react-icons/fa'
 
 const ordersHelpFeatures = [
   {
-    icon: <FaShippingFast className="text-amber-600 text-base" />,
+    icon: <FaShippingFast className="text-black text-base" />,
     label: 'Track Your Orders Easily',
   },
   {
-    icon: <FaWarehouse className="text-amber-600 text-base" />,
+    icon: <FaWarehouse className="text-black text-base" />,
     label: 'Fast & Reliable Shipping',
   },
   {
-    icon: <FaReceipt className="text-amber-600 text-base" />,
+    icon: <FaReceipt className="text-black text-base" />,
     label: 'Order History & Invoices',
   },
 ];
 
 const trackOrderContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Track Your Order</h3>
+    <h3 className="text-xl font-semibold text-black">Track Your Order</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Enter your order number and email to view status</li>
       <li>See real-time tracking updates for shipping progress</li>
@@ -35,7 +35,7 @@ const trackOrderContent = (
 
 const orderHistoryContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">View Order History</h3>
+    <h3 className="text-xl font-semibold text-black">View Order History</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Access your full order list and downloadable invoices</li>
       <li>Reorder past purchases in one click</li>
@@ -61,7 +61,7 @@ export default function HelpingOrders() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Order Assistance
         </h2>
         <p className="text-gray-700">
@@ -87,8 +87,8 @@ export default function HelpingOrders() {
             onClick={() => toggleSection('track')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'track'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-label="Track your order"
           >
@@ -113,7 +113,7 @@ export default function HelpingOrders() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

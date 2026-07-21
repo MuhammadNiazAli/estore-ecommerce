@@ -5,22 +5,22 @@ import { FaBoxOpen, FaWallet, FaHourglassHalf, FaTimes } from 'react-icons/fa';
 
 const giftCardFeatures = [
   {
-    icon: <FaBoxOpen className="text-amber-600 text-base" />,
+    icon: <FaBoxOpen className="text-black text-base" />,
     label: 'Easy to Purchase & Redeem',
   },
   {
-    icon: <FaWallet className="text-amber-600 text-base" />,
+    icon: <FaWallet className="text-black text-base" />,
     label: 'Flexible Payment Options',
   },
   {
-    icon: <FaHourglassHalf className="text-amber-600 text-base" />,
+    icon: <FaHourglassHalf className="text-black text-base" />,
     label: 'Valid for 12 Months',
   },
 ];
 
 const buyNowContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Purchase a Gift Card</h3>
+    <h3 className="text-lg font-semibold text-black">Purchase a Gift Card</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Choose any value from $10 to $500</li>
       <li>Instant delivery via email or SMS</li>
@@ -33,7 +33,7 @@ const buyNowContent = (
 
 const learnMoreContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Gift Card Information</h3>
+    <h3 className="text-lg font-semibold text-black">Gift Card Information</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Gift cards are valid for 12 months from the purchase date</li>
       <li>No additional fees or activation charges</li>
@@ -57,7 +57,7 @@ export default function HelpingGiftCards() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Gift Cards Made Simple
         </h2>
         <p className="text-gray-700 text-sm">
@@ -79,8 +79,8 @@ export default function HelpingGiftCards() {
             onClick={() => toggleSection('buy')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'buy'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             } text-sm`}
             aria-label="Toggle buy gift card section"
           >
@@ -105,7 +105,7 @@ export default function HelpingGiftCards() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

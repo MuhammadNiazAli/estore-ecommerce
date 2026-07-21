@@ -54,7 +54,7 @@ const reviews = [
 
 // 3D Star component using layered gradients and slight shadows for depth
 function Star({ filled }) {
-  const fillColor = filled ? '#b45309' : '#b45309'; // amber-600 vs amber-900
+  const fillColor = filled ? '#111827' : '#111827'; // amber-600 vs amber-900
   return (
     <svg
       className="w-6 h-6"
@@ -67,7 +67,7 @@ function Star({ filled }) {
       <defs>
         <linearGradient id="starGrad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={fillColor} stopOpacity="1" />
-          <stop offset="100%" stopColor="#b28704" stopOpacity="1" />
+          <stop offset="100%" stopColor="#6b7280" stopOpacity="1" />
         </linearGradient>
         <filter
           id="starShadow"
@@ -84,7 +84,7 @@ function Star({ filled }) {
       </defs>
       <path
         fill="url(#starGrad)"
-        stroke={filled ? '#a16207' : '#78350f'}
+        stroke={filled ? '#111827' : '#374151'}
         strokeWidth="1"
         filter={filled ? 'url(#starShadow)' : 'none'}
         d="M12 2.5l3.09 6.26 6.91 1.004-5 4.868 1.18 6.882L12 17.27l-6.18 3.244 1.18-6.882-5-4.868 6.91-1.004L12 2.5z"
@@ -99,12 +99,12 @@ export default function GiftReviewWall() {
       aria-label="Customer reviews"
       className="max-w-[1200px] mx-auto p-6 bg-white rounded-lg shadow-2xl text-gray-900"
     >
-      <h2 className="text-amber-600 text-3xl font-extrabold mb-6 text-center drop-shadow-lg">
+      <h2 className="text-black text-3xl font-extrabold mb-6 text-center drop-shadow-lg">
         What Our Customers Say
       </h2>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-800 p-2"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[600px] overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-800 p-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -121,8 +121,8 @@ export default function GiftReviewWall() {
                 <Star key={star} filled={star <= rating} />
               ))}
             </div>
-            <p className="text-amber-500 flex-grow whitespace-pre-wrap">{comment}</p>
-            <footer className="mt-4 text-amber-600 text-sm font-semibold">
+            <p className="text-black flex-grow whitespace-pre-wrap">{comment}</p>
+            <footer className="mt-4 text-black text-sm font-semibold">
               — {name},{' '}
               <time dateTime={date} className="not-italic">
                 {new Date(date).toLocaleDateString(undefined, {

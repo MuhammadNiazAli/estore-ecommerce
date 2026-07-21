@@ -76,7 +76,7 @@ const LaptopBrandsCarousel = () => {
         {brands.map(({ id, name, logo }) => (
           <div
             key={id}
-            className="flex-shrink-0 w-24 h-24 flex items-center justify-center bg-white/70 hover:bg-amber-700/80 backdrop-blur-md transition rounded-xl cursor-pointer shadow-md"
+            className="flex-shrink-0 w-24 h-24 flex items-center justify-center bg-white/70 hover:bg-black/80 backdrop-blur-md transition rounded-xl cursor-pointer shadow-md"
             title={name}
           >
             <img

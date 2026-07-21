@@ -72,7 +72,7 @@ const ResponsibilityPartners = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="text-amber-600 text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 select-none text-center max-w-[1000px] w-full"
+        className="text-black text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 select-none text-center max-w-[1000px] w-full"
       >
         Our Trusted Partners
       </motion.h2>
@@ -84,8 +84,8 @@ const ResponsibilityPartners = () => {
           aria-label="Scroll partners left"
           onClick={() => scrollBy(-1)}
           disabled={!canScrollLeft}
-          className={`hidden sm:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-gray-900 rounded-full p-2 z-20 transition
-            focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
+          className={`hidden sm:flex absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-black hover:text-gray-900 rounded-full p-2 z-20 transition
+            focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2
             ${!canScrollLeft ? 'opacity-40 cursor-not-allowed hover:bg-gray-500 hover:text-gray-600' : ''}`}
         >
           <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -113,7 +113,7 @@ const ResponsibilityPartners = () => {
               role="listitem"
               tabIndex={0}
               title={name}
-              className="flex-shrink-0 w-24 sm:w-28 md:w-32 h-16 sm:h-20 bg-white rounded-lg border border-gray-200 hover:border-amber-600 focus:border-amber-600 focus:outline-none transition flex items-center justify-center p-2 cursor-pointer"
+              className="flex-shrink-0 w-24 sm:w-28 md:w-32 h-16 sm:h-20 bg-white rounded-lg border border-gray-200 hover:border-black focus:border-black focus:outline-none transition flex items-center justify-center p-2 cursor-pointer"
             >
               <img
                 src={logo}
@@ -132,8 +132,8 @@ const ResponsibilityPartners = () => {
           aria-label="Scroll partners right"
           onClick={() => scrollBy(1)}
           disabled={!canScrollRight}
-          className={`hidden sm:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-amber-700 hover:text-gray-900 rounded-full p-2 z-20 transition
-            focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
+          className={`hidden sm:flex absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-black hover:text-gray-900 rounded-full p-2 z-20 transition
+            focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2
             ${!canScrollRight ? 'opacity-40 cursor-not-allowed hover:bg-gray-500 hover:text-gray-600' : ''}`}
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />

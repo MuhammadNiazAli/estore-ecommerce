@@ -28,14 +28,14 @@ const ProductWarranty = () => {
       </h2>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">
+        <h3 className="text-xl font-semibold mb-3 border-b border-black pb-2">
           Warranty Period
         </h3>
         <p className="text-gray-700 text-lg">{warrantyInfo.period}</p>
       </div>
 
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4 border-b border-amber-600 pb-2">
+        <h3 className="text-xl font-semibold mb-4 border-b border-black pb-2">
           What Is Covered
         </h3>
         <ul className="list-disc list-inside space-y-2 text-gray-700 text-base">
@@ -43,7 +43,7 @@ const ProductWarranty = () => {
             <li
               key={idx}
               tabIndex={0}
-              className="focus:outline-none focus:ring-2 focus:ring-amber-600 rounded-md"
+              className="focus:outline-none focus:ring-2 focus:ring-black rounded-md"
             >
               {item}
             </li>
@@ -52,14 +52,14 @@ const ProductWarranty = () => {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-4 border-b border-amber-600 pb-2">
+        <h3 className="text-xl font-semibold mb-4 border-b border-black pb-2">
           Customer Support
         </h3>
         <p className="mb-2 text-gray-700 text-base">
           Contact us at{" "}
           <a
             href={`mailto:${warrantyInfo.support.contact}`}
-            className="text-amber-600 underline font-medium hover:text-amber-700 transition"
+            className="text-black underline font-medium hover:text-black transition"
             aria-label={`Send email to ${warrantyInfo.support.contact}`}
           >
             {warrantyInfo.support.contact}
@@ -67,7 +67,7 @@ const ProductWarranty = () => {
           or call{" "}
           <a
             href={`tel:${warrantyInfo.support.phone.replace(/[^+\d]/g, "")}`}
-            className="text-amber-600 underline font-medium hover:text-amber-700 transition"
+            className="text-black underline font-medium hover:text-black transition"
             aria-label={`Call support at ${warrantyInfo.support.phone}`}
           >
             {warrantyInfo.support.phone}

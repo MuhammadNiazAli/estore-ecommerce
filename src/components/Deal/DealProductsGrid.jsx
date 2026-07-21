@@ -19,7 +19,7 @@ const renderStars = (rating) => {
   const half = rating % 1 >= 0.5;
   const emptyStars = 5 - fullStars - (half ? 1 : 0);
   return (
-    <div className="flex items-center text-amber-600 space-x-[2px]">
+    <div className="flex items-center text-black space-x-[2px]">
       {Array(fullStars).fill().map((_, i) => (
         <AiFillStar key={`full-${i}`} size={14} />
       ))}
@@ -111,7 +111,7 @@ const RecentlyViewedDeals = () => {
                       {title}
                     </h3>
                   </div>
-                  <span className="absolute top-3 left-3 bg-amber-600 text-black px-2 py-1 rounded-full text-xs font-bold z-10">
+                  <span className="absolute top-3 left-3 bg-black text-black px-2 py-1 rounded-full text-xs font-bold z-10">
                     -{discount}%
                   </span>
                 </div>
@@ -142,17 +142,17 @@ const RecentlyViewedDeals = () => {
 
                   <div className="flex justify-between items-end mt-auto">
                     <div>
-                      <span className="text-lg font-bold text-amber-600">${price}</span>
+                      <span className="text-lg font-bold text-black">${price}</span>
                       <span className="text-sm line-through text-gray-600 ml-2">${oldPrice}</span>
                     </div>
-                    <div className="flex space-x-2 text-amber-600">
-                      <Link href="/wishlist" className="hover:text-amber-500" aria-label={`Wishlist ${title}`}>
+                    <div className="flex space-x-2 text-black">
+                      <Link href="/wishlist" className="hover:text-black" aria-label={`Wishlist ${title}`}>
                         <FiHeart size={18} />
                       </Link>
-                      <Link href={`/product`} className="hover:text-amber-500" aria-label={`View ${title}`}>
+                      <Link href={`/product`} className="hover:text-black" aria-label={`View ${title}`}>
                         <FiEye size={18} />
                       </Link>
-                      <Link href="/cart" className="hover:text-amber-500" aria-label={`Add ${title} to cart`}>
+                      <Link href="/cart" className="hover:text-black" aria-label={`Add ${title} to cart`}>
                         <FiShoppingCart size={18} />
                       </Link>
                     </div>
@@ -170,7 +170,7 @@ const RecentlyViewedDeals = () => {
             aria-label="Scroll Left"
             className={`absolute top-1/2 -translate-y-1/2 -left-5 sm:-left-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-white/60 hover:bg-amber-600 hover:text-black
+              bg-white/60 hover:bg-black hover:text-black
               border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
           >
@@ -185,7 +185,7 @@ const RecentlyViewedDeals = () => {
             aria-label="Scroll Right"
             className={`absolute top-1/2 -translate-y-1/2 -right-5 sm:-right-6 z-40
               ${isMobile ? 'w-8 h-8' : 'w-10 h-10'}
-              bg-white/60 hover:bg-amber-600 hover:text-black
+              bg-white/60 hover:bg-black hover:text-black
               border border-gray-200 text-gray-900 backdrop-blur-md shadow-md
               rounded-full flex items-center justify-center transition`}
           >

@@ -37,7 +37,7 @@ function StarRating({ count }) {
       {[...Array(5)].map((_, i) => (
         <FiStar
           key={i}
-          className={`text-xs ${i < count ? 'text-amber-600 fill-amber-600' : 'text-gray-600'}`}
+          className={`text-xs ${i < count ? 'text-black fill-black' : 'text-gray-600'}`}
           aria-hidden="true"
         />
       ))}
@@ -71,7 +71,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
             aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}
             aria-pressed={favorited}
             className={`p-1 rounded focus:outline-none focus:ring-0 transition-colors ${
-              favorited ? 'text-red-600 hover:text-red-700' : 'text-gray-600 hover:text-red-500'
+              favorited ? 'text-black hover:text-black' : 'text-gray-600 hover:text-black'
             }`}
           >
             <FiHeart className="w-5 h-5" />
@@ -83,12 +83,12 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
         </div>
 
         <div className="flex justify-between items-center mt-3">
-          <span className="font-semibold text-amber-600 text-lg">{price}</span>
+          <span className="font-semibold text-black text-lg">{price}</span>
           <Link href="/Cart" passHref>
             <button
               type="button"
               aria-label={`Add ${name} to cart`}
-              className="flex items-center gap-1 px-3 py-1.5 text-sm font-semibold bg-amber-600 text-black rounded hover:bg-amber-500 focus:outline-none focus:ring-0 transition-colors"
+              className="flex items-center gap-1 px-3 py-1.5 text-sm font-semibold bg-black text-black rounded hover:bg-black focus:outline-none focus:ring-0 transition-colors"
             >
               <FiShoppingCart className="w-5 h-5" />
               Add
@@ -104,8 +104,8 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
   aria-label={favorited ? 'Remove from favorites' : 'Add to favorites'}
   className={`w-9 h-9 flex items-center justify-center rounded-full focus:outline-none focus:ring-0 transition-colors ${
     favorited
-      ? 'bg-red-600 hover:bg-red-700 text-gray-900'
-      : 'bg-white/30 hover:bg-red-500/60 text-red-600 hover:text-red-400'
+      ? 'bg-black hover:bg-black text-gray-900'
+      : 'bg-white/30 hover:bg-black/60 text-black hover:text-black'
   }`}
 >
   <FiHeart className="w-5 h-5" />
@@ -114,7 +114,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
 
     <Link
     href="/product"
-    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-amber-700/60 text-amber-600 transition-colors"
+    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-black/60 text-black transition-colors"
     aria-label={`View details of ${name}`}
      >
       <FiEye className="w-5 h-5" />
@@ -124,7 +124,7 @@ function ProductCard({ product, favorited, onFavoriteToggle }) {
         <button
           type="button"
           aria-label="More product information"
-          className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-amber-700/65 text-amber-500 transition-colors"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-white/30 hover:bg-black/65 text-black transition-colors"
         >
           <FiInfo className="w-5 h-5" />
         </button>
@@ -191,7 +191,7 @@ export default function ProductSlider() {
         pagination={{
           clickable: true,
           bulletClass:
-            'swiper-pagination-bullet transition-all duration-300 ease-in-out bg-amber-600 opacity-60 hover:opacity-90 transform hover:scale-125',
+            'swiper-pagination-bullet transition-all duration-300 ease-in-out bg-black opacity-60 hover:opacity-90 transform hover:scale-125',
           bulletActiveClass: 'opacity-100 scale-150',
         }}
         autoplay={{ delay: 4000, disableOnInteraction: false }}

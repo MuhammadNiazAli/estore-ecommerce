@@ -110,14 +110,14 @@ const ProductDetail = ({ product }) => {
     const halfStar = rating - fullStars >= 0.5;
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <AiFillStar key={"star-full-" + i} className="text-amber-600 w-4 h-4" />
+        <AiFillStar key={"star-full-" + i} className="text-black w-4 h-4" />
       );
     }
     if (halfStar) {
       stars.push(
         <AiFillStar
           key="star-half"
-          className="text-amber-600 w-4 h-4"
+          className="text-black w-4 h-4"
           style={{ clipPath: "inset(0 50% 0 0)" }}
         />
       );
@@ -125,7 +125,7 @@ const ProductDetail = ({ product }) => {
     const emptyStars = 5 - stars.length;
     for (let i = 0; i < emptyStars; i++) {
       stars.push(
-        <AiOutlineStar key={"star-empty-" + i} className="text-amber-600 w-4 h-4" />
+        <AiOutlineStar key={"star-empty-" + i} className="text-black w-4 h-4" />
       );
     }
     return stars;
@@ -154,9 +154,9 @@ const ProductDetail = ({ product }) => {
                 aria-label={`View image ${idx + 1}`}
                 className={`flex-shrink-0 w-14 h-14 rounded-md overflow-hidden border-2 ${
                   img === selectedImage
-                    ? "border-amber-700"
-                    : "border-transparent hover:border-amber-600"
-                } transition-colors duration-300 focus:outline-amber-700`}
+                    ? "border-black"
+                    : "border-transparent hover:border-black"
+                } transition-colors duration-300 focus:outline-black`}
               >
                 <img
                   src={img}
@@ -177,7 +177,7 @@ const ProductDetail = ({ product }) => {
               {product.title}
             </h1>
             {product.subtitle && (
-              <p className="text-amber-600 font-semibold mb-4">{product.subtitle}</p>
+              <p className="text-black font-semibold mb-4">{product.subtitle}</p>
             )}
 
             <div className="flex items-center space-x-1 mb-4">
@@ -202,7 +202,7 @@ const ProductDetail = ({ product }) => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-gray-700">
                 {product.features.map((feat, i) => (
                   <li key={i} className="flex items-center space-x-1">
-                    <AiOutlineCheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <AiOutlineCheckCircle className="w-4 h-4 text-black flex-shrink-0" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -230,7 +230,7 @@ const ProductDetail = ({ product }) => {
             <div>
               {product.discountPrice ? (
                 <div className="flex items-baseline space-x-2">
-                  <span className="text-amber-600 font-extrabold text-2xl tracking-tight">
+                  <span className="text-black font-extrabold text-2xl tracking-tight">
                     ${product.discountPrice.toFixed(2)}
                   </span>
                   <span className="text-gray-500 line-through text-sm">
@@ -247,7 +247,7 @@ const ProductDetail = ({ product }) => {
             <div className="flex items-center space-x-4">
               <a
                 href="/cart"
-                className="inline-block bg-amber-700 hover:bg-amber-800 text-black font-semibold px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md text-sm"
+                className="inline-block bg-black hover:bg-black text-black font-semibold px-4 py-2 rounded-md cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md text-sm"
                 aria-label={`Add ${product.title} to cart`}
               >
                 Add to Cart
@@ -259,7 +259,7 @@ const ProductDetail = ({ product }) => {
                 className="p-2 rounded-md hover:bg-gray-500 transition-colors duration-300 cursor-pointer shadow-sm hover:shadow-md"
                 onClick={() => alert(`Added ${product.title} to wishlist!`)}
               >
-                <AiOutlineHeart className="text-gray-600 hover:text-red-500 w-5 h-5" />
+                <AiOutlineHeart className="text-gray-600 hover:text-black w-5 h-5" />
               </button>
             </div>
           </div>
@@ -288,7 +288,7 @@ const ProductsShowcase = () => {
           <button
             type="button"
             onClick={() => setShowAll((prev) => !prev)}
-            className="inline-block bg-amber-700 hover:bg-amber-800 text-black font-semibold px-5 py-2 rounded-md cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
+            className="inline-block bg-black hover:bg-black text-black font-semibold px-5 py-2 rounded-md cursor-pointer transition-colors duration-300 shadow-sm hover:shadow-md text-sm sm:text-base"
             aria-expanded={showAll}
             aria-controls="products-list"
           >

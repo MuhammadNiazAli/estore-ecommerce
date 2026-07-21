@@ -170,7 +170,7 @@ const LiveChatSupport = () => {
       {/* Toggle chat button */}
       <button
         onClick={toggleChat}
-        className="fixed bottom-4 right-4 bg-amber-800 text-gray-900 px-4 py-2 rounded-full z-50 shadow-lg"
+        className="fixed bottom-4 right-4 bg-black text-gray-900 px-4 py-2 rounded-full z-50 shadow-lg"
       >
         {isOpen ? 'Close Chat' : 'Chat with Us'}
       </button>
@@ -187,7 +187,7 @@ const LiveChatSupport = () => {
       {isOpen && (
         <div className="fixed bottom-20 right-4 left-4 sm:left-auto sm:right-4 sm:w-full max-w-md bg-white text-sm text-black flex flex-col shadow-2xl rounded-xl overflow-hidden z-50 h-[80vh] sm:h-[70vh]">
           {/* Header */}
-          <div className="flex justify-between items-center p-4 bg-amber-800 text-gray-900">
+          <div className="flex justify-between items-center p-4 bg-black text-gray-900">
             <span>Live Support</span>
             <button onClick={toggleChat} className="text-2xl" aria-label="Close chat">
               &times;
@@ -203,8 +203,8 @@ const LiveChatSupport = () => {
                   key={m.id}
                   className={`max-w-[80%] p-2 rounded-lg break-words ${
                     m.sender === 'ai'
-                      ? 'bg-amber-300 text-black self-start'
-                      : 'bg-amber-800 text-gray-900 self-end'
+                      ? 'bg-black text-black self-start'
+                      : 'bg-black text-gray-900 self-end'
                   }`}
                 >
                   {m.text}
@@ -213,7 +213,7 @@ const LiveChatSupport = () => {
 
               {/* Typing animation area */}
               {typing && (
-                <div className="bg-amber-300 text-black self-start p-2 px-3 rounded-lg w-fit whitespace-pre-wrap">
+                <div className="bg-black text-black self-start p-2 px-3 rounded-lg w-fit whitespace-pre-wrap">
                   {currentTypingText || <span className="animate-pulse">Typing...</span>}
                 </div>
               )}
@@ -234,7 +234,7 @@ const LiveChatSupport = () => {
                     <span className="text-xs text-gray-800 line-clamp-2">{q}</span>
                     <button
                       onClick={() => handleQuestionClick(q)}
-                      className="text-amber-800 hover:text-amber-900"
+                      className="text-black hover:text-black"
                       aria-label="Copy question"
                     >
                       <FiCopy className="w-4 h-4" />
@@ -262,11 +262,11 @@ const LiveChatSupport = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="flex-1 resize-none border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700 text-black"
+              className="flex-1 resize-none border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black text-black"
             />
             <button
               onClick={handleSend}
-              className="bg-amber-800 text-gray-900 px-4 py-2 rounded-md hover:bg-amber-900"
+              className="bg-black text-gray-900 px-4 py-2 rounded-md hover:bg-black"
               aria-label="Send message"
             >
               Send

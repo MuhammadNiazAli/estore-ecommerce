@@ -42,7 +42,7 @@ const ClearanceFAQ = () => {
       <div className="max-w-[1200px] w-full">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 leading-tight">
-          Frequently Asked <span className="text-amber-600">Questions</span>
+          Frequently Asked <span className="text-black">Questions</span>
         </h2>
 
         {/* FAQ List */}
@@ -64,7 +64,7 @@ const ClearanceFAQ = () => {
                 </h3>
                 <ChevronDown
                   className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-600 transition-transform duration-300 ease-in-out ${
-                    activeIndex === index ? 'rotate-180 text-amber-600' : ''
+                    activeIndex === index ? 'rotate-180 text-black' : ''
                   }`}
                 />
               </div>

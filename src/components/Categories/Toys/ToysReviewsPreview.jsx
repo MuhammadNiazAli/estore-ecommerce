@@ -41,11 +41,11 @@ const ToysReviewsPreview = () => {
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-amber-600">
+          <h2 className="text-2xl md:text-3xl font-bold text-black">
             Customer Reviews
           </h2>
           <div className="mt-4 md:mt-0 flex gap-3">
-            <button className="bg-amber-700 text-black px-4 py-2 rounded-full font-semibold hover:bg-amber-600 transition text-sm">
+            <button className="bg-black text-black px-4 py-2 rounded-full font-semibold hover:bg-black transition text-sm">
               Write a Review
             </button>
             <button className="bg-white px-4 py-2 rounded-full hover:bg-gray-500 transition text-sm">
@@ -63,8 +63,8 @@ const ToysReviewsPreview = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-6xl font-bold text-amber-600">4.7</p>
-            <div className="flex text-amber-600 mt-2 text-xl">
+            <p className="text-6xl font-bold text-black">4.7</p>
+            <div className="flex text-black mt-2 text-xl">
               {[...Array(5)].map((_, i) => (
                 <FaStar key={i} />
               ))}
@@ -87,7 +87,7 @@ const ToysReviewsPreview = () => {
                 <span className="w-6">{star}★</span>
                 <div className="flex-1 bg-white h-3 rounded">
                   <div
-                    className="bg-amber-600 h-3 rounded"
+                    className="bg-black h-3 rounded"
                     style={{ width: `${star * 15}%` }}
                   ></div>
                 </div>
@@ -122,7 +122,7 @@ const ToysReviewsPreview = () => {
                   <p className="text-gray-600 text-sm">{review.date}</p>
                 </div>
               </div>
-              <div className="flex text-amber-600 mb-2">
+              <div className="flex text-black mb-2">
                 {[...Array(5)].map((_, i) =>
                   i < review.rating ? <FaStar key={i} /> : <FaRegStar key={i} />
                 )}

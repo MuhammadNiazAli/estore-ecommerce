@@ -13,7 +13,7 @@ function CancelOrderContent({ closePanel }) {
   return (
     <div className="px-4 py-6 max-w-xl mx-auto text-[14px] sm:text-[15px]">
       {/* Header */}
-      <h2 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
+      <h2 className="text-black text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
         Cancel Your Order
       </h2>
 
@@ -27,7 +27,7 @@ function CancelOrderContent({ closePanel }) {
         aria-label="Your order information before cancellation"
         className="bg-white p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
       >
-        <h3 className="text-amber-600 font-semibold text-lg sm:text-xl mb-4">
+        <h3 className="text-black font-semibold text-lg sm:text-xl mb-4">
           Order Summary
         </h3>
 
@@ -50,7 +50,7 @@ function CancelOrderContent({ closePanel }) {
           </li>
           <li>
             <span className="font-semibold">Order Status:</span>{' '}
-            <span className="text-amber-600 font-medium">Processing</span>
+            <span className="text-black font-medium">Processing</span>
           </li>
         </ul>
 
@@ -64,7 +64,7 @@ function CancelOrderContent({ closePanel }) {
         aria-label="Policy regarding cancellations and refunds"
         className="bg-white p-4 sm:p-5 rounded-lg mb-8"
       >
-        <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-3">
+        <h3 className="text-black font-semibold text-base sm:text-lg mb-3">
           Cancellation Policy
         </h3>
 
@@ -80,7 +80,7 @@ function CancelOrderContent({ closePanel }) {
             If your order has already been dispatched, refer to our{' '}
             <a
               href="/returns"
-              className="text-amber-600 underline hover:text-amber-500 transition-colors"
+              className="text-black underline hover:text-black transition-colors"
             >
               Return & Refund Policy
             </a>
@@ -90,7 +90,7 @@ function CancelOrderContent({ closePanel }) {
             For urgent cases or bulk order issues, please contact our{' '}
             <a
               href="/contact"
-              className="text-amber-600 underline hover:text-amber-500 transition-colors"
+              className="text-black underline hover:text-black transition-colors"
             >
               Customer Support
             </a>{' '}
@@ -104,7 +104,7 @@ function CancelOrderContent({ closePanel }) {
         <button
           type="button"
           onClick={handleCancelConfirmation}
-          className="bg-red-600 hover:bg-red-500 text-gray-900 text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 w-full sm:w-auto"
+          className="bg-black hover:bg-black text-gray-900 text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full sm:w-auto"
           aria-label="Confirm cancellation of order"
         >
           Confirm Cancellation
@@ -113,7 +113,7 @@ function CancelOrderContent({ closePanel }) {
         <button
           type="button"
           onClick={closePanel}
-          className="border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-black text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 w-full sm:w-auto"
+          className="border border-black text-black hover:bg-black hover:text-black text-sm sm:text-base px-5 py-2 rounded-full font-semibold transition-shadow shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 w-full sm:w-auto"
           aria-label="Cancel and return back to orders"
         >
           Go Back

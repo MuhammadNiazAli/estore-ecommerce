@@ -428,7 +428,7 @@ const WomanClothsFeatured = () => {
             onClick={() => setActiveFilter(filter)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
               activeFilter === filter
-                ? "bg-amber-600 text-black"
+                ? "bg-black text-black"
                 : "bg-white text-gray-700 hover:bg-gray-500"
             }`}
           >
@@ -453,10 +453,10 @@ const WomanClothsFeatured = () => {
               />
               {/* ✅ Hover Icons */}
               <div className="absolute top-3 right-3 flex flex-col gap-3 opacity-0 group-hover:opacity-100 transition-all">
-                <button className="bg-white/90 p-2 rounded-full hover:bg-amber-600 text-gray-900">
+                <button className="bg-white/90 p-2 rounded-full hover:bg-black text-gray-900">
                   <FiHeart />
                 </button>
-                <button className="bg-white/90 p-2 rounded-full hover:bg-amber-600 text-gray-900">
+                <button className="bg-white/90 p-2 rounded-full hover:bg-black text-gray-900">
                   <FiEye />
                 </button>
               </div>
@@ -469,10 +469,10 @@ const WomanClothsFeatured = () => {
                 {product.title}
               </h3>
               <div className="flex items-center justify-between mt-3">
-                <span className="text-amber-600 font-bold text-lg">
+                <span className="text-black font-bold text-lg">
                   ${product.price}
                 </span>
-                <button className="bg-amber-600 text-black px-4 py-2 rounded-full text-sm flex items-center gap-2 hover:bg-amber-700 transition-all">
+                <button className="bg-black text-black px-4 py-2 rounded-full text-sm flex items-center gap-2 hover:bg-black transition-all">
                   <FiShoppingCart /> Add
                 </button>
               </div>

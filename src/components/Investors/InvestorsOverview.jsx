@@ -13,11 +13,11 @@ const InvestorsOverview = () => {
   return (
     <section
       aria-label="Company Overview for Investors"
-      className="bg-white text-amber-600 py-16 px-4 flex justify-center my-15"
+      className="bg-white text-black py-16 px-4 flex justify-center my-15"
     >
       <div className="w-full max-w-[1100px] space-y-12">
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-amber-600"
+          className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center text-black"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ const InvestorsOverview = () => {
         </motion.h2>
 
         <motion.p
-          className="text-amber-500 text-center max-w-3xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed"
+          className="text-black text-center max-w-3xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -51,7 +51,7 @@ const InvestorsOverview = () => {
             <motion.div
               key={idx}
               role="listitem"
-              className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-amber-600/50 focus-within:shadow-amber-600/50 transition-shadow duration-300 text-center cursor-default"
+              className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-black/50 focus-within:shadow-black/50 transition-shadow duration-300 text-center cursor-default"
               tabIndex={0}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
@@ -59,10 +59,10 @@ const InvestorsOverview = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
             >
-              <p className="text-amber-600 font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-3">
+              <p className="text-black font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-3">
                 {value}
               </p>
-              <p className="text-amber-500 font-medium text-sm sm:text-base">
+              <p className="text-black font-medium text-sm sm:text-base">
                 {label}
               </p>
             </motion.div>

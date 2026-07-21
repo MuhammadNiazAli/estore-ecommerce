@@ -50,7 +50,7 @@ const KitchenCategoryInfo = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 my-[-50px]">
+    <section className="bg-white text-black py-12 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-6">Explore Kitchen Categories</h2>
         <p className="text-gray-600 mb-10">
@@ -65,8 +65,8 @@ const KitchenCategoryInfo = () => {
               onClick={() => handleCategoryChange(cat)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all ${
                 activeCategory.id === cat.id
-                  ? "bg-amber-700 text-gray-900 font-semibold"
-                  : "border-amber-700 text-amber-600 hover:bg-amber-700 hover:text-gray-900"
+                  ? "bg-black text-gray-900 font-semibold"
+                  : "border-black text-black hover:bg-black hover:text-gray-900"
               }`}
             >
               {cat.icon}
@@ -80,7 +80,7 @@ const KitchenCategoryInfo = () => {
           {loading ? (
             <motion.div
               key="loading"
-              className="p-10 rounded-xl bg-white border border-amber-700 text-amber-600"
+              className="p-10 rounded-xl bg-white border border-black text-black"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -94,7 +94,7 @@ const KitchenCategoryInfo = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-amber-700"
+                className="bg-white rounded-xl shadow-lg overflow-hidden border border-black"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   <img
@@ -115,12 +115,12 @@ const KitchenCategoryInfo = () => {
                           key={index}
                           className="flex items-center gap-2 text-gray-700"
                         >
-                          <FaCheckCircle className="text-amber-600" />
+                          <FaCheckCircle className="text-black" />
                           {item}
                         </li>
                       ))}
                     </ul>
-                    <button className="mt-6 px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-full hover:bg-amber-600 transition">
+                    <button className="mt-6 px-6 py-3 bg-black text-gray-900 font-semibold rounded-full hover:bg-black transition">
                       View Products
                     </button>
                   </div>

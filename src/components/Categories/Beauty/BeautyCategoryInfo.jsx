@@ -4,22 +4,22 @@ import { FaLeaf, FaSun, FaTint, FaSeedling } from 'react-icons/fa';
 
 const benefits = [
   {
-    icon: <FaLeaf className="text-green-600 w-6 h-6" />,
+    icon: <FaLeaf className="text-black w-6 h-6" />,
     title: "Eco-Friendly",
     desc: "All products are grown with sustainable methods.",
   },
   {
-    icon: <FaSun className="text-amber-600 w-6 h-6" />,
+    icon: <FaSun className="text-black w-6 h-6" />,
     title: "Natural Light Care",
     desc: "Guidelines on ideal light conditions for each plant.",
   },
   {
-    icon: <FaTint className="text-amber-600 w-6 h-6" />,
+    icon: <FaTint className="text-black w-6 h-6" />,
     title: "Watering Tips",
     desc: "Learn how to water your plants perfectly for long-lasting health.",
   },
   {
-    icon: <FaSeedling className="text-green-500 w-6 h-6" />,
+    icon: <FaSeedling className="text-black w-6 h-6" />,
     title: "Growth Guarantee",
     desc: "Quality assurance for thriving plants delivered to you.",
   },
@@ -38,7 +38,7 @@ const BeautyCategoryInfo = () => {
     <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 my-[-50px]">
       {/* Title & Intro */}
       <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-amber-700 mb-4 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4 leading-tight">
           Explore Our Beauty & Indoor Plants Collection
         </h1>
         <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
@@ -56,7 +56,7 @@ const BeautyCategoryInfo = () => {
           {brands.map((brand, i) => (
             <li
               key={i}
-              className="text-amber-700 font-medium text-lg md:text-xl border border-amber-500 rounded-md px-5 py-2 hover:bg-gray-500 transition"
+              className="text-black font-medium text-lg md:text-xl border border-black rounded-md px-5 py-2 hover:bg-gray-500 transition"
             >
               {brand}
             </li>
@@ -72,7 +72,7 @@ const BeautyCategoryInfo = () => {
             className="flex flex-col items-center text-center px-4 py-6 bg-white rounded-lg shadow-md hover:shadow-lg transition"
           >
             <div className="mb-4">{icon}</div>
-            <h3 className="text-xl font-semibold text-amber-700 mb-2">{title}</h3>
+            <h3 className="text-xl font-semibold text-black mb-2">{title}</h3>
             <p className="text-gray-500">{desc}</p>
           </article>
         ))}
@@ -86,7 +86,7 @@ const BeautyCategoryInfo = () => {
         </p>
         <button
           type="button"
-          className="mt-8 inline-block bg-amber-900 text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-amber-900 transition"
+          className="mt-8 inline-block bg-black text-gray-900 font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-black transition"
           aria-label="Shop the Beauty & Indoor Plants collection"
         >
           Shop Now

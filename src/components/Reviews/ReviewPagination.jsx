@@ -80,7 +80,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
           flex items-center gap-3
           bg-white px-5 py-3 rounded-3xl shadow-lg border border-gray-200
           max-w-[700px] w-full
-          overflow-x-auto scrollbar-thin scrollbar-thumb-amber-500 scrollbar-track-gray-700
+          overflow-x-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700
           sm:justify-center
         "
       >
@@ -96,7 +96,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
               transition-colors duration-200
               ${currentPage === 1
                 ? 'text-gray-600 bg-white cursor-not-allowed'
-                : 'text-amber-500 hover:bg-amber-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-amber-400'}
+                : 'text-black hover:bg-black hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-black'}
             `}
           >
             ←
@@ -122,9 +122,9 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
                   className={`
                     relative w-10 h-10 flex items-center justify-center font-semibold
                     rounded-full transition-colors duration-300
-                    focus:outline-none focus:ring-4 focus:ring-amber-400
+                    focus:outline-none focus:ring-4 focus:ring-black
                     ${isActive
-                      ? 'text-gray-900 bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg'
+                      ? 'text-gray-900 bg-gradient-to-r from-black to-gray-900 shadow-lg'
                       : 'text-gray-700 hover:text-gray-900 hover:bg-gray-500'}
                   `}
                 >
@@ -132,7 +132,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
                     {isActive && (
                       <motion.span
                         layoutId="activePage"
-                        className="absolute inset-0 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 z-0"
+                        className="absolute inset-0 rounded-full bg-gradient-to-r from-black to-gray-900 z-0"
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
                     )}
@@ -156,7 +156,7 @@ const ReviewPagination = ({ totalPages = 20, onPageChange }) => {
               transition-colors duration-200
               ${currentPage === totalPages
                 ? 'text-gray-600 bg-white cursor-not-allowed'
-                : 'text-amber-500 hover:bg-amber-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-amber-400'}
+                : 'text-black hover:bg-black hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-black'}
             `}
           >
             →

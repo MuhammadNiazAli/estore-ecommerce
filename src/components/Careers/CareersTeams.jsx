@@ -82,9 +82,9 @@ const CareersTeams = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               tabIndex={0}
-              className="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-md cursor-pointer focus:outline-amber-600 focus:outline-2 focus:outline-offset-2"
+              className="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-md cursor-pointer focus:outline-black focus:outline-2 focus:outline-offset-2"
             >
-              <div className="relative h-32 w-32 mb-4 rounded-full overflow-hidden border-4 border-amber-600">
+              <div className="relative h-32 w-32 mb-4 rounded-full overflow-hidden border-4 border-black">
                 <Image
                   src={member.photo}
                   alt={`${member.name} - ${member.role}`}
@@ -98,9 +98,9 @@ const CareersTeams = () => {
                   draggable={false}
                 />
               </div>
-              <h3 className="text-xl font-semibold text-amber-600">{member.name}</h3>
-              <p className="text-amber-400 italic mb-3">{member.role}</p>
-              <p className="text-amber-300 text-sm">{member.bio}</p>
+              <h3 className="text-xl font-semibold text-black">{member.name}</h3>
+              <p className="text-black italic mb-3">{member.role}</p>
+              <p className="text-black text-sm">{member.bio}</p>
             </motion.div>
           ))}
         </div>

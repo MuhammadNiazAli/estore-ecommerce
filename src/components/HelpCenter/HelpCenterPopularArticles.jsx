@@ -141,7 +141,7 @@ const HelpCenterPopularArticles = () => {
   return (
     <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-20px]">
       <div className="w-full max-w-[1000px] text-gray-900">
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-10">
           Popular Articles
         </h2>
 
@@ -151,8 +151,8 @@ const HelpCenterPopularArticles = () => {
               key={index}
               onClick={() => openModal(index)}
               className="block text-left p-6 bg-white rounded-xl
-                hover:bg-amber-700 hover:text-black transition duration-300
-                shadow-md focus:outline-none focus:ring-4 focus:ring-amber-600"
+                hover:bg-black hover:text-black transition duration-300
+                shadow-md focus:outline-none focus:ring-4 focus:ring-black"
               aria-haspopup="dialog"
               aria-expanded={openIndex === index}
               aria-controls={`article-modal-${index}`}
@@ -175,7 +175,7 @@ const HelpCenterPopularArticles = () => {
             ref={modalRef}
             className="fixed top-1/2 left-1/2 max-w-md w-[90vw] bg-white rounded-xl p-6 text-gray-900
               -translate-x-1/2 -translate-y-1/2 z-50 shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-amber-600"
+              focus:outline-none focus:ring-4 focus:ring-black"
           >
             <h3
               id={`article-title-${openIndex}`}
@@ -187,13 +187,13 @@ const HelpCenterPopularArticles = () => {
             <div className="flex justify-end gap-4">
               <button
                 onClick={openFullArticleModal}
-                className="bg-amber-600 text-black px-4 py-2 rounded-md font-semibold hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="bg-black text-black px-4 py-2 rounded-md font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Read Full Article
               </button>
               <button
                 onClick={closeModal}
-                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Close
               </button>
@@ -212,7 +212,7 @@ const HelpCenterPopularArticles = () => {
             ref={fullModalRef}
             className="fixed top-1/2 left-1/2 max-w-lg w-[95vw] bg-white rounded-xl p-6 text-gray-900
               -translate-x-1/2 -translate-y-1/2 z-[60] shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-amber-600"
+              focus:outline-none focus:ring-4 focus:ring-black"
           >
             <h3
               id="full-article-title"
@@ -226,7 +226,7 @@ const HelpCenterPopularArticles = () => {
             <div className="flex justify-end gap-4">
               <button
                 onClick={closeFullArticleModal}
-                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="bg-white px-4 py-2 rounded-md hover:bg-gray-500 transition font-semibold focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Close
               </button>

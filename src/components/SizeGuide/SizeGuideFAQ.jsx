@@ -60,7 +60,7 @@ const SizeGuideFAQ = () => {
       aria-label="Frequently Asked Questions"
     >
       <div className="max-w-4xl w-full">
-        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-10 select-none text-center">
+        <h2 className="text-black text-3xl sm:text-4xl font-extrabold mb-10 select-none text-center">
           Frequently Asked Questions
         </h2>
 
@@ -76,13 +76,13 @@ const SizeGuideFAQ = () => {
                 aria-controls={`faq-content-${index}`}
                 id={`faq-header-${index}`}
                 className="w-full flex justify-between items-center p-5 text-left
-                           focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600
+                           focus:outline-none focus-visible:ring-2 focus-visible:ring-black
                            text-lg sm:text-xl font-semibold"
                 type="button"
               >
                 <span>{question}</span>
                 <svg
-                  className={`w-6 h-6 text-amber-600 transition-transform duration-300 ease-in-out ${
+                  className={`w-6 h-6 text-black transition-transform duration-300 ease-in-out ${
                     openIndex === index ? "rotate-45" : "rotate-0"
                   }`}
                   fill="none"

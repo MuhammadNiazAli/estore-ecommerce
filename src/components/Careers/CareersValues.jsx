@@ -6,19 +6,19 @@ import { gsap } from 'gsap';
 
 const values = [
   {
-    icon: <LightBulbIcon className="h-8 w-8 text-amber-600" />,
+    icon: <LightBulbIcon className="h-8 w-8 text-black" />,
     title: 'Innovation',
     description:
       'We constantly push boundaries and encourage creative thinking to solve challenges and drive growth.',
   },
   {
-    icon: <GlobeAltIcon className="h-8 w-8 text-amber-600" />,
+    icon: <GlobeAltIcon className="h-8 w-8 text-black" />,
     title: 'Diversity & Inclusion',
     description:
       'Our strength lies in embracing different perspectives, backgrounds, and experiences to build a stronger team.',
   },
   {
-    icon: <ShieldCheckIcon className="h-8 w-8 text-amber-600" />,
+    icon: <ShieldCheckIcon className="h-8 w-8 text-black" />,
     title: 'Integrity',
     description:
       'We act with honesty, transparency, and respect, fostering trust among teammates and clients alike.',
@@ -75,8 +75,8 @@ const CareersValues = () => {
               style={{ boxShadow: '0px 4px 10px rgba(0,0,0,0.5)', transformOrigin: 'center' }}
             >
               <div className="mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-amber-500 mb-2">{value.title}</h3>
-              <p className="text-amber-300 text-sm leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-semibold text-black mb-2">{value.title}</h3>
+              <p className="text-black text-sm leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>

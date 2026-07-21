@@ -73,7 +73,7 @@ const BlogList = () => {
             <div className="p-5 flex flex-col flex-grow">
               <h2
                 title={blog.title}
-                className="text-amber-600 font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2"
+                className="text-black font-semibold text-lg sm:text-xl md:text-2xl mb-2 line-clamp-2"
               >
                 {blog.title}
               </h2>
@@ -86,7 +86,7 @@ const BlogList = () => {
               </div>
               <a
                 href={blog.url}
-                className="inline-flex items-center gap-2 text-amber-600 hover:text-amber-500 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-amber-600 rounded text-sm sm:text-base"
+                className="inline-flex items-center gap-2 text-black hover:text-black font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-black rounded text-sm sm:text-base"
                 aria-label={`Read more about ${blog.title}`}
               >
                 Read More <ArrowRight size={16} />

@@ -89,7 +89,7 @@ const ProductGallery = () => {
               key={slug}
               tabIndex={0}
               className="relative rounded-xl shadow-lg cursor-pointer bg-white dark:bg-white overflow-hidden
-                group focus:outline-none focus:ring-4 focus:ring-amber-600
+                group focus:outline-none focus:ring-4 focus:ring-black
                 transform transition-transform duration-300 hover:scale-[1.03] focus:scale-[1.03]"
               aria-label={`View details for ${title}`}
             >
@@ -120,8 +120,8 @@ const ProductGallery = () => {
                 <p className="text-sm line-clamp-2">{description}</p>
                 <a
                   href={slug}
-                  className="inline-block mt-4 px-4 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg shadow-md
-                    hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+                  className="inline-block mt-4 px-4 py-2 bg-black text-gray-900 font-semibold rounded-lg shadow-md
+                    hover:bg-black focus:outline-none focus:ring-2 focus:ring-black transition"
                 >
                   View Details
                 </a>
@@ -139,8 +139,8 @@ const ProductGallery = () => {
                 </p>
                 <a
                   href={slug}
-                  className="mt-3 inline-block w-full text-center px-3 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg shadow-md
-                    hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+                  className="mt-3 inline-block w-full text-center px-3 py-2 bg-black text-gray-900 font-semibold rounded-lg shadow-md
+                    hover:bg-black focus:outline-none focus:ring-2 focus:ring-black transition"
                 >
                   View Details
                 </a>

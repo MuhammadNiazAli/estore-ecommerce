@@ -23,7 +23,7 @@ const CamerasNewsletterSignup = () => {
     <section className="bg-white text-gray-900 py-16 px-4 my-[-30px]">
       <div className="max-w-[900px] mx-auto text-center">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
           Stay Updated with the Latest Cameras
         </h2>
         <p className="text-gray-600 mb-8 text-lg max-w-xl mx-auto">
@@ -43,11 +43,11 @@ const CamerasNewsletterSignup = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full sm:flex-1 px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="w-full sm:flex-1 px-4 py-3 rounded-full bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
           />
           <button
             type="submit"
-            className="bg-amber-600 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-amber-500 transition duration-300"
+            className="bg-black text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black transition duration-300"
           >
             Subscribe <FaPaperPlane />
           </button>
@@ -57,7 +57,7 @@ const CamerasNewsletterSignup = () => {
         {status && (
           <motion.p
             className={`mt-4 ${
-              status.includes("Thank") ? "text-green-400" : "text-red-400"
+              status.includes("Thank") ? "text-black" : "text-black"
             }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -35,7 +35,7 @@ const ReturnChangeTips = () => {
       <div className="max-w-[1000px] w-full text-center">
         <h2
           id="return-change-tips-title"
-          className="text-amber-600 text-3xl md:text-4xl font-bold mb-10"
+          className="text-black text-3xl md:text-4xl font-bold mb-10"
         >
           Helpful Return & Exchange Tips
         </h2>
@@ -47,14 +47,14 @@ const ReturnChangeTips = () => {
           {tips.map(({ icon, title, description }, idx) => (
             <article
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-default focus:outline-amber-600 focus:outline-2 focus:outline-offset-2"
+              className="bg-white rounded-xl p-6 shadow-md hover:bg-gray-500 transition cursor-default focus:outline-black focus:outline-2 focus:outline-offset-2"
               tabIndex={0}
               aria-label={title}
             >
-              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-amber-700 text-black shadow-md">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-black text-black shadow-md">
                 {icon}
               </div>
-              <h3 className="text-amber-500 font-semibold text-lg md:text-xl mb-2">{title}</h3>
+              <h3 className="text-black font-semibold text-lg md:text-xl mb-2">{title}</h3>
               <p className="text-gray-700 text-sm md:text-base">{description}</p>
             </article>
           ))}

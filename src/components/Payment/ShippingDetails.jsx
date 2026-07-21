@@ -36,25 +36,25 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
         w-full px-4 sm:px-6 py-14
         max-w-[700px] mx-auto
         bg-white
-        border border-amber-800/40 rounded-3xl
+        border border-black/40 rounded-3xl
         shadow-2xl
-        backdrop-blur-md ring-1 ring-amber-600/40
+        backdrop-blur-md ring-1 ring-black/40
         transition-all
         -mt-16 sm:-mt-20
         mb-10
       "
       aria-label="Shipping details form"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-amber-400 text-center tracking-wide drop-shadow-md select-none">
+      <h2 className="text-3xl sm:text-4xl font-extrabold mb-10 text-black text-center tracking-wide drop-shadow-md select-none">
         Shipping Details
       </h2>
 
       <form onSubmit={handleSubmit} noValidate>
         <label
           htmlFor="shippingAddress"
-          className="flex flex-col font-medium text-sm sm:text-base text-amber-300 mb-1"
+          className="flex flex-col font-medium text-sm sm:text-base text-black mb-1"
         >
-          Shipping Address <span className="text-red-400">*</span>
+          Shipping Address <span className="text-black">*</span>
         </label>
 
         <textarea
@@ -74,20 +74,20 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
             rounded-xl
             border px-4 py-3 sm:px-5 sm:py-4
             text-gray-900
-            placeholder-amber-400
-            bg-amber-950/40
+            placeholder-gray-500
+            bg-black/40
             text-sm sm:text-base
             transition-all focus:outline-none focus:ring-4
             ${error
-              ? "border-red-500 bg-red-900/40 ring-red-400"
-              : "border-amber-800 hover:border-amber-700 focus:ring-amber-500"}
+              ? "border-black bg-black/40 ring-black"
+              : "border-black hover:border-black focus:ring-black"}
           `}
         />
 
         {error ? (
           <p
             id="shippingAddress-error"
-            className="text-xs text-red-300 mt-2 italic"
+            className="text-xs text-black mt-2 italic"
             role="alert"
             aria-live="assertive"
           >
@@ -96,7 +96,7 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
         ) : (
           <p
             id="shippingAddressHelp"
-            className="text-xs sm:text-sm text-amber-500 mt-2 select-text"
+            className="text-xs sm:text-sm text-black mt-2 select-text"
           >
             Please enter your complete delivery address including postal code.
           </p>
@@ -106,14 +106,14 @@ export default function ShippingDetails({ formData, setFormData, onSubmit }) {
           <button
             type="submit"
             className="
-              bg-gradient-to-r from-amber-600 to-amber-800
-              hover:from-amber-700 hover:to-amber-900
+              bg-gradient-to-r from-black to-gray-900
+              hover:from-black hover:to-gray-900
               text-gray-900 font-bold
               px-8 sm:px-10 md:px-12
               py-3 sm:py-3.5
               rounded-full
               shadow-md hover:shadow-lg
-              focus:outline-none focus:ring-4 focus:ring-amber-500/60
+              focus:outline-none focus:ring-4 focus:ring-black/60
               transition-all duration-200
               text-sm sm:text-base md:text-lg tracking-wide
               disabled:opacity-60 disabled:cursor-not-allowed

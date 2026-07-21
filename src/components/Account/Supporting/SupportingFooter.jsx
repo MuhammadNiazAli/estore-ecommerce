@@ -6,7 +6,7 @@ const SupportingFooter = () => {
   return (
     <footer
       aria-label="Support page footer"
-      className="w-full bg-white text-amber-300 py-8 mt-16 rounded-t-3xl shadow-inner"
+      className="w-full bg-white text-black py-8 mt-16 rounded-t-3xl shadow-inner"
     >
       <div className="max-w-[900px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm">
         <p className="mb-4 md:mb-0 select-none">
@@ -22,8 +22,8 @@ const SupportingFooter = () => {
             <a
               key={href}
               href={href}
-              className="relative text-amber-600 hover:text-amber-500 transition-colors duration-300
-                after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-amber-600
+              className="relative text-black hover:text-black transition-colors duration-300
+                after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-black
                 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
               aria-label={label}
             >

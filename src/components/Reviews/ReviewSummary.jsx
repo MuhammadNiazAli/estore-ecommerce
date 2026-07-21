@@ -29,7 +29,7 @@ const RatingBar = ({ percent, delay }) => (
     initial={{ width: 0 }}
     animate={{ width: `${percent}%` }}
     transition={{ delay, duration: 1.1, ease: 'easeOut' }}
-    className="h-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 shadow-[inset_0_0_8px_rgba(0,0,0,0.22)]"
+    className="h-4 rounded-full bg-gradient-to-r from-black to-gray-900 shadow-[inset_0_0_8px_rgba(0,0,0,0.22)]"
   />
 );
 
@@ -49,17 +49,17 @@ const ReviewSummary = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: 'easeOut' }}
-            className="text-6xl sm:text-7xl font-extrabold text-amber-400 drop-shadow-lg tracking-tight"
+            className="text-6xl sm:text-7xl font-extrabold text-black drop-shadow-lg tracking-tight"
           >
             4.8
-            <span className="text-2xl text-amber-300 font-semibold ml-2 align-top">/5</span>
+            <span className="text-2xl text-black font-semibold ml-2 align-top">/5</span>
           </motion.h2>
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="flex items-center mt-2 gap-1 text-amber-400"
+            className="flex items-center mt-2 gap-1 text-black"
             aria-hidden="true"
           >
      

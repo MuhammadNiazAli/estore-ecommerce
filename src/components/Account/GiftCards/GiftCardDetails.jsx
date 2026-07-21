@@ -47,7 +47,7 @@ const GiftCardDetails = ({
         transition-shadow duration-300 hover:shadow-[0_10px_30px_rgba(202,138,4,0.5)]"
     >
       {/* Image */}
-      <div className="flex-shrink-0 w-full lg:w-1/3 rounded-xl overflow-hidden shadow-lg ring-1 ring-amber-900">
+      <div className="flex-shrink-0 w-full lg:w-1/3 rounded-xl overflow-hidden shadow-lg ring-1 ring-black">
         <img
           src={giftCard.image}
           alt={`${giftCard.title} image`}
@@ -61,12 +61,12 @@ const GiftCardDetails = ({
       {/* Details */}
       <div className="flex-1 flex flex-col justify-between">
         <div>
-          <h2 className="text-3xl font-extrabold mb-4 flex items-center gap-3 text-amber-500 select-text">
-            <FaGift className="text-amber-600" aria-hidden="true" />
+          <h2 className="text-3xl font-extrabold mb-4 flex items-center gap-3 text-black select-text">
+            <FaGift className="text-black" aria-hidden="true" />
             {giftCard.title}
             {giftCard.popular && (
               <span
-                className="ml-2 inline-flex items-center gap-1 bg-amber-600 text-black text-xs font-bold uppercase
+                className="ml-2 inline-flex items-center gap-1 bg-black text-black text-xs font-bold uppercase
                   rounded-full px-2 py-0.5 select-none"
                 aria-label="Popular gift card badge"
               >
@@ -75,11 +75,11 @@ const GiftCardDetails = ({
             )}
           </h2>
 
-          <p className="text-amber-400 mb-6 leading-relaxed">{giftCard.description}</p>
+          <p className="text-black mb-6 leading-relaxed">{giftCard.description}</p>
 
-          <ul className="text-amber-500 space-y-3 text-sm sm:text-base select-text">
+          <ul className="text-black space-y-3 text-sm sm:text-base select-text">
             <li className="flex items-center gap-3">
-              <FaDollarSign className="text-amber-600" />
+              <FaDollarSign className="text-black" />
               <span>
                 Value:{' '}
                 <strong className="text-gray-900">
@@ -88,7 +88,7 @@ const GiftCardDetails = ({
               </span>
             </li>
             <li className="flex items-center gap-3">
-              <FaCalendarAlt className="text-amber-600" />
+              <FaCalendarAlt className="text-black" />
               <span>
                 Expiry Date:{' '}
                 <strong className="text-gray-900">{formatDate(giftCard.expiry)}</strong>
@@ -102,7 +102,7 @@ const GiftCardDetails = ({
             <button
               type="button"
               onClick={onBack}
-              className="text-amber-500 underline hover:text-amber-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 rounded"
+              className="text-black underline hover:text-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 rounded"
               aria-label="Back to gift card list"
             >
               &larr; Back to List
@@ -111,9 +111,9 @@ const GiftCardDetails = ({
 
           <button
             type="button"
-            className="w-full sm:w-auto px-8 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md
-              hover:bg-amber-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2
-              active:scale-[0.97] active:bg-amber-700 select-none"
+            className="w-full sm:w-auto px-8 py-3 bg-black text-black font-semibold rounded-full shadow-md
+              hover:bg-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2
+              active:scale-[0.97] active:bg-black select-none"
             aria-label={`Buy ${giftCard.title} gift card`}
             onClick={() => alert(`Buying gift card: ${giftCard.title}`)}
           >

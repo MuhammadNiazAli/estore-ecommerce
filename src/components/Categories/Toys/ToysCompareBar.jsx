@@ -51,7 +51,7 @@ const ToysCompareBar = () => {
   };
 
   return (
-    <div className="bg-white text-amber-600 p-4 my-8">
+    <div className="bg-white text-black p-4 my-8">
       {/* Example Add Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {sampleProducts.map((product) => (
@@ -65,9 +65,9 @@ const ToysCompareBar = () => {
               className="w-full h-40 object-cover rounded-md mb-3"
             />
             <p className="text-lg font-semibold mb-1">{product.name}</p>
-            <p className="text-amber-500 mb-2">${product.price}</p>
+            <p className="text-black mb-2">${product.price}</p>
             <button
-              className="mt-2 w-full px-3 py-2 bg-amber-700 text-gray-900 rounded hover:bg-amber-600 font-semibold"
+              className="mt-2 w-full px-3 py-2 bg-black text-gray-900 rounded hover:bg-black font-semibold"
               onClick={() => addToCompare(product)}
               aria-label={`Add ${product.name} to compare`}
             >
@@ -81,7 +81,7 @@ const ToysCompareBar = () => {
       <AnimatePresence>
         {compareItems.length > 0 && (
           <motion.div
-            className="fixed bottom-0 left-0 right-0 bg-white text-amber-600 p-4 shadow-lg border-t border-amber-700 flex flex-col sm:flex-row justify-between items-center gap-4 z-50"
+            className="fixed bottom-0 left-0 right-0 bg-white text-black p-4 shadow-lg border-t border-black flex flex-col sm:flex-row justify-between items-center gap-4 z-50"
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             exit={{ y: 100 }}
@@ -90,7 +90,7 @@ const ToysCompareBar = () => {
               {compareItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-amber-700"
+                  className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-black"
                 >
                   <img
                     src={item.image}
@@ -100,7 +100,7 @@ const ToysCompareBar = () => {
                   <span className="text-sm">{item.name}</span>
                   <button
                     onClick={() => removeFromCompare(item.id)}
-                    className="text-amber-600 hover:text-red-400"
+                    className="text-black hover:text-black"
                     aria-label={`Remove ${item.name} from compare`}
                   >
                     <FaTimes />
@@ -110,7 +110,7 @@ const ToysCompareBar = () => {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-amber-700 text-gray-900 px-5 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center gap-2 w-full sm:w-auto"
+              className="bg-black text-gray-900 px-5 py-2 rounded-lg font-semibold hover:bg-black transition flex items-center gap-2 w-full sm:w-auto"
               aria-label="Open compare modal"
             >
               <FaBalanceScale /> Compare ({compareItems.length})
@@ -132,7 +132,7 @@ const ToysCompareBar = () => {
             aria-labelledby="compare-modal-title"
           >
             <motion.div
-              className="bg-white text-amber-600 rounded-xl p-4 md:p-6 w-full max-w-6xl overflow-x-auto"
+              className="bg-white text-black rounded-xl p-4 md:p-6 w-full max-w-6xl overflow-x-auto"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -146,7 +146,7 @@ const ToysCompareBar = () => {
                 </h2>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="text-amber-600 hover:text-amber-500 text-xl"
+                  className="text-black hover:text-black text-xl"
                   aria-label="Close compare modal"
                 >
                   <FaTimes />
@@ -158,11 +158,11 @@ const ToysCompareBar = () => {
                 <table className="w-full min-w-[600px] text-left border-collapse">
                   <thead>
                     <tr>
-                      <th className="p-2 border-b border-amber-700">Feature</th>
+                      <th className="p-2 border-b border-black">Feature</th>
                       {compareItems.map((item) => (
                         <th
                           key={item.id}
-                          className="p-2 border-b border-amber-700 text-center"
+                          className="p-2 border-b border-black text-center"
                         >
                           {item.name}
                         </th>

@@ -6,7 +6,7 @@ const OrderingSupport = ({ orderId }) => {
       aria-label="Order support"
       className="bg-white rounded-lg p-6 max-w-md mx-auto lg:mx-0 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-4">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-4">
         Need Help with Your Order?
       </h2>
 
@@ -18,7 +18,7 @@ const OrderingSupport = ({ orderId }) => {
       <div className="flex flex-col sm:flex-row gap-4">
         <a
           href="mailto:support@example.com"
-          className="px-6 py-3 bg-amber-600 text-black font-semibold rounded-full text-center shadow-md hover:bg-amber-500 hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+          className="px-6 py-3 bg-black text-black font-semibold rounded-full text-center shadow-md hover:bg-black hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           aria-label="Email customer support"
         >
           Email Support
@@ -26,7 +26,7 @@ const OrderingSupport = ({ orderId }) => {
 
         <a
           href="tel:+311234567890"
-          className="px-6 py-3 border border-amber-600 text-amber-600 font-semibold rounded-full text-center shadow-md hover:bg-amber-600 hover:text-black hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+          className="px-6 py-3 border border-black text-black font-semibold rounded-full text-center shadow-md hover:bg-black hover:text-black hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
           aria-label="Call customer support"
         >
           Call Support

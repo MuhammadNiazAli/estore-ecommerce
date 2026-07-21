@@ -28,7 +28,7 @@ const SizeGuideInteractive = () => {
   return (
     <section className="w-full bg-white text-gray-800 flex justify-center py-12 px-4 sm:px-6 md:py-16">
       <div className="max-w-[600px] w-full bg-white rounded-lg p-8 shadow-lg">
-        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-10 text-center select-none">
+        <h2 className="text-black text-3xl sm:text-4xl font-extrabold mb-10 text-center select-none">
           Find Your Size
         </h2>
 
@@ -38,7 +38,7 @@ const SizeGuideInteractive = () => {
           <div>
             <label
               htmlFor="chest"
-              className="block mb-3 font-semibold text-amber-600 text-lg select-none"
+              className="block mb-3 font-semibold text-black text-lg select-none"
             >
               Chest / Bust (inches):{' '}
               <span className="text-gray-700 font-normal">{chest}"</span>
@@ -51,8 +51,8 @@ const SizeGuideInteractive = () => {
               step="1"
               value={chest}
               onChange={(e) => setChest(Number(e.target.value))}
-              className="w-full h-3 bg-amber-800 rounded-lg appearance-none cursor-pointer
-                         hover:bg-amber-700 transition-colors"
+              className="w-full h-3 bg-black rounded-lg appearance-none cursor-pointer
+                         hover:bg-black transition-colors"
               aria-valuemin={28}
               aria-valuemax={54}
               aria-valuenow={chest}
@@ -64,7 +64,7 @@ const SizeGuideInteractive = () => {
           <div>
             <label
               htmlFor="waist"
-              className="block mb-3 font-semibold text-amber-600 text-lg select-none"
+              className="block mb-3 font-semibold text-black text-lg select-none"
             >
               Waist (inches):{' '}
               <span className="text-gray-700 font-normal">{waist}"</span>
@@ -77,8 +77,8 @@ const SizeGuideInteractive = () => {
               step="1"
               value={waist}
               onChange={(e) => setWaist(Number(e.target.value))}
-              className="w-full h-3 bg-amber-800 rounded-lg appearance-none cursor-pointer
-                         hover:bg-amber-700 transition-colors"
+              className="w-full h-3 bg-black rounded-lg appearance-none cursor-pointer
+                         hover:bg-black transition-colors"
               aria-valuemin={22}
               aria-valuemax={46}
               aria-valuenow={waist}
@@ -92,7 +92,7 @@ const SizeGuideInteractive = () => {
           <p className="text-gray-700 mb-2 text-base sm:text-lg">
             Based on your measurements, your recommended size is:
           </p>
-          <p className="text-amber-600 text-5xl sm:text-6xl font-extrabold select-none tracking-wide">
+          <p className="text-black text-5xl sm:text-6xl font-extrabold select-none tracking-wide">
             {recommendedSize}
           </p>
         </div>

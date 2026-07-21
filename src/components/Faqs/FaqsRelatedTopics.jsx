@@ -17,7 +17,7 @@ const FaqsRelatedTopics = ({ onTopicClick }) => {
       aria-label="Related FAQ Topics"
       className="max-w-[1000px] mx-auto mt-10 bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-6 text-center tracking-tight">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-6 text-center tracking-tight">
         Related Topics
       </h2>
 
@@ -27,7 +27,7 @@ const FaqsRelatedTopics = ({ onTopicClick }) => {
             key={idx}
             type="button"
             onClick={() => onTopicClick && onTopicClick(topic)}
-            className="bg-white text-amber-600 hover:bg-amber-600 hover:text-gray-900 focus:bg-amber-700 focus:text-gray-900 px-5 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 shadow-sm"
+            className="bg-white text-black hover:bg-black hover:text-gray-900 focus:bg-black focus:text-gray-900 px-5 py-2.5 rounded-full text-sm sm:text-base font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black shadow-sm"
             aria-label={`View questions about ${topic}`}
           >
             {topic}

@@ -39,7 +39,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           dragSnapToOrigin
           dragMomentum={false}
           style={{ x: springX, y: springY }}
-          className="inline-flex items-center justify-center text-amber-400 mb-10 sm:mb-12 cursor-grab active:cursor-grabbing"
+          className="inline-flex items-center justify-center text-black mb-10 sm:mb-12 cursor-grab active:cursor-grabbing"
         >
           <FiHeart className="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-lg" />
         </motion.div>
@@ -52,7 +52,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight"
         >
           Your{' '}
-          <span className="text-amber-400 underline underline-offset-4 decoration-amber-500 decoration-4">
+          <span className="text-black underline underline-offset-4 decoration-black decoration-4">
             Wishlist
           </span>{' '}
           Is Ready
@@ -76,7 +76,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
           className="mt-10 flex flex-wrap justify-center items-center gap-10 text-gray-700"
         >
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-amber-400">
+            <span className="text-4xl font-bold text-black">
               {wishlistCount}
             </span>
             <span className="text-sm tracking-widest uppercase">
@@ -84,7 +84,7 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
             </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold text-amber-700">
+            <span className="text-4xl font-bold text-black">
               {savedDeals}
             </span>
             <span className="text-sm tracking-widest uppercase">
@@ -102,13 +102,13 @@ const WishlistHero = ({ wishlistCount = 12, savedDeals = 5 }) => {
         >
           <button
             type="button"
-            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 font-semibold shadow-md hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-500 transition"
+            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold shadow-md hover:from-black hover:to-gray-900 focus:outline-none focus:ring-4 focus:ring-black transition"
           >
             View Wishlist
           </button>
           <button
             type="button"
-            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full border-2 border-amber-400 text-amber-400 font-semibold hover:bg-amber-50 hover:text-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-400 transition"
+            className="px-8 sm:px-10 py-3 sm:py-4 rounded-full border-2 border-black text-black font-semibold hover:bg-black hover:text-black focus:outline-none focus:ring-4 focus:ring-black transition"
           >
             Continue Shopping
           </button>

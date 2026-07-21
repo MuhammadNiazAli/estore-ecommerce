@@ -173,7 +173,7 @@ const renderStars = (rating) => {
 
   for (let i = 0; i < fullStars; i++) {
     stars.push(
-      <AiFillStar key={"star-full-" + i} className="text-amber-600 w-5 h-5" />
+      <AiFillStar key={"star-full-" + i} className="text-black w-5 h-5" />
     );
   }
 
@@ -181,7 +181,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="star-half"
-        className="text-amber-600 w-5 h-5"
+        className="text-black w-5 h-5"
         style={{ clipPath: "inset(0 50% 0 0)" }}
       />
     );
@@ -190,7 +190,7 @@ const renderStars = (rating) => {
   const emptyStars = 5 - stars.length;
   for (let i = 0; i < emptyStars; i++) {
     stars.push(
-      <AiOutlineStar key={"star-empty-" + i} className="text-amber-600 w-5 h-5" />
+      <AiOutlineStar key={"star-empty-" + i} className="text-black w-5 h-5" />
     );
   }
 
@@ -228,7 +228,7 @@ const ProductList = () => {
               </h3>
               <div className="flex items-center space-x-2 mt-1">
                 <div className="flex">{renderStars(rating)}</div>
-                <span className="text-amber-600 font-semibold">{rating.toFixed(1)}</span>
+                <span className="text-black font-semibold">{rating.toFixed(1)}</span>
               </div>
               <div className="mt-1 flex items-baseline space-x-2">
                 <span className="text-xl font-extrabold text-gray-900">
@@ -249,7 +249,7 @@ const ProductList = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={handleLoadMore}
-            className="px-6 py-2 bg-amber-600 text-gray-900 rounded-lg hover:bg-amber-700 transition-colors"
+            className="px-6 py-2 bg-black text-gray-900 rounded-lg hover:bg-black transition-colors"
           >
             Load More
           </button>

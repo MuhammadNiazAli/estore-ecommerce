@@ -28,7 +28,7 @@ const FitnessNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4">
+    <section className="bg-white text-black py-12 px-4">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Join Our Fitness Newsletter</h2>
         <p className="mb-8 text-gray-700">
@@ -45,8 +45,8 @@ const FitnessNewsletterSignup = () => {
             type="email"
             aria-label="Email address"
             placeholder="Enter your email"
-            className={`w-full sm:flex-1 px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700 transition ${
-              error ? "ring-2 ring-red-500" : ""
+            className={`w-full sm:flex-1 px-4 py-3 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition ${
+              error ? "ring-2 ring-black" : ""
             }`}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -55,21 +55,21 @@ const FitnessNewsletterSignup = () => {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-md shadow-lg hover:bg-amber-600 transition disabled:opacity-60 disabled:cursor-not-allowed"
+            className="px-6 py-3 bg-black text-gray-900 font-semibold rounded-md shadow-lg hover:bg-black transition disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === "loading" ? "Submitting..." : "Subscribe"}
           </button>
         </form>
 
         {error && (
-          <p className="mt-3 text-red-500 font-medium" role="alert">
+          <p className="mt-3 text-black font-medium" role="alert">
             {error}
           </p>
         )}
 
         {status === "success" && (
           <p
-            className="mt-3 text-green-400 font-semibold animate-fadeIn"
+            className="mt-3 text-black font-semibold animate-fadeIn"
             role="alert"
           >
             Thank you for subscribing!

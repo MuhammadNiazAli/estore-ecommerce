@@ -25,7 +25,7 @@ const NewarrivalsHero = () => {
           "
       >
         {/* Title */}
-        <h1 className="text-amber-700 text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
+        <h1 className="text-black text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">
           Discover Our Latest Arrivals
         </h1>
 
@@ -39,8 +39,8 @@ const NewarrivalsHero = () => {
           href="#new-arrivals"
           className="
             inline-block
-            bg-amber-600
-            hover:bg-amber-700
+            bg-black
+            hover:bg-black
             text-gray-900
             font-semibold
             px-8 py-4
@@ -48,7 +48,7 @@ const NewarrivalsHero = () => {
             shadow-md
             transition
             duration-300
-            focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50
+            focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50
           "
         >
           Shop Now

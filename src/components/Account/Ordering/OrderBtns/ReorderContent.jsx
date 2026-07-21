@@ -40,7 +40,7 @@ function ReorderContent({ closePanel }) {
   return (
     <div className="px-4 py-6 max-w-xl mx-auto text-[14px] sm:text-[15px]">
       {/* Title */}
-      <h2 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
+      <h2 className="text-black text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
         Reorder Your Items
       </h2>
 
@@ -54,7 +54,7 @@ function ReorderContent({ closePanel }) {
         aria-label="Items available for reorder"
         className="bg-white p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
       >
-        <h3 className="text-amber-600 font-semibold text-lg sm:text-xl mb-4">
+        <h3 className="text-black font-semibold text-lg sm:text-xl mb-4">
           Items in this reorder
         </h3>
 
@@ -73,7 +73,7 @@ function ReorderContent({ closePanel }) {
                   Quantity: {quantity}
                 </span>
               </div>
-              <span className="ml-auto text-amber-600 font-semibold text-sm sm:text-base">
+              <span className="ml-auto text-black font-semibold text-sm sm:text-base">
                 ${(unitPrice * quantity).toFixed(2)}
               </span>
             </li>
@@ -83,7 +83,7 @@ function ReorderContent({ closePanel }) {
 
       {/* Delivery Estimate */}
       <section className="bg-white p-4 sm:p-5 rounded-lg mb-8 shadow-md">
-        <h4 className="text-amber-600 font-semibold text-base sm:text-lg mb-2">
+        <h4 className="text-black font-semibold text-base sm:text-lg mb-2">
           Estimated Delivery
         </h4>
         <p className="text-gray-700 text-sm sm:text-base">
@@ -101,14 +101,14 @@ function ReorderContent({ closePanel }) {
           Want to edit your order? Visit{' '}
           <a
             href="/account/orders"
-            className="text-amber-600 underline hover:text-amber-500"
+            className="text-black underline hover:text-black"
           >
             Order History
           </a>{' '}
           or reach out to{' '}
           <a
             href="/contact"
-            className="text-amber-600 underline hover:text-amber-500"
+            className="text-black underline hover:text-black"
           >
             Customer Support
           </a>
@@ -120,7 +120,7 @@ function ReorderContent({ closePanel }) {
       <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
         <button
           onClick={handleReorder}
-          className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition shadow-md w-full sm:w-auto"
+          className="bg-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Place reorder now"
         >
@@ -129,7 +129,7 @@ function ReorderContent({ closePanel }) {
 
         <button
           onClick={closePanel}
-          className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition shadow-md w-full sm:w-auto"
+          className="border border-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black hover:text-black transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Cancel reorder"
         >

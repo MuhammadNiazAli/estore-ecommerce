@@ -357,7 +357,7 @@ const WatchesReviewsPreview = () => {
                 <img
                   src={review.avatar}
                   alt={review.username}
-                  className="w-12 h-12 rounded-full border-2 border-amber-600"
+                  className="w-12 h-12 rounded-full border-2 border-black"
                 />
                 <div>
                   <p className="font-semibold">{review.username}</p>
@@ -371,7 +371,7 @@ const WatchesReviewsPreview = () => {
                   <StarIcon
                     key={i}
                     className={`w-5 h-5 ${
-                      i < review.rating ? "text-amber-600" : "text-gray-600"
+                      i < review.rating ? "text-black" : "text-gray-600"
                     }`}
                   />
                 ))}
@@ -399,7 +399,7 @@ const WatchesReviewsPreview = () => {
                 <button
                   onClick={() => toggleLike(review.id)}
                   className={`flex items-center gap-2 transition ${
-                    review.liked ? "text-amber-600" : "text-gray-600"
+                    review.liked ? "text-black" : "text-gray-600"
                   }`}
                 >
                   <HandThumbUpIcon className="w-5 h-5" />
@@ -407,7 +407,7 @@ const WatchesReviewsPreview = () => {
                 </button>
                 <button
                   onClick={() => toggleReplyBox(review.id)}
-                  className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition"
+                  className="flex items-center gap-2 text-gray-600 hover:text-black transition"
                 >
                   <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
                   Reply
@@ -428,7 +428,7 @@ const WatchesReviewsPreview = () => {
                   />
                   <button
                     onClick={() => handleAddReply(review.id)}
-                    className="mt-2 bg-amber-600 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-amber-500"
+                    className="mt-2 bg-black text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-black"
                   >
                     Post Reply
                   </button>
@@ -461,7 +461,7 @@ const WatchesReviewsPreview = () => {
           <div className="text-center mt-6">
             <button
               onClick={loadMore}
-              className="bg-amber-600 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-amber-500 transition"
+              className="bg-black text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-black transition"
             >
               Load More Reviews
             </button>

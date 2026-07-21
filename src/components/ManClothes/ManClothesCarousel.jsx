@@ -919,7 +919,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={"full" + i}
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -929,7 +929,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -1129,7 +1129,7 @@ const ManClothesCarousel = () => {
                   </div>
 
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <span className="text-lg sm:text-xl font-extrabold text-amber-800">
+                    <span className="text-lg sm:text-xl font-extrabold text-black">
                       ${Number(product.price).toFixed(2)}
                     </span>
                     {product.oldPrice !== undefined && (
@@ -1141,7 +1141,7 @@ const ManClothesCarousel = () => {
 
                   <button
                     aria-label={`Add ${product.title} to cart`}
-                    className="mt-3 w-full py-2 sm:py-3 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg shadow-md transition"
+                    className="mt-3 w-full py-2 sm:py-3 bg-black hover:bg-black text-gray-900 font-semibold rounded-lg shadow-md transition"
                   >
                     Add to Cart
                   </button>

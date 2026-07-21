@@ -19,7 +19,7 @@ const ShippingHero = () => {
           className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-md"
         >
           <span className="block">Fast & Reliable</span>
-          <span className="text-amber-400 underline decoration-amber-500 decoration-[10px] underline-offset-[10px] inline-block mt-2">
+          <span className="text-black underline decoration-black decoration-[10px] underline-offset-[10px] inline-block mt-2">
             Shipping
           </span>{' '}
           <span className="block">Services Worldwide</span>
@@ -43,10 +43,10 @@ const ShippingHero = () => {
         >
           <button
             type="button"
-            className="relative inline-flex items-center justify-center px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 font-bold text-lg shadow-lg hover:from-amber-500 hover:to-amber-700 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:scale-95"
+            className="relative inline-flex items-center justify-center px-10 sm:px-14 py-4 sm:py-5 rounded-full bg-gradient-to-r from-black to-gray-900 text-gray-900 font-bold text-lg shadow-lg hover:from-black hover:to-gray-900 transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-offset-2 active:scale-95"
           >
             Get Started
-            <span className="absolute -inset-0.5 rounded-full bg-amber-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            <span className="absolute -inset-0.5 rounded-full bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </button>
         </motion.div>
       </div>

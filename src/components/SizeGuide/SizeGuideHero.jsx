@@ -26,7 +26,7 @@ const SizeGuideHero = () => {
       <div className="w-full max-w-5xl">
         {/* Title */}
         <h1
-          className="text-center font-extrabold text-amber-600 select-none
+          className="text-center font-extrabold text-black select-none
             text-3xl sm:text-4xl md:text-5xl mb-6"
         >
           Size Guide
@@ -50,8 +50,8 @@ const SizeGuideHero = () => {
               className={`px-6 py-2 font-semibold rounded-md transition-colors duration-300
                 ${
                   activeTab === tab
-                    ? "bg-amber-600 text-gray-900 shadow-lg"
-                    : "bg-white text-gray-600 hover:text-amber-600 hover:bg-gray-500"
+                    ? "bg-black text-gray-900 shadow-lg"
+                    : "bg-white text-gray-600 hover:text-black hover:bg-gray-500"
                 }
               `}
               aria-pressed={activeTab === tab}
@@ -66,21 +66,21 @@ const SizeGuideHero = () => {
         {/* Size tables */}
         <div
           className="overflow-x-auto rounded-lg shadow-lg bg-white
-            scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-700"
+            scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700"
           tabIndex={0}
           aria-label={`${activeTab} size guide table`}
         >
           {activeTab === "men" ? (
             <table className="w-full min-w-[400px] text-left border-collapse">
-              <thead className="border-b border-amber-600">
+              <thead className="border-b border-black">
                 <tr>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Size
                   </th>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Chest (inches)
                   </th>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Waist (inches)
                   </th>
                 </tr>
@@ -89,7 +89,7 @@ const SizeGuideHero = () => {
                 {menSizes.map(({ size, chest, waist }) => (
                   <tr
                     key={size}
-                    className="border-b border-gray-200 hover:bg-amber-200/10 transition-colors"
+                    className="border-b border-gray-200 hover:bg-black/10 transition-colors"
                   >
                     <td className="p-4 font-semibold text-sm sm:text-base md:text-lg">
                       {size}
@@ -102,15 +102,15 @@ const SizeGuideHero = () => {
             </table>
           ) : (
             <table className="w-full min-w-[440px] text-left border-collapse">
-              <thead className="border-b border-amber-600">
+              <thead className="border-b border-black">
                 <tr>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Size
                   </th>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Bust (inches)
                   </th>
-                  <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+                  <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                     Waist (inches)
                   </th>
                 </tr>
@@ -119,7 +119,7 @@ const SizeGuideHero = () => {
                 {womenSizes.map(({ size, bust, waist }) => (
                   <tr
                     key={size}
-                    className="border-b border-gray-200 hover:bg-amber-200/10 transition-colors"
+                    className="border-b border-gray-200 hover:bg-black/10 transition-colors"
                   >
                     <td className="p-4 font-semibold text-sm sm:text-base md:text-lg">
                       {size}
@@ -135,7 +135,7 @@ const SizeGuideHero = () => {
 
         {/* Measuring Tips */}
         <div
-          className="mt-10 max-w-xl mx-auto text-amber-500 text-center
+          className="mt-10 max-w-xl mx-auto text-black text-center
             text-xs sm:text-sm md:text-base leading-relaxed select-text px-4 sm:px-0"
         >
           <p>

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const PrivacyCookies = () => {
   return (
     <section
-      className="bg-white text-amber-600 w-full flex justify-center px-4 sm:px-6 lg:px-8"
+      className="bg-white text-black w-full flex justify-center px-4 sm:px-6 lg:px-8"
       style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
       aria-label="Cookies Usage Section"
     >
@@ -24,7 +24,7 @@ const PrivacyCookies = () => {
 
         {/* Description */}
         <motion.p
-          className="text-amber-500 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2 sm:px-0"
+          className="text-black max-w-3xl mx-auto text-sm sm:text-base lg:text-lg px-2 sm:px-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -47,10 +47,10 @@ const PrivacyCookies = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Cookie className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Cookie className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Essential Cookies</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 Required for basic website functionality, such as secure login, account settings,
                 and form submissions.
               </p>
@@ -62,10 +62,10 @@ const PrivacyCookies = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Timer className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Timer className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Performance Cookies</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 Help us understand how users interact with the site so we can improve usability
                 and performance.
               </p>
@@ -77,10 +77,10 @@ const PrivacyCookies = () => {
             className="flex items-start gap-3 sm:gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Info className="w-6 h-6 mt-1 text-amber-600 shrink-0" />
+            <Info className="w-6 h-6 mt-1 text-black shrink-0" />
             <div>
               <p className="font-semibold text-sm sm:text-base">Preference Cookies</p>
-              <p className="text-amber-500 text-xs sm:text-sm leading-relaxed">
+              <p className="text-black text-xs sm:text-sm leading-relaxed">
                 Enable the website to remember your settings and preferences for a more personalized experience.
               </p>
             </div>
@@ -89,7 +89,7 @@ const PrivacyCookies = () => {
 
         {/* Consent Notice */}
         <motion.p
-          className="pt-8 text-xs sm:text-sm text-amber-600 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
+          className="pt-8 text-xs sm:text-sm text-black max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}

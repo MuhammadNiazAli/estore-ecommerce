@@ -24,7 +24,7 @@ const ShopMobileFilters = ({ onFilterChange }) => {
       <button
         onClick={toggleModal}
         aria-label="Open Filters"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-amber-400 text-gray-900 px-5 py-3 rounded-full shadow-xl hover:bg-amber-500 transition focus:outline-none focus:ring-4 focus:ring-amber-400"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-black text-gray-900 px-5 py-3 rounded-full shadow-xl hover:bg-black transition focus:outline-none focus:ring-4 focus:ring-black"
       >
         <FiFilter size={20} />
         Filters
@@ -52,7 +52,7 @@ const ShopMobileFilters = ({ onFilterChange }) => {
               <button
                 onClick={toggleModal}
                 aria-label="Close Filters"
-                className="absolute top-4 right-4 text-gray-600 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-full"
+                className="absolute top-4 right-4 text-gray-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded-full"
               >
                 <FiX size={24} />
               </button>
@@ -70,10 +70,10 @@ const ShopMobileFilters = ({ onFilterChange }) => {
                     className={`w-full py-3 rounded-full font-semibold text-base text-center transition duration-200
                       ${
                         active === category
-                          ? 'bg-amber-400 text-gray-900 shadow-md'
-                          : 'bg-white text-gray-700 hover:bg-amber-400 hover:text-gray-900'
+                          ? 'bg-black text-gray-900 shadow-md'
+                          : 'bg-white text-gray-700 hover:bg-black hover:text-gray-900'
                       }
-                      focus:outline-none focus:ring-4 focus:ring-amber-400`}
+                      focus:outline-none focus:ring-4 focus:ring-black`}
                   >
                     {category}
                   </motion.button>

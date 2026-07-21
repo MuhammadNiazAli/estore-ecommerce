@@ -45,8 +45,8 @@ const ShopBreadcrumb = () => {
                 href={item.href}
                 className={`font-medium transition-colors duration-200 ${
                   isLast
-                    ? 'text-amber-400 cursor-default pointer-events-none'
-                    : 'text-gray-700 hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded'
+                    ? 'text-black cursor-default pointer-events-none'
+                    : 'text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded'
                 } text-xs sm:text-sm`}
                 tabIndex={isLast ? -1 : 0}
                 aria-current={isLast ? 'page' : undefined}

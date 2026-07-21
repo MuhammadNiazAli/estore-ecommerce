@@ -28,7 +28,7 @@ const SportsNewsletterSignup = () => {
     <section className="bg-white py-14">
       <div className="max-w-4xl mx-auto px-4 text-center text-gray-900">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-3">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-3">
           Stay in the Game
         </h2>
         <p className="text-gray-700 mb-6 text-lg">
@@ -47,12 +47,12 @@ const SportsNewsletterSignup = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-white text-gray-900 rounded-full pl-12 pr-4 py-3 outline-none border border-gray-200 focus:border-amber-600 transition"
+              className="w-full bg-white text-gray-900 rounded-full pl-12 pr-4 py-3 outline-none border border-gray-200 focus:border-black transition"
             />
           </div>
           <button
             type="submit"
-            className="bg-amber-600 text-black font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition w-full sm:w-auto"
+            className="bg-black text-black font-semibold px-8 py-3 rounded-full hover:bg-black transition w-full sm:w-auto"
           >
             Subscribe
           </button>
@@ -65,7 +65,7 @@ const SportsNewsletterSignup = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 text-green-400 font-semibold"
+              className="mt-4 text-black font-semibold"
             >
               ✅ You’ve successfully subscribed!
             </motion.p>
@@ -75,7 +75,7 @@ const SportsNewsletterSignup = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mt-4 text-red-400 font-semibold"
+              className="mt-4 text-black font-semibold"
             >
               ❌ Please enter a valid email address.
             </motion.p>

@@ -905,7 +905,7 @@ const SportsAccessoriesSection = () => {
                 <HeartIcon
                   className={`h-6 w-6 ${
                     wishlist.find((i) => i.id === item.id)
-                      ? "text-red-500"
+                      ? "text-black"
                       : "text-gray-600"
                   }`}
                 />

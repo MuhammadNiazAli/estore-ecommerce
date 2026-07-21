@@ -98,7 +98,7 @@ const ReturnChangeFAQ = () => {
   return (
     <section className="w-full bg-white text-gray-900 px-4 py-16 flex justify-center mb-[-50px] my-[-50px]">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-3xl md:text-4xl font-bold text-amber-600 text-center mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-10">
           Frequently Asked Questions
         </h2>
 
@@ -113,16 +113,16 @@ const ReturnChangeFAQ = () => {
               >
                 <button
                   onClick={() => toggleIndex(index)}
-                  className="w-full flex justify-between items-center text-left text-amber-500 font-semibold text-lg px-5 py-5 hover:bg-gray-500 transition"
+                  className="w-full flex justify-between items-center text-left text-black font-semibold text-lg px-5 py-5 hover:bg-gray-500 transition"
                   aria-expanded={isActive}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
                 >
                   <span>{faq.question}</span>
                   {isActive ? (
-                    <ChevronUp className="text-amber-600" />
+                    <ChevronUp className="text-black" />
                   ) : (
-                    <ChevronDown className="text-amber-600" />
+                    <ChevronDown className="text-black" />
                   )}
                 </button>
 

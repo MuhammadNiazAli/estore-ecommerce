@@ -79,14 +79,14 @@ const SportsSpecsComparison = () => {
             className="min-w-[700px] w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
           >
             {/* Table Header */}
-            <thead className="bg-white text-amber-600 text-lg">
+            <thead className="bg-white text-black text-lg">
               <tr>
                 <th className="p-4 text-left">Specifications</th>
                 {products.map((product) => (
                   <th
                     key={product.id}
                     className={`p-4 text-center ${
-                      product.highlight ? "bg-amber-300 text-gray-900" : ""
+                      product.highlight ? "bg-black text-gray-900" : ""
                     }`}
                   >
                     <div className="flex flex-col items-center">
@@ -98,7 +98,7 @@ const SportsSpecsComparison = () => {
                       <p className="font-bold">{product.name}</p>
                       <p className="text-sm text-gray-600">${product.price}</p>
                       {product.highlight && (
-                        <span className="text-xs bg-amber-600 text-black px-2 py-1 rounded-full mt-1 font-semibold">
+                        <span className="text-xs bg-black text-black px-2 py-1 rounded-full mt-1 font-semibold">
                           Best Choice
                         </span>
                       )}
@@ -116,7 +116,7 @@ const SportsSpecsComparison = () => {
                 {products.map((p) => (
                   <td
                     key={p.id}
-                    className="text-center font-bold text-amber-800 p-4"
+                    className="text-center font-bold text-black p-4"
                   >
                     ${p.price}
                   </td>
@@ -169,9 +169,9 @@ const SportsSpecsComparison = () => {
                 {products.map((p) => (
                   <td key={p.id} className="text-center p-4">
                     {p.available ? (
-                      <FaCheckCircle className="text-green-500 mx-auto" />
+                      <FaCheckCircle className="text-black mx-auto" />
                     ) : (
-                      <FaTimesCircle className="text-red-500 mx-auto" />
+                      <FaTimesCircle className="text-black mx-auto" />
                     )}
                   </td>
                 ))}

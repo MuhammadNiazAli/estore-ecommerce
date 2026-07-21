@@ -39,14 +39,14 @@ function FAQItem({ question, answer, isOpen, onToggle, id }) {
   }, [isOpen]);
 
   return (
-    <div className="border border-amber-600/30 rounded-lg overflow-hidden">
+    <div className="border border-black/30 rounded-lg overflow-hidden">
       <button
         type="button"
         aria-expanded={isOpen}
         aria-controls={`faq-content-${id}`}
         id={`faq-header-${id}`}
         onClick={onToggle}
-        className="w-full flex justify-between items-center bg-white px-5 py-4 text-left text-amber-600 font-semibold text-lg hover:bg-amber-600 hover:text-gray-900 transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 rounded-lg"
+        className="w-full flex justify-between items-center bg-white px-5 py-4 text-left text-black font-semibold text-lg hover:bg-black hover:text-gray-900 transition-colors duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-black rounded-lg"
       >
         {question}
         {isOpen ? (
@@ -84,7 +84,7 @@ export default function GiftFAQ() {
 
   return (
     <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-12 bg-white rounded-lg shadow-2xl text-gray-900">
-      <h2 className="text-amber-600 text-3xl font-extrabold mb-8 text-center drop-shadow-lg">
+      <h2 className="text-black text-3xl font-extrabold mb-8 text-center drop-shadow-lg">
         Frequently Asked Questions
       </h2>
 

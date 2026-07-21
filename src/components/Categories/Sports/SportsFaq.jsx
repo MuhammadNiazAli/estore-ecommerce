@@ -45,7 +45,7 @@ const SportsFaq = () => {
   };
 
   return (
-    <section className="bg-white py-14 text-amber-600 my-[-30px]">
+    <section className="bg-white py-14 text-black my-[-30px]">
       <div className="max-w-4xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -68,7 +68,7 @@ const SportsFaq = () => {
                 <h3 className="text-gray-900 text-lg font-semibold">
                   {faq.question}
                 </h3>
-                <span className="text-amber-600">
+                <span className="text-black">
                   {openIndex === index ? <FaMinus /> : <FaPlus />}
                 </span>
               </div>

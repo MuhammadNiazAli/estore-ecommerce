@@ -31,7 +31,7 @@ const imagePrices = {
 };
 
 const colors = [
-  { id: "red", colorCode: "#B91C1C" },
+  { id: "red", colorCode: "#111827" },
   { id: "blue", colorCode: "#1E40AF" },
   { id: "green", colorCode: "#047857" },
 ];
@@ -123,7 +123,7 @@ const ProductHome = () => {
               key={i}
               onClick={() => setMainImageIndex(i)}
               className={`w-20 h-20 border-2 rounded-lg overflow-hidden cursor-pointer ${
-                mainImageIndex === i ? "border-amber-700" : "border-gray-200 hover:border-amber-800"
+                mainImageIndex === i ? "border-black" : "border-gray-200 hover:border-black"
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -137,16 +137,16 @@ const ProductHome = () => {
       <div className="flex flex-col justify-between">
         <div>
           <h1 className="text-3xl font-bold mb-2">Premium Winter Jacket</h1>
-          <div className="flex items-center gap-2 text-amber-600 mb-4">
+          <div className="flex items-center gap-2 text-black mb-4">
             <AiFillStar />
             <span className="font-semibold">4.6</span>
             <span className="text-sm text-gray-600">(241 reviews)</span>
           </div>
 
           <div className="mb-4">
-            <span className="text-2xl font-bold text-amber-600">${totalPrice}</span>
+            <span className="text-2xl font-bold text-black">${totalPrice}</span>
             <span className="text-sm line-through text-gray-500 ml-3">${originalPrice}</span>
-            <span className="ml-2 text-green-400 text-sm">{discountPercent}% OFF</span>
+            <span className="ml-2 text-black text-sm">{discountPercent}% OFF</span>
           </div>
 
           <p className="text-gray-700 mb-6">
@@ -169,7 +169,7 @@ const ProductHome = () => {
                   key={id}
                   style={{ backgroundColor: colorCode }}
                   className={`w-8 h-8 rounded-full border-2 ${
-                    selectedColor === id ? "border-amber-600 scale-110" : "border-gray-500 hover:scale-105"
+                    selectedColor === id ? "border-black scale-110" : "border-gray-500 hover:scale-105"
                   } transition-transform`}
                   onClick={() => {
                     setSelectedColor(id);
@@ -189,7 +189,7 @@ const ProductHome = () => {
                   key={size}
                   className={`px-4 py-1 border-2 rounded-md font-medium ${
                     selectedSize === size
-                      ? "bg-amber-700 text-black border-amber-600"
+                      ? "bg-black text-black border-black"
                       : "border-gray-200 text-gray-900 hover:bg-gray-500"
                   }`}
                   onClick={() => setSelectedSize(size)}
@@ -222,7 +222,7 @@ const ProductHome = () => {
         {/* Add to Cart + Wishlist */}
         <div className="space-y-4">
           <Link href="/cart">
-            <button className="w-full bg-amber-600 text-black font-bold py-3 rounded-md hover:bg-amber-500 transition cursor-pointer">
+            <button className="w-full bg-black text-black font-bold py-3 rounded-md hover:bg-black transition cursor-pointer">
               Add to Cart
             </button>
           </Link>
@@ -241,7 +241,7 @@ const ProductHome = () => {
             </Link>
 
             <Link href="/shipping">
-              <div className="flex items-center gap-1 text-green-500 hover:underline cursor-pointer">
+              <div className="flex items-center gap-1 text-black hover:underline cursor-pointer">
                 <MdLocalShipping className="text-lg" />
                 <span>Free Delivery</span>
               </div>

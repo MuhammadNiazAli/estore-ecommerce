@@ -144,7 +144,7 @@ const PressReleaseExplorer = () => {
   };
 
   return (
-    <section className="w-full bg-white flex flex-col items-center p-6 sm:p-8 md:p-12 text-amber-600 font-sans -mt-[50px] -mb-[180px]">
+    <section className="w-full bg-white flex flex-col items-center p-6 sm:p-8 md:p-12 text-black font-sans -mt-[50px] -mb-[180px]">
       <h1 className="text-3xl sm:text-4xl font-extrabold mb-6 drop-shadow-lg text-center max-w-3xl">
         Press & Media Center
       </h1>
@@ -154,8 +154,8 @@ const PressReleaseExplorer = () => {
         disabled={loading}
         className={`mb-8 px-6 py-3 rounded-md font-semibold tracking-wide transition text-center w-full max-w-xs sm:max-w-sm md:max-w-md ${
           loading
-            ? "bg-amber-700 cursor-not-allowed opacity-70"
-            : "bg-amber-700 hover:bg-amber-800 cursor-pointer text-amber-50"
+            ? "bg-black cursor-not-allowed opacity-70"
+            : "bg-black hover:bg-black cursor-pointer text-black"
         }`}
         aria-label="Explore press releases"
       >
@@ -192,7 +192,7 @@ const PressReleaseExplorer = () => {
       {error && (
         <div
           role="alert"
-          className="mb-4 px-4 py-3 bg-red-600 text-red-100 rounded max-w-3xl text-center"
+          className="mb-4 px-4 py-3 bg-black text-black rounded max-w-3xl text-center"
         >
           {error}
         </div>
@@ -208,12 +208,12 @@ const PressReleaseExplorer = () => {
             onKeyDown={(e) => e.key === "Enter" && setSelectedRelease(release)}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
-            className="bg-white p-5 rounded-lg shadow-lg cursor-pointer transition-shadow outline-none focus:ring-2 focus:ring-amber-600 transform-gpu"
+            className="bg-white p-5 rounded-lg shadow-lg cursor-pointer transition-shadow outline-none focus:ring-2 focus:ring-black transform-gpu"
             aria-label={`View details for press release titled: ${release.title}`}
           >
             <h2 className="text-xl font-semibold mb-2">{release.title}</h2>
-            <time className="block text-sm text-amber-500 mb-3">{release.date}</time>
-            <p className="text-amber-400">{release.summary}</p>
+            <time className="block text-sm text-black mb-3">{release.date}</time>
+            <p className="text-black">{release.summary}</p>
           </article>
         ))}
       </div>
@@ -222,7 +222,7 @@ const PressReleaseExplorer = () => {
         <div className="w-full flex justify-center mt-8">
           <button
             onClick={showMore}
-            className="px-6 py-3 bg-amber-700 rounded-md font-semibold hover:bg-amber-800 text-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="px-6 py-3 bg-black rounded-md font-semibold hover:bg-black text-black focus:outline-none focus:ring-2 focus:ring-black"
             aria-label="Show more press releases"
           >
             Show 3 More
@@ -239,13 +239,13 @@ const PressReleaseExplorer = () => {
           onClick={closeDetails}
         >
           <div
-            className="bg-white w-full max-w-2xl sm:max-w-3xl rounded-lg p-6 sm:p-8 relative text-amber-500 shadow-lg"
+            className="bg-white w-full max-w-2xl sm:max-w-3xl rounded-lg p-6 sm:p-8 relative text-black shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeDetails}
               aria-label="Close details"
-              className="absolute top-4 right-4 text-amber-600 hover:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+              className="absolute top-4 right-4 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
             >
               <svg
                 className="w-6 h-6"
@@ -263,13 +263,13 @@ const PressReleaseExplorer = () => {
             <h3 id="modal-title" className="text-2xl font-bold mb-4">
               {selectedRelease.title}
             </h3>
-            <time className="block text-sm text-amber-700 mb-4">
+            <time className="block text-sm text-black mb-4">
               {selectedRelease.date}
             </time>
             <p className="mb-6 leading-relaxed">{selectedRelease.content}</p>
             <button
               onClick={closeDetails}
-              className="mt-auto px-5 py-3 bg-amber-600 text-gray-900 font-semibold rounded hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="mt-auto px-5 py-3 bg-black text-gray-900 font-semibold rounded hover:bg-black focus:outline-none focus:ring-2 focus:ring-black"
             >
               Close
             </button>
@@ -277,7 +277,7 @@ const PressReleaseExplorer = () => {
         </div>
       )}
 
-      <footer className="mt-16 text-amber-800 text-sm text-center max-w-3xl px-4">
+      <footer className="mt-16 text-black text-sm text-center max-w-3xl px-4">
         &copy; {new Date().getFullYear()} Your Company - All rights reserved.
       </footer>
     </section>

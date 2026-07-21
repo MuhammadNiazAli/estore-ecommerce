@@ -39,7 +39,7 @@ const CartItems = () => {
     return (
       <section className="w-full bg-white text-gray-900 flex justify-center items-center px-4 sm:px-6 py-20">
         <div className="text-center">
-          <p className="text-amber-600 text-2xl font-semibold mb-3">Your cart is empty</p>
+          <p className="text-black text-2xl font-semibold mb-3">Your cart is empty</p>
           <p className="text-gray-600 text-sm">
             Looks like you haven’t added anything yet. Start shopping now!
           </p>

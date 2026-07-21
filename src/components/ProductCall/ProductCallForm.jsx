@@ -56,7 +56,7 @@ const ProductCallForm = () => {
         noValidate
         aria-label="Contact form"
       >
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 text-center">
           Get in Touch
         </h2>
 
@@ -64,7 +64,7 @@ const ProductCallForm = () => {
           <div>
             <label
               htmlFor="name"
-              className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
+              className="block text-black font-semibold mb-1 text-sm sm:text-base"
             >
               Name
             </label>
@@ -74,8 +74,8 @@ const ProductCallForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-                errors.name ? 'ring-2 ring-red-500' : ''
+              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition ${
+                errors.name ? 'ring-2 ring-black' : ''
               }`}
               placeholder="Your full name"
               aria-invalid={errors.name ? 'true' : 'false'}
@@ -84,7 +84,7 @@ const ProductCallForm = () => {
             {errors.name && (
               <p
                 id="name-error"
-                className="text-red-500 text-xs sm:text-sm mt-1"
+                className="text-black text-xs sm:text-sm mt-1"
                 role="alert"
               >
                 {errors.name}
@@ -95,7 +95,7 @@ const ProductCallForm = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
+              className="block text-black font-semibold mb-1 text-sm sm:text-base"
             >
               Email
             </label>
@@ -105,8 +105,8 @@ const ProductCallForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-                errors.email ? 'ring-2 ring-red-500' : ''
+              className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition ${
+                errors.email ? 'ring-2 ring-black' : ''
               }`}
               placeholder="you@example.com"
               aria-invalid={errors.email ? 'true' : 'false'}
@@ -115,7 +115,7 @@ const ProductCallForm = () => {
             {errors.email && (
               <p
                 id="email-error"
-                className="text-red-500 text-xs sm:text-sm mt-1"
+                className="text-black text-xs sm:text-sm mt-1"
                 role="alert"
               >
                 {errors.email}
@@ -127,7 +127,7 @@ const ProductCallForm = () => {
         <div className="mb-6">
           <label
             htmlFor="phone"
-            className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
+            className="block text-black font-semibold mb-1 text-sm sm:text-base"
           >
             Phone
           </label>
@@ -137,8 +137,8 @@ const ProductCallForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-              errors.phone ? 'ring-2 ring-red-500' : ''
+            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition ${
+              errors.phone ? 'ring-2 ring-black' : ''
             }`}
             placeholder="+1 234 567 8900"
             aria-invalid={errors.phone ? 'true' : 'false'}
@@ -147,7 +147,7 @@ const ProductCallForm = () => {
           {errors.phone && (
             <p
               id="phone-error"
-              className="text-red-500 text-xs sm:text-sm mt-1"
+              className="text-black text-xs sm:text-sm mt-1"
               role="alert"
             >
               {errors.phone}
@@ -158,7 +158,7 @@ const ProductCallForm = () => {
         <div className="mb-6">
           <label
             htmlFor="message"
-            className="block text-amber-600 font-semibold mb-1 text-sm sm:text-base"
+            className="block text-black font-semibold mb-1 text-sm sm:text-base"
           >
             Message
           </label>
@@ -168,8 +168,8 @@ const ProductCallForm = () => {
             rows="5"
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition resize-none ${
-              errors.message ? 'ring-2 ring-red-500' : ''
+            className={`w-full px-4 py-2 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition resize-none ${
+              errors.message ? 'ring-2 ring-black' : ''
             }`}
             placeholder="Write your message here..."
             aria-invalid={errors.message ? 'true' : 'false'}
@@ -178,7 +178,7 @@ const ProductCallForm = () => {
           {errors.message && (
             <p
               id="message-error"
-              className="text-red-500 text-xs sm:text-sm mt-1"
+              className="text-black text-xs sm:text-sm mt-1"
               role="alert"
             >
               {errors.message}
@@ -188,7 +188,7 @@ const ProductCallForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-amber-700 text-black font-semibold py-3 rounded-xl hover:bg-amber-600 transition-colors duration-200 shadow-md"
+          className="w-full bg-black text-black font-semibold py-3 rounded-xl hover:bg-black transition-colors duration-200 shadow-md"
         >
           Send Message
         </button>

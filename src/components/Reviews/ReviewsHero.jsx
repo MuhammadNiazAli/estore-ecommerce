@@ -94,14 +94,14 @@ const ReviewsHero = () => {
                 <Star
                   width={36}
                   height={36}
-                  stroke="#b45309"
-                  fill={isClicked ? '#b45309' : 'transparent'}
+                  stroke="#111827"
+                  fill={isClicked ? '#111827' : 'transparent'}
                   style={{
                     opacity: isClicked ? 1 : 0.7,
                     transition: 'all 0.3s ease-in-out',
                   }}
                   onMouseEnter={(e) => {
-                    if (introComplete && !isClicked) e.currentTarget.style.fill = '#b45309';
+                    if (introComplete && !isClicked) e.currentTarget.style.fill = '#111827';
                   }}
                   onMouseLeave={(e) => {
                     if (introComplete && !isClicked) e.currentTarget.style.fill = 'transparent';
@@ -122,7 +122,7 @@ const ReviewsHero = () => {
           className="text-4xl sm:text-6xl font-semibold leading-tight tracking-tight drop-shadow-[0_4px_30px_rgba(255,255,255,0.1)]"
         >
           <span>Stories That Matter,</span>{' '}
-          <span className="text-amber-400 underline decoration-amber-500 decoration-8 underline-offset-6">
+          <span className="text-black underline decoration-black decoration-8 underline-offset-6">
             Reviews That Speak
           </span>
         </motion.h2>
@@ -145,7 +145,7 @@ const ReviewsHero = () => {
         >
           <button
             type="button"
-            className="px-10 py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 font-semibold shadow-[0_8px_30px_rgba(255,193,7,0.3)] hover:from-amber-500 hover:to-amber-700 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-amber-400 focus:ring-offset-2 active:scale-95"
+            className="px-10 py-4 rounded-full bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold shadow-[0_8px_30px_rgba(255,193,7,0.3)] hover:from-black hover:to-gray-900 transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 active:scale-95"
           >
             Explore Reviews
           </button>

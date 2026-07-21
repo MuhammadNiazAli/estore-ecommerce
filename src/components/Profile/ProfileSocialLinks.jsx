@@ -20,25 +20,25 @@ const initialAccounts = [
     id: 1,
     platform: 'Facebook',
     username: 'niaz.ali',
-    icon: <FaFacebookF className="w-6 h-6 text-amber-800" />,
+    icon: <FaFacebookF className="w-6 h-6 text-black" />,
   },
   {
     id: 2,
     platform: 'Twitter',
     username: '@niazali',
-    icon: <FaTwitter className="w-6 h-6 text-amber-600" />,
+    icon: <FaTwitter className="w-6 h-6 text-black" />,
   },
   {
     id: 3,
     platform: 'Instagram',
     username: '@niaz_insta',
-    icon: <FaInstagram className="w-6 h-6 text-pink-500" />,
+    icon: <FaInstagram className="w-6 h-6 text-black" />,
   },
   {
     id: 4,
     platform: 'LinkedIn',
     username: 'niaz-ali',
-    icon: <FaLinkedinIn className="w-6 h-6 text-amber-900" />,
+    icon: <FaLinkedinIn className="w-6 h-6 text-black" />,
   },
 ];
 
@@ -73,14 +73,14 @@ const ProfileSocialLinks = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-1">
               Social Links
             </h2>
             <p className="text-sm sm:text-base text-gray-700 max-w-md">
               Manage and customize your connected social media accounts.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base">
             <PencilSquareIcon className="w-6 h-6 animate-pulse" />
             <span>Manage Connections</span>
           </div>
@@ -111,7 +111,7 @@ const ProfileSocialLinks = () => {
                     {editingId === id ? (
                       <input
                         type="text"
-                        className="mt-1 bg-white text-gray-900 border border-amber-700 px-2 py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600 text-sm w-full sm:w-[200px]"
+                        className="mt-1 bg-white text-gray-900 border border-black px-2 py-1 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm w-full sm:w-[200px]"
                         value={editedUsername}
                         onChange={(e) => setEditedUsername(e.target.value)}
                       />
@@ -129,7 +129,7 @@ const ProfileSocialLinks = () => {
                     <>
                       <button
                         onClick={() => handleSave(id)}
-                        className="p-2 bg-green-600 text-gray-900 rounded-full hover:bg-green-700 transition"
+                        className="p-2 bg-black text-gray-900 rounded-full hover:bg-black transition"
                         aria-label="Save"
                       >
                         <CheckIcon className="w-5 h-5" />
@@ -146,14 +146,14 @@ const ProfileSocialLinks = () => {
                     <>
                       <button
                         onClick={() => handleEdit(id, username)}
-                        className="p-2 rounded-full hover:bg-amber-600 hover:text-gray-900 transition"
+                        className="p-2 rounded-full hover:bg-black hover:text-gray-900 transition"
                         aria-label={`Edit ${platform}`}
                       >
                         <PencilSquareIcon className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => setDeletingId(id)}
-                        className="p-2 rounded-full hover:bg-red-600 hover:text-gray-900 transition"
+                        className="p-2 rounded-full hover:bg-black hover:text-gray-900 transition"
                         aria-label={`Delete ${platform}`}
                       >
                         <TrashIcon className="w-5 h-5" />
@@ -181,7 +181,7 @@ const ProfileSocialLinks = () => {
                 exit={{ scale: 0.8 }}
                 className="bg-white rounded-xl p-6 w-[90%] max-w-md text-gray-900 shadow-2xl"
               >
-                <h3 className="text-xl font-bold mb-4 text-red-500">
+                <h3 className="text-xl font-bold mb-4 text-black">
                   Confirm Deletion
                 </h3>
                 <p className="text-gray-700 mb-6">
@@ -196,7 +196,7 @@ const ProfileSocialLinks = () => {
                   </button>
                   <button
                     onClick={handleDelete}
-                    className="px-4 py-2 rounded-md bg-red-600 hover:bg-red-700 text-gray-900 transition"
+                    className="px-4 py-2 rounded-md bg-black hover:bg-black text-gray-900 transition"
                   >
                     Delete
                   </button>

@@ -15,13 +15,13 @@ const SaleBanner = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/30 flex items-center justify-center text-center px-6">
           <div className="text-gray-900 max-w-lg">
             {/* Small Label */}
-            <p className="text-amber-600 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
+            <p className="text-black text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
               Limited Time Offer
             </p>
 
             {/* Main Heading */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-              Flash Sale <span className="text-amber-600">Up to 70% OFF</span>
+              Flash Sale <span className="text-black">Up to 70% OFF</span>
             </h2>
 
             {/* Subtext */}
@@ -32,7 +32,7 @@ const SaleBanner = () => {
             {/* CTA Button */}
             <a
               href="#sale-products"
-              className="mt-6 inline-block px-8 py-3 bg-amber-600 text-gray-900 font-semibold rounded-full shadow-md hover:bg-amber-500 hover:scale-105 transition-transform duration-300"
+              className="mt-6 inline-block px-8 py-3 bg-black text-gray-900 font-semibold rounded-full shadow-md hover:bg-black hover:scale-105 transition-transform duration-300"
             >
               Shop Now
             </a>

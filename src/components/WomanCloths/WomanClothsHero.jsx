@@ -69,14 +69,14 @@ const WomanClothsHero = () => {
       <div className="max-w-[1200px] w-full grid md:grid-cols-2 gap-8 px-4">
         {/* Left Content */}
         <div className="flex flex-col justify-center space-y-6 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-bold text-amber-700">
+          <h1 className="text-3xl md:text-5xl font-bold text-black">
             Elevate Your Style
           </h1>
           <p className="text-gray-700 leading-relaxed text-sm md:text-base">
             Discover our premium women’s collection featuring timeless designs
             and modern trends. Shop now to redefine your wardrobe with elegance.
           </p>
-          <button className="bg-amber-700 text-gray-900 px-6 py-3 font-semibold rounded-xl hover:bg-amber-600 transition">
+          <button className="bg-black text-gray-900 px-6 py-3 font-semibold rounded-xl hover:bg-black transition">
             Shop Now
           </button>
         </div>
@@ -123,7 +123,7 @@ const WomanClothsHero = () => {
 
             {/* Left Content */}
             <div className="flex-1 p-4 md:p-6 flex flex-col justify-center text-left">
-              <h2 className="text-2xl md:text-3xl font-bold text-amber-600 mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
                 Elegant Women’s Wear
               </h2>
               <p className="text-gray-700 mb-6 text-sm md:text-base">
@@ -132,10 +132,10 @@ const WomanClothsHero = () => {
                 and style.
               </p>
               <div className="flex gap-3 flex-wrap">
-                <button className="bg-amber-700 text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-amber-600 transition">
+                <button className="bg-black text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-black transition">
                   Add to Cart
                 </button>
-                <button className="border border-amber-700 text-amber-700 px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-amber-700 hover:text-gray-900 transition">
+                <button className="border border-black text-black px-4 py-2 md:px-6 md:py-3 rounded-xl hover:bg-black hover:text-gray-900 transition">
                   View Details
                 </button>
               </div>

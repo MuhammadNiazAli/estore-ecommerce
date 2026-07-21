@@ -796,7 +796,7 @@ export default function AccessoriesFilters() {
 
   const sidebarContent = (
     <div className="p-4 sm:p-6 space-y-5 text-gray-900 text-sm sm:text-base">
-      <h2 className="text-xl sm:text-2xl font-bold text-amber-600">Filters</h2>
+      <h2 className="text-xl sm:text-2xl font-bold text-black">Filters</h2>
 
       <input
         type="text"
@@ -826,7 +826,7 @@ export default function AccessoriesFilters() {
 
       {/* Price Filter */}
       <div>
-        <h3 className="font-semibold mb-1">Price: <span className="text-amber-600">${filters.price}</span></h3>
+        <h3 className="font-semibold mb-1">Price: <span className="text-black">${filters.price}</span></h3>
         <input
           type="range"
           min="50"
@@ -839,7 +839,7 @@ export default function AccessoriesFilters() {
 
       {/* Discount */}
       <div>
-        <h3 className="font-semibold mb-1">Discount: <span className="text-amber-600">{filters.discount}%</span></h3>
+        <h3 className="font-semibold mb-1">Discount: <span className="text-black">{filters.discount}%</span></h3>
         <input
           type="range"
           min="0"
@@ -852,7 +852,7 @@ export default function AccessoriesFilters() {
 
       {/* Rating */}
       <div>
-        <h3 className="font-semibold mb-1">Rating: <span className="text-amber-600">{filters.rating}★</span></h3>
+        <h3 className="font-semibold mb-1">Rating: <span className="text-black">{filters.rating}★</span></h3>
         <input
           type="range"
           min="0"
@@ -889,7 +889,7 @@ export default function AccessoriesFilters() {
       {/* Reset */}
       <button
         onClick={resetFilters}
-        className="w-full bg-amber-600 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-amber-700 transition"
+        className="w-full bg-black text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-black transition"
       >
         Reset Filters
       </button>
@@ -905,7 +905,7 @@ export default function AccessoriesFilters() {
           <div className="absolute left-2 top-1/2 -translate-y-1/2 lg:hidden">
             <button
               onClick={() => setMobileOpen(true)}
-              className="bg-amber-600 text-gray-900 w-10 h-10 flex items-center justify-center rounded-full shadow-md ml-[-35px]"
+              className="bg-black text-gray-900 w-10 h-10 flex items-center justify-center rounded-full shadow-md ml-[-35px]"
             >
               ➤
             </button>
@@ -923,7 +923,7 @@ export default function AccessoriesFilters() {
               className="fixed top-0 left-0 w-3/4 h-full bg-white z-50 shadow-xl lg:hidden overflow-y-auto custom-scrollbar"
             >
               <div className="flex justify-between items-center p-4 border-b border-gray-200">
-                <h2 className="text-xl font-bold text-amber-600">Filters</h2>
+                <h2 className="text-xl font-bold text-black">Filters</h2>
                 <button onClick={() => setMobileOpen(false)} className="text-gray-900 text-3xl">&times;</button>
               </div>
               {sidebarContent}
@@ -946,14 +946,14 @@ export default function AccessoriesFilters() {
             >
               <img src={product.image} alt={product.name} className="w-full h-40 sm:h-48 object-cover rounded-t-xl" />
               <div className="p-3 sm:p-4 text-sm sm:text-base">
-                <h4 className="text-lg font-semibold text-amber-600">{product.name}</h4>
+                <h4 className="text-lg font-semibold text-black">{product.name}</h4>
                 <p className="text-gray-900 mt-1">${product.price}</p>
                 <p className="text-gray-600">{product.brand} | {product.rating}★</p>
                 <div className="flex gap-2 mt-3">
-                  <button className="bg-amber-600 text-gray-900 px-3 py-2 rounded-lg font-semibold hover:bg-amber-700 text-sm">
+                  <button className="bg-black text-gray-900 px-3 py-2 rounded-lg font-semibold hover:bg-black text-sm">
                     Add to Cart
                   </button>
-                  <button className="border border-amber-600 text-amber-600 px-3 py-2 rounded-lg font-semibold hover:bg-amber-700 hover:text-gray-900 text-sm">
+                  <button className="border border-black text-black px-3 py-2 rounded-lg font-semibold hover:bg-black hover:text-gray-900 text-sm">
                     View
                   </button>
                 </div>
@@ -964,7 +964,7 @@ export default function AccessoriesFilters() {
           {visibleCount < filteredProducts.length && (
             <button
               onClick={() => setVisibleCount((prev) => prev + 5)}
-              className="col-span-full bg-amber-600 text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-amber-700 transition"
+              className="col-span-full bg-black text-gray-900 font-bold py-2 sm:py-3 rounded-lg hover:bg-black transition"
             >
               Show More
             </button>
@@ -976,7 +976,7 @@ export default function AccessoriesFilters() {
       <style jsx>{`
         .custom-scrollbar {
           scrollbar-width: thin;
-          scrollbar-color: #b45309 #ffffff;
+          scrollbar-color: #111827 #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar {
           width: 8px;
@@ -985,7 +985,7 @@ export default function AccessoriesFilters() {
           background: #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #b45309;
+          background-color: #111827;
           border-radius: 4px;
         }
       `}</style>

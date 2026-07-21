@@ -3194,7 +3194,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key={"full-" + i}
-        className="text-amber-600 w-5 h-5"
+        className="text-black w-5 h-5"
         aria-hidden="true"
       />
     );
@@ -3203,7 +3203,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiFillStar
         key="half"
-        className="text-amber-600 w-5 h-5"
+        className="text-black w-5 h-5"
         style={{ clipPath: "inset(0 50% 0 0)" }}
         aria-hidden="true"
       />
@@ -3214,7 +3214,7 @@ const renderStars = (rating) => {
     stars.push(
       <AiOutlineStar
         key={"empty-" + i}
-        className="text-amber-600 w-5 h-5"
+        className="text-black w-5 h-5"
         aria-hidden="true"
       />
     );
@@ -3344,10 +3344,10 @@ const ProductReviewsAdvanced = () => {
                     aria-label={
                       review.likedByUser ? "Unlike review" : "Like review"
                     }
-                    className="flex items-center gap-1 hover:text-amber-600 transition"
+                    className="flex items-center gap-1 hover:text-black transition"
                   >
                     {review.likedByUser ? (
-                      <AiFillLike className="w-5 h-5 text-amber-600" />
+                      <AiFillLike className="w-5 h-5 text-black" />
                     ) : (
                       <AiOutlineLike className="w-5 h-5" />
                     )}
@@ -3360,7 +3360,7 @@ const ProductReviewsAdvanced = () => {
                     }
                     aria-expanded={replyingTo === review.id}
                     aria-controls={`reply-form-${review.id}`}
-                    className="hover:text-amber-700 transition font-medium"
+                    className="hover:text-black transition font-medium"
                   >
                     Reply
                   </button>
@@ -3368,7 +3368,7 @@ const ProductReviewsAdvanced = () => {
                   <button
                     onClick={() => shareReview(review)}
                     aria-label="Share review"
-                    className="hover:text-amber-700 transition flex items-center gap-1"
+                    className="hover:text-black transition flex items-center gap-1"
                   >
                     Share
                     <FaFacebookF />
@@ -3395,7 +3395,7 @@ const ProductReviewsAdvanced = () => {
                         onChange={(e) => setReplyText(e.target.value)}
                         placeholder="Write your reply..."
                         rows={3}
-                        className="w-full rounded-md border border-gray-200 p-2 text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-amber-700"
+                        className="w-full rounded-md border border-gray-200 p-2 text-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-black"
                         required
                       />
                       <div className="mt-2 flex justify-end gap-2">
@@ -3411,7 +3411,7 @@ const ProductReviewsAdvanced = () => {
                         </button>
                         <button
                           type="submit"
-                          className="px-4 py-2 rounded-md bg-amber-800 text-gray-900 hover:bg-amber-900 transition"
+                          className="px-4 py-2 rounded-md bg-black text-gray-900 hover:bg-black transition"
                         >
                           Submit
                         </button>
@@ -3461,10 +3461,10 @@ const ProductReviewsAdvanced = () => {
                               aria-label={
                                 reply.likedByUser ? "Unlike reply" : "Like reply"
                               }
-                              className="flex items-center gap-1 hover:text-amber-600 transition"
+                              className="flex items-center gap-1 hover:text-black transition"
                             >
                               {reply.likedByUser ? (
-                                <AiFillLike className="w-4 h-4 text-amber-600" />
+                                <AiFillLike className="w-4 h-4 text-black" />
                               ) : (
                                 <AiOutlineLike className="w-4 h-4" />
                               )}
@@ -3473,7 +3473,7 @@ const ProductReviewsAdvanced = () => {
                             <button
                               onClick={() => alert("Share functionality coming soon!")}
                               aria-label="Share reply"
-                              className="hover:text-amber-700 transition flex items-center gap-1 text-sm"
+                              className="hover:text-black transition flex items-center gap-1 text-sm"
                             >
                               Share <FaFacebookF className="w-3 h-3" />
                             </button>
@@ -3493,7 +3493,7 @@ const ProductReviewsAdvanced = () => {
         <div className="mt-8 flex justify-center">
           <button
             onClick={showMore}
-            className="px-6 py-2 bg-amber-800 hover:bg-amber-900 text-gray-900 rounded-md transition"
+            className="px-6 py-2 bg-black hover:bg-black text-gray-900 rounded-md transition"
           >
             Show More Reviews
           </button>

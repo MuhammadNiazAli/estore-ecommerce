@@ -30,7 +30,7 @@ const SizeGuideModelInfo = () => {
         {models.map((model, i) => (
           <div
             key={i}
-            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-amber-600 transition-shadow duration-300"
+            className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-black transition-shadow duration-300"
           >
             <img
               src={model.image}
@@ -38,7 +38,7 @@ const SizeGuideModelInfo = () => {
               className="w-48 h-64 sm:w-56 sm:h-72 object-cover rounded-md mb-6"
               loading="lazy"
             />
-            <h3 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-4 select-none">
+            <h3 className="text-black text-2xl sm:text-3xl font-extrabold mb-4 select-none">
               {model.name}
             </h3>
             <ul className="text-gray-700 space-y-2 text-sm sm:text-base max-w-xs">
@@ -57,7 +57,7 @@ const SizeGuideModelInfo = () => {
               </li>
               <li>
                 <strong>Size Worn:</strong>{' '}
-                <span className="text-amber-600 font-semibold">{model.sizeWorn}</span>
+                <span className="text-black font-semibold">{model.sizeWorn}</span>
               </li>
             </ul>
           </div>

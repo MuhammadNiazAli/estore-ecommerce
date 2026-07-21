@@ -15,9 +15,9 @@ const StockProgressBar = ({
 
  
   const getBarGradient = () => {
-    if (percentSold >= 90) return 'bg-gradient-to-r from-red-600 to-red-400';
-    if (percentSold >= 60) return 'bg-gradient-to-r from-amber-700 to-amber-500';
-    return 'bg-gradient-to-r from-green-500 to-green-300';
+    if (percentSold >= 90) return 'bg-gradient-to-r from-black to-gray-900';
+    if (percentSold >= 60) return 'bg-gradient-to-r from-black to-gray-900';
+    return 'bg-gradient-to-r from-black to-gray-900';
   };
 
   return (

@@ -390,7 +390,7 @@ const StarRating = ({ rating }) => {
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
           viewBox="0 0 20 20"
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           aria-hidden="true"
         >
           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1
@@ -410,7 +410,7 @@ const StarRating = ({ rating }) => {
           xmlns="http://www.w3.org/2000/svg"
           fill="url(#half-gradient)"
           viewBox="0 0 20 20"
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           aria-hidden="true"
         >
           <defs>
@@ -439,7 +439,7 @@ const StarRating = ({ rating }) => {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           aria-hidden="true"
         >
           <path
@@ -467,7 +467,7 @@ const IconButton = ({ title, onClick, children }) => (
   <button
     onClick={onClick}
     aria-label={title}
-    className="bg-amber-600/90 hover:bg-amber-700/90 text-gray-900 p-2 rounded-full shadow-md transition-colors"
+    className="bg-black/90 hover:bg-black/90 text-gray-900 p-2 rounded-full shadow-md transition-colors"
     type="button"
   >
     {children}
@@ -491,7 +491,7 @@ const BestsellersProductGrid = () => {
 
   return (
     <section className="max-w-7xl mx-auto p-6 sm:p-10 bg-white rounded-2xl">
-      <h2 className="text-amber-600 text-3xl font-extrabold mb-10 select-none text-center tracking-wide my-15">
+      <h2 className="text-black text-3xl font-extrabold mb-10 select-none text-center tracking-wide my-15">
         Bestselling Products
       </h2>
 
@@ -500,7 +500,7 @@ const BestsellersProductGrid = () => {
           <article
             key={id}
             tabIndex={0}
-            className="relative bg-gradient-to-b from-amber-950/10 to-transparent rounded-2xl shadow-xl overflow-hidden cursor-pointer
+            className="relative bg-gradient-to-b from-black/10 to-transparent rounded-2xl shadow-xl overflow-hidden cursor-pointer
               transform transition duration-400 hover:scale-[1.05] focus:scale-[1.05] focus:outline-none group"
           >
             {/* Image Container */}
@@ -513,7 +513,7 @@ const BestsellersProductGrid = () => {
               />
               {/* Badge */}
               {badge && (
-                <span className="absolute top-4 left-4 bg-amber-600 text-gray-900 px-3 py-1 rounded-full text-xs font-semibold tracking-wide shadow-lg select-none z-10">
+                <span className="absolute top-4 left-4 bg-black text-gray-900 px-3 py-1 rounded-full text-xs font-semibold tracking-wide shadow-lg select-none z-10">
                   {badge}
                 </span>
               )}
@@ -589,7 +589,7 @@ const BestsellersProductGrid = () => {
                 </div>
 
                 {/* Bottom Quick Info */}
-                <div className="mt-auto text-amber-200">
+                <div className="mt-auto text-black">
                   <h3
                     title={title}
                     className="font-semibold text-lg mb-1 truncate"
@@ -600,7 +600,7 @@ const BestsellersProductGrid = () => {
                     <div>
                       <span className="font-extrabold text-2xl">${price}</span>{' '}
                       {oldPrice && (
-                        <span className="line-through text-amber-800 ml-3">${oldPrice}</span>
+                        <span className="line-through text-black ml-3">${oldPrice}</span>
                       )}
                     </div>
 
@@ -614,16 +614,16 @@ const BestsellersProductGrid = () => {
             <div className="p-6 flex flex-col justify-between h-[210px]">
               <h3
                 title={title}
-                className="text-amber-300 font-semibold text-lg mb-2 truncate hover:text-amber-500 transition-colors duration-300"
+                className="text-black font-semibold text-lg mb-2 truncate hover:text-black transition-colors duration-300"
               >
                 {title}
               </h3>
 
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-amber-600 font-extrabold text-2xl">${price}</span>{' '}
+                  <span className="text-black font-extrabold text-2xl">${price}</span>{' '}
                   {oldPrice && (
-                    <span className="line-through text-amber-800 ml-3">${oldPrice}</span>
+                    <span className="line-through text-black ml-3">${oldPrice}</span>
                   )}
                 </div>
 
@@ -632,7 +632,7 @@ const BestsellersProductGrid = () => {
 
               <button
                 aria-label={`Add ${title} to cart`}
-                className="mt-6 bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold rounded-full px-6 py-3 shadow-lg transition-colors select-none"
+                className="mt-6 bg-black hover:bg-black text-gray-900 font-semibold rounded-full px-6 py-3 shadow-lg transition-colors select-none"
                 type="button"
                 onClick={() => alert(`Added ${title} to cart`)}
               >
@@ -649,7 +649,7 @@ const BestsellersProductGrid = () => {
           <button
             onClick={handleShowMore}
             disabled={loading}
-            className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold rounded-full px-8 py-3 shadow-lg transition-colors flex items-center space-x-3 select-none disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-black hover:bg-black text-gray-900 font-semibold rounded-full px-8 py-3 shadow-lg transition-colors flex items-center space-x-3 select-none disabled:opacity-50 disabled:cursor-not-allowed"
             type="button"
           >
             {loading && (

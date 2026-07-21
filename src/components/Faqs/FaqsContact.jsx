@@ -44,11 +44,11 @@ const FaqsContact = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 rounded-md shadow-lg mt-6 mb-[-100px] relative overflow-hidden">
+    <section className="bg-white text-black max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 rounded-md shadow-lg mt-6 mb-[-100px] relative overflow-hidden">
       {/* Background for Desktop */}
       <div className="hidden md:block absolute inset-0 bg-white opacity-90"></div>
 
-      <h2 className="text-3xl font-bold text-amber-500 text-center mb-10 relative z-10">
+      <h2 className="text-3xl font-bold text-black text-center mb-10 relative z-10">
         Contact Support
       </h2>
 
@@ -58,11 +58,11 @@ const FaqsContact = () => {
           {submitted ? (
             <div
               role="alert"
-              className="bg-amber-900 text-gray-900 p-4 rounded-md text-center mb-6"
+              className="bg-black text-gray-900 p-4 rounded-md text-center mb-6"
             >
               Thank you for contacting us! We will get back to you shortly.
               <button
-                className="mt-3 px-5 py-2 bg-amber-700 hover:bg-amber-800 rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600"
+                className="mt-3 px-5 py-2 bg-black hover:bg-black rounded-md text-gray-900 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-black"
                 onClick={() => setSubmitted(false)}
               >
                 Send Another Message
@@ -73,8 +73,8 @@ const FaqsContact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block mb-1 font-semibold text-amber-500">
-                    Name <span className="text-red-500">*</span>
+                  <label htmlFor="name" className="block mb-1 font-semibold text-black">
+                    Name <span className="text-black">*</span>
                   </label>
                   <input
                     id="name"
@@ -83,13 +83,13 @@ const FaqsContact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-md bg-white border ${
-                      errors.name ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
-                    } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
+                      errors.name ? 'border-black' : 'border-black focus:border-black'
+                    } text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition`}
                     placeholder="Your full name"
                     aria-invalid={errors.name ? 'true' : 'false'}
                   />
                   {errors.name && (
-                    <p className="mt-1 text-red-500 text-sm" role="alert">
+                    <p className="mt-1 text-black text-sm" role="alert">
                       {errors.name}
                     </p>
                   )}
@@ -97,8 +97,8 @@ const FaqsContact = () => {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block mb-1 font-semibold text-amber-500">
-                    Email <span className="text-red-500">*</span>
+                  <label htmlFor="email" className="block mb-1 font-semibold text-black">
+                    Email <span className="text-black">*</span>
                   </label>
                   <input
                     id="email"
@@ -107,13 +107,13 @@ const FaqsContact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-md bg-white border ${
-                      errors.email ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
-                    } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
+                      errors.email ? 'border-black' : 'border-black focus:border-black'
+                    } text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition`}
                     placeholder="you@example.com"
                     aria-invalid={errors.email ? 'true' : 'false'}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-red-500 text-sm" role="alert">
+                    <p className="mt-1 text-black text-sm" role="alert">
                       {errors.email}
                     </p>
                   )}
@@ -122,8 +122,8 @@ const FaqsContact = () => {
 
               {/* Subject */}
               <div className="mt-6">
-                <label htmlFor="subject" className="block mb-1 font-semibold text-amber-500">
-                  Subject <span className="text-red-500">*</span>
+                <label htmlFor="subject" className="block mb-1 font-semibold text-black">
+                  Subject <span className="text-black">*</span>
                 </label>
                 <input
                   id="subject"
@@ -132,13 +132,13 @@ const FaqsContact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-md bg-white border ${
-                    errors.subject ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
-                  } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition`}
+                    errors.subject ? 'border-black' : 'border-black focus:border-black'
+                  } text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition`}
                   placeholder="Subject of your message"
                   aria-invalid={errors.subject ? 'true' : 'false'}
                 />
                 {errors.subject && (
-                  <p className="mt-1 text-red-500 text-sm" role="alert">
+                  <p className="mt-1 text-black text-sm" role="alert">
                     {errors.subject}
                   </p>
                 )}
@@ -146,8 +146,8 @@ const FaqsContact = () => {
 
               {/* Message */}
               <div className="mt-6">
-                <label htmlFor="message" className="block mb-1 font-semibold text-amber-500">
-                  Message <span className="text-red-500">*</span>
+                <label htmlFor="message" className="block mb-1 font-semibold text-black">
+                  Message <span className="text-black">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -156,13 +156,13 @@ const FaqsContact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-md bg-white border ${
-                    errors.message ? 'border-red-500' : 'border-amber-800 focus:border-amber-600'
-                  } text-amber-300 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600 transition resize-none`}
+                    errors.message ? 'border-black' : 'border-black focus:border-black'
+                  } text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition resize-none`}
                   placeholder="Write your message here..."
                   aria-invalid={errors.message ? 'true' : 'false'}
                 />
                 {errors.message && (
-                  <p className="mt-1 text-red-500 text-sm" role="alert">
+                  <p className="mt-1 text-black text-sm" role="alert">
                     {errors.message}
                   </p>
                 )}
@@ -178,13 +178,13 @@ const FaqsContact = () => {
                     !formData.subject.trim() ||
                     !formData.message.trim()
                   }
-                  className={`px-8 py-3 rounded-md font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 ${
+                  className={`px-8 py-3 rounded-md font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-black ${
                     !formData.name.trim() ||
                     !formData.email.trim() ||
                     !formData.subject.trim() ||
                     !formData.message.trim()
-                      ? 'bg-amber-900 cursor-not-allowed text-amber-600'
-                      : 'bg-amber-700 hover:bg-amber-800 text-gray-900'
+                      ? 'bg-black cursor-not-allowed text-black'
+                      : 'bg-black hover:bg-black text-gray-900'
                   }`}
                 >
                   Send Message
@@ -201,15 +201,15 @@ const FaqsContact = () => {
             alt="Support illustration"
             className="rounded-xl shadow-lg object-cover w-full h-64"
           />
-          <div className="text-amber-400 text-lg space-y-4">
+          <div className="text-black text-lg space-y-4">
             <p className="flex items-center gap-3">
-              <FiMail className="text-amber-600 text-2xl" /> support@example.com
+              <FiMail className="text-black text-2xl" /> support@example.com
             </p>
             <p className="flex items-center gap-3">
-              <FiPhone className="text-amber-600 text-2xl" /> +1 (555) 123-4567
+              <FiPhone className="text-black text-2xl" /> +1 (555) 123-4567
             </p>
             <p className="flex items-center gap-3">
-              <FiMapPin className="text-amber-600 text-2xl" /> 123 Support Ave, Help City
+              <FiMapPin className="text-black text-2xl" /> 123 Support Ave, Help City
             </p>
           </div>
         </div>

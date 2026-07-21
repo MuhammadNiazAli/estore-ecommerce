@@ -131,7 +131,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
         Track Your Shipment
       </h2>
 
-      <ol className="relative border-l-4 border-amber-400 ml-6 space-y-14">
+      <ol className="relative border-l-4 border-black ml-6 space-y-14">
         {trackingSteps.map(({ status, date, description, icon }, i) => {
           const isCompleted = i < currentStep;
           const isActive = i === currentStep;
@@ -144,10 +144,10 @@ const ShippingTracker = ({ currentStep = 3 }) => {
                 className={`absolute -left-9 top-2 w-9 h-9 rounded-full flex items-center justify-center ring-4 transition
                   ${
                     isCompleted
-                      ? 'bg-amber-400 ring-amber-400'
+                      ? 'bg-black ring-black'
                       : isActive
-                      ? 'bg-amber-400 ring-amber-500 animate-pulse'
-                      : 'bg-transparent ring-2 ring-gray-200 group-hover:ring-amber-400'
+                      ? 'bg-black ring-black animate-pulse'
+                      : 'bg-transparent ring-2 ring-gray-200 group-hover:ring-black'
                   }
                 `}
                 aria-current={isActive ? 'step' : undefined}
@@ -159,7 +159,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
                   icon
                 ) : (
                   // For upcoming steps: empty circle, no icon
-                  <span className="w-3 h-3 rounded-full bg-white group-hover:bg-amber-400 transition-colors" />
+                  <span className="w-3 h-3 rounded-full bg-white group-hover:bg-black transition-colors" />
                 )}
               </span>
 
@@ -167,7 +167,7 @@ const ShippingTracker = ({ currentStep = 3 }) => {
               <div className="pl-8 sm:pl-12">
                 <time
                   className={`text-sm font-semibold ${
-                    isActive ? 'text-amber-300' : 'text-amber-400'
+                    isActive ? 'text-black' : 'text-black'
                   }`}
                 >
                   {date}

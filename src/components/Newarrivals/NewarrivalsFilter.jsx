@@ -145,15 +145,15 @@ const NewarrivalsFilter = () => {
                 select-none
                 ${
                   isActive
-                    ? 'bg-amber-600 bg-opacity-30 text-gray-900 backdrop-blur-md shadow-lg border border-amber-600/60'
-                    : 'bg-white text-amber-700 hover:bg-amber-800 hover:text-amber-400'
+                    ? 'bg-black bg-opacity-30 text-gray-900 backdrop-blur-md shadow-lg border border-black/60'
+                    : 'bg-white text-black hover:bg-black hover:text-black'
                 }
                 ${
                   isActive
                     ? 'scale-100 shadow-[0_0_15px_2px_rgba(252,211,77,0.6)]'
                     : 'scale-100'
                 }
-                focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-opacity-70
+                focus:outline-none focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-opacity-70
               `}
               aria-pressed={isActive}
               aria-current={isActive ? 'true' : undefined}
@@ -182,8 +182,8 @@ const NewarrivalsFilter = () => {
                 transition-all duration-300
                 ${
                   isActive
-                    ? 'bg-amber-600 shadow-[0_0_8px_2px_rgba(252,211,77,0.7)] scale-125'
-                    : 'bg-amber-900 hover:bg-amber-700 scale-100'
+                    ? 'bg-black shadow-[0_0_8px_2px_rgba(252,211,77,0.7)] scale-125'
+                    : 'bg-black hover:bg-black scale-100'
                 }
               `}
               type="button"

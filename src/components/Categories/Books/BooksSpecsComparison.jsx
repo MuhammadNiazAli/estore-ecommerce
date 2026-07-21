@@ -51,14 +51,14 @@ const BooksSpecsComparison = () => {
   const [products] = useState(booksProducts);
 
   return (
-    <section className="bg-white text-amber-600 py-12 my-[-50px]">
+    <section className="bg-white text-black py-12 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">
           Compare Book Specifications
         </h2>
 
         {/* ✅ Desktop View: Table */}
-        <div className="hidden lg:block border border-amber-700 rounded-lg shadow-lg overflow-hidden">
+        <div className="hidden lg:block border border-black rounded-lg shadow-lg overflow-hidden">
           <div className="min-w-full">
             {/* Header Row */}
             <div className="grid grid-cols-[200px_repeat(3,minmax(150px,1fr))] bg-white">
@@ -66,7 +66,7 @@ const BooksSpecsComparison = () => {
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="p-3 text-center border-l border-amber-700"
+                  className="p-3 text-center border-l border-black"
                 >
                   <img
                     src={product.image}
@@ -92,10 +92,10 @@ const BooksSpecsComparison = () => {
                 {products.map((product) => (
                   <div
                     key={product.id + spec.key}
-                    className="p-3 text-center border-l border-amber-700 text-sm"
+                    className="p-3 text-center border-l border-black text-sm"
                   >
                     {product[spec.key] === "Yes" ? (
-                      <FaCheckCircle className="text-amber-700 mx-auto" />
+                      <FaCheckCircle className="text-black mx-auto" />
                     ) : (
                       product[spec.key]
                     )}
@@ -114,7 +114,7 @@ const BooksSpecsComparison = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-white rounded-lg shadow-lg border border-amber-700 overflow-hidden"
+              className="bg-white rounded-lg shadow-lg border border-black overflow-hidden"
             >
               <img
                 src={product.image}
@@ -132,7 +132,7 @@ const BooksSpecsComparison = () => {
                       <span className="text-gray-600">{spec.label}</span>
                       <span>
                         {product[spec.key] === "Yes" ? (
-                          <FaCheckCircle className="text-amber-700" />
+                          <FaCheckCircle className="text-black" />
                         ) : (
                           product[spec.key]
                         )}

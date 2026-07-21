@@ -169,9 +169,9 @@ const LiveSalesFeed = () => {
   return (
     <section
       aria-label="Live Sales Feed"
-      className="w-full max-w-[1100px] mx-auto bg-gradient-to-br from-white text-amber-600 rounded-lg p-5 sm:p-8 shadow-2xl px-4"
+      className="w-full max-w-[1100px] mx-auto bg-gradient-to-br from-white text-black rounded-lg p-5 sm:p-8 shadow-2xl px-4"
     >
-      <h3 className="text-xl sm:text-2xl font-extrabold mb-5 text-center border-b border-amber-600 pb-3 tracking-wide select-none">
+      <h3 className="text-xl sm:text-2xl font-extrabold mb-5 text-center border-b border-black pb-3 tracking-wide select-none">
         Live Sales Feed
       </h3>
 
@@ -191,12 +191,12 @@ const LiveSalesFeed = () => {
               custom={removalDirections[sale.uniqueKey] || 1}
               variants={saleVariants}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className={`bg-amber-200/10 backdrop-blur-md border border-amber-600/30 text-amber-400 rounded-md p-3 mb-3 shadow-lg
+              className={`bg-black/10 backdrop-blur-md border border-black/30 text-black rounded-md p-3 mb-3 shadow-lg
               flex flex-col sm:flex-row justify-between items-start sm:items-center cursor-grab
               select-none
               ${
                 newKeys.has(sale.uniqueKey)
-                  ? 'ring-2 ring-amber-600 shadow-amber-600/60 animate-pulse'
+                  ? 'ring-2 ring-black shadow-black/60 animate-pulse'
                   : ''
               }`}
               whileTap={{ cursor: 'grabbing', scale: 0.98 }}
@@ -209,11 +209,11 @@ const LiveSalesFeed = () => {
               tabIndex={0}
             >
               <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base font-semibold">
-                <span className="text-amber-500">{sale.user}</span> purchased{' '}
-                <span className="text-amber-600">{sale.product}</span>
+                <span className="text-black">{sale.user}</span> purchased{' '}
+                <span className="text-black">{sale.product}</span>
               </div>
               <time
-                className="text-xs sm:text-sm text-amber-500 italic mt-2 sm:mt-0 sm:ml-4 whitespace-nowrap"
+                className="text-xs sm:text-sm text-black italic mt-2 sm:mt-0 sm:ml-4 whitespace-nowrap"
                 dateTime={new Date(sale.addedAt).toISOString()}
                 aria-label={`Sale time: ${sale.time}`}
               >
@@ -222,7 +222,7 @@ const LiveSalesFeed = () => {
               <button
                 onClick={() => handleCloseClick(sale.uniqueKey)}
                 aria-label={`Remove sale by ${sale.user}`}
-                className="ml-auto mt-3 sm:mt-0 sm:ml-4 text-amber-500 hover:text-amber-300 transition"
+                className="ml-auto mt-3 sm:mt-0 sm:ml-4 text-black hover:text-black transition"
                 type="button"
                 tabIndex={0}
               >
@@ -237,12 +237,12 @@ const LiveSalesFeed = () => {
         <div className="relative mt-4 flex justify-center">
           <button
             onClick={handleShowMore}
-            className="inline-flex items-center gap-2 bg-amber-600 text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-shadow shadow-lg select-none"
+            className="inline-flex items-center gap-2 bg-black text-gray-900 font-semibold py-3 px-6 rounded-full hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-shadow shadow-lg select-none"
             aria-live="polite"
             aria-label={`Show more sales, ${hiddenBehindBadgeCount} hidden`}
           >
             Show More
-            <span className="relative inline-flex items-center justify-center w-6 h-6 ml-2 bg-red-600 text-gray-900 text-xs font-bold rounded-full animate-pulse shadow-md">
+            <span className="relative inline-flex items-center justify-center w-6 h-6 ml-2 bg-black text-gray-900 text-xs font-bold rounded-full animate-pulse shadow-md">
               {hiddenBehindBadgeCount}
             </span>
           </button>

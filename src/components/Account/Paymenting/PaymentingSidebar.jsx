@@ -83,7 +83,7 @@ const PaymentingSidebar = () => {
     <div className="space-y-10">
       {sidebarSections.map((section, sectionIdx) => (
         <div key={sectionIdx}>
-          <h3 className="text-sm font-semibold uppercase tracking-widest text-amber-600 mb-4">
+          <h3 className="text-sm font-semibold uppercase tracking-widest text-black mb-4">
             {section.title}
           </h3>
           <ul className="space-y-4">
@@ -91,9 +91,9 @@ const PaymentingSidebar = () => {
               <li key={itemIdx}>
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-700 hover:text-amber-500 transition-all group"
+                  className="flex items-center space-x-3 text-gray-700 hover:text-black transition-all group"
                 >
-                  <span className="text-amber-600">{item.icon}</span>
+                  <span className="text-black">{item.icon}</span>
                   <span className="group-hover:underline">{item.label}</span>
                 </Link>
               </li>
@@ -134,7 +134,7 @@ const PaymentingSidebar = () => {
           <div className="flex justify-end">
             <button
               onClick={() => setMobileOpen(false)}
-              className="text-amber-600 hover:text-amber-500"
+              className="text-black hover:text-black"
               aria-label="Close payments sidebar"
               title="Close payments sidebar"
             >

@@ -20,38 +20,38 @@ const SittingAccountSummary = () => {
 
       <ul className="space-y-5">
         <li className="flex items-center gap-4">
-          <FiUser className="text-amber-600 text-2xl" />
+          <FiUser className="text-black text-2xl" />
           <div>
             <p className="text-sm font-semibold">Username</p>
-            <p className="text-amber-500">{accountInfo.username}</p>
+            <p className="text-black">{accountInfo.username}</p>
           </div>
         </li>
 
         <li className="flex items-center gap-4">
-          <FiMail className="text-amber-600 text-2xl" />
+          <FiMail className="text-black text-2xl" />
           <div>
             <p className="text-sm font-semibold">Email Address</p>
-            <p className="text-amber-500">{accountInfo.email}</p>
+            <p className="text-black">{accountInfo.email}</p>
           </div>
         </li>
 
         <li className="flex items-center gap-4">
-          <FiCalendar className="text-amber-600 text-2xl" />
+          <FiCalendar className="text-black text-2xl" />
           <div>
             <p className="text-sm font-semibold">Member Since</p>
-            <p className="text-amber-500">{accountInfo.joinedDate}</p>
+            <p className="text-black">{accountInfo.joinedDate}</p>
           </div>
         </li>
 
         <li className="flex items-center gap-4">
-          <FiLock className="text-amber-600 text-2xl" />
+          <FiLock className="text-black text-2xl" />
           <div>
             <p className="text-sm font-semibold">Account Status</p>
             <p
               className={`${
                 accountInfo.accountStatus === 'Active'
-                  ? 'text-amber-700'
-                  : 'text-red-400'
+                  ? 'text-black'
+                  : 'text-black'
               } font-semibold`}
             >
               {accountInfo.accountStatus}

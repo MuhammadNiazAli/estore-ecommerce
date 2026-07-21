@@ -24,7 +24,7 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onShare}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-700 hover:bg-gray-500 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-amber-700 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-gray-500 text-gray-700 hover:bg-gray-500 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Share your wishlist"
             title="Share your wishlist"
           >
@@ -40,7 +40,7 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onMoveAll}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-amber-800 text-gray-900 font-semibold hover:bg-amber-900 active:bg-amber-900 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-black text-gray-900 font-semibold hover:bg-black active:bg-black transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Move all wishlist items to cart"
             title="Move all wishlist items to cart"
           >
@@ -56,12 +56,12 @@ const WishlistActions = ({ onShare, onMoveAll, onClear, isProcessing = false }) 
           <button
             onClick={onClear}
             disabled={isProcessing}
-            className="flex items-center gap-2 px-6 py-3 rounded-full border border-red-600 text-red-600 hover:bg-red-50 dark:hover:bg-red-900 transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-red-400 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-full border border-black text-black hover:bg-black dark:hover:bg-black transition-all duration-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
             aria-label="Clear all wishlist items"
             title="Clear all wishlist items"
           >
             {isProcessing ? (
-              <span className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin" />
+              <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
             ) : (
               <FiTrash2 className="w-5 h-5" />
             )}

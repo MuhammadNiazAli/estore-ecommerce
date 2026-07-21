@@ -207,7 +207,7 @@ const ProductCallHero = () => {
     <>
       <section className="w-full bg-white flex justify-center items-start pt-12 px-4 sm:px-6">
         <div className="max-w-[1000px] w-full text-center">
-          <h1 className="text-3xl sm:text-5xl font-bold text-amber-600 mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-bold text-black mb-4 leading-tight">
             Discover Our Best-Selling Products
           </h1>
           <p className="text-gray-700 text-sm sm:text-lg max-w-xl mx-auto mb-6 px-2 sm:px-0">
@@ -217,7 +217,7 @@ const ProductCallHero = () => {
           <div className="flex justify-center gap-4 flex-wrap px-2 sm:px-0">
             <button
               onClick={handleExplore}
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-amber-700 text-black font-semibold rounded-xl hover:bg-amber-600 transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-black text-black font-semibold rounded-xl hover:bg-black transition-all duration-200 shadow-md w-full max-w-xs sm:w-auto"
             >
               {loading ? <Loader2 className="animate-spin w-5 h-5" /> : <Sparkles className="w-5 h-5" />}
               {loading ? 'Loading...' : 'Start Exploring'}

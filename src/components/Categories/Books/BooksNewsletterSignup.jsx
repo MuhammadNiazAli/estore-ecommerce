@@ -19,7 +19,7 @@ const BooksNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4">
+    <section className="bg-white text-black py-12 px-4">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* Left Content */}
         <motion.div
@@ -34,7 +34,7 @@ const BooksNewsletterSignup = () => {
             exclusive discounts delivered straight to your inbox.
           </p>
           <div className="flex items-center gap-2 text-gray-600 text-sm">
-            <FaEnvelopeOpenText className="text-amber-700 text-lg" />
+            <FaEnvelopeOpenText className="text-black text-lg" />
             <span>No spam, unsubscribe anytime.</span>
           </div>
         </motion.div>
@@ -45,7 +45,7 @@ const BooksNewsletterSignup = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex-1 bg-white p-6 rounded-xl shadow-lg border border-amber-700 w-full max-w-md"
+          className="flex-1 bg-white p-6 rounded-xl shadow-lg border border-black w-full max-w-md"
         >
           <label htmlFor="email" className="block mb-2 font-semibold">
             Your Email Address
@@ -54,13 +54,13 @@ const BooksNewsletterSignup = () => {
             type="email"
             id="email"
             placeholder="Enter your email"
-            className="w-full px-4 py-3 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-700 mb-4"
+            className="w-full px-4 py-3 rounded-lg bg-white text-gray-700 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black mb-4"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"
-            className="w-full bg-amber-700 text-gray-900 font-bold py-3 rounded-lg hover:bg-amber-600 transition"
+            className="w-full bg-black text-gray-900 font-bold py-3 rounded-lg hover:bg-black transition"
           >
             Subscribe
           </button>
@@ -71,7 +71,7 @@ const BooksNewsletterSignup = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="mt-4 text-center text-sm text-amber-600"
+              className="mt-4 text-center text-sm text-black"
             >
               {status}
             </motion.p>

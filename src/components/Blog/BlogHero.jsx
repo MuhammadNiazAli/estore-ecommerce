@@ -16,7 +16,7 @@ const BlogHero = () => {
           transition={{ duration: 0.6 }}
           className="flex-1 text-center md:text-left"
         >
-          <h2 className="text-amber-600 text-xs sm:text-sm font-semibold uppercase tracking-wide mb-3">
+          <h2 className="text-black text-xs sm:text-sm font-semibold uppercase tracking-wide mb-3">
             Welcome to Our Blog
           </h2>
           <h1 className="text-gray-900 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5">
@@ -28,7 +28,7 @@ const BlogHero = () => {
           <motion.a
             href="#latest-blogs"
             whileTap={{ scale: 0.97 }}
-            className="inline-flex items-center gap-2 bg-amber-600 text-gray-900 px-5 py-3 font-semibold rounded-lg hover:bg-amber-500 transition-colors mx-auto md:mx-0"
+            className="inline-flex items-center gap-2 bg-black text-gray-900 px-5 py-3 font-semibold rounded-lg hover:bg-black transition-colors mx-auto md:mx-0"
           >
             Read Latest Blogs <ArrowRight size={18} />
           </motion.a>

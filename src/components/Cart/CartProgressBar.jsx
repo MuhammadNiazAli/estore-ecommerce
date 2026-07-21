@@ -34,13 +34,13 @@ const CartProgressBar = ({ currentAmount = 120, goalAmount = 200 }) => {
             {amountLeft > 0 ? (
               <>
                 Spend{' '}
-                <span className="font-semibold text-amber-600">
+                <span className="font-semibold text-black">
                   ${amountLeft.toFixed(2)}
                 </span>{' '}
                 more to get free shipping!
               </>
             ) : (
-              <span className="flex items-center justify-center sm:justify-start gap-1 text-amber-600 font-semibold select-text">
+              <span className="flex items-center justify-center sm:justify-start gap-1 text-black font-semibold select-text">
                 🎉 You’ve qualified for free shipping!
               </span>
             )}
@@ -59,7 +59,7 @@ const CartProgressBar = ({ currentAmount = 120, goalAmount = 200 }) => {
           aria-label="Progress towards free shipping"
         >
           <div
-            className="absolute top-0 left-0 h-full bg-amber-600 rounded-full transition-width duration-500 ease-in-out"
+            className="absolute top-0 left-0 h-full bg-black rounded-full transition-width duration-500 ease-in-out"
             style={{ width: `${progressPercent}%` }}
           />
         </div>

@@ -163,7 +163,7 @@ const CareersCTA = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="mt-4 text-amber-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
+          className="mt-4 text-black text-sm md:text-base max-w-2xl mx-auto leading-relaxed"
         >
           Whether you're a visionary, builder, or creator—there’s a place here for
           you. We believe in ideas, growth, and people like you.
@@ -178,7 +178,7 @@ const CareersCTA = () => {
         >
           <button
             onClick={() => setShowForm(true)}
-            className="inline-flex items-center gap-2 md:gap-3 bg-amber-700 text-gray-900 font-semibold px-6 md:px-7 py-3 md:py-4 rounded-xl shadow-lg hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-all duration-200 select-none text-sm md:text-base"
+            className="inline-flex items-center gap-2 md:gap-3 bg-black text-gray-900 font-semibold px-6 md:px-7 py-3 md:py-4 rounded-xl shadow-lg hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-all duration-200 select-none text-sm md:text-base"
             aria-haspopup="dialog"
             aria-expanded={showForm}
           >
@@ -216,7 +216,7 @@ const CareersCTA = () => {
             >
               <button
                 onClick={resetModal}
-                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-black rounded"
                 aria-label="Close application form"
               >
                 <XMarkIcon className="h-6 w-6" />
@@ -243,7 +243,7 @@ const CareersCTA = () => {
                         htmlFor="name"
                         className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
-                        Full Name <span className="text-red-600">*</span>
+                        Full Name <span className="text-black">*</span>
                       </label>
                       <input
                         type="text"
@@ -251,9 +251,9 @@ const CareersCTA = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.name
-                            ? 'border-red-600 focus:ring-red-600'
+                            ? 'border-black focus:ring-black'
                             : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.name}
@@ -264,7 +264,7 @@ const CareersCTA = () => {
                       {formErrors.name && (
                         <p
                           id="error-name"
-                          className="text-red-600 mt-1 text-xs sm:text-sm"
+                          className="text-black mt-1 text-xs sm:text-sm"
                           role="alert"
                         >
                           {formErrors.name}
@@ -278,7 +278,7 @@ const CareersCTA = () => {
                         htmlFor="email"
                         className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
-                        Email Address <span className="text-red-600">*</span>
+                        Email Address <span className="text-black">*</span>
                       </label>
                       <input
                         type="email"
@@ -286,9 +286,9 @@ const CareersCTA = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.email
-                            ? 'border-red-600 focus:ring-red-600'
+                            ? 'border-black focus:ring-black'
                             : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.email}
@@ -299,7 +299,7 @@ const CareersCTA = () => {
                       {formErrors.email && (
                         <p
                           id="error-email"
-                          className="text-red-600 mt-1 text-xs sm:text-sm"
+                          className="text-black mt-1 text-xs sm:text-sm"
                           role="alert"
                         >
                           {formErrors.email}
@@ -313,7 +313,7 @@ const CareersCTA = () => {
                         htmlFor="phone"
                         className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
-                        Phone Number <span className="text-red-600">*</span>
+                        Phone Number <span className="text-black">*</span>
                       </label>
                       <input
                         type="tel"
@@ -321,9 +321,9 @@ const CareersCTA = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.phone
-                            ? 'border-red-600 focus:ring-red-600'
+                            ? 'border-black focus:ring-black'
                             : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.phone}
@@ -334,7 +334,7 @@ const CareersCTA = () => {
                       {formErrors.phone && (
                         <p
                           id="error-phone"
-                          className="text-red-600 mt-1 text-xs sm:text-sm"
+                          className="text-black mt-1 text-xs sm:text-sm"
                           role="alert"
                         >
                           {formErrors.phone}
@@ -348,16 +348,16 @@ const CareersCTA = () => {
                         htmlFor="role"
                         className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
-                        Select Role <span className="text-red-600">*</span>
+                        Select Role <span className="text-black">*</span>
                       </label>
                       <select
                         id="role"
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
-                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 sm:px-4 sm:py-3 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition-colors text-sm sm:text-base ${
                           formErrors.role
-                            ? 'border-red-600 focus:ring-red-600'
+                            ? 'border-black focus:ring-black'
                             : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.role}
@@ -376,7 +376,7 @@ const CareersCTA = () => {
                       {formErrors.role && (
                         <p
                           id="error-role"
-                          className="text-red-600 mt-1 text-xs sm:text-sm"
+                          className="text-black mt-1 text-xs sm:text-sm"
                           role="alert"
                         >
                           {formErrors.role}
@@ -398,7 +398,7 @@ const CareersCTA = () => {
                         value={formData.coverLetter}
                         onChange={handleChange}
                         rows={3}
-                        className="w-full rounded-lg px-3 py-2 resize-none bg-white text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base"
+                        className="w-full rounded-lg px-3 py-2 resize-none bg-white text-gray-900 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-black transition-colors placeholder-gray-400 text-sm sm:text-base"
                         placeholder="Write a brief introduction or message"
                       />
                     </div>
@@ -409,7 +409,7 @@ const CareersCTA = () => {
                         htmlFor="resume"
                         className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1"
                       >
-                        Upload Resume (PDF, DOC, DOCX) <span className="text-red-600">*</span>
+                        Upload Resume (PDF, DOC, DOCX) <span className="text-black">*</span>
                       </label>
                       <input
                         type="file"
@@ -417,9 +417,9 @@ const CareersCTA = () => {
                         name="resume"
                         onChange={handleChange}
                         accept=".pdf,.doc,.docx"
-                        className={`w-full rounded-lg px-3 py-2 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition-colors placeholder-gray-400 text-sm sm:text-base ${
+                        className={`w-full rounded-lg px-3 py-2 bg-white text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition-colors placeholder-gray-400 text-sm sm:text-base ${
                           formErrors.resume
-                            ? 'border-red-600 focus:ring-red-600'
+                            ? 'border-black focus:ring-black'
                             : 'border-gray-200'
                         }`}
                         aria-invalid={!!formErrors.resume}
@@ -429,7 +429,7 @@ const CareersCTA = () => {
                       {formErrors.resume && (
                         <p
                           id="error-resume"
-                          className="text-red-600 mt-1 text-xs sm:text-sm"
+                          className="text-black mt-1 text-xs sm:text-sm"
                           role="alert"
                         >
                           {formErrors.resume}
@@ -449,7 +449,7 @@ const CareersCTA = () => {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className={`w-full flex justify-center items-center gap-2 md:gap-3 bg-amber-700 text-gray-900 font-semibold py-2.5 md:py-3 rounded-xl hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-colors text-sm md:text-base ${
+                      className={`w-full flex justify-center items-center gap-2 md:gap-3 bg-black text-gray-900 font-semibold py-2.5 md:py-3 rounded-xl hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-colors text-sm md:text-base ${
                         submitting ? 'cursor-not-allowed opacity-70' : ''
                       }`}
                     >
@@ -499,7 +499,7 @@ const CareersCTA = () => {
                   transition={{ duration: 0.3 }}
                   className="text-center"
                 >
-                  <CheckCircleIcon className="h-14 w-14 md:h-16 md:w-16 text-green-500 mx-auto mb-4 md:mb-5" />
+                  <CheckCircleIcon className="h-14 w-14 md:h-16 md:w-16 text-black mx-auto mb-4 md:mb-5" />
                   <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-2">
                     Application Submitted!
                   </h3>
@@ -510,7 +510,7 @@ const CareersCTA = () => {
                   </p>
                   <button
                     onClick={resetModal}
-                    className="mt-3 md:mt-4 bg-amber-700 text-gray-900 font-semibold py-2.5 px-7 rounded-xl hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-700 transition-colors text-sm md:text-base"
+                    className="mt-3 md:mt-4 bg-black text-gray-900 font-semibold py-2.5 px-7 rounded-xl hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-colors text-sm md:text-base"
                     aria-label="Close confirmation dialog"
                   >
                     Close

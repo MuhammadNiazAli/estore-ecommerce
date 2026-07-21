@@ -23,8 +23,8 @@ export default function ExperienceLoading() {
           font-weight: 600;
           font-family: monospace;
           letter-spacing: 1em;
-          color: #b45309; /* Yellowish-Golden */
-          filter: drop-shadow(0 0 10px #b45309);
+          color: #111827; /* Yellowish-Golden */
+          filter: drop-shadow(0 0 10px #111827);
           display: flex;
           justify-content: center;
           align-items: center;

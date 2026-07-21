@@ -63,21 +63,21 @@ const CareersTestimonials = () => {
                 <img
                   src={testimonials[current].photo}
                   alt={testimonials[current].name}
-                  className="h-20 w-20 rounded-full mb-4 object-cover border-4 border-amber-600"
+                  className="h-20 w-20 rounded-full mb-4 object-cover border-4 border-black"
                   loading="lazy"
                 />
-                <p className="text-amber-400 italic mb-4 max-w-lg">
+                <p className="text-black italic mb-4 max-w-lg">
                   &quot;{testimonials[current].text}&quot;
                 </p>
                 <div className="flex justify-center mb-4">
                   {[...Array(testimonials[current].rating)].map((_, i) => (
-                    <StarIcon key={i} className="h-5 w-5 text-amber-600" />
+                    <StarIcon key={i} className="h-5 w-5 text-black" />
                   ))}
                 </div>
-                <h3 className="text-amber-600 font-semibold text-lg">
+                <h3 className="text-black font-semibold text-lg">
                   {testimonials[current].name}
                 </h3>
-                <p className="text-amber-400 text-sm">{testimonials[current].role}</p>
+                <p className="text-black text-sm">{testimonials[current].role}</p>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -92,7 +92,7 @@ const CareersTestimonials = () => {
                   width: i === current ? 20 : 10,
                   height: 10,
                   borderRadius: 999,
-                  backgroundColor: i === current ? '#b45309' : '#b45309',
+                  backgroundColor: i === current ? '#111827' : '#111827',
                   opacity: i === current ? 1 : 0.3,
                 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}

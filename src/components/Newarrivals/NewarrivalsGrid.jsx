@@ -74,7 +74,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={`full-${i}`}
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -84,7 +84,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -144,7 +144,7 @@ const NewarrivalsGrid = () => {
               <div className="absolute top-3 right-3 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                 <button
                   aria-label="Add to Favorites"
-                  className="bg-amber-700 text-gray-900 p-2 rounded-full shadow-md hover:bg-amber-600 transition"
+                  className="bg-black text-gray-900 p-2 rounded-full shadow-md hover:bg-black transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ const NewarrivalsGrid = () => {
                 </button>
                 <button
                   aria-label="View Details"
-                  className="bg-amber-700 text-gray-900 p-2 rounded-full shadow-md hover:bg-amber-600 transition"
+                  className="bg-black text-gray-900 p-2 rounded-full shadow-md hover:bg-black transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -179,7 +179,7 @@ const NewarrivalsGrid = () => {
 
               {/* Info */}
               <div className="p-5 flex flex-col flex-grow space-y-3">
-                <h3 className="text-xl font-semibold text-amber-600 group-hover:text-amber-500 transition-colors">
+                <h3 className="text-xl font-semibold text-black group-hover:text-black transition-colors">
                   {title}
                 </h3>
 
@@ -188,12 +188,12 @@ const NewarrivalsGrid = () => {
                 <StarRating rating={rating} />
 
                 <div className="flex items-center space-x-3">
-                  <p className="text-amber-700 font-bold text-lg">${price.toFixed(2)}</p>
+                  <p className="text-black font-bold text-lg">${price.toFixed(2)}</p>
                   {oldPrice && (
                     <p className="text-gray-500 line-through text-sm">${oldPrice.toFixed(2)}</p>
                   )}
                   {oldPrice && (
-                    <p className="text-green-500 text-sm font-semibold">
+                    <p className="text-black text-sm font-semibold">
                       Save {Math.round(((oldPrice - price) / oldPrice) * 100)}%
                     </p>
                   )}
@@ -201,7 +201,7 @@ const NewarrivalsGrid = () => {
 
                 <button
                   type="button"
-                  className="mt-3 w-full bg-amber-700 text-gray-900 font-semibold py-2 rounded-lg shadow-md hover:bg-amber-600 transition"
+                  className="mt-3 w-full bg-black text-gray-900 font-semibold py-2 rounded-lg shadow-md hover:bg-black transition"
                 >
                   Add to Cart
                 </button>

@@ -28,12 +28,12 @@ const SustainabilityTestimonials = () => {
   return (
     <section
       aria-labelledby="sustainability-testimonials-title"
-      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16"
+      className="bg-white text-black px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="max-w-5xl mx-auto text-center">
         <h2
           id="sustainability-testimonials-title"
-          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-16 select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-black mb-16 select-none"
         >
           What People Say About Us
         </h2>
@@ -45,10 +45,10 @@ const SustainabilityTestimonials = () => {
               tabIndex={0}
               aria-label={`Testimonial by ${name}`}
               className="
-                bg-amber-950/10 rounded-xl p-6 shadow-lg
+                bg-black/10 rounded-xl p-6 shadow-lg
                 flex flex-col items-center
                 transition-transform duration-300 hover:scale-[1.03] focus-within:scale-[1.03]
-                outline-none focus-visible:ring-4 focus-visible:ring-amber-700 focus-visible:ring-opacity-75
+                outline-none focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-opacity-75
               "
             >
               <img
@@ -59,12 +59,12 @@ const SustainabilityTestimonials = () => {
                 decoding="async"
                 draggable={false}
               />
-              <p className="text-amber-400 italic mb-6 text-sm sm:text-base leading-relaxed max-w-[300px]">
+              <p className="text-black italic mb-6 text-sm sm:text-base leading-relaxed max-w-[300px]">
                 &ldquo;{quote}&rdquo;
               </p>
-              <footer className="text-amber-500 font-semibold select-text">
+              <footer className="text-black font-semibold select-text">
                 {name},{' '}
-                <span className="text-amber-600 text-sm font-normal select-text">{role}</span>
+                <span className="text-black text-sm font-normal select-text">{role}</span>
               </footer>
             </blockquote>
           ))}

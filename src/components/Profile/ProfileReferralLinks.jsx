@@ -41,7 +41,7 @@ const ProfileReferralLinks = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
               Your Referral Links
             </h2>
             <p className="text-sm sm:text-base text-gray-700 mt-1 max-w-lg">
@@ -49,7 +49,7 @@ const ProfileReferralLinks = () => {
             </p>
           </div>
           <motion.div
-            className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base cursor-pointer"
+            className="flex items-center gap-2 text-black font-medium text-sm sm:text-base cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -72,14 +72,14 @@ const ProfileReferralLinks = () => {
             >
               {/* Left Content */}
               <div className="flex items-start sm:items-center gap-4 flex-1">
-                <ClipboardDocumentIcon className="w-8 h-8 text-amber-600 flex-shrink-0" />
+                <ClipboardDocumentIcon className="w-8 h-8 text-black flex-shrink-0" />
                 <div className="flex flex-col">
                   <p className="text-lg font-semibold text-gray-900">{code}</p>
                   <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-amber-500 hover:underline text-sm break-all"
+                    className="text-black hover:underline text-sm break-all"
                   >
                     {link}
                   </a>
@@ -89,17 +89,17 @@ const ProfileReferralLinks = () => {
               {/* Right Content */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-700 text-sm sm:text-base sm:pl-6 sm:border-l border-gray-200">
                 <div className="flex items-center gap-1">
-                  <UsersIcon className="w-5 h-5 text-amber-600" />
+                  <UsersIcon className="w-5 h-5 text-black" />
                   <span>{referredCount} referred</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <LinkIcon className="w-5 h-5 text-amber-600" />
+                  <LinkIcon className="w-5 h-5 text-black" />
                   <span>Rewards: {rewardsEarned}</span>
                 </div>
                 <div className="relative">
                   <button
                     onClick={() => copyToClipboard(id, link)}
-                    className="relative px-4 py-1.5 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-bold text-sm transition duration-200 shadow-md"
+                    className="relative px-4 py-1.5 rounded-full bg-black hover:bg-black text-gray-900 font-bold text-sm transition duration-200 shadow-md"
                   >
                     Copy Link
                   </button>
@@ -110,7 +110,7 @@ const ProfileReferralLinks = () => {
                         initial={{ opacity: 0, y: -8 }}
                         animate={{ opacity: 1, y: -16 }}
                         exit={{ opacity: 0, y: -8 }}
-                        className="absolute top-[-40px] left-1/2 -translate-x-1/2 bg-white text-amber-600 text-xs px-3 py-1 rounded-full shadow-sm flex items-center gap-1"
+                        className="absolute top-[-40px] left-1/2 -translate-x-1/2 bg-white text-black text-xs px-3 py-1 rounded-full shadow-sm flex items-center gap-1"
                       >
                         <CheckCircleIcon className="w-4 h-4" />
                         <span>Copied!</span>

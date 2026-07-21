@@ -7,28 +7,28 @@ const initialNotifications = [
   {
     id: 1,
     type: 'info',
-    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'New product review added by Sarah.',
     time: '2 mins ago',
   },
   {
     id: 2,
     type: 'success',
-    icon: <CheckCircle className="text-green-400 w-5 h-5" aria-hidden="true" />,
+    icon: <CheckCircle className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Order #45321 was delivered successfully.',
     time: '10 mins ago',
   },
   {
     id: 3,
     type: 'error',
-    icon: <XCircle className="text-red-400 w-5 h-5" aria-hidden="true" />,
+    icon: <XCircle className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Failed to sync inventory with supplier.',
     time: '30 mins ago',
   },
   {
     id: 4,
     type: 'info',
-    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Your payout has been processed.',
     time: '1 hour ago',
   },
@@ -39,28 +39,28 @@ const moreNotificationsBatch = [
   {
     id: 5,
     type: 'success',
-    icon: <CheckCircle className="text-green-400 w-5 h-5" aria-hidden="true" />,
+    icon: <CheckCircle className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'New user registration: Michael.',
     time: '2 hours ago',
   },
   {
     id: 6,
     type: 'info',
-    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Inventory updated for SKU #12345.',
     time: '3 hours ago',
   },
   {
     id: 7,
     type: 'error',
-    icon: <XCircle className="text-red-400 w-5 h-5" aria-hidden="true" />,
+    icon: <XCircle className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Payment failed for order #45325.',
     time: '5 hours ago',
   },
   {
     id: 8,
     type: 'info',
-    icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
+    icon: <Info className="text-black w-5 h-5" aria-hidden="true" />,
     message: 'Your weekly report is ready.',
     time: '1 day ago',
   },
@@ -91,7 +91,7 @@ const DashboardNotifications = () => {
       const newNotif = {
         id: Date.now(),
         type: 'info',
-        icon: <Info className="text-amber-600 w-5 h-5" aria-hidden="true" />,
+        icon: <Info className="text-black w-5 h-5" aria-hidden="true" />,
         message: 'New order placed: #45326.',
         time: 'Just now',
       };
@@ -129,10 +129,10 @@ const DashboardNotifications = () => {
       <div className="w-full max-w-[1000px] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
-          <h2 className="text-2xl font-bold text-amber-600 select-none">Notifications</h2>
+          <h2 className="text-2xl font-bold text-black select-none">Notifications</h2>
           <button
             onClick={handleViewAll}
-            className="flex items-center gap-2 text-sm text-amber-600 hover:underline focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="flex items-center gap-2 text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-black rounded"
             aria-label="View all notifications"
           >
             <Bell className="w-5 h-5" />
@@ -143,7 +143,7 @@ const DashboardNotifications = () => {
         {/* New notification banner */}
         {showNewNotificationBanner && (
           <div
-            className="mb-4 cursor-pointer bg-amber-800 text-black px-4 py-2 rounded-md font-semibold select-none flex items-center justify-between shadow-lg hover:bg-amber-700 transition"
+            className="mb-4 cursor-pointer bg-black text-black px-4 py-2 rounded-md font-semibold select-none flex items-center justify-between shadow-lg hover:bg-black transition"
             role="alert"
             aria-live="polite"
             onClick={addNewNotification}
@@ -189,7 +189,7 @@ const DashboardNotifications = () => {
               <button
                 onClick={() => dismissNotification(item.id)}
                 aria-label={`Dismiss notification: ${item.message}`}
-                className="absolute top-2 right-2 text-gray-600 hover:text-red-500 transition focus:outline-none focus:ring-2 focus:ring-red-500 rounded"
+                className="absolute top-2 right-2 text-gray-600 hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -203,7 +203,7 @@ const DashboardNotifications = () => {
             <button
               onClick={loadMoreNotifications}
               disabled={loadingMore}
-              className="flex items-center gap-2 text-amber-600 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-4 py-2 border border-amber-600 disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="flex items-center gap-2 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded px-4 py-2 border border-black disabled:opacity-50 disabled:cursor-not-allowed transition"
               aria-label="Load more notifications"
             >
               {loadingMore ? (

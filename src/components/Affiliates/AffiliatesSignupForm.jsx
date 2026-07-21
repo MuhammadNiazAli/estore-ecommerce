@@ -130,7 +130,7 @@ const AffiliatesSignupForm = () => {
   return (
     <section
       aria-label="Affiliate Signup Form"
-      className="bg-white text-amber-600 py-12 px-4"
+      className="bg-white text-black py-12 px-4"
       style={{ minHeight: "fit-content" }}
     >
       <div className="max-w-[1000px] mx-auto">
@@ -147,8 +147,8 @@ const AffiliatesSignupForm = () => {
         >
           {/* Full Name */}
           <div className="flex flex-col">
-            <label htmlFor="fullName" className="mb-1 font-semibold text-amber-500">
-              Full Name<span aria-hidden="true" className="text-red-500">*</span>
+            <label htmlFor="fullName" className="mb-1 font-semibold text-black">
+              Full Name<span aria-hidden="true" className="text-black">*</span>
             </label>
             <input
               type="text"
@@ -161,16 +161,16 @@ const AffiliatesSignupForm = () => {
               placeholder="John Doe"
               disabled={isSubmitting}
               className={`rounded-md bg-white border
-                px-4 py-3 text-amber-300 placeholder-amber-700
-                focus:outline-none focus:ring-2 focus:ring-amber-700
+                px-4 py-3 text-black placeholder-gray-500
+                focus:outline-none focus:ring-2 focus:ring-black
                 transition-colors duration-200
-                ${errors.fullName ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
+                ${errors.fullName ? "border-black focus:ring-black" : "border-black"}`}
             />
             {errors.fullName && (
               <span
                 id="fullName-error"
                 role="alert"
-                className="mt-1 text-red-500 text-sm font-medium"
+                className="mt-1 text-black text-sm font-medium"
               >
                 {errors.fullName}
               </span>
@@ -179,8 +179,8 @@ const AffiliatesSignupForm = () => {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-semibold text-amber-500">
-              Email<span aria-hidden="true" className="text-red-500">*</span>
+            <label htmlFor="email" className="mb-1 font-semibold text-black">
+              Email<span aria-hidden="true" className="text-black">*</span>
             </label>
             <input
               type="email"
@@ -193,16 +193,16 @@ const AffiliatesSignupForm = () => {
               placeholder="you@example.com"
               disabled={isSubmitting}
               className={`rounded-md bg-white border
-                px-4 py-3 text-amber-300 placeholder-amber-700
-                focus:outline-none focus:ring-2 focus:ring-amber-700
+                px-4 py-3 text-black placeholder-gray-500
+                focus:outline-none focus:ring-2 focus:ring-black
                 transition-colors duration-200
-                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
+                ${errors.email ? "border-black focus:ring-black" : "border-black"}`}
             />
             {errors.email && (
               <span
                 id="email-error"
                 role="alert"
-                className="mt-1 text-red-500 text-sm font-medium"
+                className="mt-1 text-black text-sm font-medium"
               >
                 {errors.email}
               </span>
@@ -211,8 +211,8 @@ const AffiliatesSignupForm = () => {
 
           {/* Website URL */}
           <div className="flex flex-col">
-            <label htmlFor="website" className="mb-1 font-semibold text-amber-500">
-              Website URL<span aria-hidden="true" className="text-red-500">*</span>
+            <label htmlFor="website" className="mb-1 font-semibold text-black">
+              Website URL<span aria-hidden="true" className="text-black">*</span>
             </label>
             <input
               type="url"
@@ -225,16 +225,16 @@ const AffiliatesSignupForm = () => {
               placeholder="https://yourwebsite.com"
               disabled={isSubmitting}
               className={`rounded-md bg-white border
-                px-4 py-3 text-amber-300 placeholder-amber-700
-                focus:outline-none focus:ring-2 focus:ring-amber-700
+                px-4 py-3 text-black placeholder-gray-500
+                focus:outline-none focus:ring-2 focus:ring-black
                 transition-colors duration-200
-                ${errors.website ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
+                ${errors.website ? "border-black focus:ring-black" : "border-black"}`}
             />
             {errors.website && (
               <span
                 id="website-error"
                 role="alert"
-                className="mt-1 text-red-500 text-sm font-medium"
+                className="mt-1 text-black text-sm font-medium"
               >
                 {errors.website}
               </span>
@@ -243,8 +243,8 @@ const AffiliatesSignupForm = () => {
 
           {/* Country */}
           <div className="flex flex-col">
-            <label htmlFor="country" className="mb-1 font-semibold text-amber-500">
-              Country<span aria-hidden="true" className="text-red-500">*</span>
+            <label htmlFor="country" className="mb-1 font-semibold text-black">
+              Country<span aria-hidden="true" className="text-black">*</span>
             </label>
             <select
               id="country"
@@ -255,10 +255,10 @@ const AffiliatesSignupForm = () => {
               aria-describedby={errors.country ? "country-error" : undefined}
               disabled={isSubmitting}
               className={`rounded-md bg-white border
-                px-4 py-3 text-amber-300
-                focus:outline-none focus:ring-2 focus:ring-amber-700
+                px-4 py-3 text-black
+                focus:outline-none focus:ring-2 focus:ring-black
                 transition-colors duration-200
-                ${errors.country ? "border-red-500 focus:ring-red-500" : "border-amber-800"}`}
+                ${errors.country ? "border-black focus:ring-black" : "border-black"}`}
             >
               <option value="" disabled>
                 Select your country
@@ -273,7 +273,7 @@ const AffiliatesSignupForm = () => {
               <span
                 id="country-error"
                 role="alert"
-                className="mt-1 text-red-500 text-sm font-medium"
+                className="mt-1 text-black text-sm font-medium"
               >
                 {errors.country}
               </span>
@@ -282,7 +282,7 @@ const AffiliatesSignupForm = () => {
 
           {/* Referral (optional) full width */}
           <div className="sm:col-span-2 flex flex-col">
-            <label htmlFor="referral" className="mb-1 font-semibold text-amber-500">
+            <label htmlFor="referral" className="mb-1 font-semibold text-black">
               How did you hear about us? (Optional)
             </label>
             <textarea
@@ -293,9 +293,9 @@ const AffiliatesSignupForm = () => {
               onChange={handleChange}
               placeholder="Your answer here..."
               disabled={isSubmitting}
-              className="rounded-md bg-white border border-amber-800
-                px-4 py-3 text-amber-300 placeholder-amber-700
-                focus:outline-none focus:ring-2 focus:ring-amber-700
+              className="rounded-md bg-white border border-black
+                px-4 py-3 text-black placeholder-gray-500
+                focus:outline-none focus:ring-2 focus:ring-black
                 transition-colors duration-200 resize-none"
             />
           </div>
@@ -305,9 +305,9 @@ const AffiliatesSignupForm = () => {
             <button
               type="submit"
               disabled={isSubmitting || isValidating}
-              className={`bg-amber-700 hover:bg-amber-800 focus:bg-amber-900
+              className={`bg-black hover:bg-black focus:bg-black
                 text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
-                transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-amber-600
+                transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-black
                 disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-live="polite"
             >
@@ -320,7 +320,7 @@ const AffiliatesSignupForm = () => {
             <p
               ref={successRef}
               tabIndex={-1}
-              className="sm:col-span-2 text-green-400 text-center font-semibold mt-4"
+              className="sm:col-span-2 text-black text-center font-semibold mt-4"
               role="alert"
               aria-live="polite"
             >
@@ -331,7 +331,7 @@ const AffiliatesSignupForm = () => {
             <p
               ref={errorRef}
               tabIndex={-1}
-              className="sm:col-span-2 text-red-500 text-center font-semibold mt-4"
+              className="sm:col-span-2 text-black text-center font-semibold mt-4"
               role="alert"
               aria-live="assertive"
             >

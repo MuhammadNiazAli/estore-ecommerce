@@ -5,22 +5,22 @@ import { FaReply, FaShippingFast, FaPhoneAlt, FaTimes } from 'react-icons/fa';
 
 const returnsFeatures = [
   {
-    icon: <FaReply className="text-amber-600 text-lg" />,
+    icon: <FaReply className="text-black text-lg" />,
     label: 'Easy Return Process',
   },
   {
-    icon: <FaShippingFast className="text-amber-600 text-lg" />,
+    icon: <FaShippingFast className="text-black text-lg" />,
     label: 'Free Return Shipping',
   },
   {
-    icon: <FaPhoneAlt className="text-amber-600 text-lg" />,
+    icon: <FaPhoneAlt className="text-black text-lg" />,
     label: 'Customer Support Assistance',
   },
 ];
 
 const returnProcessContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Start Your Return</h3>
+    <h3 className="text-xl font-semibold text-black">Start Your Return</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Initiate returns within 30 days of delivery</li>
       <li>Generate a free return shipping label online</li>
@@ -35,7 +35,7 @@ const returnProcessContent = (
 
 const contactSupportContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Contact Support</h3>
+    <h3 className="text-xl font-semibold text-black">Contact Support</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Get personalized help with your return or refund</li>
       <li>Reach out via live chat, phone, or email</li>
@@ -43,7 +43,7 @@ const contactSupportContent = (
       <li>We ensure quick resolution and customer satisfaction</li>
     </ul>
     <p className="pt-2 text-xs text-gray-600">
-      Prefer phone? Call us at <a href="tel:+18001234567" className="underline text-amber-600">1-800-123-4567</a>.
+      Prefer phone? Call us at <a href="tel:+18001234567" className="underline text-black">1-800-123-4567</a>.
     </p>
   </div>
 );
@@ -61,7 +61,7 @@ export default function HelpingReturns() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Returns & Refunds
         </h2>
         <p className="text-gray-700">
@@ -83,8 +83,8 @@ export default function HelpingReturns() {
             onClick={() => toggleSection('returnProcess')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'returnProcess'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-label="Start return process"
           >
@@ -109,7 +109,7 @@ export default function HelpingReturns() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg text-left max-w-md mx-auto">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

@@ -80,14 +80,14 @@ const BundleDeals = () => {
 
                   <div className="flex justify-between items-center">
                     <div>
-                      <span className="text-lg font-bold text-amber-600">
+                      <span className="text-lg font-bold text-black">
                         ${bundle.price}
                       </span>
                       <span className="text-sm line-through text-gray-600 ml-2">
                         ${bundle.oldPrice}
                       </span>
                     </div>
-                    <span className="bg-amber-600 text-black text-xs font-semibold px-2 py-1 rounded-full select-none">
+                    <span className="bg-black text-black text-xs font-semibold px-2 py-1 rounded-full select-none">
                       Save {discount}%
                     </span>
                   </div>
@@ -95,7 +95,7 @@ const BundleDeals = () => {
                   <Link
                     href={`/bundles/${bundle.id}`}
                     aria-label={`Buy ${bundle.title} bundle`}
-                    className="inline-flex mt-3 items-center gap-2 text-sm font-semibold text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+                    className="inline-flex mt-3 items-center gap-2 text-sm font-semibold text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
                   >
                     Buy Bundle <FiArrowRight size={16} />
                   </Link>

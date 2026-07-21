@@ -31,7 +31,7 @@ const AboutTestimonials = () => {
       aria-label="Client testimonials about Niaz Ali"
     >
       <div className="max-w-[1000px] w-full text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-14">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-14">
           What Clients Say About Niaz Ali
         </h2>
 
@@ -50,7 +50,7 @@ const AboutTestimonials = () => {
               <img
                 src={photo}
                 alt={`${name} photo`}
-                className="w-20 h-20 rounded-full object-cover ring-4 ring-amber-600 mx-auto"
+                className="w-20 h-20 rounded-full object-cover ring-4 ring-black mx-auto"
                 loading="lazy"
                 decoding="async"
               />
@@ -61,7 +61,7 @@ const AboutTestimonials = () => {
 
               <div>
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{name}</h3>
-                <p className="text-amber-500 text-xs sm:text-sm mt-1">{role}</p>
+                <p className="text-black text-xs sm:text-sm mt-1">{role}</p>
               </div>
             </article>
           ))}

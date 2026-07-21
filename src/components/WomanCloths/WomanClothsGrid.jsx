@@ -103,7 +103,7 @@ const WomanClothsGrid = () => {
               <p className="text-sm text-gray-700">{product.category}</p>
               <h3 className="text-lg font-semibold">{product.title}</h3>
               <div className="flex items-center justify-between mt-2">
-                <span className="text-amber-600 text-lg font-bold">
+                <span className="text-black text-lg font-bold">
                   ${product.price}
                 </span>
                 <div className="flex gap-2">
@@ -111,14 +111,14 @@ const WomanClothsGrid = () => {
                     onClick={() => toggleWishlist(product.id)}
                     className={`p-2 rounded-full ${
                       wishlist.includes(product.id)
-                        ? "bg-red-500"
+                        ? "bg-black"
                         : "bg-white text-gray-900"
-                    } hover:bg-amber-600`}
+                    } hover:bg-black`}
                   >
                     <FiHeart />
                   </button>
                   <button
-                    className="p-2 rounded-full bg-white text-gray-900 hover:bg-amber-600"
+                    className="p-2 rounded-full bg-white text-gray-900 hover:bg-black"
                   >
                     <FiEye />
                   </button>
@@ -126,7 +126,7 @@ const WomanClothsGrid = () => {
               </div>
               <button
                 onClick={() => addToCart(product.id)}
-                className="w-full mt-3 py-2 bg-amber-600 text-gray-900 rounded-lg flex items-center justify-center gap-2 font-semibold hover:bg-amber-700 transition-all"
+                className="w-full mt-3 py-2 bg-black text-gray-900 rounded-lg flex items-center justify-center gap-2 font-semibold hover:bg-black transition-all"
               >
                 <FiShoppingCart /> Add to Cart
               </button>

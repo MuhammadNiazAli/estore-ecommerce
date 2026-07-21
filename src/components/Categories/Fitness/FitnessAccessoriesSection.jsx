@@ -500,7 +500,7 @@ const FitnessAccessoriesSection = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4 my-[-30px]">
+    <section className="bg-white text-black py-12 px-4 my-[-30px]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Fitness Accessories</h2>
 
@@ -508,7 +508,7 @@ const FitnessAccessoriesSection = () => {
           {visibleAccessories.map(({ id, name, price, rating, image }) => (
             <div
               key={id}
-              className="bg-white rounded-lg border border-amber-700 flex flex-col transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_0_15px_3px_rgba(202,138,4,0.7)]"
+              className="bg-white rounded-lg border border-black flex flex-col transition-transform duration-300 hover:scale-[1.03] hover:-translate-y-1 hover:shadow-[0_0_15px_3px_rgba(202,138,4,0.7)]"
               style={{ willChange: "transform, box-shadow" }}
             >
               {/* Image */}
@@ -526,9 +526,9 @@ const FitnessAccessoriesSection = () => {
                 <div className="flex items-center mb-4">
                   {Array.from({ length: 5 }).map((_, i) =>
                     i < rating ? (
-                      <FaStar key={i} className="text-amber-600" />
+                      <FaStar key={i} className="text-black" />
                     ) : (
-                      <FaRegStar key={i} className="text-amber-800" />
+                      <FaRegStar key={i} className="text-black" />
                     )
                   )}
                 </div>
@@ -538,7 +538,7 @@ const FitnessAccessoriesSection = () => {
 
                   <button
                     aria-label={`Add ${name} to cart`}
-                    className="bg-amber-700 text-gray-900 p-2 rounded-md hover:bg-amber-600 transition"
+                    className="bg-black text-gray-900 p-2 rounded-md hover:bg-black transition"
                   >
                     <FaCartPlus size={20} />
                   </button>
@@ -552,7 +552,7 @@ const FitnessAccessoriesSection = () => {
           <div className="text-center mt-8">
             <button
               onClick={loadMore}
-              className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-amber-600 transition"
+              className="px-6 py-3 bg-black text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-black transition"
             >
               Load More
             </button>

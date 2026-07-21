@@ -73,7 +73,7 @@ export default function GiftLiveFeed() {
 
   return (
     <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 bg-white rounded-3xl shadow-2xl text-gray-900 relative overflow-hidden">
-      <h2 className="text-amber-600 text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight drop-shadow-md">
+      <h2 className="text-black text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight drop-shadow-md">
         Live Gift Activity Feed
       </h2>
 
@@ -88,16 +88,16 @@ export default function GiftLiveFeed() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
-                className="flex items-start sm:items-center gap-4 border-b border-amber-700/20 py-4 px-1 sm:px-2 last:border-none group hover:bg-white/30 rounded-md transition-colors duration-300"
+                className="flex items-start sm:items-center gap-4 border-b border-black/20 py-4 px-1 sm:px-2 last:border-none group hover:bg-white/30 rounded-md transition-colors duration-300"
               >
-                <div className="bg-amber-700/10 p-2 rounded-full shrink-0">
-                  <UserIcon className="w-7 h-7 sm:w-8 sm:h-8 text-amber-600 group-hover:scale-105 transition-transform duration-200" />
+                <div className="bg-black/10 p-2 rounded-full shrink-0">
+                  <UserIcon className="w-7 h-7 sm:w-8 sm:h-8 text-black group-hover:scale-105 transition-transform duration-200" />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-sm sm:text-base leading-snug">
-                    <span className="font-semibold text-amber-600">{user}</span>{' '}
+                    <span className="font-semibold text-black">{user}</span>{' '}
                     <span className="text-gray-900">{action}</span>{' '}
-                    <span className="font-semibold underline decoration-amber-600 underline-offset-4 hover:text-amber-500 transition cursor-pointer">
+                    <span className="font-semibold underline decoration-black underline-offset-4 hover:text-black transition cursor-pointer">
                       {product}
                     </span>
                   </p>

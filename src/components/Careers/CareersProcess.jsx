@@ -75,13 +75,13 @@ const CareersProcess = () => {
             <div key={i} className="flex-1 flex items-center">
               <div
                 className={`h-3 w-3 rounded-full ${
-                  i <= currentStep ? 'bg-amber-600' : 'bg-white'
+                  i <= currentStep ? 'bg-black' : 'bg-white'
                 }`}
               />
               {i < steps.length - 1 && (
                 <div
                   className={`flex-1 h-1 mx-1 ${
-                    i < currentStep ? 'bg-amber-600' : 'bg-white'
+                    i < currentStep ? 'bg-black' : 'bg-white'
                   }`}
                 />
               )}
@@ -104,26 +104,26 @@ const CareersProcess = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className={`rounded-xl p-6 shadow-lg border transition-all duration-300 cursor-pointer
-                  ${isActive ? 'bg-white border-amber-600 scale-[1.01]' : 'bg-white border-transparent'}
+                  ${isActive ? 'bg-white border-black scale-[1.01]' : 'bg-white border-transparent'}
                   ${isCompleted ? 'opacity-70 hover:opacity-100' : 'hover:scale-[1.02]'}
                 `}
                 onClick={() => goToStep(index)}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Icon className={`h-8 w-8 ${isCompleted ? 'text-green-400' : 'text-amber-600'}`} />
+                  <Icon className={`h-8 w-8 ${isCompleted ? 'text-black' : 'text-black'}`} />
                   <span
                     className={`text-lg font-semibold ${
                       isCompleted
-                        ? 'text-green-300'
+                        ? 'text-black'
                         : isActive
-                        ? 'text-amber-500'
-                        : 'text-amber-300'
+                        ? 'text-black'
+                        : 'text-black'
                     }`}
                   >
                     {step.title}
                   </span>
                 </div>
-                <p className="text-amber-300 text-sm leading-relaxed">{step.description}</p>
+                <p className="text-black text-sm leading-relaxed">{step.description}</p>
               </motion.div>
             );
           })}
@@ -134,14 +134,14 @@ const CareersProcess = () => {
           <button
             onClick={nextStep}
             disabled={currentStep >= steps.length - 1}
-            className="bg-amber-600 hover:bg-amber-500 text-gray-900 font-bold py-2 px-6 rounded-lg transition shadow-md disabled:opacity-30"
+            className="bg-black hover:bg-black text-gray-900 font-bold py-2 px-6 rounded-lg transition shadow-md disabled:opacity-30"
           >
             Next Step →
           </button>
 
           <button
             onClick={resetProcess}
-            className="flex items-center gap-2 border border-amber-600 text-amber-600 hover:text-amber-500 hover:border-amber-500 py-2 px-6 rounded-lg transition"
+            className="flex items-center gap-2 border border-black text-black hover:text-black hover:border-black py-2 px-6 rounded-lg transition"
           >
             <ArrowPathIcon className="w-5 h-5" />
             Restart Process
@@ -153,7 +153,7 @@ const CareersProcess = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mt-6 text-center text-green-400 font-medium"
+            className="mt-6 text-center text-black font-medium"
           >
              You're ready for onboarding!
           </motion.p>

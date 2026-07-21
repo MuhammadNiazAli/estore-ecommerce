@@ -36,7 +36,7 @@ const HelpCenterSearch = () => {
         <button
           type="submit"
           aria-label="Search"
-          className="flex items-center justify-center px-4 text-amber-600 hover:text-amber-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition-colors duration-200"
+          className="flex items-center justify-center px-4 text-black hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black transition-colors duration-200"
         >
           <SearchIcon size={20} />
         </button>
@@ -49,7 +49,7 @@ const HelpCenterSearch = () => {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search Help Center..."
           aria-label="Search Help Center"
-          className="flex-grow bg-white text-gray-900 placeholder-amber-600 py-3 px-3 focus:outline-none focus:ring-2 focus:ring-amber-600"
+          className="flex-grow bg-white text-gray-900 placeholder-gray-500 py-3 px-3 focus:outline-none focus:ring-2 focus:ring-black"
           spellCheck={false}
           autoComplete="off"
           autoCorrect="off"
@@ -63,7 +63,7 @@ const HelpCenterSearch = () => {
             type="button"
             onClick={handleClear}
             aria-label="Clear search"
-            className="flex items-center justify-center px-4 text-amber-600 hover:text-amber-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition-colors duration-200"
+            className="flex items-center justify-center px-4 text-black hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black transition-colors duration-200"
           >
             <X size={20} />
           </button>

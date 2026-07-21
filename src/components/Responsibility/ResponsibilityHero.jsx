@@ -123,7 +123,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-amber-600 uppercase text-xs sm:text-sm tracking-widest font-semibold mb-3"
+            className="text-black uppercase text-xs sm:text-sm tracking-widest font-semibold mb-3"
           >
             Responsibility
           </motion.p>
@@ -154,7 +154,7 @@ const ResponsibilityHero = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-5 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
+            className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-sm sm:text-base px-5 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
             onClick={openModal}
             aria-haspopup="dialog"
             aria-expanded={isModalOpen}
@@ -190,7 +190,7 @@ const ResponsibilityHero = () => {
                 <button
                   onClick={closeModal}
                   aria-label="Close modal"
-                  className="absolute top-4 right-4 sm:top-5 sm:right-5 text-gray-600 hover:text-amber-700 transition-colors focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="absolute top-4 right-4 sm:top-5 sm:right-5 text-gray-600 hover:text-black transition-colors focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -200,7 +200,7 @@ const ResponsibilityHero = () => {
                   <>
                     <h2
                       id="modal-title"
-                      className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4 select-none px-2 sm:px-0"
+                      className="text-2xl sm:text-3xl font-bold text-black mb-4 select-none px-2 sm:px-0"
                     >
                       Our Responsibility Commitment
                     </h2>
@@ -227,7 +227,7 @@ const ResponsibilityHero = () => {
                     <div className="text-center">
                       <button
                         onClick={() => setShowStayUpdatedForm(true)}
-                        className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
+                        className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2 mx-auto"
                       >
                         Stay Updated
                         <ArrowRight className="w-5 h-5" />
@@ -247,7 +247,7 @@ const ResponsibilityHero = () => {
                       transition={{ duration: 0.4 }}
                       className="text-gray-700 px-2 sm:px-0"
                     >
-                      <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4 select-none">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4 select-none">
                         Stay Updated
                       </h2>
 
@@ -269,9 +269,9 @@ const ResponsibilityHero = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@example.com"
-                            className={`w-full p-3 rounded-md text-gray-900 focus:outline-amber-700 focus:ring-2 focus:ring-amber-600 transition-colors text-sm sm:text-base ${
+                            className={`w-full p-3 rounded-md text-gray-900 focus:outline-black focus:ring-2 focus:ring-black transition-colors text-sm sm:text-base ${
                               emailError
-                                ? 'border-2 border-red-500'
+                                ? 'border-2 border-black'
                                 : 'border border-gray-300'
                             }`}
                             disabled={isSubmitting}
@@ -282,7 +282,7 @@ const ResponsibilityHero = () => {
                           {emailError && (
                             <p
                               id="email-error"
-                              className="text-red-500 mt-1 text-xs sm:text-sm font-semibold"
+                              className="text-black mt-1 text-xs sm:text-sm font-semibold"
                               role="alert"
                             >
                               {emailError}
@@ -292,7 +292,7 @@ const ResponsibilityHero = () => {
                           <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isSubmitting ? (
                               <svg
@@ -330,12 +330,12 @@ const ResponsibilityHero = () => {
                           transition={{ duration: 0.4 }}
                           className="text-center"
                         >
-                          <p className="mb-6 text-lg text-green-400 font-semibold select-none">
+                          <p className="mb-6 text-lg text-black font-semibold select-none">
                             Thank you for subscribing! We will keep you updated.
                           </p>
                           <button
                             onClick={closeModal}
-                            className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
+                            className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2"
                           >
                             Close
                             <X className="w-5 h-5" />

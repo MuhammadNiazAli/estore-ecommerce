@@ -54,7 +54,7 @@ const HelpCenterCategories = () => {
   return (
     <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-30px]">
       <div className="w-full max-w-[1000px] text-gray-900">
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-12">
           Help Center Categories
         </h2>
 
@@ -63,13 +63,13 @@ const HelpCenterCategories = () => {
             <a
               key={index}
               href={href}
-              className="bg-white hover:bg-amber-600 hover:text-black transition duration-300 p-6 rounded-xl flex flex-col gap-4 group shadow-lg focus:outline-none focus:ring-4 focus:ring-amber-600"
+              className="bg-white hover:bg-black hover:text-black transition duration-300 p-6 rounded-xl flex flex-col gap-4 group shadow-lg focus:outline-none focus:ring-4 focus:ring-black"
               tabIndex={0}
               aria-label={`Go to ${title} help center category`}
             >
               <div className="flex items-center gap-4">
                 <Icon
-                  className="w-7 h-7 text-amber-600 group-hover:text-black transition-colors duration-300 transform group-hover:scale-110"
+                  className="w-7 h-7 text-black group-hover:text-black transition-colors duration-300 transform group-hover:scale-110"
                   aria-hidden="true"
                 />
                 <h3 className="text-lg font-semibold">{title}</h3>

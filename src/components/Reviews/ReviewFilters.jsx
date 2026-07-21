@@ -13,7 +13,7 @@ import {
 const Star = ({ filled }) => (
   <StarIcon
     size={16}
-    className={filled ? 'text-amber-400 fill-amber-400' : 'text-amber-400'}
+    className={filled ? 'text-black fill-black' : 'text-black'}
   />
 );
 
@@ -151,7 +151,7 @@ const FilterButton = ({ filter, isActive, onClick }) => (
     type="button"
     onClick={onClick}
     className={`relative px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300
-      focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-black
       ${isActive ? 'text-gray-900' : 'text-gray-700 hover:text-gray-900'}`}
     aria-pressed={isActive}
   >
@@ -163,7 +163,7 @@ const FilterButton = ({ filter, isActive, onClick }) => (
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-          className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shadow-lg z-0"
+          className="absolute inset-0 bg-gradient-to-r from-black to-gray-900 rounded-full shadow-lg z-0"
         />
       )}
     </AnimatePresence>
@@ -233,7 +233,7 @@ const ReviewCard = ({ review }) => {
         </div>
         {review.verified && (
           <CheckCircle
-            className="text-amber-400"
+            className="text-black"
             title="Verified Buyer"
             aria-label="Verified Buyer"
             size={18}
@@ -286,7 +286,7 @@ const ReviewCard = ({ review }) => {
         <button
           onClick={handleLike}
           className={`flex items-center text-sm gap-1 transition-colors duration-200 ${
-            liked ? 'text-amber-400' : 'text-gray-600 hover:text-gray-900'
+            liked ? 'text-black' : 'text-gray-600 hover:text-gray-900'
           }`}
           aria-pressed={liked}
           aria-label="Like review"
@@ -298,7 +298,7 @@ const ReviewCard = ({ review }) => {
         <button
           onClick={handleDislike}
           className={`flex items-center text-sm gap-1 transition-colors duration-200 ${
-            disliked ? 'text-amber-400' : 'text-gray-600 hover:text-gray-900'
+            disliked ? 'text-black' : 'text-gray-600 hover:text-gray-900'
           }`}
           aria-pressed={disliked}
           aria-label="Dislike review"

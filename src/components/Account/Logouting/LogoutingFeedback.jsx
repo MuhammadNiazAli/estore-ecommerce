@@ -16,7 +16,7 @@ const LogoutingFeedback = () => {
   return (
     <section
       aria-label="Logout feedback form"
-      className="max-w-md mx-auto bg-white rounded-2xl p-8 shadow-lg text-amber-600"
+      className="max-w-md mx-auto bg-white rounded-2xl p-8 shadow-lg text-black"
     >
       {!submitted ? (
         <>
@@ -29,18 +29,18 @@ const LogoutingFeedback = () => {
               onChange={(e) => setFeedback(e.target.value)}
               placeholder="Your feedback (optional)"
               rows={4}
-              className="resize-none rounded-md p-3 bg-white text-amber-500 placeholder-amber-800 focus:outline-amber-600 focus:ring-2 focus:ring-amber-600"
+              className="resize-none rounded-md p-3 bg-white text-black placeholder-gray-500 focus:outline-black focus:ring-2 focus:ring-black"
             />
             <button
               type="submit"
-              className="self-center px-6 py-2 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="self-center px-6 py-2 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
             >
               Submit Feedback
             </button>
           </form>
         </>
       ) : (
-        <p className="text-center text-amber-500 text-lg font-medium">
+        <p className="text-center text-black text-lg font-medium">
           Thank you for your feedback! We appreciate it.
         </p>
       )}

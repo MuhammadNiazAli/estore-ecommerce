@@ -176,7 +176,7 @@ const AccessoriesReviews = () => {
   return (
     <div className="w-full max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 mb-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-900 mb-6">
         Customer Reviews
       </h2>
 
@@ -224,7 +224,7 @@ const AccessoriesReviews = () => {
         />
         <button
           onClick={handleAddReview}
-          className="mt-3 w-full sm:w-auto bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold rounded-lg px-6 py-2 transition"
+          className="mt-3 w-full sm:w-auto bg-black hover:bg-black text-gray-900 font-semibold rounded-lg px-6 py-2 transition"
         >
           Add Review
         </button>
@@ -247,17 +247,17 @@ const AccessoriesReviews = () => {
                 <div className="flex flex-wrap items-center gap-2">
                   <h4 className="text-gray-900 font-semibold text-lg">{review.name}</h4>
                   {review.verified && (
-                    <CheckCircle className="text-green-400 w-5 h-5" />
+                    <CheckCircle className="text-black w-5 h-5" />
                   )}
                 </div>
 
                 {/* Stars */}
-                <div className="flex items-center text-amber-600 mt-1">
+                <div className="flex items-center text-black mt-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                        i < review.rating ? "fill-amber-600" : "text-gray-600"
+                        i < review.rating ? "fill-black" : "text-gray-600"
                       }`}
                     />
                   ))}
@@ -274,15 +274,15 @@ const AccessoriesReviews = () => {
                     onClick={() => handleLike(review.id)}
                     className={`flex items-center gap-1 transition ${
                       review.likedByUser
-                        ? "text-amber-600"
-                        : "text-gray-600 hover:text-amber-600"
+                        ? "text-black"
+                        : "text-gray-600 hover:text-black"
                     }`}
                   >
                     <ThumbsUp className="w-4 h-4 sm:w-5 sm:h-5" /> {review.likes}
                   </button>
                   <button
                     onClick={() => handleReplyClick(review.id)}
-                    className="flex items-center gap-1 text-gray-600 hover:text-amber-600 transition"
+                    className="flex items-center gap-1 text-gray-600 hover:text-black transition"
                   >
                     <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" /> Reply
                   </button>
@@ -318,7 +318,7 @@ const AccessoriesReviews = () => {
                       </button>
                       <button
                         onClick={() => handleAddReply(review.id)}
-                        className="px-4 py-2 rounded-md bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold transition"
+                        className="px-4 py-2 rounded-md bg-black hover:bg-black text-gray-900 font-semibold transition"
                       >
                         Submit Reply
                       </button>

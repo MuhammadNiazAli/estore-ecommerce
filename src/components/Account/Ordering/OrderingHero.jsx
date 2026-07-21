@@ -6,15 +6,15 @@ import { FaCheckCircle } from 'react-icons/fa';
 
 const features = [
   {
-    icon: <FiPackage className="text-amber-600 text-lg" />,
+    icon: <FiPackage className="text-black text-lg" />,
     label: 'Live Package Tracking',
   },
   {
-    icon: <FiTruck className="text-amber-600 text-lg" />,
+    icon: <FiTruck className="text-black text-lg" />,
     label: 'Real-Time Delivery Updates',
   },
   {
-    icon: <FiHelpCircle className="text-amber-600 text-lg" />,
+    icon: <FiHelpCircle className="text-black text-lg" />,
     label: '24/7 Support Access',
   },
 ];
@@ -30,7 +30,7 @@ const OrderingHero = () => {
         <div className="max-w-md mx-auto lg:mx-0 space-y-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight">
             Seamless{' '}
-            <span className="text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
+            <span className="text-black underline decoration-black decoration-4 underline-offset-4">
               Order Tracking
             </span>
             <br />
@@ -56,7 +56,7 @@ const OrderingHero = () => {
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 pt-3">
             <button
               type="button"
-              className="px-7 py-2.5 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="px-7 py-2.5 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               aria-label="View your order history"
             >
               View Orders
@@ -75,7 +75,7 @@ const OrderingHero = () => {
         {/* Right Image Visual */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="relative w-72 h-96 rounded-3xl overflow-hidden border-4 border-amber-600 bg-white shadow-[0_15px_40px_rgba(0,0,0,0.4)]"
+            className="relative w-72 h-96 rounded-3xl overflow-hidden border-4 border-black bg-white shadow-[0_15px_40px_rgba(0,0,0,0.4)]"
             aria-hidden="true"
           >
             <img
@@ -86,7 +86,7 @@ const OrderingHero = () => {
               decoding="async"
             />
 
-            <div className="absolute top-3 right-3 bg-amber-600 text-black text-xs font-bold px-3 py-1 rounded-full shadow">
+            <div className="absolute top-3 right-3 bg-black text-black text-xs font-bold px-3 py-1 rounded-full shadow">
               In Transit
             </div>
           </div>
@@ -94,7 +94,7 @@ const OrderingHero = () => {
       </div>
 
       {/* Floating Decorative Icon */}
-      <div className="absolute top-6 left-6 hidden lg:block text-amber-600 text-4xl opacity-15 pointer-events-none select-none">
+      <div className="absolute top-6 left-6 hidden lg:block text-black text-4xl opacity-15 pointer-events-none select-none">
         <FaCheckCircle />
       </div>
     </section>

@@ -9,7 +9,7 @@ const AudioCategoryInfo = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-black">
             Elevate Your Audio Experience
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -20,23 +20,23 @@ const AudioCategoryInfo = () => {
           </p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
-              <FaHeadphonesAlt className="text-amber-600 text-xl" />
+              <FaHeadphonesAlt className="text-black text-xl" />
               <span>High-Fidelity Headphones for crystal-clear sound</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaMicrophoneAlt className="text-amber-600 text-xl" />
+              <FaMicrophoneAlt className="text-black text-xl" />
               <span>Professional Microphones for studio-quality recording</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaVolumeUp className="text-amber-600 text-xl" />
+              <FaVolumeUp className="text-black text-xl" />
               <span>Powerful Speakers for immersive experiences</span>
             </li>
             <li className="flex items-center gap-3">
-              <FaMusic className="text-amber-600 text-xl" />
+              <FaMusic className="text-black text-xl" />
               <span>Wireless Solutions for seamless connectivity</span>
             </li>
           </ul>
-          <button className="mt-4 bg-amber-700 hover:bg-amber-600 text-black font-semibold px-6 py-3 rounded-full transition duration-300">
+          <button className="mt-4 bg-black hover:bg-black text-black font-semibold px-6 py-3 rounded-full transition duration-300">
             Shop Audio Now
           </button>
         </div>

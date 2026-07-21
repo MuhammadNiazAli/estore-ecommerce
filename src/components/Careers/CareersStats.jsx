@@ -56,9 +56,9 @@ const CareersStats = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 ease-in-out flex flex-col items-center text-center"
             >
-              <item.icon className="h-9 w-9 text-amber-600 mb-3" aria-hidden="true" />
-              <div className="text-2xl sm:text-3xl font-bold text-amber-500">{item.value}</div>
-              <div className="mt-1 text-sm sm:text-base text-amber-300">{item.label}</div>
+              <item.icon className="h-9 w-9 text-black mb-3" aria-hidden="true" />
+              <div className="text-2xl sm:text-3xl font-bold text-black">{item.value}</div>
+              <div className="mt-1 text-sm sm:text-base text-black">{item.label}</div>
             </motion.div>
           ))}
         </div>

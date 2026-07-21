@@ -77,7 +77,7 @@ const KitchenFaq = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-10 my-[-30px]">
+    <section className="bg-white text-black py-10 my-[-30px]">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
           Frequently Asked Questions
@@ -87,10 +87,10 @@ const KitchenFaq = () => {
             <div
               key={faq.id}
               ref={(el) => (refs.current[faq.id] = el)}
-              className="bg-white rounded-lg border border-amber-700 overflow-hidden"
+              className="bg-white rounded-lg border border-black overflow-hidden"
             >
               <button
-                className="w-full flex justify-between items-center px-4 py-3 font-semibold text-left text-amber-500 hover:bg-gray-500 transition"
+                className="w-full flex justify-between items-center px-4 py-3 font-semibold text-left text-black hover:bg-gray-500 transition"
                 onClick={() => toggleFaq(faq.id)}
               >
                 {faq.question}
@@ -104,7 +104,7 @@ const KitchenFaq = () => {
                 className="faq-content px-4 overflow-hidden"
                 style={{ height: 0, opacity: 0 }}
               >
-                <p className="py-3 text-sm text-amber-400">{faq.answer}</p>
+                <p className="py-3 text-sm text-black">{faq.answer}</p>
               </div>
             </div>
           ))}

@@ -9,28 +9,28 @@ const initiatives = [
     title: 'Global Environmental Care',
     description:
       'We actively support reforestation and environmental conservation projects worldwide.',
-    icon: <Trees className="w-10 h-10 sm:w-12 sm:h-12 text-green-400" />,
+    icon: <Trees className="w-10 h-10 sm:w-12 sm:h-12 text-black" />,
   },
   {
     id: 2,
     title: 'Community Health & Wellness',
     description:
       'Providing healthcare access and wellness education to underserved communities.',
-    icon: <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-red-400" />,
+    icon: <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-black" />,
   },
   {
     id: 3,
     title: 'Empowering Local Leaders',
     description:
       'Training and mentoring local leaders to foster sustainable development.',
-    icon: <Users className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600" />,
+    icon: <Users className="w-10 h-10 sm:w-12 sm:h-12 text-black" />,
   },
   {
     id: 4,
     title: 'Global Collaboration Network',
     description:
       'Building partnerships with NGOs and organizations to maximize impact.',
-    icon: <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-amber-600" />,
+    icon: <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-black" />,
   },
 ];
 
@@ -43,7 +43,7 @@ const ResponsibilityInitiatives = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-amber-600 text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12"
+          className="text-black text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12"
         >
           Our Key Initiatives
         </motion.h2>
@@ -59,7 +59,7 @@ const ResponsibilityInitiatives = () => {
               className="bg-white rounded-xl p-5 sm:p-6 cursor-default hover:shadow-lg hover:scale-[1.04] transition-transform duration-300"
             >
               <div className="mb-4 flex justify-center">{icon}</div>
-              <h3 className="text-amber-600 text-lg sm:text-xl font-semibold mb-2">{title}</h3>
+              <h3 className="text-black text-lg sm:text-xl font-semibold mb-2">{title}</h3>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{description}</p>
             </motion.div>
           ))}

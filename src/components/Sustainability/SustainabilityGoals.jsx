@@ -4,7 +4,7 @@ const goals = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-amber-600"
+        className="w-10 h-10 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -21,7 +21,7 @@ const goals = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-amber-600"
+        className="w-10 h-10 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -38,7 +38,7 @@ const goals = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-amber-600"
+        className="w-10 h-10 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -60,7 +60,7 @@ const goals = [
   {
     icon: (
       <svg
-        className="w-10 h-10 text-amber-600"
+        className="w-10 h-10 text-black"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
@@ -80,12 +80,12 @@ const SustainabilityGoals = () => {
   return (
     <section
       aria-labelledby="sustainability-goals-title"
-      className="bg-white text-amber-600 px-4 sm:px-6 lg:px-8 py-16"
+      className="bg-white text-black px-4 sm:px-6 lg:px-8 py-16"
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2
           id="sustainability-goals-title"
-          className="text-3xl sm:text-4xl font-extrabold text-amber-500 mb-14 select-none"
+          className="text-3xl sm:text-4xl font-extrabold text-black mb-14 select-none"
         >
           Our Key Sustainability Goals
         </h2>
@@ -101,20 +101,20 @@ const SustainabilityGoals = () => {
               tabIndex={0}
               aria-label={title}
               className="
-                bg-amber-950/10 rounded-xl p-6 shadow-lg
+                bg-black/10 rounded-xl p-6 shadow-lg
                 cursor-pointer
                 outline-none
                 transition-colors duration-300
-                hover:bg-amber-950/25
-                focus-visible:ring-4 focus-visible:ring-amber-700
+                hover:bg-black/25
+                focus-visible:ring-4 focus-visible:ring-black
                 focus-visible:ring-opacity-70
-                focus-visible:shadow-amber-600
+                focus-visible:shadow-black
                 select-text
               "
             >
               <div className="mb-4">{icon}</div>
-              <h3 className="text-xl font-semibold text-amber-500 mb-3">{title}</h3>
-              <p className="text-amber-400 text-sm sm:text-base leading-relaxed tracking-wide">
+              <h3 className="text-xl font-semibold text-black mb-3">{title}</h3>
+              <p className="text-black text-sm sm:text-base leading-relaxed tracking-wide">
                 {description}
               </p>
             </article>

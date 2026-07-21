@@ -11,7 +11,7 @@ const ShopBannerStrip = () => {
       initial={{ opacity: 0, y: -15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      className="w-full bg-gradient-to-r from-amber-700 via-orange-600 to-red-600 text-gray-900 py-4 px-6 shadow-md relative overflow-hidden"
+      className="w-full bg-gradient-to-r from-black via-gray-700 to-gray-900 text-gray-900 py-4 px-6 shadow-md relative overflow-hidden"
       aria-label="Summer Sale Banner"
     >
 
@@ -20,7 +20,7 @@ const ShopBannerStrip = () => {
         className="absolute inset-0 opacity-30"
         style={{
           background:
-            'linear-gradient(270deg, #b45309, #f97316, #dc2626, #b45309, #f97316, #dc2626)',
+            'linear-gradient(270deg, #111827, #111827, #374151, #111827, #111827, #374151)',
           backgroundSize: '1200% 1200%',
         }}
         animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
@@ -52,7 +52,7 @@ const ShopBannerStrip = () => {
             whileHover={{ scale: 1.03, boxShadow: '0 4px 12px rgba(251, 191, 36, 0.5)' }}
             whileFocus={{ scale: 1.03, boxShadow: '0 0 8px 3px rgba(251,191,36,0.8)' }}
             transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-            className="inline-block bg-white text-red-600 font-semibold text-sm sm:text-base px-5 py-2 rounded-md shadow-md transition-all focus:outline-none focus:ring-4 focus:ring-amber-400 focus:ring-offset-2 select-none"
+            className="inline-block bg-white text-black font-semibold text-sm sm:text-base px-5 py-2 rounded-md shadow-md transition-all focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 select-none"
             aria-label="Shop now for summer sale with free shipping"
           >
             Shop Now

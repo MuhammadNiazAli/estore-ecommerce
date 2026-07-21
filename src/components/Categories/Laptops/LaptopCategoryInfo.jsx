@@ -73,7 +73,7 @@ const LaptopCategoryInfo = () => {
       <div className="space-y-5 mb-8">
         {guides.map(({ title, content }) => (
           <div key={title}>
-            <h4 className="font-semibold text-lg text-amber-600">{title}</h4>
+            <h4 className="font-semibold text-lg text-black">{title}</h4>
             <p>{content}</p>
           </div>
         ))}

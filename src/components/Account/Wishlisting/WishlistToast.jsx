@@ -18,7 +18,7 @@ const WishlistToast = ({ message = 'Item added to wishlist!', duration = 3000 })
       {visible && (
         <div
           aria-live="assertive"
-          className="fixed bottom-8 right-8 max-w-xs w-full bg-amber-800 text-gray-900 px-5 py-3 rounded-lg shadow-lg
+          className="fixed bottom-8 right-8 max-w-xs w-full bg-black text-gray-900 px-5 py-3 rounded-lg shadow-lg
           transform transition duration-300 ease-in-out opacity-100 translate-y-0 z-50"
         >
           <p className="font-semibold">{message}</p>

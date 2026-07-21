@@ -59,52 +59,52 @@ import Header4thLayer from './Header4thLayer';
 
 // Menu items for main navigation
 const NAV_LINKS = [
-  { label: 'Home', href: '/', icon: <FiHome size={11} color="#ddd" /> },
-  { label: 'Categories', href: '/categories', icon: <FiTag size={11} color="#6366f1" /> },
-  { label: 'Deals', href: '/Deals', icon: <FiGift size={11} color="#ddd" /> },
-  { label: 'Orders', href: '/orders', icon: <FiShoppingCart size={11} color="#ddd" /> },
-  { label: 'Wishlist', href: '/wishlist', icon: <FiHeart size={11} color="#ddd" /> },
-  { label: 'Shop', href: '/shop', icon: <FiTag size={11} color="#ddd" /> },
-  { label: 'Shipping', href: '/shipping', icon: <FiTruck size={11} color="#ddd" /> },
-  { label: 'Reviews', href: '/reviews', icon: <FiStar size={11} color="#ddd" /> },
-  { label: 'Payments', href: '/payments', icon: <FiCreditCard size={11} color="#ddd" /> },
-  { label: 'Account', href: '/account', icon: <FiUser size={11} color="#ddd" /> },
-  { label: 'Support', href: '/support', icon: <FiSearch size={11} color="#ddd" /> },
+  { label: 'Home', href: '/', icon: <FiHome size={11} color="#111827" /> },
+  { label: 'Categories', href: '/categories', icon: <FiTag size={11} color="#111827" /> },
+  { label: 'Deals', href: '/Deals', icon: <FiGift size={11} color="#111827" /> },
+  { label: 'Orders', href: '/orders', icon: <FiShoppingCart size={11} color="#111827" /> },
+  { label: 'Wishlist', href: '/wishlist', icon: <FiHeart size={11} color="#111827" /> },
+  { label: 'Shop', href: '/shop', icon: <FiTag size={11} color="#111827" /> },
+  { label: 'Shipping', href: '/shipping', icon: <FiTruck size={11} color="#111827" /> },
+  { label: 'Reviews', href: '/reviews', icon: <FiStar size={11} color="#111827" /> },
+  { label: 'Payments', href: '/payments', icon: <FiCreditCard size={11} color="#111827" /> },
+  { label: 'Account', href: '/account', icon: <FiUser size={11} color="#111827" /> },
+  { label: 'Support', href: '/support', icon: <FiSearch size={11} color="#111827" /> },
 ];
 
 
 // Product categories with icons and links
 const PRODUCT_CATEGORIES = [
-  { label: 'Phones', href: '/category/phones', icon: <MdPhoneIphone size={12} color="#6366f1" /> },
-  { label: 'Laptops', href: '/category/laptops', icon: <MdLaptopMac size={12} color="#6366f1" /> },
-  { label: 'Watches', href: '/category/watches', icon: <MdWatch size={12} color="#6366f1" /> },
-  { label: 'Kitchen', href: '/category/kitchen', icon: <MdOutlineKitchen size={12} color="#6366f1" /> },
-  { label: 'Sports', href: '/category/sports', icon: <MdSportsBasketball size={12} color="#6366f1" /> },
-  { label: 'Toys', href: '/category/toys', icon: <MdToys size={12} color="#6366f1" /> },
-  { label: 'Cameras', href: '/category/cameras', icon: <MdCameraAlt size={12} color="#6366f1" /> },
-  { label: 'Fitness', href: '/category/fitness', icon: <MdFitnessCenter size={12} color="#6366f1" /> },
-  { label: 'Books', href: '/category/books', icon: <MdBook size={12} color="#6366f1" /> },
-  { label: 'Beauty', href: '/category/beauty', icon: <MdFace size={12} color="#6366f1" /> },
-  { label: 'Phone Accessories', href: '/category/phone-accessories', icon: <MdPhoneAndroid size={12} color="#6366f1" /> },
-  { label: 'Gaming', href: '/category/gaming', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Home Decor', href: '/category/home-decor', icon: <MdOutlineChair size={12} color="#6366f1" /> },
-  { label: 'Audio', href: '/category/audio', icon: <MdHeadsetMic size={12} color="#6366f1" /> },
-  { label: 'Office', href: '/category/office', icon: <MdOutlineLocalLibrary size={12} color="#6366f1" /> },
-  { label: 'Clothing', href: '/category/clothing', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Shoes', href: '/category/shoes', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Jewelry', href: '/category/jewelry', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Automotive', href: '/category/automotive', icon: <MdDirectionsBike size={12} color="#6366f1" /> },
-  { label: 'Garden', href: '/category/garden', icon: <MdOutdoorGrill size={12} color="#6366f1" /> },
-  { label: 'Pets', href: '/category/pets', icon: <MdPets size={12} color="#6366f1" /> },
-  { label: 'Health', href: '/category/health', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Baby', href: '/category/baby', icon: <MdOutlineBuild size={12} color="#6366f1" /> },
-  { label: 'Software', href: '/category/software', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Industrial', href: '/category/industrial', icon: <MdOutlineBuild size={12} color="#6366f1" /> },
-  { label: 'Art', href: '/category/art', icon: <BsFillPaletteFill size={12} color="#6366f1" /> },
-  { label: 'Music', href: '/category/music', icon: <BsMusicNote size={12} color="#6366f1" /> },
-  { label: 'Travel', href: '/category/travel', icon: <FiTag size={12} color="#6366f1" /> },
-  { label: 'Movies', href: '/category/movies', icon: <BsFillCollectionFill size={12} color="#6366f1" /> },
-  { label: 'Collectibles', href: '/category/collectibles', icon: <BsFillCollectionFill size={12} color="#6366f1" /> },
+  { label: 'Phones', href: '/category/phones', icon: <MdPhoneIphone size={12} color="#111827" /> },
+  { label: 'Laptops', href: '/category/laptops', icon: <MdLaptopMac size={12} color="#111827" /> },
+  { label: 'Watches', href: '/category/watches', icon: <MdWatch size={12} color="#111827" /> },
+  { label: 'Kitchen', href: '/category/kitchen', icon: <MdOutlineKitchen size={12} color="#111827" /> },
+  { label: 'Sports', href: '/category/sports', icon: <MdSportsBasketball size={12} color="#111827" /> },
+  { label: 'Toys', href: '/category/toys', icon: <MdToys size={12} color="#111827" /> },
+  { label: 'Cameras', href: '/category/cameras', icon: <MdCameraAlt size={12} color="#111827" /> },
+  { label: 'Fitness', href: '/category/fitness', icon: <MdFitnessCenter size={12} color="#111827" /> },
+  { label: 'Books', href: '/category/books', icon: <MdBook size={12} color="#111827" /> },
+  { label: 'Beauty', href: '/category/beauty', icon: <MdFace size={12} color="#111827" /> },
+  { label: 'Phone Accessories', href: '/category/phone-accessories', icon: <MdPhoneAndroid size={12} color="#111827" /> },
+  { label: 'Gaming', href: '/category/gaming', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Home Decor', href: '/category/home-decor', icon: <MdOutlineChair size={12} color="#111827" /> },
+  { label: 'Audio', href: '/category/audio', icon: <MdHeadsetMic size={12} color="#111827" /> },
+  { label: 'Office', href: '/category/office', icon: <MdOutlineLocalLibrary size={12} color="#111827" /> },
+  { label: 'Clothing', href: '/category/clothing', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Shoes', href: '/category/shoes', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Jewelry', href: '/category/jewelry', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Automotive', href: '/category/automotive', icon: <MdDirectionsBike size={12} color="#111827" /> },
+  { label: 'Garden', href: '/category/garden', icon: <MdOutdoorGrill size={12} color="#111827" /> },
+  { label: 'Pets', href: '/category/pets', icon: <MdPets size={12} color="#111827" /> },
+  { label: 'Health', href: '/category/health', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Baby', href: '/category/baby', icon: <MdOutlineBuild size={12} color="#111827" /> },
+  { label: 'Software', href: '/category/software', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Industrial', href: '/category/industrial', icon: <MdOutlineBuild size={12} color="#111827" /> },
+  { label: 'Art', href: '/category/art', icon: <BsFillPaletteFill size={12} color="#111827" /> },
+  { label: 'Music', href: '/category/music', icon: <BsMusicNote size={12} color="#111827" /> },
+  { label: 'Travel', href: '/category/travel', icon: <FiTag size={12} color="#111827" /> },
+  { label: 'Movies', href: '/category/movies', icon: <BsFillCollectionFill size={12} color="#111827" /> },
+  { label: 'Collectibles', href: '/category/collectibles', icon: <BsFillCollectionFill size={12} color="#111827" /> },
 ];
 
 // Animation variants for close icon hover effect
@@ -115,12 +115,12 @@ const closeIconMotion = {
 
 // Animation variants for category item hover tilt effect
 const categoryItemMotion = {
-  initial: { rotateX: 0, rotateY: 0, scale: 1, color: '#d1d5db' },
+  initial: { rotateX: 0, rotateY: 0, scale: 1, color: '#111827' },
   hover: {
     scale: 1.07,
     rotateX: 7,
     rotateY: 12,
-    color: '#6366f1',
+    color: '#111827',
     transition: { type: 'spring', stiffness: 300, damping: 20, color: { duration: 0.3 } },
   },
 };
@@ -161,10 +161,10 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex md:ml-[-10px] items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-amber-700"
+            className="flex md:ml-[-10px] items-center space-x-1 focus:outline-none focus:ring-2 focus:ring-black"
             style={{ position: 'relative', left: 0 }}
           >
-            <span className="text-[22px] font-extrabold tracking-tight text-[#B45309] select-text">e</span>
+            <span className="text-[22px] font-extrabold tracking-tight text-[#111827] select-text">e</span>
             <span className="text-[14px] font-semibold tracking-wide">Store</span>
           </Link>
 
@@ -190,10 +190,10 @@ export default function Header() {
                       onClick={toggleCategoriesMenu}
                       aria-haspopup="true"
                       aria-expanded={isCategoriesOpen}
-                      className={`flex items-center gap-1 transition font-normal px-2 py-2 focus:outline-none focus:ring-2 focus:ring-amber-700 rounded text-[12px] ${
+                      className={`flex items-center gap-1 transition font-normal px-2 py-2 focus:outline-none focus:ring-2 focus:ring-black rounded text-[12px] ${
                         isCategoriesOpen
-                          ? 'text-amber-600 underline decoration-amber-700'
-                          : 'hover:text-amber-600'
+                          ? 'text-black underline decoration-black'
+                          : 'hover:text-black'
                       }`}
                     >
                       {icon}
@@ -233,9 +233,9 @@ export default function Header() {
                                   onClick={() => setCategoriesOpen(false)}
                                   role="menuitem"
                                   tabIndex={0}
-                                  className="flex items-center gap-2 w-full text-amber-500 transition font-normal text-[12px] truncate"
+                                  className="flex items-center gap-2 w-full text-black transition font-normal text-[12px] truncate"
                                 >
-                                  <motion.span layoutId={`icon-${label}`} className="text-amber-600">
+                                  <motion.span layoutId={`icon-${label}`} className="text-black">
                                     {icon}
                                   </motion.span>
                                   <motion.span layoutId={`text-${label}`}>{label}</motion.span>
@@ -254,8 +254,8 @@ export default function Header() {
                 <Link
                   key={label}
                   href={href}
-                  className={`relative flex items-center gap-1 px-2 py-2 text-[11px] transition rounded focus:outline-none focus:ring-2 focus:ring-amber-700 font-normal ${
-                    checkActiveLink(href) ? 'text-amber-600' : 'text-gray-700 hover:text-gray-700'
+                  className={`relative flex items-center gap-1 px-2 py-2 text-[11px] transition rounded focus:outline-none focus:ring-2 focus:ring-black font-normal ${
+                    checkActiveLink(href) ? 'text-black' : 'text-gray-700 hover:text-gray-700'
                   }`}
                   aria-current={checkActiveLink(href) ? 'page' : undefined}
                 >
@@ -269,7 +269,7 @@ export default function Header() {
           {/* Mobile menu toggle button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700"
+            className="md:hidden flex items-center justify-center p-2 rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             aria-label={isMobileMenuVisible ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuVisible}
             style={{ marginLeft: 'auto' }}
@@ -281,10 +281,10 @@ export default function Header() {
                 initial="initial"
                 whileHover="hover"
               >
-                <FiX size={24} color="#ddd" />
+                <FiX size={24} color="#111827" />
               </motion.div>
             ) : (
-              <FiMenu size={24} color="#ddd" />
+              <FiMenu size={24} color="#111827" />
             )}
           </button>
         </div>
@@ -319,7 +319,7 @@ export default function Header() {
                         aria-expanded={isCategoriesOpen}
                       >
                         <span className="flex items-center gap-2">
-                          {React.cloneElement(icon, { color: '#6366f1', size: 18 })}
+                          {React.cloneElement(icon, { color: '#111827', size: 18 })}
                           {label}
                         </span>
                         {isCategoriesOpen ? <FiChevronUp size={18} aria-hidden="true" /> : <FiChevronDown size={18} aria-hidden="true" />}
@@ -342,11 +342,11 @@ export default function Header() {
                                     setMobileMenuVisible(false);
                                     setCategoriesOpen(false);
                                   }}
-                                  className="flex items-center gap-2 px-3 py-1 text-amber-500 hover:text-amber-600 rounded font-normal text-sm"
+                                  className="flex items-center gap-2 px-3 py-1 text-black hover:text-black rounded font-normal text-sm"
                                   role="menuitem"
                                   tabIndex={0}
                                 >
-                                  {React.cloneElement(icon, { color: '#6366f1', size: 18 })}
+                                  {React.cloneElement(icon, { color: '#111827', size: 18 })}
                                   {label}
                                 </Link>
                               </li>
@@ -364,7 +364,7 @@ export default function Header() {
                       href={href}
                       onClick={() => setMobileMenuVisible(false)}
                       className={`flex items-center gap-2 px-3 py-2 rounded font-normal text-sm ${
-                        checkActiveLink(href) ? 'text-amber-600' : 'text-gray-700 hover:text-gray-700'
+                        checkActiveLink(href) ? 'text-black' : 'text-gray-700 hover:text-gray-700'
                       } hover:bg-gray-500`}
                       aria-current={checkActiveLink(href) ? 'page' : undefined}
                     >

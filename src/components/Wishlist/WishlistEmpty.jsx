@@ -19,7 +19,7 @@ const WishlistEmpty = () => {
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mx-auto mb-6 text-amber-400"
+          className="mx-auto mb-6 text-black"
         >
           <FiHeart size={60} className="animate-pulse drop-shadow-md" />
         </motion.div>
@@ -53,7 +53,7 @@ const WishlistEmpty = () => {
           <Link href="/shop" passHref>
             <button
               type="button"
-              className="mt-8 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 font-semibold shadow-lg hover:from-amber-500 hover:to-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-all duration-200"
+              className="mt-8 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 rounded-full bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold shadow-lg hover:from-black hover:to-gray-900 focus:outline-none focus:ring-4 focus:ring-black transition-all duration-200"
             >
               Start Shopping
             </button>

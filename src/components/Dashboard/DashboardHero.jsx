@@ -17,10 +17,10 @@ const DashboardHero = () => {
       try {
         // In real app, fetch from API here
         setStats([
-          { label: 'Revenue', value: '$24,500', icon: <LineChart className="text-amber-600" aria-hidden="true" /> },
-          { label: 'Orders', value: '1,258', icon: <LineChart className="text-amber-600" aria-hidden="true" /> },
-          { label: 'Active Users', value: '540', icon: <LineChart className="text-amber-600" aria-hidden="true" /> },
-          { label: 'Growth', value: '12.8%', icon: <LineChart className="text-amber-600" aria-hidden="true" /> },
+          { label: 'Revenue', value: '$24,500', icon: <LineChart className="text-black" aria-hidden="true" /> },
+          { label: 'Orders', value: '1,258', icon: <LineChart className="text-black" aria-hidden="true" /> },
+          { label: 'Active Users', value: '540', icon: <LineChart className="text-black" aria-hidden="true" /> },
+          { label: 'Growth', value: '12.8%', icon: <LineChart className="text-black" aria-hidden="true" /> },
         ]);
         setLoading(false);
       } catch (e) {
@@ -56,7 +56,7 @@ const DashboardHero = () => {
         {/* Top Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 sm:gap-0">
           <div>
-            <h1 className="text-3xl font-bold text-amber-600 leading-tight select-none">
+            <h1 className="text-3xl font-bold text-black leading-tight select-none">
               Welcome back, Niaz <span aria-label="waving hand emoji" role="img"></span>
             </h1>
             <p className="text-sm text-gray-600 mt-1 max-w-[380px]">
@@ -68,7 +68,7 @@ const DashboardHero = () => {
             {/* Notifications Button */}
             <button
               aria-label="View notifications"
-              className="text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded p-2"
+              className="text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded p-2"
               title="Notifications"
             >
               <Bell className="w-6 h-6" />
@@ -77,7 +77,7 @@ const DashboardHero = () => {
             {/* Settings Button */}
             <button
               aria-label="Settings"
-              className="text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded p-2"
+              className="text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded p-2"
               title="Settings"
             >
               <Settings className="w-6 h-6" />
@@ -90,7 +90,7 @@ const DashboardHero = () => {
                 onClick={toggleUserMenu}
                 aria-haspopup="true"
                 aria-expanded={userMenuOpen}
-                className="w-10 h-10 rounded-full bg-amber-600 text-black flex items-center justify-center font-semibold shadow-lg hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600 transition select-none"
+                className="w-10 h-10 rounded-full bg-black text-black flex items-center justify-center font-semibold shadow-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-black transition select-none"
                 title="User menu"
               >
                 N
@@ -108,7 +108,7 @@ const DashboardHero = () => {
                       href="#profile"
                       role="menuitem"
                       tabIndex={0}
-                      className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                      className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     >
                       Profile
                     </a>
@@ -118,7 +118,7 @@ const DashboardHero = () => {
                       href="#settings"
                       role="menuitem"
                       tabIndex={0}
-                      className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                      className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     >
                       Settings
                     </a>
@@ -131,7 +131,7 @@ const DashboardHero = () => {
                       href="#logout"
                       role="menuitem"
                       tabIndex={0}
-                      className="block px-4 py-2 hover:bg-red-600 hover:text-gray-900 transition cursor-pointer"
+                      className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     >
                       Logout
                     </a>
@@ -148,7 +148,7 @@ const DashboardHero = () => {
             onClick={fetchStats}
             disabled={loading}
             aria-label="Refresh statistics"
-            className="flex items-center gap-2 text-amber-600 hover:text-amber-500 transition disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="flex items-center gap-2 text-black hover:text-black transition disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             <RefreshCcw className={`w-5 h-5 animate-spin ${loading ? 'inline-block' : 'hidden'}`} aria-hidden="true" />
             {!loading && <RefreshCcw className="w-5 h-5" aria-hidden="true" />}
@@ -172,13 +172,13 @@ const DashboardHero = () => {
               >
                 <div className="space-y-3 w-full max-w-[150px]">
                   <div className="h-4 bg-white rounded w-3/4"></div>
-                  <div className="h-6 bg-amber-900 rounded w-1/2"></div>
+                  <div className="h-6 bg-black rounded w-1/2"></div>
                 </div>
-                <div className="w-6 h-6 bg-amber-900 rounded"></div>
+                <div className="w-6 h-6 bg-black rounded"></div>
               </div>
             ))
           ) : error ? (
-            <p className="text-red-500 col-span-full text-center">{error}</p>
+            <p className="text-black col-span-full text-center">{error}</p>
           ) : (
             stats.map((item, index) => (
               <div
@@ -190,9 +190,9 @@ const DashboardHero = () => {
               >
                 <div>
                   <p className="text-sm text-gray-600">{item.label}</p>
-                  <h2 className="text-xl font-bold text-amber-500 mt-1">{item.value}</h2>
+                  <h2 className="text-xl font-bold text-black mt-1">{item.value}</h2>
                 </div>
-                <div aria-hidden="true" className="text-amber-600">
+                <div aria-hidden="true" className="text-black">
                   {item.icon}
                 </div>
               </div>

@@ -26,9 +26,9 @@ const AccountLogout = () => {
         onClick={handleLogout}
         aria-label="Log out from your account"
         className="
-          bg-red-600 
-          hover:bg-red-700 
-          active:bg-red-800
+          bg-black 
+          hover:bg-black 
+          active:bg-black
           text-gray-900 
           px-10 py-4 
           rounded-full 
@@ -41,7 +41,7 @@ const AccountLogout = () => {
           hover:scale-[1.05]
           focus:outline-none 
           focus-visible:ring-4 
-          focus-visible:ring-red-500 
+          focus-visible:ring-black 
           focus-visible:ring-opacity-75
           select-none
         "

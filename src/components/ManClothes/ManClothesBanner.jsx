@@ -46,14 +46,14 @@ const ManClothesBanner = () => {
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 h-full flex flex-col justify-center"
       >
         {/* Discount Badge */}
-        <div className="bg-amber-600 text-black font-semibold text-xs sm:text-sm px-3 py-1 rounded-full w-fit mb-4 shadow-md">
+        <div className="bg-black text-black font-semibold text-xs sm:text-sm px-3 py-1 rounded-full w-fit mb-4 shadow-md">
            Limited Time Deal
         </div>
 
         {/* ✅ Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 max-w-2xl leading-tight mb-4">
           Upgrade Your Wardrobe with{" "}
-          <span className="text-amber-600">Premium</span> Styles
+          <span className="text-black">Premium</span> Styles
         </h1>
 
         {/* ✅ Subheading */}
@@ -70,10 +70,10 @@ const ManClothesBanner = () => {
 
         {/* ✅ Buttons */}
         <div className="flex flex-wrap gap-4">
-          <button className="flex items-center gap-2 bg-amber-700 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-amber-600 transition text-sm sm:text-base">
+          <button className="flex items-center gap-2 bg-black text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-black transition text-sm sm:text-base">
             <ShoppingCart size={18} /> Shop Now
           </button>
-          <button className="flex items-center gap-2 border border-amber-600 text-amber-600 px-5 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-amber-600 hover:text-black transition text-sm sm:text-base">
+          <button className="flex items-center gap-2 border border-black text-black px-5 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-black hover:text-black transition text-sm sm:text-base">
             View Collection <ArrowRight size={18} />
           </button>
         </div>

@@ -591,7 +591,7 @@ const PetsProductGrid = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h2 className="text-2xl font-bold">Pet Essentials Collection</h2>
           <div className="flex items-center gap-3">
-            <label htmlFor="sort" className="text-amber-600 font-semibold">
+            <label htmlFor="sort" className="text-black font-semibold">
               Sort By:
             </label>
             <select
@@ -628,12 +628,12 @@ const PetsProductGrid = () => {
                 {/* Hover Overlay */}
                 {hoveredId === item.id && (
                   <div className="absolute inset-0 bg-white/60 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
-                    <button className="bg-amber-600 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition flex items-center gap-2">
+                    <button className="bg-black text-black px-5 py-2 rounded-full font-semibold hover:bg-black transition flex items-center gap-2">
                       <FaCartPlus /> Add to Cart
                     </button>
                     <div className="flex gap-4 text-xl text-gray-900">
-                      <FaHeart className="cursor-pointer hover:text-amber-600" />
-                      <FaEye className="cursor-pointer hover:text-amber-600" />
+                      <FaHeart className="cursor-pointer hover:text-black" />
+                      <FaEye className="cursor-pointer hover:text-black" />
                     </div>
                   </div>
                 )}
@@ -644,7 +644,7 @@ const PetsProductGrid = () => {
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-gray-600 text-sm">{item.brand}</p>
                 <div className="flex justify-between items-center">
-                  <p className="text-xl font-bold text-amber-600">
+                  <p className="text-xl font-bold text-black">
                     ${item.price}
                   </p>
                   <span className="text-sm text-gray-700">{item.rating}★</span>
@@ -664,7 +664,7 @@ const PetsProductGrid = () => {
 
                 <p
                   className={`text-sm font-semibold mt-2 ${
-                    item.stock ? "text-green-400" : "text-red-400"
+                    item.stock ? "text-black" : "text-black"
                   }`}
                 >
                   {item.stock ? "In Stock" : "Out of Stock"}
@@ -679,7 +679,7 @@ const PetsProductGrid = () => {
           {visibleCount < petsData.length && (
             <button
               onClick={handleLoadMore}
-              className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+              className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition"
             >
               Load More
             </button>

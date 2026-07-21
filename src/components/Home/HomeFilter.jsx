@@ -99,7 +99,7 @@ export default function ShopByCategory() {
   return (
     <section className="bg-gradient-to-b from-white mb-[-30px] text-gray-900 px-4 py-16">
       <div className="max-w-[1200px] mx-auto">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-10 my-[-10px] text-center text-amber-600">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-10 my-[-10px] text-center text-black">
   Shop by Category
 </h2>
 
@@ -135,7 +135,7 @@ export default function ShopByCategory() {
           transition-shadow duration-300
           ${
             isSelected
-              ? 'bg-amber-600 text-black border-amber-600 shadow-lg'
+              ? 'bg-black text-black border-black shadow-lg'
               : 'border-gray-200 text-gray-900 hover:bg-gray-500 hover:text-black hover:shadow-md'
           }
         `}
@@ -189,7 +189,7 @@ export default function ShopByCategory() {
                 <div className="absolute top-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                   <Link href="/wishlist" passHref>
                     <button
-                      className="bg-white p-2 rounded-full shadow hover:bg-amber-600 transition cursor-pointer"
+                      className="bg-white p-2 rounded-full shadow hover:bg-black transition cursor-pointer"
                       aria-label="Add to wishlist"
                     >
                       <FiHeart className="text-black text-base" />
@@ -197,7 +197,7 @@ export default function ShopByCategory() {
                   </Link>
                   <Link href={`/product`} passHref>
                     <button
-                      className="bg-white p-2 rounded-full shadow hover:bg-amber-600 transition cursor-pointer"
+                      className="bg-white p-2 rounded-full shadow hover:bg-black transition cursor-pointer"
                       aria-label={`View details of ${product.title}`}
                     >
                       <FiEye className="text-black text-base" />
@@ -205,7 +205,7 @@ export default function ShopByCategory() {
                   </Link>
                   <Link href="/cart" passHref>
                     <button
-                      className="bg-white p-2 rounded-full shadow hover:bg-amber-600 transition cursor-pointer"
+                      className="bg-white p-2 rounded-full shadow hover:bg-black transition cursor-pointer"
                       aria-label="Add to cart"
                     >
                       <FiShoppingCart className="text-black text-base" />
@@ -229,7 +229,7 @@ export default function ShopByCategory() {
                   <p className="text-sm text-gray-600">{product.description}</p>
 
                   <div
-                    className="flex items-center gap-1 text-amber-600 text-sm"
+                    className="flex items-center gap-1 text-black text-sm"
                     aria-label={`Rating: ${product.rating} out of 5 stars`}
                   >
                     {[...Array(5)].map((_, i) => (
@@ -237,7 +237,7 @@ export default function ShopByCategory() {
                         key={i}
                         className={
                           i < product.rating
-                            ? 'fill-current text-amber-600'
+                            ? 'fill-current text-black'
                             : 'opacity-30'
                         }
                         aria-hidden="true"
@@ -251,7 +251,7 @@ export default function ShopByCategory() {
                     <FiMessageCircle className="text-lg" />
                     <button
                       onClick={() => setCurrentProduct(product)}
-                      className="hover:underline text-amber-800"
+                      className="hover:underline text-black"
                       aria-haspopup="dialog"
                       aria-controls="review-dialog"
                       aria-expanded={currentProduct?.id === product.id}
@@ -270,7 +270,7 @@ export default function ShopByCategory() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setVisibleCount((count) => count + 3)}
-              className="bg-amber-600 text-black font-semibold px-8 py-3 rounded shadow hover:bg-amber-700 transition"
+              className="bg-black text-black font-semibold px-8 py-3 rounded shadow hover:bg-black transition"
               aria-label="Show more products"
             >
               Show More
@@ -320,7 +320,7 @@ export default function ShopByCategory() {
                 setReviewText('');
                 setReviewRating(0);
               }}
-              className="absolute top-3 right-3 text-gray-900 text-xl hover:text-amber-600 transition"
+              className="absolute top-3 right-3 text-gray-900 text-xl hover:text-black transition"
               aria-label="Close reviews"
             >
               <FiX />
@@ -347,7 +347,7 @@ export default function ShopByCategory() {
                   text-sm
                   text-gray-900
                   mb-2
-                  focus:outline-none focus:ring-2 focus:ring-amber-600
+                  focus:outline-none focus:ring-2 focus:ring-black
                   resize-none
                 "
                 rows={4}
@@ -364,7 +364,7 @@ export default function ShopByCategory() {
                     onClick={() => setReviewRating(star)}
                     className={`cursor-pointer transition-colors ${
                       star <= reviewRating
-                        ? 'fill-amber-600 text-amber-600'
+                        ? 'fill-black text-black'
                         : 'text-gray-600'
                     }`}
                     role="radio"
@@ -379,7 +379,7 @@ export default function ShopByCategory() {
               </div>
               <button
                 onClick={submitReview}
-                className="bg-amber-600 text-black px-4 py-2 rounded font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition"
+                className="bg-black text-black px-4 py-2 rounded font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition"
                 disabled={!reviewText.trim() || reviewRating === 0}
                 aria-disabled={!reviewText.trim() || reviewRating === 0}
               >
@@ -404,7 +404,7 @@ export default function ShopByCategory() {
                 >
                   <header className="flex items-center justify-between mb-1">
                     <div
-                      className="flex items-center gap-2 text-amber-600 text-sm"
+                      className="flex items-center gap-2 text-black text-sm"
                       aria-label={`Rating: ${
                         comment.stars ?? currentProduct.rating
                       } out of 5 stars`}
@@ -430,7 +430,7 @@ export default function ShopByCategory() {
                   <footer className="flex gap-6 text-xs text-gray-600 items-center">
                     <button
                       type="button"
-                      className="cursor-pointer flex items-center gap-1 hover:text-amber-600 transition"
+                      className="cursor-pointer flex items-center gap-1 hover:text-black transition"
                       aria-label={`${comment.likes} likes`}
                     >
                       <FiHeart />
@@ -510,7 +510,7 @@ function ReplyInput({ commentId, onSubmit }) {
       />
       <button
         onClick={handleSend}
-        className="text-black text-xl p-1 hover:text-amber-600 transition"
+        className="text-black text-xl p-1 hover:text-black transition"
         aria-label="Send reply"
       >
         <FiSend />

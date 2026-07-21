@@ -17,14 +17,14 @@ export default function RewardingPointsTracker() {
         {/* Points summary with icon */}
         <div className="flex items-center gap-4">
           <div
-            className="bg-white border-4 border-amber-600 rounded-2xl w-20 h-20 flex items-center justify-center shadow-lg"
+            className="bg-white border-4 border-black rounded-2xl w-20 h-20 flex items-center justify-center shadow-lg"
             aria-hidden="true"
           >
-            <FaStar className="text-amber-600 text-3xl" />
+            <FaStar className="text-black text-3xl" />
           </div>
           <div>
             <p className="text-sm text-gray-600">Your Points</p>
-            <h2 className="text-2xl font-bold text-amber-500">{currentPoints} pts</h2>
+            <h2 className="text-2xl font-bold text-black">{currentPoints} pts</h2>
             <p className="text-xs text-gray-500">Next reward unlocks at {nextTier} pts</p>
           </div>
         </div>
@@ -33,18 +33,18 @@ export default function RewardingPointsTracker() {
         <div className="flex-1 w-full max-w-md" role="progressbar" aria-valuenow={currentPoints} aria-valuemin={0} aria-valuemax={nextTier} aria-label="Points progress">
           <div className="flex items-center justify-between mb-1">
             <span className="text-xs text-gray-600">Progress</span>
-            <span className="text-xs text-amber-600 font-semibold">{progressPercent}%</span>
+            <span className="text-xs text-black font-semibold">{progressPercent}%</span>
           </div>
 
           <div className="w-full h-3 bg-white rounded-full overflow-hidden" aria-hidden="true">
             <div
-              className="h-full bg-amber-600 rounded-full transition-all duration-500"
+              className="h-full bg-black rounded-full transition-all duration-500"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
 
           <div className="flex items-center text-xs text-gray-600 mt-2 gap-1">
-            <FaArrowUp className="text-amber-500" aria-hidden="true" />
+            <FaArrowUp className="text-black" aria-hidden="true" />
             <span>You're {nextTier - currentPoints} points away from your next tier!</span>
           </div>
         </div>

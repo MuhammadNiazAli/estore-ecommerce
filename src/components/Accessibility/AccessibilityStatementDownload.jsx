@@ -52,12 +52,12 @@ const AccessibilityStatementDownload = () => {
           transition={{ duration: 0.5 }}
         >
           <FileText
-            className="w-12 h-12 text-amber-600 mx-auto mb-4"
+            className="w-12 h-12 text-black mx-auto mb-4"
             aria-hidden="true"
           />
           <h2
             id="accessibility-download-heading"
-            className="text-3xl sm:text-4xl font-bold text-amber-500"
+            className="text-3xl sm:text-4xl font-bold text-black"
           >
             Download Our Accessibility Statement
           </h2>
@@ -76,10 +76,10 @@ const AccessibilityStatementDownload = () => {
             onClick={handleDownload}
             disabled={isDownloading}
             aria-disabled={isDownloading}
-            className={`inline-flex items-center gap-2 bg-amber-600 text-black font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-opacity-50
+            className={`inline-flex items-center gap-2 bg-black text-black font-semibold px-6 py-3 rounded-xl shadow-md transition duration-300 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50
               ${
                 isDownloading
-                  ? 'cursor-not-allowed opacity-60 hover:bg-amber-600'
+                  ? 'cursor-not-allowed opacity-60 hover:bg-black'
                   : 'hover:brightness-110'
               }
             `}
@@ -100,7 +100,7 @@ const AccessibilityStatementDownload = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.4 }}
-              className="text-green-400 text-sm font-semibold pt-2"
+              className="text-black text-sm font-semibold pt-2"
               role="alert"
               aria-live="polite"
             >

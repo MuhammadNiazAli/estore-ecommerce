@@ -79,13 +79,13 @@ const ReviewFAQ = () => {
               <div className="flex justify-between items-center">
                 <h3
                   id={`faq-question-${idx}`}
-                  className="text-lg font-semibold text-amber-400"
+                  className="text-lg font-semibold text-black"
                 >
                   {question}
                 </h3>
                 <motion.span
                   aria-hidden="true"
-                  className="text-amber-400 font-bold text-2xl select-none"
+                  className="text-black font-bold text-2xl select-none"
                   animate={{ rotate: isOpen ? 45 : 0 }}
                   transition={{ duration: 0.3 }}
                 >

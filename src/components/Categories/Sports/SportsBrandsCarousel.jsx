@@ -121,7 +121,7 @@ const SportsBrandsCarousel = () => {
   };
 
   return (
-    <section className="bg-white py-14 text-amber-600 mb-[-50px]">
+    <section className="bg-white py-14 text-black mb-[-50px]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -136,7 +136,7 @@ const SportsBrandsCarousel = () => {
           {/* Left Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-amber-600 p-3 rounded-full shadow-lg z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-black p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Left"
           >
             <FaChevronLeft size={20} />
@@ -173,7 +173,7 @@ const SportsBrandsCarousel = () => {
           {/* Right Button */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-amber-600 p-3 rounded-full shadow-lg z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-500 text-black p-3 rounded-full shadow-lg z-10"
             aria-label="Scroll Right"
           >
             <FaChevronRight size={20} />

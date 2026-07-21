@@ -35,7 +35,7 @@ const BestdealsTestimonials = () => {
       <div className="max-w-[1000px] w-full">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
-          What Our <span className="text-amber-600">Customers</span> Say
+          What Our <span className="text-black">Customers</span> Say
         </h2>
 
         {/* Testimonials Grid */}
@@ -49,7 +49,7 @@ const BestdealsTestimonials = () => {
               <img
                 src={item.photo}
                 alt={item.name}
-                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover border-2 border-amber-600"
+                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover border-2 border-black"
               />
               {/* Name */}
               <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
@@ -59,7 +59,7 @@ const BestdealsTestimonials = () => {
                   <Star
                     key={i}
                     className={`w-4 h-4 ${
-                      i < item.rating ? 'text-amber-600 fill-amber-600' : 'text-gray-600'
+                      i < item.rating ? 'text-black fill-black' : 'text-gray-600'
                     }`}
                   />
                 ))}

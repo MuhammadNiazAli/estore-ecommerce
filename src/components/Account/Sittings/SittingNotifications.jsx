@@ -41,7 +41,7 @@ const NotificationSettings = () => {
             className="flex items-center justify-between bg-white border border-gray-200 px-4 py-3 rounded-xl"
           >
             <div className="flex items-center gap-3">
-              <span className="text-amber-600 text-xl">{icon}</span>
+              <span className="text-black text-xl">{icon}</span>
               <span className="text-sm font-medium">{label}</span>
             </div>
 
@@ -52,7 +52,7 @@ const NotificationSettings = () => {
               aria-label={`Toggle ${label}`}
               onClick={() => togglePreference(id)}
               className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
-                preferences[id] ? 'bg-amber-700' : 'bg-white'
+                preferences[id] ? 'bg-black' : 'bg-white'
               }`}
             >
               <span

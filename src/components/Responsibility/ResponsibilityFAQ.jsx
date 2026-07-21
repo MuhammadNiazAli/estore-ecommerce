@@ -75,7 +75,7 @@ const ResponsibilityFAQ = () => {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
-                  className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left text-amber-600 font-semibold text-base sm:text-lg md:text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 rounded-lg transition"
+                  className="w-full flex items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left text-black font-semibold text-base sm:text-lg md:text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-black rounded-lg transition"
                 >
                   {faq.question}
                   <motion.div
@@ -85,9 +85,9 @@ const ResponsibilityFAQ = () => {
                     aria-hidden="true"
                   >
                     {isOpen ? (
-                      <Minus className="w-5 h-5 text-amber-600" />
+                      <Minus className="w-5 h-5 text-black" />
                     ) : (
-                      <Plus className="w-5 h-5 text-amber-600" />
+                      <Plus className="w-5 h-5 text-black" />
                     )}
                   </motion.div>
                 </button>

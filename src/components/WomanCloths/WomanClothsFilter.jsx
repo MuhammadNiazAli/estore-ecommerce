@@ -915,12 +915,12 @@ const WomanClothsFilter = () => {
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background: linear-gradient(90deg, #b45309, #d97706);
+          background: linear-gradient(90deg, #111827, #111827);
           border-radius: 10px;
           border: 2px solid #ffffff;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(90deg, #b45309, #b45309);
+          background: linear-gradient(90deg, #111827, #111827);
         }
       `}</style>
 
@@ -938,7 +938,7 @@ const WomanClothsFilter = () => {
                 }}
                 className={`px-3 py-1 md:px-4 md:py-2 rounded-md text-xs md:text-sm font-medium transition whitespace-nowrap ${
                   selectedCategory === cat
-                    ? "bg-amber-700 text-gray-900"
+                    ? "bg-black text-gray-900"
                     : "bg-white hover:bg-gray-500"
                 }`}
               >
@@ -961,7 +961,7 @@ const WomanClothsFilter = () => {
                 setPriceRange(Number(e.target.value));
                 setVisibleCount(20);
               }}
-              className="w-28 md:w-40 accent-amber-700"
+              className="w-28 md:w-40 accent-black"
             />
           </div>
 
@@ -976,7 +976,7 @@ const WomanClothsFilter = () => {
                 }}
                 className={`px-2 md:px-3 py-1 rounded-md text-xs font-medium transition border whitespace-nowrap ${
                   selectedColor === clr
-                    ? "bg-amber-700 text-gray-900 border-amber-700"
+                    ? "bg-black text-gray-900 border-black"
                     : "border-gray-200 text-gray-700 hover:bg-gray-500"
                 }`}
               >
@@ -1004,10 +1004,10 @@ const WomanClothsFilter = () => {
                     {product.title}
                   </h3>
                   <p className="text-xs text-gray-600">{product.category}</p>
-                  <p className="text-amber-700 font-bold mt-1 md:mt-2">
+                  <p className="text-black font-bold mt-1 md:mt-2">
                     ${product.price}
                   </p>
-                  <button className="mt-2 w-full bg-amber-700 text-gray-900 py-1.5 md:py-2 rounded-md hover:bg-amber-600 transition text-sm font-medium">
+                  <button className="mt-2 w-full bg-black text-gray-900 py-1.5 md:py-2 rounded-md hover:bg-black transition text-sm font-medium">
                     Add to Cart
                   </button>
                 </div>
@@ -1026,7 +1026,7 @@ const WomanClothsFilter = () => {
             <button
               onClick={handleShowMore}
               disabled={loading}
-              className="bg-amber-700 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-amber-600 transition"
+              className="bg-black text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-black transition"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">

@@ -71,7 +71,7 @@ const StarRating = ({ rating }) => {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600"
+          className="w-4 h-4 sm:w-5 sm:h-5 text-black"
           aria-hidden="true"
         >
           <path
@@ -110,7 +110,7 @@ const BestsellersTestimonials = () => {
 
   return (
     <section className="max-w-[95%] sm:max-w-[750px] md:max-w-[900px] mx-auto p-4 sm:p-6 bg-white rounded-xl shadow-lg select-none mt-4 my-[-30px] mb-8">
-      <h2 className="text-amber-600 text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-10 text-center tracking-wide">
+      <h2 className="text-black text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-10 text-center tracking-wide">
         What Our Customers Say
       </h2>
 
@@ -128,21 +128,21 @@ const BestsellersTestimonials = () => {
               <img
                 src={t.avatar}
                 alt={`${t.name} avatar`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-amber-600 object-cover shadow-md mb-3 sm:mb-0"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-black object-cover shadow-md mb-3 sm:mb-0"
                 loading="lazy"
               />
               <div>
-                <h3 className="text-amber-500 font-semibold text-lg sm:text-xl leading-tight">
+                <h3 className="text-black font-semibold text-lg sm:text-xl leading-tight">
                   {t.name}
                 </h3>
-                <p className="text-amber-700 text-xs sm:text-sm mb-1">{t.title}</p>
+                <p className="text-black text-xs sm:text-sm mb-1">{t.title}</p>
                 <StarRating rating={t.rating} />
               </div>
             </div>
 
             {/* Content */}
             <p
-              className="text-amber-200 text-xs sm:text-sm leading-relaxed tracking-wide whitespace-pre-line overflow-y-auto flex-grow pr-2"
+              className="text-black text-xs sm:text-sm leading-relaxed tracking-wide whitespace-pre-line overflow-y-auto flex-grow pr-2"
               style={{ scrollbarWidth: 'thin' }}
             >
               {t.content}
@@ -158,7 +158,7 @@ const BestsellersTestimonials = () => {
             key={idx}
             aria-label={`Go to testimonial ${idx + 1}`}
             className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-colors duration-300 ${
-              idx === currentIndex ? 'bg-amber-600 shadow-lg' : 'bg-amber-900 hover:bg-amber-700'
+              idx === currentIndex ? 'bg-black shadow-lg' : 'bg-black hover:bg-black'
             }`}
             onClick={() => setCurrentIndex(idx)}
             type="button"

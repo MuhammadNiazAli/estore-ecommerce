@@ -65,11 +65,11 @@ const OrderStatusTimeline = () => {
       aria-label="Order status timeline"
       className="max-w-3xl mx-auto px-6 py-10 rounded-2xl bg-white text-gray-900 space-y-10 mb-[-50px]"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-6 tracking-tight">
+      <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6 tracking-tight">
         Order Status
       </h2>
 
-      <ol className="relative border-l-[3px] border-amber-800 pl-8">
+      <ol className="relative border-l-[3px] border-black pl-8">
         {steps.map((step, idx) => {
           const isCurrent = idx === currentStepIndex;
           const isCompleted = step.completed;
@@ -85,7 +85,7 @@ const OrderStatusTimeline = () => {
               {!isLast && (
                 <span
                   aria-hidden="true"
-                  className="absolute top-8 left-[-1.2px] w-[3px] h-full bg-gradient-to-b from-amber-700 via-amber-600 to-amber-800 animate-pulse"
+                  className="absolute top-8 left-[-1.2px] w-[3px] h-full bg-gradient-to-b from-black via-gray-700 to-gray-900 animate-pulse"
                 />
               )}
 
@@ -93,9 +93,9 @@ const OrderStatusTimeline = () => {
               <span
                 className={`absolute -left-5 top-2 z-10 w-9 h-9 flex items-center justify-center rounded-full ring-4 ring-gray-200 transition-all duration-300 
                 ${isCompleted
-                    ? 'bg-amber-800 text-gray-900 shadow-md'
+                    ? 'bg-black text-gray-900 shadow-md'
                     : isCurrent
-                    ? 'bg-amber-600 text-black animate-pulse ring-amber-500'
+                    ? 'bg-black text-black animate-pulse ring-black'
                     : 'bg-white text-gray-600 group-hover:bg-gray-500 group-hover:text-gray-700'
                 }`}
               >
@@ -109,7 +109,7 @@ const OrderStatusTimeline = () => {
                     isCompleted
                       ? 'text-gray-900'
                       : isCurrent
-                      ? 'text-amber-500'
+                      ? 'text-black'
                       : 'text-gray-600'
                   }`}
                 >
@@ -118,7 +118,7 @@ const OrderStatusTimeline = () => {
 
                 {step.date && (
                   <time
-                    className="block text-sm font-medium text-amber-500 mb-1"
+                    className="block text-sm font-medium text-black mb-1"
                     dateTime={new Date(step.date).toISOString()}
                   >
                     {step.date}
@@ -130,7 +130,7 @@ const OrderStatusTimeline = () => {
                     isCompleted
                       ? 'text-gray-700'
                       : isCurrent
-                      ? 'text-amber-400'
+                      ? 'text-black'
                       : 'text-gray-500 group-hover:text-gray-600 italic'
                   }`}
                 >

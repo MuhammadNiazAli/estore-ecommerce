@@ -26,7 +26,7 @@ const OrderingDetails = ({ order }) => {
       aria-label="Order details"
       className="bg-white text-gray-800 rounded-lg p-6 max-w-4xl mx-auto lg:mx-0 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-6">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-6">
         Order Items
       </h2>
 
@@ -38,15 +38,15 @@ const OrderingDetails = ({ order }) => {
           >
             <span className="font-medium">{name}</span>
             <span className="text-gray-600">Qty: {quantity}</span>
-            <span className="font-semibold text-amber-600">
+            <span className="font-semibold text-black">
               ${(price * quantity).toFixed(2)}
             </span>
           </li>
         ))}
       </ul>
 
-      <div className="mt-6 flex justify-end border-t border-amber-600 pt-4">
-        <p className="text-lg font-bold text-amber-600">
+      <div className="mt-6 flex justify-end border-t border-black pt-4">
+        <p className="text-lg font-bold text-black">
           Total: ${totalAmount.toFixed(2)}
         </p>
       </div>

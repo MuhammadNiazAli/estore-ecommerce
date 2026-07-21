@@ -33,7 +33,7 @@ const testimonials = [
 const Star = ({ filled }) => (
   <svg
     aria-hidden="true"
-    className={`w-5 h-5 ${filled ? 'text-amber-600' : 'text-gray-600'}`}
+    className={`w-5 h-5 ${filled ? 'text-black' : 'text-gray-600'}`}
     fill="currentColor"
     viewBox="0 0 20 20"
   >
@@ -64,7 +64,7 @@ const DealTestimonials = () => {
                 <img
                   src={photo}
                   alt={name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-amber-600"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-black"
                 />
                 <div>
                   <h3 className="font-semibold text-lg">{name}</h3>

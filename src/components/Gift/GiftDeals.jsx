@@ -39,7 +39,7 @@ export default function GiftDeals() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-amber-600 text-3xl font-extrabold drop-shadow-lg">
+        <h2 className="text-black text-3xl font-extrabold drop-shadow-lg">
           Special Gift Deals
         </h2>
         <p className="text-gray-700 mt-2 max-w-lg mx-auto text-sm sm:text-base">
@@ -56,7 +56,7 @@ export default function GiftDeals() {
         {deals.map(({ id, title, img, oldPrice, newPrice, discount }) => (
           <div
             key={id}
-            className="group bg-white border border-amber-600/20 rounded-xl overflow-hidden shadow-md hover:shadow-amber-700/40 hover:scale-[1.03] transition-transform cursor-pointer"
+            className="group bg-white border border-black/20 rounded-xl overflow-hidden shadow-md hover:shadow-black/40 hover:scale-[1.03] transition-transform cursor-pointer"
           >
             <img
               src={img}
@@ -70,11 +70,11 @@ export default function GiftDeals() {
               </h3>
 
               <div className="flex items-center gap-3 mt-2">
-                <span className="text-amber-600 font-extrabold text-xl">
+                <span className="text-black font-extrabold text-xl">
                   {newPrice}
                 </span>
                 <span className="text-gray-500 line-through text-sm">{oldPrice}</span>
-                <span className="ml-auto bg-amber-600 text-gray-900 font-bold px-2 py-0.5 rounded-full text-xs">
+                <span className="ml-auto bg-black text-gray-900 font-bold px-2 py-0.5 rounded-full text-xs">
                   -{discount}
                 </span>
               </div>

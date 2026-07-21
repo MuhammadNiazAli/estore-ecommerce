@@ -28,7 +28,7 @@ const HelpCenterFeedbackForm = () => {
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white rounded-xl p-6 text-gray-900 shadow-md"
       >
-        <h2 className="text-2xl font-bold text-amber-600 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-black mb-6 text-center">
           Give Us Your Feedback
         </h2>
 
@@ -46,7 +46,7 @@ const HelpCenterFeedbackForm = () => {
               <Star
                 size={32}
                 className={`cursor-pointer transition-colors duration-200 ${
-                  (hoverRating || rating) >= star ? 'text-amber-600' : 'text-gray-600'
+                  (hoverRating || rating) >= star ? 'text-black' : 'text-gray-600'
                 }`}
               />
             </button>
@@ -54,7 +54,7 @@ const HelpCenterFeedbackForm = () => {
         </div>
 
         <textarea
-          className="w-full bg-white text-gray-900 rounded-md p-3 resize-none placeholder-gray-400 focus:outline-none focus:ring-2 ring-amber-700"
+          className="w-full bg-white text-gray-900 rounded-md p-3 resize-none placeholder-gray-400 focus:outline-none focus:ring-2 ring-black"
           rows={5}
           placeholder="Write your feedback here (optional)"
           value={feedback}
@@ -63,13 +63,13 @@ const HelpCenterFeedbackForm = () => {
 
         <button
           type="submit"
-          className="w-full mt-6 bg-amber-600 hover:bg-amber-500 text-black font-semibold py-2 rounded-md transition"
+          className="w-full mt-6 bg-black hover:bg-black text-black font-semibold py-2 rounded-md transition"
         >
           Submit Feedback
         </button>
 
         {submitted && (
-          <p className="text-green-400 text-center mt-4">
+          <p className="text-black text-center mt-4">
             Thank you for your feedback!
           </p>
         )}

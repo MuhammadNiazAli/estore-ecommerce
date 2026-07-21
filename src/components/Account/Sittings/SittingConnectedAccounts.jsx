@@ -9,20 +9,20 @@ const connectedAccountsData = [
   {
     id: 'google',
     name: 'Google',
-    icon: <FaGoogle className="text-amber-700" aria-hidden="true" />,
+    icon: <FaGoogle className="text-black" aria-hidden="true" />,
     connected: true,
     email: 'niaz.ali@gmail.com',
   },
   {
     id: 'github',
     name: 'GitHub',
-    icon: <FiGithub className="text-amber-500" aria-hidden="true" />,
+    icon: <FiGithub className="text-black" aria-hidden="true" />,
     connected: false,
   },
   {
     id: 'facebook',
     name: 'Facebook',
-    icon: <FiFacebook className="text-amber-600" aria-hidden="true" />,
+    icon: <FiFacebook className="text-black" aria-hidden="true" />,
     connected: true,
     email: 'niaz.ali@facebook.com',
   },
@@ -74,13 +74,13 @@ const SittingConnectedAccounts = () => {
                     <p className="font-semibold">{name}</p>
                     {connected && email ? (
                       <p
-                        className="text-sm text-amber-500 truncate max-w-xs"
+                        className="text-sm text-black truncate max-w-xs"
                         title={email}
                       >
                         {email}
                       </p>
                     ) : (
-                      <p className="text-sm text-amber-700 font-medium">Not connected</p>
+                      <p className="text-sm text-black font-medium">Not connected</p>
                     )}
                   </div>
                 </div>
@@ -88,7 +88,7 @@ const SittingConnectedAccounts = () => {
                 {connected ? (
                   <button
                     onClick={() => unlinkAccount(id)}
-                    className="mt-3 sm:mt-0 flex items-center gap-1 text-amber-700 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-1 rounded transition"
+                    className="mt-3 sm:mt-0 flex items-center gap-1 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 rounded transition"
                     aria-label={`Unlink ${name} account`}
                     type="button"
                   >
@@ -98,7 +98,7 @@ const SittingConnectedAccounts = () => {
                 ) : (
                   <button
                     disabled
-                    className="mt-3 sm:mt-0 flex items-center gap-1 text-amber-900 text-sm cursor-not-allowed select-none"
+                    className="mt-3 sm:mt-0 flex items-center gap-1 text-black text-sm cursor-not-allowed select-none"
                     aria-label={`${name} account not connected`}
                     title="Connect feature coming soon"
                     type="button"
@@ -130,7 +130,7 @@ const SittingConnectedAccounts = () => {
             </h3>
             <p className="mb-6">
               Are you sure you want to unlink your{' '}
-              <span className="font-medium text-amber-600">
+              <span className="font-medium text-black">
                 {accounts.find((acc) => acc.id === unlinkingId)?.name}
               </span>{' '}
               account? This action cannot be undone.
@@ -138,13 +138,13 @@ const SittingConnectedAccounts = () => {
             <div className="flex justify-end gap-4">
               <button
                 onClick={cancelUnlink}
-                className="px-4 py-2 rounded bg-white hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="px-4 py-2 rounded bg-white hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmUnlink}
-                className="px-4 py-2 rounded bg-amber-800 hover:bg-amber-900 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="px-4 py-2 rounded bg-black hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Unlink
               </button>

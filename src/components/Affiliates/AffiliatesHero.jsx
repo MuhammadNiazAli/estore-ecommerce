@@ -44,18 +44,18 @@ const AffiliatesHero = () => {
   return (
     <section
       aria-label="Affiliate Program Hero Section"
-      className="relative w-full px-4 py-10 sm:py-16 bg-white text-amber-300 flex justify-center overflow-hidden my-[-100px] mb-0"
+      className="relative w-full px-4 py-10 sm:py-16 bg-white text-black flex justify-center overflow-hidden my-[-100px] mb-0"
     >
       <div className="relative z-10 max-w-[960px] w-full text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
           Join Our Affiliate Program
         </h1>
-        <p className="text-amber-500 text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto leading-relaxed opacity-90">
+        <p className="text-black text-base sm:text-lg md:text-xl mb-8 max-w-xl mx-auto leading-relaxed opacity-90">
           Promote our products, earn high commissions, and grow with us. Quick setup, powerful tools, real results.
         </p>
 
         {status === "success" ? (
-          <div className="text-green-400 font-semibold flex items-center justify-center gap-2 text-lg mb-6 animate-fade-in" role="alert">
+          <div className="text-black font-semibold flex items-center justify-center gap-2 text-lg mb-6 animate-fade-in" role="alert">
             <CheckCircle size={22} />
             Thank you for subscribing! We’ll be in touch shortly.
           </div>
@@ -78,15 +78,15 @@ const AffiliatesHero = () => {
               aria-describedby={error ? "emailError" : "emailHelp"}
               required
               disabled={status === "loading"}
-              className={`w-full sm:flex-1 rounded-lg border bg-white border-amber-800 text-amber-300 placeholder-amber-700
-              px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-700 transition
-              ${error ? "border-red-500 focus:ring-red-500" : ""}
+              className={`w-full sm:flex-1 rounded-lg border bg-white border-black text-black placeholder-gray-500
+              px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition
+              ${error ? "border-black focus:ring-black" : ""}
               disabled:opacity-50`}
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="w-full sm:w-auto bg-amber-700 hover:bg-amber-800 focus:bg-amber-900
+              className="w-full sm:w-auto bg-black hover:bg-black focus:bg-black
               text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2
               transition-all duration-200 disabled:cursor-not-allowed"
             >
@@ -105,7 +105,7 @@ const AffiliatesHero = () => {
         {status === "error" && (
           <p
             id="emailError"
-            className="mt-3 text-red-500 text-sm font-medium flex items-center justify-center gap-1 animate-shake"
+            className="mt-3 text-black text-sm font-medium flex items-center justify-center gap-1 animate-shake"
             role="alert"
           >
             <AlertTriangle size={16} /> {error}
@@ -114,7 +114,7 @@ const AffiliatesHero = () => {
 
         <p
           id="emailHelp"
-          className="mt-6 text-amber-600 text-xs max-w-sm mx-auto opacity-70"
+          className="mt-6 text-black text-xs max-w-sm mx-auto opacity-70"
         >
           We respect your privacy. No spam — unsubscribe anytime.
         </p>

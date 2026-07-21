@@ -60,7 +60,7 @@ export default function FooterPayments() {
         We Accept
       </h4>
 
-      <p className="text-amber-500 max-w-xl mx-auto md:mx-0 mb-12 text-center md:text-left text-lg leading-relaxed tracking-wide">
+      <p className="text-black max-w-xl mx-auto md:mx-0 mb-12 text-center md:text-left text-lg leading-relaxed tracking-wide">
         Pay securely using your preferred payment method. We support all major credit cards and digital wallets for your convenience.
       </p>
 
@@ -83,7 +83,7 @@ export default function FooterPayments() {
                 shadow-md
                 hover:shadow-xl
                 hover:brightness-110
-                focus:outline-none focus:ring-4 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-gray-900
+                focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 focus:ring-offset-gray-900
               "
               style={{
                 color,

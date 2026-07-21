@@ -52,14 +52,14 @@ const ReviewForm = () => {
         noValidate
         className="w-full max-w-[700px] bg-white border border-gray-200 shadow-xl rounded-xl p-6 sm:p-8 text-gray-900"
       >
-        <h2 id="review-form-title" className="text-3xl font-bold text-amber-400 mb-8 text-center">
+        <h2 id="review-form-title" className="text-3xl font-bold text-black mb-8 text-center">
           Leave a Review
         </h2>
 
         
         <fieldset className="mb-6">
           <legend className="mb-2 font-medium">
-            Your Rating <span className="text-rose-500">*</span>
+            Your Rating <span className="text-black">*</span>
           </legend>
           <div className="flex gap-2" role="radiogroup" aria-label="Star rating">
             {[1, 2, 3, 4, 5].map((value) => (
@@ -70,7 +70,7 @@ const ReviewForm = () => {
                 onClick={() => setRating(value)}
                 onMouseEnter={() => setHovered(value)}
                 onMouseLeave={() => setHovered(null)}
-                className="text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+                className="text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
               >
                 <Star
                   size={28}
@@ -86,12 +86,12 @@ const ReviewForm = () => {
    
         <div className="mb-5">
           <label htmlFor="name" className="block mb-1 text-sm font-medium">
-            Your Name <span className="text-rose-500">*</span>
+            Your Name <span className="text-black">*</span>
           </label>
           <input
             id="name"
             type="text"
-            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             placeholder="e.g. John Doe"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -102,12 +102,12 @@ const ReviewForm = () => {
      
         <div className="mb-5">
           <label htmlFor="email" className="block mb-1 text-sm font-medium">
-            Email (not published) <span className="text-rose-500">*</span>
+            Email (not published) <span className="text-black">*</span>
           </label>
           <input
             id="email"
             type="email"
-            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             placeholder="e.g. john@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -122,7 +122,7 @@ const ReviewForm = () => {
       
         <div className="mb-5">
           <label htmlFor="reviewText" className="block mb-1 text-sm font-medium">
-            Your Review <span className="text-rose-500">*</span>
+            Your Review <span className="text-black">*</span>
           </label>
           <textarea
             id="reviewText"
@@ -130,7 +130,7 @@ const ReviewForm = () => {
             required
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
-            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 resize-none"
+            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black resize-none"
             placeholder="Write your honest feedback..."
           />
         </div>
@@ -145,24 +145,24 @@ const ReviewForm = () => {
             type="file"
             accept="image/*"
             onChange={handleFileChange}
-            className="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-amber-500 file:text-gray-900 hover:file:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-400"
+            className="w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-black file:text-gray-900 hover:file:bg-black focus:outline-none focus:ring-2 focus:ring-black"
           />
           {photo && (
-            <p className="mt-2 text-sm text-amber-400">Selected: {photo.name}</p>
+            <p className="mt-2 text-sm text-black">Selected: {photo.name}</p>
           )}
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full py-3 bg-gradient-to-r from-amber-400 to-amber-600 text-gray-900 font-semibold rounded-full shadow hover:from-amber-500 hover:to-amber-700 focus:ring-4 focus:ring-amber-400 focus:ring-offset-2 transition-transform active:scale-95"
+          className="w-full py-3 bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold rounded-full shadow hover:from-black hover:to-gray-900 focus:ring-4 focus:ring-black focus:ring-offset-2 transition-transform active:scale-95"
         >
           Submit Review
         </button>
 
         {/* Status */}
         {formStatus && (
-          <p role="alert" className="mt-4 text-center font-medium text-green-400">
+          <p role="alert" className="mt-4 text-center font-medium text-black">
             {formStatus}
           </p>
         )}

@@ -10,7 +10,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={`full-${i}`}
-          className="w-5 h-5 text-amber-700"
+          className="w-5 h-5 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -20,7 +20,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-5 h-5 text-amber-700"
+          className="w-5 h-5 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -40,7 +40,7 @@ const StarRating = ({ rating }) => {
       {[...Array(emptyStars)].map((_, i) => (
         <svg
           key={`empty-${i}`}
-          className="w-5 h-5 text-amber-400"
+          className="w-5 h-5 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -115,7 +115,7 @@ const product = {
     return (
       <section
         aria-label="Exclusive Bestseller Jacket - Mobile Callout"
-        className="max-w-md mx-auto my-8 bg-amber-800 rounded-2xl shadow-lg text-gray-900 overflow-hidden select-none"
+        className="max-w-md mx-auto my-8 bg-black rounded-2xl shadow-lg text-gray-900 overflow-hidden select-none"
       >
         <img
           src={product.image}
@@ -124,18 +124,18 @@ const product = {
           className="w-full h-64 object-cover"
           draggable={false}
         />
-        <div className="p-5 bg-amber-900 bg-opacity-90">
+        <div className="p-5 bg-black bg-opacity-90">
           <h2
-            className="text-2xl font-extrabold mb-2 text-amber-200"
+            className="text-2xl font-extrabold mb-2 text-black"
             tabIndex={0}
           >
             {product.title}
           </h2>
-          <p className="text-sm text-amber-300 mb-3 line-clamp-3">
+          <p className="text-sm text-black mb-3 line-clamp-3">
             {product.description}
           </p>
           <div className="flex items-center justify-between mb-4">
-            <span className="text-3xl font-extrabold tracking-wide text-amber-200">
+            <span className="text-3xl font-extrabold tracking-wide text-black">
               {product.price}
             </span>
             <StarRating rating={product.rating} />
@@ -143,14 +143,14 @@ const product = {
           <div className="flex gap-3">
             <a
               href={product.shopLink}
-              className="flex-1 bg-amber-950 hover:bg-amber-900 text-amber-300 font-semibold py-3 rounded-lg text-center shadow-md transition-transform transform hover:scale-105 focus:outline-amber-500 focus:ring-4 focus:ring-amber-500"
+              className="flex-1 bg-black hover:bg-black text-black font-semibold py-3 rounded-lg text-center shadow-md transition-transform transform hover:scale-105 focus:outline-black focus:ring-4 focus:ring-black"
               aria-label={`Shop ${product.title}`}
             >
               Shop Now
             </a>
             <a
               href={product.learnLink}
-              className="flex-1 border-2 border-amber-950 hover:border-amber-900 text-amber-300 hover:text-amber-500 font-semibold py-3 rounded-lg text-center shadow-inner transition-transform transform hover:scale-105 focus:outline-amber-500 focus:ring-4 focus:ring-amber-500"
+              className="flex-1 border-2 border-black hover:border-black text-black hover:text-black font-semibold py-3 rounded-lg text-center shadow-inner transition-transform transform hover:scale-105 focus:outline-black focus:ring-4 focus:ring-black"
               aria-label={`Learn more about ${product.title}`}
             >
               Learn More
@@ -166,7 +166,7 @@ const product = {
     <section
       ref={calloutRef}
       aria-label="Bestseller Jacket Callout"
-      className="relative overflow-hidden rounded-3xl shadow-2xl max-w-7xl mx-auto my-12 md:my-24 bg-gradient-to-tr from-amber-900 via-amber-800 to-amber-700 text-gray-900 select-none"
+      className="relative overflow-hidden rounded-3xl shadow-2xl max-w-7xl mx-auto my-12 md:my-24 bg-gradient-to-tr from-black via-gray-700 to-gray-900 text-gray-900 select-none"
       style={{
         perspective: 800,
       }}
@@ -196,16 +196,16 @@ const product = {
         {/* Text Block */}
         <article className="max-w-xl space-y-6">
           <h2
-            className="text-4xl md:text-5xl font-extrabold leading-tight text-amber-200 drop-shadow-lg"
+            className="text-4xl md:text-5xl font-extrabold leading-tight text-black drop-shadow-lg"
             tabIndex={0}
           >
             {product.title}
           </h2>
-          <p className="text-lg md:text-xl font-semibold text-amber-300 drop-shadow-md">
+          <p className="text-lg md:text-xl font-semibold text-black drop-shadow-md">
             {product.description}
           </p>
           <div className="flex items-center gap-6">
-            <span className="text-4xl font-extrabold tracking-wide text-amber-200 drop-shadow-lg">
+            <span className="text-4xl font-extrabold tracking-wide text-black drop-shadow-lg">
               {product.price}
             </span>
             <StarRating rating={product.rating} />
@@ -213,14 +213,14 @@ const product = {
           <div className="flex flex-wrap gap-6 mt-6">
             <a
               href={product.shopLink}
-              className="bg-amber-900 hover:bg-amber-950 text-amber-300 font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-amber-500 focus:ring-4 focus:ring-amber-500 text-center"
+              className="bg-black hover:bg-black text-black font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-black focus:ring-4 focus:ring-black text-center"
               aria-label={`Shop ${product.title}`}
             >
               Shop Now
             </a>
             <a
               href={product.learnLink}
-              className="border-2 border-amber-900 hover:border-amber-900 text-amber-300 hover:text-amber-500 font-semibold py-3 px-8 rounded-full shadow-inner transition-transform transform hover:scale-105 focus:outline-amber-500 focus:ring-4 focus:ring-amber-500 text-center"
+              className="border-2 border-black hover:border-black text-black hover:text-black font-semibold py-3 px-8 rounded-full shadow-inner transition-transform transform hover:scale-105 focus:outline-black focus:ring-4 focus:ring-black text-center"
               aria-label={`Learn more about ${product.title}`}
             >
               Learn More
@@ -229,7 +229,7 @@ const product = {
         </article>
 
         {/* Product Image */}
-        <div className="relative w-72 h-80 md:w-96 md:h-[400px] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-amber-900 ring-opacity-90 flex-shrink-0">
+        <div className="relative w-72 h-80 md:w-96 md:h-[400px] rounded-3xl overflow-hidden shadow-2xl ring-4 ring-black ring-opacity-90 flex-shrink-0">
           <img
             src={product.image}
             alt={product.title}
@@ -238,7 +238,7 @@ const product = {
             draggable={false}
           />
           {/* Subtle glowing pulse ring */}
-          <div className="absolute inset-0 rounded-3xl ring-8 ring-amber-600 opacity-30 animate-pulse pointer-events-none" />
+          <div className="absolute inset-0 rounded-3xl ring-8 ring-black opacity-30 animate-pulse pointer-events-none" />
         </div>
       </div>
     </section>

@@ -40,7 +40,7 @@ export default function GiftIdeas() {
   return (
     <section className="max-w-[1200px] mx-auto px-4 sm:px-6 py-16 bg-white text-gray-900 rounded-2xl shadow-lg">
       <motion.h2
-        className="text-3xl sm:text-4xl font-extrabold text-center text-amber-600 mb-12 drop-shadow-xl"
+        className="text-3xl sm:text-4xl font-extrabold text-center text-black mb-12 drop-shadow-xl"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -75,7 +75,7 @@ export default function GiftIdeas() {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
-            <h3 className="absolute bottom-4 left-4 text-xl sm:text-2xl font-bold text-amber-600 drop-shadow-lg">
+            <h3 className="absolute bottom-4 left-4 text-xl sm:text-2xl font-bold text-black drop-shadow-lg">
               {title}
             </h3>
           </motion.div>

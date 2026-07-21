@@ -15,7 +15,7 @@ const ScreenReaderSupport = () => {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           aria-hidden="true"
         >
-          <Speaker className="w-16 h-16 sm:w-20 sm:h-20 text-amber-600" />
+          <Speaker className="w-16 h-16 sm:w-20 sm:h-20 text-black" />
         </motion.div>
 
         {/* Heading */}
@@ -23,7 +23,7 @@ const ScreenReaderSupport = () => {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
-          className="text-3xl sm:text-4xl font-bold text-amber-500 max-w-lg leading-tight"
+          className="text-3xl sm:text-4xl font-bold text-black max-w-lg leading-tight"
         >
           Screen Reader Support
         </motion.h2>

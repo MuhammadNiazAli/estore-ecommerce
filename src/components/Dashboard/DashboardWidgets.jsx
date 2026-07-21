@@ -110,7 +110,7 @@ const DashboardWidgets = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 py-10" aria-label="Dashboard widgets overview">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-2xl font-bold text-amber-600 mb-6">Widgets</h2>
+        <h2 className="text-2xl font-bold text-black mb-6">Widgets</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {widgets.map(({ id, title, value, unit, icon: Icon, description }) => (
@@ -122,7 +122,7 @@ const DashboardWidgets = () => {
               aria-label={`${title}: ${value}${unit}`}
             >
               <div className="flex justify-between items-center">
-                <span className="text-amber-600" aria-hidden="true">
+                <span className="text-black" aria-hidden="true">
                   <Icon className="w-6 h-6" />
                 </span>
                 <span

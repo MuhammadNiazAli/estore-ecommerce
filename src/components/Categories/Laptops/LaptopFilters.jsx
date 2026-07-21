@@ -92,7 +92,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   onClick={() => toggleBrand(brand)}
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedBrands.includes(brand)
-                      ? "bg-amber-800 border-amber-800 text-gray-900"
+                      ? "bg-black border-black text-gray-900"
                       : "border-gray-200 text-gray-700 hover:bg-gray-500"
                   }`}
                 >
@@ -131,7 +131,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
               step="50"
               value={priceRange[1]}
               onChange={(e) => handlePriceChange(1, e.target.value)}
-              className="w-full mt-2 accent-amber-800"
+              className="w-full mt-2 accent-black"
             />
           </div>
 
@@ -145,7 +145,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
                   onClick={() => toggleRam(ram)}
                   className={`px-3 py-1.5 rounded-full border text-sm transition ${
                     selectedRam.includes(ram)
-                      ? "bg-green-600 border-green-600 text-gray-900"
+                      ? "bg-black border-black text-gray-900"
                       : "border-gray-200 text-gray-700 hover:bg-gray-500"
                   }`}
                 >
@@ -159,7 +159,7 @@ function LaptopFilters({ filters = {}, onFilterChange }) {
           <div className="text-right">
             <button
               onClick={resetFilters}
-              className="text-red-400 hover:text-red-500 font-semibold"
+              className="text-black hover:text-black font-semibold"
             >
               Reset Filters
             </button>

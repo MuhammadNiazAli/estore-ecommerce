@@ -630,7 +630,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStars)].map((_, i) => (
         <svg
           key={"full" + i}
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           fill="currentColor"
           viewBox="0 0 20 20"
           aria-hidden="true"
@@ -640,7 +640,7 @@ const StarRating = ({ rating }) => {
       ))}
       {halfStar && (
         <svg
-          className="w-4 h-4 text-amber-600"
+          className="w-4 h-4 text-black"
           viewBox="0 0 20 20"
           fill="currentColor"
           aria-hidden="true"
@@ -702,12 +702,12 @@ const CountdownTimer = ({ expiryDate }) => {
 
   if (!timeLeft) {
     return (
-      <span className="text-red-600 font-semibold select-none">Offer expired</span>
+      <span className="text-black font-semibold select-none">Offer expired</span>
     );
   }
 
   return (
-    <div className="flex space-x-3 text-center font-mono text-sm text-gray-900 bg-red-600 rounded-md px-3 py-1 select-none w-max mx-auto sm:mx-0">
+    <div className="flex space-x-3 text-center font-mono text-sm text-gray-900 bg-black rounded-md px-3 py-1 select-none w-max mx-auto sm:mx-0">
       <div>
         <span className="font-bold tabular-nums">{timeLeft.days}</span>d
       </div>
@@ -767,7 +767,7 @@ const WomanClothsOffers = () => {
           {/* 15 days */}
           <button
             type="button"
-            className="mt-6 inline-block rounded-md bg-amber-700 px-6 py-3 text-lg font-semibold text-black hover:bg-amber-800 shadow-lg transition"
+            className="mt-6 inline-block rounded-md bg-black px-6 py-3 text-lg font-semibold text-black hover:bg-black shadow-lg transition"
           >
             Shop Now
           </button>
@@ -791,7 +791,7 @@ const WomanClothsOffers = () => {
                 loading="lazy"
                 draggable={false}
               />
-              <div className="absolute top-3 right-3 bg-amber-600 text-black font-bold px-3 py-1 rounded-lg shadow-md select-none">
+              <div className="absolute top-3 right-3 bg-black text-black font-bold px-3 py-1 rounded-lg shadow-md select-none">
                 {offer.discountPercent}% OFF
               </div>
             </div>
@@ -805,7 +805,7 @@ const WomanClothsOffers = () => {
                 <span className="text-sm text-gray-500">({offer.reviews})</span>
               </div>
               <div className="flex items-center gap-4 mt-4">
-                <span className="text-2xl font-extrabold text-amber-700">
+                <span className="text-2xl font-extrabold text-black">
                   ${offer.price.toFixed(2)}
                 </span>
                 <span className="text-sm line-through text-gray-600">
@@ -814,7 +814,7 @@ const WomanClothsOffers = () => {
               </div>
               <button
                 type="button"
-                className="mt-5 bg-amber-700 hover:bg-amber-800 text-black font-semibold py-2 rounded-md shadow-md transition"
+                className="mt-5 bg-black hover:bg-black text-black font-semibold py-2 rounded-md shadow-md transition"
               >
                 Add to Cart
               </button>
@@ -829,7 +829,7 @@ const WomanClothsOffers = () => {
           <button
             onClick={handleShowMore}
             disabled={loadingMore}
-            className="inline-flex items-center space-x-2 rounded-md bg-amber-700 hover:bg-amber-800 text-black font-semibold px-6 py-3 shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center space-x-2 rounded-md bg-black hover:bg-black text-black font-semibold px-6 py-3 shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Show more offers"
           >
             {loadingMore ? (

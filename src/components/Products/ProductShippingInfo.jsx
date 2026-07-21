@@ -10,42 +10,42 @@ import {
 
 const shippingDetails = [
   {
-    icon: <AiOutlineCheckCircle className="w-8 h-8 text-green-500 group-hover:scale-110 transition-transform" />,
+    icon: <AiOutlineCheckCircle className="w-8 h-8 text-black group-hover:scale-110 transition-transform" />,
     title: "Free Shipping",
     description: "On all orders over $50, delivered within 5-7 business days.",
     linkText: "See shipping details",
     href: "/shipping",
   },
   {
-    icon: <AiOutlineClockCircle className="w-8 h-8 text-amber-600 group-hover:rotate-12 transition-transform" />,
+    icon: <AiOutlineClockCircle className="w-8 h-8 text-black group-hover:rotate-12 transition-transform" />,
     title: "Express Delivery",
     description: "Get your order in 1-2 business days with express options.",
     linkText: "Check express delivery",
     href: "/express-delivery",
   },
   {
-    icon: <AiOutlineCar className="w-8 h-8 text-amber-600 group-hover:translate-x-1 transition-transform" />,
+    icon: <AiOutlineCar className="w-8 h-8 text-black group-hover:translate-x-1 transition-transform" />,
     title: "Order Tracking",
     description: "Track your order live from dispatch to doorstep.",
     linkText: "Track your order",
     href: "/track-order",
   },
   {
-    icon: <AiOutlineLock className="w-8 h-8 text-amber-700 group-hover:scale-110 transition-transform" />,
+    icon: <AiOutlineLock className="w-8 h-8 text-black group-hover:scale-110 transition-transform" />,
     title: "Secure Payments",
     description: "Your data is protected with end-to-end encryption.",
     linkText: "Learn about payment security",
     href: "/secure-payments",
   },
   {
-    icon: <AiOutlineUndo className="w-8 h-8 text-red-500 group-hover:-rotate-12 transition-transform" />,
+    icon: <AiOutlineUndo className="w-8 h-8 text-black group-hover:-rotate-12 transition-transform" />,
     title: "Hassle-Free Returns",
     description: "30-day return window, no questions asked.",
     linkText: "Return policy",
     href: "/return-policy",
   },
   {
-    icon: <AiOutlineCustomerService className="w-8 h-8 text-amber-600 group-hover:scale-110 transition-transform" />,
+    icon: <AiOutlineCustomerService className="w-8 h-8 text-black group-hover:scale-110 transition-transform" />,
     title: "24/7 Support",
     description: "We’re always here to help, anytime you need us.",
     linkText: "Contact customer support",
@@ -71,7 +71,7 @@ const ProductShippingInfo = () => {
             <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
             <a
               href={href}
-              className="text-sm text-amber-600 font-medium mt-2 hover:underline"
+              className="text-sm text-black font-medium mt-2 hover:underline"
             >
               {linkText}
             </a>

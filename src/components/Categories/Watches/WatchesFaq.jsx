@@ -100,7 +100,7 @@ const WatchesFaq = () => {
                 <span className="text-lg font-medium">{faq.question}</span>
                 <ChevronDownIcon
                   className={`h-6 w-6 transform transition-transform duration-300 ${
-                    activeId === faq.id ? "rotate-180 text-amber-600" : "text-gray-600"
+                    activeId === faq.id ? "rotate-180 text-black" : "text-gray-600"
                   }`}
                 />
               </button>
@@ -122,7 +122,7 @@ const WatchesFaq = () => {
           <p className="text-gray-600 mb-3">Still have questions?</p>
           <a
             href="/contact"
-            className="inline-block bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-amber-500 transition"
+            className="inline-block bg-black text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-black transition"
           >
             Contact Support
           </a>

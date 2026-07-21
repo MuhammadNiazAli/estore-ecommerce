@@ -6,7 +6,7 @@ const JewelryCategoryInfo = () => {
     <section
       className="
         bg-white
-        text-amber-600
+        text-black
         max-w-[1000px]
         w-full
         mx-auto
@@ -22,7 +22,7 @@ const JewelryCategoryInfo = () => {
         silver, diamonds, and gemstones. Perfect for every occasion, our jewelry adds a touch of
         sophistication and timeless beauty to your style.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         Elevate your elegance with our carefully curated selection of necklaces, earrings, bracelets, and rings.
       </p>
     </section>

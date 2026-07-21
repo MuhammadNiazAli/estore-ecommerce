@@ -22,7 +22,7 @@ const ChatMessage = ({ from, text }) => (
   <div
     className={`max-w-[80%] p-3 rounded-lg ${
       from === 'bot'
-        ? 'bg-amber-600 text-black self-start rounded-bl-none'
+        ? 'bg-black text-black self-start rounded-bl-none'
         : 'bg-white text-gray-900 self-end rounded-br-none'
     } break-words`}
     aria-live="polite"
@@ -104,7 +104,7 @@ const HelpCenterChatbotEntry = () => {
             setIsOpen((prev) => !prev);
             if (sidebarOpen) setSidebarOpen(false);
           }}
-          className="bg-amber-600 hover:bg-amber-500 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition duration-300 focus:outline-none focus:ring-4 focus:ring-amber-600"
+          className="bg-black hover:bg-black text-black w-12 h-12 flex items-center justify-center rounded-full shadow-lg transition duration-300 focus:outline-none focus:ring-4 focus:ring-black"
           aria-label={isOpen ? 'Close Chat' : 'Open Chat'}
           title={isOpen ? 'Close Chat' : 'Open Chat'}
         >
@@ -115,7 +115,7 @@ const HelpCenterChatbotEntry = () => {
       {/* Chat Panel */}
       {isOpen && (
         <section
-          className={`fixed bottom-16 right-5 z-[9998] flex flex-col bg-white border border-amber-600 rounded-xl shadow-2xl
+          className={`fixed bottom-16 right-5 z-[9998] flex flex-col bg-white border border-black rounded-xl shadow-2xl
             h-[400px]
             max-w-full
             overflow-hidden
@@ -127,8 +127,8 @@ const HelpCenterChatbotEntry = () => {
           aria-label="Help Center Chatbot"
         >
           {/* Header */}
-          <header className="flex items-center justify-between p-3 border-b border-amber-600">
-            <h2 className="text-amber-500 font-semibold text-lg select-none">
+          <header className="flex items-center justify-between p-3 border-b border-black">
+            <h2 className="text-black font-semibold text-lg select-none">
               Need Help?
             </h2>
             <div className="flex items-center gap-2">
@@ -137,7 +137,7 @@ const HelpCenterChatbotEntry = () => {
                 aria-expanded={sidebarOpen}
                 aria-controls="chatbot-sidebar"
                 aria-label={`${sidebarOpen ? 'Close' : 'Open'} questions sidebar`}
-                className="p-2 rounded-md hover:bg-amber-600 hover:text-black transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="p-2 rounded-md hover:bg-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black"
                 title={`${sidebarOpen ? 'Close' : 'Open'} questions sidebar`}
               >
                 <List size={20} />
@@ -145,7 +145,7 @@ const HelpCenterChatbotEntry = () => {
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close chat"
-                className="p-2 rounded-md hover:bg-amber-600 hover:text-black transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="p-2 rounded-md hover:bg-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black"
                 title="Close chat"
               >
                 <X size={20} />
@@ -156,7 +156,7 @@ const HelpCenterChatbotEntry = () => {
           <div className="flex flex-1 overflow-hidden relative">
             {/* Chat messages area */}
             <main
-              className={`flex-1 flex flex-col overflow-y-auto p-4 gap-3 scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-700 transition-all duration-300
+              className={`flex-1 flex flex-col overflow-y-auto p-4 gap-3 scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700 transition-all duration-300
                 ${sidebarOpen ? 'pr-[280px]' : 'pr-4'}
               `}
             >
@@ -164,7 +164,7 @@ const HelpCenterChatbotEntry = () => {
                 <ChatMessage key={i} from={msg.from} text={msg.text} />
               ))}
               {isTyping && (
-                <div className="self-start bg-amber-600 rounded-bl-none rounded-lg px-3 py-2 animate-pulse text-black max-w-[60%]">
+                <div className="self-start bg-black rounded-bl-none rounded-lg px-3 py-2 animate-pulse text-black max-w-[60%]">
                   Bot is typing...
                 </div>
               )}
@@ -174,22 +174,22 @@ const HelpCenterChatbotEntry = () => {
             {/* Sidebar drawer */}
             <aside
               id="chatbot-sidebar"
-              className={`absolute top-0 right-0 bottom-0 w-[280px] bg-white border-l border-amber-600 rounded-tl-xl rounded-bl-xl shadow-xl
+              className={`absolute top-0 right-0 bottom-0 w-[280px] bg-white border-l border-black rounded-tl-xl rounded-bl-xl shadow-xl
               flex flex-col p-4
               transform transition-transform duration-300 ease-in-out
               ${sidebarOpen ? 'translate-x-0' : 'translate-x-full'}
               `}
               aria-hidden={!sidebarOpen}
             >
-              <h3 className="text-amber-600 font-semibold mb-4 text-lg select-none">
+              <h3 className="text-black font-semibold mb-4 text-lg select-none">
                 Frequently Asked Questions
               </h3>
-              <ul className="flex flex-col gap-3 overflow-y-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-700">
+              <ul className="flex flex-col gap-3 overflow-y-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700">
                 {predefinedQuestions.map((q, i) => (
                   <li key={i}>
                     <button
                       onClick={() => handleQuestionClick(q)}
-                      className="w-full text-left bg-white hover:bg-amber-600 hover:text-black rounded-md px-3 py-2 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                      className="w-full text-left bg-white hover:bg-black hover:text-black rounded-md px-3 py-2 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black"
                       aria-label={`Ask chatbot: ${q}`}
                       type="button"
                     >
@@ -208,7 +208,7 @@ const HelpCenterChatbotEntry = () => {
               e.preventDefault();
               handleSendMessage();
             }}
-            className="p-3 border-t border-amber-600 flex gap-2"
+            className="p-3 border-t border-black flex gap-2"
           >
             <textarea
               rows={1}
@@ -216,14 +216,14 @@ const HelpCenterChatbotEntry = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type your question..."
-              className="resize-none flex-grow bg-white text-gray-900 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="resize-none flex-grow bg-white text-gray-900 placeholder-gray-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black"
               aria-label="Type your question"
               maxLength={300}
             />
             <button
               type="submit"
               disabled={!input.trim()}
-              className="bg-amber-600 hover:bg-amber-500 text-black px-4 py-2 rounded-md font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-amber-600"
+              className="bg-black hover:bg-black text-black px-4 py-2 rounded-md font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-black"
               aria-label="Send message"
             >
               Send

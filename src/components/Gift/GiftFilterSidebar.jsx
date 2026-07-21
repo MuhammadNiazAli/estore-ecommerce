@@ -37,13 +37,13 @@ export default function GiftFilterSidebar() {
       className="w-full max-w-[300px] bg-white rounded-3xl p-6 text-gray-900 shadow-2xl flex-shrink-0"
       aria-label="Gift Filters Sidebar"
     >
-      <h2 className="text-amber-600 text-2xl font-bold mb-6 tracking-tight">
+      <h2 className="text-black text-2xl font-bold mb-6 tracking-tight">
          Filters
       </h2>
 
       {/* Categories */}
       <section className="mb-8">
-        <h3 className="text-amber-600 font-semibold text-sm mb-3 uppercase tracking-wide">
+        <h3 className="text-black font-semibold text-sm mb-3 uppercase tracking-wide">
           Categories
         </h3>
         <ul className="max-h-40 overflow-y-auto pr-2 custom-scrollbar transition-all duration-500 ease-in-out space-y-2">
@@ -51,14 +51,14 @@ export default function GiftFilterSidebar() {
             <li key={cat}>
               <label
                 htmlFor={`cat-${cat}`}
-                className="flex items-center gap-2 cursor-pointer hover:text-amber-500 transition"
+                className="flex items-center gap-2 cursor-pointer hover:text-black transition"
               >
                 <input
                   type="checkbox"
                   id={`cat-${cat}`}
                   checked={selectedCategories.includes(cat)}
                   onChange={() => toggleCategory(cat)}
-                  className="w-4 h-4 rounded text-amber-600 bg-white border-amber-700 focus:ring-amber-600"
+                  className="w-4 h-4 rounded text-black bg-white border-black focus:ring-black"
                 />
                 <span>{cat}</span>
               </label>
@@ -69,7 +69,7 @@ export default function GiftFilterSidebar() {
 
       {/* Ratings */}
       <section className="mb-8">
-        <h3 className="text-amber-600 font-semibold text-sm mb-3 uppercase tracking-wide">
+        <h3 className="text-black font-semibold text-sm mb-3 uppercase tracking-wide">
           Customer Rating
         </h3>
         <ul className="space-y-2">
@@ -77,7 +77,7 @@ export default function GiftFilterSidebar() {
             <li key={r}>
               <label
                 htmlFor={`rating-${r}`}
-                className="flex items-center gap-2 cursor-pointer hover:text-amber-500 transition"
+                className="flex items-center gap-2 cursor-pointer hover:text-black transition"
               >
                 <input
                   type="radio"
@@ -85,7 +85,7 @@ export default function GiftFilterSidebar() {
                   name="rating"
                   checked={selectedRating === r}
                   onChange={() => setSelectedRating(r)}
-                  className="w-4 h-4 rounded text-amber-600 bg-white border-amber-700 focus:ring-amber-600"
+                  className="w-4 h-4 rounded text-black bg-white border-black focus:ring-black"
                 />
                 <span>
                   {r} Star{r > 1 ? 's' : ''}
@@ -98,7 +98,7 @@ export default function GiftFilterSidebar() {
 
       {/* Price Range */}
       <section className="mb-8">
-        <h3 className="text-amber-600 font-semibold text-sm mb-3 uppercase tracking-wide">
+        <h3 className="text-black font-semibold text-sm mb-3 uppercase tracking-wide">
           Price Range (€)
         </h3>
         <div className="flex items-center gap-3 text-sm text-gray-700">
@@ -113,7 +113,7 @@ export default function GiftFilterSidebar() {
                 priceRange[1],
               ])
             }
-            className="w-20 rounded bg-white border border-amber-700/50 p-1 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="w-20 rounded bg-white border border-black/50 p-1 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
             aria-label="Minimum price"
           />
           <span>–</span>
@@ -128,7 +128,7 @@ export default function GiftFilterSidebar() {
                 Math.max(Number(e.target.value), priceRange[0]),
               ])
             }
-            className="w-20 rounded bg-white border border-amber-700/50 p-1 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="w-20 rounded bg-white border border-black/50 p-1 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
             aria-label="Maximum price"
           />
         </div>
@@ -138,7 +138,7 @@ export default function GiftFilterSidebar() {
       <button
         type="button"
         onClick={clearFilters}
-        className="w-full bg-amber-600 text-gray-900 font-bold py-2 rounded-full hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700 transition"
+        className="w-full bg-black text-gray-900 font-bold py-2 rounded-full hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition"
         aria-label="Clear all filters"
       >
         Clear Filters

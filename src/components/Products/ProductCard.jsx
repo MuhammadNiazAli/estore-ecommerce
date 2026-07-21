@@ -30,20 +30,20 @@ const ProductCard = ({
     const halfStar = rating - fullStars >= 0.5;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<AiFillStar key={"star-full-" + i} className="text-amber-600" />);
+      stars.push(<AiFillStar key={"star-full-" + i} className="text-black" />);
     }
     if (halfStar) {
       stars.push(
         <AiFillStar
           key="star-half"
-          className="text-amber-600"
+          className="text-black"
           style={{ clipPath: "inset(0 50% 0 0)" }}
         />
       );
     }
     const emptyStars = 5 - stars.length;
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(<AiOutlineStar key={"star-empty-" + i} className="text-amber-600" />);
+      stars.push(<AiOutlineStar key={"star-empty-" + i} className="text-black" />);
     }
     return stars;
   };
@@ -69,7 +69,7 @@ const ProductCard = ({
         <div>
           {/* Title */}
           <a href={product.productLink} className="block mb-3">
-            <h2 className="text-3xl font-extrabold text-gray-900 hover:text-amber-700 transition-colors duration-300">
+            <h2 className="text-3xl font-extrabold text-gray-900 hover:text-black transition-colors duration-300">
               {product.title}
             </h2>
           </a>
@@ -104,7 +104,7 @@ const ProductCard = ({
           <div>
             {product.discountPrice ? (
               <div className="flex items-baseline space-x-3">
-                <span className="text-amber-700 font-extrabold text-4xl">
+                <span className="text-black font-extrabold text-4xl">
                   ${product.discountPrice.toFixed(2)}
                 </span>
                 <span className="text-gray-500 line-through text-xl">
@@ -122,7 +122,7 @@ const ProductCard = ({
             {/* Add to Cart Button */}
             <a
               href="/cart"
-              className="inline-block bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold px-8 py-3 rounded-lg cursor-pointer transition-colors duration-300 shadow-md hover:shadow-lg"
+              className="inline-block bg-black hover:bg-black text-gray-900 font-semibold px-8 py-3 rounded-lg cursor-pointer transition-colors duration-300 shadow-md hover:shadow-lg"
               aria-label={`Add ${product.title} to cart`}
             >
               Add to Cart
@@ -135,7 +135,7 @@ const ProductCard = ({
               className="p-3 rounded-lg hover:bg-gray-500 transition-colors duration-300 cursor-pointer shadow-md hover:shadow-lg"
               onClick={() => alert("Added to wishlist!")}
             >
-              <AiOutlineHeart className="text-gray-600 hover:text-red-500 w-7 h-7" />
+              <AiOutlineHeart className="text-gray-600 hover:text-black w-7 h-7" />
             </button>
           </div>
         </div>

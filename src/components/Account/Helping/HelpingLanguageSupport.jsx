@@ -5,22 +5,22 @@ import { FaGlobeAmericas, FaCommentDots, FaUserFriends, FaTimes } from 'react-ic
 
 const languageSupportFeatures = [
   {
-    icon: <FaGlobeAmericas className="text-amber-600 text-base" />,
+    icon: <FaGlobeAmericas className="text-black text-base" />,
     label: 'Multiple Languages Supported',
   },
   {
-    icon: <FaCommentDots className="text-amber-600 text-base" />,
+    icon: <FaCommentDots className="text-black text-base" />,
     label: 'Localized Customer Service',
   },
   {
-    icon: <FaUserFriends className="text-amber-600 text-base" />,
+    icon: <FaUserFriends className="text-black text-base" />,
     label: 'Real-Time Translation Help',
   },
 ];
 
 const supportContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Request Language Support</h3>
+    <h3 className="text-lg font-semibold text-black">Request Language Support</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Choose your preferred language from over 25 options</li>
       <li>Speak with a native or fluent support agent</li>
@@ -35,7 +35,7 @@ const supportContent = (
 
 const learnMoreContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">About Our Language Services</h3>
+    <h3 className="text-lg font-semibold text-black">About Our Language Services</h3>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Supports English, Spanish, French, German, Arabic, Chinese, Hindi, and many more</li>
       <li>Automatic translation integrated in live chat for fast replies</li>
@@ -61,7 +61,7 @@ export default function HelpingLanguageSupport() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Language Support Made Easy
         </h2>
         <p className="text-gray-700 text-sm">
@@ -87,8 +87,8 @@ export default function HelpingLanguageSupport() {
             onClick={() => toggleSection('support')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'support'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             } text-sm`}
             aria-label="Toggle language support section"
           >
@@ -113,7 +113,7 @@ export default function HelpingLanguageSupport() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

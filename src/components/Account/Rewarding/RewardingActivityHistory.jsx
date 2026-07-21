@@ -6,44 +6,44 @@ import { FaStar, FaGift, FaShoppingCart } from 'react-icons/fa';
 // Individual activity entry component
 function ActivityItem({ icon, title, description, date, points }) {
   return (
-    <div className="flex items-start gap-4 border-l-4 border-amber-600 pl-4 relative">
+    <div className="flex items-start gap-4 border-l-4 border-black pl-4 relative">
       <div
-        className="absolute left-[-14px] top-1 bg-white border-2 border-amber-600 w-7 h-7 rounded-full flex items-center justify-center shadow-md"
+        className="absolute left-[-14px] top-1 bg-white border-2 border-black w-7 h-7 rounded-full flex items-center justify-center shadow-md"
         aria-hidden="true"
       >
         {icon}
       </div>
 
       <div className="flex-1">
-        <p className="text-sm font-bold text-amber-500">{title}</p>
+        <p className="text-sm font-bold text-black">{title}</p>
         <p className="text-sm text-gray-700">{description}</p>
         <time className="text-xs text-gray-500 mt-1" dateTime={date}>
           {date}
         </time>
       </div>
 
-      <div className="text-sm font-semibold text-amber-600 whitespace-nowrap">{points}</div>
+      <div className="text-sm font-semibold text-black whitespace-nowrap">{points}</div>
     </div>
   );
 }
 
 const activities = [
   {
-    icon: <FaShoppingCart className="text-amber-600" />,
+    icon: <FaShoppingCart className="text-black" />,
     title: 'Points Earned',
     description: 'You earned 120 points for your order #DZR10234',
     date: '2025-07-10',
     points: '+120',
   },
   {
-    icon: <FaGift className="text-amber-600" />,
+    icon: <FaGift className="text-black" />,
     title: 'Reward Redeemed',
     description: 'Redeemed a 10% Discount Coupon using 300 points',
     date: '2025-07-06',
     points: '-300',
   },
   {
-    icon: <FaStar className="text-amber-600" />,
+    icon: <FaStar className="text-black" />,
     title: 'Tier Upgrade',
     description: 'Congratulations! You’ve been upgraded to Gold Tier',
     date: '2025-06-29',

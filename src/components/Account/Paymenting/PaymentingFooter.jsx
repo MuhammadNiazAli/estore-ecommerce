@@ -20,31 +20,31 @@ const PaymentingFooter = () => {
         >
           <a
             href="/account/paymenting/dashboard"
-            className="hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Dashboard
           </a>
           <a
             href="/account/paymenting/cards"
-            className="hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Payment Methods
           </a>
           <a
             href="/account/paymenting/billing-history"
-            className="hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Billing History
           </a>
           <a
             href="/account/paymenting/subscriptions"
-            className="hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Subscriptions
           </a>
           <a
             href="/account/paymenting/support"
-            className="hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Support
           </a>
@@ -54,17 +54,17 @@ const PaymentingFooter = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 text-sm order-3 md:hidden">
           <a
             href="mailto:support@yourcompany.com"
-            className="flex items-center gap-1 hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="flex items-center gap-1 hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
-            <FiMail className="text-amber-600" />
+            <FiMail className="text-black" />
             <span>support@yourcompany.com</span>
           </a>
 
           <a
             href="tel:+1234567890"
-            className="flex items-center gap-1 hover:text-amber-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="flex items-center gap-1 hover:text-black transition duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
-            <FiPhone className="text-amber-600" />
+            <FiPhone className="text-black" />
             <span>+1 (234) 567-890</span>
           </a>
         </div>

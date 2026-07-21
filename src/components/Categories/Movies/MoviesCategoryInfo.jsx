@@ -6,7 +6,7 @@ const MoviesCategoryInfo = () => {
     <section
       className="
         bg-white
-        text-amber-600
+        text-black
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const MoviesCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Dive into our curated movies collection! Explore blockbuster hits, timeless classics, and exclusive editions to elevate your entertainment experience.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         From action-packed adventures to heartwarming dramas, find movies that captivate every mood and moment.
       </p>
     </section>

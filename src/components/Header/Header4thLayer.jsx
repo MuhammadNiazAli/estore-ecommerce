@@ -115,7 +115,7 @@ function Header4thLayer() {
               href={href}
               title={label}
               tabIndex={0}
-              className="magnet-icon group relative flex flex-col items-center text-gray-700 hover:text-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 rounded cursor-pointer"
+              className="magnet-icon group relative flex flex-col items-center text-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded cursor-pointer"
               style={{ width: 48, minWidth: 48 }}
             >
               <Icon size={20} aria-hidden="true" />
@@ -123,7 +123,7 @@ function Header4thLayer() {
                 className="
                   absolute bottom-full mb-1 left-1/2 -translate-x-1/2
                   mt-1 select-none text-center text-[13px] font-medium
-                  text-transparent group-hover:text-green-400
+                  text-transparent group-hover:text-black
                   opacity-0 invisible
                   group-hover:opacity-100 group-hover:visible
                   transition-opacity duration-200 whitespace-nowrap pointer-events-none

@@ -736,7 +736,7 @@ const ClearanceFlashSales = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-10 px-4">
+    <section className="bg-white text-black py-10 px-4">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">
           Flash Clearance Sales
@@ -765,7 +765,7 @@ const ClearanceFlashSales = () => {
               <SwiperSlide key={product.id}>
                 <div className="bg-white rounded-xl shadow-md relative select-none w-full max-w-[95%] mx-auto">
                   {/* Discount Badge */}
-                  <span className="absolute top-3 left-3 bg-amber-700 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase z-10">
+                  <span className="absolute top-3 left-3 bg-black text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase z-10">
                     {product.discount}
                   </span>
 
@@ -788,7 +788,7 @@ const ClearanceFlashSales = () => {
 
                     {/* Prices */}
                     <div className="mt-2">
-                      <span className="text-amber-600 font-bold text-lg">
+                      <span className="text-black font-bold text-lg">
                         ${product.price}
                       </span>
                       <span className="text-gray-500 line-through ml-2">
@@ -802,7 +802,7 @@ const ClearanceFlashSales = () => {
                     </div>
 
                     {/* Add to Cart */}
-                    <button className="w-full mt-4 bg-amber-700 text-gray-900 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center justify-center gap-2">
+                    <button className="w-full mt-4 bg-black text-gray-900 py-2 rounded-lg font-semibold hover:bg-black transition flex items-center justify-center gap-2">
                       <ShoppingCart size={18} /> Add to Cart
                     </button>
                   </div>
@@ -819,7 +819,7 @@ const ClearanceFlashSales = () => {
                 className="bg-white rounded-xl shadow-md relative w-full"
               >
                 {/* Discount Badge */}
-                <span className="absolute top-3 left-3 bg-amber-700 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase z-10">
+                <span className="absolute top-3 left-3 bg-black text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase z-10">
                   {product.discount}
                 </span>
 
@@ -841,7 +841,7 @@ const ClearanceFlashSales = () => {
 
                   {/* Prices */}
                   <div className="mt-2">
-                    <span className="text-amber-600 font-bold text-lg">
+                    <span className="text-black font-bold text-lg">
                       ${product.price}
                     </span>
                     <span className="text-gray-500 line-through ml-2 text-sm">
@@ -855,7 +855,7 @@ const ClearanceFlashSales = () => {
                   </div>
 
                   {/* Add to Cart */}
-                  <button className="w-full mt-4 bg-amber-700 text-gray-900 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center justify-center gap-2">
+                  <button className="w-full mt-4 bg-black text-gray-900 py-2 rounded-lg font-semibold hover:bg-black transition flex items-center justify-center gap-2">
                     <ShoppingCart size={18} /> Add to Cart
                   </button>
                 </div>
@@ -866,7 +866,7 @@ const ClearanceFlashSales = () => {
             {visibleCount < products.length && (
               <button
                 onClick={handleShowMore}
-                className="w-full mt-4 bg-amber-700 text-gray-900 py-3 rounded-lg font-semibold hover:bg-amber-600 transition"
+                className="w-full mt-4 bg-black text-gray-900 py-3 rounded-lg font-semibold hover:bg-black transition"
               >
                 Show More
               </button>

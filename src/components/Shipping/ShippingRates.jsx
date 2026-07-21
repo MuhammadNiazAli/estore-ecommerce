@@ -81,7 +81,7 @@ const ShippingRates = () => {
         }
       `}</style>
 
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-8 text-center drop-shadow-md">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-8 text-center drop-shadow-md">
         Shipping Rates
       </h2>
 
@@ -93,7 +93,7 @@ const ShippingRates = () => {
               {['Method', 'Delivery Time', 'Cost', 'Tracking', 'Insurance', 'Carrier'].map((header) => (
                 <th
                   key={header}
-                  className="sticky top-0 z-10 bg-white bg-opacity-95 text-amber-400 text-lg font-semibold border-b border-gray-200 px-6 py-4 select-none backdrop-blur"
+                  className="sticky top-0 z-10 bg-white bg-opacity-95 text-black text-lg font-semibold border-b border-gray-200 px-6 py-4 select-none backdrop-blur"
                 >
                   {header}
                 </th>
@@ -106,14 +106,14 @@ const ShippingRates = () => {
                 key={method}
                 className={`border-b border-gray-200 last:border-b-0 transition-colors duration-300 cursor-default ${
                   index % 2 === 0 ? 'bg-white bg-opacity-50' : 'bg-white bg-opacity-40'
-                } hover:bg-amber-600/30`}
+                } hover:bg-black/30`}
               >
-                <td className="px-6 py-4 whitespace-nowrap font-medium text-amber-300 flex items-center gap-2">
-                  <span className="text-amber-400 text-lg">{icon}</span>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-black flex items-center gap-2">
+                  <span className="text-black text-lg">{icon}</span>
                   {method}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">{delivery}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-amber-300 font-semibold">{cost}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-black font-semibold">{cost}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{tracking}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{insurance}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{carrier}</td>
@@ -130,11 +130,11 @@ const ShippingRates = () => {
             key={method}
             className={`bg-gradient-to-tr from-white via-white to-white rounded-2xl p-5 shadow-lg shadow-black/40 ${
               index % 2 === 0 ? 'bg-opacity-70' : 'bg-opacity-60'
-            } hover:bg-amber-600/30 transition-colors duration-300`}
+            } hover:bg-black/30 transition-colors duration-300`}
           >
             <div className="flex items-center gap-3 mb-3">
-              <span className="text-amber-400 text-xl">{icon}</span>
-              <h3 className="text-amber-400 text-xl font-semibold">{method}</h3>
+              <span className="text-black text-xl">{icon}</span>
+              <h3 className="text-black text-xl font-semibold">{method}</h3>
             </div>
             <div className="text-sm space-y-2">
               <div className="flex justify-between">
@@ -143,7 +143,7 @@ const ShippingRates = () => {
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Cost:</span>
-                <span className="text-amber-300 font-semibold">{cost}</span>
+                <span className="text-black font-semibold">{cost}</span>
               </div>
               <div className="flex justify-between">
                 <span className="font-medium">Tracking:</span>

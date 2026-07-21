@@ -54,7 +54,7 @@ const CartItem = ({
       {/* Details */}
       <div className="flex flex-col flex-grow justify-between">
         <div>
-          <h3 className="text-amber-600 text-lg sm:text-xl font-semibold">{product.title}</h3>
+          <h3 className="text-black text-lg sm:text-xl font-semibold">{product.title}</h3>
           <p className="text-gray-700 mt-1 text-sm sm:text-base line-clamp-2">{product.description}</p>
         </div>
 
@@ -65,7 +65,7 @@ const CartItem = ({
             <button
               onClick={handleDecrease}
               aria-label="Decrease quantity"
-              className="text-amber-600 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-amber-500 transition select-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-black font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-black transition select-none disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={quantity === 1}
               type="button"
             >
@@ -75,7 +75,7 @@ const CartItem = ({
             <button
               onClick={handleIncrease}
               aria-label="Increase quantity"
-              className="text-amber-600 font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-amber-500 transition select-none"
+              className="text-black font-bold text-base sm:text-lg px-2 sm:px-3 hover:text-black transition select-none"
               type="button"
             >
               +
@@ -94,7 +94,7 @@ const CartItem = ({
           <button
             onClick={handleRemove}
             aria-label="Remove item"
-            className="text-red-500 hover:text-red-600 transition flex items-center justify-center"
+            className="text-black hover:text-black transition flex items-center justify-center"
             type="button"
           >
             <TrashIcon className="w-5 h-5 sm:w-6 sm:h-6" />

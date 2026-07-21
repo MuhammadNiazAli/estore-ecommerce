@@ -648,7 +648,7 @@ const CollectiblesFilters = () => {
       <div className="max-w-[1200px] mx-auto px-4 flex flex-col lg:flex-row gap-8 relative">
         <div className="lg:hidden sticky top-20 z-40">
           <button
-            className="bg-amber-700 text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
+            className="bg-black text-black px-4 py-2 rounded-full shadow-lg flex items-center gap-2"
             onClick={() => setIsFilterOpen(true)}
             aria-label="Open filters"
           >
@@ -664,7 +664,7 @@ const CollectiblesFilters = () => {
           aria-label="Product filters"
         >
           <button
-            className="absolute top-4 right-4 text-amber-600 text-2xl lg:hidden"
+            className="absolute top-4 right-4 text-black text-2xl lg:hidden"
             onClick={() => setIsFilterOpen(false)}
             aria-label="Close filters"
           >
@@ -673,7 +673,7 @@ const CollectiblesFilters = () => {
 
           <h2 className="text-xl font-bold mb-4">Filters</h2>
           <button
-            className="text-sm text-amber-600 hover:underline mb-4"
+            className="text-sm text-black hover:underline mb-4"
             onClick={resetFilters}
           >
             Reset Filters
@@ -692,7 +692,7 @@ const CollectiblesFilters = () => {
           {[["Brand", brands, "brand"], ["Category", categories, "category"], ["Features", features, "features"]].map(
             ([title, list, key]) => (
               <div className="mb-4" key={key}>
-                <h3 className="font-semibold mb-2 text-amber-600">{title}</h3>
+                <h3 className="font-semibold mb-2 text-black">{title}</h3>
                 {list.map((item) => (
                   <label key={item} className="block mb-1 text-sm cursor-pointer">
                     <input
@@ -709,7 +709,7 @@ const CollectiblesFilters = () => {
           )}
 
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Price</h3>
+            <h3 className="font-semibold mb-2 text-black">Price</h3>
             <input
               type="range"
               min="0"
@@ -724,12 +724,12 @@ const CollectiblesFilters = () => {
           </div>
 
           <div className="mb-4">
-            <h3 className="font-semibold mb-2 text-amber-600">Rating</h3>
+            <h3 className="font-semibold mb-2 text-black">Rating</h3>
             {[5, 4, 3].map((r) => (
               <button
                 key={r}
                 className={`mr-2 mb-2 px-2 py-1 border rounded ${
-                  filters.rating === r ? "bg-amber-600 text-black" : ""
+                  filters.rating === r ? "bg-black text-black" : ""
                 }`}
                 onClick={() => setFilters({ ...filters, rating: r })}
               >
@@ -739,7 +739,7 @@ const CollectiblesFilters = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-2 text-amber-600">Availability</h3>
+            <h3 className="font-semibold mb-2 text-black">Availability</h3>
             {[["In Stock", true], ["Out of Stock", false], ["All", null]].map(([label, value]) => (
               <label key={label} className="block cursor-pointer">
                 <input
@@ -784,9 +784,9 @@ const CollectiblesFilters = () => {
                 />
                 <h3 className="font-semibold">{product.name}</h3>
                 <p className="text-sm text-gray-600">{product.brand}</p>
-                <p className="text-lg font-bold text-amber-600">${product.price}</p>
+                <p className="text-lg font-bold text-black">${product.price}</p>
                 <p className="text-sm">{product.stock ? "In Stock" : "Out of Stock"}</p>
-                <button className="mt-3 bg-amber-700 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition">
+                <button className="mt-3 bg-black text-black px-5 py-2 rounded-full font-semibold hover:bg-black transition">
                   Add to Cart
                 </button>
               </div>
@@ -797,7 +797,7 @@ const CollectiblesFilters = () => {
             <div className="text-center mt-6">
               <button
                 onClick={() => setVisibleCount((prev) => prev + 8)}
-                className="bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+                className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition"
               >
                 Load More
               </button>

@@ -9,7 +9,7 @@ const CartGiftOptions = () => {
   return (
     <div className="w-full bg-white text-gray-900 flex justify-center px-4 sm:px-6 py-8">
       <div className="w-full max-w-[1000px]">
-        <h3 className="text-amber-600 text-2xl font-semibold mb-6">
+        <h3 className="text-black text-2xl font-semibold mb-6">
           Gift Options
         </h3>
 
@@ -20,7 +20,7 @@ const CartGiftOptions = () => {
               type="checkbox"
               checked={giftWrap}
               onChange={() => setGiftWrap(!giftWrap)}
-              className="form-checkbox h-5 w-5 text-amber-600 rounded focus:ring-2 focus:ring-amber-600 focus:outline-none transition"
+              className="form-checkbox h-5 w-5 text-black rounded focus:ring-2 focus:ring-black focus:outline-none transition"
             />
             <span className="ml-3 text-lg select-none">Add gift wrap</span>
           </label>
@@ -29,7 +29,7 @@ const CartGiftOptions = () => {
           <div className="flex-grow">
             <label
               htmlFor="gift-message"
-              className="block mb-1 text-amber-600 font-medium"
+              className="block mb-1 text-black font-medium"
             >
               Gift message (optional)
             </label>
@@ -40,7 +40,7 @@ const CartGiftOptions = () => {
               onChange={(e) => setMessage(e.target.value)}
               disabled={!giftWrap}
               placeholder="Write a message to include with your gift"
-              className={`w-full resize-none rounded-md bg-white border border-gray-200 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600 transition disabled:opacity-50 disabled:cursor-not-allowed`}
+              className={`w-full resize-none rounded-md bg-white border border-gray-200 px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition disabled:opacity-50 disabled:cursor-not-allowed`}
             />
           </div>
         </div>

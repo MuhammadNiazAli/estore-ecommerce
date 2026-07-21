@@ -78,7 +78,7 @@ export default function AddressingPage() {
 
         <button
           onClick={openAddForm}
-          className="px-4 py-2 bg-amber-600 text-gray-900 font-semibold rounded hover:bg-amber-700 transition"
+          className="px-4 py-2 bg-black text-gray-900 font-semibold rounded hover:bg-black transition"
         >
           Add New Address
         </button>

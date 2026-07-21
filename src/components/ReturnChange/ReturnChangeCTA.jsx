@@ -74,7 +74,7 @@ const ReturnChangeCTA = () => {
   return (
     <section className="w-full bg-white py-16 px-4 flex justify-center mb-[-100px]">
       <div className="w-full max-w-[1000px] text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-amber-600 mb-4">Still Need to Start a Request?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Still Need to Start a Request?</h2>
         <p className="text-gray-700 mb-8 text-lg max-w-xl mx-auto">
           Choose an option below to begin your return or exchange process now.
         </p>
@@ -82,7 +82,7 @@ const ReturnChangeCTA = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button
             onClick={() => setOpenType('return')}
-            className="flex items-center gap-2 bg-amber-600 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2"
+            className="flex items-center gap-2 bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2"
             aria-haspopup="dialog"
             aria-expanded={openType === 'return'}
             aria-controls="return-exchange-modal"
@@ -92,7 +92,7 @@ const ReturnChangeCTA = () => {
           </button>
           <button
             onClick={() => setOpenType('exchange')}
-            className="flex items-center gap-2 border border-amber-600 text-amber-600 px-6 py-3 rounded-full font-semibold hover:bg-amber-700 hover:text-black transition focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2"
+            className="flex items-center gap-2 border border-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-black transition focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2"
             aria-haspopup="dialog"
             aria-expanded={openType === 'exchange'}
             aria-controls="return-exchange-modal"
@@ -121,13 +121,13 @@ const ReturnChangeCTA = () => {
             className="bg-white w-full max-w-md rounded-xl p-6 text-left relative shadow-xl animate-fadeIn"
           >
             <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-black rounded"
               onClick={closeModal}
               aria-label="Close modal"
             >
               <X size={20} />
             </button>
-            <h3 id="modal-title" className="text-2xl font-bold text-amber-600 mb-3">
+            <h3 id="modal-title" className="text-2xl font-bold text-black mb-3">
               {openType === 'return' ? 'Start a Return' : 'Start an Exchange'}
             </h3>
             <p className="text-gray-700 mb-5">Please enter your Order ID to begin.</p>
@@ -138,7 +138,7 @@ const ReturnChangeCTA = () => {
                 placeholder="Order ID"
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}
-                className="w-full p-3 rounded-md bg-white border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="w-full p-3 rounded-md bg-white border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
                 required
                 aria-required="true"
               />
@@ -148,8 +148,8 @@ const ReturnChangeCTA = () => {
                 className={`w-full py-3 rounded-md font-semibold transition
                   ${
                     orderId.trim()
-                      ? 'bg-amber-600 text-black hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-600'
-                      : 'bg-amber-600/50 text-black/70 cursor-not-allowed'
+                      ? 'bg-black text-black hover:bg-black focus:outline-none focus:ring-4 focus:ring-black'
+                      : 'bg-black/50 text-black/70 cursor-not-allowed'
                   }`}
               >
                 Continue

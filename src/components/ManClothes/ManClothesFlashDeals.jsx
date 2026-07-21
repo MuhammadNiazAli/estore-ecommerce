@@ -80,7 +80,7 @@ const ManClothesFlashDeals = () => {
         <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:mb-0">
            Flash Deals
         </h2>
-        <div className="bg-amber-600 text-black px-4 py-2 rounded-lg text-sm font-semibold">
+        <div className="bg-black text-black px-4 py-2 rounded-lg text-sm font-semibold">
           Ends in: {formatTime(timeLeft)}
         </div>
       </div>
@@ -101,7 +101,7 @@ const ManClothesFlashDeals = () => {
                 className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
               />
               {/* Discount Badge */}
-              <span className="absolute top-3 left-3 bg-red-500 text-gray-900 text-xs font-bold px-2 py-1 rounded">
+              <span className="absolute top-3 left-3 bg-black text-gray-900 text-xs font-bold px-2 py-1 rounded">
                 {Math.round(
                   ((product.oldPrice - product.price) / product.oldPrice) * 100
                 )}
@@ -109,7 +109,7 @@ const ManClothesFlashDeals = () => {
               </span>
               {/* Hover Actions */}
               <div className="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex justify-center items-center gap-4 transition duration-500 ease-in-out">
-                <button className="bg-amber-700 text-black p-3 rounded-full hover:bg-amber-600 transition shadow-lg">
+                <button className="bg-black text-black p-3 rounded-full hover:bg-black transition shadow-lg">
                   <ShoppingCart size={18} />
                 </button>
                 <button className="bg-white text-gray-700 p-3 rounded-full hover:bg-gray-200 transition shadow-lg">
@@ -127,7 +127,7 @@ const ManClothesFlashDeals = () => {
                 {product.name}
               </h3>
               <div className="flex justify-center items-center gap-2 mb-2">
-                <span className="text-xl font-bold text-amber-700">
+                <span className="text-xl font-bold text-black">
                   ${product.price}
                 </span>
                 <span className="line-through text-gray-600 text-sm">
@@ -135,7 +135,7 @@ const ManClothesFlashDeals = () => {
                 </span>
               </div>
               <p className="text-sm text-gray-600 mb-3">⭐ {product.rating}</p>
-              <button className="bg-amber-700 text-black px-6 py-2 rounded-lg font-medium hover:bg-amber-600 transition duration-300">
+              <button className="bg-black text-black px-6 py-2 rounded-lg font-medium hover:bg-black transition duration-300">
                 Add to Cart
               </button>
             </div>

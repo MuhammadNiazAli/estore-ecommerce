@@ -90,7 +90,7 @@ const KitchenAccessoriesSection = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-10">
+    <section className="bg-white text-black py-10">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center tracking-wide">
@@ -102,7 +102,7 @@ const KitchenAccessoriesSection = () => {
           {accessories.map((item) => (
             <motion.div
               key={item.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden border border-amber-700 hover:border-amber-600 transition-all"
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-black hover:border-black transition-all"
               whileHover={{ scale: 1.03 }}
             >
               {/* Image */}
@@ -119,17 +119,17 @@ const KitchenAccessoriesSection = () => {
                 <h3 className="text-lg font-semibold line-clamp-1">
                   {item.name}
                 </h3>
-                <p className="text-amber-500 font-bold mt-1 text-sm">
+                <p className="text-black font-bold mt-1 text-sm">
                   ${item.price}
                 </p>
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full">
-                  <button className="flex-1 bg-amber-700 text-gray-900 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-amber-600 transition">
+                  <button className="flex-1 bg-black text-gray-900 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-black transition">
                     <FaCartPlus size={14} /> Add
                   </button>
                   <button
-                    className="flex-1 bg-white text-amber-600 px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-500 transition"
+                    className="flex-1 bg-white text-black px-3 py-2 rounded-lg flex items-center justify-center gap-2 text-xs font-semibold hover:bg-gray-500 transition"
                     onClick={() => handleViewDetails(item)}
                   >
                     <FaEye size={14} /> View
@@ -151,14 +151,14 @@ const KitchenAccessoriesSection = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white text-amber-600 rounded-xl p-5 md:p-6 max-w-sm sm:max-w-md w-full shadow-xl relative border border-amber-700"
+              className="bg-white text-black rounded-xl p-5 md:p-6 max-w-sm sm:max-w-md w-full shadow-xl relative border border-black"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             >
               {/* Close Button */}
               <button
-                className="absolute top-3 right-3 text-amber-600 text-xl hover:text-amber-500"
+                className="absolute top-3 right-3 text-black text-xl hover:text-black"
                 onClick={handleCloseOverlay}
               >
                 ✖
@@ -183,7 +183,7 @@ const KitchenAccessoriesSection = () => {
               </p>
 
               {/* Add to Cart */}
-              <button className="bg-amber-700 text-gray-900 px-4 py-3 rounded-lg w-full text-sm font-semibold hover:bg-amber-600 transition">
+              <button className="bg-black text-gray-900 px-4 py-3 rounded-lg w-full text-sm font-semibold hover:bg-black transition">
                 Add to Cart
               </button>
             </motion.div>

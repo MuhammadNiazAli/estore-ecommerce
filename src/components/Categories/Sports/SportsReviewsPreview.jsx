@@ -162,7 +162,7 @@ const SportsReviewsPreview = () => {
   const displayedReviews = showAll ? reviews : reviews.slice(0, 3);
 
   return (
-    <section className="bg-white py-14 text-amber-600 my-[-50px]">
+    <section className="bg-white py-14 text-black my-[-50px]">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -188,7 +188,7 @@ const SportsReviewsPreview = () => {
                 <img
                   src={review.avatar}
                   alt={review.name}
-                  className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-amber-600"
+                  className="w-16 h-16 rounded-full mb-4 object-cover border-2 border-black"
                 />
 
                 {/* Name */}
@@ -197,7 +197,7 @@ const SportsReviewsPreview = () => {
                 </h3>
 
                 {/* Rating */}
-                <div className="flex justify-center mb-3 text-amber-600">
+                <div className="flex justify-center mb-3 text-black">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
@@ -220,7 +220,7 @@ const SportsReviewsPreview = () => {
         <div className="text-center mt-10">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-3 bg-amber-600 text-black font-semibold rounded-full hover:bg-amber-500 transition"
+            className="px-6 py-3 bg-black text-black font-semibold rounded-full hover:bg-black transition"
           >
             {showAll ? "Show Less" : "View All Reviews"}
           </button>

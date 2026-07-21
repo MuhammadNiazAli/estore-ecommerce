@@ -18,9 +18,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Basic feature highlights shown in the header
 const basicFeatures = [
-  { Icon: FiTruck, label: 'Fast Shipping', colorClass: 'text-amber-700' },
-  { Icon: FiCreditCard, label: 'Secure Payment', colorClass: 'text-green-500' },
-  { Icon: FiStar, label: 'Top Ratings', colorClass: 'text-amber-600' },
+  { Icon: FiTruck, label: 'Fast Shipping', colorClass: 'text-black' },
+  { Icon: FiCreditCard, label: 'Secure Payment', colorClass: 'text-black' },
+  { Icon: FiStar, label: 'Top Ratings', colorClass: 'text-black' },
 ];
 
 // Additional user-centric features with links and optional badges
@@ -55,7 +55,7 @@ export default function Header3rdLayer() {
           onClick={handleToggle}
           aria-expanded={isExpanded}
           aria-controls="header3rdlayer-content"
-          className="hidden md:flex w-full px-10 py-4 font-semibold hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-gray-200 rounded items-center select-none"
+          className="hidden md:flex w-full px-10 py-4 font-semibold hover:text-black transition focus:outline-none focus:ring-2 focus:ring-gray-200 rounded items-center select-none"
           style={{ minHeight: 80 }}
         >
           <span className="flex-grow text-left">Search & Features</span>
@@ -101,7 +101,7 @@ export default function Header3rdLayer() {
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                     aria-label="Search products"
-                    className="w-full bg-white border border-gray-200 rounded-md pr-12 pl-5 py-2 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700 transition text-sm"
+                    className="w-full bg-white border border-gray-200 rounded-md pr-12 pl-5 py-2 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition text-sm"
                     style={{ paddingTop: 10, paddingBottom: 10 }}
                   />
                   {/* Search icon at right */}
@@ -154,12 +154,12 @@ export default function Header3rdLayer() {
                     key={label}
                     href={url}
                     title={label}
-                    className="relative flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md hover:bg-amber-700 hover:text-gray-900 transition text-xs font-medium whitespace-nowrap select-none"
+                    className="relative flex items-center gap-2 px-3 py-1.5 border border-gray-200 rounded-md hover:bg-black hover:text-gray-900 transition text-xs font-medium whitespace-nowrap select-none"
                   >
                     <Icon size={18} />
                     {label}
                     {badgeCount > 0 && (
-                      <span className="absolute -top-1 -right-2 bg-red-600 text-gray-900 text-[10px] rounded-full px-1 animate-pulse min-w-[14px] text-center">
+                      <span className="absolute -top-1 -right-2 bg-black text-gray-900 text-[10px] rounded-full px-1 animate-pulse min-w-[14px] text-center">
                         {badgeCount}
                       </span>
                     )}

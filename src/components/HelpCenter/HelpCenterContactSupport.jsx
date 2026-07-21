@@ -43,7 +43,7 @@ const HelpCenterContactSupport = () => {
       <div className="w-full max-w-[1000px] text-gray-900 space-y-12">
         {/* Title */}
         <header className="text-center max-w-xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+          <h2 className="text-3xl font-extrabold text-black tracking-tight">
             Contact Support
           </h2>
           <p className="mt-2 text-gray-700 text-sm sm:text-base">
@@ -55,19 +55,19 @@ const HelpCenterContactSupport = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {[
             {
-              icon: <PhoneCall className="w-8 h-8 text-amber-950" aria-hidden="true" />,
+              icon: <PhoneCall className="w-8 h-8 text-black" aria-hidden="true" />,
               title: 'Call Us',
               info: '+1 (800) 123-4567',
               role: 'link',
               href: 'tel:+18001234567',
             },
             {
-              icon: <MessageCircleMore className="w-8 h-8 text-amber-950" aria-hidden="true" />,
+              icon: <MessageCircleMore className="w-8 h-8 text-black" aria-hidden="true" />,
               title: 'Live Chat',
               info: 'Available 24/7 in the corner chat',
             },
             {
-              icon: <Mail className="w-8 h-8 text-amber-950" aria-hidden="true" />,
+              icon: <Mail className="w-8 h-8 text-black" aria-hidden="true" />,
               title: 'Email Us',
               info: 'support@example.com',
               role: 'link',
@@ -76,7 +76,7 @@ const HelpCenterContactSupport = () => {
           ].map(({ icon, title, info, role, href }, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform hover:scale-[1.03] hover:bg-amber-700 hover:text-black cursor-pointer focus-within:ring-4 focus-within:ring-amber-600"
+              className="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center transition-transform hover:scale-[1.03] hover:bg-black hover:text-black cursor-pointer focus-within:ring-4 focus-within:ring-black"
               tabIndex={0}
               role={role === 'link' ? 'link' : 'region'}
               aria-label={title}
@@ -105,7 +105,7 @@ const HelpCenterContactSupport = () => {
         >
           <h3
             id="contact-form-title"
-            className="text-amber-500 text-2xl font-semibold text-center"
+            className="text-black text-2xl font-semibold text-center"
           >
             Send Us a Message
           </h3>
@@ -119,8 +119,8 @@ const HelpCenterContactSupport = () => {
               name="email"
               type="email"
               placeholder="example@mail.com"
-              className={`w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700 transition ${
-                errors.email ? 'ring-2 ring-red-500' : ''
+              className={`w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition ${
+                errors.email ? 'ring-2 ring-black' : ''
               }`}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -131,7 +131,7 @@ const HelpCenterContactSupport = () => {
             {errors.email && (
               <p
                 id="email-error"
-                className="mt-1 text-sm text-red-500"
+                className="mt-1 text-sm text-black"
                 role="alert"
               >
                 {errors.email}
@@ -148,8 +148,8 @@ const HelpCenterContactSupport = () => {
               name="message"
               rows="5"
               placeholder="Write your message here..."
-              className={`w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-700 transition resize-none ${
-                errors.message ? 'ring-2 ring-red-500' : ''
+              className={`w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition resize-none ${
+                errors.message ? 'ring-2 ring-black' : ''
               }`}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -160,7 +160,7 @@ const HelpCenterContactSupport = () => {
             {errors.message && (
               <p
                 id="message-error"
-                className="mt-1 text-sm text-red-500"
+                className="mt-1 text-sm text-black"
                 role="alert"
               >
                 {errors.message}
@@ -171,10 +171,10 @@ const HelpCenterContactSupport = () => {
           <button
             type="submit"
             disabled={!isFormValid}
-            className={`w-full py-3 rounded-md font-semibold transition focus:outline-none focus:ring-4 focus:ring-amber-700 ${
+            className={`w-full py-3 rounded-md font-semibold transition focus:outline-none focus:ring-4 focus:ring-black ${
               isFormValid
-                ? 'bg-amber-600 hover:bg-amber-500 text-black cursor-pointer'
-                : 'bg-amber-600/60 text-black cursor-not-allowed'
+                ? 'bg-black hover:bg-black text-black cursor-pointer'
+                : 'bg-black/60 text-black cursor-not-allowed'
             }`}
             aria-disabled={!isFormValid}
           >
@@ -183,7 +183,7 @@ const HelpCenterContactSupport = () => {
 
           {submitted && (
             <p
-              className="text-green-400 text-center pt-2"
+              className="text-black text-center pt-2"
               role="status"
               aria-live="polite"
             >

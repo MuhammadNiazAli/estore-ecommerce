@@ -42,10 +42,10 @@ const BestsellersNewsletter = () => {
 
   return (
     <section className="bg-white rounded-xl max-w-3xl mx-auto p-8 sm:p-12 shadow-lg my-10 mb-[-100px]">
-      <h2 className="text-amber-600 text-3xl font-extrabold mb-4 text-center select-none">
+      <h2 className="text-black text-3xl font-extrabold mb-4 text-center select-none">
         Subscribe to Our Newsletter
       </h2>
-      <p className="text-amber-500 mb-8 text-center max-w-xl mx-auto">
+      <p className="text-black mb-8 text-center max-w-xl mx-auto">
         Get the latest updates and exclusive offers delivered straight to your inbox.
       </p>
 
@@ -64,18 +64,18 @@ const BestsellersNewsletter = () => {
             if (success) setSuccess(false)
           }}
           aria-label="Email address"
-          className={`w-full px-5 py-3 rounded-full bg-amber-950 bg-opacity-20 text-amber-300 placeholder-amber-600
-            focus:outline-none focus:ring-2 focus:ring-amber-600 transition-shadow duration-300
+          className={`w-full px-5 py-3 rounded-full bg-black bg-opacity-20 text-black placeholder-gray-500
+            focus:outline-none focus:ring-2 focus:ring-black transition-shadow duration-300
             ${
               error
-                ? 'ring-2 ring-red-500 focus:ring-red-600'
+                ? 'ring-2 ring-black focus:ring-black'
                 : 'ring-0'
             }`}
           disabled={loading}
         />
         <button
           type="submit"
-          className={`w-full sm:w-auto px-8 py-3 bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold rounded-full shadow-md
+          className={`w-full sm:w-auto px-8 py-3 bg-black hover:bg-black text-gray-900 font-semibold rounded-full shadow-md
             transition-colors duration-300 select-none flex justify-center items-center
             ${loading ? 'cursor-not-allowed opacity-70' : ''}`}
           disabled={loading}
@@ -111,7 +111,7 @@ const BestsellersNewsletter = () => {
 
       {error && (
         <p
-          className="mt-4 text-center text-red-500 font-medium select-text"
+          className="mt-4 text-center text-black font-medium select-text"
           role="alert"
           aria-live="assertive"
         >
@@ -121,7 +121,7 @@ const BestsellersNewsletter = () => {
 
       {success && (
         <p
-          className="mt-4 text-center text-amber-600 font-semibold select-text"
+          className="mt-4 text-center text-black font-semibold select-text"
           role="status"
           aria-live="polite"
         >

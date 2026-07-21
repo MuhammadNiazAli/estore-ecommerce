@@ -49,7 +49,7 @@ const SportsCompareBar = () => {
 
   if (compareProducts.length === 0) {
     return (
-      <div className="bg-white text-amber-600 p-8 rounded-lg max-w-7xl mx-auto text-center my-5">
+      <div className="bg-white text-black p-8 rounded-lg max-w-7xl mx-auto text-center my-5">
         <p className="text-xl font-semibold">
           No products selected for comparison.
         </p>
@@ -58,7 +58,7 @@ const SportsCompareBar = () => {
   }
 
   return (
-    <section className="bg-white text-amber-600 py-8 px-4 max-w-7xl mx-auto rounded-lg">
+    <section className="bg-white text-black py-8 px-4 max-w-7xl mx-auto rounded-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">Compare Products</h2>
 
       <div className="overflow-auto">
@@ -77,7 +77,7 @@ const SportsCompareBar = () => {
                   <button
                     onClick={() => removeProduct(product.id)}
                     aria-label={`Remove ${product.name}`}
-                    className="absolute right-2 top-2 text-red-500 hover:text-red-400 transition"
+                    className="absolute right-2 top-2 text-black hover:text-black transition"
                   >
                     <FaTimes />
                   </button>

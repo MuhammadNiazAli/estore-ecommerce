@@ -93,11 +93,11 @@ const ManClothesFeatured = () => {
           {/* Content Section */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Badge for Desktop */}
-            <div className="hidden lg:inline-block bg-amber-700 text-black text-xs font-bold px-3 py-1 rounded-full mb-4">
+            <div className="hidden lg:inline-block bg-black text-black text-xs font-bold px-3 py-1 rounded-full mb-4">
               Limited Stock
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold text-amber-600 mb-2">
+            <h1 className="text-4xl lg:text-5xl font-bold text-black mb-2">
               {currentProduct.name}
             </h1>
             <p className="text-sm lg:text-lg text-gray-700 mb-3">
@@ -106,13 +106,13 @@ const ManClothesFeatured = () => {
 
             {/* Extra Details for Desktop */}
             <div className="hidden lg:flex flex-col gap-2 text-gray-700 text-sm mb-4">
-              <span>Brand: <span className="text-amber-600">{currentProduct.brand}</span></span>
+              <span>Brand: <span className="text-black">{currentProduct.brand}</span></span>
               <span>Rating: ⭐ {currentProduct.rating}</span>
             </div>
 
             {/* Pricing */}
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-3xl lg:text-4xl font-bold text-amber-600">
+              <span className="text-3xl lg:text-4xl font-bold text-black">
                 ${currentProduct.price}
               </span>
               <span className="line-through text-gray-600 text-lg">
@@ -136,7 +136,7 @@ const ManClothesFeatured = () => {
               {currentProduct.sizes.map((size) => (
                 <span
                   key={size}
-                  className="px-3 py-1 border border-amber-600 text-amber-600 rounded text-xs font-medium"
+                  className="px-3 py-1 border border-black text-black rounded text-xs font-medium"
                 >
                   {size}
                 </span>
@@ -154,10 +154,10 @@ const ManClothesFeatured = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="bg-amber-700 text-black px-5 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:bg-amber-600 transition">
+              <button className="bg-black text-black px-5 py-2 lg:px-6 lg:py-3 rounded-lg font-semibold hover:bg-black transition">
                 Add to Cart
               </button>
-              <button className="border border-amber-700 text-amber-600 px-5 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-amber-700 hover:text-black transition">
+              <button className="border border-black text-black px-5 py-2 lg:px-6 lg:py-3 rounded-lg hover:bg-black hover:text-black transition">
                 View Details
               </button>
             </div>
@@ -172,7 +172,7 @@ const ManClothesFeatured = () => {
             key={i}
             onClick={() => setCurrentIndex(i)}
             className={`w-3 h-3 rounded-full ${
-              i === currentIndex ? "bg-amber-600" : "bg-gray-500"
+              i === currentIndex ? "bg-black" : "bg-gray-500"
             }`}
           ></button>
         ))}

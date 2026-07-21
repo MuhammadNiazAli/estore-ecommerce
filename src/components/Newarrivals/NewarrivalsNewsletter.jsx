@@ -43,7 +43,7 @@ const NewarrivalsNewsletter = () => {
       >
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-bold text-amber-700 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mb-2">
             Subscribe to Our Newsletter
           </h2>
           <p className="text-gray-700 text-sm md:text-base">
@@ -69,7 +69,7 @@ const NewarrivalsNewsletter = () => {
               className="
                 w-full pl-10 pr-4 py-3 rounded-xl bg-gray-100 text-gray-900
                 placeholder-gray-500 text-sm sm:text-base
-                focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-1 focus:ring-offset-gray-900
+                focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 focus:ring-offset-gray-900
                 transition
               "
             />
@@ -79,11 +79,11 @@ const NewarrivalsNewsletter = () => {
             type="submit"
             disabled={status === 'loading'}
             className="
-              bg-amber-600 text-gray-900 font-semibold
+              bg-black text-gray-900 font-semibold
               px-6 py-3 rounded-xl w-full sm:w-auto text-sm sm:text-base
               transition
               shadow-[0_0_10px_rgba(251,191,36,0)]
-              hover:bg-amber-700 hover:shadow-[0_0_15px_rgba(251,191,36,0.6)]
+              hover:bg-black hover:shadow-[0_0_15px_rgba(251,191,36,0.6)]
               disabled:opacity-70 disabled:cursor-not-allowed
             "
           >
@@ -94,13 +94,13 @@ const NewarrivalsNewsletter = () => {
 
       {/* Error Message */}
       {error && (
-        <p className="mt-3 text-red-400 text-sm text-center">{error}</p>
+        <p className="mt-3 text-black text-sm text-center">{error}</p>
       )}
 
       {/* Success Message */}
       {status === 'success' && (
         <motion.div
-          className="fixed bottom-5 right-5 bg-green-600 text-gray-900 px-5 py-3 rounded-xl shadow-lg flex items-center gap-2"
+          className="fixed bottom-5 right-5 bg-black text-gray-900 px-5 py-3 rounded-xl shadow-lg flex items-center gap-2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4 }}

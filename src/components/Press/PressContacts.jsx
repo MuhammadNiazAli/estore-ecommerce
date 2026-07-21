@@ -8,7 +8,7 @@ const contacts = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-7 w-7 sm:h-8 sm:w-8 text-amber-600"
+        className="h-7 w-7 sm:h-8 sm:w-8 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -26,7 +26,7 @@ const contacts = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-7 w-7 sm:h-8 sm:w-8 text-amber-600"
+        className="h-7 w-7 sm:h-8 sm:w-8 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -48,7 +48,7 @@ const contacts = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-7 w-7 sm:h-8 sm:w-8 text-amber-600"
+        className="h-7 w-7 sm:h-8 sm:w-8 text-black"
         fill="currentColor"
         viewBox="0 0 24 24"
         aria-hidden="true"
@@ -63,10 +63,10 @@ const PressContacts = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 sm:px-6 lg:px-8 py-16 mb-[-30px]">
       <div className="max-w-6xl w-full text-center">
-        <h2 className="text-amber-600 text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-lg">
+        <h2 className="text-black text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-lg">
           Press Contacts
         </h2>
-        <p className="mt-4 text-amber-500 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+        <p className="mt-4 text-black text-base sm:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-md">
           For press inquiries, please reach out to our media relations team using the contact
           information below.
         </p>
@@ -79,11 +79,11 @@ const PressContacts = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${type}: ${value}`}
-              className="flex flex-col items-center justify-center bg-white hover:bg-gray-500 hover:ring-2 hover:ring-amber-600 rounded-2xl p-6 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="flex flex-col items-center justify-center bg-white hover:bg-gray-500 hover:ring-2 hover:ring-black rounded-2xl p-6 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-black"
             >
               <div className="mb-3">{icon}</div>
-              <h3 className="text-amber-600 font-semibold text-lg sm:text-xl">{type}</h3>
-              <p className="text-amber-500 mt-1 text-sm sm:text-base break-words">{value}</p>
+              <h3 className="text-black font-semibold text-lg sm:text-xl">{type}</h3>
+              <p className="text-black mt-1 text-sm sm:text-base break-words">{value}</p>
             </a>
           ))}
         </div>

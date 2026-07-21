@@ -64,11 +64,11 @@ const ShopTagCloud = ({
                 transition
                 select-none
                 ${getFontSizeClass(tag.count)}
-                focus:outline-none focus:ring-2 focus:ring-amber-400
+                focus:outline-none focus:ring-2 focus:ring-black
                 ${
                   isActive
-                    ? 'bg-amber-400 text-gray-900 shadow-lg scale-110'
-                    : 'bg-white hover:bg-amber-400 hover:text-gray-900'
+                    ? 'bg-black text-gray-900 shadow-lg scale-110'
+                    : 'bg-white hover:bg-black hover:text-gray-900'
                 }
                 ${
                   hoveredTag === tag.name && !isActive

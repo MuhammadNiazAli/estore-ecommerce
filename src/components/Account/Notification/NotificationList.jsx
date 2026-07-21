@@ -10,21 +10,21 @@ const notifications = [
     id: 1,
     title: 'Order Shipped',
     message: 'Your order #11243 has been shipped!',
-    icon: <FaShippingFast className="text-green-400 text-lg" />,
+    icon: <FaShippingFast className="text-black text-lg" />,
     time: '2 hours ago',
   },
   {
     id: 2,
     title: 'Profile Updated',
     message: 'You successfully updated your profile details.',
-    icon: <FaCheckCircle className="text-amber-600 text-lg" />,
+    icon: <FaCheckCircle className="text-black text-lg" />,
     time: 'Yesterday',
   },
   {
     id: 3,
     title: 'Password Attempt Blocked',
     message: 'We blocked a suspicious login attempt.',
-    icon: <FiXCircle className="text-red-400 text-lg" />,
+    icon: <FiXCircle className="text-black text-lg" />,
     time: '3 days ago',
   },
 ];
@@ -39,7 +39,7 @@ const NotificationList = () => {
       className="w-full max-w-2xl mx-auto px-6 py-10 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl"
     >
       <h2 className="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-2">
-        <FaBell className="text-amber-600" aria-hidden="true" />
+        <FaBell className="text-black" aria-hidden="true" />
         Recent Notifications
       </h2>
 

@@ -7,7 +7,7 @@ import { User, Mail, MonitorSmartphone, Globe2 } from 'lucide-react';
 const PrivacyInformationCollection = () => {
   return (
     <section
-      className="bg-white text-amber-600 w-full flex justify-center px-4 sm:px-6 lg:px-8"
+      className="bg-white text-black w-full flex justify-center px-4 sm:px-6 lg:px-8"
       style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
       aria-label="Information Collection Section"
     >
@@ -22,7 +22,7 @@ const PrivacyInformationCollection = () => {
         </motion.h2>
 
         <motion.p
-          className="text-amber-500 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2 sm:px-4"
+          className="text-black text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2 sm:px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -41,10 +41,10 @@ const PrivacyInformationCollection = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <User className="w-6 h-6 mt-1 flex-shrink-0 text-amber-600" />
+            <User className="w-6 h-6 mt-1 flex-shrink-0 text-black" />
             <div>
               <p className="font-semibold text-base md:text-lg">Personal Information</p>
-              <p className="text-amber-500 text-sm md:text-base leading-relaxed">
+              <p className="text-black text-sm md:text-base leading-relaxed">
                 Name, contact info, company details — typically collected when signing up, contacting support, or customizing your profile.
               </p>
             </div>
@@ -55,10 +55,10 @@ const PrivacyInformationCollection = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Mail className="w-6 h-6 mt-1 flex-shrink-0 text-amber-600" />
+            <Mail className="w-6 h-6 mt-1 flex-shrink-0 text-black" />
             <div>
               <p className="font-semibold text-base md:text-lg">Communication Data</p>
-              <p className="text-amber-500 text-sm md:text-base leading-relaxed">
+              <p className="text-black text-sm md:text-base leading-relaxed">
                 Emails, support messages, and survey responses — stored to provide support and improve service quality.
               </p>
             </div>
@@ -69,10 +69,10 @@ const PrivacyInformationCollection = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <MonitorSmartphone className="w-6 h-6 mt-1 flex-shrink-0 text-amber-600" />
+            <MonitorSmartphone className="w-6 h-6 mt-1 flex-shrink-0 text-black" />
             <div>
               <p className="font-semibold text-base md:text-lg">Device & Usage Data</p>
-              <p className="text-amber-500 text-sm md:text-base leading-relaxed">
+              <p className="text-black text-sm md:text-base leading-relaxed">
                 Browser type, OS, IP address, device identifiers, and usage patterns — collected automatically to enhance security and user experience.
               </p>
             </div>
@@ -83,10 +83,10 @@ const PrivacyInformationCollection = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Globe2 className="w-6 h-6 mt-1 flex-shrink-0 text-amber-600" />
+            <Globe2 className="w-6 h-6 mt-1 flex-shrink-0 text-black" />
             <div>
               <p className="font-semibold text-base md:text-lg">Location Data</p>
-              <p className="text-amber-500 text-sm md:text-base leading-relaxed">
+              <p className="text-black text-sm md:text-base leading-relaxed">
                 Approximate geolocation derived from IP address — used only for language preferences and regional compliance.
               </p>
             </div>
@@ -94,7 +94,7 @@ const PrivacyInformationCollection = () => {
         </motion.div>
 
         <motion.p
-          className="pt-8 text-sm md:text-base text-amber-600 max-w-2xl mx-auto px-2 leading-relaxed"
+          className="pt-8 text-sm md:text-base text-black max-w-2xl mx-auto px-2 leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}

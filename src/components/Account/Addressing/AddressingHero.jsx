@@ -6,15 +6,15 @@ import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const features = [
   {
-    icon: <FiMapPin className="text-amber-600 text-lg" />,
+    icon: <FiMapPin className="text-black text-lg" />,
     label: 'Save Multiple Delivery Locations',
   },
   {
-    icon: <FiHome className="text-amber-600 text-lg" />,
+    icon: <FiHome className="text-black text-lg" />,
     label: 'Set Your Default Address',
   },
   {
-    icon: <FiCheckCircle className="text-amber-600 text-lg" />,
+    icon: <FiCheckCircle className="text-black text-lg" />,
     label: 'Enjoy Fast & Secure Checkout',
   },
 ];
@@ -30,7 +30,7 @@ const AddressingHero = () => {
         <div className="max-w-md mx-auto lg:mx-0 space-y-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight">
             Your{' '}
-            <span className="text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
+            <span className="text-black underline decoration-black decoration-4 underline-offset-4">
               Addresses Hub
             </span>
             <br />
@@ -55,7 +55,7 @@ const AddressingHero = () => {
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 pt-3">
             <button
               type="button"
-              className="px-7 py-2.5 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="px-7 py-2.5 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               aria-label="Add new address"
             >
               Add New Address
@@ -74,16 +74,16 @@ const AddressingHero = () => {
         {/* Right Visual */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-white border-4 border-amber-600 shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center"
+            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-white border-4 border-black shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center"
             aria-hidden="true"
           >
-            <FaMapMarkedAlt className="text-amber-600 text-[5.5rem]" />
+            <FaMapMarkedAlt className="text-black text-[5.5rem]" />
           </div>
         </div>
       </div>
 
       {/* Decorative Floating Icon */}
-      <div className="absolute top-6 left-6 hidden lg:block text-amber-600 text-4xl opacity-15 pointer-events-none select-none">
+      <div className="absolute top-6 left-6 hidden lg:block text-black text-4xl opacity-15 pointer-events-none select-none">
         <FaMapMarkedAlt />
       </div>
     </section>

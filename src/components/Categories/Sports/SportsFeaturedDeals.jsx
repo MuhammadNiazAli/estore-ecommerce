@@ -40,7 +40,7 @@ const featuredDeals = [
 
 const SportsFeaturedDeals = () => {
   return (
-    <section className="bg-white text-amber-600 py-14 my-[-50px]">
+    <section className="bg-white text-black py-14 my-[-50px]">
       <div className="max-w-6xl mx-auto px-4">
         {/* ✅ Heading */}
         <div className="text-center mb-10">
@@ -70,7 +70,7 @@ const SportsFeaturedDeals = () => {
                   alt={deal.name}
                   className="w-full h-56 object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-4 left-4 bg-amber-600 text-black px-3 py-1 rounded-full text-sm font-bold">
+                <span className="absolute top-4 left-4 bg-black text-black px-3 py-1 rounded-full text-sm font-bold">
                   {deal.discount}
                 </span>
               </div>
@@ -79,7 +79,7 @@ const SportsFeaturedDeals = () => {
               <div className="p-5">
                 <h3 className="text-xl font-bold text-gray-900">{deal.name}</h3>
                 <div className="flex items-center gap-2 mt-2">
-                  <span className="text-amber-600 font-extrabold text-2xl">
+                  <span className="text-black font-extrabold text-2xl">
                     ${deal.price}
                   </span>
                   <span className="text-gray-600 line-through text-sm">
@@ -87,7 +87,7 @@ const SportsFeaturedDeals = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-1 mt-2 text-amber-600">
+                <div className="flex items-center gap-1 mt-2 text-black">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
@@ -100,7 +100,7 @@ const SportsFeaturedDeals = () => {
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-amber-600 text-black font-semibold py-2 rounded-full hover:bg-amber-500 transition flex items-center justify-center gap-2">
+                <button className="mt-4 w-full bg-black text-black font-semibold py-2 rounded-full hover:bg-black transition flex items-center justify-center gap-2">
                   <FaCartPlus /> Add to Cart
                 </button>
               </div>

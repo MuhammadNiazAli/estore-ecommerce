@@ -209,8 +209,8 @@ const AccessoriesDeals = () => {
   };
 
   return (
-    <div className="bg-white text-amber-600 max-w-[1000px] mx-auto rounded-xl p-4 sm:p-6 shadow-2xl">
-      <h2 className="text-2xl sm:text-3xl font-bold text-amber-500 mb-3 sm:mb-4 text-center sm:text-left">
+    <div className="bg-white text-black max-w-[1000px] mx-auto rounded-xl p-4 sm:p-6 shadow-2xl">
+      <h2 className="text-2xl sm:text-3xl font-bold text-black mb-3 sm:mb-4 text-center sm:text-left">
         Exclusive Accessories Deals
       </h2>
       <p className="text-gray-700 mb-5 text-center sm:text-left text-sm sm:text-base leading-relaxed">
@@ -221,7 +221,7 @@ const AccessoriesDeals = () => {
           Deal ends in:
         </span>
         <span
-          className="text-red-400 font-bold text-lg sm:text-xl text-center sm:text-right tabular-nums"
+          className="text-black font-bold text-lg sm:text-xl text-center sm:text-right tabular-nums"
           aria-live="polite"
           aria-atomic="true"
         >
@@ -245,14 +245,14 @@ const AccessoriesDeals = () => {
               decoding="async"
               draggable="false"
             />
-            <h3 className="font-semibold text-amber-500 text-xs sm:text-sm md:text-base truncate">
+            <h3 className="font-semibold text-black text-xs sm:text-sm md:text-base truncate">
               {item.name}
             </h3>
             <div className="flex items-center gap-2 text-xs sm:text-sm mt-1">
-              <span className="text-amber-600 font-bold">${item.price.toFixed(2)}</span>
+              <span className="text-black font-bold">${item.price.toFixed(2)}</span>
               <span className="line-through text-gray-500">${item.oldPrice.toFixed(2)}</span>
             </div>
-            <span className="text-green-400 text-xs sm:text-sm">{item.discount}</span>
+            <span className="text-black text-xs sm:text-sm">{item.discount}</span>
             <div className="flex items-center mt-1" aria-label={`Rating: ${item.rating} out of 5 stars`}>
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
@@ -260,16 +260,16 @@ const AccessoriesDeals = () => {
                   size={14}
                   className={
                     i < Math.round(item.rating)
-                      ? "text-amber-600"
+                      ? "text-black"
                       : "text-gray-600"
                   }
-                  fill={i < Math.round(item.rating) ? "#b45309" : "none"}
+                  fill={i < Math.round(item.rating) ? "#111827" : "none"}
                   aria-hidden="true"
                 />
               ))}
             </div>
             <button
-              className="w-full mt-auto mt-3 bg-amber-600 text-gray-900 py-2 rounded hover:bg-amber-500 font-semibold text-xs sm:text-sm transition"
+              className="w-full mt-auto mt-3 bg-black text-gray-900 py-2 rounded hover:bg-black font-semibold text-xs sm:text-sm transition"
               aria-label={`Add ${item.name} to cart`}
               type="button"
             >
@@ -284,7 +284,7 @@ const AccessoriesDeals = () => {
         <div className="flex justify-center mt-8">
           <button
             onClick={handleLoadMore}
-            className="bg-amber-600 text-gray-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-amber-500 transition text-sm sm:text-base"
+            className="bg-black text-gray-900 px-6 sm:px-8 py-3 rounded font-semibold hover:bg-black transition text-sm sm:text-base"
             type="button"
             aria-label="Load more accessories deals"
           >

@@ -12,7 +12,7 @@ const WishlistActions = ({
     <div className="bg-white px-6 py-4 max-w-4xl mx-auto rounded-b-xl flex flex-wrap gap-4 justify-center sm:justify-start">
       <button
         onClick={onClearAll}
-        className="flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold px-5 py-2 rounded-md transition"
+        className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold px-5 py-2 rounded-md transition"
         aria-label="Clear all wishlist items"
         type="button"
       >
@@ -22,7 +22,7 @@ const WishlistActions = ({
 
       <button
         onClick={onShare}
-        className="flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold px-5 py-2 rounded-md transition"
+        className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold px-5 py-2 rounded-md transition"
         aria-label="Share wishlist"
         type="button"
       >
@@ -33,7 +33,7 @@ const WishlistActions = ({
       {onExport && (
         <button
           onClick={onExport}
-          className="flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-gray-900 font-semibold px-5 py-2 rounded-md transition"
+          className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold px-5 py-2 rounded-md transition"
           aria-label="Export wishlist"
           type="button"
         >

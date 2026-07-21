@@ -6,19 +6,19 @@ import { motion } from 'framer-motion';
 
 const contrastItems = [
   {
-    icon: <Circle className="w-7 h-7 text-amber-600" />,
+    icon: <Circle className="w-7 h-7 text-black" />,
     title: 'Sufficient Contrast Ratios',
     description:
       'Ensure text and important UI elements have enough contrast with backgrounds, meeting WCAG AA or AAA standards.',
   },
   {
-    icon: <Maximize className="w-7 h-7 text-amber-600" />,
+    icon: <Maximize className="w-7 h-7 text-black" />,
     title: 'Scalable UI Elements',
     description:
       'Design interfaces that scale well with zoom without loss of content or usability, supporting up to 200% zoom and beyond.',
   },
   {
-    icon: <ZoomIn className="w-7 h-7 text-amber-600" />,
+    icon: <ZoomIn className="w-7 h-7 text-black" />,
     title: 'Flexible Text & Layout',
     description:
       'Use relative units and flexible layouts so content adjusts gracefully to user preferences and assistive technology settings.',
@@ -34,7 +34,7 @@ const ColorContrastScaling = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-amber-500"
+          className="text-3xl md:text-4xl font-bold text-black"
         >
           Color Contrast & Scaling
         </motion.h2>
@@ -61,7 +61,7 @@ const ColorContrastScaling = () => {
             >
               <div className="flex items-center space-x-3 mb-4">
                 {item.icon}
-                <h3 className="text-lg font-semibold text-amber-400">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-black">{item.title}</h3>
               </div>
               <p className="text-gray-600 text-sm">{item.description}</p>
             </motion.div>

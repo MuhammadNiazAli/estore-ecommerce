@@ -20,12 +20,12 @@ const NewarrivalsPagination = () => {
           aria-current={currentPage === i ? 'page' : undefined}
           className={`
             px-4 py-2 rounded-md font-semibold
-            focus:outline-none focus:ring-4 focus:ring-amber-600
+            focus:outline-none focus:ring-4 focus:ring-black
             transition duration-300
             ${
               currentPage === i
-                ? 'bg-amber-700 text-gray-900 shadow-lg'
-                : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
+                ? 'bg-black text-gray-900 shadow-lg'
+                : 'bg-white text-black hover:bg-black hover:text-black'
             }
           `}
         >
@@ -49,12 +49,12 @@ const NewarrivalsPagination = () => {
         aria-label="Previous Page"
         className={`
           px-4 py-2 rounded-md font-semibold
-          focus:outline-none focus:ring-4 focus:ring-amber-600
+          focus:outline-none focus:ring-4 focus:ring-black
           transition duration-300
           ${
             currentPage === 1
-              ? 'bg-white text-amber-800 cursor-not-allowed'
-              : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
+              ? 'bg-white text-black cursor-not-allowed'
+              : 'bg-white text-black hover:bg-black hover:text-black'
           }
           sm:hidden
         `}
@@ -72,12 +72,12 @@ const NewarrivalsPagination = () => {
         aria-label="Next Page"
         className={`
           px-4 py-2 rounded-md font-semibold
-          focus:outline-none focus:ring-4 focus:ring-amber-600
+          focus:outline-none focus:ring-4 focus:ring-black
           transition duration-300
           ${
             currentPage === totalPages
-              ? 'bg-white text-amber-800 cursor-not-allowed'
-              : 'bg-white text-amber-600 hover:bg-amber-800 hover:text-amber-400'
+              ? 'bg-white text-black cursor-not-allowed'
+              : 'bg-white text-black hover:bg-black hover:text-black'
           }
           sm:hidden
         `}

@@ -548,7 +548,7 @@ const KitchenFilters = () => {
     <section className="w-full bg-white py-12 text-gray-900">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-center text-amber-600 mb-8">
+        <h2 className="text-4xl font-extrabold text-center text-black mb-8">
           Explore Our Kitchen Collection
         </h2>
 
@@ -563,8 +563,8 @@ const KitchenFilters = () => {
               }}
               className={`px-6 py-2 rounded-full font-semibold transition ${
                 activeCategory === cat
-                  ? "bg-amber-700 text-black"
-                  : "bg-white hover:bg-amber-600 hover:text-black"
+                  ? "bg-black text-black"
+                  : "bg-white hover:bg-black hover:text-black"
               }`}
             >
               {cat}
@@ -593,14 +593,14 @@ const KitchenFilters = () => {
                 <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition">
                   <button
                     onClick={() => setQuickView(product)}
-                    className="bg-amber-600 p-3 rounded-full hover:bg-amber-700"
+                    className="bg-black p-3 rounded-full hover:bg-black"
                   >
                     <EyeIcon className="h-5 w-5 text-black" />
                   </button>
-                  <button className="bg-amber-600 p-3 rounded-full hover:bg-amber-700">
+                  <button className="bg-black p-3 rounded-full hover:bg-black">
                     <HeartIcon className="h-5 w-5 text-black" />
                   </button>
-                  <button className="bg-amber-600 p-3 rounded-full hover:bg-amber-700">
+                  <button className="bg-black p-3 rounded-full hover:bg-black">
                     <ShoppingCartIcon className="h-5 w-5 text-black" />
                   </button>
                 </div>
@@ -609,7 +609,7 @@ const KitchenFilters = () => {
               {/* Details */}
               <div className="p-4 text-center">
                 <h3 className="text-lg font-bold">{product.name}</h3>
-                <p className="text-amber-600 font-bold text-xl">
+                <p className="text-black font-bold text-xl">
                   ${product.price}{" "}
                   <span className="text-gray-600 text-sm line-through">
                     ${product.oldPrice}
@@ -625,7 +625,7 @@ const KitchenFilters = () => {
           <div className="text-center mt-8">
             <button
               onClick={handleShowMore}
-              className="bg-amber-700 text-black px-8 py-3 rounded-full font-semibold hover:bg-amber-600 transition"
+              className="bg-black text-black px-8 py-3 rounded-full font-semibold hover:bg-black transition"
             >
               Show More
             </button>
@@ -639,7 +639,7 @@ const KitchenFilters = () => {
           <div className="bg-white rounded-xl max-w-lg w-full p-6 relative shadow-lg">
             <button
               onClick={() => setQuickView(null)}
-              className="absolute top-4 right-4 text-gray-600 hover:text-amber-600 text-2xl"
+              className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl"
             >
               ✕
             </button>
@@ -648,12 +648,12 @@ const KitchenFilters = () => {
               alt={quickView.name}
               className="w-full h-72 object-cover rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-bold text-amber-600 mb-2">{quickView.name}</h3>
+            <h3 className="text-2xl font-bold text-black mb-2">{quickView.name}</h3>
             <p className="text-gray-700 mb-4">{quickView.description}</p>
-            <p className="text-amber-600 font-bold text-2xl mb-6">
+            <p className="text-black font-bold text-2xl mb-6">
               ${quickView.price}
             </p>
-            <button className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-700 transition">
+            <button className="bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition">
               Add to Cart
             </button>
           </div>

@@ -6,25 +6,25 @@ import { motion } from 'framer-motion';
 
 const tools = [
   {
-    icon: <Monitor className="w-7 h-7 text-amber-600" />,
+    icon: <Monitor className="w-7 h-7 text-black" />,
     name: 'axe DevTools',
     description: 'Automated accessibility testing with detailed reports for developers.',
     url: 'https://www.deque.com/axe/',
   },
   {
-    icon: <Bug className="w-7 h-7 text-amber-600" />,
+    icon: <Bug className="w-7 h-7 text-black" />,
     name: 'WAVE Evaluation Tool',
     description: 'Web Accessibility Evaluation Tool by WebAIM for visual feedback.',
     url: 'https://wave.webaim.org/',
   },
   {
-    icon: <Laptop className="w-7 h-7 text-amber-600" />,
+    icon: <Laptop className="w-7 h-7 text-black" />,
     name: 'Lighthouse',
     description: 'Google’s automated tool for auditing web page accessibility and performance.',
     url: 'https://developers.google.com/web/tools/lighthouse',
   },
   {
-    icon: <CheckCircle className="w-7 h-7 text-amber-600" />,
+    icon: <CheckCircle className="w-7 h-7 text-black" />,
     name: 'NVDA',
     description: 'Free screen reader for Windows used for manual accessibility testing.',
     url: 'https://www.nvaccess.org/',
@@ -40,7 +40,7 @@ const TestingTools = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-3xl md:text-4xl font-bold text-amber-500"
+          className="text-3xl md:text-4xl font-bold text-black"
         >
           Accessibility Testing Tools
         </motion.h2>
@@ -71,7 +71,7 @@ const TestingTools = () => {
             >
               <div>{tool.icon}</div>
               <div>
-                <h3 className="text-amber-400 font-semibold text-lg">{tool.name}</h3>
+                <h3 className="text-black font-semibold text-lg">{tool.name}</h3>
                 <p className="text-gray-600 text-sm mt-1">{tool.description}</p>
               </div>
             </motion.a>

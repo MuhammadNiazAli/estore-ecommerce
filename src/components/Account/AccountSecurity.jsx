@@ -62,7 +62,7 @@ const AccountSecurity = () => {
             id="twoFA-toggle"
             checked={twoFAEnabled}
             onChange={toggleTwoFA}
-            className="form-checkbox h-6 w-6 text-amber-600 rounded transition duration-200 ease-in-out"
+            className="form-checkbox h-6 w-6 text-black rounded transition duration-200 ease-in-out"
           />
           <span className="ml-3 font-medium text-gray-900">{twoFAEnabled ? 'Enabled' : 'Disabled'}</span>
         </label>
@@ -89,7 +89,7 @@ const AccountSecurity = () => {
               autoComplete="current-password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Enter your current password"
               required
               aria-required="true"
@@ -110,7 +110,7 @@ const AccountSecurity = () => {
               autoComplete="new-password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Create a new password"
               required
               aria-required="true"
@@ -135,7 +135,7 @@ const AccountSecurity = () => {
               autoComplete="new-password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="w-full px-4 py-3 rounded-lg bg-white border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Confirm your new password"
               required
               aria-required="true"
@@ -146,7 +146,7 @@ const AccountSecurity = () => {
           <button
             type="submit"
             disabled={passwordChanging}
-            className={`w-full bg-amber-600 text-black px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-700 ${
+            className={`w-full bg-black text-black px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black ${
               passwordChanging ? 'opacity-60 cursor-not-allowed' : ''
             }`}
             aria-live="polite"

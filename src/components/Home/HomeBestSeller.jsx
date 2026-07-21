@@ -70,11 +70,11 @@ const productList = [
 
 function StarRating({ rating }) {
   return (
-    <div className="flex gap-1 text-amber-600" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex gap-1 text-black" aria-label={`${rating} out of 5 stars`}>
       {[...Array(5)].map((_, index) => (
         <FiStar
           key={index}
-          className={`text-sm ${index < rating ? 'fill-amber-600' : 'text-gray-600'}`}
+          className={`text-sm ${index < rating ? 'fill-black' : 'text-gray-600'}`}
           aria-hidden="true"
         />
       ))}
@@ -83,7 +83,7 @@ function StarRating({ rating }) {
 }
 
 function ProductCard({ product, isFavorite, onToggleFavorite }) {
-  const badgeColor = product.badge === 'new' ? 'bg-green-600 left-3' : 'bg-red-600 right-3';
+  const badgeColor = product.badge === 'new' ? 'bg-black left-3' : 'bg-black right-3';
 
   return (
     <article
@@ -102,17 +102,17 @@ function ProductCard({ product, isFavorite, onToggleFavorite }) {
         <button
           onClick={() => onToggleFavorite(product.id)}
           aria-pressed={isFavorite}
-          className="p-2 rounded-full bg-red-500/10 text-red-500 hover:bg-red-500/50 hover:scale-110 hover:text-red-800 transition-all duration-300 shadow"
+          className="p-2 rounded-full bg-black/10 text-black hover:bg-black/50 hover:scale-110 hover:text-black transition-all duration-300 shadow"
           type="button"
         >
-          {isFavorite ? <BsHeartFill className="text-red-500/70 text-lg" /> : <FiHeart className="text-lg" />}
+          {isFavorite ? <BsHeartFill className="text-black/70 text-lg" /> : <FiHeart className="text-lg" />}
         </button>
         
 
         {/* Eye */}
         <Link
           href={`/product`}
-          className="p-2 rounded-full bg-amber-600/10 text-amber-600 hover:bg-amber-700/50 hover:text-amber-900 hover:scale-110 transition-all duration-300 shadow"
+          className="p-2 rounded-full bg-black/10 text-black hover:bg-black/50 hover:text-black hover:scale-110 transition-all duration-300 shadow"
         >
           <FiEye className="text-lg" />
         </Link>
@@ -143,10 +143,10 @@ function ProductCard({ product, isFavorite, onToggleFavorite }) {
         <p className="text-sm text-gray-700 line-clamp-2">{product.description}</p>
         <StarRating rating={product.rating} />
         <div className="flex justify-between items-center mt-2">
-          <span className="text-lg font-bold text-amber-600">{product.price}</span>
+          <span className="text-lg font-bold text-black">{product.price}</span>
           <Link
             href="/cart"
-            className="py-1 px-3 bg-amber-600 hover:bg-amber-500 text-black rounded font-medium flex items-center gap-2 transition duration-300 text-sm"
+            className="py-1 px-3 bg-black hover:bg-black text-black rounded font-medium flex items-center gap-2 transition duration-300 text-sm"
             aria-label={`Add ${product.title} to cart`}
           >
             <FiShoppingCart />
@@ -175,7 +175,7 @@ export default function HomeBestSeller() {
   return (
     <section className="bg-white mb-[-50px] my-[-50px] text-gray-900 py-16 px-4 w-full">
       <div className="max-w-[1300px] mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 text-center mb-12 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-black text-center mb-12 tracking-tight">
           Best Sellers
         </h2>
 
@@ -194,7 +194,7 @@ export default function HomeBestSeller() {
           <div className="mt-10 text-center">
             <button
               onClick={handleLoadMore}
-              className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-black rounded-lg font-semibold shadow transition duration-300"
+              className="px-6 py-3 bg-black hover:bg-black text-black rounded-lg font-semibold shadow transition duration-300"
               aria-label="Load more products"
             >
               Load More

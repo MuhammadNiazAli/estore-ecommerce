@@ -17,7 +17,7 @@ export default function RewardingInviteFriends() {
         {/* Left side: Invitation text and link */}
         <div className="flex-1 space-y-5 text-center lg:text-left">
           <div className="flex items-center justify-center lg:justify-start gap-3">
-            <FaUserPlus className="text-amber-600 text-2xl" aria-hidden="true" />
+            <FaUserPlus className="text-black text-2xl" aria-hidden="true" />
             <h2 className="text-xl sm:text-2xl font-bold leading-tight">
               Invite Friends & Earn More
             </h2>
@@ -32,14 +32,14 @@ export default function RewardingInviteFriends() {
               className="bg-white px-5 py-2.5 rounded-full border border-gray-200 text-sm text-gray-700 flex items-center gap-3 select-all"
               aria-label="Referral link"
             >
-              <FaLink className="text-amber-600" aria-hidden="true" />
+              <FaLink className="text-black" aria-hidden="true" />
               <span className="break-all">{referralLink}</span>
             </div>
 
             <button
               type="button"
               onClick={copyToClipboard}
-              className="px-6 py-2.5 bg-amber-600 text-black font-semibold rounded-full hover:bg-amber-500 transition-colors duration-250 shadow-md flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="px-6 py-2.5 bg-black text-black font-semibold rounded-full hover:bg-black transition-colors duration-250 shadow-md flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               aria-label="Copy referral link to clipboard"
             >
               <FaCopy aria-hidden="true" />
@@ -51,10 +51,10 @@ export default function RewardingInviteFriends() {
         {/* Right side: Visual icon */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="w-40 h-40 sm:w-52 sm:h-52 rounded-2xl bg-white border-4 border-amber-600 flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+            className="w-40 h-40 sm:w-52 sm:h-52 rounded-2xl bg-white border-4 border-black flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
             aria-hidden="true"
           >
-            <FaUserPlus className="text-amber-600 text-[3.5rem]" />
+            <FaUserPlus className="text-black text-[3.5rem]" />
           </div>
         </div>
       </div>

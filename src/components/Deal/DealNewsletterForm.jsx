@@ -27,7 +27,7 @@ const DealNewsletterForm = () => {
       <div className="max-w-xl mx-auto backdrop-blur-md rounded-2xl shadow-xl p-8">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="flex flex-col space-y-5">
-            <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-black text-center">
               Join Our Deal Newsletter
             </h2>
             <p className="text-sm sm:text-base text-gray-700 text-center">
@@ -39,26 +39,26 @@ const DealNewsletterForm = () => {
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className={`w-full px-4 py-3 text-sm rounded-lg bg-white placeholder-gray-500 text-gray-900 border focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-                error ? 'border-red-500' : 'border-gray-200'
+              className={`w-full px-4 py-3 text-sm rounded-lg bg-white placeholder-gray-500 text-gray-900 border focus:outline-none focus:ring-2 focus:ring-black transition ${
+                error ? 'border-black' : 'border-gray-200'
               }`}
               required
             />
 
             {error && (
-              <p className="text-red-500 text-sm text-left mt-[-12px]">{error}</p>
+              <p className="text-black text-sm text-left mt-[-12px]">{error}</p>
             )}
 
             <button
               type="submit"
-              className="bg-amber-600 hover:bg-amber-500 text-black font-semibold py-3 rounded-lg transition-colors duration-300"
+              className="bg-black hover:bg-black text-black font-semibold py-3 rounded-lg transition-colors duration-300"
             >
               Subscribe Now
             </button>
           </form>
         ) : (
           <div className="text-center py-10">
-            <h3 className="text-xl font-semibold text-green-400 mb-2">
+            <h3 className="text-xl font-semibold text-black mb-2">
               Thank you for subscribing!
             </h3>
             <p className="text-gray-600 text-sm">

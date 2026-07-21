@@ -52,7 +52,7 @@ const ManClothesOffers = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 py-12 px-4 sm:px-6 md:px-10 lg:px-16">
+    <section className="bg-gradient-to-r from-black via-gray-700 to-gray-900 py-12 px-4 sm:px-6 md:px-10 lg:px-16">
       {/* Header */}
       <div className="text-center mb-10 max-w-3xl mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-wide drop-shadow-lg">
@@ -82,7 +82,7 @@ const ManClothesOffers = () => {
                   loading="lazy"
                 />
                 {/* Discount Badge */}
-                <div className="absolute top-3 left-3 bg-amber-700 text-gray-900 font-semibold px-3 py-1 rounded-full shadow-md uppercase tracking-wide text-xs sm:text-sm">
+                <div className="absolute top-3 left-3 bg-black text-gray-900 font-semibold px-3 py-1 rounded-full shadow-md uppercase tracking-wide text-xs sm:text-sm">
                   {offer.discount} OFF
                 </div>
               </div>
@@ -120,14 +120,14 @@ const ManClothesOffers = () => {
                       </div>
                     </>
                   ) : (
-                    <span className="text-red-600 font-bold">Deal Ended</span>
+                    <span className="text-black font-bold">Deal Ended</span>
                   )}
                 </div>
 
                 {/* Add to Cart Button */}
                 <button
                   type="button"
-                  className="mt-6 w-full flex justify-center items-center gap-2 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 transition-all duration-300 rounded-xl py-3.5 text-gray-900 font-extrabold text-base shadow-lg shadow-amber-600/60 hover:shadow-amber-700/80"
+                  className="mt-6 w-full flex justify-center items-center gap-2 bg-gradient-to-r from-black to-gray-900 hover:from-black hover:to-gray-900 transition-all duration-300 rounded-xl py-3.5 text-gray-900 font-extrabold text-base shadow-lg shadow-black/60 hover:shadow-black/80"
                 >
                   🛒 Shop Now
                 </button>

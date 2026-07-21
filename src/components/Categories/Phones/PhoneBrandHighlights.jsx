@@ -62,8 +62,8 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
             title={`Shop ${brand.name} phones`}
             className={`relative bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group 
               transform transition duration-500 hover:scale-105 focus:outline-none 
-              focus-visible:ring-4 focus-visible:ring-amber-600 focus-visible:ring-opacity-75 
-              ${activeBrand === brand.name ? 'ring-2 ring-amber-600' : ''}`}
+              focus-visible:ring-4 focus-visible:ring-black focus-visible:ring-opacity-75 
+              ${activeBrand === brand.name ? 'ring-2 ring-black' : ''}`}
           >
             {/* Brand Image */}
             <div className="w-full h-48 sm:h-56 md:h-64">
@@ -89,7 +89,7 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
 
             {/* Selected Badge */}
             {activeBrand === brand.name && (
-              <span className="absolute top-2 right-2 bg-amber-600 text-black px-2 py-1 rounded-full flex items-center gap-1 text-xs font-semibold shadow">
+              <span className="absolute top-2 right-2 bg-black text-black px-2 py-1 rounded-full flex items-center gap-1 text-xs font-semibold shadow">
                 <CheckCircle className="w-4 h-4" />
                 Selected
               </span>
@@ -101,7 +101,7 @@ const PhoneBrandHighlights = ({ onBrandSelect }) => {
       {/* Active Brand Info */}
       {activeBrand && (
         <div className="mt-8 text-center text-gray-700 text-sm">
-          Showing products for <span className="text-amber-600 font-semibold">{activeBrand}</span>
+          Showing products for <span className="text-black font-semibold">{activeBrand}</span>
         </div>
       )}
     </section>

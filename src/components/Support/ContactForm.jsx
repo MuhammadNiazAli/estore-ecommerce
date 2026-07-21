@@ -35,7 +35,7 @@ const ContactForm = () => {
         </h2>
 
         {submitted ? (
-          <p className="text-center text-green-400 text-lg font-medium">
+          <p className="text-center text-black text-lg font-medium">
             Thank you for reaching out! We'll be in touch shortly.
           </p>
         ) : (
@@ -55,7 +55,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="John Doe"
               />
             </div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="w-full p-3 bg-white border border-gray-200 rounded text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="john@example.com"
               />
             </div>
@@ -87,7 +87,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full p-3 bg-white border border-gray-200 rounded resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="w-full p-3 bg-white border border-gray-200 rounded resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
                 placeholder="Let us know how we can help..."
               />
             </div>
@@ -95,7 +95,7 @@ const ContactForm = () => {
   
             <button
               type="submit"
-              className="w-full bg-amber-800 hover:bg-amber-900 transition-colors text-gray-900 py-3 rounded font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-amber-700"
+              className="w-full bg-black hover:bg-black transition-colors text-gray-900 py-3 rounded font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-black"
             >
               Send Message
             </button>

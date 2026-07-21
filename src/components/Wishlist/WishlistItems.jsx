@@ -70,14 +70,14 @@ const WishlistItems = () => {
                   <Link
                     href="/cart"
                     title="Add to Cart"
-                    className="p-1.5 rounded-full bg-amber-800 text-gray-900 hover:bg-amber-900 transition"
+                    className="p-1.5 rounded-full bg-black text-gray-900 hover:bg-black transition"
                   >
                     <FiShoppingCart size={16} />
                   </Link>
                   <button
                     type="button"
                     title="Remove from Wishlist"
-                    className="p-1.5 rounded-full bg-red-600 text-gray-900 hover:bg-red-700 transition"
+                    className="p-1.5 rounded-full bg-black text-gray-900 hover:bg-black transition"
                   >
                     <FiTrash2 size={16} />
                   </button>
@@ -89,7 +89,7 @@ const WishlistItems = () => {
               <h3 className="text-sm font-medium text-gray-900 dark:text-gray-900 truncate w-full">
                 {title}
               </h3>
-              <p className="text-amber-800 dark:text-amber-600 font-semibold text-sm mt-1">
+              <p className="text-black dark:text-black font-semibold text-sm mt-1">
                 ${price.toFixed(2)}
               </p>
             </div>

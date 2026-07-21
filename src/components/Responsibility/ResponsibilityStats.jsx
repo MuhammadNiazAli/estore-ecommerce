@@ -94,7 +94,7 @@ const ResponsibilityStats = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inViewport ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-amber-600 text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 select-none max-w-full"
+          className="text-black text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 sm:mb-12 select-none max-w-full"
         >
           Our Impact in Numbers
         </motion.h2>
@@ -113,13 +113,13 @@ const ResponsibilityStats = () => {
                 key={id}
                 variants={cardVariants}
                 className="bg-white/70 backdrop-blur-sm border border-gray-200 rounded-xl p-6 sm:p-8 text-center cursor-default
-                  focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2
-                  transition-shadow duration-300 hover:shadow-amber-700/40 hover:scale-[1.04] focus:shadow-amber-700/60"
+                  focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2
+                  transition-shadow duration-300 hover:shadow-black/40 hover:scale-[1.04] focus:shadow-black/60"
                 tabIndex={0}
                 aria-label={`${label}: ${count.toLocaleString()}`}
               >
                 <p
-                  className="text-amber-600 text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 tabular-nums select-text"
+                  className="text-black text-4xl sm:text-5xl md:text-6xl font-extrabold mb-3 tabular-nums select-text"
                   aria-live="polite"
                 >
                   {count.toLocaleString()}

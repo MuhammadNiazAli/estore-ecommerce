@@ -8,22 +8,22 @@ const benefits = [
   {
     title: 'Work-Life Balance',
     description: 'Flexible schedules and remote-friendly culture help you thrive personally and professionally.',
-    icon: <ClockIcon className="h-8 w-8 text-amber-600" />,
+    icon: <ClockIcon className="h-8 w-8 text-black" />,
   },
   {
     title: 'Continuous Learning',
     description: 'Access to courses, conferences, and personal development tools to grow your skills.',
-    icon: <AcademicCapIcon className="h-8 w-8 text-amber-600" />,
+    icon: <AcademicCapIcon className="h-8 w-8 text-black" />,
   },
   {
     title: 'Meaningful Impact',
     description: 'Contribute to projects that matter, with real-world impact and ownership.',
-    icon: <SparklesIcon className="h-8 w-8 text-amber-600" />,
+    icon: <SparklesIcon className="h-8 w-8 text-black" />,
   },
   {
     title: 'Health & Wellness',
     description: 'Comprehensive benefits that support your mental and physical health.',
-    icon: <HeartIcon className="h-8 w-8 text-amber-600" />,
+    icon: <HeartIcon className="h-8 w-8 text-black" />,
   },
 ];
 
@@ -53,7 +53,7 @@ const CareersBenefits = () => {
             >
               <div className="mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-              <p className="text-amber-400 text-sm leading-relaxed">{benefit.description}</p>
+              <p className="text-black text-sm leading-relaxed">{benefit.description}</p>
             </motion.div>
           ))}
         </div>

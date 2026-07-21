@@ -111,7 +111,7 @@ const ManClothesGrid = () => {
               />
               {/* Hover Overlay Actions */}
               <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center gap-4">
-                <button className="bg-amber-600 text-black p-3 rounded-full hover:bg-amber-500 transition">
+                <button className="bg-black text-black p-3 rounded-full hover:bg-black transition">
                   <ShoppingCart size={20} />
                 </button>
                 <button className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition">
@@ -130,7 +130,7 @@ const ManClothesGrid = () => {
               </h3>
               <p className="text-sm text-gray-500">{product.brand}</p>
               <div className="flex items-center justify-center gap-2 my-2">
-                <span className="text-xl font-bold text-amber-700">
+                <span className="text-xl font-bold text-black">
                   ${product.price}
                 </span>
                 <span className="line-through text-gray-600 text-sm">
@@ -138,7 +138,7 @@ const ManClothesGrid = () => {
                 </span>
               </div>
               <p className="text-sm text-gray-600">⭐ {product.rating}</p>
-              <button className="mt-3 bg-amber-700 text-black px-5 py-2 rounded-lg font-medium hover:bg-amber-600 transition">
+              <button className="mt-3 bg-black text-black px-5 py-2 rounded-lg font-medium hover:bg-black transition">
                 Add to Cart
               </button>
             </div>

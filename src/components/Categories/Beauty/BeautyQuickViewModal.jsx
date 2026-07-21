@@ -342,7 +342,7 @@ const BeautyQuickViewModalPage = () => {
   };
 
   return (
-    <div className=" bg-amber-700 flex flex-col items-center justify-center p-6">
+    <div className=" bg-black flex flex-col items-center justify-center p-6">
       {/* Trigger */}
       <button
         onClick={() => openQuickView(products[0])}
@@ -371,7 +371,7 @@ const BeautyQuickViewModalPage = () => {
               {/* Close Button - Always visible */}
               <button
                 onClick={() => setIsQuickViewOpen(false)}
-                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-red-500 transition z-50"
+                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-black transition z-50"
               >
                 <XMarkIcon className="h-6 w-6" />
               </button>
@@ -405,7 +405,7 @@ const BeautyQuickViewModalPage = () => {
                   Brand: <span className="font-medium">{selectedProduct.brand}</span>
                 </p>
                 <div className="flex items-center mb-3">
-                  <span className="text-amber-700 text-lg">★★★★★</span>
+                  <span className="text-black text-lg">★★★★★</span>
                   <span className="text-gray-500 text-sm ml-2">(120 reviews)</span>
                 </div>
                 <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -464,7 +464,7 @@ const BeautyQuickViewModalPage = () => {
             >
               <button
                 onClick={() => setIsRelatedOpen(false)}
-                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-red-500 transition"
+                className="absolute top-3 right-3 bg-white text-gray-900 rounded-full p-2 hover:bg-black transition"
               >
                 <XMarkIcon className="h-6 w-6" />
               </button>

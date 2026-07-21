@@ -5,22 +5,22 @@ import { FaLockOpen, FaUserLock, FaEyeSlash, FaTimes } from 'react-icons/fa';
 
 const securityFeatures = [
   {
-    icon: <FaLockOpen className="text-amber-600 text-lg" />,
+    icon: <FaLockOpen className="text-black text-lg" />,
     label: 'Advanced Protection',
   },
   {
-    icon: <FaUserLock className="text-amber-600 text-lg" />,
+    icon: <FaUserLock className="text-black text-lg" />,
     label: 'Secure Login & 2FA',
   },
   {
-    icon: <FaEyeSlash className="text-amber-600 text-lg" />,
+    icon: <FaEyeSlash className="text-black text-lg" />,
     label: 'Biometric Authentication',
   },
 ];
 
 const manageSecurityContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Manage Your Security Settings</h3>
+    <h3 className="text-xl font-semibold text-black">Manage Your Security Settings</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Enable Two-Factor Authentication (2FA) for added login security</li>
       <li>Set up biometric login such as fingerprint or facial recognition</li>
@@ -28,14 +28,14 @@ const manageSecurityContent = (
       <li>Update your password regularly and use strong, unique passwords</li>
     </ul>
     <p className="pt-2 text-xs text-gray-600">
-      Visit your <span className="text-amber-600">Security Settings</span> page to configure these options.
+      Visit your <span className="text-black">Security Settings</span> page to configure these options.
     </p>
   </div>
 );
 
 const learnMoreContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Learn More About Account Security</h3>
+    <h3 className="text-xl font-semibold text-black">Learn More About Account Security</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Understand how 2FA protects your account from unauthorized access</li>
       <li>Benefits of biometric authentication for seamless and secure login</li>
@@ -43,7 +43,7 @@ const learnMoreContent = (
       <li>How we safeguard your data with encryption and privacy measures</li>
     </ul>
     <p className="pt-2 text-xs text-gray-600">
-      Read our full <a href="/security" className="underline text-amber-600">Security Guide</a> for detailed information.
+      Read our full <a href="/security" className="underline text-black">Security Guide</a> for detailed information.
     </p>
   </div>
 );
@@ -61,7 +61,7 @@ export default function HelpingSecurity() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Account Security
         </h2>
         <p className="text-gray-700">
@@ -83,8 +83,8 @@ export default function HelpingSecurity() {
             onClick={() => toggleSection('manageSecurity')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'manageSecurity'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-label="Manage security settings"
           >
@@ -109,7 +109,7 @@ export default function HelpingSecurity() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg text-left max-w-md mx-auto">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

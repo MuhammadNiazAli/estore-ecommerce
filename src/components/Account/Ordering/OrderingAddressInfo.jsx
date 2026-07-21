@@ -21,7 +21,7 @@ const OrderingAddressInfo = ({ address }) => {
       aria-label="Shipping address"
       className="bg-white text-gray-700 rounded-lg p-6 max-w-md mx-auto lg:mx-0 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-4">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-4">
         Shipping Address
       </h2>
 

@@ -604,7 +604,7 @@ const WatchesCompareBar = () => {
                   {/* Remove */}
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="absolute top-2 right-2 bg-white text-gray-900 rounded-full p-1 hover:bg-red-500 transition"
+                    className="absolute top-2 right-2 bg-white text-gray-900 rounded-full p-1 hover:bg-black transition"
                   >
                     <XMarkIcon className="h-4 w-4" />
                   </button>

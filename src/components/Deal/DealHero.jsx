@@ -73,7 +73,7 @@ const DealHero = () => {
             className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
           >
             Discover Your{' '}
-            <span className="text-amber-600 underline decoration-4 decoration-amber-500">
+            <span className="text-black underline decoration-4 decoration-black">
               Best Deals
             </span>{' '}
             Today
@@ -84,7 +84,7 @@ const DealHero = () => {
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 fade-in-up">
-            <button className="bg-amber-600 text-black px-6 py-3 rounded-full font-semibold flex items-center hover:bg-amber-500 transition duration-300 shadow-md hover:shadow-lg">
+            <button className="bg-black text-black px-6 py-3 rounded-full font-semibold flex items-center hover:bg-black transition duration-300 shadow-md hover:shadow-lg">
               Start Shopping <FiArrowRight className="ml-2" size={18} />
             </button>
             <button className="border border-gray-200 px-6 py-3 rounded-full font-semibold hover:bg-gray-500 hover:text-black transition duration-300 shadow-md hover:shadow-lg">
@@ -94,7 +94,7 @@ const DealHero = () => {
         </div>
 
         {/* Image + Feature List */}
-        <div className="relative w-full h-[400px] sm:h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl border-2 border-amber-600">
+        <div className="relative w-full h-[400px] sm:h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl border-2 border-black">
           <Image
             src="https://www.realgorillaseeds.com/wp-content/uploads/2023/11/discount.gif"
             alt="Flash Sale Animation"
@@ -114,7 +114,7 @@ const DealHero = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-amber-600">{feature.icon}</div>
+                <div className="text-black">{feature.icon}</div>
                 <div>
                   <p className="font-semibold leading-snug">{feature.title}</p>
                   <p className="text-gray-500 text-[9px] sm:text-xs leading-snug">

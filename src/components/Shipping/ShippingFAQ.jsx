@@ -56,7 +56,7 @@ const ShippingFAQ = () => {
       aria-label="Shipping frequently asked questions"
       className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-700"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-14 text-center drop-shadow-lg tracking-wide select-none">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-14 text-center drop-shadow-lg tracking-wide select-none">
         Shipping FAQs
       </h2>
 
@@ -66,7 +66,7 @@ const ShippingFAQ = () => {
           return (
             <div
               key={question}
-              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-amber-400"
+              className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-black"
               onClick={() => toggleIndex(i)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -84,12 +84,12 @@ const ShippingFAQ = () => {
                 <h3
                   id={`faq-question-${i}`}
                   className={`text-lg sm:text-xl font-semibold transition-colors ${
-                    isOpen ? 'text-amber-400' : 'text-gray-700'
-                  } hover:text-amber-400 underline decoration-amber-600 underline-offset-4`}
+                    isOpen ? 'text-black' : 'text-gray-700'
+                  } hover:text-black underline decoration-black underline-offset-4`}
                 >
                   {question}
                 </h3>
-                <span className="text-amber-400 flex-shrink-0">
+                <span className="text-black flex-shrink-0">
                   {isOpen ? (
                     <FiMinus className="w-6 h-6" aria-hidden="true" />
                   ) : (

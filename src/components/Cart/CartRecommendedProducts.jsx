@@ -52,7 +52,7 @@ const CartRecommendedProducts = () => {
   return (
     <div className="w-full bg-white text-gray-900 flex justify-center px-4 sm:px-6 py-10">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-amber-600 text-2xl font-semibold mb-6">
+        <h2 className="text-black text-2xl font-semibold mb-6">
           Recommended for You
         </h2>
 
@@ -71,12 +71,12 @@ const CartRecommendedProducts = () => {
               <h3 className="text-gray-900 font-semibold text-lg mb-2 text-center truncate w-full">
                 {product.title}
               </h3>
-              <p className="text-amber-600 font-semibold text-lg mb-4">
+              <p className="text-black font-semibold text-lg mb-4">
                 ${product.price.toFixed(2)}
               </p>
              <button
                 type="button"
-                className="bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold px-5 py-2 rounded-full w-full transition shadow-md"
+                className="bg-black hover:bg-black text-gray-900 font-semibold px-5 py-2 rounded-full w-full transition shadow-md"
                 onClick={() => alert(`Added "${product.title}" to cart.`)}
               >
                 Add to Cart

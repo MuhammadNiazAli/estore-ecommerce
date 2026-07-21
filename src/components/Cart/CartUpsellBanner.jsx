@@ -33,7 +33,7 @@ const CartUpsellBanner = () => {
 
       {/* Info */}
       <div className="flex-1 w-full flex flex-col justify-center">
-        <p className="text-amber-600 font-semibold text-sm sm:text-base tracking-wide mb-1 select-none">
+        <p className="text-black font-semibold text-sm sm:text-base tracking-wide mb-1 select-none">
           {upsellProduct.discount}
         </p>
         <h3 className="text-xl sm:text-2xl font-bold mb-3 leading-snug">
@@ -41,7 +41,7 @@ const CartUpsellBanner = () => {
         </h3>
 
         <div className="flex items-center gap-3 mb-5">
-          <span className="text-green-400 font-extrabold text-xl sm:text-2xl tracking-tight">
+          <span className="text-black font-extrabold text-xl sm:text-2xl tracking-tight">
             ${upsellProduct.discountedPrice.toFixed(2)}
           </span>
           <span className="line-through text-gray-600 text-sm sm:text-base select-none">
@@ -53,7 +53,7 @@ const CartUpsellBanner = () => {
         <button
           type="button"
           onClick={() => alert(`Added "${upsellProduct.title}" to cart!`)}
-          className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-800 text-black font-semibold px-6 py-3 rounded-full shadow-md shadow-amber-700/50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2"
+          className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-black font-semibold px-6 py-3 rounded-full shadow-md shadow-black/50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
         >
           <ShoppingCart size={20} />
           Add to Cart

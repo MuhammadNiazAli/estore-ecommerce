@@ -5,7 +5,7 @@ import { ClockIcon, CurrencyDollarIcon, StarIcon, CubeIcon } from "@heroicons/re
 
 const WatchesCategoryInfo = () => {
   return (
-    <section className="w-full bg-white text-amber-600 py-10 px-4 md:px-8">
+    <section className="w-full bg-white text-black py-10 px-4 md:px-8">
       {/* Container */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -30,7 +30,7 @@ const WatchesCategoryInfo = () => {
             transition={{ delay: 0.2 }}
             className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
           >
-            <ClockIcon className="w-10 h-10 text-amber-600 mx-auto mb-4" />
+            <ClockIcon className="w-10 h-10 text-black mx-auto mb-4" />
             <h3 className="text-lg font-semibold">Top Brands</h3>
             <p className="text-gray-700 text-sm">Rolex, Omega, Apple, Seiko, Tag Heuer</p>
           </motion.div>
@@ -42,7 +42,7 @@ const WatchesCategoryInfo = () => {
             transition={{ delay: 0.3 }}
             className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
           >
-            <CurrencyDollarIcon className="w-10 h-10 text-amber-600 mx-auto mb-4" />
+            <CurrencyDollarIcon className="w-10 h-10 text-black mx-auto mb-4" />
             <h3 className="text-lg font-semibold">Price Range</h3>
             <p className="text-gray-700 text-sm">$200 - $35,000</p>
           </motion.div>
@@ -54,7 +54,7 @@ const WatchesCategoryInfo = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
           >
-            <CubeIcon className="w-10 h-10 text-amber-600 mx-auto mb-4" />
+            <CubeIcon className="w-10 h-10 text-black mx-auto mb-4" />
             <h3 className="text-lg font-semibold">Materials</h3>
             <p className="text-gray-700 text-sm">Steel, Gold, Titanium, Ceramic</p>
           </motion.div>
@@ -66,7 +66,7 @@ const WatchesCategoryInfo = () => {
             transition={{ delay: 0.5 }}
             className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
           >
-            <StarIcon className="w-10 h-10 text-amber-600 mx-auto mb-4" />
+            <StarIcon className="w-10 h-10 text-black mx-auto mb-4" />
             <h3 className="text-lg font-semibold">Customer Rating</h3>
             <p className="text-gray-700 text-sm">4.7/5 Average Rating</p>
           </motion.div>

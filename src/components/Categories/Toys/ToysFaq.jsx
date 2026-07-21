@@ -73,7 +73,7 @@ const ToysFaq = () => {
 
   return (
     <section className="max-w-[800px] mx-auto p-6 bg-white text-gray-900 rounded-lg shadow-lg my-12 my-[-30px]">
-      <h2 className="text-3xl font-bold mb-8 text-amber-600 text-center">
+      <h2 className="text-3xl font-bold mb-8 text-black text-center">
         Frequently Asked Questions
       </h2>
 
@@ -86,7 +86,7 @@ const ToysFaq = () => {
             <button
               onClick={() => toggleFaq(id)}
               className={`w-full text-left px-5 py-4 bg-white hover:bg-gray-500 focus:outline-none flex justify-between items-center ${
-                activeId === id ? "font-semibold text-amber-600" : "font-medium"
+                activeId === id ? "font-semibold text-black" : "font-medium"
               }`}
               aria-expanded={activeId === id}
               aria-controls={`faq-content-${id}`}

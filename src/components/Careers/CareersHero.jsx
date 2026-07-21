@@ -360,9 +360,9 @@ const CareersHero = () => {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="mx-auto mb-6 flex justify-center rounded-full bg-amber-600/20 p-4 w-20 h-20 items-center shadow-lg"
+            className="mx-auto mb-6 flex justify-center rounded-full bg-black/20 p-4 w-20 h-20 items-center shadow-lg"
           >
-            <BriefcaseIcon className="h-10 w-10 text-amber-600" />
+            <BriefcaseIcon className="h-10 w-10 text-black" />
           </motion.div>
 
           <motion.h1
@@ -378,14 +378,14 @@ const CareersHero = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.8, duration: 0.7, ease: 'easeOut' }}
-            className="mx-auto mt-3 w-24 h-1 bg-amber-600 origin-left rounded"
+            className="mx-auto mt-3 w-24 h-1 bg-black origin-left rounded"
           />
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8, ease: 'easeOut' }}
-            className="mt-6 max-w-2xl mx-auto text-amber-400 text-lg sm:text-xl leading-relaxed tracking-wide"
+            className="mt-6 max-w-2xl mx-auto text-black text-lg sm:text-xl leading-relaxed tracking-wide"
           >
             Be part of a passionate, innovative team shaping the future of digital commerce and design.
           </motion.p>
@@ -398,7 +398,7 @@ const CareersHero = () => {
           >
             <button
               onClick={() => setShowPopup(true)}
-              className="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold text-lg px-8 py-3 rounded-lg shadow-lg transition duration-300"
+              className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-lg px-8 py-3 rounded-lg shadow-lg transition duration-300"
             >
               Explore Open Roles
               <ArrowRightIcon className="w-5 h-5" />
@@ -434,7 +434,7 @@ const CareersHero = () => {
                 </button>
 
                 <div className="flex-1 flex flex-col p-6 sm:p-8 relative">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
                     {selectedRoleIndex === null ? "We're Hiring!" : roles[selectedRoleIndex].title}
                   </h2>
 
@@ -442,7 +442,7 @@ const CareersHero = () => {
                     <motion.div
                       variants={spinnerVariants}
                       animate="animate"
-                      className="w-10 h-10 border-4 border-amber-600 border-t-transparent rounded-full mx-auto my-10"
+                      className="w-10 h-10 border-4 border-black border-t-transparent rounded-full mx-auto my-10"
                     />
                   ) : selectedRoleIndex === null ? (
                     <>
@@ -459,11 +459,11 @@ const CareersHero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.05 * i }}
-                            className="w-full text-left p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-amber-950/50 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                            className="w-full text-left p-4 bg-white rounded-lg border border-gray-200 cursor-pointer hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-black"
                             type="button"
                             aria-label={`View details for ${role.title}`}
                           >
-                            <h3 className="text-lg font-semibold text-amber-500">{role.title}</h3>
+                            <h3 className="text-lg font-semibold text-black">{role.title}</h3>
                             <p className="text-sm text-gray-600 mt-1">
                               {role.type} · {role.location}
                             </p>
@@ -475,7 +475,7 @@ const CareersHero = () => {
                       <button
                         onClick={handleArrowClick}
                         aria-label={scrolledToBottom ? 'Scroll to top' : 'Scroll to bottom'}
-                        className={`absolute left-1/2 -translate-x-1/2 bg-amber-600 hover:bg-amber-500 text-gray-900 rounded-full p-2 shadow-lg transition
+                        className={`absolute left-1/2 -translate-x-1/2 bg-black hover:bg-black text-gray-900 rounded-full p-2 shadow-lg transition
                           ${
                             scrolledToBottom
                               ? 'top-6'   // Arrow on top when scrolled to bottom
@@ -504,9 +504,9 @@ const CareersHero = () => {
                         className="overflow-y-auto max-h-[65vh] pr-2 careers-scrollbar"
                         ref={scrollRef}
                       >
-                        <p className="mb-4 text-amber-400">{roles[selectedRoleIndex].description}</p>
+                        <p className="mb-4 text-black">{roles[selectedRoleIndex].description}</p>
 
-                        <h4 className="font-semibold text-amber-500 mb-2">Requirements:</h4>
+                        <h4 className="font-semibold text-black mb-2">Requirements:</h4>
                         <ul className="list-disc list-inside mb-6 text-gray-700">
                           {roles[selectedRoleIndex].requirements.map((req, idx) => (
                             <li key={idx}>{req}</li>
@@ -523,7 +523,7 @@ const CareersHero = () => {
                           className="space-y-4"
                         >
                           <div>
-                            <label htmlFor="name" className="block mb-1 text-amber-500 font-medium">
+                            <label htmlFor="name" className="block mb-1 text-black font-medium">
                               Your Name
                             </label>
                             <input
@@ -531,13 +531,13 @@ const CareersHero = () => {
                               name="name"
                               type="text"
                               required
-                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
                               placeholder="John Doe"
                             />
                           </div>
 
                           <div>
-                            <label htmlFor="email" className="block mb-1 text-amber-500 font-medium">
+                            <label htmlFor="email" className="block mb-1 text-black font-medium">
                               Email Address
                             </label>
                             <input
@@ -545,20 +545,20 @@ const CareersHero = () => {
                               name="email"
                               type="email"
                               required
-                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black"
                               placeholder="john@example.com"
                             />
                           </div>
 
                           <div>
-                            <label htmlFor="coverLetter" className="block mb-1 text-amber-500 font-medium">
+                            <label htmlFor="coverLetter" className="block mb-1 text-black font-medium">
                               Cover Letter
                             </label>
                             <textarea
                               id="coverLetter"
                               name="coverLetter"
                               rows={4}
-                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-amber-600 resize-none"
+                              className="w-full rounded-md bg-white border border-gray-200 px-3 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-black resize-none"
                               placeholder="Why do you want to join us?"
                               required
                             />
@@ -568,13 +568,13 @@ const CareersHero = () => {
                             <button
                               type="button"
                               onClick={handleBackToList}
-                              className="inline-flex items-center gap-1 px-4 py-2 rounded-md bg-white hover:bg-gray-500 transition text-amber-600 font-semibold"
+                              className="inline-flex items-center gap-1 px-4 py-2 rounded-md bg-white hover:bg-gray-500 transition text-black font-semibold"
                             >
                               ← Back to roles
                             </button>
                             <button
                               type="submit"
-                              className="inline-flex items-center gap-1 px-6 py-2 rounded-md bg-amber-600 hover:bg-amber-500 transition text-gray-900 font-semibold"
+                              className="inline-flex items-center gap-1 px-6 py-2 rounded-md bg-black hover:bg-black transition text-gray-900 font-semibold"
                             >
                               Apply
                             </button>
@@ -618,16 +618,16 @@ const CareersHero = () => {
                 </button>
 
                 <div className="text-center">
-                  <BriefcaseIcon className="mx-auto mb-4 h-14 w-14 text-amber-600" />
-                  <h3 id="success-title" className="text-2xl font-bold text-amber-600 mb-2">
+                  <BriefcaseIcon className="mx-auto mb-4 h-14 w-14 text-black" />
+                  <h3 id="success-title" className="text-2xl font-bold text-black mb-2">
                     Application Submitted!
                   </h3>
-                  <p id="success-desc" className="text-amber-400 mb-6">
+                  <p id="success-desc" className="text-black mb-6">
                     Thank you for applying. You will be contacted soon via SMS and email with further details.
                   </p>
                   <button
                     onClick={() => setShowSuccessPopup(false)}
-                    className="inline-flex items-center justify-center gap-2 bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold text-lg px-8 py-3 rounded-lg shadow-lg transition duration-300"
+                    className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-lg px-8 py-3 rounded-lg shadow-lg transition duration-300"
                   >
                     Close
                   </button>

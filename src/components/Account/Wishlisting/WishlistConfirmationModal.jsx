@@ -19,11 +19,11 @@ const WishlistConfirmationModal = ({
       tabIndex={-1}
       className="fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-70 backdrop-blur-sm p-4"
     >
-      <div className="bg-white rounded-xl max-w-md w-full p-6 text-amber-600 shadow-lg animate-fadeIn">
+      <div className="bg-white rounded-xl max-w-md w-full p-6 text-black shadow-lg animate-fadeIn">
         <div className="flex flex-col items-center gap-4">
           {/* Confirmation Icon */}
           <svg
-            className="w-16 h-16 text-amber-700"
+            className="w-16 h-16 text-black"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -36,7 +36,7 @@ const WishlistConfirmationModal = ({
           {/* Title */}
           <h2
             id="wishlist-modal-title"
-            className="text-2xl font-bold text-center text-amber-600"
+            className="text-2xl font-bold text-center text-black"
           >
             Confirm Action
           </h2>
@@ -44,7 +44,7 @@ const WishlistConfirmationModal = ({
           {/* Message */}
           <p
             id="wishlist-modal-desc"
-            className="text-amber-500 text-center"
+            className="text-black text-center"
           >
             {message}
           </p>
@@ -53,14 +53,14 @@ const WishlistConfirmationModal = ({
           <div className="flex gap-4 mt-6 w-full">
             <button
               onClick={onCancel}
-              className="flex-1 py-2 rounded-md border border-amber-800 hover:border-amber-700 text-amber-500 hover:text-amber-700 transition font-semibold"
+              className="flex-1 py-2 rounded-md border border-black hover:border-black text-black hover:text-black transition font-semibold"
               aria-label="Cancel"
             >
               Cancel
             </button>
             <button
               onClick={onConfirm}
-              className="flex-1 py-2 rounded-md bg-amber-700 hover:bg-amber-800 transition font-semibold text-gray-900"
+              className="flex-1 py-2 rounded-md bg-black hover:bg-black transition font-semibold text-gray-900"
               aria-label="Confirm"
             >
               Confirm

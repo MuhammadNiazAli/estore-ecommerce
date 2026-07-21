@@ -598,8 +598,8 @@ const KitchenProductGrid = () => {
               onClick={() => setCategory(cat)}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold transition ${
                 category === cat
-                  ? "bg-amber-700 text-black"
-                  : "bg-white hover:bg-amber-600 hover:text-black"
+                  ? "bg-black text-black"
+                  : "bg-white hover:bg-black hover:text-black"
               }`}
             >
               {cat}
@@ -610,7 +610,7 @@ const KitchenProductGrid = () => {
           <select
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
-            className="bg-white px-2 py-1.5 rounded-lg text-xs outline-none border border-gray-200 hover:border-amber-600"
+            className="bg-white px-2 py-1.5 rounded-lg text-xs outline-none border border-gray-200 hover:border-black"
           >
             <option value="">Sort</option>
             <option value="low-to-high">Price: Low</option>
@@ -626,7 +626,7 @@ const KitchenProductGrid = () => {
                 key={v}
                 onClick={() => setView(v)}
                 className={`px-2 py-1 rounded-lg text-xs font-medium transition ${
-                  view === v ? "bg-amber-700 text-black" : "bg-white"
+                  view === v ? "bg-black text-black" : "bg-white"
                 }`}
               >
                 {v.replace("-", " ")}
@@ -660,7 +660,7 @@ const KitchenProductGrid = () => {
               </p>
               <div className="flex items-center justify-between mt-3">
                 <div>
-                  <p className="text-amber-600 text-lg font-bold">
+                  <p className="text-black text-lg font-bold">
                     ${product.price}
                   </p>
                   <p className="text-gray-500 text-xs line-through">
@@ -668,12 +668,12 @@ const KitchenProductGrid = () => {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <button className="text-amber-600 hover:text-amber-500">
+                  <button className="text-black hover:text-black">
                     <FaHeart size={16} />
                   </button>
                   <button
                     onClick={() => setSelectedProduct(product)}
-                    className="text-amber-600 hover:text-amber-500"
+                    className="text-black hover:text-black"
                   >
                     <FaCartPlus size={16} />
                   </button>
@@ -689,7 +689,7 @@ const KitchenProductGrid = () => {
         <div className="flex justify-center mt-6">
           <button
             onClick={handleShowMore}
-            className="bg-amber-700 text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-amber-600 transition"
+            className="bg-black text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-black transition"
           >
             Show More
           </button>
@@ -718,13 +718,13 @@ const KitchenProductGrid = () => {
             <p className="text-gray-700 text-sm mb-3">
               {selectedProduct.description}
             </p>
-            <p className="text-amber-600 text-lg font-bold mb-1">
+            <p className="text-black text-lg font-bold mb-1">
               ${selectedProduct.price}
             </p>
             <p className="text-gray-500 line-through text-sm mb-3">
               ${selectedProduct.oldPrice}
             </p>
-            <button className="bg-amber-700 text-black px-5 py-2 rounded-full font-semibold hover:bg-amber-600 transition w-full">
+            <button className="bg-black text-black px-5 py-2 rounded-full font-semibold hover:bg-black transition w-full">
               Add to Cart
             </button>
           </div>

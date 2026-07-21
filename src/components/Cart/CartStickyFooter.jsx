@@ -21,7 +21,7 @@ const CartStickyFooter = () => {
         {/* Center: Total */}
         <div className="text-gray-900 font-medium text-xs sm:text-sm whitespace-nowrap">
           Total:&nbsp;
-          <span className="text-amber-600 font-semibold text-sm sm:text-base">
+          <span className="text-black font-semibold text-sm sm:text-base">
             ${total.toFixed(2)}
           </span>
         </div>
@@ -29,7 +29,7 @@ const CartStickyFooter = () => {
         {/* Right: Checkout Button */}
         <Link
           href="/checkout"
-          className="bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold rounded-md transition shadow text-center w-full sm:w-auto py-2 px-4 sm:py-2.5 sm:px-5 text-xs sm:text-sm"
+          className="bg-black hover:bg-black text-gray-900 font-semibold rounded-md transition shadow text-center w-full sm:w-auto py-2 px-4 sm:py-2.5 sm:px-5 text-xs sm:text-sm"
         >
           Secure Checkout
         </Link>

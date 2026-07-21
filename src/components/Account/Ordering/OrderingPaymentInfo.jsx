@@ -9,7 +9,7 @@ const OrderingPaymentInfo = ({ payment, total }) => {
       aria-label="Payment information"
       className="bg-white rounded-lg p-6 max-w-md mx-auto lg:mx-0 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-4">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-4">
         Payment Details
       </h2>
 
@@ -21,7 +21,7 @@ const OrderingPaymentInfo = ({ payment, total }) => {
 
         <p>
           <span className="font-semibold text-gray-700">Total Paid:</span>{' '}
-          <span className="text-amber-600 font-bold">${formattedTotal}</span>
+          <span className="text-black font-bold">${formattedTotal}</span>
         </p>
       </div>
     </section>

@@ -64,19 +64,19 @@ const ToysFeaturedDeals = () => {
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Section Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-amber-600">
+          <h2 className="text-2xl md:text-3xl font-bold text-black">
             Featured Toy Deals
           </h2>
           <div className="flex gap-2">
             <button
               onClick={prevSlide}
-              className="p-2 bg-white rounded-full hover:bg-amber-700 hover:text-black transition"
+              className="p-2 bg-white rounded-full hover:bg-black hover:text-black transition"
             >
               <FaChevronLeft />
             </button>
             <button
               onClick={nextSlide}
-              className="p-2 bg-white rounded-full hover:bg-amber-700 hover:text-black transition"
+              className="p-2 bg-white rounded-full hover:bg-black hover:text-black transition"
             >
               <FaChevronRight />
             </button>
@@ -105,21 +105,21 @@ const ToysFeaturedDeals = () => {
 
               {/* ✅ Info */}
               <div className="flex flex-col justify-center p-6 md:w-1/2">
-                <span className="bg-amber-700 text-black px-3 py-1 rounded-full text-xs font-bold w-max mb-3">
+                <span className="bg-black text-black px-3 py-1 rounded-full text-xs font-bold w-max mb-3">
                   {featuredToys[currentIndex].discount}
                 </span>
                 <h3 className="text-xl md:text-2xl font-semibold mb-2">
                   {featuredToys[currentIndex].name}
                 </h3>
                 <div className="flex items-center gap-3 mb-4">
-                  <p className="text-2xl font-bold text-amber-600">
+                  <p className="text-2xl font-bold text-black">
                     ${featuredToys[currentIndex].price}
                   </p>
                   <p className="text-gray-600 line-through text-lg">
                     ${featuredToys[currentIndex].oldPrice}
                   </p>
                 </div>
-                <button className="flex items-center justify-center gap-2 bg-amber-700 text-black px-6 py-3 rounded-full font-semibold hover:bg-amber-600 transition w-max">
+                <button className="flex items-center justify-center gap-2 bg-black text-black px-6 py-3 rounded-full font-semibold hover:bg-black transition w-max">
                   <FaCartPlus /> Add to Cart
                 </button>
               </div>
@@ -134,7 +134,7 @@ const ToysFeaturedDeals = () => {
               key={idx}
               onClick={() => setCurrentIndex(idx)}
               className={`w-3 h-3 rounded-full ${
-                idx === currentIndex ? "bg-amber-600" : "bg-white"
+                idx === currentIndex ? "bg-black" : "bg-white"
               }`}
             ></button>
           ))}

@@ -32,12 +32,12 @@ const ThemeToggle = () => {
         onClick={handleToggle}
         aria-pressed={theme === 'dark'}
         aria-label="Switch between dark and light theme"
-        className="relative w-14 h-8 bg-white rounded-full flex items-center px-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-600"
+        className="relative w-14 h-8 bg-white rounded-full flex items-center px-1 cursor-pointer focus:outline-none focus:ring-2 focus:ring-black"
       >
         {/* Sun icon for light mode */}
         <FiSun
           size={20}
-          className={`absolute left-2 text-amber-600 transition-opacity duration-300 ${
+          className={`absolute left-2 text-black transition-opacity duration-300 ${
             theme === 'light' ? 'opacity-100' : 'opacity-30'
           }`}
         />
@@ -45,7 +45,7 @@ const ThemeToggle = () => {
         {/* Moon icon for dark mode */}
         <FiMoon
           size={20}
-          className={`absolute right-2 text-amber-600 transition-opacity duration-300 ${
+          className={`absolute right-2 text-black transition-opacity duration-300 ${
             theme === 'dark' ? 'opacity-100' : 'opacity-30'
           }`}
         />

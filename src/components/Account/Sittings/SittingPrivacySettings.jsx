@@ -51,7 +51,7 @@ const PrivacySettings = () => {
           >
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-3">
-                <span className="text-amber-600 text-2xl">{icon}</span>
+                <span className="text-black text-2xl">{icon}</span>
                 <span className="text-sm font-semibold">{label}</span>
               </div>
 
@@ -62,7 +62,7 @@ const PrivacySettings = () => {
                 aria-label={`Toggle ${label}`}
                 onClick={() => toggleSetting(id)}
                 className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300 ${
-                  settings[id] ? 'bg-amber-700' : 'bg-white'
+                  settings[id] ? 'bg-black' : 'bg-white'
                 }`}
               >
                 <span
@@ -73,7 +73,7 @@ const PrivacySettings = () => {
               </button>
             </div>
 
-            <p className="text-xs text-amber-500">{description}</p>
+            <p className="text-xs text-black">{description}</p>
           </li>
         ))}
       </ul>

@@ -522,8 +522,8 @@ const AutomotiveFeaturedDeals = () => {
           onClick={prevSlide}
           disabled={currentSlide === 0}
           aria-label="Previous Slide"
-          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
+          className={`absolute top-1/2 left-0 -translate-y-1/2 bg-black text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === 0 ? "opacity-40 cursor-not-allowed" : "hover:bg-black"
           }`}
         >
           <FaChevronLeft size={20} />
@@ -557,16 +557,16 @@ const AutomotiveFeaturedDeals = () => {
                     />
                     {/* Stock Badge */}
                     {deal.stock ? (
-                      <span className="absolute top-2 left-2 bg-green-600 text-xs font-bold px-2 py-1 rounded-md">
+                      <span className="absolute top-2 left-2 bg-black text-xs font-bold px-2 py-1 rounded-md">
                         In Stock
                       </span>
                     ) : (
-                      <span className="absolute top-2 left-2 bg-red-600 text-xs font-bold px-2 py-1 rounded-md">
+                      <span className="absolute top-2 left-2 bg-black text-xs font-bold px-2 py-1 rounded-md">
                         Out of Stock
                       </span>
                     )}
                     {/* Category Badge */}
-                    <span className="absolute top-2 right-2 bg-amber-700 text-black text-xs font-bold px-2 py-1 rounded-md">
+                    <span className="absolute top-2 right-2 bg-black text-black text-xs font-bold px-2 py-1 rounded-md">
                       {deal.category}
                     </span>
                   </div>
@@ -580,14 +580,14 @@ const AutomotiveFeaturedDeals = () => {
                       {[...Array(5)].map((_, i) => (
                         <FaStar
                           key={i}
-                          className={`${i < deal.rating ? "text-amber-600" : "text-gray-600"}`}
+                          className={`${i < deal.rating ? "text-black" : "text-gray-600"}`}
                         />
                       ))}
                     </div>
 
                     {/* Price */}
                     <div className="flex items-center justify-between mt-2">
-                      <span className="text-xl font-bold text-amber-600">${deal.price}</span>
+                      <span className="text-xl font-bold text-black">${deal.price}</span>
                     </div>
 
                     {/* Add to Cart Button */}
@@ -596,7 +596,7 @@ const AutomotiveFeaturedDeals = () => {
                       className={`mt-4 w-full py-2 rounded-full font-semibold flex justify-center items-center gap-2 transition
                         ${
                           deal.stock
-                            ? "bg-amber-600 text-black hover:bg-amber-500"
+                            ? "bg-black text-black hover:bg-black"
                             : "bg-white text-gray-600 cursor-not-allowed"
                         }`}
                     >
@@ -615,8 +615,8 @@ const AutomotiveFeaturedDeals = () => {
           onClick={nextSlide}
           disabled={currentSlide === totalSlides - 1}
           aria-label="Next Slide"
-          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-amber-700 text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
-            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-amber-600"
+          className={`absolute top-1/2 right-0 -translate-y-1/2 bg-black text-black p-3 rounded-full shadow-lg z-10 transition-opacity duration-300 ${
+            currentSlide === totalSlides - 1 ? "opacity-40 cursor-not-allowed" : "hover:bg-black"
           }`}
         >
           <FaChevronRight size={20} />

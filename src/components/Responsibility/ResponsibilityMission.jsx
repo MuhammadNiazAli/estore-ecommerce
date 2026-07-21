@@ -75,7 +75,7 @@ const ResponsibilityMission = () => {
           <motion.h2
             id="mission-title"
             variants={itemVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600 mb-6 select-none"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-6 select-none"
           >
             Our Mission
           </motion.h2>
@@ -91,9 +91,9 @@ const ResponsibilityMission = () => {
 
           <motion.blockquote
             variants={itemVariants}
-            className="italic text-amber-500 text-base sm:text-lg md:text-xl max-w-2xl mx-auto border-l-4 border-amber-600 pl-6 mb-8 cursor-default
-              focus:outline-amber-600 focus-visible:outline-2 focus-visible:outline-offset-2 transition-shadow
-              hover:shadow-amber-700/40"
+            className="italic text-black text-base sm:text-lg md:text-xl max-w-2xl mx-auto border-l-4 border-black pl-6 mb-8 cursor-default
+              focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2 transition-shadow
+              hover:shadow-black/40"
             tabIndex={0}
             aria-label="Quote about responsibility"
             role="blockquote"
@@ -107,7 +107,7 @@ const ResponsibilityMission = () => {
               onClick={() => setShowMore((prev) => !prev)}
               aria-expanded={showMore}
               aria-controls="mission-more-content"
-              className="inline-flex items-center justify-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-amber-500 focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="inline-flex items-center justify-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-sm sm:text-base px-6 py-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-black focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               {showMore ? 'Show Less' : 'Read More'}
               <svg

@@ -6,7 +6,7 @@ const PetsCategoryInfo = () => {
     <section
       className="
         bg-white 
-        text-amber-600 
+        text-black 
         max-w-[1000px] 
         w-full 
         mx-auto 
@@ -20,7 +20,7 @@ const PetsCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Welcome to our exclusive pet collection! Explore high-quality products for your furry, feathered, and scaly friends — from cozy beds and grooming essentials to travel gear and fun toys.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         Keep your pets happy and healthy with premium care solutions tailored for every pet lover.
       </p>
     </section>

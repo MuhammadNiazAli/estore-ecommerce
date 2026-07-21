@@ -169,18 +169,18 @@ const BlogRelatedPosts = () => {
   return (
     <section className="w-full flex justify-center bg-white px-4 py-12 sm:px-6 lg:px-8 relative">
       <div className="max-w-[1000px] w-full relative">
-        <h3 className="text-amber-600 font-bold text-2xl mb-6 px-2 sm:px-0">Related Posts</h3>
+        <h3 className="text-black font-bold text-2xl mb-6 px-2 sm:px-0">Related Posts</h3>
 
         {/* Left Arrow (desktop only) */}
         <button
           onClick={() => scrollByCard('left')}
           aria-label="Scroll Left"
-          className="hidden md:flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2 w-10 h-10 bg-amber-600/20 hover:bg-amber-600/40 rounded-full shadow-md transition-colors z-10"
+          className="hidden md:flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full shadow-md transition-colors z-10"
           style={{ marginLeft: '5px' }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-amber-600"
+            className="h-6 w-6 text-black"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -194,12 +194,12 @@ const BlogRelatedPosts = () => {
         <button
           onClick={() => scrollByCard('right')}
           aria-label="Scroll Right"
-          className="hidden md:flex items-center justify-center absolute top-1/2 right-0 -translate-y-1/2 w-10 h-10 bg-amber-600/20 hover:bg-amber-600/40 rounded-full shadow-md transition-colors z-10"
+          className="hidden md:flex items-center justify-center absolute top-1/2 right-0 -translate-y-1/2 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full shadow-md transition-colors z-10"
           style={{ marginRight: '5px' }}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-amber-600"
+            className="h-6 w-6 text-black"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -219,7 +219,7 @@ const BlogRelatedPosts = () => {
             <a
               key={post.id}
               href={post.url}
-              className="snap-start flex-shrink-0 w-full sm:w-[280px] md:w-[300px] bg-white rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-amber-600"
+              className="snap-start flex-shrink-0 w-full sm:w-[280px] md:w-[300px] bg-white rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-black"
               style={{ scrollSnapAlign: 'start' }}
             >
               <div className="relative w-full h-40 sm:h-48">
@@ -232,10 +232,10 @@ const BlogRelatedPosts = () => {
                 />
               </div>
               <div className="p-4">
-                <h4 className="text-amber-600 font-semibold text-lg line-clamp-2">
+                <h4 className="text-black font-semibold text-lg line-clamp-2">
                   {post.title}
                 </h4>
-                <div className="mt-3 flex items-center gap-1 text-amber-600 font-semibold select-none">
+                <div className="mt-3 flex items-center gap-1 text-black font-semibold select-none">
                   Read More
                 </div>
               </div>

@@ -64,7 +64,7 @@ function OrderingActions() {
               aria-label={ariaLabel}
               className={`px-6 py-3 rounded-full font-semibold shadow-md transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                 isPrimary
-                  ? 'bg-amber-600 text-black hover:bg-amber-500 focus:ring-amber-600'
+                  ? 'bg-black text-black hover:bg-black focus:ring-black'
                   : 'border border-gray-200 text-gray-900 hover:bg-gray-500 hover:text-black focus:ring-gray-200'
               }`}
             >

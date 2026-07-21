@@ -178,7 +178,7 @@ const KitchenReviewsPreview = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-8 sm:py-12 my-6 sm:my-10">
+    <section className="bg-white text-black py-8 sm:py-12 my-6 sm:my-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
           Customer Reviews
@@ -191,7 +191,7 @@ const KitchenReviewsPreview = () => {
               id={`review-${review.id}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-lg p-4 sm:p-6 border border-amber-700"
+              className="bg-white rounded-lg p-4 sm:p-6 border border-black"
             >
               {/* User Info */}
               <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 mb-3">
@@ -203,7 +203,7 @@ const KitchenReviewsPreview = () => {
                 />
                 <div>
                   <p
-                    className="font-semibold text-sm sm:text-base cursor-pointer hover:text-amber-500"
+                    className="font-semibold text-sm sm:text-base cursor-pointer hover:text-black"
                     onClick={() => setSelectedProfile(review)}
                   >
                     {review.user}
@@ -212,11 +212,11 @@ const KitchenReviewsPreview = () => {
                     {Array(review.rating)
                       .fill(0)
                       .map((_, i) => (
-                        <FaStar key={i} className="text-amber-600 mr-1" />
+                        <FaStar key={i} className="text-black mr-1" />
                       ))}
                     {review.verified && (
                       <span className="flex items-center gap-1 ml-2">
-                        <FaCheckCircle className="text-green-500" /> Verified
+                        <FaCheckCircle className="text-black" /> Verified
                       </span>
                     )}
                   </div>
@@ -248,7 +248,7 @@ const KitchenReviewsPreview = () => {
                 <button
                   onClick={() => handleAction(review.id, "like")}
                   className={`flex items-center gap-1 ${
-                    review.userAction === "like" ? "text-amber-600" : ""
+                    review.userAction === "like" ? "text-black" : ""
                   }`}
                 >
                   <FaThumbsUp /> {review.likes}
@@ -256,20 +256,20 @@ const KitchenReviewsPreview = () => {
                 <button
                   onClick={() => handleAction(review.id, "dislike")}
                   className={`flex items-center gap-1 ${
-                    review.userAction === "dislike" ? "text-amber-600" : ""
+                    review.userAction === "dislike" ? "text-black" : ""
                   }`}
                 >
                   <FaThumbsDown /> {review.dislikes}
                 </button>
                 <button
                   onClick={() => setActiveReplyBox(review.id)}
-                  className="flex items-center gap-1 hover:text-amber-600"
+                  className="flex items-center gap-1 hover:text-black"
                 >
                   <FaReply /> Reply
                 </button>
                 <button
                   onClick={() => handleShare(review.id)}
-                  className="flex items-center gap-1 hover:text-amber-600"
+                  className="flex items-center gap-1 hover:text-black"
                 >
                   <FaShareAlt /> Share
                 </button>
@@ -283,11 +283,11 @@ const KitchenReviewsPreview = () => {
                     value={replyText}
                     onChange={(e) => setReplyText(e.target.value)}
                     placeholder="Write a reply..."
-                    className="w-full bg-white text-amber-600 text-sm px-3 py-2 rounded outline-none border border-amber-700 mb-2"
+                    className="w-full bg-white text-black text-sm px-3 py-2 rounded outline-none border border-black mb-2"
                   />
                   <button
                     onClick={() => handleReply(review.id)}
-                    className="px-4 py-2 bg-amber-700 text-gray-900 font-semibold rounded hover:bg-amber-600 transition"
+                    className="px-4 py-2 bg-black text-gray-900 font-semibold rounded hover:bg-black transition"
                   >
                     Send
                   </button>
@@ -300,7 +300,7 @@ const KitchenReviewsPreview = () => {
                   {review.replies.map((rep, i) => (
                     <div
                       key={i}
-                      className="pl-3 border-l-2 border-amber-700 break-words"
+                      className="pl-3 border-l-2 border-black break-words"
                     >
                       {rep}
                     </div>
@@ -322,7 +322,7 @@ const KitchenReviewsPreview = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white p-4 rounded-lg border border-amber-700 max-w-full"
+              className="bg-white p-4 rounded-lg border border-black max-w-full"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -335,7 +335,7 @@ const KitchenReviewsPreview = () => {
               <div className="text-right mt-4">
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="px-4 py-2 bg-amber-700 text-gray-900 font-semibold rounded hover:bg-amber-600 transition"
+                  className="px-4 py-2 bg-black text-gray-900 font-semibold rounded hover:bg-black transition"
                 >
                   Close
                 </button>
@@ -355,7 +355,7 @@ const KitchenReviewsPreview = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white p-6 rounded-lg border border-amber-700 w-full max-w-md"
+              className="bg-white p-6 rounded-lg border border-black w-full max-w-md"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -383,7 +383,7 @@ const KitchenReviewsPreview = () => {
               <div className="text-right">
                 <button
                   onClick={() => setSelectedProfile(null)}
-                  className="px-4 py-2 bg-amber-700 text-gray-900 font-semibold rounded hover:bg-amber-600 transition"
+                  className="px-4 py-2 bg-black text-gray-900 font-semibold rounded hover:bg-black transition"
                 >
                   Close
                 </button>

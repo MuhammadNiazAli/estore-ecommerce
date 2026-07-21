@@ -573,15 +573,15 @@ const AccessoriesTrending = () => {
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background: linear-gradient(45deg, #b45309, #b45309); /* Golden gradient */
+          background: linear-gradient(45deg, #111827, #111827); /* Golden gradient */
           border-radius: 10px;
         }
         .custom-scroll::-webkit-scrollbar-thumb:hover {
-          background: linear-gradient(45deg, #b45309, #b45309);
+          background: linear-gradient(45deg, #111827, #111827);
         }
       `}</style>
 
-      <section className="w-full max-w-[1200px] mx-auto px-3 sm:px-4 py-8 bg-white rounded-lg text-amber-600 select-none">
+      <section className="w-full max-w-[1200px] mx-auto px-3 sm:px-4 py-8 bg-white rounded-lg text-black select-none">
         {/* Heading */}
         <h1 className="text-xl sm:text-3xl md:text-4xl font-bold mb-6 text-center">
           Trending Accessories
@@ -600,7 +600,7 @@ const AccessoriesTrending = () => {
             <h2 className="text-lg sm:text-2xl md:text-4xl font-bold leading-snug">
               {selected.name}
             </h2>
-            <p className="mt-1 sm:mt-2 text-amber-500 font-semibold text-base sm:text-lg md:text-2xl">
+            <p className="mt-1 sm:mt-2 text-black font-semibold text-base sm:text-lg md:text-2xl">
               ${selected.price.toFixed(2)}
             </p>
             <p className="mt-1 text-gray-700 text-xs sm:text-sm md:text-base">
@@ -626,8 +626,8 @@ const AccessoriesTrending = () => {
                 onClick={() => !isDragging && setSelected(item)}
                 className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-md overflow-hidden border-2 transition-all duration-300 ${
                   selected.id === item.id
-                    ? "border-amber-600 scale-110"
-                    : "border-transparent hover:border-amber-500"
+                    ? "border-black scale-110"
+                    : "border-transparent hover:border-black"
                 }`}
               >
                 <img
@@ -648,11 +648,11 @@ const AccessoriesTrending = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            className="flex-1 px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="flex-1 px-4 py-2 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-black"
           />
           <button
             onClick={handleSearch}
-            className="px-4 sm:px-6 py-2 bg-amber-600 text-gray-900 font-semibold rounded-lg hover:bg-amber-500 transition"
+            className="px-4 sm:px-6 py-2 bg-black text-gray-900 font-semibold rounded-lg hover:bg-black transition"
           >
             Search
           </button>
@@ -661,7 +661,7 @@ const AccessoriesTrending = () => {
         {/* Loading */}
         {loading && (
           <div className="flex justify-center py-6">
-            <div className="w-10 h-10 border-4 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-10 h-10 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
 
@@ -682,17 +682,17 @@ const AccessoriesTrending = () => {
                   <h3 className="text-base sm:text-lg font-bold text-gray-900">
                     {item.name}
                   </h3>
-                  <p className="text-amber-500 font-semibold text-lg sm:text-xl">
+                  <p className="text-black font-semibold text-lg sm:text-xl">
                     ${item.price.toFixed(2)}
                   </p>
                   <p className="text-gray-700 text-xs sm:text-sm mt-1 flex-grow">
                     {item.description}
                   </p>
                   <div className="flex gap-2 mt-4">
-                    <button className="flex-1 px-3 sm:px-4 py-2 bg-amber-600 text-gray-900 rounded-lg font-semibold hover:bg-amber-500 transition">
+                    <button className="flex-1 px-3 sm:px-4 py-2 bg-black text-gray-900 rounded-lg font-semibold hover:bg-black transition">
                       Add to Cart
                     </button>
-                    <button className="flex-1 px-3 sm:px-4 py-2 border border-amber-600 text-amber-600 rounded-lg font-semibold hover:bg-amber-600 hover:text-gray-900 transition">
+                    <button className="flex-1 px-3 sm:px-4 py-2 border border-black text-black rounded-lg font-semibold hover:bg-black hover:text-gray-900 transition">
                       View
                     </button>
                   </div>
@@ -703,7 +703,7 @@ const AccessoriesTrending = () => {
         )}
 
         {!loading && searchQuery.trim() && filteredProducts.length === 0 && (
-          <p className="text-center text-amber-500 font-semibold mt-8">
+          <p className="text-center text-black font-semibold mt-8">
             No products found for "{searchQuery.trim()}"
           </p>
         )}

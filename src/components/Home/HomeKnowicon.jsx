@@ -82,10 +82,10 @@ const FeatureCard = ({ item, index }) => {
       role="region"
       aria-labelledby={`${id}-title`}
       aria-describedby={`${id}-desc`}
-      className="flex flex-col sm:flex-row items-start gap-6 bg-white border border-amber-700/50 rounded-3xl p-7 sm:p-9 shadow-xl cursor-pointer transition-transform focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-600/80"
+      className="flex flex-col sm:flex-row items-start gap-6 bg-white border border-black/50 rounded-3xl p-7 sm:p-9 shadow-xl cursor-pointer transition-transform focus:outline-none focus-visible:ring-4 focus-visible:ring-black/80"
     >
       <div
-        className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-amber-800/25 text-amber-700 shadow-md animate-pulse"
+        className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/25 text-black shadow-md animate-pulse"
         aria-hidden="true"
         aria-label={aria}
       >
@@ -95,7 +95,7 @@ const FeatureCard = ({ item, index }) => {
       <div className="mt-4 sm:mt-0">
         <h3
           id={`${id}-title`}
-          className="text-amber-600 font-bold text-xl sm:text-2xl mb-2 tracking-wide"
+          className="text-black font-bold text-xl sm:text-2xl mb-2 tracking-wide"
         >
           {title}
         </h3>

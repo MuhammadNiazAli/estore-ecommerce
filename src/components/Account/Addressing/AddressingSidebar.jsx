@@ -39,7 +39,7 @@ const AddressingSidebar = () => {
         onClick={toggleSidebar}
         aria-label={isOpen ? 'Collapse sidebar' : 'Expand sidebar'}
         type="button"
-        className="mb-6 ml-[2px] p-2 bg-white hover:bg-amber-600 text-amber-600 hover:text-black rounded-full transition self-start"
+        className="mb-6 ml-[2px] p-2 bg-white hover:bg-black text-black hover:text-black rounded-full transition self-start"
       >
         {isOpen ? <FiChevronRight size={24} /> : <FiChevronLeft size={24} />}
       </button>
@@ -55,8 +55,8 @@ const AddressingSidebar = () => {
               ${isOpen ? 'justify-start' : 'justify-center'}
               ${
                 active
-                  ? 'bg-amber-600 text-black'
-                  : 'hover:bg-amber-600/20 hover:text-gray-800'
+                  ? 'bg-black text-black'
+                  : 'hover:bg-black/20 hover:text-gray-800'
               }
             `}
             aria-current={active ? 'page' : undefined}

@@ -51,7 +51,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
     <section className="bg-white my-10 p-6 rounded-xl shadow-lg max-w-[1100px] mx-auto text-gray-900">
       <header className="flex justify-between items-center mb-6">
         <h2 className="text-xl md:text-2xl font-bold flex items-center gap-2">
-          <SlidersHorizontal className="w-6 h-6 text-amber-600" />
+          <SlidersHorizontal className="w-6 h-6 text-black" />
           Filter Phones
         </h2>
         <button
@@ -76,13 +76,13 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
             placeholder="Search Brand..."
             value={brandSearch}
             onChange={(e) => setBrandSearch(e.target.value)}
-            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 text-gray-900 focus:ring-2 focus:ring-amber-600"
+            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 text-gray-900 focus:ring-2 focus:ring-black"
           />
           <select
             id="brand"
             value={localFilters.brand}
             onChange={(e) => handleChange('brand', e.target.value)}
-            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-amber-600"
+            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-black"
           >
             {filterOptions(brands, brandSearch).map((brand) => (
               <option key={brand} value={brand}>
@@ -102,13 +102,13 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
             placeholder="Search OS..."
             value={osSearch}
             onChange={(e) => setOsSearch(e.target.value)}
-            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 focus:ring-2 focus:ring-amber-600"
+            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 focus:ring-2 focus:ring-black"
           />
           <select
             id="os"
             value={localFilters.os}
             onChange={(e) => handleChange('os', e.target.value)}
-            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-amber-600"
+            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-black"
           >
             {filterOptions(operatingSystems, osSearch).map((os) => (
               <option key={os} value={os}>
@@ -128,13 +128,13 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
             placeholder="Search Screen Size..."
             value={screenSizeSearch}
             onChange={(e) => setScreenSizeSearch(e.target.value)}
-            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 focus:ring-2 focus:ring-amber-600"
+            className="mb-2 w-full px-3 py-2 rounded bg-white border border-gray-200 focus:ring-2 focus:ring-black"
           />
           <select
             id="screenSize"
             value={localFilters.screenSize}
             onChange={(e) => handleChange('screenSize', e.target.value)}
-            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-amber-600"
+            className="w-full px-3 py-2 bg-white border border-gray-200 rounded focus:ring-2 focus:ring-black"
           >
             {filterOptions(screenSizes, screenSizeSearch).map((size) => (
               <option key={size} value={size}>
@@ -147,7 +147,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
         {/* Price Range Slider */}
         <div className="md:col-span-3 mt-4">
           <label className="block mb-2 font-semibold">
-            Price Range: <span className="text-amber-600">${localFilters.priceRange[0]} - ${localFilters.priceRange[1]}</span>
+            Price Range: <span className="text-black">${localFilters.priceRange[0]} - ${localFilters.priceRange[1]}</span>
           </label>
           <input
             type="range"
@@ -161,7 +161,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
                 priceRange: [0, Number(e.target.value)],
               }))
             }
-            className="w-full accent-amber-600"
+            className="w-full accent-black"
           />
         </div>
 
@@ -169,7 +169,7 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
         <div className="md:col-span-3 flex justify-center gap-4 mt-6 flex-wrap">
           <button
             type="submit"
-            className="bg-amber-600 text-black px-8 py-2 rounded-full font-semibold shadow hover:bg-amber-500 transition text-sm"
+            className="bg-black text-black px-8 py-2 rounded-full font-semibold shadow hover:bg-black transition text-sm"
           >
             Apply Filters
           </button>
@@ -192,12 +192,12 @@ const PhoneFilters = ({ filters, onFilterChange }) => {
             .map(([key, val]) => (
               <span
                 key={key}
-                className="bg-white text-amber-600 px-3 py-1 rounded-full text-xs flex items-center gap-2"
+                className="bg-white text-black px-3 py-1 rounded-full text-xs flex items-center gap-2"
               >
                 {key}: {val}
                 <button
                   onClick={() => handleChange(key, 'All')}
-                  className="text-gray-600 hover:text-red-400"
+                  className="text-gray-600 hover:text-black"
                   aria-label={`Remove ${val}`}
                 >
                   ✕

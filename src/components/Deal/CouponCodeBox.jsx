@@ -30,7 +30,7 @@ const CouponCodeBox = ({
       role="region"
     >
       <header className="mb-4">
-        <h2 className="text-amber-600 font-semibold tracking-widest uppercase text-sm">
+        <h2 className="text-black font-semibold tracking-widest uppercase text-sm">
           Special Offer
         </h2>
         <p className="text-4xl font-extrabold leading-tight mt-1">{discount}</p>
@@ -40,9 +40,9 @@ const CouponCodeBox = ({
         {description}
       </p>
 
-      <div className="flex items-center justify-between bg-white px-5 py-3 rounded-xl ring-1 ring-amber-700 focus-within:ring-2 focus-within:ring-amber-600 transition-all">
+      <div className="flex items-center justify-between bg-white px-5 py-3 rounded-xl ring-1 ring-black focus-within:ring-2 focus-within:ring-black transition-all">
         <code
-          className="font-mono text-xl tracking-widest text-amber-500 select-text"
+          className="font-mono text-xl tracking-widest text-black select-text"
           aria-label="Coupon code"
         >
           {code}
@@ -51,8 +51,8 @@ const CouponCodeBox = ({
           onClick={handleCopy}
           aria-live="polite"
           aria-label={copied ? 'Coupon code copied' : 'Copy coupon code'}
-          className={`flex items-center gap-2 text-amber-600 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-3 py-1
-          ${copied ? 'cursor-default text-green-400' : 'hover:text-amber-500 active:scale-95 transition-transform duration-150'}
+          className={`flex items-center gap-2 text-black font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-black rounded px-3 py-1
+          ${copied ? 'cursor-default text-black' : 'hover:text-black active:scale-95 transition-transform duration-150'}
           `}
           disabled={copied}
           type="button"
@@ -85,7 +85,7 @@ const CouponCodeBox = ({
 
       <button
         type="button"
-        className="mt-8 w-full bg-amber-600 hover:bg-amber-500 text-black font-bold py-3 rounded-2xl shadow-lg shadow-amber-800/30 transition-colors focus:outline-none focus:ring-4 focus:ring-amber-700"
+        className="mt-8 w-full bg-black hover:bg-black text-black font-bold py-3 rounded-2xl shadow-lg shadow-black/30 transition-colors focus:outline-none focus:ring-4 focus:ring-black"
         onClick={() => alert(`Coupon code "${code}" applied!`)}
         aria-label="Apply coupon code"
       >

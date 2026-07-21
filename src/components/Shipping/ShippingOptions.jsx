@@ -51,7 +51,7 @@ const ShippingOptions = () => {
           >
             <div
               className="flex-shrink-0 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16
-                         rounded-full bg-gradient-to-tr from-amber-400 to-amber-600
+                         rounded-full bg-gradient-to-tr from-black to-gray-900
                          text-gray-900 drop-shadow-lg transition-transform duration-300 group-hover:scale-110"
             >
               <Icon className="w-7 h-7 sm:w-8 sm:h-8" aria-hidden="true" />

@@ -640,7 +640,7 @@ const HomeDecorProductGrid = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
           <h2 className="text-3xl font-semibold">Stylish Home Decor</h2>
           <div className="flex items-center gap-3">
-            <label htmlFor="sort" className="text-amber-800 font-semibold">
+            <label htmlFor="sort" className="text-black font-semibold">
               Sort By:
             </label>
             <select
@@ -675,12 +675,12 @@ const HomeDecorProductGrid = () => {
 
                 {hoveredId === item.id && (
                   <div className="absolute inset-0 bg-white/50 flex flex-col justify-center items-center gap-4 transition-opacity duration-300">
-                    <button className="bg-amber-800 text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-amber-700 transition flex items-center gap-2">
+                    <button className="bg-black text-gray-900 px-6 py-2 rounded-full font-semibold hover:bg-black transition flex items-center gap-2">
                       <FaCartPlus /> Add to Cart
                     </button>
                     <div className="flex gap-5 text-xl text-gray-900">
-                      <FaHeart className="cursor-pointer hover:text-amber-600" />
-                      <FaEye className="cursor-pointer hover:text-amber-600" />
+                      <FaHeart className="cursor-pointer hover:text-black" />
+                      <FaEye className="cursor-pointer hover:text-black" />
                     </div>
                   </div>
                 )}
@@ -688,16 +688,16 @@ const HomeDecorProductGrid = () => {
 
               <div className="p-5 space-y-1">
                 <h3 className="text-xl font-semibold">{item.name}</h3>
-                <p className="text-amber-800 font-medium">{item.brand}</p>
+                <p className="text-black font-medium">{item.brand}</p>
                 <div className="flex justify-between items-center mt-2">
-                  <p className="text-lg font-bold text-amber-900">${item.price}</p>
-                  <span className="text-sm text-amber-700">{item.rating}★</span>
+                  <p className="text-lg font-bold text-black">${item.price}</p>
+                  <span className="text-sm text-black">{item.rating}★</span>
                 </div>
                 <div className="flex flex-wrap gap-2 text-xs text-gray-600 mt-3">
                   {item.features.slice(0, 3).map((feature, idx) => (
                     <span
                       key={idx}
-                      className="bg-amber-300 px-3 py-1 rounded-full"
+                      className="bg-black px-3 py-1 rounded-full"
                     >
                       {feature}
                     </span>
@@ -705,7 +705,7 @@ const HomeDecorProductGrid = () => {
                 </div>
                 <p
                   className={`text-sm font-semibold mt-3 ${
-                    item.stock ? "text-green-600" : "text-red-600"
+                    item.stock ? "text-black" : "text-black"
                   }`}
                 >
                   {item.stock ? "In Stock" : "Out of Stock"}
@@ -720,7 +720,7 @@ const HomeDecorProductGrid = () => {
           {visibleCount < homeDecorData.length && (
             <button
               onClick={handleLoadMore}
-              className="bg-amber-800 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-amber-700 transition"
+              className="bg-black text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-black transition"
             >
               Load More
             </button>

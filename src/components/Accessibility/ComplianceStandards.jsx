@@ -6,22 +6,22 @@ import { motion } from 'framer-motion';
 
 const standards = [
   {
-    icon: <ShieldCheck className="w-7 h-7 text-amber-600" />,
+    icon: <ShieldCheck className="w-7 h-7 text-black" />,
     title: 'WCAG 2.1',
     description: 'Web Content Accessibility Guidelines provide a wide range of recommendations to make web content more accessible.',
   },
   {
-    icon: <CheckCircle className="w-7 h-7 text-amber-600" />,
+    icon: <CheckCircle className="w-7 h-7 text-black" />,
     title: 'ADA Compliance',
     description: 'The Americans with Disabilities Act requires accessible public web content for individuals with disabilities.',
   },
   {
-    icon: <ClipboardCheck className="w-7 h-7 text-amber-600" />,
+    icon: <ClipboardCheck className="w-7 h-7 text-black" />,
     title: 'Section 508',
     description: 'A US federal standard that requires electronic and information technology to be accessible to people with disabilities.',
   },
   {
-    icon: <FileText className="w-7 h-7 text-amber-600" />,
+    icon: <FileText className="w-7 h-7 text-black" />,
     title: 'EN 301 549',
     description: 'European standard for ICT products and services accessibility requirements.',
   },
@@ -36,7 +36,7 @@ const ComplianceStandards = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-amber-500"
+          className="text-3xl md:text-4xl font-bold text-black"
         >
           Compliance Standards
         </motion.h2>
@@ -64,7 +64,7 @@ const ComplianceStandards = () => {
             >
               <div className="flex items-center space-x-3 mb-3">
                 {standard.icon}
-                <h3 className="text-lg font-semibold text-amber-400">{standard.title}</h3>
+                <h3 className="text-lg font-semibold text-black">{standard.title}</h3>
               </div>
               <p className="text-gray-600 text-sm">{standard.description}</p>
             </motion.div>

@@ -36,7 +36,7 @@ const products = [
 
 const ClearanceLimitedStock = () => {
   return (
-    <section className="bg-white text-amber-600 py-10 my-[-10px]">
+    <section className="bg-white text-black py-10 my-[-10px]">
       <div className="max-w-[1000px] mx-auto px-4">
         {/* Header */}
         <h2 className="text-3xl font-bold mb-6 text-center">
@@ -62,7 +62,7 @@ const ClearanceLimitedStock = () => {
                     alt={product.name}
                     className="w-full h-48 object-cover"
                   />
-                  <span className="absolute top-3 left-3 bg-red-500 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
+                  <span className="absolute top-3 left-3 bg-black text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
                     Limited Stock
                   </span>
                 </div>
@@ -73,7 +73,7 @@ const ClearanceLimitedStock = () => {
                     {product.name}
                   </h3>
                   <div className="mt-2">
-                    <span className="text-amber-600 font-bold text-lg">
+                    <span className="text-black font-bold text-lg">
                       ${product.price}
                     </span>
                     <span className="text-gray-500 line-through ml-2">
@@ -89,14 +89,14 @@ const ClearanceLimitedStock = () => {
                     </div>
                     <div className="w-full bg-white rounded-full h-2 overflow-hidden">
                       <div
-                        className="bg-amber-700 h-2"
+                        className="bg-black h-2"
                         style={{ width: `${percentage}%` }}
                       ></div>
                     </div>
                   </div>
 
                   {/* Add to Cart */}
-                  <button className="w-full mt-5 bg-amber-700 text-gray-900 py-2 rounded-lg font-semibold hover:bg-amber-600 transition flex items-center justify-center gap-2">
+                  <button className="w-full mt-5 bg-black text-gray-900 py-2 rounded-lg font-semibold hover:bg-black transition flex items-center justify-center gap-2">
                     <ShoppingCart size={18} /> Add to Cart
                   </button>
                 </div>

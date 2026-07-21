@@ -61,25 +61,25 @@ const BestsellersFAQ = () => {
 
   return (
     <section className="max-w-3xl mx-auto p-6 sm:p-10 bg-gary-900 rounded-xl my-[-10px] ">
-      <h2 className="text-3xl font-extrabold mb-8 text-amber-700 text-center tracking-wide select-none">
+      <h2 className="text-3xl font-extrabold mb-8 text-black text-center tracking-wide select-none">
         Frequently Asked Questions
       </h2>
       <div className="space-y-5">
         {faqData.map((item, idx) => (
           <div
             key={idx}
-            className="border border-amber-600 rounded-lg overflow-hidden bg-white shadow-sm"
+            className="border border-black rounded-lg overflow-hidden bg-white shadow-sm"
           >
             <button
               onClick={() => toggle(idx)}
               aria-expanded={openIndex === idx}
               aria-controls={`faq-answer-${idx}`}
               id={`faq-question-${idx}`}
-              className={`w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-amber-700 hover:bg-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 transition-colors duration-200`}
+              className={`w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-black hover:bg-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-black transition-colors duration-200`}
             >
               <span className="text-lg md:text-xl">{item.question}</span>
               <svg
-                className={`w-6 h-6 transform transition-transform duration-300 stroke-amber-700 ${
+                className={`w-6 h-6 transform transition-transform duration-300 stroke-black ${
                   openIndex === idx ? 'rotate-45' : ''
                 }`}
                 fill="none"
@@ -96,7 +96,7 @@ const BestsellersFAQ = () => {
               role="region"
               aria-labelledby={`faq-question-${idx}`}
               ref={(el) => (answerRefs.current[idx] = el)}
-              className="px-6 overflow-hidden text-amber-700 text-base md:text-lg leading-relaxed select-text"
+              className="px-6 overflow-hidden text-black text-base md:text-lg leading-relaxed select-text"
               style={{ height: 0, opacity: 0, paddingTop: 0, paddingBottom: 0 }}
             >
               <p className="pb-4">{item.answer}</p>

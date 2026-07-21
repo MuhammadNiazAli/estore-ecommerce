@@ -5,22 +5,22 @@ import { FaPercent, FaBoxOpen, FaBell, FaTimes } from 'react-icons/fa';
 
 const promotionsFeatures = [
   {
-    icon: <FaPercent className="text-amber-600 text-lg" />,
+    icon: <FaPercent className="text-black text-lg" />,
     label: 'Exclusive Discounts & Deals',
   },
   {
-    icon: <FaBoxOpen className="text-amber-600 text-lg" />,
+    icon: <FaBoxOpen className="text-black text-lg" />,
     label: 'Seasonal Gift Offers',
   },
   {
-    icon: <FaBell className="text-amber-600 text-lg" />,
+    icon: <FaBell className="text-black text-lg" />,
     label: 'Early Access Notifications',
   },
 ];
 
 const promotionsContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Latest Promotions</h3>
+    <h3 className="text-xl font-semibold text-black">Latest Promotions</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Up to 50% off on select electronics — limited time</li>
       <li>Buy 1 Get 1 Free: Fashion Clearance (ends Sunday)</li>
@@ -28,14 +28,14 @@ const promotionsContent = (
       <li>Earn bonus reward points on holiday collections</li>
     </ul>
     <p className="pt-2 text-xs text-gray-600">
-      Offers update weekly. Visit our <span className="text-amber-600">Deals Page</span> for live updates.
+      Offers update weekly. Visit our <span className="text-black">Deals Page</span> for live updates.
     </p>
   </div>
 );
 
 const subscribeContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Get Notified First</h3>
+    <h3 className="text-xl font-semibold text-black">Get Notified First</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Early access to sales and product launches</li>
       <li>Personalized discount alerts just for you</li>
@@ -60,7 +60,7 @@ export default function HelpingPromotions() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Promotions & Offers
         </h2>
         <p className="text-gray-700">
@@ -82,8 +82,8 @@ export default function HelpingPromotions() {
             onClick={() => toggleSection('promotions')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'promotions'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-label="Toggle promotions section"
           >
@@ -108,7 +108,7 @@ export default function HelpingPromotions() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

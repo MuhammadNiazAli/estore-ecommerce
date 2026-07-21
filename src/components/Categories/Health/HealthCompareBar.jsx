@@ -64,15 +64,15 @@ const HealthCompareBar = () => {
                 loading="lazy"
               />
               <h3 className="font-semibold text-xl mb-1">{product.name}</h3>
-              <p className="text-amber-500 mb-3">{product.price}</p>
+              <p className="text-black mb-3">{product.price}</p>
               <button
                 onClick={() => addToCompare(product)}
                 disabled={!!isAdded}
                 title={isAdded ? "Already added" : "Add to Compare"}
                 className={`w-full py-2 rounded-lg font-semibold transition ${
                   isAdded
-                    ? "bg-amber-800 cursor-not-allowed"
-                    : "bg-amber-700 hover:bg-amber-600 text-gray-900"
+                    ? "bg-black cursor-not-allowed"
+                    : "bg-black hover:bg-black text-gray-900"
                 }`}
               >
                 {isAdded ? "Added" : "Add to Compare"}
@@ -86,7 +86,7 @@ const HealthCompareBar = () => {
       <AnimatePresence>
         {compareItems.length > 0 && (
           <motion.div
-            className="fixed bottom-0 left-0 right-0 bg-white border-t border-amber-700 shadow-lg flex flex-col sm:flex-row justify-between items-center gap-4 p-4 z-50"
+            className="fixed bottom-0 left-0 right-0 bg-white border-t border-black shadow-lg flex flex-col sm:flex-row justify-between items-center gap-4 p-4 z-50"
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             exit={{ y: 100 }}
@@ -95,7 +95,7 @@ const HealthCompareBar = () => {
               {compareItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center gap-3 bg-white rounded-lg border border-amber-700 px-3 py-2 min-w-[150px]"
+                  className="flex items-center gap-3 bg-white rounded-lg border border-black px-3 py-2 min-w-[150px]"
                 >
                   <img
                     src={item.image}
@@ -105,7 +105,7 @@ const HealthCompareBar = () => {
                   <span className="truncate">{item.name}</span>
                   <button
                     onClick={() => removeFromCompare(item.id)}
-                    className="text-amber-600 hover:text-red-600 transition"
+                    className="text-black hover:text-black transition"
                     aria-label={`Remove ${item.name} from compare`}
                   >
                     <FaTimes size={18} />
@@ -115,7 +115,7 @@ const HealthCompareBar = () => {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-amber-700 hover:bg-amber-600 text-gray-900 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition w-full sm:w-auto justify-center"
+              className="bg-black hover:bg-black text-gray-900 px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition w-full sm:w-auto justify-center"
               aria-label={`Compare ${compareItems.length} products`}
             >
               <FaBalanceScale />
@@ -135,7 +135,7 @@ const HealthCompareBar = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white text-amber-600 rounded-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto p-6 relative"
+              className="bg-white text-black rounded-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto p-6 relative"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
@@ -144,7 +144,7 @@ const HealthCompareBar = () => {
                 <h2 className="text-2xl font-bold">Compare Health Products</h2>
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="text-amber-600 hover:text-amber-500 text-3xl"
+                  className="text-black hover:text-black text-3xl"
                   aria-label="Close compare modal"
                 >
                   <FaTimes />
@@ -155,13 +155,13 @@ const HealthCompareBar = () => {
                 <table className="w-full min-w-[600px] table-auto border-collapse">
                   <thead>
                     <tr>
-                      <th className="border-b border-amber-700 p-3 text-left">
+                      <th className="border-b border-black p-3 text-left">
                         Feature
                       </th>
                       {compareItems.map((item) => (
                         <th
                           key={item.id}
-                          className="border-b border-amber-700 p-3 text-center"
+                          className="border-b border-black p-3 text-center"
                         >
                           {item.name}
                         </th>

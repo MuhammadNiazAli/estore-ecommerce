@@ -80,7 +80,7 @@ const DashboardSettings = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 py-10 min-h-[400px]">
       <div className="w-full max-w-[1000px] text-gray-900">
-        <h2 className="text-2xl font-bold text-amber-600 mb-6">Settings</h2>
+        <h2 className="text-2xl font-bold text-black mb-6">Settings</h2>
 
         <form
           onSubmit={handleSave}
@@ -101,7 +101,7 @@ const DashboardSettings = () => {
               id="emailNotifications"
               checked={formSettings.emailNotifications}
               onChange={() => handleToggle('emailNotifications')}
-              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-black"
               aria-checked={formSettings.emailNotifications}
               role="switch"
             />
@@ -120,7 +120,7 @@ const DashboardSettings = () => {
               id="twoFactorAuth"
               checked={formSettings.twoFactorAuth}
               onChange={() => handleToggle('twoFactorAuth')}
-              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-black"
               aria-checked={formSettings.twoFactorAuth}
               role="switch"
             />
@@ -139,7 +139,7 @@ const DashboardSettings = () => {
               id="darkMode"
               checked={formSettings.darkMode}
               onChange={() => handleToggle('darkMode')}
-              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-amber-600"
+              className="w-5 h-5 rounded border-gray-200 bg-white cursor-pointer accent-black"
               aria-checked={formSettings.darkMode}
               role="switch"
             />
@@ -150,7 +150,7 @@ const DashboardSettings = () => {
             <button
               type="submit"
               disabled={!hasChanges || saveStatus === 'saving'}
-              className={`flex-1 bg-amber-600 text-black font-semibold py-2 rounded-md hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 disabled:opacity-50 disabled:cursor-not-allowed`}
+              className={`flex-1 bg-black text-black font-semibold py-2 rounded-md hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-disabled={!hasChanges || saveStatus === 'saving'}
             >
               {saveStatus === 'saving' ? 'Saving...' : 'Save Settings'}
@@ -159,7 +159,7 @@ const DashboardSettings = () => {
               type="button"
               onClick={handleReset}
               disabled={!hasChanges || saveStatus === 'saving'}
-              className="text-amber-600 font-semibold py-2 px-4 rounded-md hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-black font-semibold py-2 px-4 rounded-md hover:underline disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Reset
             </button>
@@ -167,12 +167,12 @@ const DashboardSettings = () => {
 
           {/* Feedback Messages */}
           {saveStatus === 'success' && (
-            <p className="text-green-400 font-medium mt-2" role="alert">
+            <p className="text-black font-medium mt-2" role="alert">
               Settings saved successfully!
             </p>
           )}
           {saveStatus === 'error' && (
-            <p className="text-red-500 font-medium mt-2" role="alert">
+            <p className="text-black font-medium mt-2" role="alert">
               Error saving settings. Please try again.
             </p>
           )}

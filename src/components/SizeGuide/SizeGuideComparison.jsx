@@ -17,22 +17,22 @@ const SizeGuideComparison = () => {
     >
       <div
         className="max-w-5xl w-full overflow-x-auto rounded-lg shadow-lg bg-white
-          scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-700"
+          scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-700"
         tabIndex={0}
       >
         <table className="min-w-[600px] w-full text-left border-collapse">
-          <thead className="border-b border-amber-600">
+          <thead className="border-b border-black">
             <tr>
-              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                 US Size
               </th>
-              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                 UK Size
               </th>
-              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                 EU Size
               </th>
-              <th className="p-4 text-amber-600 text-sm sm:text-base md:text-lg">
+              <th className="p-4 text-black text-sm sm:text-base md:text-lg">
                 Bust / Chest (inches)
               </th>
             </tr>
@@ -41,7 +41,7 @@ const SizeGuideComparison = () => {
             {sizeComparisonData.map(({ us, uk, eu, inches }) => (
               <tr
                 key={us}
-                className="border-b border-gray-200 hover:bg-amber-200/10 transition-colors"
+                className="border-b border-gray-200 hover:bg-black/10 transition-colors"
               >
                 <td className="p-4 font-semibold text-sm sm:text-base md:text-lg">
                   {us}

@@ -42,7 +42,7 @@ const ManClothesBrands = () => {
       {/* Header */}
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 mb-3">
-          Shop by <span className="text-amber-700">Top Brands</span>
+          Shop by <span className="text-black">Top Brands</span>
         </h2>
         <p className="text-gray-600 text-sm max-w-md mx-auto">
           Explore premium brands known for luxury, style, and comfort. Choose
@@ -58,7 +58,7 @@ const ManClothesBrands = () => {
             whileHover={{ scale: 1.08 }}
             onClick={() => setActiveBrand(brand.name)}
             className={`relative group bg-white/10 backdrop-blur-lg rounded-xl shadow-lg p-4 flex flex-col items-center justify-center cursor-pointer transition ${
-              activeBrand === brand.name ? "ring-4 ring-amber-600" : ""
+              activeBrand === brand.name ? "ring-4 ring-black" : ""
             }`}
           >
             {/* Brand Logo */}
@@ -69,7 +69,7 @@ const ManClothesBrands = () => {
             />
 
             {/* Brand Name */}
-            <p className="mt-3 text-gray-900 font-semibold text-sm sm:text-base group-hover:text-amber-700">
+            <p className="mt-3 text-gray-900 font-semibold text-sm sm:text-base group-hover:text-black">
               {brand.name}
             </p>
           </motion.div>
@@ -85,7 +85,7 @@ const ManClothesBrands = () => {
         >
           <p className="text-gray-700 text-sm">
             Showing products for:{" "}
-            <span className="font-bold text-amber-700">{activeBrand}</span>
+            <span className="font-bold text-black">{activeBrand}</span>
           </p>
         </motion.div>
       )}

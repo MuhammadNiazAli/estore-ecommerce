@@ -5,22 +5,22 @@ import { FaMapMarkedAlt, FaShippingFast, FaSearchLocation, FaTimes } from 'react
 
 const trackOrderFeatures = [
   {
-    icon: <FaMapMarkedAlt className="text-amber-600 text-lg" />,
+    icon: <FaMapMarkedAlt className="text-black text-lg" />,
     label: 'Live Location Tracking',
   },
   {
-    icon: <FaShippingFast className="text-amber-600 text-lg" />,
+    icon: <FaShippingFast className="text-black text-lg" />,
     label: 'Fast Updates',
   },
   {
-    icon: <FaSearchLocation className="text-amber-600 text-lg" />,
+    icon: <FaSearchLocation className="text-black text-lg" />,
     label: 'Easy Order Lookup',
   },
 ];
 
 const trackNowContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Track Your Order Now</h3>
+    <h3 className="text-xl font-semibold text-black">Track Your Order Now</h3>
     <p>
       Use our real-time tracking system to get live updates on your order’s location and estimated delivery time.
       Simply enter your order ID on the tracking page to start.
@@ -35,7 +35,7 @@ const trackNowContent = (
 
 const learnMoreContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Learn More About Tracking</h3>
+    <h3 className="text-xl font-semibold text-black">Learn More About Tracking</h3>
     <p>
       Our tracking system is designed for your convenience and peace of mind. Learn how to interpret tracking details,
       what to expect during delivery, and how to resolve issues.
@@ -61,7 +61,7 @@ export default function HelpingTrackOrder() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Track Your Order
         </h2>
         <p className="text-gray-700">
@@ -85,8 +85,8 @@ export default function HelpingTrackOrder() {
             onClick={() => toggleSection('trackNow')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'trackNow'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-expanded={activeSection === 'trackNow'}
             aria-controls="track-now-content"
@@ -117,7 +117,7 @@ export default function HelpingTrackOrder() {
           >
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close details"
             >
               <FaTimes />

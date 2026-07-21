@@ -18,7 +18,7 @@ const ToggleSwitch = ({ enabled, onToggle }) => (
       checked={enabled}
       onChange={onToggle}
     />
-    <div className="w-12 h-7 bg-white peer-checked:bg-amber-600 rounded-full peer transition-colors duration-300" />
+    <div className="w-12 h-7 bg-white peer-checked:bg-black rounded-full peer transition-colors duration-300" />
     <div className="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-5 shadow-md" />
   </label>
 );
@@ -53,7 +53,7 @@ const ProfileSettings = () => {
       id: 'email',
       title: 'Email Notifications',
       description: 'Receive updates, newsletters, and promotions via email.',
-      icon: <BellIcon className="text-amber-600 w-6 h-6" />,
+      icon: <BellIcon className="text-black w-6 h-6" />,
       value: emailNotifications,
       onChange: () => setEmailNotifications((prev) => !prev),
     },
@@ -61,7 +61,7 @@ const ProfileSettings = () => {
       id: 'sms',
       title: 'SMS Alerts',
       description: 'Get important account alerts via text message.',
-      icon: <DevicePhoneMobileIcon className="text-amber-600 w-6 h-6" />,
+      icon: <DevicePhoneMobileIcon className="text-black w-6 h-6" />,
       value: smsNotifications,
       onChange: () => setSmsNotifications((prev) => !prev),
     },
@@ -69,7 +69,7 @@ const ProfileSettings = () => {
       id: '2fa',
       title: 'Two-Factor Authentication',
       description: 'Secure your account with an extra verification step during login.',
-      icon: <ShieldCheckIcon className="text-amber-600 w-6 h-6" />,
+      icon: <ShieldCheckIcon className="text-black w-6 h-6" />,
       value: twoFactorAuth,
       onChange: () => setTwoFactorAuth((prev) => !prev),
     },
@@ -81,14 +81,14 @@ const ProfileSettings = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-black">
               Profile Settings
             </h2>
             <p className="text-gray-600 text-sm sm:text-base max-w-md mt-1">
               Manage your notification preferences and security features below.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base">
             <Cog6ToothIcon className="w-6 h-6 animate-spin-slow" />
             <span>Settings</span>
           </div>
@@ -106,7 +106,7 @@ const ProfileSettings = () => {
 
         {/* Info footer */}
         <div className="flex items-center gap-2 text-gray-500 text-sm pt-6 border-t border-gray-200">
-          <InformationCircleIcon className="w-5 h-5 text-amber-500" />
+          <InformationCircleIcon className="w-5 h-5 text-black" />
           <p>
             All changes are saved automatically. You can update these anytime.
           </p>

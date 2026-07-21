@@ -41,13 +41,13 @@ const ManClothesAccessories = () => {
     <section className="w-full bg-white py-16 px-4 md:px-12">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-amber-600 uppercase tracking-wide">
+        <h2 className="text-4xl font-bold text-black uppercase tracking-wide">
           Men's Accessories
         </h2>
         <p className="text-gray-700 mt-3 text-lg">
           Premium accessories to upgrade your style.
         </p>
-        <div className="mt-4 w-28 h-1 bg-amber-600 mx-auto rounded-full"></div>
+        <div className="mt-4 w-28 h-1 bg-black mx-auto rounded-full"></div>
       </div>
 
       {/* Grid (2 per row) */}
@@ -55,7 +55,7 @@ const ManClothesAccessories = () => {
         {accessories.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-amber-600 transition-all duration-300 group"
+            className="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-black transition-all duration-300 group"
           >
             {/* Image */}
             <div className="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
@@ -66,10 +66,10 @@ const ManClothesAccessories = () => {
               />
               {/* Hover Icons */}
               <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <button className="p-2 bg-amber-600 text-gray-900 rounded-full shadow hover:bg-amber-500 transition">
+                <button className="p-2 bg-black text-gray-900 rounded-full shadow hover:bg-black transition">
                   <Heart size={18} />
                 </button>
-                <button className="p-2 bg-amber-600 text-gray-900 rounded-full shadow hover:bg-amber-500 transition">
+                <button className="p-2 bg-black text-gray-900 rounded-full shadow hover:bg-black transition">
                   <Eye size={18} />
                 </button>
               </div>
@@ -78,7 +78,7 @@ const ManClothesAccessories = () => {
             {/* Details */}
             <div className="flex flex-col justify-between p-6 md:w-1/2">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-amber-600 transition">
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-black transition">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm mt-2 leading-relaxed">
@@ -89,14 +89,14 @@ const ManClothesAccessories = () => {
               {/* Price & Button */}
               <div className="mt-5">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold text-amber-600">
+                  <span className="text-2xl font-bold text-black">
                     ${item.price}
                   </span>
                   <span className="text-sm line-through text-gray-500">
                     ${item.oldPrice}
                   </span>
                 </div>
-                <button className="w-full mt-5 flex items-center justify-center gap-2 bg-amber-600 text-gray-900 py-3 rounded-xl font-semibold hover:bg-amber-500 transition-all shadow-lg hover:scale-105">
+                <button className="w-full mt-5 flex items-center justify-center gap-2 bg-black text-gray-900 py-3 rounded-xl font-semibold hover:bg-black transition-all shadow-lg hover:scale-105">
                   <ShoppingBag size={18} />
                   Add to Cart
                 </button>

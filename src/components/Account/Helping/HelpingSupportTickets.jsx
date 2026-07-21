@@ -5,22 +5,22 @@ import { FaClipboardList, FaComments, FaBolt, FaTimes } from 'react-icons/fa';
 
 const supportTicketsFeatures = [
   {
-    icon: <FaClipboardList className="text-amber-600 text-lg" />,
+    icon: <FaClipboardList className="text-black text-lg" />,
     label: 'Easy Ticket Submission',
   },
   {
-    icon: <FaComments className="text-amber-600 text-lg" />,
+    icon: <FaComments className="text-black text-lg" />,
     label: '24/7 Customer Support',
   },
   {
-    icon: <FaBolt className="text-amber-600 text-lg" />,
+    icon: <FaBolt className="text-black text-lg" />,
     label: 'Fast Response Times',
   },
 ];
 
 const submitTicketContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">How to Submit a Support Ticket</h3>
+    <h3 className="text-xl font-semibold text-black">How to Submit a Support Ticket</h3>
     <p>
       To get help with any issues, fill out the support ticket form with detailed information about your problem.
       Our team is available 24/7 to assist you quickly and efficiently.
@@ -38,7 +38,7 @@ const submitTicketContent = (
 
 const viewTicketsContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">View Your Existing Tickets</h3>
+    <h3 className="text-xl font-semibold text-black">View Your Existing Tickets</h3>
     <p>
       You can track the progress of your submitted support tickets and communicate directly with our support staff.
     </p>
@@ -66,7 +66,7 @@ export default function HelpingSupportTickets() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Support Tickets
         </h2>
         <p className="text-gray-700">
@@ -90,8 +90,8 @@ export default function HelpingSupportTickets() {
             onClick={() => toggleSection('submitTicket')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'submitTicket'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-expanded={activeSection === 'submitTicket'}
             aria-controls="submit-ticket-content"
@@ -122,7 +122,7 @@ export default function HelpingSupportTickets() {
           >
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close details"
             >
               <FaTimes />

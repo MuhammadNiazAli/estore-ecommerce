@@ -21,7 +21,7 @@ const membershipTiers = [
   },
   {
     name: 'Gold',
-    icon: <FaStar className="text-amber-600 text-5xl" aria-hidden="true" />,
+    icon: <FaStar className="text-black text-5xl" aria-hidden="true" />,
     minPoints: 500,
     benefits: [
       '1.5x points multiplier',
@@ -29,14 +29,14 @@ const membershipTiers = [
       'Free express shipping',
     ],
     styles: {
-      color: 'text-amber-600',
-      border: 'border-amber-600',
+      color: 'text-black',
+      border: 'border-black',
       bg: 'bg-white',
     },
   },
   {
     name: 'Platinum',
-    icon: <FaCrown className="text-amber-700 text-5xl" aria-hidden="true" />,
+    icon: <FaCrown className="text-black text-5xl" aria-hidden="true" />,
     minPoints: 1000,
     benefits: [
       '2x points multiplier',
@@ -45,8 +45,8 @@ const membershipTiers = [
       'Priority customer support',
     ],
     styles: {
-      color: 'text-amber-700',
-      border: 'border-amber-700',
+      color: 'text-black',
+      border: 'border-black',
       bg: 'bg-white',
     },
   },

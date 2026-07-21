@@ -5,22 +5,22 @@ import { FaMoneyBillWave, FaLock, FaUserShield, FaTimes } from 'react-icons/fa';
 
 const paymentsHelpFeatures = [
   {
-    icon: <FaMoneyBillWave className="text-amber-600 text-lg" />,
+    icon: <FaMoneyBillWave className="text-black text-lg" />,
     label: 'Multiple Payment Methods',
   },
   {
-    icon: <FaLock className="text-amber-600 text-lg" />,
+    icon: <FaLock className="text-black text-lg" />,
     label: 'Secure Transactions',
   },
   {
-    icon: <FaUserShield className="text-amber-600 text-lg" />,
+    icon: <FaUserShield className="text-black text-lg" />,
     label: 'Fraud Protection & Safety',
   },
 ];
 
 const managePaymentsContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Manage Your Payments</h3>
+    <h3 className="text-xl font-semibold text-black">Manage Your Payments</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>Add or remove cards, wallets, and saved methods</li>
       <li>Set a default payment option for faster checkout</li>
@@ -35,7 +35,7 @@ const managePaymentsContent = (
 
 const learnMoreContent = (
   <div className="text-left text-sm text-gray-700 space-y-3">
-    <h3 className="text-xl font-semibold text-amber-600">Secure Payment Options</h3>
+    <h3 className="text-xl font-semibold text-black">Secure Payment Options</h3>
     <ul className="list-disc pl-5 space-y-1">
       <li>We support Visa, MasterCard, Amex, PayPal, Apple Pay, Google Pay, and more</li>
       <li>Our platform is PCI-DSS compliant and tokenized</li>
@@ -61,7 +61,7 @@ export default function HelpingPayments() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center max-w-md mx-auto">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Payment Support
         </h2>
         <p className="text-gray-700">
@@ -83,8 +83,8 @@ export default function HelpingPayments() {
             onClick={() => toggleSection('manage')}
             className={`px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'manage'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             }`}
             aria-label="Toggle manage payments section"
           >
@@ -109,7 +109,7 @@ export default function HelpingPayments() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

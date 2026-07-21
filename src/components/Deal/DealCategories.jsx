@@ -32,7 +32,7 @@ const DealCategories = () => {
             <div
               key={id}
               className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl cursor-pointer
-                         hover:bg-amber-700 hover:text-black transition duration-300 ease-in-out
+                         hover:bg-black hover:text-black transition duration-300 ease-in-out
                          shadow-md hover:shadow-lg"
             >
               <div className="mb-2">{icon}</div>

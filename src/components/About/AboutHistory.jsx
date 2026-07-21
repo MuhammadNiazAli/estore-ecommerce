@@ -19,11 +19,11 @@ const AboutHistory = () => {
       aria-label="My development journey"
     >
       <div className="max-w-4xl w-full">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-black text-center mb-12">
           My Journey
         </h2>
 
-        <div className="relative border-l-4 border-amber-800 pl-6 sm:pl-10">
+        <div className="relative border-l-4 border-black pl-6 sm:pl-10">
           {milestones.map(({ age, event }, index) => (
             <motion.div
               key={age}
@@ -35,7 +35,7 @@ const AboutHistory = () => {
             >
               {/* Age Badge */}
               <div className="absolute -left-[2.4rem] sm:-left-[2.8rem] top-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-700 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base shadow-md ring-2 ring-gray-200 hover:scale-105 transition transform duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base shadow-md ring-2 ring-gray-200 hover:scale-105 transition transform duration-300">
                   {age}
                 </div>
               </div>

@@ -24,7 +24,7 @@ const CartConfirmationDialog = ({ isOpen, onConfirm, onCancel }) => {
       {/* Modal */}
       <div className="fixed inset-0 flex justify-center items-center px-4 z-[1001]">
         <div className="bg-white rounded-xl max-w-[1000px] w-full p-8 mx-auto shadow-xl text-gray-900">
-          <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
             Confirm Your Purchase
           </h2>
           <p className="mb-6 text-gray-700 text-base sm:text-lg">
@@ -34,13 +34,13 @@ const CartConfirmationDialog = ({ isOpen, onConfirm, onCancel }) => {
           <div className="flex flex-col sm:flex-row justify-end gap-4">
             <button
               onClick={onCancel}
-              className="px-5 py-3 rounded-full border border-gray-200 hover:border-amber-600 text-gray-600 hover:text-amber-600 transition text-sm sm:text-base"
+              className="px-5 py-3 rounded-full border border-gray-200 hover:border-black text-gray-600 hover:text-black transition text-sm sm:text-base"
             >
               Cancel
             </button>
             <button
               onClick={onConfirm}
-              className="px-5 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold transition text-sm sm:text-base"
+              className="px-5 py-3 rounded-full bg-black hover:bg-black text-gray-900 font-semibold transition text-sm sm:text-base"
             >
               Confirm Purchase
             </button>

@@ -195,7 +195,7 @@ const BooksReviewsPreview = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 my-5">
+    <section className="bg-white text-black py-12 my-5">
       <div className="max-w-6xl mx-auto px-4">
         {/* ✅ Heading */}
         <h2 className="text-3xl font-bold text-center mb-8">Book Reviews</h2>
@@ -208,14 +208,14 @@ const BooksReviewsPreview = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-lg border border-amber-700 flex flex-col"
+              className="bg-white rounded-lg p-6 shadow-lg border border-black flex flex-col"
             >
               {/* ✅ User Info */}
               <div className="flex items-center mb-4">
                 <img
                   src={review.avatar}
                   alt={review.user}
-                  className="w-12 h-12 rounded-full border-2 border-amber-700 object-cover"
+                  className="w-12 h-12 rounded-full border-2 border-black object-cover"
                 />
                 <div className="ml-3">
                   <p className="font-semibold">{review.user}</p>
@@ -228,7 +228,7 @@ const BooksReviewsPreview = () => {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span key={i}>
                     {i < review.rating ? (
-                      <FaStar className="text-amber-700" />
+                      <FaStar className="text-black" />
                     ) : (
                       <FaRegStar className="text-gray-500" />
                     )}
@@ -241,10 +241,10 @@ const BooksReviewsPreview = () => {
 
               {/* ✅ Actions */}
               <div className="flex items-center gap-4 mt-auto">
-                <button className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition">
+                <button className="flex items-center gap-2 text-gray-600 hover:text-black transition">
                   <FaThumbsUp /> Like
                 </button>
-                <button className="flex items-center gap-2 text-gray-600 hover:text-amber-600 transition">
+                <button className="flex items-center gap-2 text-gray-600 hover:text-black transition">
                   <FaComment /> Comment
                 </button>
               </div>
@@ -257,7 +257,7 @@ const BooksReviewsPreview = () => {
           <div className="text-center mt-8">
             <button
               onClick={handleViewAll}
-              className="px-6 py-3 bg-amber-700 text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-amber-600 transition"
+              className="px-6 py-3 bg-black text-gray-900 font-semibold rounded-lg shadow-lg hover:bg-black transition"
             >
               View All Reviews
             </button>

@@ -38,10 +38,10 @@ const NewseasonTestimonials = () => {
   return (
     <section className="bg-white py-16 px-6">
       <div className="max-w-[1000px] mx-auto text-center">
-        <h2 className="text-amber-600 text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-black text-3xl md:text-4xl font-bold mb-4">
           What Our Customers Say
         </h2>
-        <p className="text-amber-400 text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-black text-lg mb-12 max-w-2xl mx-auto">
           Hear from our happy customers who love the new season collection.
         </p>
 
@@ -55,12 +55,12 @@ const NewseasonTestimonials = () => {
                 <img
                   src={image}
                   alt={name}
-                  className="w-16 h-16 rounded-full border-2 border-amber-600 mb-3"
+                  className="w-16 h-16 rounded-full border-2 border-black mb-3"
                 />
-                <h3 className="text-amber-500 text-lg font-semibold">{name}</h3>
-                <p className="text-amber-400 text-sm">{role}</p>
+                <h3 className="text-black text-lg font-semibold">{name}</h3>
+                <p className="text-black text-sm">{role}</p>
               </div>
-              <p className="text-amber-300 text-sm mb-4">{review}</p>
+              <p className="text-black text-sm mb-4">{review}</p>
               <div className="flex justify-center space-x-1">
                 {[...Array(5)].map((_, index) => (
                   <Star
@@ -68,7 +68,7 @@ const NewseasonTestimonials = () => {
                     size={18}
                     className={`${
                       index < rating
-                        ? 'text-amber-600 fill-amber-600'
+                        ? 'text-black fill-black'
                         : 'text-gray-500'
                     }`}
                   />

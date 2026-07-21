@@ -22,7 +22,7 @@ const NotificationTabs = () => {
             onClick={() => setActiveTab(tab.id)}
             className={`relative px-3 py-1.5 text-sm sm:text-base font-medium transition-colors duration-300 ${
               activeTab === tab.id
-                ? 'text-amber-600'
+                ? 'text-black'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
             aria-current={activeTab === tab.id ? 'page' : undefined}
@@ -31,7 +31,7 @@ const NotificationTabs = () => {
             {activeTab === tab.id && (
               <motion.span
                 layoutId="tab-underline"
-                className="absolute left-0 bottom-0 h-0.5 w-full bg-amber-600 rounded-full"
+                className="absolute left-0 bottom-0 h-0.5 w-full bg-black rounded-full"
                 transition={{ type: 'spring', stiffness: 500, damping: 30 }}
               />
             )}
@@ -50,7 +50,7 @@ const NotificationTabs = () => {
             transition={{ duration: 0.3 }}
           >
             Currently viewing:{' '}
-            <span className="text-amber-600 font-medium">
+            <span className="text-black font-medium">
               {tabsData.find((t) => t.id === activeTab)?.label}
             </span>
           </motion.p>

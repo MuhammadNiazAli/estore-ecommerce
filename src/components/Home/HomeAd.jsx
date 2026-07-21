@@ -211,15 +211,15 @@ function StarRating({ rating }) {
   for (let i = 1; i <= 5; i++) {
     if (rating >= i) {
       stars.push(
-        <FaStar key={i} className="text-amber-600" aria-hidden="true" />
+        <FaStar key={i} className="text-black" aria-hidden="true" />
       );
     } else if (rating >= i - 0.5) {
       stars.push(
-        <FaStarHalfAlt key={i} className="text-amber-600" aria-hidden="true" />
+        <FaStarHalfAlt key={i} className="text-black" aria-hidden="true" />
       );
     } else {
       stars.push(
-        <FaRegStar key={i} className="text-amber-600" aria-hidden="true" />
+        <FaRegStar key={i} className="text-black" aria-hidden="true" />
       );
     }
   }
@@ -253,7 +253,7 @@ function CountdownTimer({ endDate }) {
 
   return (
     <div
-      className="flex items-center gap-2 text-red-500 font-semibold mt-2"
+      className="flex items-center gap-2 text-black font-semibold mt-2"
       aria-live="polite"
       aria-atomic="true"
     >
@@ -379,19 +379,19 @@ export default function FlashSalesCarousel() {
   }
   .slide-title:hover,
   .slide-title:focus {
-    color: #f87171; /* red-400 */
+    color: #6b7280; /* red-400 */
     outline: none;
   }
   .slide-description {
     font-size: 0.85rem; /* was 1rem */
     margin-bottom: 12px; /* reduced */
-    color: #d1d5db; /* gray-300 */
+    color: #111827; /* gray-300 */
     line-height: 1.4;
     transition: color 0.3s ease;
   }
   .slide-description:hover,
   .slide-description:focus {
-    color: #fca5a5; /* lighter red */
+    color: #9ca3af; /* lighter red */
     outline: none;
   }
   .rating-row {
@@ -416,7 +416,7 @@ export default function FlashSalesCarousel() {
   .current-price {
     font-size: 1.25rem; /* was 1.75rem */
     font-weight: 700;
-    color: #f87171; /* red-400 */
+    color: #6b7280; /* red-400 */
     transition: color 0.3s ease;
   }
   .old-price {
@@ -426,7 +426,7 @@ export default function FlashSalesCarousel() {
     transition: color 0.3s ease;
   }
   .discount-badge {
-    background-color: #fecaca;
+    background-color: #f3f4f6;
     color: #991b1b;
     font-size: 0.65rem; /* was 0.8rem */
     font-weight: 600;
@@ -437,7 +437,7 @@ export default function FlashSalesCarousel() {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   .buy-button {
-    background-color: #f87171;
+    background-color: #6b7280;
     color: white;
     font-weight: 700;
     padding: 8px 20px; /* was 12px 28px */
@@ -459,7 +459,7 @@ export default function FlashSalesCarousel() {
   }
   .buy-button:hover,
   .buy-button:focus-visible {
-    background-color: #b91c1c;
+    background-color: #111827;
     outline: none;
     box-shadow: 0 8px 20px rgba(185, 28, 28, 0.7);
     transform: scale(1.05);
@@ -653,7 +653,7 @@ export default function FlashSalesCarousel() {
                 <p
                   style={{
                     fontSize: '0.9rem',
-                    color: '#d1d5db',
+                    color: '#111827',
                     marginBottom: '6px',
                   }}
                 >
@@ -677,7 +677,7 @@ export default function FlashSalesCarousel() {
                     style={{
                       fontWeight: '700',
                       fontSize: '1.1rem',
-                      color: '#f87171',
+                      color: '#6b7280',
                     }}
                   >
                     ${flashDeals[(currentIndex + 1) % total].price.toFixed(2)}

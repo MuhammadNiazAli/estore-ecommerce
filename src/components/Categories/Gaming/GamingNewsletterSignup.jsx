@@ -16,7 +16,7 @@ const GamingNewsletterSignup = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4 my-5">
+    <section className="bg-white text-black py-12 px-4 my-5">
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
@@ -54,12 +54,12 @@ const GamingNewsletterSignup = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-amber-700"
+                className="w-full pl-10 pr-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-black"
               />
             </div>
             <button
               type="submit"
-              className="bg-amber-700 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition"
+              className="bg-black text-gray-900 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-black transition"
             >
               Subscribe
             </button>
@@ -68,7 +68,7 @@ const GamingNewsletterSignup = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-green-400 font-semibold mt-6"
+            className="text-black font-semibold mt-6"
           >
             ✅ Thank you for subscribing! Get ready for epic updates.
           </motion.div>

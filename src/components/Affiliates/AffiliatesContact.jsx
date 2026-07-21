@@ -71,7 +71,7 @@ const AffiliatesContact = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4" aria-label="Affiliate Contact">
+    <section className="bg-white text-black py-12 px-4" aria-label="Affiliate Contact">
       <div className="max-w-[1000px] mx-auto">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-10 tracking-wide">
           Contact Our Affiliate Team
@@ -85,8 +85,8 @@ const AffiliatesContact = () => {
         >
           {/* Name */}
           <div className="flex flex-col">
-            <label htmlFor="name" className="mb-1 font-semibold text-amber-500">
-              Name<span className="text-red-500">*</span>
+            <label htmlFor="name" className="mb-1 font-semibold text-black">
+              Name<span className="text-black">*</span>
             </label>
             <input
               id="name"
@@ -96,14 +96,14 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="Your full name"
-              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
+              className={`rounded-md bg-white border px-4 py-3 text-black placeholder-gray-500
                 focus:outline-none focus:ring-2 transition-all duration-200
-                ${errors.name ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
+                ${errors.name ? "border-black focus:ring-black" : "border-black focus:ring-black"}`}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
             />
             {errors.name && (
-              <span id="name-error" role="alert" className="mt-1 text-red-500 text-sm">
+              <span id="name-error" role="alert" className="mt-1 text-black text-sm">
                 {errors.name}
               </span>
             )}
@@ -111,8 +111,8 @@ const AffiliatesContact = () => {
 
           {/* Email */}
           <div className="flex flex-col">
-            <label htmlFor="email" className="mb-1 font-semibold text-amber-500">
-              Email<span className="text-red-500">*</span>
+            <label htmlFor="email" className="mb-1 font-semibold text-black">
+              Email<span className="text-black">*</span>
             </label>
             <input
               id="email"
@@ -122,14 +122,14 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="you@example.com"
-              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
+              className={`rounded-md bg-white border px-4 py-3 text-black placeholder-gray-500
                 focus:outline-none focus:ring-2 transition-all duration-200
-                ${errors.email ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
+                ${errors.email ? "border-black focus:ring-black" : "border-black focus:ring-black"}`}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
             />
             {errors.email && (
-              <span id="email-error" role="alert" className="mt-1 text-red-500 text-sm">
+              <span id="email-error" role="alert" className="mt-1 text-black text-sm">
                 {errors.email}
               </span>
             )}
@@ -137,8 +137,8 @@ const AffiliatesContact = () => {
 
           {/* Message */}
           <div className="sm:col-span-2 flex flex-col">
-            <label htmlFor="message" className="mb-1 font-semibold text-amber-500">
-              Message<span className="text-red-500">*</span>
+            <label htmlFor="message" className="mb-1 font-semibold text-black">
+              Message<span className="text-black">*</span>
             </label>
             <textarea
               id="message"
@@ -148,14 +148,14 @@ const AffiliatesContact = () => {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="Write your message here..."
-              className={`rounded-md bg-white border px-4 py-3 text-amber-300 placeholder-amber-700
+              className={`rounded-md bg-white border px-4 py-3 text-black placeholder-gray-500
                 focus:outline-none focus:ring-2 transition-all duration-200 resize-none
-                ${errors.message ? "border-red-500 focus:ring-red-500" : "border-amber-800 focus:ring-amber-700"}`}
+                ${errors.message ? "border-black focus:ring-black" : "border-black focus:ring-black"}`}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
             />
             {errors.message && (
-              <span id="message-error" role="alert" className="mt-1 text-red-500 text-sm">
+              <span id="message-error" role="alert" className="mt-1 text-black text-sm">
                 {errors.message}
               </span>
             )}
@@ -166,8 +166,8 @@ const AffiliatesContact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-amber-700 hover:bg-amber-800 focus:bg-amber-900 text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
-              transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-amber-600
+              className={`bg-black hover:bg-black focus:bg-black text-gray-900 font-semibold px-8 py-3 rounded-md shadow-md
+              transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-black
               disabled:opacity-50 disabled:cursor-not-allowed`}
               aria-busy={isSubmitting}
               aria-live="polite"
@@ -179,7 +179,7 @@ const AffiliatesContact = () => {
           {/* Status Message */}
           {submitStatus === "success" && (
             <p
-              className="sm:col-span-2 text-center text-green-400 font-semibold mt-2 animate-pulse"
+              className="sm:col-span-2 text-center text-black font-semibold mt-2 animate-pulse"
               role="alert"
               aria-live="polite"
             >
@@ -188,7 +188,7 @@ const AffiliatesContact = () => {
           )}
           {submitStatus === "error" && (
             <p
-              className="sm:col-span-2 text-center text-red-500 font-semibold mt-2 animate-pulse"
+              className="sm:col-span-2 text-center text-black font-semibold mt-2 animate-pulse"
               role="alert"
               aria-live="assertive"
             >

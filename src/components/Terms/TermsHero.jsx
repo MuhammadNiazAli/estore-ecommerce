@@ -4,7 +4,7 @@ const TermsHero = () => {
   return (
     <section
       aria-labelledby="terms-title"
-      className="bg-white text-amber-600 min-h-screen py-12 my-[-50px]"
+      className="bg-white text-black min-h-screen py-12 my-[-50px]"
     >
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
         <h1
@@ -15,11 +15,11 @@ const TermsHero = () => {
           Terms and Conditions
         </h1>
 
-        <p className="mt-6 text-amber-500 leading-relaxed sm:text-lg">
+        <p className="mt-6 text-black leading-relaxed sm:text-lg">
           Welcome to eStore. By using our services, you agree to these Terms and applicable laws. Please read carefully.
         </p>
 
-        <section className="mt-10 space-y-8 text-amber-500 text-sm sm:text-base leading-relaxed">
+        <section className="mt-10 space-y-8 text-black text-sm sm:text-base leading-relaxed">
           <article>
             <h2 className="text-xl font-semibold mb-2">1. User Responsibilities</h2>
             <p>
@@ -91,11 +91,11 @@ const TermsHero = () => {
           </article>
         </section>
 
-        <p className="mt-12 text-amber-500 text-sm sm:text-base">
+        <p className="mt-12 text-black text-sm sm:text-base">
           Questions? Contact us at{" "}
           <a
             href="mailto:support@example.com"
-            className="underline text-amber-400"
+            className="underline text-black"
           >
             support@example.com
           </a>

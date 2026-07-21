@@ -98,7 +98,7 @@ const HelpCenterFAQ = () => {
   return (
     <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-40px]">
       <div className="w-full max-w-[1000px] text-gray-900">
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black text-center mb-10">
           Frequently Asked Questions
         </h2>
 
@@ -123,9 +123,9 @@ const HelpCenterFAQ = () => {
               <div className="flex justify-between items-center">
                 <h3 className="text-lg font-semibold">{faq.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-amber-600" />
+                  <ChevronUp className="w-5 h-5 text-black" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-amber-600" />
+                  <ChevronDown className="w-5 h-5 text-black" />
                 )}
               </div>
               <div

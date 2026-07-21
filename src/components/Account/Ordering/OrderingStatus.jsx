@@ -12,7 +12,7 @@ const OrderingStatus = ({ status }) => {
       aria-label="Order status"
       className="w-full max-w-4xl mx-auto bg-white rounded-lg p-6 shadow-md"
     >
-      <h2 className="text-xl font-semibold text-amber-600 border-b border-amber-600 pb-2 mb-6">
+      <h2 className="text-xl font-semibold text-black border-b border-black pb-2 mb-6">
         Order Status
       </h2>
 
@@ -32,7 +32,7 @@ const OrderingStatus = ({ status }) => {
                   aria-hidden="true"
                   className={`w-8 h-8 flex items-center justify-center mb-2 rounded-full font-semibold transition-colors duration-300 ${
                     isComplete || isActive
-                      ? 'bg-amber-600 text-gray-900'
+                      ? 'bg-black text-gray-900'
                       : 'bg-white text-gray-500'
                   }`}
                 >
@@ -42,7 +42,7 @@ const OrderingStatus = ({ status }) => {
                 {/* Step label */}
                 <span
                   className={`uppercase tracking-wide text-center text-[10px] sm:text-xs ${
-                    isComplete || isActive ? 'text-amber-600' : 'text-gray-500'
+                    isComplete || isActive ? 'text-black' : 'text-gray-500'
                   }`}
                 >
                   {step}
@@ -53,7 +53,7 @@ const OrderingStatus = ({ status }) => {
                   <span
                     aria-hidden="true"
                     className={`absolute top-4 right-0 h-0.5 w-full z-0 transition-colors duration-300 ${
-                      isComplete ? 'bg-amber-600' : 'bg-white'
+                      isComplete ? 'bg-black' : 'bg-white'
                     }`}
                     style={{ left: '50%', right: '-50%', marginLeft: 0 }}
                   />

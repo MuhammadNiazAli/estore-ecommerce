@@ -49,7 +49,7 @@ const NewseasonCollection = () => {
   return (
     <section className="bg-white py-16 px-6">
       <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-amber-600 text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
+        <h2 className="text-black text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
           Explore Our New Season Collection
         </h2>
 
@@ -68,12 +68,12 @@ const NewseasonCollection = () => {
 
               {/* Mobile Always Visible Details */}
               <div className="block md:hidden bg-white px-4 py-4 text-center">
-                <h3 className="text-amber-500 text-lg font-semibold mb-1">{name}</h3>
-                <p className="text-amber-400 text-sm mb-2">{description}</p>
-                <p className="text-amber-600 font-bold text-lg mb-4">{price}</p>
+                <h3 className="text-black text-lg font-semibold mb-1">{name}</h3>
+                <p className="text-black text-sm mb-2">{description}</p>
+                <p className="text-black font-bold text-lg mb-4">{price}</p>
                 <button
                   type="button"
-                  className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+                  className="bg-black hover:bg-black text-gray-900 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
                 >
                   Shop Now
                 </button>
@@ -81,12 +81,12 @@ const NewseasonCollection = () => {
 
               {/* Desktop Hover Overlay */}
               <div className="hidden md:flex absolute inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex-col justify-center items-center px-4 text-center">
-                <h3 className="text-amber-500 text-xl font-semibold mb-2">{name}</h3>
-                <p className="text-amber-400 text-sm mb-4">{description}</p>
-                <p className="text-amber-600 font-bold text-lg mb-6">{price}</p>
+                <h3 className="text-black text-xl font-semibold mb-2">{name}</h3>
+                <p className="text-black text-sm mb-4">{description}</p>
+                <p className="text-black font-bold text-lg mb-6">{price}</p>
                 <button
                   type="button"
-                  className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
+                  className="bg-black hover:bg-black text-gray-900 font-semibold py-2 px-6 rounded-md transition-colors duration-300"
                 >
                   Shop Now
                 </button>

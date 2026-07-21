@@ -31,7 +31,7 @@ const ProductCallTestimonials = () => {
   return (
     <section className="w-full bg-white flex justify-center px-4 py-12 sm:py-16">
       <div className="max-w-[1000px] w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-600 text-center mb-10 px-2 sm:px-0">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black text-center mb-10 px-2 sm:px-0">
           What Our Customers Say
         </h2>
 
@@ -46,10 +46,10 @@ const ProductCallTestimonials = () => {
               <img
                 src={photo}
                 alt={`${name}'s photo`}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mb-4 border-2 border-amber-600"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mb-4 border-2 border-black"
                 loading="lazy"
               />
-              <h3 className="text-amber-600 font-semibold text-lg mb-1 text-center truncate max-w-full">
+              <h3 className="text-black font-semibold text-lg mb-1 text-center truncate max-w-full">
                 {name}
               </h3>
               <div className="flex mb-3" aria-label={`Rating: ${rating} out of 5 stars`}>
@@ -57,7 +57,7 @@ const ProductCallTestimonials = () => {
                   <Star
                     key={i}
                     className={`w-5 h-5 ${
-                      i < rating ? 'text-amber-600' : 'text-gray-600'
+                      i < rating ? 'text-black' : 'text-gray-600'
                     }`}
                     aria-hidden="true"
                   />

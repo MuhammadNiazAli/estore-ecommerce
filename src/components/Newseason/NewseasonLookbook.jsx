@@ -49,7 +49,7 @@ const NewseasonLookbook = () => {
   return (
     <section className="bg-white py-16 px-6 my-[-30px]">
       <div className="max-w-[1000px] mx-auto">
-        <h2 className="text-amber-600 text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
+        <h2 className="text-black text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
           New Season Lookbook
         </h2>
 
@@ -69,23 +69,23 @@ const NewseasonLookbook = () => {
 
               {/* Mobile Details */}
               <div className="block md:hidden bg-white px-4 py-4 text-center">
-                <p className="text-amber-500 text-lg font-semibold">{caption}</p>
+                <p className="text-black text-lg font-semibold">{caption}</p>
               </div>
 
               {/* Desktop Hover Overlay with More Details */}
               <div className="hidden md:flex absolute inset-0 bg-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex-col justify-center items-center px-6 text-center">
-                <p className="text-amber-500 text-2xl font-bold mb-3">{caption}</p>
-                <p className="text-amber-400 text-sm mb-5">{description}</p>
+                <p className="text-black text-2xl font-bold mb-3">{caption}</p>
+                <p className="text-black text-sm mb-5">{description}</p>
                 <button
                   type="button"
-                  className="bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-2 px-5 rounded-md transition-all duration-300 shadow-md"
+                  className="bg-black hover:bg-black text-gray-900 font-semibold py-2 px-5 rounded-md transition-all duration-300 shadow-md"
                 >
                   View Collection
                 </button>
               </div>
 
               {/* Gold border on hover (Desktop Only) */}
-              <div className="hidden md:block absolute inset-0 border-4 border-transparent group-hover:border-amber-600 rounded-lg pointer-events-none transition-all duration-500"></div>
+              <div className="hidden md:block absolute inset-0 border-4 border-transparent group-hover:border-black rounded-lg pointer-events-none transition-all duration-500"></div>
             </div>
           ))}
         </div>

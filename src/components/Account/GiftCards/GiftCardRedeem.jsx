@@ -102,8 +102,8 @@ const GiftCardRedeem = () => {
       aria-label="Redeem your gift card"
       className="max-w-[900px] mx-auto bg-white text-gray-900 rounded-3xl shadow-2xl p-8"
     >
-      <h2 className="text-3xl font-extrabold mb-6 flex items-center gap-3 select-none text-amber-500">
-        <FaGift className="text-amber-600" aria-hidden="true" />
+      <h2 className="text-3xl font-extrabold mb-6 flex items-center gap-3 select-none text-black">
+        <FaGift className="text-black" aria-hidden="true" />
         Redeem Gift Card
       </h2>
 
@@ -117,8 +117,8 @@ const GiftCardRedeem = () => {
           onKeyDown={handleKeyDown}
           placeholder="Enter your gift card code"
           aria-label="Gift card code"
-          className={`flex-grow rounded-md px-4 py-3 bg-white text-amber-400 font-mono tracking-widest uppercase placeholder:text-amber-800 focus:outline-none focus:ring-2 focus:ring-amber-600 transition ${
-            error ? 'ring-2 ring-red-600' : ''
+          className={`flex-grow rounded-md px-4 py-3 bg-white text-black font-mono tracking-widest uppercase placeholder:text-black focus:outline-none focus:ring-2 focus:ring-black transition ${
+            error ? 'ring-2 ring-black' : ''
           }`}
           maxLength={16}
           autoComplete="off"
@@ -131,7 +131,7 @@ const GiftCardRedeem = () => {
 
         <button
           type="submit"
-          className="relative px-6 py-3 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
+          className="relative px-6 py-3 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
           aria-label="Redeem gift card"
           disabled={loading}
         >
@@ -146,7 +146,7 @@ const GiftCardRedeem = () => {
   <button
     type="button"
     onClick={handleClear}
-    className="flex items-center justify-center w-10 h-10 sm:w-auto sm:h-auto px-3 py-2 sm:px-4 sm:py-3 bg-red-700 hover:bg-red-600 text-gray-900 rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-xl sm:text-base"
+    className="flex items-center justify-center w-10 h-10 sm:w-auto sm:h-auto px-3 py-2 sm:px-4 sm:py-3 bg-black hover:bg-black text-gray-900 rounded-full shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed text-xl sm:text-base"
     aria-label="Clear gift card code"
     disabled={loading && !code}
   >
@@ -159,7 +159,7 @@ const GiftCardRedeem = () => {
       {error && (
         <p
           id="code-error"
-          className="mt-4 flex items-center gap-2 text-red-500 font-semibold"
+          className="mt-4 flex items-center gap-2 text-black font-semibold"
           role="alert"
           aria-live="assertive"
         >
@@ -170,7 +170,7 @@ const GiftCardRedeem = () => {
 
       {successMessage && (
         <p
-          className="mt-4 flex items-center gap-2 text-amber-600 font-semibold"
+          className="mt-4 flex items-center gap-2 text-black font-semibold"
           role="alert"
           aria-live="polite"
         >
@@ -179,7 +179,7 @@ const GiftCardRedeem = () => {
           <button
             onClick={handleCopy}
             aria-label="Copy success message"
-            className="ml-2 p-1 hover:text-amber-500 transition"
+            className="ml-2 p-1 hover:text-black transition"
             type="button"
           >
             <FaClipboard />

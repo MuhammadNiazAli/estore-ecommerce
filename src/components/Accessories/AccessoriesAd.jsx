@@ -8,14 +8,14 @@ const AccessoriesAd = () => {
     >
       {/* Left Content */}
       <div className="flex-1 text-center md:text-left max-w-xl mx-auto md:mx-0">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-amber-600 mb-4 leading-tight tracking-wide">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4 leading-tight tracking-wide">
           Discover the Elegance of Our Exclusive Accessories
         </h2>
         <p className="text-gray-700 mb-6 max-w-lg mx-auto md:mx-0 leading-relaxed text-base sm:text-lg">
           From timeless pearl necklaces to vintage-inspired watches, elevate your style with our premium collection. Crafted with precision and designed to impress.
         </p>
 
-        <ul className="text-amber-600 mb-8 space-y-3 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
+        <ul className="text-black mb-8 space-y-3 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
           {[ 
             "Handcrafted with finest materials",
             "Limited edition collections",
@@ -40,14 +40,14 @@ const AccessoriesAd = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 max-w-lg mx-auto md:mx-0">
           <div>
-            <span className="text-2xl sm:text-3xl font-extrabold text-amber-600 mr-2">
+            <span className="text-2xl sm:text-3xl font-extrabold text-black mr-2">
               $129.99
             </span>
             <span className="line-through text-gray-600 text-sm sm:text-base">$179.99</span>
           </div>
           <button
             type="button"
-            className="bg-amber-700 hover:bg-amber-800 transition text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
+            className="bg-black hover:bg-black transition text-gray-900 font-bold py-3 px-8 rounded-lg shadow-lg whitespace-nowrap text-sm sm:text-base"
             aria-label="Shop now"
           >
             Shop Now

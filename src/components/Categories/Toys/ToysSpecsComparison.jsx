@@ -70,7 +70,7 @@ const ToysSpecsComparison = () => {
     <section className="bg-white text-gray-900 py-10 px-4 rounded-xl mt-10">
       <div className="max-w-[1200px] mx-auto">
         {/* ✅ Header */}
-        <h2 className="text-2xl md:text-3xl font-bold text-amber-600 mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-black mb-6">
           Compare Toy Specifications
         </h2>
 
@@ -97,7 +97,7 @@ const ToysSpecsComparison = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <thead className="bg-white text-amber-600">
+            <thead className="bg-white text-black">
               <tr>
                 <th className="p-3 text-left">Specs</th>
                 {selectedToys.map((toy) => (
@@ -110,7 +110,7 @@ const ToysSpecsComparison = () => {
                       />
                       <p className="font-semibold">{toy.name}</p>
                       <button
-                        className="absolute top-2 right-2 bg-red-500 hover:bg-red-400 text-gray-900 p-1 rounded-full text-xs"
+                        className="absolute top-2 right-2 bg-black hover:bg-black text-gray-900 p-1 rounded-full text-xs"
                         onClick={() => removeToy(toy.id)}
                       >
                         <FaTrash />

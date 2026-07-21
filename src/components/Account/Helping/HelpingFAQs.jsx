@@ -38,7 +38,7 @@ export default function HelpingFAQs() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl"
     >
       <div className="max-w-xl mx-auto space-y-6">
-        <h2 className="text-3xl font-extrabold text-amber-600 text-center">
+        <h2 className="text-3xl font-extrabold text-black text-center">
           Frequently Asked Questions
         </h2>
         <p className="text-gray-700 text-center max-w-md mx-auto">
@@ -51,7 +51,7 @@ export default function HelpingFAQs() {
               <button
                 type="button"
                 onClick={() => toggleFAQ(idx)}
-                className="flex justify-between w-full text-left text-lg font-semibold text-amber-600 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
+                className="flex justify-between w-full text-left text-lg font-semibold text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
                 aria-expanded={activeIndex === idx}
                 aria-controls={`faq-answer-${idx}`}
                 id={`faq-question-${idx}`}

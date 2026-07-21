@@ -104,7 +104,7 @@ const ProductPricing = ({
   return (
     <section className="max-w-xl w-full mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl">
       {specialDeal && (
-        <div className="bg-amber-600 text-gray-900 font-semibold text-center py-2 rounded-md mb-8 select-none animate-pulse">
+        <div className="bg-black text-gray-900 font-semibold text-center py-2 rounded-md mb-8 select-none animate-pulse">
           {dealText}
         </div>
       )}
@@ -122,13 +122,13 @@ const ProductPricing = ({
                 <span className="line-through text-gray-500 text-lg">
                   {formatCurrency(originalPrice)}
                 </span>
-                <span className="bg-red-600 text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
+                <span className="bg-black text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
                   -{discountPercent}%
                 </span>
               </>
             )}
             {promoApplied && (
-              <span className="bg-green-600 text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
+              <span className="bg-black text-gray-900 text-xs font-semibold px-2 py-0.5 rounded-md select-none whitespace-nowrap">
                 Promo: -{promoDiscountPercent}%
               </span>
             )}
@@ -141,7 +141,7 @@ const ProductPricing = ({
             onClick={decrement}
             aria-label="Decrease quantity"
             className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
-            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600
+            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black
             ${quantity === 1 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 1}
           >
@@ -157,14 +157,14 @@ const ProductPricing = ({
             onChange={handleInputChange}
             aria-label="Quantity"
             className={`w-20 text-center rounded-md border border-gray-200 bg-white text-gray-800
-            focus:outline-none focus:ring-2 focus:ring-amber-600
-            ${inputError ? "border-red-500 focus:ring-red-500" : ""}`}
+            focus:outline-none focus:ring-2 focus:ring-black
+            ${inputError ? "border-black focus:ring-black" : ""}`}
           />
           <button
             onClick={increment}
             aria-label="Increase quantity"
             className={`w-10 h-10 flex items-center justify-center rounded-md border border-gray-200 transition
-            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600
+            hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black
             ${quantity === 99 ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={quantity === 99}
           >
@@ -174,7 +174,7 @@ const ProductPricing = ({
       </div>
 
       {inputError && (
-        <p className="mt-1 text-sm text-red-500 font-medium" role="alert">
+        <p className="mt-1 text-sm text-black font-medium" role="alert">
           {inputError}
         </p>
       )}
@@ -189,18 +189,18 @@ const ProductPricing = ({
             onChange={(e) => setPromoCode(e.target.value)}
             disabled={promoApplied}
             aria-label="Promo code input"
-            className="w-full rounded-md border border-gray-200 bg-white text-gray-800 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="w-full rounded-md border border-gray-200 bg-white text-gray-800 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black"
           />
           <AiOutlineInfoCircle
             title="Try promo codes: save10 or save20"
-            className="absolute right-3 top-3 w-5 h-5 text-amber-600 cursor-help"
+            className="absolute right-3 top-3 w-5 h-5 text-black cursor-help"
           />
         </div>
         <button
           onClick={applyPromoCode}
           disabled={promoApplied || promoCode.trim() === "" || isApplyingPromo}
-          className={`rounded-md bg-amber-600 hover:bg-amber-700 text-gray-900 font-semibold py-3 px-6 shadow-md transition
-          disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-amber-500`}
+          className={`rounded-md bg-black hover:bg-black text-gray-900 font-semibold py-3 px-6 shadow-md transition
+          disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-4 focus:ring-black`}
           aria-label="Apply promo code"
         >
           {isApplyingPromo ? "Applying..." : promoApplied ? "Applied" : "Apply"}
@@ -230,8 +230,8 @@ const ProductPricing = ({
         type="button"
         onClick={() => onAddToCart(quantity, total)}
         disabled={!!inputError}
-        className={`mt-8 w-full bg-amber-600 hover:bg-amber-700 text-gray-900 font-bold py-4 rounded-xl shadow-lg transition-colors duration-300
-        focus:outline-none focus:ring-4 focus:ring-amber-500 disabled:opacity-50 disabled:cursor-not-allowed`}
+        className={`mt-8 w-full bg-black hover:bg-black text-gray-900 font-bold py-4 rounded-xl shadow-lg transition-colors duration-300
+        focus:outline-none focus:ring-4 focus:ring-black disabled:opacity-50 disabled:cursor-not-allowed`}
         aria-disabled={!!inputError}
       >
         Add to Cart

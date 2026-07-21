@@ -36,7 +36,7 @@ const SupportingFAQ = () => {
   return (
     <section
       aria-label="Frequently Asked Questions"
-      className="max-w-[700px] mx-auto bg-white rounded-3xl p-8 shadow-2xl text-amber-300"
+      className="max-w-[700px] mx-auto bg-white rounded-3xl p-8 shadow-2xl text-black"
     >
       <h2 className="text-3xl font-extrabold mb-6 text-center tracking-tight">
         Frequently Asked Questions
@@ -49,7 +49,7 @@ const SupportingFAQ = () => {
             <div
               key={idx}
               className="bg-white rounded-xl p-4 cursor-pointer select-none
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-600 focus-visible:ring-offset-2"
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
               onClick={() => toggleFAQ(idx)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
@@ -64,11 +64,11 @@ const SupportingFAQ = () => {
               aria-labelledby={`faq-title-${idx}`}
             >
               <div className="flex justify-between items-center">
-                <h3 id={`faq-title-${idx}`} className="font-semibold text-lg text-amber-600">
+                <h3 id={`faq-title-${idx}`} className="font-semibold text-lg text-black">
                   {faq.question}
                 </h3>
                 <span
-                  className={`text-amber-600 transition-transform duration-300 ${
+                  className={`text-black transition-transform duration-300 ${
                     isOpen ? 'rotate-180' : 'rotate-0'
                   }`}
                   aria-hidden="true"
@@ -79,7 +79,7 @@ const SupportingFAQ = () => {
 
               <div
                 id={`faq-desc-${idx}`}
-                className="mt-2 text-amber-500 text-sm leading-relaxed overflow-hidden transition-[max-height] duration-500 ease-in-out"
+                className="mt-2 text-black text-sm leading-relaxed overflow-hidden transition-[max-height] duration-500 ease-in-out"
                 style={{
                   maxHeight: isOpen ? contentRefs.current[idx]?.scrollHeight + 'px' : '0px',
                 }}

@@ -41,7 +41,7 @@ const HelpCenterHero = () => {
         {/* Title */}
         <header>
           <h1
-            className="text-3xl sm:text-5xl font-extrabold text-amber-600 drop-shadow-md"
+            className="text-3xl sm:text-5xl font-extrabold text-black drop-shadow-md"
             tabIndex={-1}
           >
             How can we help you?
@@ -69,13 +69,13 @@ const HelpCenterHero = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="w-full sm:w-[60%] px-4 py-3 text-amber-700 rounded-md outline-none focus:ring-4 ring-amber-700 shadow-sm transition duration-300"
+            className="w-full sm:w-[60%] px-4 py-3 text-black rounded-md outline-none focus:ring-4 ring-black shadow-sm transition duration-300"
             autoComplete="off"
             spellCheck={false}
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-black font-semibold rounded-md shadow-md transition duration-200 focus:ring-4 focus:ring-amber-600 focus:ring-offset-2 focus:outline-none"
+            className="px-6 py-3 bg-black hover:bg-black text-black font-semibold rounded-md shadow-md transition duration-200 focus:ring-4 focus:ring-black focus:ring-offset-2 focus:outline-none"
           >
             Search
           </button>
@@ -90,11 +90,11 @@ const HelpCenterHero = () => {
             <button
               key={topic}
               onClick={() => handleTopicClick(topic)}
-              className={`px-5 py-2 rounded-full font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-amber-600
+              className={`px-5 py-2 rounded-full font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-black
                 ${
                   selectedTopic === topic
-                    ? 'bg-amber-700 text-black shadow-lg'
-                    : 'bg-white hover:bg-amber-800 text-amber-300'
+                    ? 'bg-black text-black shadow-lg'
+                    : 'bg-white hover:bg-black text-black'
                 }
               `}
               aria-pressed={selectedTopic === topic}

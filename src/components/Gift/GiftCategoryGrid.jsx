@@ -14,18 +14,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 const categories = [
-  { id: 1, title: 'Birthday', icon: <CakeIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 2, title: 'Anniversary', icon: <HeartIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 3, title: 'Weddings', icon: <SparklesIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 4, title: 'Baby Shower', icon: <UsersIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 5, title: 'Thank You', icon: <GiftIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 6, title: 'Graduation', icon: <StarIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 7, title: 'Holiday', icon: <CalendarDaysIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 8, title: 'Corporate', icon: <ShoppingBagIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 9, title: 'Valentine’s Day', icon: <HeartIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 10, title: 'Mother’s Day', icon: <GiftIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 11, title: 'Father’s Day', icon: <StarIcon className="w-7 h-7 text-amber-600" /> },
-  { id: 12, title: 'New Year', icon: <SparklesIcon className="w-7 h-7 text-amber-600" /> },
+  { id: 1, title: 'Birthday', icon: <CakeIcon className="w-7 h-7 text-black" /> },
+  { id: 2, title: 'Anniversary', icon: <HeartIcon className="w-7 h-7 text-black" /> },
+  { id: 3, title: 'Weddings', icon: <SparklesIcon className="w-7 h-7 text-black" /> },
+  { id: 4, title: 'Baby Shower', icon: <UsersIcon className="w-7 h-7 text-black" /> },
+  { id: 5, title: 'Thank You', icon: <GiftIcon className="w-7 h-7 text-black" /> },
+  { id: 6, title: 'Graduation', icon: <StarIcon className="w-7 h-7 text-black" /> },
+  { id: 7, title: 'Holiday', icon: <CalendarDaysIcon className="w-7 h-7 text-black" /> },
+  { id: 8, title: 'Corporate', icon: <ShoppingBagIcon className="w-7 h-7 text-black" /> },
+  { id: 9, title: 'Valentine’s Day', icon: <HeartIcon className="w-7 h-7 text-black" /> },
+  { id: 10, title: 'Mother’s Day', icon: <GiftIcon className="w-7 h-7 text-black" /> },
+  { id: 11, title: 'Father’s Day', icon: <StarIcon className="w-7 h-7 text-black" /> },
+  { id: 12, title: 'New Year', icon: <SparklesIcon className="w-7 h-7 text-black" /> },
 ];
 
 const ITEMS_PER_PAGE_MOBILE = 4;
@@ -55,7 +55,7 @@ const GiftCategoryGrid = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-amber-600 text-3xl font-extrabold drop-shadow-lg">
+        <h2 className="text-black text-3xl font-extrabold drop-shadow-lg">
           Shop by Category
         </h2>
         <p className="text-gray-700 mt-2 max-w-lg mx-auto text-sm sm:text-base">
@@ -79,7 +79,7 @@ const GiftCategoryGrid = () => {
               animate={{ opacity: 1, scale: 1, rotateX: 0, rotateY: 0 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="group bg-white border border-amber-600/20 rounded-lg p-5 flex flex-col items-center justify-center text-center cursor-pointer hover:border-amber-600/50 hover:shadow-amber-600/40 transition-transform will-change-transform"
+              className="group bg-white border border-black/20 rounded-lg p-5 flex flex-col items-center justify-center text-center cursor-pointer hover:border-black/50 hover:shadow-black/40 transition-transform will-change-transform"
               aria-label={`Shop gifts for ${title}`}
               role="button"
               tabIndex={0}
@@ -112,7 +112,7 @@ const GiftCategoryGrid = () => {
           <button
             onClick={showMore}
             type="button"
-            className="inline-block bg-amber-600 text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-amber-500 transition focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-50"
+            className="inline-block bg-black text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-black transition focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-50"
             aria-label="Show more gift categories"
           >
             Show More

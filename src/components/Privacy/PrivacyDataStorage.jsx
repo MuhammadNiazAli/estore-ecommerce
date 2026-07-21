@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const PrivacyDataStorage = () => {
   return (
     <section
-      className="bg-white text-amber-600 w-full flex justify-center px-4"
+      className="bg-white text-black w-full flex justify-center px-4"
       style={{ paddingTop: '4rem', paddingBottom: '4rem' }}
       aria-label="Data Storage Section"
     >
@@ -22,7 +22,7 @@ const PrivacyDataStorage = () => {
         </motion.h2>
 
         <motion.p
-          className="text-amber-500 text-base sm:text-lg max-w-3xl mx-auto"
+          className="text-black text-base sm:text-lg max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -43,10 +43,10 @@ const PrivacyDataStorage = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Server className="w-6 h-6 text-amber-600 mt-1 shrink-0" />
+            <Server className="w-6 h-6 text-black mt-1 shrink-0" />
             <div>
               <p className="font-semibold text-base sm:text-lg">Secure Cloud Servers</p>
-              <p className="text-amber-500 text-sm leading-relaxed">
+              <p className="text-black text-sm leading-relaxed">
                 Data is stored in ISO 27001-certified cloud environments (e.g., AWS, GCP) with physically secure and monitored data centers.
               </p>
             </div>
@@ -57,10 +57,10 @@ const PrivacyDataStorage = () => {
             className="flex items-start gap-4"
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
-            <Clock className="w-6 h-6 text-amber-600 mt-1 shrink-0" />
+            <Clock className="w-6 h-6 text-black mt-1 shrink-0" />
             <div>
               <p className="font-semibold text-base sm:text-lg">Retention Periods</p>
-              <p className="text-amber-500 text-sm leading-relaxed">
+              <p className="text-black text-sm leading-relaxed">
                 We retain your personal data only as long as necessary for business operations, legal compliance, or customer support purposes.
               </p>
             </div>
@@ -72,12 +72,12 @@ const PrivacyDataStorage = () => {
             variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
           >
             <div className="flex items-start space-x-2">
-              <Cloud className="w-6 h-6 text-amber-600 mt-1 shrink-0" />
-              <Lock className="w-6 h-6 text-amber-600 mt-1 shrink-0" />
+              <Cloud className="w-6 h-6 text-black mt-1 shrink-0" />
+              <Lock className="w-6 h-6 text-black mt-1 shrink-0" />
             </div>
             <div>
               <p className="font-semibold text-base sm:text-lg">Advanced Encryption</p>
-              <p className="text-amber-500 text-sm leading-relaxed">
+              <p className="text-black text-sm leading-relaxed">
                 All stored data is protected by AES-256 encryption and transmitted using TLS 1.3. We routinely monitor for vulnerabilities.
               </p>
             </div>
@@ -85,7 +85,7 @@ const PrivacyDataStorage = () => {
         </motion.div>
 
         <motion.p
-          className="pt-8 text-sm sm:text-base text-amber-600 max-w-2xl mx-auto leading-relaxed"
+          className="pt-8 text-sm sm:text-base text-black max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}

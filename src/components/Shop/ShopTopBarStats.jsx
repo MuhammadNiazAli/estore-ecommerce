@@ -91,7 +91,7 @@ const ShopTopBarStats = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.25, duration: 0.7, ease: 'easeOut' }}
-              whileHover={{ scale: 1.1, color: '#b45309', cursor: 'default' }}
+              whileHover={{ scale: 1.1, color: '#111827', cursor: 'default' }}
               className="flex flex-col items-center justify-center gap-4"
               role="region"
               aria-label={`${value.toLocaleString()} ${label}`}
@@ -99,7 +99,7 @@ const ShopTopBarStats = () => {
             >
               <motion.div
                 animate={controls}
-                className="text-amber-400"
+                className="text-black"
                 aria-hidden="true"
               >
                 <Icon size={48} />
@@ -111,7 +111,7 @@ const ShopTopBarStats = () => {
                 {label}
               </div>
               <motion.div
-                className="mt-1 h-1 w-12 rounded-full bg-amber-400 origin-left"
+                className="mt-1 h-1 w-12 rounded-full bg-black origin-left"
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: i * 0.25 + 0.5, duration: 0.6, ease: 'easeOut' }}

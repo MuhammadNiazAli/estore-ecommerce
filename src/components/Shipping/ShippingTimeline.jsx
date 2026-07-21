@@ -16,7 +16,7 @@ const ShippingTimeline = () => {
       aria-label="Shipping process timeline"
       className="max-w-[900px] mx-auto px-6 py-16 sm:py-24 text-gray-700"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-12 text-center drop-shadow-md select-none">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-12 text-center drop-shadow-md select-none">
         Shipping Timeline
       </h2>
 
@@ -28,7 +28,7 @@ const ShippingTimeline = () => {
         {/* Vertical line for mobile, horizontal for desktop */}
         <div
           aria-hidden="true"
-          className="absolute top-12 left-6 sm:top-10 sm:left-0 sm:right-0 sm:bottom-auto h-[calc(100%-48px)] w-1 sm:h-1 sm:w-full bg-amber-700 opacity-30"
+          className="absolute top-12 left-6 sm:top-10 sm:left-0 sm:right-0 sm:bottom-auto h-[calc(100%-48px)] w-1 sm:h-1 sm:w-full bg-black opacity-30"
           style={{ transformOrigin: 'left top' }}
         />
 
@@ -43,7 +43,7 @@ const ShippingTimeline = () => {
             {/* Step circle & line connector */}
             <div className="flex items-center sm:mb-6 sm:justify-center">
               <div
-                className="z-10 flex items-center justify-center rounded-full border-4 border-amber-400 bg-amber-600 text-amber-50 w-10 h-10 font-semibold shadow-lg select-none"
+                className="z-10 flex items-center justify-center rounded-full border-4 border-black bg-black text-black w-10 h-10 font-semibold shadow-lg select-none"
                 aria-hidden="true"
               >
                 {i + 1}
@@ -53,14 +53,14 @@ const ShippingTimeline = () => {
               {i !== steps.length - 1 && (
                 <div
                   aria-hidden="true"
-                  className="hidden sm:block flex-grow h-1 bg-amber-700 opacity-30 ml-2"
+                  className="hidden sm:block flex-grow h-1 bg-black opacity-30 ml-2"
                 />
               )}
             </div>
 
             {/* Step content */}
             <div className="ml-4 sm:ml-0 sm:text-center sm:flex-grow">
-              <h3 className="text-lg sm:text-xl font-semibold text-amber-300 mb-1">
+              <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
                 {title}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">

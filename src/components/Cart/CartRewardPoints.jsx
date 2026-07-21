@@ -14,7 +14,7 @@ const CartRewardPoints = ({
   return (
     <section className="w-full bg-white flex justify-center px-4 sm:px-6 py-8 text-gray-900">
       <div className="w-full max-w-[1000px]">
-        <h2 className="text-amber-600 text-2xl sm:text-3xl font-semibold mb-6 text-center sm:text-left">
+        <h2 className="text-black text-2xl sm:text-3xl font-semibold mb-6 text-center sm:text-left">
           Your Reward Points
         </h2>
 
@@ -43,13 +43,13 @@ const CartRewardPoints = ({
           aria-label="Reward points progress"
         >
           <div
-            className="h-full bg-amber-600 transition-all duration-700 ease-in-out"
+            className="h-full bg-black transition-all duration-700 ease-in-out"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
 
         {/* Optional message below progress bar */}
-        <p className="mt-3 text-center sm:text-left text-amber-500 font-medium select-none">
+        <p className="mt-3 text-center sm:text-left text-black font-medium select-none">
           {pointsLeft === 0
             ? '🎉 Congratulations! You have reached your next reward!'
             : `${pointsLeft} point${pointsLeft !== 1 ? 's' : ''} left to unlock your next reward.`}

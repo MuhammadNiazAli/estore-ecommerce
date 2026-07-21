@@ -68,13 +68,13 @@ const CamerasProductGrid = () => {
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header and Sort */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <h2 className="text-3xl font-bold text-amber-600">
+          <h2 className="text-3xl font-bold text-black">
             Explore Premium Cameras
           </h2>
           <select
             value={sortOption}
             onChange={(e) => handleSort(e.target.value)}
-            className="bg-white text-gray-900 border border-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="bg-white text-gray-900 border border-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
           >
             <option value="">Sort by</option>
             <option value="low-high">Price: Low to High</option>
@@ -98,10 +98,10 @@ const CamerasProductGrid = () => {
                 />
                 {/* Hover Icons */}
                 <div className="absolute inset-0 bg-white bg-opacity-40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition">
-                  <button className="bg-amber-600 text-black p-2 rounded-full hover:bg-amber-500">
+                  <button className="bg-black text-black p-2 rounded-full hover:bg-black">
                     <FaEye />
                   </button>
-                  <button className="bg-amber-600 text-black p-2 rounded-full hover:bg-amber-500">
+                  <button className="bg-black text-black p-2 rounded-full hover:bg-black">
                     <FaHeart />
                   </button>
                 </div>
@@ -114,25 +114,25 @@ const CamerasProductGrid = () => {
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) =>
                     i < camera.rating ? (
-                      <FaStar key={i} className="text-amber-600 text-sm" />
+                      <FaStar key={i} className="text-black text-sm" />
                     ) : (
                       <FaRegStar key={i} className="text-gray-500 text-sm" />
                     )
                   )}
                 </div>
-                <p className="text-xl font-bold text-amber-600">
+                <p className="text-xl font-bold text-black">
                   ${camera.price}
                 </p>
                 <p
                   className={`text-sm ${
-                    camera.stock ? "text-green-400" : "text-red-500"
+                    camera.stock ? "text-black" : "text-black"
                   }`}
                 >
                   {camera.stock ? "In Stock" : "Out of Stock"}
                 </p>
                 {/* Add to Cart */}
                 <button
-                  className="w-full bg-amber-600 text-black px-5 py-2 mt-3 rounded-full font-semibold hover:bg-amber-500 transition flex items-center justify-center gap-2"
+                  className="w-full bg-black text-black px-5 py-2 mt-3 rounded-full font-semibold hover:bg-black transition flex items-center justify-center gap-2"
                 >
                   <FaCartPlus /> Add to Cart
                 </button>

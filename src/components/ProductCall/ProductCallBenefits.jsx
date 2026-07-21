@@ -5,22 +5,22 @@ import { BadgeCheck, Truck, ShieldCheck, Sparkles } from 'lucide-react';
 
 const benefits = [
   {
-    icon: <BadgeCheck className="w-6 h-6 text-amber-600" aria-hidden="true" />,
+    icon: <BadgeCheck className="w-6 h-6 text-black" aria-hidden="true" />,
     title: 'Top-Quality Products',
     description: 'All items are handpicked and quality-verified by experts.',
   },
   {
-    icon: <Truck className="w-6 h-6 text-amber-600" aria-hidden="true" />,
+    icon: <Truck className="w-6 h-6 text-black" aria-hidden="true" />,
     title: 'Fast & Free Delivery',
     description: 'Enjoy free shipping on all orders with real-time tracking.',
   },
   {
-    icon: <ShieldCheck className="w-6 h-6 text-amber-600" aria-hidden="true" />,
+    icon: <ShieldCheck className="w-6 h-6 text-black" aria-hidden="true" />,
     title: 'Secure Checkout',
     description: 'Your data is safe with end-to-end encryption and fraud protection.',
   },
   {
-    icon: <Sparkles className="w-6 h-6 text-amber-600" aria-hidden="true" />,
+    icon: <Sparkles className="w-6 h-6 text-black" aria-hidden="true" />,
     title: 'Exclusive Deals',
     description: 'Access members-only discounts and limited-time promotions.',
   },
@@ -37,7 +37,7 @@ const ProductCallBenefits = () => {
           >
             <div>{benefit.icon}</div>
             <div>
-              <h3 className="text-base sm:text-lg font-semibold text-amber-600 mb-1">
+              <h3 className="text-base sm:text-lg font-semibold text-black mb-1">
                 {benefit.title}
               </h3>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">

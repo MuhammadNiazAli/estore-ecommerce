@@ -31,7 +31,7 @@ const PhoneNewsletterSignup = () => {
             className="rounded-full object-cover w-full h-full"
             loading="lazy"
           />
-          <span className="absolute top-1 left-1 bg-red-600 text-gray-900 text-[9px] px-1 rounded font-bold select-none">
+          <span className="absolute top-1 left-1 bg-black text-gray-900 text-[9px] px-1 rounded font-bold select-none">
             30% OFF
           </span>
         </div>
@@ -54,7 +54,7 @@ const PhoneNewsletterSignup = () => {
             className="rounded-full object-cover w-full h-full"
             loading="lazy"
           />
-          <span className="absolute bottom-1 right-1 bg-green-700 text-gray-900 text-[9px] px-1 rounded font-bold select-none">
+          <span className="absolute bottom-1 right-1 bg-black text-gray-900 text-[9px] px-1 rounded font-bold select-none">
             Hot Deal
           </span>
         </div>
@@ -63,7 +63,7 @@ const PhoneNewsletterSignup = () => {
       {/* Main signup container */}
       <div
         className="
-          relative z-10 bg-amber-700 rounded-xl p-8 sm:p-10 shadow-lg text-gray-900
+          relative z-10 bg-black rounded-xl p-8 sm:p-10 shadow-lg text-gray-900
         "
       >
         <h2
@@ -87,9 +87,9 @@ const PhoneNewsletterSignup = () => {
               type="email"
               placeholder="Enter your email"
               className="
-                flex-grow px-4 py-3 rounded-lg border border-amber-900
-                text-gray-900 placeholder-amber-950
-                focus:outline-none focus:ring-4 focus:ring-amber-800 focus:border-amber-800
+                flex-grow px-4 py-3 rounded-lg border border-black
+                text-gray-900 placeholder-gray-500
+                focus:outline-none focus:ring-4 focus:ring-black focus:border-black
                 transition text-sm xs:text-base
               "
               value={email}
@@ -101,7 +101,7 @@ const PhoneNewsletterSignup = () => {
             <button
               type="submit"
               className="
-                bg-white text-amber-600 font-semibold
+                bg-white text-black font-semibold
                 px-5 py-3 rounded-lg shadow-md
                 hover:bg-gray-500 hover:shadow-lg
                 transition text-sm xs:text-base

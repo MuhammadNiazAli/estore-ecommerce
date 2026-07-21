@@ -99,7 +99,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={likedIds.has(id) ? `Remove ${name} from wishlist` : `Add ${name} to wishlist`}
                   title={likedIds.has(id) ? `Remove ${name}` : `Add ${name}`}
-                  className="text-amber-600 hover:text-amber-500 text-2xl transition"
+                  className="text-black hover:text-black text-2xl transition"
                 >
                   {likedIds.has(id) ? <FaHeart /> : <FaRegHeart />}
                 </button>
@@ -112,7 +112,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={`View details for ${name}`}
                   title={`View details`}
-                  className="text-gray-900 hover:text-amber-600 text-2xl transition"
+                  className="text-gray-900 hover:text-black text-2xl transition"
                 >
                   <FaEye />
                 </button>
@@ -125,7 +125,7 @@ const AccountWishlist = () => {
                   }}
                   aria-label={`Add ${name} to cart`}
                   title={`Add to cart`}
-                  className="text-gray-900 hover:text-amber-600 text-2xl transition"
+                  className="text-gray-900 hover:text-black text-2xl transition"
                 >
                   <FaShoppingCart />
                 </button>
@@ -137,7 +137,7 @@ const AccountWishlist = () => {
               <h3 className="text-gray-900 font-semibold text-lg truncate" title={name}>
                 {name}
               </h3>
-              <p className="text-amber-600 font-bold mt-1 text-lg">${price.toFixed(2)}</p>
+              <p className="text-black font-bold mt-1 text-lg">${price.toFixed(2)}</p>
             </div>
 
             {/* Remove button */}
@@ -148,7 +148,7 @@ const AccountWishlist = () => {
               }}
               aria-label={`Remove ${name} from wishlist`}
               title={`Remove ${name}`}
-              className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 text-gray-900 rounded-full p-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-red-400"
+              className="absolute top-3 right-3 bg-black hover:bg-black text-gray-900 rounded-full p-2 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-black"
             >
               &times;
             </button>

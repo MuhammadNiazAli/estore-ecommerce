@@ -76,7 +76,7 @@ const TrackShipmentContent = ({ closePanel }) => {
     <div className="px-4 sm:px-6 lg:px-8 py-6 max-w-4xl mx-auto text-[14px] sm:text-[15px]">
       {/* Header */}
       <header className="mb-6 text-center sm:text-left">
-        <h2 className="text-amber-600 text-2xl sm:text-3xl font-bold tracking-wide">
+        <h2 className="text-black text-2xl sm:text-3xl font-bold tracking-wide">
           Shipment Tracking Details
         </h2>
       </header>
@@ -88,16 +88,16 @@ const TrackShipmentContent = ({ closePanel }) => {
 
       {/* Timeline */}
       <section className="mb-10 max-w-xl mx-auto sm:mx-0" aria-label="Shipment progress">
-        <ul className="pl-6 border-l-4 border-amber-600 space-y-6">
+        <ul className="pl-6 border-l-4 border-black space-y-6">
           {shipmentSteps.map(({ id, label, date, description, isFinal }) => (
             <li key={id} className="relative">
               <div
                 className={`absolute -left-8 top-0 w-7 h-7 flex items-center justify-center rounded-full ring-4 text-xs font-bold
-                ${isFinal ? 'bg-white text-gray-500 ring-gray-200' : 'bg-amber-600 text-black ring-gray-200'}`}
+                ${isFinal ? 'bg-white text-gray-500 ring-gray-200' : 'bg-black text-black ring-gray-200'}`}
               >
                 {id}
               </div>
-              <p className={`${isFinal ? 'text-gray-500' : 'text-amber-600'} font-semibold ml-1 text-[15px]`}>
+              <p className={`${isFinal ? 'text-gray-500' : 'text-black'} font-semibold ml-1 text-[15px]`}>
                 {label}
               </p>
               <p className={`${isFinal ? 'text-gray-500' : 'text-gray-600'} ml-1 text-[13px]`}>
@@ -110,21 +110,21 @@ const TrackShipmentContent = ({ closePanel }) => {
 
       {/* Current Status */}
       <section className="bg-white p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0">
-        <p className="text-amber-600 font-semibold text-base sm:text-lg mb-1">Current Status</p>
+        <p className="text-black font-semibold text-base sm:text-lg mb-1">Current Status</p>
         <p className="text-gray-700 mb-1">
           <strong>In Transit</strong> — Your package is moving through the delivery network.
         </p>
         <p className="text-gray-600 mb-2">
           Estimated delivery date: <strong>July 15, 2025</strong>
         </p>
-        <p className="text-amber-600 font-semibold">
+        <p className="text-black font-semibold">
           Estimated time remaining: <CountdownTimer targetDate="2025-07-15T18:00:00Z" />
         </p>
       </section>
 
       {/* Courier Info */}
       <section className="bg-white p-4 sm:p-5 rounded-lg mb-10 shadow-lg max-w-xl mx-auto sm:mx-0" aria-label="Courier details">
-        <h3 className="text-amber-600 font-semibold text-base sm:text-lg mb-3">Courier Information</h3>
+        <h3 className="text-black font-semibold text-base sm:text-lg mb-3">Courier Information</h3>
         <p className="text-gray-700 text-sm mb-1">
           Courier: <strong>FastShip Logistics</strong>
         </p>
@@ -136,7 +136,7 @@ const TrackShipmentContent = ({ closePanel }) => {
         <div className="flex flex-col sm:flex-row gap-3">
           <a
             href="tel:+18001234567"
-            className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition text-center w-full sm:w-auto"
+            className="bg-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black transition text-center w-full sm:w-auto"
             aria-label="Call FastShip"
           >
             Call FastShip
@@ -145,7 +145,7 @@ const TrackShipmentContent = ({ closePanel }) => {
             href="https://fastshiplogistics.com/track/FS1234567890"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition text-center w-full sm:w-auto"
+            className="border border-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black hover:text-black transition text-center w-full sm:w-auto"
             aria-label="Track Package"
           >
             Track Package
@@ -157,11 +157,11 @@ const TrackShipmentContent = ({ closePanel }) => {
       <section className="text-gray-600 text-xs sm:text-sm max-w-xl mx-auto sm:mx-0 text-center sm:text-left space-y-3 mb-10" aria-label="Help and support">
         <p>
           Having issues with your shipment? Visit our{' '}
-          <a href="/help/shipping" className="text-amber-600 underline hover:text-amber-500">
+          <a href="/help/shipping" className="text-black underline hover:text-black">
             Shipping Help Center
           </a>{' '}
           or{' '}
-          <a href="/contact" className="text-amber-600 underline hover:text-amber-500">
+          <a href="/contact" className="text-black underline hover:text-black">
             Contact Support
           </a>.
         </p>
@@ -172,7 +172,7 @@ const TrackShipmentContent = ({ closePanel }) => {
         <button
           type="button"
           onClick={() => window.open('https://your-ecommerce-site.com/order/tracking', '_blank')}
-          className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition shadow-md w-full sm:w-auto"
+          className="bg-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black transition shadow-md w-full sm:w-auto"
           aria-label="Open tracking page"
         >
           Tracking Details
@@ -180,7 +180,7 @@ const TrackShipmentContent = ({ closePanel }) => {
         <button
           type="button"
           onClick={closePanel}
-          className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition shadow-md w-full sm:w-auto"
+          className="border border-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black hover:text-black transition shadow-md w-full sm:w-auto"
           aria-label="Close tracking panel"
         >
           Close

@@ -40,7 +40,7 @@ const BestdealsTopBrands = () => {
       <div className="max-w-[1000px] w-full">
         {/* Header */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center sm:text-left mb-8">
-          Top <span className="text-amber-600">Brands</span>
+          Top <span className="text-black">Brands</span>
         </h2>
 
         {/* Mobile grid: 2 columns, sm+: horizontal scroll */}

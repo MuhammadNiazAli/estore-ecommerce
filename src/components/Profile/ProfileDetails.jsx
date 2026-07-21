@@ -89,14 +89,14 @@ const ProfileDetails = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-1">
             Profile Details
           </h2>
           <p className="text-sm sm:text-base text-gray-700 max-w-md">
             View and manage your personal information and contact details.
           </p>
         </div>
-        <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base select-none">
+        <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base select-none">
           <UserCircleIcon className="w-6 h-6 sm:w-7 sm:h-7 animate-pulse" />
           <span>Basic Info</span>
         </div>
@@ -135,7 +135,7 @@ const ProfileDetails = () => {
       <div className="mt-8 flex justify-center sm:justify-end">
         <button
           onClick={openModal}
-          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-700"
+          className="flex items-center gap-2 px-6 py-3 rounded-full text-sm sm:text-base bg-black hover:bg-black text-gray-900 font-semibold shadow-lg transition focus:outline-none focus:ring-4 focus:ring-black"
           aria-label="Edit personal details"
           type="button"
         >
@@ -171,22 +171,22 @@ const ProfileDetails = () => {
             >
               <h3
                 id="edit-profile-title"
-                className="text-2xl font-bold text-amber-600 mb-4 select-none"
+                className="text-2xl font-bold text-black mb-4 select-none"
               >
                 Edit Profile Details
               </h3>
               <form onSubmit={handleSubmit} noValidate>
                 {/* Full Name */}
                 <label className="block mb-4">
-                  <span className="text-amber-500 font-semibold">Full Name</span>
+                  <span className="text-black font-semibold">Full Name</span>
                   <input
                     type="text"
                     name="fullName"
                     value={form.fullName}
                     onChange={handleChange}
                     className={`mt-1 block w-full rounded-md bg-white border ${
-                      formErrors.fullName ? 'border-red-600' : 'border-amber-600/50'
-                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                      formErrors.fullName ? 'border-black' : 'border-black/50'
+                    } px-3 py-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black`}
                     placeholder="Enter your full name"
                     aria-invalid={!!formErrors.fullName}
                     aria-describedby="error-fullName"
@@ -194,7 +194,7 @@ const ProfileDetails = () => {
                   {formErrors.fullName && (
                     <p
                       id="error-fullName"
-                      className="mt-1 text-xs text-red-600 font-semibold"
+                      className="mt-1 text-xs text-black font-semibold"
                       role="alert"
                     >
                       {formErrors.fullName}
@@ -204,15 +204,15 @@ const ProfileDetails = () => {
 
                 {/* Email */}
                 <label className="block mb-4">
-                  <span className="text-amber-500 font-semibold">Email Address</span>
+                  <span className="text-black font-semibold">Email Address</span>
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
                     className={`mt-1 block w-full rounded-md bg-white border ${
-                      formErrors.email ? 'border-red-600' : 'border-amber-600/50'
-                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                      formErrors.email ? 'border-black' : 'border-black/50'
+                    } px-3 py-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black`}
                     placeholder="Enter your email"
                     aria-invalid={!!formErrors.email}
                     aria-describedby="error-email"
@@ -220,7 +220,7 @@ const ProfileDetails = () => {
                   {formErrors.email && (
                     <p
                       id="error-email"
-                      className="mt-1 text-xs text-red-600 font-semibold"
+                      className="mt-1 text-xs text-black font-semibold"
                       role="alert"
                     >
                       {formErrors.email}
@@ -230,15 +230,15 @@ const ProfileDetails = () => {
 
                 {/* Phone */}
                 <label className="block mb-4">
-                  <span className="text-amber-500 font-semibold">Phone Number</span>
+                  <span className="text-black font-semibold">Phone Number</span>
                   <input
                     type="tel"
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
                     className={`mt-1 block w-full rounded-md bg-white border ${
-                      formErrors.phone ? 'border-red-600' : 'border-amber-600/50'
-                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                      formErrors.phone ? 'border-black' : 'border-black/50'
+                    } px-3 py-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black`}
                     placeholder="+31 6 12345678"
                     aria-invalid={!!formErrors.phone}
                     aria-describedby="error-phone"
@@ -246,7 +246,7 @@ const ProfileDetails = () => {
                   {formErrors.phone && (
                     <p
                       id="error-phone"
-                      className="mt-1 text-xs text-red-600 font-semibold"
+                      className="mt-1 text-xs text-black font-semibold"
                       role="alert"
                     >
                       {formErrors.phone}
@@ -256,15 +256,15 @@ const ProfileDetails = () => {
 
                 {/* Date of Birth */}
                 <label className="block mb-6">
-                  <span className="text-amber-500 font-semibold">Date of Birth</span>
+                  <span className="text-black font-semibold">Date of Birth</span>
                   <input
                     type="date"
                     name="dob"
                     value={form.dob}
                     onChange={handleChange}
                     className={`mt-1 block w-full rounded-md bg-white border ${
-                      formErrors.dob ? 'border-red-600' : 'border-amber-600/50'
-                    } px-3 py-2 text-amber-500 placeholder-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                      formErrors.dob ? 'border-black' : 'border-black/50'
+                    } px-3 py-2 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black`}
                     aria-invalid={!!formErrors.dob}
                     aria-describedby="error-dob"
                     max={new Date().toISOString().split('T')[0]}
@@ -272,7 +272,7 @@ const ProfileDetails = () => {
                   {formErrors.dob && (
                     <p
                       id="error-dob"
-                      className="mt-1 text-xs text-red-600 font-semibold"
+                      className="mt-1 text-xs text-black font-semibold"
                       role="alert"
                     >
                       {formErrors.dob}
@@ -285,13 +285,13 @@ const ProfileDetails = () => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="px-5 py-2 rounded-full bg-white text-amber-600 font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-full bg-amber-600 text-gray-900 font-semibold hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-700"
+                    className="px-5 py-2 rounded-full bg-black text-gray-900 font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
                   >
                     Save Changes
                   </button>
@@ -302,7 +302,7 @@ const ProfileDetails = () => {
               <button
                 onClick={closeModal}
                 aria-label="Close edit profile modal"
-                className="absolute top-4 right-4 p-1 rounded-full hover:bg-amber-600 hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-black hover:text-gray-900 transition focus:outline-none focus:ring-2 focus:ring-black"
                 type="button"
               >
                 <XMarkIcon className="w-6 h-6" />

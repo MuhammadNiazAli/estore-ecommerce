@@ -22,8 +22,8 @@ const PaymentingMethodItem = ({
         transition-shadow duration-300 ease-in-out
         ${
           selected
-            ? 'border-amber-700 bg-amber-950 shadow-lg ring-2 ring-amber-700'
-            : 'border-gray-200 bg-white hover:border-amber-700 hover:bg-gray-500 focus:ring-2 focus:ring-amber-700'
+            ? 'border-black bg-black shadow-lg ring-2 ring-black'
+            : 'border-gray-200 bg-white hover:border-black hover:bg-gray-500 focus:ring-2 focus:ring-black'
         }
         focus:outline-none
         active:scale-[0.98] active:shadow-inner
@@ -34,8 +34,8 @@ const PaymentingMethodItem = ({
           flex-shrink-0 flex items-center justify-center rounded-lg
           ${
             selected
-              ? 'bg-amber-900 text-amber-500'
-              : 'bg-white text-gray-600 group-hover:text-amber-600'
+              ? 'bg-black text-black'
+              : 'bg-white text-gray-600 group-hover:text-black'
           }
           w-14 h-14
           transition-colors duration-300
@@ -49,7 +49,7 @@ const PaymentingMethodItem = ({
         <div className="flex items-center justify-between mb-1">
           <h3
             className={`text-lg md:text-xl font-semibold ${
-              selected ? 'text-amber-600' : 'text-gray-900'
+              selected ? 'text-black' : 'text-gray-900'
             }`}
           >
             {name}
@@ -57,7 +57,7 @@ const PaymentingMethodItem = ({
 
           {selected && (
             <FiCheckCircle
-              className="text-amber-600"
+              className="text-black"
               size={22}
               aria-hidden="true"
               title="Selected payment method"
@@ -73,7 +73,7 @@ const PaymentingMethodItem = ({
           <ul className="mt-4 flex flex-wrap gap-4 text-gray-700 text-xs md:text-sm">
             {features.map(({ icon, text }, i) => (
               <li key={i} className="flex items-center gap-2">
-                <span className="text-amber-700 flex-shrink-0">{icon}</span>
+                <span className="text-black flex-shrink-0">{icon}</span>
                 <span>{text}</span>
               </li>
             ))}

@@ -74,12 +74,12 @@ const CamerasFeaturedDeals = () => {
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 mb-4 md:mb-0">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4 md:mb-0">
              Featured Camera Deals
           </h2>
           <div className="flex gap-2 text-lg font-semibold bg-white px-4 py-2 rounded-lg">
             <span> Deal ends in:</span>
-            <span className="text-amber-600">
+            <span className="text-black">
               {String(timeLeft.hours).padStart(2, "0")}:
               {String(timeLeft.minutes).padStart(2, "0")}:
               {String(timeLeft.seconds).padStart(2, "0")}
@@ -95,7 +95,7 @@ const CamerasFeaturedDeals = () => {
               className="bg-white rounded-xl overflow-hidden shadow hover:shadow-2xl transition relative group"
             >
               {/* Discount Badge */}
-              <span className="absolute top-3 left-3 bg-amber-600 text-black font-bold text-xs px-3 py-1 rounded-full">
+              <span className="absolute top-3 left-3 bg-black text-black font-bold text-xs px-3 py-1 rounded-full">
                 -{deal.discount}%
               </span>
 
@@ -116,7 +116,7 @@ const CamerasFeaturedDeals = () => {
                     <FaStar
                       key={i}
                       className={`text-sm ${
-                        i < deal.rating ? "text-amber-600" : "text-gray-500"
+                        i < deal.rating ? "text-black" : "text-gray-500"
                       }`}
                     />
                   ))}
@@ -124,7 +124,7 @@ const CamerasFeaturedDeals = () => {
 
                 {/* Price */}
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl font-extrabold text-amber-600">
+                  <span className="text-2xl font-extrabold text-black">
                     ${deal.price}
                   </span>
                   <span className="line-through text-gray-600 text-sm">
@@ -133,7 +133,7 @@ const CamerasFeaturedDeals = () => {
                 </div>
 
                 {/* CTA */}
-                <button className="bg-amber-600 text-black w-full py-2 rounded-full font-semibold hover:bg-amber-500 transition flex items-center justify-center gap-2">
+                <button className="bg-black text-black w-full py-2 rounded-full font-semibold hover:bg-black transition flex items-center justify-center gap-2">
                   Grab Deal <FaArrowRight />
                 </button>
               </div>

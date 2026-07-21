@@ -6,7 +6,7 @@ const IndustrialCategoryInfo = () => {
     <section
       className="
         bg-white
-        text-amber-600
+        text-black
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const IndustrialCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Discover our premium industrial collection — built for strength, durability, and efficiency in every project.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         From heavy-duty tools to essential safety gear, find trusted products designed for professionals.
       </p>
     </section>

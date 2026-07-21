@@ -48,7 +48,7 @@ const ShopHero = () => {
           animate={controls}
           initial={{ opacity: 0, scale: 0.75 }}
           whileTap={{ scale: 0.9 }}
-          className="inline-flex items-center justify-center mb-12 cursor-grab active:cursor-grabbing text-amber-700 drop-shadow-[0_0_25px_rgba(59,130,246,0.85)]"
+          className="inline-flex items-center justify-center mb-12 cursor-grab active:cursor-grabbing text-black drop-shadow-[0_0_25px_rgba(59,130,246,0.85)]"
           aria-label="Draggable shopping bag icon"
           role="img"
         >
@@ -63,7 +63,7 @@ const ShopHero = () => {
           className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-gray-900 drop-shadow-lg"
         >
           Discover Our{' '}
-          <span className="text-amber-400 underline decoration-amber-500 decoration-6 underline-offset-4">
+          <span className="text-black underline decoration-black decoration-6 underline-offset-4">
             Exclusive
           </span>{' '}
           Shop Collection
@@ -89,7 +89,7 @@ const ShopHero = () => {
         >
           <button
             type="button"
-            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-amber-800 to-amber-900 text-gray-900 font-semibold shadow-lg hover:from-amber-900 hover:to-amber-950 focus:outline-none focus:ring-4 focus:ring-amber-800 focus:ring-offset-2 transition-transform active:scale-95"
+            className="flex items-center gap-3 px-14 py-4 rounded-full bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold shadow-lg hover:from-black hover:to-gray-900 focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 transition-transform active:scale-95"
             aria-label="Start shopping now"
           >
             <FiShoppingBag className="w-5 h-5" aria-hidden="true" />
@@ -97,7 +97,7 @@ const ShopHero = () => {
           </button>
           <button
             type="button"
-            className="flex items-center gap-3 px-14 py-4 rounded-full border-2 border-amber-400 text-amber-400 font-semibold hover:bg-amber-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-amber-400 focus:ring-offset-2 transition"
+            className="flex items-center gap-3 px-14 py-4 rounded-full border-2 border-black text-black font-semibold hover:bg-black hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 transition"
             aria-label="Browse deals"
           >
             <FiTag className="w-5 h-5" aria-hidden="true" />

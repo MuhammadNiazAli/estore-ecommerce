@@ -29,20 +29,20 @@ const WishlistItemCard = ({
       <div className="flex flex-col justify-between flex-grow">
         <div>
           <h3 className="text-xl font-semibold truncate">{title}</h3>
-          <p className="text-amber-500 mt-1 line-clamp-2">{description}</p>
+          <p className="text-black mt-1 line-clamp-2">{description}</p>
         </div>
 
         {/* Price & rating */}
         <div className="flex items-center justify-between mt-4">
           <div>
-            <span className="text-lg font-bold text-amber-600">${price.toFixed(2)}</span>{' '}
+            <span className="text-lg font-bold text-black">${price.toFixed(2)}</span>{' '}
             {oldPrice && (
-              <span className="line-through text-amber-900 ml-2">${oldPrice.toFixed(2)}</span>
+              <span className="line-through text-black ml-2">${oldPrice.toFixed(2)}</span>
             )}
           </div>
 
           {/* Rating stars */}
-          <div className="flex items-center space-x-1 text-amber-600">
+          <div className="flex items-center space-x-1 text-black">
             {[...Array(fullStars)].map((_, i) => (
               <svg
                 key={i}
@@ -82,7 +82,7 @@ const WishlistItemCard = ({
         <div className="flex items-center justify-between mt-4">
           <button
             onClick={onAddToCart}
-            className="flex items-center gap-2 bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold px-4 py-2 rounded-lg transition"
             aria-label={`Add ${title} to cart`}
           >
             <FiShoppingCart size={20} />
@@ -92,7 +92,7 @@ const WishlistItemCard = ({
           <button
             onClick={onRemove}
             aria-label={`Remove ${title} from wishlist`}
-            className="text-amber-600 hover:text-amber-800 transition"
+            className="text-black hover:text-black transition"
           >
             <FiTrash2 size={24} />
           </button>

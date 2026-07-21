@@ -85,7 +85,7 @@ const StarRating = ({ rating }) => {
       <svg
         key={i}
         className={`w-5 h-5 inline-block ${
-          i <= rating ? "text-amber-600" : "text-gray-700"
+          i <= rating ? "text-black" : "text-gray-700"
         }`}
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -146,13 +146,13 @@ const ManClothsTestimonials = () => {
                       <img
                         src={photo}
                         alt={name}
-                        className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-amber-800"
+                        className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-black"
                         loading="lazy"
                       />
                       <h3 className="text-xl font-semibold text-gray-900">
                         {name}
                       </h3>
-                      <p className="text-sm text-amber-700 italic mb-2">{role}</p>
+                      <p className="text-sm text-black italic mb-2">{role}</p>
                       <StarRating rating={rating} />
                       <p className="mt-4 text-gray-700 font-serif">
                         “{quote}”
@@ -172,7 +172,7 @@ const ManClothsTestimonials = () => {
               onClick={() => goToPage(idx)}
               className={`w-4 h-4 rounded-full transition-colors duration-300 ${
                 currentPage === idx
-                  ? "bg-amber-700 dark:bg-amber-600"
+                  ? "bg-black dark:bg-black"
                   : "bg-gray-300 dark:bg-white"
               }`}
               aria-label={`Go to testimonials page ${idx + 1}`}
@@ -191,13 +191,13 @@ const ManClothsTestimonials = () => {
             <img
               src={photo}
               alt={name}
-              className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-amber-700 dark:border-amber-800"
+              className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-black dark:border-black"
               loading="lazy"
             />
             <h3 className="text-xl font-semibold text-gray-900">
               {name}
             </h3>
-            <p className="text-sm text-amber-700 italic mb-2">{role}</p>
+            <p className="text-sm text-black italic mb-2">{role}</p>
             <StarRating rating={rating} />
             <p className="mt-4 text-gray-700 font-serif">
               “{quote}”

@@ -142,7 +142,7 @@ const ShippingPolicy = () => {
       aria-label="Shipping policy"
       className="max-w-[1000px] mx-auto px-4 sm:px-6 py-20 sm:py-28 text-gray-700 relative select-none"
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-15 text-center drop-shadow-md">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-15 text-center drop-shadow-md">
         Shipping Policy
       </h2>
 
@@ -157,7 +157,7 @@ const ShippingPolicy = () => {
           >
             {hoveredBoxIndex === boxIndex && <div style={lightStyle} />}
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-amber-400 mb-8 select-text">
+            <h3 className="text-2xl sm:text-3xl font-bold text-black mb-8 select-text">
               {title}
             </h3>
 

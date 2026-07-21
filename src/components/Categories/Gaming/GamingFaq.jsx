@@ -93,7 +93,7 @@ const GamingFaq = () => {
   };
 
   return (
-    <section className="bg-white text-amber-600 py-12 px-4 my-5">
+    <section className="bg-white text-black py-12 px-4 my-5">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center">
           Gaming FAQs
@@ -102,10 +102,10 @@ const GamingFaq = () => {
           {faqs.map(({ id, question, answer }) => (
             <div
               key={id}
-              className="border border-amber-700 rounded-lg overflow-hidden"
+              className="border border-black rounded-lg overflow-hidden"
             >
               <button
-                className="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg hover:bg-amber-950 transition"
+                className="w-full text-left px-6 py-4 flex justify-between items-center font-semibold text-lg hover:bg-black transition"
                 onClick={() => toggleFaq(id)}
                 aria-expanded={activeIdRef.current === id}
                 aria-controls={`faq-answer-${id}`}

@@ -9,7 +9,7 @@ const categories = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-amber-800"
+        className="h-12 w-12 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -30,7 +30,7 @@ const categories = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-amber-700"
+        className="h-12 w-12 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -57,7 +57,7 @@ const categories = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-pink-500"
+        className="h-12 w-12 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -78,7 +78,7 @@ const categories = [
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 text-green-500"
+        className="h-12 w-12 text-black"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

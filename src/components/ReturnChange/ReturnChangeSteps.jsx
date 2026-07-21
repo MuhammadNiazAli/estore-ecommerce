@@ -37,7 +37,7 @@ const ReturnChangeSteps = () => {
       <div className="max-w-[1000px] w-full text-center">
         <h2
           id="how-it-works-title"
-          className="text-amber-600 text-3xl md:text-4xl font-bold mb-12"
+          className="text-black text-3xl md:text-4xl font-bold mb-12"
         >
           How It Works
         </h2>
@@ -49,10 +49,10 @@ const ReturnChangeSteps = () => {
               aria-label={`${title} step`}
               tabIndex={0}
             >
-              <div className="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-amber-700 text-black shadow-md">
+              <div className="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-black text-black shadow-md">
                 {icon}
               </div>
-              <h3 className="text-amber-500 font-semibold text-xl mb-3">
+              <h3 className="text-black font-semibold text-xl mb-3">
                 {title}
               </h3>
               <p className="text-gray-700 max-w-xs">{description}</p>

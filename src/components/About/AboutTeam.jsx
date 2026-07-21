@@ -11,7 +11,7 @@ const AboutTeam = () => {
     >
       <div className="w-full max-w-3xl text-center">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-amber-600 mb-10">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-10">
           Meet the Creator
         </h2>
 
@@ -32,7 +32,7 @@ const AboutTeam = () => {
 
 
           <h3 className="text-2xl font-semibold mb-1">Mr. Niaz Ali</h3>
-          <p className="text-amber-600 mb-6">Full Stack Developer & eStore Architect</p>
+          <p className="text-black mb-6">Full Stack Developer & eStore Architect</p>
 
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed px-2">
             I'm a passionate developer who began my journey at the age of 20 with HTML & CSS. 

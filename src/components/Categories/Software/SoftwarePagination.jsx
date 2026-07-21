@@ -628,7 +628,7 @@ const SoftwarePagination = () => {
                 <p className="text-gray-500 text-sm">{item.category}</p>
                 <p className="text-gray-800 font-bold mt-1">${item.price}</p>
                 {item.oldPrice && (
-                  <p className="text-red-500 line-through text-sm">
+                  <p className="text-black line-through text-sm">
                     ${item.oldPrice}
                   </p>
                 )}
@@ -661,7 +661,7 @@ const SoftwarePagination = () => {
                 onClick={() => handlePageChange(page)}
                 className={`px-4 py-2 rounded-lg font-medium min-w-[50px] whitespace-nowrap transition ${
                   currentPage === page
-                    ? "bg-white text-gray-900 border border-amber-50"
+                    ? "bg-white text-gray-900 border border-black"
                     : "bg-white text-gray-700 hover:bg-gray-500"
                 }`}
               >

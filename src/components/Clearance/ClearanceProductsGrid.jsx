@@ -50,7 +50,7 @@ const ClearanceProductsGrid = () => {
       <div className="max-w-[1000px] w-full px-4">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-amber-600">
+          <h2 className="text-3xl font-bold text-black">
             Clearance Sale
           </h2>
           <p className="text-gray-700 mt-2">
@@ -66,7 +66,7 @@ const ClearanceProductsGrid = () => {
               className="bg-white rounded-xl overflow-hidden  transition-shadow duration-300 relative"
             >
               {/* Discount Badge */}
-              <span className="absolute top-3 left-3 bg-amber-700 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
+              <span className="absolute top-3 left-3 bg-black text-gray-900 text-xs font-semibold px-3 py-1 rounded-full uppercase">
                 {product.discount}
               </span>
 
@@ -79,13 +79,13 @@ const ClearanceProductsGrid = () => {
                 />
                 {/* Hover Actions */}
                 <div className="absolute inset-0 bg-white/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
-                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
+                  <button className="bg-black text-gray-900 p-2 rounded-full hover:bg-black transition">
                     <ShoppingCart size={18} />
                   </button>
-                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
+                  <button className="bg-black text-gray-900 p-2 rounded-full hover:bg-black transition">
                     <Heart size={18} />
                   </button>
-                  <button className="bg-amber-700 text-gray-900 p-2 rounded-full hover:bg-amber-600 transition">
+                  <button className="bg-black text-gray-900 p-2 rounded-full hover:bg-black transition">
                     <Eye size={18} />
                   </button>
                 </div>
@@ -97,7 +97,7 @@ const ClearanceProductsGrid = () => {
                   {product.title}
                 </h3>
                 {/* Rating */}
-                <div className="flex items-center text-amber-600 text-sm mt-2">
+                <div className="flex items-center text-black text-sm mt-2">
                   {Array(5)
                     .fill()
                     .map((_, i) => (
@@ -113,7 +113,7 @@ const ClearanceProductsGrid = () => {
                 </div>
                 {/* Price */}
                 <div className="mt-2">
-                  <span className="text-amber-600 font-bold text-lg">
+                  <span className="text-black font-bold text-lg">
                     ${product.price}
                   </span>
                   <span className="text-gray-500 line-through ml-2">

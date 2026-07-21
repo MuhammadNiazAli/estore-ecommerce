@@ -5,15 +5,15 @@ import { FaGift, FaCrown, FaStar } from 'react-icons/fa';
 
 const rewardFeatures = [
   {
-    icon: <FaStar className="text-amber-600 text-lg" />,
+    icon: <FaStar className="text-black text-lg" />,
     label: 'Earn Points While You Shop',
   },
   {
-    icon: <FaCrown className="text-amber-600 text-lg" />,
+    icon: <FaCrown className="text-black text-lg" />,
     label: 'Unlock VIP Tiers & Benefits',
   },
   {
-    icon: <FaGift className="text-amber-600 text-lg" />,
+    icon: <FaGift className="text-black text-lg" />,
     label: 'Redeem Exclusive Rewards',
   },
 ];
@@ -29,7 +29,7 @@ export default function RewardingHero() {
         <div className="max-w-md mx-auto lg:mx-0 space-y-5 text-center lg:text-left">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight">
             Your{' '}
-            <span className="text-amber-600 underline decoration-amber-500 decoration-4 underline-offset-4">
+            <span className="text-black underline decoration-black decoration-4 underline-offset-4">
               Rewards Hub
             </span>
             <br />
@@ -56,7 +56,7 @@ export default function RewardingHero() {
           <div className="flex flex-wrap justify-center lg:justify-start gap-5 pt-3">
             <button
               type="button"
-              className="px-7 py-2.5 bg-amber-600 text-black font-semibold rounded-full shadow-md hover:bg-amber-500 hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="px-7 py-2.5 bg-black text-black font-semibold rounded-full shadow-md hover:bg-black hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
               aria-label="View redeem options"
             >
               Redeem Rewards
@@ -75,16 +75,16 @@ export default function RewardingHero() {
         {/* Right side icon illustration */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-white border-4 border-amber-600 shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center mb-30"
+            className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl bg-white border-4 border-black shadow-[0_10px_30px_rgba(0,0,0,0.4)] flex items-center justify-center mb-30"
             aria-hidden="true"
           >
-            <FaGift className="text-amber-600 text-[5.5rem]" />
+            <FaGift className="text-black text-[5.5rem]" />
           </div>
         </div>
       </div>
 
       {/* Subtle decorative floating icon for depth */}
-      <div className="absolute top-6 left-6 hidden lg:block text-amber-600 text-4xl opacity-15 pointer-events-none select-none">
+      <div className="absolute top-6 left-6 hidden lg:block text-black text-4xl opacity-15 pointer-events-none select-none">
         <FaGift />
       </div>
     </section>

@@ -9,7 +9,7 @@ const AboutHero = () => {
       aria-label="About our eCommerce Store"
     >
       <div className="max-w-5xl w-full text-center">
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-amber-600 mb-6">
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-black mb-6">
           About Our eStore
         </h1>
 
@@ -20,20 +20,20 @@ const AboutHero = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-xl p-6 border border-amber-700">
-            <h3 className="text-xl font-bold text-amber-500 mb-1">Project Size</h3>
+          <div className="bg-white rounded-xl p-6 border border-black">
+            <h3 className="text-xl font-bold text-black mb-1">Project Size</h3>
             <p className="text-sm text-gray-600">100+ Fully Custom Pages</p>
           </div>
-          <div className="bg-white rounded-xl p-6 border border-amber-700">
-            <h3 className="text-xl font-bold text-amber-500 mb-1">Development Time</h3>
+          <div className="bg-white rounded-xl p-6 border border-black">
+            <h3 className="text-xl font-bold text-black mb-1">Development Time</h3>
             <p className="text-sm text-gray-600">Completed in 27 Days</p>
           </div>
-          <div className="bg-white rounded-xl p-6 border border-amber-700">
-            <h3 className="text-xl font-bold text-amber-500 mb-1">Design Quality</h3>
+          <div className="bg-white rounded-xl p-6 border border-black">
+            <h3 className="text-xl font-bold text-black mb-1">Design Quality</h3>
             <p className="text-sm text-gray-600">Pixel-Perfect Premium UI/UX</p>
           </div>
-          <div className="bg-white rounded-xl p-6 border border-amber-700">
-            <h3 className="text-xl font-bold text-amber-500 mb-1">Performance</h3>
+          <div className="bg-white rounded-xl p-6 border border-black">
+            <h3 className="text-xl font-bold text-black mb-1">Performance</h3>
             <p className="text-sm text-gray-600">Optimized for Speed & SEO</p>
           </div>
         </div>
@@ -45,7 +45,7 @@ const AboutHero = () => {
           elite frontend craftsmanship.
         </p>
 
-        <button className="bg-amber-700 text-gray-900 px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-amber-600 transition duration-300">
+        <button className="bg-black text-gray-900 px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-black transition duration-300">
           Explore Our Journey
         </button>
       </div>

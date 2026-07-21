@@ -73,7 +73,7 @@ const SportsCategoryInfo = () => {
 
               {/* Overlay Info */}
               <div className="p-5 text-center">
-                <div className="flex justify-center mb-3 text-amber-700">
+                <div className="flex justify-center mb-3 text-black">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800">
@@ -83,7 +83,7 @@ const SportsCategoryInfo = () => {
                   {category.description}
                 </p>
 
-                <button className="mt-4 px-5 py-2 bg-amber-600 text-black rounded-full font-semibold hover:bg-amber-500 transition">
+                <button className="mt-4 px-5 py-2 bg-black text-black rounded-full font-semibold hover:bg-black transition">
                   Shop Now
                 </button>
               </div>

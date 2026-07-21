@@ -110,7 +110,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Label (e.g. Home, Office)"
-            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
             required
             autoFocus
           />
@@ -120,7 +120,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Phone Number"
-            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
             required
           />
         </div>
@@ -131,7 +131,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
           value={formData.street}
           onChange={handleChange}
           placeholder="Street Address"
-          className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+          className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
           required
         />
 
@@ -142,7 +142,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
             value={formData.city}
             onChange={handleChange}
             placeholder="City"
-            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
             required
           />
           <input
@@ -151,7 +151,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
             value={formData.state}
             onChange={handleChange}
             placeholder="State"
-            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
             required
           />
           <input
@@ -160,7 +160,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
             value={formData.zip}
             onChange={handleChange}
             placeholder="ZIP / Postal Code"
-            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+            className="p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
             required
           />
         </div>
@@ -171,7 +171,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
           value={formData.country}
           onChange={handleChange}
           placeholder="Country"
-          className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-amber-600"
+          className="w-full p-2 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-black"
           required
         />
 
@@ -198,7 +198,7 @@ const AddressingModal = ({ address, onClose, onSave }) => {
           </button>
           <button
             type="submit"
-            className="px-4 py-2 bg-amber-700 text-gray-900 font-semibold rounded hover:bg-amber-800 transition"
+            className="px-4 py-2 bg-black text-gray-900 font-semibold rounded hover:bg-black transition"
           >
             {address ? 'Update' : 'Save'}
           </button>

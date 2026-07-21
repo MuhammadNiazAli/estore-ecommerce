@@ -35,7 +35,7 @@ const testimonials = [
 
 const AffiliatesTestimonials = () => {
   return (
-    <div className="bg-white text-amber-600 py-16 px-4 flex justify-center">
+    <div className="bg-white text-black py-16 px-4 flex justify-center">
       <div className="w-full max-w-[1000px]">
         <h2 className="text-4xl font-extrabold text-center mb-12 tracking-wide">
           What Our Affiliates Say
@@ -50,20 +50,20 @@ const AffiliatesTestimonials = () => {
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-14 h-14 rounded-full border-2 border-amber-700 object-cover"
+                  className="w-14 h-14 rounded-full border-2 border-black object-cover"
                 />
                 <div>
                   <h3 className="text-lg font-bold">{t.name}</h3>
-                  <p className="text-sm text-amber-500">{t.role}</p>
+                  <p className="text-sm text-black">{t.role}</p>
                 </div>
               </div>
-              <div className="flex mb-3 text-amber-600">
+              <div className="flex mb-3 text-black">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-600" />
+                  <Star key={i} className="w-4 h-4 fill-black" />
                 ))}
               </div>
-              <div className="flex items-start gap-2 text-amber-400 text-sm italic leading-relaxed">
-                <Quote className="w-5 h-5 shrink-0 mt-1 text-amber-700" />
+              <div className="flex items-start gap-2 text-black text-sm italic leading-relaxed">
+                <Quote className="w-5 h-5 shrink-0 mt-1 text-black" />
                 <p>{t.quote}</p>
               </div>
             </div>

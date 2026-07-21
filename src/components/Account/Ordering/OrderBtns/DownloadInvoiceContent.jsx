@@ -11,7 +11,7 @@ function DownloadInvoiceContent({ closePanel }) {
   return (
     <div className="px-4 py-6 max-w-xl mx-auto text-[14px] sm:text-[15px]">
       {/* Title */}
-      <h2 className="text-amber-600 text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
+      <h2 className="text-black text-2xl sm:text-3xl font-extrabold mb-5 tracking-wide text-center sm:text-left">
         Invoice Download
       </h2>
 
@@ -25,7 +25,7 @@ function DownloadInvoiceContent({ closePanel }) {
         aria-label="Invoice summary"
         className="bg-white p-5 sm:p-6 rounded-lg mb-8 shadow-lg"
       >
-        <h3 className="text-amber-600 text-lg sm:text-xl font-semibold mb-4">
+        <h3 className="text-black text-lg sm:text-xl font-semibold mb-4">
           Invoice Details
         </h3>
         <dl className="text-gray-700 text-sm sm:text-base space-y-2">
@@ -39,7 +39,7 @@ function DownloadInvoiceContent({ closePanel }) {
           </div>
           <div>
             <dt className="inline font-semibold">Total Amount:</dt>{' '}
-            <dd className="inline font-semibold text-amber-600">$245.00</dd>
+            <dd className="inline font-semibold text-black">$245.00</dd>
           </div>
           <div>
             <dt className="inline font-semibold">Payment Method:</dt>{' '}
@@ -54,7 +54,7 @@ function DownloadInvoiceContent({ closePanel }) {
           Want a copy in your email? Head over to your{' '}
           <a
             href="/account/invoices"
-            className="text-amber-600 underline hover:text-amber-500"
+            className="text-black underline hover:text-black"
           >
             Invoice History
           </a>{' '}
@@ -64,7 +64,7 @@ function DownloadInvoiceContent({ closePanel }) {
           If you have questions about billing or payments, please{' '}
           <a
             href="/contact"
-            className="text-amber-600 underline hover:text-amber-500"
+            className="text-black underline hover:text-black"
           >
             contact our support team
           </a>
@@ -76,7 +76,7 @@ function DownloadInvoiceContent({ closePanel }) {
       <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
         <button
           onClick={handleDownloadInvoice}
-          className="bg-amber-600 text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-500 transition shadow-md w-full sm:w-auto"
+          className="bg-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Download invoice PDF"
         >
@@ -84,7 +84,7 @@ function DownloadInvoiceContent({ closePanel }) {
         </button>
         <button
           onClick={closePanel}
-          className="border border-amber-600 text-amber-600 text-sm px-5 py-2 rounded-full font-semibold hover:bg-amber-600 hover:text-black transition shadow-md w-full sm:w-auto"
+          className="border border-black text-black text-sm px-5 py-2 rounded-full font-semibold hover:bg-black hover:text-black transition shadow-md w-full sm:w-auto"
           type="button"
           aria-label="Close invoice panel"
         >

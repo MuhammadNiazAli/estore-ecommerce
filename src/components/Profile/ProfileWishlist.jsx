@@ -53,7 +53,7 @@ const ProfileWishlist = () => {
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-          <div className="flex items-center gap-2 text-amber-600">
+          <div className="flex items-center gap-2 text-black">
             <HeartIcon className="w-6 h-6 sm:w-7 sm:h-7" />
             <h2 className="text-2xl sm:text-3xl font-bold leading-tight">
               Your Wishlist
@@ -95,14 +95,14 @@ const ProfileWishlist = () => {
                     <h3 className="text-gray-900 text-base sm:text-lg md:text-xl font-semibold line-clamp-2">
                       {title}
                     </h3>
-                    <p className="text-amber-600 font-bold mt-2 text-sm sm:text-base md:text-lg">
+                    <p className="text-black font-bold mt-2 text-sm sm:text-base md:text-lg">
                       {price}
                     </p>
 
                     <div className="mt-auto pt-4 flex justify-between items-center">
                       <button
                         onClick={() => handleAddToCart(title)}
-                        className="flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold text-xs sm:text-sm px-3 py-2 rounded-full transition shadow"
+                        className="flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold text-xs sm:text-sm px-3 py-2 rounded-full transition shadow"
                         type="button"
                       >
                         <ShoppingCartIcon className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -110,11 +110,11 @@ const ProfileWishlist = () => {
                       </button>
                       <button
                         onClick={() => handleRemove(id, title)}
-                        className="p-2 rounded-full hover:bg-red-600/40 transition"
+                        className="p-2 rounded-full hover:bg-black/40 transition"
                         aria-label={`Remove ${title} from wishlist`}
                         type="button"
                       >
-                        <TrashIcon className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
+                        <TrashIcon className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
                       </button>
                     </div>
                   </div>
@@ -131,13 +131,13 @@ const ProfileWishlist = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
-              className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white border border-amber-700 text-amber-500 px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-[999]"
+              className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white border border-black text-black px-6 py-3 rounded-lg shadow-lg flex items-center gap-3 z-[999]"
               role="alert"
             >
               <span className="text-sm sm:text-base">{toast.message}</span>
               <button
                 onClick={() => setToast(null)}
-                className="text-amber-600 hover:text-gray-900 transition"
+                className="text-black hover:text-gray-900 transition"
                 aria-label="Dismiss notification"
                 type="button"
               >

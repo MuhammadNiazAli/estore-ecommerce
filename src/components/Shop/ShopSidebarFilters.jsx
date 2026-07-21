@@ -180,7 +180,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
 
  
   const FilterBadge = ({ count }) => (
-    <span className="ml-2 inline-block rounded-full bg-amber-500 text-black text-xs font-semibold px-2 py-0.5 select-none transition-transform transform group-hover:scale-110">
+    <span className="ml-2 inline-block rounded-full bg-black text-black text-xs font-semibold px-2 py-0.5 select-none transition-transform transform group-hover:scale-110">
       {count}
     </span>
   );
@@ -190,7 +190,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
     <button
       type="button"
       onClick={onRemove}
-      className="inline-flex items-center gap-1 bg-amber-400 text-black px-3 py-1 rounded-full text-sm font-semibold hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+      className="inline-flex items-center gap-1 bg-black text-black px-3 py-1 rounded-full text-sm font-semibold hover:bg-black focus:outline-none focus:ring-2 focus:ring-black transition"
       aria-label={`Remove filter ${label}`}
     >
       {label} <FiX />
@@ -209,7 +209,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
         aria-live="polite"
         className="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
       >
-        <p className="text-sm text-amber-400 font-semibold select-none">
+        <p className="text-sm text-black font-semibold select-none">
           {totalFiltersSelected > 0
             ? `Filters applied (${totalFiltersSelected})`
             : 'No filters applied'}
@@ -218,7 +218,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
           type="button"
           onClick={clearAllFilters}
           disabled={totalFiltersSelected === 0}
-          className="text-sm text-amber-400 hover:text-amber-500 disabled:text-gray-600 disabled:cursor-not-allowed font-semibold focus:outline-none focus:ring-2 focus:ring-amber-400 rounded inline-flex items-center gap-1"
+          className="text-sm text-black hover:text-black disabled:text-gray-600 disabled:cursor-not-allowed font-semibold focus:outline-none focus:ring-2 focus:ring-black rounded inline-flex items-center gap-1"
           aria-disabled={totalFiltersSelected === 0}
         >
           Clear All <FiX />
@@ -263,7 +263,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('categories')}
             aria-expanded={!collapsed.categories}
             aria-controls="categories-list"
-            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Categories
             {collapsed.categories ? <FiChevronDown /> : <FiChevronUp />}
@@ -278,7 +278,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   placeholder="Search categories..."
                   value={categorySearch}
                   onChange={(e) => setCategorySearch(e.target.value)}
-                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition"
                 />
               </div>
               <ul
@@ -301,14 +301,14 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                         <input
                           id={`cat-${name}`}
                           type="checkbox"
-                          className="form-checkbox h-6 w-6 text-amber-400 bg-white rounded focus:ring-amber-400 transition duration-150"
+                          className="form-checkbox h-6 w-6 text-black bg-white rounded focus:ring-black transition duration-150"
                           checked={isChecked}
                           onChange={() => toggleCategory(name)}
                           aria-checked={isChecked}
                         />
-                        <span className="ml-4 text-lg text-gray-700 group-hover:text-amber-400 transition flex items-center">
+                        <span className="ml-4 text-lg text-gray-700 group-hover:text-black transition flex items-center">
                           {name}
-                          <span className="ml-2 inline-block rounded-full bg-amber-500 text-black text-xs font-semibold px-2 py-0.5 select-none transition-transform transform group-hover:scale-110">
+                          <span className="ml-2 inline-block rounded-full bg-black text-black text-xs font-semibold px-2 py-0.5 select-none transition-transform transform group-hover:scale-110">
                             {count}
                           </span>
                         </span>
@@ -328,7 +328,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('price')}
             aria-expanded={!collapsed.price}
             aria-controls="price-range"
-            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Price Range ($)
             {collapsed.price ? <FiChevronDown /> : <FiChevronUp />}
@@ -349,8 +349,8 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   value={priceRange[0]}
                   onChange={(e) => handlePriceChange(e, 0)}
                   placeholder="Min"
-                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
-                    inputErrors.min ? 'border-2 border-red-600' : 'border border-gray-200'
+                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition ${
+                    inputErrors.min ? 'border-2 border-black' : 'border border-gray-200'
                   }`}
                   aria-invalid={inputErrors.min}
                   aria-describedby="price-min-error"
@@ -364,8 +364,8 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   value={priceRange[1]}
                   onChange={(e) => handlePriceChange(e, 1)}
                   placeholder="Max"
-                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition ${
-                    inputErrors.max ? 'border-2 border-red-600' : 'border border-gray-200'
+                  className={`w-1/2 rounded bg-white px-4 py-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition ${
+                    inputErrors.max ? 'border-2 border-black' : 'border border-gray-200'
                   }`}
                   aria-invalid={inputErrors.max}
                   aria-describedby="price-max-error"
@@ -373,7 +373,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
               </div>
               {(inputErrors.min || inputErrors.max) && (
                 <p
-                  className="mt-2 text-sm text-red-500"
+                  className="mt-2 text-sm text-black"
                   role="alert"
                   id={inputErrors.min ? 'price-min-error' : 'price-max-error'}
                 >
@@ -385,7 +385,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                 type="button"
                 onClick={resetPrice}
                 disabled={isPriceRangeEmpty(priceRange)}
-                className="mt-2 text-sm text-amber-400 hover:text-amber-500 disabled:text-gray-600 disabled:cursor-not-allowed font-semibold focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+                className="mt-2 text-sm text-black hover:text-black disabled:text-gray-600 disabled:cursor-not-allowed font-semibold focus:outline-none focus:ring-2 focus:ring-black rounded"
                 aria-disabled={isPriceRangeEmpty(priceRange)}
               >
                 Reset Price
@@ -401,7 +401,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
             onClick={() => toggleCollapse('brands')}
             aria-expanded={!collapsed.brands}
             aria-controls="brands-list"
-            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-amber-400 rounded"
+            className="w-full flex justify-between items-center text-xl font-semibold text-gray-900 mb-4 border-b border-gray-200 pb-2 focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Brands
             {collapsed.brands ? <FiChevronDown /> : <FiChevronUp />}
@@ -416,7 +416,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                   placeholder="Search brands..."
                   value={brandSearch}
                   onChange={(e) => setBrandSearch(e.target.value)}
-                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                  className="w-full pl-10 pr-3 py-2 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black transition"
                 />
               </div>
               <ul
@@ -439,12 +439,12 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
                         <input
                           id={`brand-${name}`}
                           type="checkbox"
-                          className="form-checkbox h-6 w-6 text-amber-400 bg-white rounded focus:ring-amber-400 transition duration-150"
+                          className="form-checkbox h-6 w-6 text-black bg-white rounded focus:ring-black transition duration-150"
                           checked={isChecked}
                           onChange={() => toggleBrand(name)}
                           aria-checked={isChecked}
                         />
-                        <span className="ml-4 text-lg text-gray-700 group-hover:text-amber-400 transition flex items-center">
+                        <span className="ml-4 text-lg text-gray-700 group-hover:text-black transition flex items-center">
                           {name}
                           <FilterBadge count={count} />
                         </span>
@@ -464,7 +464,7 @@ const ShopSidebarFilters = ({ onFilterChange }) => {
           type="button"
           onClick={handleApplyFilters}
           disabled={inputErrors.min || inputErrors.max || totalFiltersSelected === 0 || applying}
-          className={`w-full py-3 rounded-full bg-amber-400 text-gray-900 font-semibold shadow-lg hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400 transition disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2 select-none`}
+          className={`w-full py-3 rounded-full bg-black text-gray-900 font-semibold shadow-lg hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2 select-none`}
           aria-disabled={inputErrors.min || inputErrors.max || totalFiltersSelected === 0 || applying}
         >
           {applying ? 'Applying...' : `Apply Filters (${totalFiltersSelected})`}

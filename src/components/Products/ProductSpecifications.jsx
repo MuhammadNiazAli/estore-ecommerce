@@ -44,7 +44,7 @@ const ProductSpecifications = () => {
                 key={idx}
                 className={`transition-colors duration-200 ${
                   idx % 2 === 0 ? "bg-white" : "bg-white"
-                } hover:bg-amber-950 cursor-default`}
+                } hover:bg-black cursor-default`}
               >
                 <th
                   scope="row"

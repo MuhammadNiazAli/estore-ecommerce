@@ -43,7 +43,7 @@ const ResponsibilityCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-gray-900 font-semibold px-6 sm:px-8 py-3 rounded-full transition duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-opacity-60 select-none text-sm sm:text-base md:text-lg"
+          className="inline-flex items-center gap-2 bg-black hover:bg-black text-gray-900 font-semibold px-6 sm:px-8 py-3 rounded-full transition duration-300 shadow-md hover:shadow-lg active:scale-95 focus:outline-none focus:ring-4 focus:ring-black focus:ring-opacity-60 select-none text-sm sm:text-base md:text-lg"
           aria-label="Get involved in the responsibility program"
         >
           Get Involved

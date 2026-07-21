@@ -13,7 +13,7 @@ const CartTaxInfo = () => {
     >
       <div className="flex items-start gap-3">
         <Info
-          className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1"
+          className="w-6 h-6 text-black flex-shrink-0 mt-1"
           aria-hidden="true"
         />
         <div className="flex flex-col flex-grow">
@@ -32,7 +32,7 @@ const CartTaxInfo = () => {
           <button
             onClick={() => setShowMore(!showMore)}
             aria-expanded={showMore}
-            className="mt-3 self-start text-amber-600 hover:text-amber-500 underline text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="mt-3 self-start text-black hover:text-black underline text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             {showMore ? 'Hide details' : 'Learn more'}
           </button>

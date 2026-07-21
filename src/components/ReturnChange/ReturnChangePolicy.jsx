@@ -5,25 +5,25 @@ import { Calendar, Package, ShieldCheck, Info } from 'lucide-react';
 
 const policies = [
   {
-    icon: <Calendar className="text-amber-600" size={28} aria-hidden="true" />,
+    icon: <Calendar className="text-black" size={28} aria-hidden="true" />,
     title: 'Return Window',
     description:
       'Items can be returned within 14 days of receipt, in their original condition and packaging.',
   },
   {
-    icon: <Package className="text-amber-600" size={28} aria-hidden="true" />,
+    icon: <Package className="text-black" size={28} aria-hidden="true" />,
     title: 'Item Condition',
     description:
       'Products must be unused, unworn, and undamaged. Tags and original packaging must be intact.',
   },
   {
-    icon: <ShieldCheck className="text-amber-600" size={28} aria-hidden="true" />,
+    icon: <ShieldCheck className="text-black" size={28} aria-hidden="true" />,
     title: 'Refund Process',
     description:
       'Refunds are issued within 3 business days after we receive and inspect the returned item.',
   },
   {
-    icon: <Info className="text-amber-600" size={28} aria-hidden="true" />,
+    icon: <Info className="text-black" size={28} aria-hidden="true" />,
     title: 'Exceptions',
     description:
       'Custom-made, perishable, and clearance items are not eligible for return or exchange.',
@@ -39,7 +39,7 @@ const ReturnChangePolicy = () => {
       <div className="max-w-[1000px] w-full text-center">
         <h2
           id="return-exchange-policy-title"
-          className="text-amber-600 text-4xl font-bold mb-10"
+          className="text-black text-4xl font-bold mb-10"
         >
           Return & Exchange Policy
         </h2>
@@ -58,7 +58,7 @@ const ReturnChangePolicy = () => {
             >
               <div className="flex items-center mb-4 gap-4">
                 <div className="flex-shrink-0">{icon}</div>
-                <h3 className="text-amber-500 font-semibold text-xl">{title}</h3>
+                <h3 className="text-black font-semibold text-xl">{title}</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">{description}</p>
             </article>

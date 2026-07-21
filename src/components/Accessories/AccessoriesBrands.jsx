@@ -19,7 +19,7 @@ const AccessoriesBrands = () => {
   return (
     <div className="w-full max-w-[1100px] mx-auto px-4 py-10">
       {/* Header */}
-      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800 mb-10 tracking-wide">
+      <h2 className="text-center text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-900 mb-10 tracking-wide">
         Luxury Accessories Brands
       </h2>
 
@@ -30,7 +30,7 @@ const AccessoriesBrands = () => {
             key={brand.id}
             onClick={() => setSelectedBrand(brand)}
             className={`relative flex flex-col items-center justify-center rounded-xl backdrop-blur-md bg-white/5 border border-gray-200/10 p-6 cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] ${
-              selectedBrand?.id === brand.id ? "ring-2 ring-amber-600 shadow-[0_0_30px_rgba(255,215,0,0.5)]" : ""
+              selectedBrand?.id === brand.id ? "ring-2 ring-black shadow-[0_0_30px_rgba(255,215,0,0.5)]" : ""
             }`}
           >
             <img
@@ -47,14 +47,14 @@ const AccessoriesBrands = () => {
       {selectedBrand && (
         <div className="mt-12 flex justify-center">
           <div className="bg-white/10 backdrop-blur-xl border border-gray-200/20 rounded-2xl p-6 max-w-lg text-center shadow-lg">
-            <h3 className="text-2xl font-bold text-amber-600">
+            <h3 className="text-2xl font-bold text-black">
               {selectedBrand.name}
             </h3>
             <p className="text-gray-700 mt-3 text-base leading-relaxed">
               Discover exquisite collections by {selectedBrand.name} — from
               elegant watches to premium jewelry, crafted for true luxury.
             </p>
-            <button className="mt-5 px-6 py-2 bg-gradient-to-r from-amber-600 to-amber-800 text-gray-900 font-semibold rounded-full hover:opacity-90 transition-all">
+            <button className="mt-5 px-6 py-2 bg-gradient-to-r from-black to-gray-900 text-gray-900 font-semibold rounded-full hover:opacity-90 transition-all">
               Explore Collection
             </button>
           </div>

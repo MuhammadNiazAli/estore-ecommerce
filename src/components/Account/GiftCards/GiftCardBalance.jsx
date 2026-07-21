@@ -32,10 +32,10 @@ const GiftCardBalance = ({
     >
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <FaWallet className="text-amber-600 text-4xl" aria-hidden="true" />
+        <FaWallet className="text-black text-4xl" aria-hidden="true" />
         <div>
-          <h2 className="text-2xl font-extrabold text-amber-500">Your Gift Card Balance</h2>
-          <p className="text-amber-400 text-sm">Available to spend anytime</p>
+          <h2 className="text-2xl font-extrabold text-black">Your Gift Card Balance</h2>
+          <p className="text-black text-sm">Available to spend anytime</p>
         </div>
       </div>
 
@@ -51,14 +51,14 @@ const GiftCardBalance = ({
 
       {/* Recent Activity */}
       <div>
-        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-amber-500">
-          <FaHistory className="text-amber-600" aria-hidden="true" />
+        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-black">
+          <FaHistory className="text-black" aria-hidden="true" />
           Recent Activity
         </h3>
 
         <ul
-          className="divide-y divide-amber-800 max-h-48 overflow-y-auto rounded-md
-            bg-amber-900/20 p-4 scrollbar-thin scrollbar-thumb-amber-800 scrollbar-track-amber-950"
+          className="divide-y divide-black max-h-48 overflow-y-auto rounded-md
+            bg-black/20 p-4 scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-100"
           role="list"
           aria-label="Recent gift card transactions"
         >
@@ -72,16 +72,16 @@ const GiftCardBalance = ({
                   2
                 )} on ${formatDate(date)}`}
               >
-                <span className="truncate text-amber-400">{type}</span>
+                <span className="truncate text-black">{type}</span>
                 <span
                   className={`font-mono ${
-                    isPositive ? 'text-amber-600' : 'text-red-500'
+                    isPositive ? 'text-black' : 'text-black'
                   }`}
                 >
                   {isPositive ? '+' : '-'}
                   {Math.abs(amount).toFixed(2)}
                 </span>
-                <time className="text-amber-500" dateTime={date}>
+                <time className="text-black" dateTime={date}>
                   {formatDate(date)}
                 </time>
               </li>
@@ -96,8 +96,8 @@ const GiftCardBalance = ({
           type="button"
           onClick={onReload}
           className="inline-flex items-center gap-2 px-8 py-3 rounded-full
-            bg-amber-600 text-black font-semibold shadow-md hover:bg-amber-500 hover:shadow-lg
-            transition duration-300 focus:outline-none focus:ring-2 focus:ring-amber-500
+            bg-black text-black font-semibold shadow-md hover:bg-black hover:shadow-lg
+            transition duration-300 focus:outline-none focus:ring-2 focus:ring-black
             focus:ring-offset-2 active:scale-[0.97] select-none"
           aria-label="Reload gift card balance"
         >

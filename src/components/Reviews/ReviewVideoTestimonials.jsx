@@ -79,7 +79,7 @@ const Star = ({ filled, isHovered }) => (
   <motion.svg
     aria-hidden="true"
     className={`w-4 h-4 mr-0.5 ${
-      filled ? 'fill-amber-400 stroke-amber-400' : 'fill-transparent stroke-amber-400'
+      filled ? 'fill-black stroke-black' : 'fill-transparent stroke-black'
     }`}
     strokeWidth="1.5"
     strokeLinecap="round"
@@ -130,7 +130,7 @@ const VideoCard = ({ video, isHovered, onHover, onLeave }) => {
     <div
       className="relative rounded-lg overflow-hidden shadow-lg bg-white cursor-pointer
                  transition-transform duration-400 ease-in-out
-                 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                 focus:outline-none focus:ring-2 focus:ring-black"
       aria-label={`Video testimonial: ${video.title}`}
       role="group"
       tabIndex={0}
@@ -187,9 +187,9 @@ const VideoCard = ({ video, isHovered, onHover, onLeave }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-amber-500/50 hover:bg-amber-500/60
+            className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 hover:bg-black/60
                        text-black font-semibold px-4 py-2 rounded-full shadow-lg
-                       focus:outline-none focus:ring-2 focus:ring-amber-400
+                       focus:outline-none focus:ring-2 focus:ring-black
                        select-none z-20"
             aria-label={`View full video for ${video.title}`}
           >

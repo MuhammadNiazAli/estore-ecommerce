@@ -773,7 +773,7 @@ const ManClothesFilter = () => {
     <div
       className={`w-64 bg-white p-6 shadow-lg h-full overflow-y-auto custom-scrollbar`}
     >
-      <h2 className="text-xl font-bold mb-4 text-amber-600 flex justify-between items-center">
+      <h2 className="text-xl font-bold mb-4 text-black flex justify-between items-center">
         Filters
         <button
           className="block md:hidden text-gray-900 text-2xl"
@@ -802,12 +802,12 @@ const ManClothesFilter = () => {
         { title: "Type", list: ["Man", "Boy"], type: "type" },
       ].map((section) => (
         <div key={section.title} className="mb-4">
-          <h3 className="font-semibold mb-2 text-amber-500">{section.title}</h3>
+          <h3 className="font-semibold mb-2 text-black">{section.title}</h3>
           {section.list.map((item) => (
             <label key={item} className="block text-sm capitalize cursor-pointer">
               <input
                 type="checkbox"
-                className="mr-2 accent-amber-600"
+                className="mr-2 accent-black"
                 onChange={() => handleCheckbox(section.type, item)}
                 checked={filters[section.type].includes(item)}
                 aria-checked={filters[section.type].includes(item)}
@@ -820,20 +820,20 @@ const ManClothesFilter = () => {
 
       {/* Price */}
       <div className="mb-4">
-        <h3 className="font-semibold mb-2 text-amber-500">Price (Max)</h3>
+        <h3 className="font-semibold mb-2 text-black">Price (Max)</h3>
         <input
           type="range"
           min="0"
           max="600"
           value={filters.priceRange[1]}
           onChange={handlePriceChange}
-          className="w-full accent-amber-600"
+          className="w-full accent-black"
           aria-valuemin={0}
           aria-valuemax={600}
           aria-valuenow={filters.priceRange[1]}
           aria-label="Maximum price filter"
         />
-        <p className="text-sm text-amber-600">Up to ${filters.priceRange[1]}</p>
+        <p className="text-sm text-black">Up to ${filters.priceRange[1]}</p>
       </div>
     </div>
   );
@@ -894,11 +894,11 @@ const ManClothesFilter = () => {
                     <h3 className="text-lg font-semibold">{p.name}</h3>
                     <p className="text-gray-600">{p.category}</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <span className="text-amber-600 text-lg font-bold">${p.price}</span>
+                      <span className="text-black text-lg font-bold">${p.price}</span>
                       <span className="text-gray-500 line-through text-sm">${p.oldPrice}</span>
                     </div>
                   </div>
-                  <button className="mt-3 w-full bg-amber-700 text-black py-2 rounded hover:bg-amber-600">
+                  <button className="mt-3 w-full bg-black text-black py-2 rounded hover:bg-black">
                     Add to Cart
                   </button>
                 </div>
@@ -914,7 +914,7 @@ const ManClothesFilter = () => {
           <div className="text-center mt-6">
             <button
               onClick={() => setVisibleCount(visibleCount + 9)}
-              className="bg-amber-700 text-black px-6 py-3 rounded hover:bg-amber-600 font-semibold"
+              className="bg-black text-black px-6 py-3 rounded hover:bg-black font-semibold"
             >
               Show More
             </button>
@@ -931,7 +931,7 @@ const ManClothesFilter = () => {
           background: #ffffff;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #b45309; /* amber-600 */
+          background-color: #111827; /* amber-600 */
           border-radius: 10px;
         }
         @media (min-width: 768px) {

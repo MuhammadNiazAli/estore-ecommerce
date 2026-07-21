@@ -5,22 +5,22 @@ import { FaPhoneAlt, FaEnvelope, FaComments, FaTimes } from 'react-icons/fa';
 
 const contactHelpFeatures = [
   {
-    icon: <FaPhoneAlt className="text-amber-600 text-base" />,
+    icon: <FaPhoneAlt className="text-black text-base" />,
     label: 'Call Our Support Team',
   },
   {
-    icon: <FaEnvelope className="text-amber-600 text-base" />,
+    icon: <FaEnvelope className="text-black text-base" />,
     label: 'Email Us Anytime',
   },
   {
-    icon: <FaComments className="text-amber-600 text-base" />,
+    icon: <FaComments className="text-black text-base" />,
     label: 'Live Chat Assistance',
   },
 ];
 
 const callSupportContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Call Support</h3>
+    <h3 className="text-lg font-semibold text-black">Call Support</h3>
     <p>Speak directly with our team for urgent help:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li><strong>+1 (800) 123-4567</strong></li>
@@ -32,7 +32,7 @@ const callSupportContent = (
 
 const emailSupportContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Email Support</h3>
+    <h3 className="text-lg font-semibold text-black">Email Support</h3>
     <p>Send us an email with your issue and we’ll respond within 24 hours:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li><strong>support@estore.com</strong></li>
@@ -44,7 +44,7 @@ const emailSupportContent = (
 
 const chatSupportContent = (
   <div className="text-center text-xs text-gray-700 space-y-3">
-    <h3 className="text-lg font-semibold text-amber-600">Live Chat</h3>
+    <h3 className="text-lg font-semibold text-black">Live Chat</h3>
     <p>Chat with our friendly support agents in real-time:</p>
     <ul className="list-disc pl-5 space-y-1 max-w-xs mx-auto text-left">
       <li>Start a conversation instantly</li>
@@ -67,7 +67,7 @@ export default function HelpingContact() {
       className="w-full max-w-[700px] mx-auto px-6 py-12 bg-gradient-to-br from-white via-white to-white text-gray-900 rounded-3xl shadow-2xl overflow-hidden relative"
     >
       <div className="space-y-6 text-center">
-        <h2 className="text-3xl font-extrabold text-amber-600 tracking-tight">
+        <h2 className="text-3xl font-extrabold text-black tracking-tight">
           Get In Touch With Us
         </h2>
         <p className="text-gray-700 max-w-md mx-auto text-sm">
@@ -93,8 +93,8 @@ export default function HelpingContact() {
             onClick={() => toggleSection('call')}
             className={`px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'call'
-                ? 'bg-amber-500 text-black ring-amber-500'
-                : 'bg-amber-600 text-black hover:bg-amber-500'
+                ? 'bg-black text-black ring-black'
+                : 'bg-black text-black hover:bg-black'
             } text-sm`}
             aria-label="Toggle call section"
           >
@@ -117,8 +117,8 @@ export default function HelpingContact() {
             onClick={() => toggleSection('chat')}
             className={`px-6 py-3 rounded-full border font-semibold transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 ${
               activeSection === 'chat'
-                ? 'bg-amber-600 text-black ring-amber-500'
-                : 'border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-black'
+                ? 'bg-black text-black ring-black'
+                : 'border-black text-black hover:bg-black hover:text-black'
             } text-sm`}
             aria-label="Toggle live chat section"
           >
@@ -130,7 +130,7 @@ export default function HelpingContact() {
           <div className="relative mt-8 p-6 bg-white border border-gray-200 rounded-xl transition-all duration-300 shadow-lg">
             <button
               onClick={() => setActiveSection('')}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-400 text-lg"
+              className="absolute top-2 right-2 text-gray-600 hover:text-black text-lg"
               aria-label="Close section"
             >
               <FaTimes />

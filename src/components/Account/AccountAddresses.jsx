@@ -147,10 +147,10 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                 className="bg-white rounded-lg p-6 shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
               >
                 <div className="md:max-w-[70%]">
-                  <h3 className="text-amber-600 font-semibold text-xl mb-1 tracking-wide flex items-center gap-2">
+                  <h3 className="text-black font-semibold text-xl mb-1 tracking-wide flex items-center gap-2">
                     {a.label}
                     {a.isDefault && (
-                      <span className="bg-amber-600 text-black px-2 py-0.5 text-xs rounded-full font-bold">
+                      <span className="bg-black text-black px-2 py-0.5 text-xs rounded-full font-bold">
                         Default
                       </span>
                     )}
@@ -169,14 +169,14 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                   <motion.button
                     onClick={() => handleEdit(a.id)}
                     whileTap={tapSpring}
-                    className="bg-amber-600 text-black px-4 py-2 rounded-md font-semibold hover:bg-amber-500"
+                    className="bg-black text-black px-4 py-2 rounded-md font-semibold hover:bg-black"
                   >
                     Edit
                   </motion.button>
                   <motion.button
                     onClick={() => deleteAddress(a.id)}
                     whileTap={tapSpring}
-                    className="bg-red-600 text-gray-900 px-4 py-2 rounded-md font-semibold hover:bg-red-700"
+                    className="bg-black text-gray-900 px-4 py-2 rounded-md font-semibold hover:bg-black"
                   >
                     Delete
                   </motion.button>
@@ -190,7 +190,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
           <motion.button
             onClick={() => setShowForm(true)}
             whileTap={tapSpring}
-            className="bg-amber-600 text-black px-8 py-3 rounded-full font-bold shadow-lg hover:bg-amber-500 transition"
+            className="bg-black text-black px-8 py-3 rounded-full font-bold shadow-lg hover:bg-black transition"
           >
             + Add New Address
           </motion.button>
@@ -212,15 +212,15 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 20, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative bg-white pointer-events-auto rounded-xl w-full max-w-xl mx-4 sm:mx-auto p-6 sm:p-8 overflow-hidden shadow-2xl border border-amber-700"
+              className="relative bg-white pointer-events-auto rounded-xl w-full max-w-xl mx-4 sm:mx-auto p-6 sm:p-8 overflow-hidden shadow-2xl border border-black"
             >
               <button
                 onClick={() => setShowForm(false)}
-                className="absolute top-4 right-5 text-gray-900 text-3xl hover:text-red-400 transition"
+                className="absolute top-4 right-5 text-gray-900 text-3xl hover:text-black transition"
               >
                 &times;
               </button>
-              <h3 className="text-amber-600 text-2xl font-bold mb-6">
+              <h3 className="text-black text-2xl font-bold mb-6">
                 {formData.id ? 'Edit Address' : 'Add New Address'}
               </h3>
               <div className="grid grid-cols-1 gap-4 max-h-[70vh] overflow-y-auto pr-1 scroll-smooth custom-scroll">
@@ -243,11 +243,11 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                       onChange={handleChange}
                       placeholder={placeholder}
                       className={`px-5 py-3 rounded-lg bg-white border ${
-                        errors[name] ? 'border-red-500' : 'border-gray-200'
+                        errors[name] ? 'border-black' : 'border-gray-200'
                       } text-gray-900 placeholder-gray-400 focus:outline-none`}
                     />
                     {errors[name] && (
-                      <span className="text-red-500 text-xs mt-1">{errors[name]}</span>
+                      <span className="text-black text-xs mt-1">{errors[name]}</span>
                     )}
                   </motion.div>
                 ))}
@@ -259,7 +259,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                     onChange={() =>
                       setFormData((prev) => ({ ...prev, isDefault: !prev.isDefault }))
                     }
-                    className="form-checkbox rounded border-gray-200 text-amber-600"
+                    className="form-checkbox rounded border-gray-200 text-black"
                   />
                   <span className="text-gray-700 text-sm">Set as default address</span>
                 </label>
@@ -269,7 +269,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
                   disabled={isSaving}
                   whileTap={tapSpring}
                   className={`mt-6 w-full ${
-                    isSaving ? 'bg-amber-500 cursor-not-allowed' : 'bg-amber-600 hover:bg-amber-500'
+                    isSaving ? 'bg-black cursor-not-allowed' : 'bg-black hover:bg-black'
                   } text-black font-semibold py-3 rounded-full shadow-md transition`}
                 >
                   {isSaving ? 'Saving...' : 'Save Address'}
@@ -289,7 +289,7 @@ const AccountAddresses = ({ addresses = defaultAddresses, setUserData }) => {
           background: #ffffff; /* dark track */
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-          background-color: #b45309; /* yellow thumb */
+          background-color: #111827; /* yellow thumb */
           border-radius: 6px;
         }
       `}</style>

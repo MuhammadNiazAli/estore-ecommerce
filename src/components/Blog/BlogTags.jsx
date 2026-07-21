@@ -21,7 +21,7 @@ const BlogTags = ({ onTagClick }) => {
           <button
             key={tag}
             onClick={() => onTagClick && onTagClick(tag)}
-            className="bg-amber-600 text-gray-900 font-semibold px-3 py-1 rounded-full text-xs sm:text-sm hover:bg-amber-500 transition-colors whitespace-nowrap"
+            className="bg-black text-gray-900 font-semibold px-3 py-1 rounded-full text-xs sm:text-sm hover:bg-black transition-colors whitespace-nowrap"
           >
             #{tag}
           </button>

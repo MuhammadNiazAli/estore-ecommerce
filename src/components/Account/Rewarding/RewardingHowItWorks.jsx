@@ -6,17 +6,17 @@ import { FaShoppingBag, FaStar, FaGift } from 'react-icons/fa';
 // Steps explaining the rewards process
 const steps = [
   {
-    icon: <FaShoppingBag className="text-amber-600 text-3xl" />,
+    icon: <FaShoppingBag className="text-black text-3xl" />,
     title: '1. Shop & Earn',
     description: 'Get points every time you shop — automatically added to your account.',
   },
   {
-    icon: <FaStar className="text-amber-600 text-3xl" />,
+    icon: <FaStar className="text-black text-3xl" />,
     title: '2. Track Progress',
     description: 'Watch your points grow and reach new VIP tiers for extra perks.',
   },
   {
-    icon: <FaGift className="text-amber-600 text-3xl" />,
+    icon: <FaGift className="text-black text-3xl" />,
     title: '3. Redeem Rewards',
     description: 'Use your points to claim discounts, gifts, and exclusive products.',
   },
@@ -26,13 +26,13 @@ const steps = [
 function HowItWorksStep({ icon, title, description }) {
   return (
     <article
-      className="bg-white border border-gray-200 rounded-xl px-6 py-8 shadow-md transition-all duration-300 hover:border-amber-600"
+      className="bg-white border border-gray-200 rounded-xl px-6 py-8 shadow-md transition-all duration-300 hover:border-black"
       role="region"
       aria-label={title}
       tabIndex={0}
     >
       <div className="mb-4 flex justify-center">{icon}</div>
-      <h3 className="text-amber-500 text-lg font-semibold mb-2">{title}</h3>
+      <h3 className="text-black text-lg font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </article>
   );

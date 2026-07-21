@@ -6,7 +6,7 @@ const ArtCategoryInfo = () => {
     <section
       className="
         bg-white
-        text-amber-600
+        text-black
         max-w-[1000px]
         w-full
         mx-auto
@@ -20,7 +20,7 @@ const ArtCategoryInfo = () => {
       <p className="text-lg leading-relaxed mb-3">
         Explore our curated selection of fine art pieces, prints, and creative works designed to inspire and beautify your space.
       </p>
-      <p className="text-amber-500 italic">
+      <p className="text-black italic">
         From timeless classics to contemporary masterpieces, find art that speaks to your soul.
       </p>
     </section>

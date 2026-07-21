@@ -78,7 +78,7 @@ const CartSummary = () => {
           <dd>$12.00</dd>
         </div>
 
-        <div className="flex justify-between text-red-400">
+        <div className="flex justify-between text-black">
           <dt>Discount</dt>
           <dd>- $20.00</dd>
         </div>
@@ -88,14 +88,14 @@ const CartSummary = () => {
 
       <div className="flex justify-between text-lg font-semibold">
         <span>Total</span>
-        <span className="text-amber-600">$146.98</span>
+        <span className="text-black">$146.98</span>
       </div>
 
       <Link
         href="/checkout"
         aria-label="Proceed to checkout"
-        className="block mt-8 w-full bg-amber-600 text-gray-900 py-3 rounded-lg font-bold text-center
-                   hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-600 transition-shadow"
+        className="block mt-8 w-full bg-black text-gray-900 py-3 rounded-lg font-bold text-center
+                   hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-shadow"
       >
         Proceed to Checkout
       </Link>

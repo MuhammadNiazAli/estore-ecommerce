@@ -15,7 +15,7 @@ const ClearancePromoBanner = () => {
 
       {/* Content */}
       <div className="relative max-w-[1000px] mx-auto text-center px-4 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-600 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
           Mega Clearance Event!
         </h2>
         <p className="text-gray-700 text-lg sm:text-xl max-w-[700px] mx-auto mb-8">
@@ -24,7 +24,7 @@ const ClearancePromoBanner = () => {
         </p>
         <a
           href="#"
-          className="inline-block bg-amber-700 text-gray-900 font-semibold text-lg px-6 py-3 rounded-lg shadow-lg hover:bg-amber-600 transition"
+          className="inline-block bg-black text-gray-900 font-semibold text-lg px-6 py-3 rounded-lg shadow-lg hover:bg-black transition"
         >
           Shop Now
         </a>

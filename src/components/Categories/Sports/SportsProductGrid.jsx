@@ -102,7 +102,7 @@ const SportsProductGrid = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <h2 className="text-3xl font-bold text-gray-800">Sports Gear Collection</h2>
           <select
-            className="border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-amber-600 text-gray-800 bg-white/80"
+            className="border border-gray-300 rounded-lg px-4 py-2 shadow-sm focus:ring-2 focus:ring-black text-gray-800 bg-white/80"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
           >
@@ -140,13 +140,13 @@ const SportsProductGrid = () => {
 
                   {/* Hover Actions */}
                   <div className="absolute inset-0 bg-white/30 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition duration-300">
-                    <button className="bg-amber-600 text-black p-3 rounded-full hover:bg-amber-500 transition">
+                    <button className="bg-black text-black p-3 rounded-full hover:bg-black transition">
                       <FaCartPlus size={18} />
                     </button>
                     <button className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition">
                       <FaEye size={18} />
                     </button>
-                    <button className="bg-red-500 text-gray-900 p-3 rounded-full hover:bg-red-400 transition">
+                    <button className="bg-black text-gray-900 p-3 rounded-full hover:bg-black transition">
                       <FaHeart size={18} />
                     </button>
                   </div>
@@ -157,7 +157,7 @@ const SportsProductGrid = () => {
                   <h3 className="text-lg font-semibold text-gray-800">
                     {product.name}
                   </h3>
-                  <p className="text-amber-700 font-bold text-xl">${product.price}</p>
+                  <p className="text-black font-bold text-xl">${product.price}</p>
                   <p className="text-gray-500 text-sm">⭐ {product.rating}</p>
                 </div>
               </motion.div>

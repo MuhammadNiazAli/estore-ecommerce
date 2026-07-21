@@ -45,7 +45,7 @@ const GamingSpecsComparison = () => {
     <section className="w-full flex justify-center px-4 py-10 my-[-50px]">
       <div className="max-w-[1000px] w-full bg-white rounded-2xl shadow-xl p-6 md:p-10 text-gray-800">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-amber-600 text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-black text-center mb-8">
           Gaming Specs Comparison
         </h2>
 
@@ -53,12 +53,12 @@ const GamingSpecsComparison = () => {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-sm md:text-base">
             <thead>
-              <tr className="bg-white text-amber-500">
+              <tr className="bg-white text-black">
                 <th className="p-3 text-left">Specs</th>
                 {specsData.map((product, index) => (
                   <th key={index} className="p-3 text-center">
                     {product.name}
-                    <div className="text-amber-600 font-semibold">
+                    <div className="text-black font-semibold">
                       {product.price}
                     </div>
                   </th>
@@ -73,7 +73,7 @@ const GamingSpecsComparison = () => {
                     rowIndex % 2 === 0 ? "bg-white" : "bg-white"
                   } hover:bg-gray-500 transition`}
                 >
-                  <td className="p-3 font-medium text-amber-600">{specKey}</td>
+                  <td className="p-3 font-medium text-black">{specKey}</td>
                   {specsData.map((product, colIndex) => (
                     <td key={colIndex} className="p-3 text-center text-gray-700">
                       {product.specs[specKey]}
@@ -87,7 +87,7 @@ const GamingSpecsComparison = () => {
 
         {/* CTA */}
         <div className="mt-8 text-center">
-          <button className="bg-amber-600 text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-amber-500 transition-all">
+          <button className="bg-black text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-black transition-all">
             Shop Gaming Laptops
           </button>
         </div>

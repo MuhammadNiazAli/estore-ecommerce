@@ -33,13 +33,13 @@ const LaptopNewsletterSignup = () => {
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-grow px-4 py-3 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-700"
+          className="flex-grow px-4 py-3 rounded-md bg-white text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black"
           required
           aria-label="Email address"
         />
         <button
           type="submit"
-          className="px-6 py-3 bg-amber-800 hover:bg-amber-900 text-gray-900 font-semibold rounded-md transition"
+          className="px-6 py-3 bg-black hover:bg-black text-gray-900 font-semibold rounded-md transition"
         >
           Subscribe
         </button>
@@ -47,7 +47,7 @@ const LaptopNewsletterSignup = () => {
       {message && (
         <p
           className={`mt-4 ${
-            message.type === 'success' ? 'text-green-400' : 'text-red-400'
+            message.type === 'success' ? 'text-black' : 'text-black'
           } font-medium`}
           role="alert"
         >

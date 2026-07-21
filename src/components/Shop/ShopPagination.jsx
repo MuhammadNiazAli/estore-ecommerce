@@ -69,7 +69,7 @@ const ShopPagination = ({
             ${
               currentPage === 1
                 ? 'bg-white text-gray-500 cursor-not-allowed'
-                : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
+                : 'bg-black text-gray-900 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black'
             }`}
         >
           « First
@@ -86,7 +86,7 @@ const ShopPagination = ({
             ${
               currentPage === 1
                 ? 'bg-white text-gray-500 cursor-not-allowed'
-                : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
+                : 'bg-black text-gray-900 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black'
             }`}
         >
           ← Prev
@@ -111,11 +111,11 @@ const ShopPagination = ({
               aria-current={page === currentPage ? 'page' : undefined}
               tabIndex={page === currentPage ? -1 : 0}
               className={`min-w-[44px] px-4 py-2 rounded-md font-semibold transition
-                focus:outline-none focus:ring-2 focus:ring-amber-400
+                focus:outline-none focus:ring-2 focus:ring-black
                 ${
                   page === currentPage
-                    ? 'bg-amber-500 text-gray-900 cursor-default pointer-events-none'
-                    : 'bg-white text-gray-700 hover:bg-amber-400 hover:text-gray-900'
+                    ? 'bg-black text-gray-900 cursor-default pointer-events-none'
+                    : 'bg-white text-gray-700 hover:bg-black hover:text-gray-900'
                 }`}
             >
               {page}
@@ -134,7 +134,7 @@ const ShopPagination = ({
             ${
               currentPage === totalPages
                 ? 'bg-white text-gray-500 cursor-not-allowed'
-                : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
+                : 'bg-black text-gray-900 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black'
             }`}
         >
           Next →
@@ -151,7 +151,7 @@ const ShopPagination = ({
             ${
               currentPage === totalPages
                 ? 'bg-white text-gray-500 cursor-not-allowed'
-                : 'bg-amber-400 text-gray-900 hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400'
+                : 'bg-black text-gray-900 hover:bg-black focus:outline-none focus:ring-4 focus:ring-black'
             }`}
         >
           Last »

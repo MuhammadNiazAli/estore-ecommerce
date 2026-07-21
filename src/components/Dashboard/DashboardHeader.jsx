@@ -44,7 +44,7 @@ const DashboardHeader = () => {
     <header className="w-full bg-white/60 border-b border-gray-200 flex justify-center px-4 py-4 sticky top-0 z-50 my-[-100px] mb-0">
       <div className="w-full max-w-[1000px] flex items-center justify-between">
         {/* Logo / Title */}
-        <div className="text-amber-600 font-bold text-xl tracking-wide select-none">
+        <div className="text-black font-bold text-xl tracking-wide select-none">
           Niaz<span className="text-gray-900">Dashboard</span>
         </div>
 
@@ -55,19 +55,19 @@ const DashboardHeader = () => {
         >
           <a
             href="#"
-            className="hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Dashboard
           </a>
           <a
             href="#"
-            className="hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Analytics
           </a>
           <a
             href="#"
-            className="hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
           >
             Settings
           </a>
@@ -75,7 +75,7 @@ const DashboardHeader = () => {
 
         {/* Mobile hamburger menu button */}
         <button
-          className="md:hidden text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+          className="md:hidden text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
           aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileNavOpen}
           onClick={() => setMobileNavOpen((open) => !open)}
@@ -86,7 +86,7 @@ const DashboardHeader = () => {
         {/* User + Notifications */}
         <div className="hidden md:flex items-center gap-4 select-none relative" ref={userMenuRef}>
           <button
-            className="text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+            className="text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
             aria-label="Notifications"
           >
             <Bell className="w-5 h-5" />
@@ -97,9 +97,9 @@ const DashboardHeader = () => {
             onClick={toggleUserMenu}
             aria-haspopup="true"
             aria-expanded={userMenuOpen}
-            className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+            className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
           >
-            <User className="w-4 h-4 text-amber-600" />
+            <User className="w-4 h-4 text-black" />
             <span className="text-sm text-gray-700 select-text">Niaz</span>
             <ChevronDown
               className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
@@ -120,7 +120,7 @@ const DashboardHeader = () => {
                   href="#profile"
                   role="menuitem"
                   tabIndex={0}
-                  className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                  className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                   onClick={() => setUserMenuOpen(false)}
                 >
                   Profile
@@ -131,7 +131,7 @@ const DashboardHeader = () => {
                   href="#settings"
                   role="menuitem"
                   tabIndex={0}
-                  className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                  className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                   onClick={() => setUserMenuOpen(false)}
                 >
                   Settings
@@ -145,7 +145,7 @@ const DashboardHeader = () => {
                   href="#logout"
                   role="menuitem"
                   tabIndex={0}
-                  className="block px-4 py-2 hover:bg-red-600 hover:text-gray-900 transition cursor-pointer"
+                  className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                   onClick={() => setUserMenuOpen(false)}
                 >
                   Logout
@@ -168,7 +168,7 @@ const DashboardHeader = () => {
           <li>
             <a
               href="#"
-              className="block text-gray-600 text-sm font-medium hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-2 py-1"
+              className="block text-gray-600 text-sm font-medium hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded px-2 py-1"
               onClick={handleNavLinkClick}
             >
               Dashboard
@@ -177,7 +177,7 @@ const DashboardHeader = () => {
           <li>
             <a
               href="#"
-              className="block text-gray-600 text-sm font-medium hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-2 py-1"
+              className="block text-gray-600 text-sm font-medium hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded px-2 py-1"
               onClick={handleNavLinkClick}
             >
               Analytics
@@ -186,7 +186,7 @@ const DashboardHeader = () => {
           <li>
             <a
               href="#"
-              className="block text-gray-600 text-sm font-medium hover:text-amber-600 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded px-2 py-1"
+              className="block text-gray-600 text-sm font-medium hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded px-2 py-1"
               onClick={handleNavLinkClick}
             >
               Settings
@@ -196,7 +196,7 @@ const DashboardHeader = () => {
           {/* User + Notifications on mobile */}
           <li className="flex items-center gap-4 pt-2 border-t border-gray-200 relative" ref={userMenuRef}>
             <button
-              className="text-amber-600 hover:text-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+              className="text-black hover:text-black transition focus:outline-none focus:ring-2 focus:ring-black rounded"
               aria-label="Notifications"
             >
               <Bell className="w-5 h-5" />
@@ -206,9 +206,9 @@ const DashboardHeader = () => {
               onClick={toggleUserMenu}
               aria-haspopup="true"
               aria-expanded={userMenuOpen}
-              className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full cursor-pointer hover:bg-gray-500 transition focus:outline-none focus:ring-2 focus:ring-black"
             >
-              <User className="w-4 h-4 text-amber-600" />
+              <User className="w-4 h-4 text-black" />
               <span className="text-sm text-gray-700 select-text">Niaz</span>
               <ChevronDown
                 className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
@@ -229,7 +229,7 @@ const DashboardHeader = () => {
                     href="#profile"
                     role="menuitem"
                     tabIndex={0}
-                    className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                    className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     onClick={() => setUserMenuOpen(false)}
                   >
                     Profile
@@ -240,7 +240,7 @@ const DashboardHeader = () => {
                     href="#settings"
                     role="menuitem"
                     tabIndex={0}
-                    className="block px-4 py-2 hover:bg-amber-700 hover:text-gray-900 transition cursor-pointer"
+                    className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     onClick={() => setUserMenuOpen(false)}
                   >
                     Settings
@@ -254,7 +254,7 @@ const DashboardHeader = () => {
                     href="#logout"
                     role="menuitem"
                     tabIndex={0}
-                    className="block px-4 py-2 hover:bg-red-600 hover:text-gray-900 transition cursor-pointer"
+                    className="block px-4 py-2 hover:bg-black hover:text-gray-900 transition cursor-pointer"
                     onClick={() => setUserMenuOpen(false)}
                   >
                     Logout

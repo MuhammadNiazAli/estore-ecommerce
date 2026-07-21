@@ -85,8 +85,8 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
           className="fixed top-1/2 left-1/2 z-[100] w-full max-w-md bg-white text-gray-900 p-6 rounded-xl shadow-xl -translate-x-1/2 -translate-y-1/2"
         >
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-bold text-amber-600">Contact Support</h3>
-            <button onClick={onClose} className="text-gray-600 hover:text-amber-600">
+            <h3 className="text-xl font-bold text-black">Contact Support</h3>
+            <button onClick={onClose} className="text-gray-600 hover:text-black">
               <XMarkIcon className="w-6 h-6" />
             </button>
           </div>
@@ -100,10 +100,10 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 value={form.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
-                  errors.name ? 'border-red-500' : 'border-gray-200'
-                } focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                  errors.name ? 'border-black' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-black`}
               />
-              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+              {errors.name && <p className="text-black text-sm mt-1">{errors.name}</p>}
             </div>
 
             <div>
@@ -114,10 +114,10 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 value={form.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
-                  errors.email ? 'border-red-500' : 'border-gray-200'
-                } focus:outline-none focus:ring-2 focus:ring-amber-600`}
+                  errors.email ? 'border-black' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-black`}
               />
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              {errors.email && <p className="text-black text-sm mt-1">{errors.email}</p>}
             </div>
 
             <div>
@@ -128,16 +128,16 @@ const ContactSupportModal = ({ isOpen, onClose }) => {
                 value={form.message}
                 onChange={handleChange}
                 className={`w-full px-4 py-2 rounded-md bg-white text-gray-900 border ${
-                  errors.message ? 'border-red-500' : 'border-gray-200'
-                } focus:outline-none focus:ring-2 focus:ring-amber-600 resize-y`}
+                  errors.message ? 'border-black' : 'border-gray-200'
+                } focus:outline-none focus:ring-2 focus:ring-black resize-y`}
               />
-              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+              {errors.message && <p className="text-black text-sm mt-1">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
               disabled={submitted}
-              className="w-full bg-amber-600 text-gray-900 font-semibold py-3 rounded-full hover:bg-amber-500 transition"
+              className="w-full bg-black text-gray-900 font-semibold py-3 rounded-full hover:bg-black transition"
             >
               {submitted ? 'Sending...' : 'Send Message'}
             </button>
@@ -172,12 +172,12 @@ const ProfileHelp = () => {
           {/* Header */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-amber-600 mb-1">Help & Support</h2>
+              <h2 className="text-3xl font-bold text-black mb-1">Help & Support</h2>
               <p className="text-gray-700">Find answers or get in touch with our support team.</p>
             </div>
-            <div className="flex items-center gap-2 text-amber-500 font-semibold text-sm">
+            <div className="flex items-center gap-2 text-black font-semibold text-sm">
               <LifebuoyIcon className="w-6 h-6 animate-pulse" />
-              FAQs <span className="ml-1 bg-amber-600 text-black rounded-full px-2 text-xs">{faqsData.length}</span>
+              FAQs <span className="ml-1 bg-black text-black rounded-full px-2 text-xs">{faqsData.length}</span>
             </div>
           </div>
 
@@ -188,7 +188,7 @@ const ProfileHelp = () => {
               placeholder="Search FAQs..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 rounded-md bg-white border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="w-full max-w-md px-4 py-2 rounded-md bg-white border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             />
           </div>
 
@@ -207,13 +207,13 @@ const ProfileHelp = () => {
                     className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
                   >
                     <div className="flex items-center gap-2">
-                      <QuestionMarkCircleIcon className="w-5 h-5 text-amber-600" />
+                      <QuestionMarkCircleIcon className="w-5 h-5 text-black" />
                       <span className="text-lg font-semibold">{question}</span>
                     </div>
                     {isOpen ? (
-                      <ChevronUpIcon className="w-5 h-5 text-amber-600" />
+                      <ChevronUpIcon className="w-5 h-5 text-black" />
                     ) : (
-                      <ChevronDownIcon className="w-5 h-5 text-amber-600" />
+                      <ChevronDownIcon className="w-5 h-5 text-black" />
                     )}
                   </button>
 
@@ -241,7 +241,7 @@ const ProfileHelp = () => {
           <div className="mt-10 text-center sm:text-right">
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-500 transition"
+              className="inline-flex items-center gap-2 bg-black text-gray-900 font-semibold px-6 py-3 rounded-full hover:bg-black transition"
             >
               <LifebuoyIcon className="w-5 h-5" />
               Contact Support

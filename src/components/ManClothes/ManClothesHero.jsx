@@ -102,7 +102,7 @@ const HeroSection = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-amber-600 text-sm uppercase tracking-[4px]"
+          className="text-black text-sm uppercase tracking-[4px]"
         >
           Exclusive Drop
         </motion.h2>
@@ -129,7 +129,7 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="flex items-center gap-6 mt-4"
         >
-          <span className="text-amber-600 text-3xl font-bold">
+          <span className="text-black text-3xl font-bold">
             ${products[index].price}
           </span>
           <span className="line-through text-gray-600">
@@ -142,10 +142,10 @@ const HeroSection = () => {
           <motion.button
             whileHover={{
               scale: 1.05,
-              backgroundColor: '#b45309',
+              backgroundColor: '#111827',
               color: '#000',
             }}
-            className="bg-amber-700 text-black px-8 py-4 rounded-lg font-semibold"
+            className="bg-black text-black px-8 py-4 rounded-lg font-semibold"
           >
             Shop Now
           </motion.button>
@@ -153,9 +153,9 @@ const HeroSection = () => {
             whileHover={{
               scale: 1.05,
               backgroundColor: '#111',
-              color: '#b45309',
+              color: '#111827',
             }}
-            className="border border-amber-600 text-amber-600 px-8 py-4 rounded-lg font-semibold"
+            className="border border-black text-black px-8 py-4 rounded-lg font-semibold"
           >
             View Details
           </motion.button>
@@ -165,13 +165,13 @@ const HeroSection = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-amber-700 rounded-full p-4 z-50"
+        className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-black rounded-full p-4 z-50"
       >
         ◀
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-amber-700 rounded-full p-4 z-50"
+        className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 bg-white/60 hover:bg-black rounded-full p-4 z-50"
       >
         ▶
       </button>
@@ -182,7 +182,7 @@ const HeroSection = () => {
           <div
             key={i}
             className={`h-2 w-8 rounded-full ${
-              i === index ? 'bg-amber-600' : 'bg-gray-500'
+              i === index ? 'bg-black' : 'bg-gray-500'
             }`}
           />
         ))}

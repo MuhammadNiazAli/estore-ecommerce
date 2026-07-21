@@ -25,7 +25,7 @@ const HelpCenterVideoGuides = () => {
   return (
     <section className="bg-white w-full px-4 py-12 flex justify-center mb-[-30px]">
       <div className="max-w-[1000px] w-full text-gray-900">
-        <h2 className="text-2xl sm:text-3xl font-bold text-amber-600 mb-10 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-10 text-center">
           Video Guides
         </h2>
 
@@ -35,8 +35,8 @@ const HelpCenterVideoGuides = () => {
               key={idx}
               href={video.href}
               className="relative rounded-xl overflow-hidden shadow-md
-                hover:shadow-amber-600 transition-shadow duration-300 block
-                focus:outline-none focus:ring-4 focus:ring-amber-600 focus:ring-offset-2 focus:ring-offset-gray-900"
+                hover:shadow-black transition-shadow duration-300 block
+                focus:outline-none focus:ring-4 focus:ring-black focus:ring-offset-2 focus:ring-offset-gray-900"
               tabIndex={0}
               aria-label={`Watch video guide: ${video.title}`}
             >
@@ -49,7 +49,7 @@ const HelpCenterVideoGuides = () => {
               />
               {/* Overlay with play icon */}
               <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-30 opacity-0 hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 cursor-pointer pointer-events-none group">
-                <Play className="w-12 h-12 text-amber-600 pointer-events-auto" />
+                <Play className="w-12 h-12 text-black pointer-events-auto" />
               </div>
               <div className="p-4 bg-white">
                 <h3 className="text-lg font-semibold">{video.title}</h3>

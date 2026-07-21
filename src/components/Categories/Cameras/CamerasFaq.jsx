@@ -85,7 +85,7 @@ const CamerasFaq = () => {
     <section className="bg-white text-gray-900 py-16 px-4 my-[-40px]">
       <div className="max-w-[1000px] mx-auto">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600 text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black text-center">
           Frequently Asked Questions
         </h2>
         <p className="text-gray-600 mb-8 text-center max-w-2xl mx-auto">
@@ -106,7 +106,7 @@ const CamerasFaq = () => {
                 <span className="text-lg font-semibold">{faq.question}</span>
                 <FaChevronDown
                   className={`transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180 text-amber-600" : ""
+                    activeIndex === index ? "rotate-180 text-black" : ""
                   }`}
                 />
               </button>

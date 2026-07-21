@@ -47,15 +47,15 @@ const WatchesNewsletterSignup = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full md:flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none border border-gray-200 focus:border-amber-600 transition"
+              className="w-full md:flex-1 px-4 py-3 rounded-lg text-gray-800 focus:outline-none border border-gray-200 focus:border-black transition"
             />
             <button
               type="submit"
               disabled={loading}
               className={`w-full md:w-auto px-6 py-3 rounded-lg font-semibold transition duration-300 flex items-center justify-center ${
                 loading
-                  ? "bg-amber-700 cursor-not-allowed"
-                  : "bg-amber-600 hover:bg-amber-500 text-gray-900"
+                  ? "bg-black cursor-not-allowed"
+                  : "bg-black hover:bg-black text-gray-900"
               }`}
             >
               {loading ? (
@@ -66,14 +66,14 @@ const WatchesNewsletterSignup = () => {
             </button>
           </form>
         ) : (
-          <div className="flex items-center justify-center gap-2 text-green-400 mt-6">
+          <div className="flex items-center justify-center gap-2 text-black mt-6">
             <CheckCircleIcon className="h-6 w-6" />
             <p className="font-medium">Thank you for subscribing!</p>
           </div>
         )}
 
         {/* Error Message */}
-        {error && <p className="text-red-500 text-sm mt-3">{error}</p>}
+        {error && <p className="text-black text-sm mt-3">{error}</p>}
 
         {/* Footer Text */}
         <p className="text-xs text-gray-500 mt-6">

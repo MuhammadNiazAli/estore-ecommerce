@@ -227,7 +227,7 @@ const BestdealsFlashSales = () => {
           <h2 className="text-2xl sm:text-3xl font-bold select-none"> Flash Sales</h2>
           <div className="flex items-center gap-3 select-none text-gray-700 whitespace-nowrap">
             <span className="font-medium">Ends In:</span>
-            <div className="flex gap-2 text-amber-600 font-mono font-bold text-lg sm:text-xl">
+            <div className="flex gap-2 text-black font-mono font-bold text-lg sm:text-xl">
               <span className="bg-white rounded px-3 py-1 shadow-inner">{h}</span>
               <span>:</span>
               <span className="bg-white rounded px-3 py-1 shadow-inner">{m}</span>
@@ -239,7 +239,7 @@ const BestdealsFlashSales = () => {
 
         {/* Product Carousel */}
         <div
-          className="overflow-x-auto scrollbar-thin scrollbar-thumb-amber-600 scrollbar-track-gray-900"
+          className="overflow-x-auto scrollbar-thin scrollbar-thumb-black scrollbar-track-gray-900"
           tabIndex={0} // for keyboard scrolling focus
           aria-label="Flash sale products carousel"
           role="region"
@@ -261,28 +261,28 @@ const BestdealsFlashSales = () => {
                     loading="lazy"
                   />
                   {/* Discount Badge */}
-                  <span className="absolute top-3 left-3 bg-amber-600 text-gray-900 font-semibold px-2 py-1 text-xs rounded select-none">
+                  <span className="absolute top-3 left-3 bg-black text-gray-900 font-semibold px-2 py-1 text-xs rounded select-none">
                     {product.discount}
                   </span>
                   {/* Action Buttons */}
                   <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 bg-white/80 bg-opacity-30 transition-opacity duration-300">
                     <button
                       aria-label={`Add ${product.name} to cart`}
-                      className="p-2 bg-amber-600 rounded-full hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                      className="p-2 bg-black rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-black"
                       tabIndex={0}
                     >
                       <ShoppingCart className="w-5 h-5 text-gray-900" />
                     </button>
                     <button
                       aria-label={`View details of ${product.name}`}
-                      className="p-2 bg-amber-600 rounded-full hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                      className="p-2 bg-black rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-black"
                       tabIndex={0}
                     >
                       <Eye className="w-5 h-5 text-gray-900" />
                     </button>
                     <button
                       aria-label={`Add ${product.name} to wishlist`}
-                      className="p-2 bg-amber-600 rounded-full hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                      className="p-2 bg-black rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-black"
                       tabIndex={0}
                     >
                       <Heart className="w-5 h-5 text-gray-900" />
@@ -299,7 +299,7 @@ const BestdealsFlashSales = () => {
                     {product.name}
                   </h3>
                   <div className="flex justify-center gap-3 text-sm sm:text-base items-center">
-                    <span className="text-amber-600 font-bold">${product.price.toFixed(2)}</span>
+                    <span className="text-black font-bold">${product.price.toFixed(2)}</span>
                     <span className="line-through text-gray-500">${product.oldPrice.toFixed(2)}</span>
                   </div>
                 </div>
@@ -320,13 +320,13 @@ const BestdealsFlashSales = () => {
           border-radius: 9999px;
         }
         .scrollbar-thin::-webkit-scrollbar-thumb {
-          background-color: #b45309; /* Tailwind amber-600 */
+          background-color: #111827; /* Tailwind amber-600 */
           border-radius: 9999px;
         }
         /* For Firefox */
         .scrollbar-thin {
           scrollbar-width: thin;
-          scrollbar-color: #b45309 #ffffff;
+          scrollbar-color: #111827 #ffffff;
         }
       `}</style>
     </section>

@@ -21,9 +21,9 @@ const OrderHero = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-amber-400 drop-shadow-sm"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-black drop-shadow-sm"
         >
-          Your <span className="text-amber-700 underline decoration-wavy underline-offset-4">Order Journey</span> Begins Now
+          Your <span className="text-black underline decoration-wavy underline-offset-4">Order Journey</span> Begins Now
         </motion.h1>
 
         <motion.p
@@ -46,7 +46,7 @@ const OrderHero = () => {
         >
           <button
             type="button"
-            className="flex items-center gap-2 px-7 py-3 rounded-full bg-amber-800 text-gray-900 font-semibold text-base sm:text-lg shadow-lg hover:bg-amber-900 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-amber-600"
+            className="flex items-center gap-2 px-7 py-3 rounded-full bg-black text-gray-900 font-semibold text-base sm:text-lg shadow-lg hover:bg-black hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-black"
           >
             <FiTruck className="text-xl animate-bounce-slow" />
             Track Order
@@ -54,7 +54,7 @@ const OrderHero = () => {
 
           <button
             type="button"
-            className="flex items-center gap-2 px-7 py-3 rounded-full border-2 border-amber-700 text-amber-700 font-semibold text-base sm:text-lg hover:bg-amber-800 hover:text-gray-900 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-amber-500"
+            className="flex items-center gap-2 px-7 py-3 rounded-full border-2 border-black text-black font-semibold text-base sm:text-lg hover:bg-black hover:text-gray-900 hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-black"
           >
             <FiPackage className="text-xl animate-pulse" />
             Continue Shopping
@@ -70,10 +70,10 @@ const OrderHero = () => {
           className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm sm:text-base text-gray-700"
         >
           {[
-            { icon: <FiArrowRightCircle className="text-amber-400 text-xl" />, label: 'Real-Time Tracking' },
-            { icon: <FiTruck className="text-emerald-400 text-xl" />, label: 'Fast & Free Shipping' },
-            { icon: <FiRefreshCcw className="text-pink-400 text-xl" />, label: 'Easy Returns & Refunds' },
-            { icon: <FiPackage className="text-amber-600 text-xl" />, label: 'Secure Package Handling' },
+            { icon: <FiArrowRightCircle className="text-black text-xl" />, label: 'Real-Time Tracking' },
+            { icon: <FiTruck className="text-black text-xl" />, label: 'Fast & Free Shipping' },
+            { icon: <FiRefreshCcw className="text-black text-xl" />, label: 'Easy Returns & Refunds' },
+            { icon: <FiPackage className="text-black text-xl" />, label: 'Secure Package Handling' },
           ].map((item, idx) => (
             <div
               key={idx}

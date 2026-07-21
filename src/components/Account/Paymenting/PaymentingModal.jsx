@@ -61,7 +61,7 @@ const PaymentingModal = ({ isOpen, onClose, title, children }) => {
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="text-gray-600 hover:text-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-400 rounded"
+              className="text-gray-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -27,8 +27,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
         aria-label="Previous page"
         className={`px-3 py-1 rounded-md font-semibold transition ${
           currentPage === 1
-            ? 'text-amber-900 cursor-not-allowed'
-            : 'hover:bg-amber-900'
+            ? 'text-black cursor-not-allowed'
+            : 'hover:bg-black'
         }`}
       >
         Prev
@@ -42,8 +42,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
           aria-current={currentPage === page ? 'page' : undefined}
           className={`px-3 py-1 rounded-md font-semibold transition ${
             currentPage === page
-              ? 'bg-amber-800 text-gray-900 shadow-lg'
-              : 'hover:bg-amber-900 text-amber-600'
+              ? 'bg-black text-gray-900 shadow-lg'
+              : 'hover:bg-black text-black'
           }`}
         >
           {page}
@@ -59,8 +59,8 @@ const WishlistPagination = ({ totalPages = 5, onPageChange }) => {
         aria-label="Next page"
         className={`px-3 py-1 rounded-md font-semibold transition ${
           currentPage === totalPages
-            ? 'text-amber-900 cursor-not-allowed'
-            : 'hover:bg-amber-900'
+            ? 'text-black cursor-not-allowed'
+            : 'hover:bg-black'
         }`}
       >
         Next

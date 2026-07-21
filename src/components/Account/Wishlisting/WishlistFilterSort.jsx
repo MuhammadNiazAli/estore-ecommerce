@@ -31,7 +31,7 @@ const WishlistFilterSort = ({ onFilterChange, onSortChange }) => {
   };
 
   return (
-    <div className="bg-white text-amber-600 max-w-4xl mx-auto rounded-b-xl px-6 py-4 flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-between">
+    <div className="bg-white text-black max-w-4xl mx-auto rounded-b-xl px-6 py-4 flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-between">
       {/* Filter */}
       <label className="flex flex-col text-sm sm:text-base font-semibold w-full sm:w-auto">
         Filter by:
@@ -39,10 +39,10 @@ const WishlistFilterSort = ({ onFilterChange, onSortChange }) => {
           aria-label="Filter wishlist items"
           value={filter}
           onChange={handleFilterChange}
-          className="mt-1 bg-white text-amber-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
+          className="mt-1 bg-white text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black transition"
         >
           {filterOptions.map(({ value, label }) => (
-            <option key={value} value={value} className="bg-white text-amber-600">
+            <option key={value} value={value} className="bg-white text-black">
               {label}
             </option>
           ))}
@@ -56,10 +56,10 @@ const WishlistFilterSort = ({ onFilterChange, onSortChange }) => {
           aria-label="Sort wishlist items"
           value={sort}
           onChange={handleSortChange}
-          className="mt-1 bg-white text-amber-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600 transition"
+          className="mt-1 bg-white text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-black transition"
         >
           {sortOptions.map(({ value, label }) => (
-            <option key={value} value={value} className="bg-white text-amber-600">
+            <option key={value} value={value} className="bg-white text-black">
               {label}
             </option>
           ))}

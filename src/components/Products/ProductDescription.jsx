@@ -38,7 +38,7 @@ const ProductDescription = ({
       stars.push(
         <AiFillStar
           key={`star-full-${i}`}
-          className="text-amber-600 w-5 h-5"
+          className="text-black w-5 h-5"
           aria-hidden="true"
         />
       );
@@ -48,11 +48,11 @@ const ProductDescription = ({
       stars.push(
         <span key="star-half" className="relative w-5 h-5 inline-block">
           <AiFillStar
-            className="text-amber-600 absolute top-0 left-0 w-5 h-5 overflow-hidden"
+            className="text-black absolute top-0 left-0 w-5 h-5 overflow-hidden"
             style={{ clipPath: "inset(0 50% 0 0)" }}
             aria-hidden="true"
           />
-          <AiOutlineStar className="text-amber-600 w-5 h-5" aria-hidden="true" />
+          <AiOutlineStar className="text-black w-5 h-5" aria-hidden="true" />
         </span>
       );
     }
@@ -62,7 +62,7 @@ const ProductDescription = ({
       stars.push(
         <AiOutlineStar
           key={`star-empty-${i}`}
-          className="text-amber-600 w-5 h-5"
+          className="text-black w-5 h-5"
           aria-hidden="true"
         />
       );
@@ -118,7 +118,7 @@ const ProductDescription = ({
               tabIndex={0}
               aria-label={`Feature: ${feature}`}
             >
-              <AiOutlineCheckCircle className="text-amber-600 w-5 h-5 flex-shrink-0" />
+              <AiOutlineCheckCircle className="text-black w-5 h-5 flex-shrink-0" />
               <span className="text-gray-700 text-sm font-medium truncate max-w-xs">
                 {feature}
               </span>
@@ -155,8 +155,8 @@ const ProductDescription = ({
       <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6">
         <button
           type="button"
-          className="w-full sm:w-auto bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg
-            hover:bg-amber-700 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
+          className="w-full sm:w-auto bg-black text-gray-900 font-bold py-3 px-8 rounded-md shadow-lg
+            hover:bg-black focus:outline-none focus:ring-4 focus:ring-black transition-colors duration-300"
           aria-label="Add product to cart"
         >
           Add to Cart
@@ -164,7 +164,7 @@ const ProductDescription = ({
         <button
           type="button"
           className="w-full sm:w-auto bg-white text-gray-700 font-semibold py-3 px-8 rounded-md shadow-md
-            hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-amber-500 transition-colors duration-300"
+            hover:bg-gray-500 focus:outline-none focus:ring-4 focus:ring-black transition-colors duration-300"
           aria-label="Add product to wishlist"
         >
           Add to Wishlist

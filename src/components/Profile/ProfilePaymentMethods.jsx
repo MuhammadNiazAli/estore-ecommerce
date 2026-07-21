@@ -61,14 +61,14 @@ const ProfilePaymentMethods = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-amber-600 mb-1">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-1">
               Payment Methods
             </h2>
             <p className="text-sm sm:text-base text-gray-700 max-w-md">
               Securely manage your credit and debit cards.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-amber-500 font-medium text-sm sm:text-base">
+          <div className="flex items-center gap-2 text-black font-medium text-sm sm:text-base">
             <ShieldCheckIcon className="w-6 h-6 animate-pulse" />
             <span>Protected by Encryption</span>
           </div>
@@ -86,15 +86,15 @@ const ProfilePaymentMethods = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               className={`bg-white rounded-xl p-5 flex justify-between items-center shadow-md border ${
-                isDefault ? 'border-amber-600' : 'border-transparent'
+                isDefault ? 'border-black' : 'border-transparent'
               }`}
             >
               <div className="flex items-center gap-4">
-                <CreditCardIcon className="w-10 h-10 text-amber-600 flex-shrink-0" />
+                <CreditCardIcon className="w-10 h-10 text-black flex-shrink-0" />
                 <div>
                   <p className="text-gray-900 font-semibold text-lg">
                     {cardType}{' '}
-                    {isDefault && <span className="text-amber-600">(Default)</span>}
+                    {isDefault && <span className="text-black">(Default)</span>}
                   </p>
                   <p className="text-gray-600 text-sm">{cardNumber}</p>
                   <p className="text-gray-600 text-sm">Expires {expiry}</p>
@@ -103,9 +103,9 @@ const ProfilePaymentMethods = () => {
               <button
                 type="button"
                 onClick={() => setDeleteId(id)}
-                className="p-2 rounded-full hover:bg-red-600 transition"
+                className="p-2 rounded-full hover:bg-black transition"
               >
-                <TrashIcon className="w-6 h-6 text-red-500" />
+                <TrashIcon className="w-6 h-6 text-black" />
               </button>
             </motion.div>
           ))}
@@ -116,7 +116,7 @@ const ProfilePaymentMethods = () => {
           <button
             type="button"
             onClick={() => setShowForm(true)}
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold shadow-lg transition"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-black hover:bg-black text-gray-900 font-semibold shadow-lg transition"
           >
             <PlusCircleIcon className="w-6 h-6" />
             Add New Method
@@ -135,7 +135,7 @@ const ProfilePaymentMethods = () => {
           >
             <div className="bg-white rounded-xl p-6 w-full max-w-md text-gray-900 relative">
               <button
-                className="absolute top-3 right-3 text-gray-500 hover:text-red-500"
+                className="absolute top-3 right-3 text-gray-500 hover:text-black"
                 onClick={() => setShowForm(false)}
               >
                 <XMarkIcon className="w-6 h-6" />
@@ -167,7 +167,7 @@ const ProfilePaymentMethods = () => {
                 />
                 <button
                   onClick={handleAddCard}
-                  className="w-full bg-amber-600 hover:bg-amber-500 text-black font-bold py-2 rounded mt-2"
+                  className="w-full bg-black hover:bg-black text-black font-bold py-2 rounded mt-2"
                 >
                   Save Card
                 </button>
@@ -200,7 +200,7 @@ const ProfilePaymentMethods = () => {
                 </button>
                 <button
                   onClick={() => handleDelete(deleteId)}
-                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-900 rounded"
+                  className="px-4 py-2 bg-black hover:bg-black text-gray-900 rounded"
                 >
                   Remove
                 </button>

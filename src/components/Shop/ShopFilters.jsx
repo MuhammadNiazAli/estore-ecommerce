@@ -27,10 +27,10 @@ const ShopFilters = ({ onFilterChange }) => {
               className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200
                 ${
                   isActive
-                    ? 'bg-amber-400 text-gray-900 shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-amber-400 hover:text-gray-900'
+                    ? 'bg-black text-gray-900 shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-black hover:text-gray-900'
                 }
-                focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-1`}
+                focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1`}
             >
               {category}
             </motion.button>

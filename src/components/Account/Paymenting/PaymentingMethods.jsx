@@ -16,15 +16,15 @@ const paymentOptions = [
     description: 'Visa, MasterCard, AMEX, Discover',
     features: [
       {
-        icon: <FiShield className="text-amber-700" aria-hidden="true" />,
+        icon: <FiShield className="text-black" aria-hidden="true" />,
         text: 'Secure encrypted transactions',
       },
       {
-        icon: <FiClock className="text-green-500" aria-hidden="true" />,
+        icon: <FiClock className="text-black" aria-hidden="true" />,
         text: 'Instant approval',
       },
     ],
-    icon: <FiCreditCard className="text-amber-800" size={28} aria-hidden="true" />,
+    icon: <FiCreditCard className="text-black" size={28} aria-hidden="true" />,
   },
   {
     id: 'mobile-pay',
@@ -32,15 +32,15 @@ const paymentOptions = [
     description: 'Apple Pay, Google Pay, Samsung Pay',
     features: [
       {
-        icon: <FiShield className="text-amber-700" aria-hidden="true" />,
+        icon: <FiShield className="text-black" aria-hidden="true" />,
         text: 'Tokenized payment security',
       },
       {
-        icon: <FiClock className="text-green-500" aria-hidden="true" />,
+        icon: <FiClock className="text-black" aria-hidden="true" />,
         text: 'Fast checkout with one tap',
       },
     ],
-    icon: <FiPhone className="text-amber-800" size={28} aria-hidden="true" />,
+    icon: <FiPhone className="text-black" size={28} aria-hidden="true" />,
   },
   {
     id: 'paypal',
@@ -48,15 +48,15 @@ const paymentOptions = [
     description: 'Secure online payments worldwide',
     features: [
       {
-        icon: <FiShield className="text-amber-700" aria-hidden="true" />,
+        icon: <FiShield className="text-black" aria-hidden="true" />,
         text: 'Buyer protection',
       },
       {
-        icon: <FiClock className="text-green-500" aria-hidden="true" />,
+        icon: <FiClock className="text-black" aria-hidden="true" />,
         text: 'No need to enter card details',
       },
     ],
-    icon: <FiCreditCard className="text-amber-800" size={28} aria-hidden="true" />,
+    icon: <FiCreditCard className="text-black" size={28} aria-hidden="true" />,
   },
 ];
 

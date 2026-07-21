@@ -39,10 +39,10 @@ const PressCoverage = () => {
   return (
     <section className="w-full bg-white flex justify-center px-6 py-16 mb-[-30px]">
       <div className="max-w-[1000px] w-full text-center">
-        <h2 className="text-amber-600 text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
+        <h2 className="text-black text-3xl sm:text-4xl font-extrabold drop-shadow-lg">
           Press Coverage
         </h2>
-        <p className="mt-4 text-amber-500 max-w-xl mx-auto text-lg leading-relaxed drop-shadow-md">
+        <p className="mt-4 text-black max-w-xl mx-auto text-lg leading-relaxed drop-shadow-md">
           See what major publications are saying about us. Stay informed with the
           latest stories and coverage.
         </p>
@@ -62,8 +62,8 @@ const PressCoverage = () => {
                 className="h-12 w-auto mb-4 object-contain"
                 loading="lazy"
               />
-              <h3 className="text-amber-600 font-semibold text-lg mb-2">{headline}</h3>
-              <div className="flex justify-between text-amber-500 text-sm font-mono">
+              <h3 className="text-black font-semibold text-lg mb-2">{headline}</h3>
+              <div className="flex justify-between text-black text-sm font-mono">
                 <span>{source}</span>
                 <time>{date}</time>
               </div>

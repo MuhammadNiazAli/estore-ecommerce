@@ -58,7 +58,7 @@ const CamerasReviewsPreview = () => {
     <section className="bg-white text-gray-900 py-16 px-4 my-[-40px]">
       <div className="max-w-[1200px] mx-auto text-center">
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-amber-600">
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-black">
           What Our Customers Say
         </h2>
         <p className="text-gray-600 mb-8">
@@ -74,12 +74,12 @@ const CamerasReviewsPreview = () => {
           transition={{ duration: 0.5 }}
           className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto relative"
         >
-          <FaQuoteLeft className="text-amber-600 text-3xl absolute top-4 left-4 opacity-30" />
+          <FaQuoteLeft className="text-black text-3xl absolute top-4 left-4 opacity-30" />
 
           <img
             src={reviewsData[currentIndex].avatar}
             alt={reviewsData[currentIndex].name}
-            className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-amber-600 object-cover"
+            className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-black object-cover"
           />
 
           <h3 className="text-xl font-bold">{reviewsData[currentIndex].name}</h3>
@@ -91,7 +91,7 @@ const CamerasReviewsPreview = () => {
                 key={i}
                 className={`${
                   i < reviewsData[currentIndex].rating
-                    ? "text-amber-600"
+                    ? "text-black"
                     : "text-gray-600"
                 }`}
               />
@@ -102,7 +102,7 @@ const CamerasReviewsPreview = () => {
             "{reviewsData[currentIndex].review}"
           </p>
 
-          <p className="text-sm text-amber-600 font-semibold">
+          <p className="text-sm text-black font-semibold">
             Reviewed for: {reviewsData[currentIndex].camera}
           </p>
         </motion.div>

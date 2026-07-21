@@ -119,7 +119,7 @@ const DashboardProfile = () => {
       <section className="w-full bg-white flex justify-center px-4 py-10">
         <div className="w-full max-w-[1000px] bg-white p-6 rounded-xl shadow-lg">
           {/* Header */}
-          <h2 className="text-2xl font-bold text-amber-600 mb-6 select-none">
+          <h2 className="text-2xl font-bold text-black mb-6 select-none">
             Profile Overview
           </h2>
 
@@ -130,13 +130,13 @@ const DashboardProfile = () => {
               <img
                 src={avatarPreview}
                 alt="User avatar"
-                className="w-24 h-24 rounded-full border-4 border-amber-600 object-cover shadow"
+                className="w-24 h-24 rounded-full border-4 border-black object-cover shadow"
               />
               <button
                 type="button"
                 onClick={triggerAvatarUpload}
                 aria-label="Change avatar"
-                className="opacity-0 group-hover:opacity-100 transition absolute inset-0 bg-white bg-opacity-50 rounded-full flex items-center justify-center text-amber-600 hover:text-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                className="opacity-0 group-hover:opacity-100 transition absolute inset-0 bg-white bg-opacity-50 rounded-full flex items-center justify-center text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-black"
               >
                 <Edit className="w-6 h-6" />
               </button>
@@ -168,8 +168,8 @@ const DashboardProfile = () => {
                       onChange={(e) => handleInputChange('name', e.target.value)}
                       disabled={saving}
                       autoFocus
-                      className={`mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-amber-600 focus:ring-amber-600 ${
-                        formErrors.name ? 'border-red-500' : 'border-gray-200'
+                      className={`mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-black focus:ring-black ${
+                        formErrors.name ? 'border-black' : 'border-gray-200'
                       }`}
                       aria-invalid={!!formErrors.name}
                       aria-describedby="name-error"
@@ -180,7 +180,7 @@ const DashboardProfile = () => {
                     {formErrors.name && (
                       <p
                         id="name-error"
-                        className="mt-1 text-xs text-red-500 select-none"
+                        className="mt-1 text-xs text-black select-none"
                       >
                         {formErrors.name}
                       </p>
@@ -198,7 +198,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
                     aria-label={`Name: ${user.name}. Click to edit`}
                   >
                     {user.name}
@@ -223,8 +223,8 @@ const DashboardProfile = () => {
                       onChange={(e) => handleInputChange('email', e.target.value)}
                       disabled={saving}
                       autoFocus
-                      className={`mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-amber-600 focus:ring-amber-600 ${
-                        formErrors.email ? 'border-red-500' : 'border-gray-200'
+                      className={`mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-black focus:ring-black ${
+                        formErrors.email ? 'border-black' : 'border-gray-200'
                       }`}
                       aria-invalid={!!formErrors.email}
                       aria-describedby="email-error"
@@ -235,7 +235,7 @@ const DashboardProfile = () => {
                     {formErrors.email && (
                       <p
                         id="email-error"
-                        className="mt-1 text-xs text-red-500 select-none"
+                        className="mt-1 text-xs text-black select-none"
                       >
                         {formErrors.email}
                       </p>
@@ -253,10 +253,10 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
                     aria-label={`Email: ${user.email}. Click to edit`}
                   >
-                    <Mail className="inline w-4 h-4 mr-1 text-amber-600" />
+                    <Mail className="inline w-4 h-4 mr-1 text-black" />
                     {user.email}
                   </div>
                 )}
@@ -277,7 +277,7 @@ const DashboardProfile = () => {
                     onChange={(e) => handleInputChange('role', e.target.value)}
                     disabled={saving}
                     autoFocus
-                    className="mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-amber-600 focus:ring-amber-600"
+                    className="mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-black focus:ring-black"
                     onKeyDown={(e) => {
                       if (e.key === 'Escape') handleCancel();
                     }}
@@ -300,7 +300,7 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black select-none"
                     aria-label={`Role: ${user.role}. Click to edit`}
                   >
                     {user.role}
@@ -323,7 +323,7 @@ const DashboardProfile = () => {
                     onChange={(e) => handleInputChange('status', e.target.value)}
                     disabled={saving}
                     autoFocus
-                    className="mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-amber-600 focus:ring-amber-600"
+                    className="mt-1 block w-full rounded-md border-gray-200 bg-white text-gray-900 shadow-sm focus:border-black focus:ring-black"
                     onKeyDown={(e) => {
                       if (e.key === 'Escape') handleCancel();
                     }}
@@ -346,10 +346,10 @@ const DashboardProfile = () => {
                         e.preventDefault();
                       }
                     }}
-                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-600 select-none flex items-center gap-1"
+                    className="mt-1 cursor-pointer rounded-md px-2 py-1 text-gray-900 bg-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-black select-none flex items-center gap-1"
                     aria-label={`Status: ${user.status}. Click to edit`}
                   >
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-black" />
                     {user.status}
                   </div>
                 )}
@@ -361,7 +361,7 @@ const DashboardProfile = () => {
                   <button
                     onClick={handleSave}
                     disabled={saving}
-                    className="bg-amber-600 text-black px-4 py-2 rounded-md font-medium hover:bg-amber-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="bg-black text-black px-4 py-2 rounded-md font-medium hover:bg-black transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black"
                   >
                     {saving ? (
                       <>
@@ -378,7 +378,7 @@ const DashboardProfile = () => {
                   <button
                     onClick={handleCancel}
                     disabled={saving}
-                    className="bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    className="bg-white text-gray-900 px-4 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black"
                   >
                     <X className="w-4 h-4" />
                     Cancel
@@ -390,7 +390,7 @@ const DashboardProfile = () => {
               {saveSuccess === true && (
                 <p
                   role="alert"
-                  className="mt-2 text-green-400 font-semibold select-none"
+                  className="mt-2 text-black font-semibold select-none"
                   tabIndex={-1}
                 >
                   Profile saved successfully!
@@ -399,7 +399,7 @@ const DashboardProfile = () => {
               {saveSuccess === false && (
                 <p
                   role="alert"
-                  className="mt-2 text-red-500 font-semibold select-none"
+                  className="mt-2 text-black font-semibold select-none"
                   tabIndex={-1}
                 >
                   Failed to save profile. Please try again.
@@ -412,9 +412,9 @@ const DashboardProfile = () => {
           <div className="mt-8 flex justify-end">
             <button
               onClick={() => setShowSettings(true)}
-              className="bg-white text-gray-900 px-6 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="bg-white text-gray-900 px-6 py-2 rounded-md hover:bg-gray-500 transition flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-black"
             >
-              <UserCog className="w-5 h-5 text-amber-600" />
+              <UserCog className="w-5 h-5 text-black" />
               Account Settings
             </button>
           </div>
@@ -440,7 +440,7 @@ const DashboardProfile = () => {
           >
             <h3
               id="account-settings-title"
-              className="text-amber-600 text-xl font-bold mb-4 select-none"
+              className="text-black text-xl font-bold mb-4 select-none"
             >
               Account Settings
             </h3>
@@ -449,14 +449,14 @@ const DashboardProfile = () => {
             </p>
             <button
               onClick={() => setShowSettings(false)}
-              className="absolute top-3 right-3 text-gray-600 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-600 rounded"
+              className="absolute top-3 right-3 text-gray-600 hover:text-black focus:outline-none focus:ring-2 focus:ring-black rounded"
               aria-label="Close account settings"
             >
               <X className="w-6 h-6" />
             </button>
             <button
               onClick={() => setShowSettings(false)}
-              className="mt-4 bg-amber-600 text-black px-4 py-2 rounded-md hover:bg-amber-500 transition focus:outline-none focus:ring-2 focus:ring-amber-600"
+              className="mt-4 bg-black text-black px-4 py-2 rounded-md hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-black"
             >
               Close
             </button>
